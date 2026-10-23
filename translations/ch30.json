@@ -1,0 +1,678 @@
+{
+  "chapter": 30,
+  "language": "zh-CN",
+  "sourceSha256": "17208fce816afbaf8e562cb2db07b9036db82ebbc11465c31267da2c2239f3bf",
+  "paragraphCount": 74,
+  "pages": [
+    {
+      "printed": 601,
+      "sourceSha256": "b2dcc8a1969b57580afa21a62bd3a9fa3f1000b364b9dbc6eb6778033a53a8ed",
+      "blocks": [
+        {
+          "id": "p601-b1",
+          "source": "# CHAPTER 30\n# UNIQUENESS OF THE REAL NUMBERS",
+          "sourceSha256": "439cf990246e31e16ba3f77e98ffee3b46cd531423f227a79a87a219b8d24c62",
+          "translation": "# 第 30 章\n# 实数的唯一性"
+        },
+        {
+          "id": "p601-b2",
+          "source": "We shall now revert to the usual notation for real numbers, reserving boldface symbols for other fields which may turn up. Moreover, we will regard integers and rational numbers as special kinds of real numbers, and forget about the specific way in which real numbers were defined. In this chapter we are interested in only one question: are there any complete ordered fields other than $\\mathbf R$? The answer to this question, if taken literally, is “yes.” For example, the field $F_3$ introduced in Chapter 28 is a complete ordered field, and it is certainly not $\\mathbf R$. This field is a “silly” example because the pair $(a,a)$ can be regarded as just another name for the real number $a$; the operations",
+          "sourceSha256": "0057fe87a532bb21ae751f1f226a0341cf5b0d5db11773a4268e00e30950733e",
+          "translation": "现在我们恢复使用实数的通常记号，把黑体符号留给可能出现的其他域。此外，我们将把整数和有理数看作特殊的实数，并忘掉实数定义时采用的具体方式。本章只关心一个问题：除了 $\\mathbf R$，还有没有其他完备有序域？如果按字面理解，这个问题的答案是“有”。例如，第 28 章引入的域 $F_3$ 就是一个完备有序域，而且它当然不是 $\\mathbf R$。这个域之所以是一个“无聊”的例子，是因为有序对 $(a,a)$ 可以看作实数 $a$ 的另一个名字而已；运算"
+        },
+        {
+          "id": "p601-b3",
+          "source": "$$(a,a)+(b,b)=(a+b,a+b),$$",
+          "sourceSha256": "8d6ae885cad3186f6c240046f65dc53bd70064989d8eda7aa32d44b9c14963bc"
+        },
+        {
+          "id": "p601-b4",
+          "source": "$$(a,a)\\cdot(b,b)=(a\\cdot b,a\\cdot b),$$",
+          "sourceSha256": "e388eee6c91ec98a760a44730fa129cbf168a00ad37a7c4211ece952ee62e7dc"
+        },
+        {
+          "id": "p601-b5",
+          "source": "are consistent with this renaming. This sort of example shows that any intelligent consideration of the question requires some mathematical means of discussing such renaming procedures.",
+          "sourceSha256": "baa5b1e88f11d05734df52d0f4b25f7d1054adfd634889ac6399e759bc669324",
+          "translation": "与这种重新命名是一致的。这类例子表明，要有意义地考虑这个问题，就需要一种数学手段来讨论这样的重新命名过程。"
+        },
+        {
+          "id": "p601-b6",
+          "source": "If the elements of a field $F$ are going to be used to rename elements of $\\mathbf R$, then for each $a$ in $\\mathbf R$ there should correspond a “name” $f(a)$ in $F$. The notation $f(a)$ suggests that renaming can be formulated in terms of functions. In order to do this we will need a concept of function much more general than any which has occurred until now; in fact, we will require the most general notion of “function” used in mathematics. A function, in this general sense, is simply a rule which assigns to some things, other things. To be formal, a **function** is a collection of ordered pairs (of objects of any sort) which does not contain two distinct pairs with the same first element. The **domain** of a function $f$ is the set $A$ of all objects $a$ such that $(a,b)$ is in $f$ for some $b$; this (unique) $b$ is denoted by $f(a)$. If $f(a)$ is in the set $B$ for all $a$ in $A$, then $f$ is called a **function from $A$ to $B$**. For example,",
+          "sourceSha256": "4ff96d5fd03a6f03807f976e55853632551beb1dff55f8cb6598269c538bbf26",
+          "translation": "如果打算用域 $F$ 的元素给 $\\mathbf R$ 的元素重新命名，那么对 $\\mathbf R$ 中的每个 $a$，都应当对应一个 $F$ 中的“名字” $f(a)$。记号 $f(a)$ 启发我们，可以用函数来表述重新命名。为此，我们需要一种比迄今出现过的任何函数概念都广泛得多的概念；事实上，我们需要数学中使用的最一般的“函数”概念。在这个一般意义下，函数不过是把某些东西对应到另一些东西的规则。形式地说，一个**函数**就是一个有序对的集合（其中的对象可以是任何种类），而且不包含两个第一元素相同的不同有序对。函数 $f$ 的**定义域**，是所有对象 $a$ 所成的集合 $A$，满足：对某个 $b$，$(a,b)$ 在 $f$ 中；这个（唯一的）$b$ 记为 $f(a)$。如果对于 $A$ 中所有 $a$，$f(a)$ 都在集合 $B$ 中，那么 $f$ 称为一个**从 $A$ 到 $B$ 的函数**。例如，"
+        },
+        {
+          "id": "p601-b7",
+          "source": "if $f(x)=\\sin x$ for all $x$ in $\\mathbf R$ (and $f$ is defined only for $x$ in $\\mathbf R$), then $f$ is a function from $\\mathbf R$ to $\\mathbf R$; it is also a function from $\\mathbf R$ to $[-1,1]$;",
+          "sourceSha256": "e6975755be1945af53915488631b71788fce2a4300ec15690a1ab4d838bb95ee",
+          "translation": "如果对 $\\mathbf R$ 中所有 $x$ 都有 $f(x)=\\sin x$（而且 $f$ 只对 $\\mathbf R$ 中的 $x$ 有定义），那么 $f$ 是从 $\\mathbf R$ 到 $\\mathbf R$ 的函数；它也是从 $\\mathbf R$ 到 $[-1,1]$ 的函数；"
+        },
+        {
+          "id": "p601-b8",
+          "source": "if $f(z)=\\sin z$ for all $z$ in $\\mathbf C$, then $f$ is a function from $\\mathbf C$ to $\\mathbf C$;",
+          "sourceSha256": "8e1171374a8de6391879a71a6c149d92cce58c62be21ee3c260f6e8276a59a19",
+          "translation": "如果对 $\\mathbf C$ 中所有 $z$ 都有 $f(z)=\\sin z$，那么 $f$ 是从 $\\mathbf C$ 到 $\\mathbf C$ 的函数；"
+        },
+        {
+          "id": "p601-b9",
+          "source": "if $f(z)=e^z$ for all $z$ in $\\mathbf C$, then $f$ is a function from $\\mathbf C$ to $\\mathbf C$; it is also a function from $\\mathbf C$ to $\\{z\\text{ in }\\mathbf C:z\\ne0\\}$;",
+          "sourceSha256": "e83b02f778237ae001b649217a6a2ed210321ac17a6034d96e82a3ee49711da9",
+          "translation": "如果对 $\\mathbf C$ 中所有 $z$ 都有 $f(z)=e^z$，那么 $f$ 是从 $\\mathbf C$ 到 $\\mathbf C$ 的函数；它也是从 $\\mathbf C$ 到 $\\{z\\text{ in }\\mathbf C:z\\ne0\\}$ 的函数；"
+        },
+        {
+          "id": "p601-b10",
+          "source": "$\\theta$ is a function from $\\{z\\text{ in }\\mathbf C:z\\ne0\\}$ to $\\{x\\text{ in }\\mathbf R:0\\le x<2\\pi\\}$;",
+          "sourceSha256": "4eaf5ba55ec2471a92f57ee0c870110299169f13d7ee2aa252e485caa15c1cd9",
+          "translation": "$\\theta$ 是从 $\\{z\\text{ in }\\mathbf C:z\\ne0\\}$ 到 $\\{x\\text{ in }\\mathbf R:0\\le x<2\\pi\\}$ 的函数；"
+        },
+        {
+          "id": "p601-b11",
+          "source": "if $f$ is the collection of all pairs $(a,(a,a))$ for $a$ in $\\mathbf R$, then $f$ is a function from $\\mathbf R$ to $F_3$.",
+          "sourceSha256": "82688a6f4ad4b76692c23339597f7bb88ed7034706e790b3148c47ce9a477bcf",
+          "translation": "如果 $f$ 是所有有序对 $(a,(a,a))$ 所成的集合，其中 $a$ 属于 $\\mathbf R$，那么 $f$ 是从 $\\mathbf R$ 到 $F_3$ 的函数。"
+        }
+      ]
+    },
+    {
+      "printed": 602,
+      "sourceSha256": "f5cd841509ebc56c8087730c366a54b9e2565b3a4cfae64d8725eff5e9e79fcf",
+      "blocks": [
+        {
+          "id": "p602-b1",
+          "source": "Suppose that $F_1$ and $F_2$ are two fields; we will denote the operations in $F_1$ by $\\oplus$, $\\odot$, etc., and the operations in $F_2$ by $+$, $\\cdot$, etc. If $F_2$ is going to be considered as a collection of new names for elements of $F_1$, then there should be a function from $F_1$ to $F_2$ with the following properties:",
+          "sourceSha256": "da20aa73eb9735bfc36324af182f90a4432a46b693892dab7b714175db6fb00b",
+          "translation": "设 $F_1$ 和 $F_2$ 是两个域；我们把 $F_1$ 中的运算记为 $\\oplus$、$\\odot$ 等，把 $F_2$ 中的运算记为 $+$、$\\cdot$ 等。如果要把 $F_2$ 看作 $F_1$ 的元素的新名字所成的集合，那么就应当存在一个从 $F_1$ 到 $F_2$ 的函数，具有以下性质："
+        },
+        {
+          "id": "p602-b2",
+          "source": "(1) The function $f$ should be one-one, that is, if $x\\ne y$, then we should have $f(x)\\ne f(y)$; this means that no two elements of $F_1$ have the same name.",
+          "sourceSha256": "27c7bb8f1eeb400509f0b90b02a1cc9d1e896b72775a12deeba4861cf0cc0865",
+          "translation": "(1) 函数 $f$ 应当是一一的，也就是说，如果 $x\\ne y$，就应当有 $f(x)\\ne f(y)$；这意味着 $F_1$ 中任何两个元素都没有相同的名字。"
+        },
+        {
+          "id": "p602-b3",
+          "source": "(2) The function $f$ should be “onto,” that is, for every element $z$ in $F_2$ there should be some $x$ in $F_1$ such that $z=f(x)$; this means that every element of $F_2$ is used to name some element of $F_1$.",
+          "sourceSha256": "e04395222c37ab077a1089c605abed13cf8e3662100c8d4a50a0cdc537f94a0d",
+          "translation": "(2) 函数 $f$ 应当是“满射”，也就是说，对于 $F_2$ 中的每个元素 $z$，$F_1$ 中都应当存在某个 $x$，使得 $z=f(x)$；这意味着 $F_2$ 的每个元素都被用来给 $F_1$ 的某个元素命名。"
+        },
+        {
+          "id": "p602-b4",
+          "source": "(3) For all $x$ and $y$ in $F_1$ we should have",
+          "sourceSha256": "10165ab2c192dd043bbf07e3c0b360d9176ac4b6f6400d3eae38e40d5e93c6e5",
+          "translation": "(3) 对 $F_1$ 中所有 $x$ 和 $y$，都应当有"
+        },
+        {
+          "id": "p602-b5",
+          "source": "$$f(x\\oplus y)=f(x)+f(y),$$",
+          "sourceSha256": "6cc787223eba08e9175112f85ef7429c271780487b1f290c4ecb20e205a2c2a2"
+        },
+        {
+          "id": "p602-b6",
+          "source": "$$f(x\\odot y)=f(x)\\cdot f(y);$$",
+          "sourceSha256": "0c4e10bcb602be13f14957d18bfa0bd13fe5fddae16699737ffdabb3c359b4a1"
+        },
+        {
+          "id": "p602-b7",
+          "source": "this means that the renaming procedure is consistent with the operations of the field.",
+          "sourceSha256": "72db9101e8c9657d0d9641a1a4b90e64193b273f079b4b85d0d78a59160851b3",
+          "translation": "这意味着重新命名的过程与域的运算相一致。"
+        },
+        {
+          "id": "p602-b8",
+          "source": "If we are also considering $F_1$ and $F_2$ as ordered fields, we add one more requirement:",
+          "sourceSha256": "f2583087f7243f0121244ec35263c3b6bebbe063b2bcd5614dd0229d7cdcb78d",
+          "translation": "如果还把 $F_1$ 和 $F_2$ 看作有序域，就再加一项要求："
+        },
+        {
+          "id": "p602-b9",
+          "source": "(4) If $x\\mathbin{\\text{⧀}}y$, then $f(x)<f(y)$.",
+          "sourceSha256": "bb4cdb4b82afe094cde7a6d6d277cceff70002025ee93045056128daee0cdf8f",
+          "translation": "(4) 如果 $x\\mathbin{\\text{⧀}}y$，那么 $f(x)<f(y)$。"
+        },
+        {
+          "id": "p602-b10",
+          "source": "A function with these properties is called an *isomorphism* from $F_1$ to $F_2$. This definition is so important that we restate it formally.",
+          "sourceSha256": "ba8ed2ba10b5c77cdb0125301f9fb3fd55b07cee785ea5b7eef46463c8ea8f6e",
+          "translation": "具有这些性质的函数，称为从 $F_1$ 到 $F_2$ 的一个*同构*。这个定义如此重要，我们把它正式重述如下。"
+        },
+        {
+          "id": "p602-b11",
+          "source": "## DEFINITION",
+          "sourceSha256": "676bc8347a70e5e93cbff5e0571ad9eecf86b072557f09f8796edced86dfc6e2",
+          "translation": "## 定义"
+        },
+        {
+          "id": "p602-b12",
+          "source": "If $F_1$ and $F_2$ are two fields, an **isomorphism** from $F_1$ to $F_2$ is a function $f$ from $F_1$ to $F_2$ with the following properties:",
+          "sourceSha256": "1ea6df2789cc72d37948d1d59c6286962be1c982f3d7fa3537163b94c9052fd5",
+          "translation": "如果 $F_1$ 和 $F_2$ 是两个域，那么从 $F_1$ 到 $F_2$ 的一个**同构**，就是从 $F_1$ 到 $F_2$ 的一个函数 $f$，它具有以下性质："
+        },
+        {
+          "id": "p602-b13",
+          "source": "(1) If $x\\ne y$, then $f(x)\\ne f(y)$.",
+          "sourceSha256": "ee74e79270a926f601065cdfe313699b634196c068b38236c339dc343a571453",
+          "translation": "(1) 如果 $x\\ne y$，那么 $f(x)\\ne f(y)$。"
+        },
+        {
+          "id": "p602-b14",
+          "source": "(2) If $z$ is in $F_2$, then $z=f(x)$ for some $x$ in $F_1$.",
+          "sourceSha256": "712a90ffebaccefac02d8a0cee5dcc8a8b77bbec0aeb86e670bf53dd9295addf",
+          "translation": "(2) 如果 $z$ 在 $F_2$ 中，那么对 $F_1$ 中某个 $x$，有 $z=f(x)$。"
+        },
+        {
+          "id": "p602-b15",
+          "source": "(3) If $x$ and $y$ are in $F_1$, then",
+          "sourceSha256": "a127fb4fc549ae64e537e4f41b2a5dae452db71aa52f6a682b7df48253217dd4",
+          "translation": "(3) 如果 $x$ 和 $y$ 在 $F_1$ 中，那么"
+        },
+        {
+          "id": "p602-b16",
+          "source": "$$f(x\\oplus y)=f(x)+f(y),$$",
+          "sourceSha256": "6cc787223eba08e9175112f85ef7429c271780487b1f290c4ecb20e205a2c2a2"
+        },
+        {
+          "id": "p602-b17",
+          "source": "$$f(x\\odot y)=f(x)\\cdot f(y).$$",
+          "sourceSha256": "1b3a2c69f38ca96a4276661f9cb286e9be0772abf43ebe5099f01375adfddcba"
+        },
+        {
+          "id": "p602-b18",
+          "source": "If $F_1$ and $F_2$ are ordered fields we also require:",
+          "sourceSha256": "d3c26063223e23f4188cbe769df69a1813788bf2e07b5cf4a7152dcb881138e6",
+          "translation": "如果 $F_1$ 和 $F_2$ 是有序域，我们还要求："
+        },
+        {
+          "id": "p602-b19",
+          "source": "(4) If $x\\mathbin{\\text{⧀}}y$, then $f(x)<f(y)$.",
+          "sourceSha256": "bb4cdb4b82afe094cde7a6d6d277cceff70002025ee93045056128daee0cdf8f",
+          "translation": "(4) 如果 $x\\mathbin{\\text{⧀}}y$，那么 $f(x)<f(y)$。"
+        },
+        {
+          "id": "p602-b20",
+          "source": "The fields $F_1$ and $F_2$ are called **isomorphic** if there is an isomorphism between them. Isomorphic fields may be regarded as essentially the same—any important property of one will automatically hold for the other. Therefore, we can, and should, reformulate the question asked at the beginning of the chapter; if $F$ is a complete ordered field it is silly to expect $F$ to equal $\\mathbf R$—rather, we would like to know if $F$ is isomorphic to $\\mathbf R$. In the following theorem, $F$ will be a field, with operations $+$ and $\\cdot$, and “positive elements” $P$; we write $a<b$ to mean that $b-a$ is in $P$, and so forth.",
+          "sourceSha256": "d5ac17e38bdea45cb0deb531833139cab4b30b9f0df3765e7a5258118132e181",
+          "translation": "如果域 $F_1$ 和 $F_2$ 之间存在同构，就称它们是**同构的**。同构的域可以看作本质上相同——其中一个域的任何重要性质，都自动对另一个域成立。因此，我们可以、也应当重新表述本章开头提出的问题：如果 $F$ 是一个完备有序域，期望 $F$ 等于 $\\mathbf R$ 是不明智的；我们真正想知道的是，$F$ 是否与 $\\mathbf R$ 同构。在下面的定理中，$F$ 是一个域，带有运算 $+$ 和 $\\cdot$，以及“正元素”集合 $P$；我们用 $a<b$ 表示 $b-a$ 在 $P$ 中，其他记号以此类推。"
+        }
+      ]
+    },
+    {
+      "printed": 603,
+      "sourceSha256": "4669c8408ef62b18686dc655796dc39ed4c2d6aa7a2a8c0764d28a0f6696797c",
+      "blocks": [
+        {
+          "id": "p603-b1",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p603-b2",
+          "source": "If $F$ is a complete ordered field, then $F$ is isomorphic to $\\mathbf R$.",
+          "sourceSha256": "96223ef5f1c82f6f40dcfd8e9b9a3423257d7aa5142e7ff6fbafea085142c7ff",
+          "translation": "如果 $F$ 是一个完备有序域，那么 $F$ 与 $\\mathbf R$ 同构。"
+        },
+        {
+          "id": "p603-b3",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p603-b4",
+          "source": "Since two fields are defined to be isomorphic if there is an isomorphism between them, we must actually construct a function $f$ from $\\mathbf R$ to $F$ which is an isomorphism. We begin by defining $f$ on the integers as follows:",
+          "sourceSha256": "b4d8f4a0be019c1a03a7d4fd0fdf4d42986e36e582c7fdc3279630b028b26886",
+          "translation": "由于两个域同构的定义，就是它们之间存在一个同构，所以我们必须实际构造一个从 $\\mathbf R$ 到 $F$ 的函数 $f$，并使它成为同构。我们先如下定义 $f$ 在整数上的值："
+        },
+        {
+          "id": "p603-b5",
+          "source": "$$\\begin{aligned}f(0)&=\\mathbf0,\\\\f(n)&=\\underbrace{\\mathbf1+\\cdots+\\mathbf1}_{n\\text{ times}}\\qquad\\text{for }n>0,\\\\f(n)&=-\\underbrace{(\\mathbf1+\\cdots+\\mathbf1)}_{|n|\\text{ times}}\\qquad\\text{for }n<0.\\end{aligned}$$",
+          "sourceSha256": "dee2458c46a4f4107d05ee0e33f3082414ef1390578ee7e4faf8af169313a8d8"
+        },
+        {
+          "id": "p603-b6",
+          "source": "It is easy to check that",
+          "sourceSha256": "ca25dffdbdf5015321de2fdcf3cb694edf41c99b6b15f22c7261841e7cc6eebf",
+          "translation": "容易检验"
+        },
+        {
+          "id": "p603-b7",
+          "source": "$$f(m+n)=f(m)+f(n),$$",
+          "sourceSha256": "3251b6dcd55d01f57c5f9adce0a743d18f3925ce96ea149c2f698c923c67ca3f"
+        },
+        {
+          "id": "p603-b8",
+          "source": "$$f(m\\cdot n)=f(m)\\cdot f(n),$$",
+          "sourceSha256": "95420dedea0f0a35fb9061ecb17aed882db2a1c513b956d48a78842ec75cbf2a"
+        },
+        {
+          "id": "p603-b9",
+          "source": "for all integers $m$ and $n$, and it is convenient to denote $f(n)$ by $\\mathbf n$. We then define $f$ on the rational numbers by",
+          "sourceSha256": "6034761301059bc39eeeaad72efa8cfe31ca566dbf7655d2167dcca331d51d55",
+          "translation": "对所有整数 $m$ 和 $n$ 都成立，而且把 $f(n)$ 记为 $\\mathbf n$ 很方便。然后我们在有理数上定义 $f$ 为"
+        },
+        {
+          "id": "p603-b10",
+          "source": "$$f(m/n)=\\mathbf m/\\mathbf n=\\mathbf m\\cdot\\mathbf n^{-1}$$",
+          "sourceSha256": "dc7fdcb6404174842ba7a6f7edcd9a751dd482b9a11f340b67428ba1b6a8b060"
+        },
+        {
+          "id": "p603-b11",
+          "source": "(notice that the $n$-fold sum $\\mathbf1+\\cdots+\\mathbf1\\ne\\mathbf0$ if $n>0$, since $F$ is an ordered field). This definition makes sense because if $m/n=k/l$, then $ml=nk$, so $\\mathbf m\\cdot\\mathbf l=\\mathbf k\\cdot\\mathbf n$, so $\\mathbf m\\cdot\\mathbf n^{-1}=\\mathbf k\\cdot\\mathbf l^{-1}$. It is easy to check that",
+          "sourceSha256": "c7febe5cb80fa9d6ca6cd9fcba3eb86261dad48014ee8cb4ca6df97cb8123a92",
+          "translation": "（注意，当 $n>0$ 时，$n$ 项之和 $\\mathbf1+\\cdots+\\mathbf1\\ne\\mathbf0$，因为 $F$ 是有序域）。这个定义有意义，因为如果 $m/n=k/l$，那么 $ml=nk$，所以 $\\mathbf m\\cdot\\mathbf l=\\mathbf k\\cdot\\mathbf n$，从而 $\\mathbf m\\cdot\\mathbf n^{-1}=\\mathbf k\\cdot\\mathbf l^{-1}$。容易检验"
+        },
+        {
+          "id": "p603-b12",
+          "source": "$$f(r_1+r_2)=f(r_1)+f(r_2),$$",
+          "sourceSha256": "d32d65026a4c88bb5693f9fe72e55efd05c98928be741a5463f5ff16f365743d"
+        },
+        {
+          "id": "p603-b13",
+          "source": "$$f(r_1\\cdot r_2)=f(r_1)\\cdot f(r_2),$$",
+          "sourceSha256": "8ee0f1ea261a730631e890cf318d017d9f1ed8f14d9a8099c190329e98b45e79"
+        },
+        {
+          "id": "p603-b14",
+          "source": "for all rational numbers $r_1$ and $r_2$, and that $f(r_1)<f(r_2)$ if $r_1<r_2$.",
+          "sourceSha256": "9881c25982f8b7dd590433d7f8546ec2c7124e7dfc7cc00941fa2edd9bd94aaa",
+          "translation": "对所有有理数 $r_1$ 和 $r_2$ 都成立，而且如果 $r_1<r_2$，那么 $f(r_1)<f(r_2)$。"
+        },
+        {
+          "id": "p603-b15",
+          "source": "The definition of $f(x)$ for arbitrary $x$ is based on the now familiar idea that any real number is determined by the rational numbers less than it. For any $x$ in $\\mathbf R$, let $A_x$ be the subset of $F$ consisting of all $f(r)$, for all rational numbers $r<x$. The set $A_x$ is certainly not empty, and it is also bounded above, for if $r_0$ is a rational number with $r_0>x$, then $f(r_0)>f(r)$ for all $f(r)$ in $A_x$. Since $F$ is a complete ordered field, the set $A_x$ has a least upper bound; we define $f(x)$ as $\\sup A_x$.",
+          "sourceSha256": "d9c013a858b5b8815e87eef72aba15fafe9cfaaba7f17d999bb036793251df61",
+          "translation": "对于任意 $x$，$f(x)$ 的定义基于一个现在已经熟悉的思想：任何实数都由小于它的有理数所确定。对于 $\\mathbf R$ 中任意 $x$，令 $A_x$ 为 $F$ 的一个子集，由对所有有理数 $r<x$ 所得的所有 $f(r)$ 组成。集合 $A_x$ 当然非空，而且也有上界，因为如果 $r_0$ 是满足 $r_0>x$ 的有理数，那么对 $A_x$ 中所有 $f(r)$ 都有 $f(r_0)>f(r)$。由于 $F$ 是完备有序域，集合 $A_x$ 有最小上界；我们把 $f(x)$ 定义为 $\\sup A_x$。"
+        },
+        {
+          "id": "p603-b16",
+          "source": "We now have $f(x)$ defined in two different ways, first for rational $x$, and then for any $x$. Before proceeding further, it is necessary to show that these two definitions agree for rational $x$. In other words, if $x$ is a rational number, we want to show that",
+          "sourceSha256": "2caa4baccba4032ab267fe716d637016abe34aa534491de11276fb49f1785a4b",
+          "translation": "现在，我们用两种不同的方式定义了 $f(x)$：先是对有理数 $x$，然后是对任意 $x$。在继续之前，必须证明这两个定义对有理数 $x$ 是一致的。换句话说，如果 $x$ 是有理数，我们要证明"
+        },
+        {
+          "id": "p603-b17",
+          "source": "$$\\sup A_x=f(x),$$",
+          "sourceSha256": "ba5ac8a5b1d835ac8d47dc2765a37f7e2f13adce02a1932f78bbb5083b8c94b1"
+        },
+        {
+          "id": "p603-b18",
+          "source": "where $f(x)$ here denotes $\\mathbf m/\\mathbf n$, for $x=m/n$. This is not automatic, but depends on the completeness of $F$; a slight digression is thus required.",
+          "sourceSha256": "5cbbcc1e2894ac421ed2427b796cd32cb948ca11e4982f6b2d8b33a9a7fb1567",
+          "translation": "这里 $f(x)$ 表示在 $x=m/n$ 时的 $\\mathbf m/\\mathbf n$。这并不会自动成立，而是依赖 $F$ 的完备性；因此需要稍微离题讨论一下。"
+        },
+        {
+          "id": "p603-b19",
+          "source": "Since $F$ is complete, the elements",
+          "sourceSha256": "7d21e526a469bdef0f553038625896c30a8750c7474ba1864a4125d40e3b5a87",
+          "translation": "由于 $F$ 完备，元素"
+        },
+        {
+          "id": "p603-b20",
+          "source": "$$\\underbrace{\\mathbf1+\\cdots+\\mathbf1}_{n\\text{ times}}\\qquad\\text{for natural numbers }n$$",
+          "sourceSha256": "1c69d77dc58782bdd14a51949d58ffe483e633a0b7f9dce5664d784215c1a90d"
+        }
+      ]
+    },
+    {
+      "printed": 604,
+      "sourceSha256": "f6975b99cc65244a2cf3d4b81d92aaecece9a0a6b366d8553fc1b6d156110f84",
+      "blocks": [
+        {
+          "id": "p604-b1",
+          "source": "form a set which is not bounded above; the proof is exactly the same as the proof for $\\mathbf R$ (Theorem 8-2). The consequences of this fact for $\\mathbf R$ have exact analogues in $F$: in particular, if $a$ and $b$ are elements of $F$ with $a<b$, then there is a rational number $r$ such that",
+          "sourceSha256": "a79f8a36f04ce477bfa8647108d527ef2955cf67cd943943919116431d0c9075",
+          "translation": "所成的集合没有上界；证明与 $\\mathbf R$ 中的证明（定理 8-2）完全相同。这个事实在 $\\mathbf R$ 中的推论，在 $F$ 中都有完全对应的版本：特别地，如果 $a$ 和 $b$ 是 $F$ 中的元素，且 $a<b$，那么存在一个有理数 $r$，使得"
+        },
+        {
+          "id": "p604-b2",
+          "source": "$$a<f(r)<b.$$",
+          "sourceSha256": "2a761682ab94a48759f46ae4c6c6706fc533e469fee74a761c5c5df36a8a2eb8"
+        },
+        {
+          "id": "p604-b3",
+          "source": "Having made this observation, we return to the proof that the two definitions of $f(x)$ agree for rational $x$. If $y$ is a rational number with $y<x$, then we have already seen that $f(y)<f(x)$. Thus every element of $A_x$ is $<f(x)$. Consequently,",
+          "sourceSha256": "38550acffdf4296aa371cdd5b26f2f63d71e90d3213e601dbae8c1b73600297a",
+          "translation": "有了这一观察，我们回到证明 $f(x)$ 的两个定义对有理数 $x$ 一致的问题上。如果 $y$ 是满足 $y<x$ 的有理数，那么我们已经看到 $f(y)<f(x)$。因此 $A_x$ 的每个元素都 $<f(x)$。从而，"
+        },
+        {
+          "id": "p604-b4",
+          "source": "$$\\sup A_x\\le f(x).$$",
+          "sourceSha256": "4c8857d510d4f280a7ad7b3ff6fbdf39a3d2d24559f434e171d2abfbaa18b60e"
+        },
+        {
+          "id": "p604-b5",
+          "source": "On the other hand, suppose that we had",
+          "sourceSha256": "4a47009fc3fc3f723f91452cc9443b8884988aa80a2225e9dacbd005afe64c5e",
+          "translation": "另一方面，假设有"
+        },
+        {
+          "id": "p604-b6",
+          "source": "$$\\sup A_x<f(x).$$",
+          "sourceSha256": "5924f907c511e99da7b28b32b1facbca4988cd206955599e686b99f1e19f0116"
+        },
+        {
+          "id": "p604-b7",
+          "source": "Then there would be a rational number $r$ such that",
+          "sourceSha256": "19eb56f285b6f4b7dcfd05507b21d39488db8abebc270666bcef79cc30577556",
+          "translation": "那么将存在一个有理数 $r$，使得"
+        },
+        {
+          "id": "p604-b8",
+          "source": "$$\\sup A_x<f(r)<f(x).$$",
+          "sourceSha256": "a93a6d297c2c52742351f14311c4c34fef54e95f72e741449ed6a751cbc9c6c9"
+        },
+        {
+          "id": "p604-b9",
+          "source": "But the condition $f(r)<f(x)$ means that $r<x$, which means that $f(r)$ is in the set $A_x$; this clearly contradicts the condition $\\sup A_x<f(r)$. This shows that the original assumption is false, so",
+          "sourceSha256": "ffde3747f25569104754d2484ea08304b36f7b91d0e67166add2cf68ad4b24e5",
+          "translation": "但是，条件 $f(r)<f(x)$ 意味着 $r<x$，也就是说 $f(r)$ 在集合 $A_x$ 中；这显然与条件 $\\sup A_x<f(r)$ 矛盾。这表明原来的假设不成立，因此"
+        },
+        {
+          "id": "p604-b10",
+          "source": "$$\\sup A_x=f(x).$$",
+          "sourceSha256": "36b7ba5e9c91b32e5a312a72629f419003f2d7755510fdca3461156ed9e4a612"
+        },
+        {
+          "id": "p604-b11",
+          "source": "We thus have a certain well-defined function $f$ from $\\mathbf R$ to $F$. In order to show that $f$ is an isomorphism we must verify conditions (1)–(4) of the definition. We will begin with (4).",
+          "sourceSha256": "7b0e588cfa3c64f99cf92799fa767ad41fb9f69f6121557c240c21974a9fc098",
+          "translation": "这样，我们就得到了一个良好定义的、从 $\\mathbf R$ 到 $F$ 的函数 $f$。为了证明 $f$ 是同构，必须验证定义中的条件 (1)–(4)。我们先从 (4) 开始。"
+        },
+        {
+          "id": "p604-b12",
+          "source": "If $x$ and $y$ are real numbers with $x<y$, then clearly $A_x$ is contained in $A_y$. Thus",
+          "sourceSha256": "9879194585af707c34053b97145ce5b0da1d54ad38e2946f2d662b8b222df39d",
+          "translation": "如果 $x$ 和 $y$ 是满足 $x<y$ 的实数，那么 $A_x$ 显然包含于 $A_y$。因此"
+        },
+        {
+          "id": "p604-b13",
+          "source": "$$f(x)=\\sup A_x\\le\\sup A_y=f(y).$$",
+          "sourceSha256": "1f16e5e6d42f2acbe6ffbdf4dc3c88792232544a14030d616e72ef74c1a11fca"
+        },
+        {
+          "id": "p604-b14",
+          "source": "To rule out the possibility of equality, notice that there are rational numbers $r$ and $s$ with",
+          "sourceSha256": "9f0109b77cee6ca777c509be48c5e9fa2542d8deee24c0ea4f0ab0febccdb877",
+          "translation": "为了排除相等的可能性，注意到存在有理数 $r$ 和 $s$，使得"
+        },
+        {
+          "id": "p604-b15",
+          "source": "$$x<r<s<y.$$",
+          "sourceSha256": "7d0816d7d1f96b71ff576f0a7de0f48ffd6af164aaeb27e6726e1837db10f2a7"
+        },
+        {
+          "id": "p604-b16",
+          "source": "We know that $f(r)<f(s)$. It follows that",
+          "sourceSha256": "fe0b844c79c3c9086b34108eb52b6a1f92e526bb59ab93cb497de36c4e6811cd",
+          "translation": "我们知道 $f(r)<f(s)$。于是得到"
+        },
+        {
+          "id": "p604-b17",
+          "source": "$$f(x)\\le f(r)<f(s)\\le f(y).$$",
+          "sourceSha256": "ec190c72c3eb609e76334d049eae72f26dff271dc6ca650a9e71a466adb72cc9"
+        },
+        {
+          "id": "p604-b18",
+          "source": "This proves (4).",
+          "sourceSha256": "0e3031d4163a89a46c4e1b35efb77a88a2581d3222bbbc83afe83bb645f09250",
+          "translation": "这就证明了 (4)。"
+        },
+        {
+          "id": "p604-b19",
+          "source": "Condition (1) follows immediately from (4): If $x\\ne y$, then either $x<y$ or $y<x$; in the first case $f(x)<f(y)$, and in the second case $f(y)<f(x)$; in either case $f(x)\\ne f(y)$.",
+          "sourceSha256": "467dd3f10a2f0decdf188ed8547a75f4e3c25e0d0b2af4d0638590ea45245df8",
+          "translation": "条件 (1) 立即由 (4) 得到：如果 $x\\ne y$，那么或者 $x<y$，或者 $y<x$；在第一种情形中 $f(x)<f(y)$，在第二种情形中 $f(y)<f(x)$；无论哪种情形，都有 $f(x)\\ne f(y)$。"
+        },
+        {
+          "id": "p604-b20",
+          "source": "To prove (2), let $a$ be an element of $F$, and let $B$ be the set of all rational numbers $r$ with $f(r)<a$. The set $B$ is not empty, and it is also bounded above, because there is a rational number $s$ with $f(s)>a$, so that $f(s)>f(r)$ for $r$ in $B$, which implies that $s>r$. Let $x$ be the least upper bound of $B$; we claim that $f(x)=a$. In order to prove this it suffices to eliminate the alternatives",
+          "sourceSha256": "47526727ba8e9c93282973068dc526ddc239337fe1bc57ee6c57c581d0727eaa",
+          "translation": "为了证明 (2)，设 $a$ 是 $F$ 的一个元素，并令 $B$ 为所有满足 $f(r)<a$ 的有理数 $r$ 所成的集合。集合 $B$ 非空，而且也有上界，因为存在一个有理数 $s$，使得 $f(s)>a$，所以对 $B$ 中的 $r$ 有 $f(s)>f(r)$，从而 $s>r$。设 $x$ 是 $B$ 的最小上界；我们断言 $f(x)=a$。为了证明这一点，只需排除以下两种可能："
+        },
+        {
+          "id": "p604-b21",
+          "source": "$$f(x)<a,$$",
+          "sourceSha256": "9e635481eb01c2ab2596dc8ec92fcfafd2eb3f68819d73a77d05f727ff882291"
+        },
+        {
+          "id": "p604-b22",
+          "source": "$$a<f(x).$$",
+          "sourceSha256": "270b2a646c6654149c2f79a299c894531c345503dbfbe9d1c6027527d97c9543"
+        }
+      ]
+    },
+    {
+      "printed": 605,
+      "sourceSha256": "6d247e01fa7c73810edce2a2380f592480acf6f36e7592a492189e68d7c66304",
+      "blocks": [
+        {
+          "id": "p605-b1",
+          "source": "In the first case there would be a rational number $r$ with",
+          "sourceSha256": "357670e55161b910e14cb45b86f47a21fc68c89d3563985ee803c9b2a2f53997",
+          "translation": "在第一种情形中，将存在有理数 $r$，使得"
+        },
+        {
+          "id": "p605-b2",
+          "source": "$$f(x)<f(r)<a.$$",
+          "sourceSha256": "b4f563530abc1800bdaf6afeed65fde7d78b81d30233b56fd8f613d19f3fe2c6"
+        },
+        {
+          "id": "p605-b3",
+          "source": "But this means that $x<r$ and that $r$ is in $B$, which contradicts the fact that $x=\\sup B$. In the second case there would be a rational number $r$ with",
+          "sourceSha256": "689fc773f4027bfe840ddbf240161e9707de4778f36729f4b4bc8299dff97b15",
+          "translation": "但这意味着 $x<r$，而且 $r$ 在 $B$ 中，与 $x=\\sup B$ 的事实矛盾。在第二种情形中，将存在有理数 $r$，使得"
+        },
+        {
+          "id": "p605-b4",
+          "source": "$$a<f(r)<f(x).$$",
+          "sourceSha256": "6a5a41805bb25ec31a5d6edb3a5270c0fff25dcd485b17829ebe9ecb99dcb519"
+        },
+        {
+          "id": "p605-b5",
+          "source": "This implies that $r<x$. Since $x=\\sup B$, this means that $r<s$ for some $s$ in $B$. Hence",
+          "sourceSha256": "6746201612b5c0deb626125928a8c55bf4703bcad620df05c1c65397a42ad44b",
+          "translation": "这意味着 $r<x$。由于 $x=\\sup B$，这又意味着对 $B$ 中某个 $s$ 有 $r<s$。因此"
+        },
+        {
+          "id": "p605-b6",
+          "source": "$$f(r)<f(s)<a,$$",
+          "sourceSha256": "3339b81ac36656652229e295c931b25c070d00237ca2e901773c0bea3afdce49"
+        },
+        {
+          "id": "p605-b7",
+          "source": "again a contradiction. Thus $f(x)=a$, proving (2).",
+          "sourceSha256": "97e5a97a9c01c739b750d9239b2c734db17efb7e6fbf960fe2ced492f691a20f",
+          "translation": "又得到矛盾。所以 $f(x)=a$，这就证明了 (2)。"
+        },
+        {
+          "id": "p605-b8",
+          "source": "To check (3), let $x$ and $y$ be real numbers and suppose that $f(x+y)\\ne f(x)+f(y)$. Then either",
+          "sourceSha256": "6649c387c3550fa708f4eee1199fe667abbb85ebe240443ef369935f40cacd28",
+          "translation": "为了检验 (3)，设 $x$ 和 $y$ 是实数，并假设 $f(x+y)\\ne f(x)+f(y)$。那么或者"
+        },
+        {
+          "id": "p605-b9",
+          "source": "$$f(x+y)<f(x)+f(y)\\quad\\text{or}\\quad f(x)+f(y)<f(x+y).$$",
+          "sourceSha256": "3bbf50f0c50dab80fb00f93246f6f5a7dc80adf478774aa2807140a8e8360107"
+        },
+        {
+          "id": "p605-b10",
+          "source": "In the first case there would be a rational number $r$ such that",
+          "sourceSha256": "ae2016983ee2edc621df90a7415b363420fc6af7c49c078165d02cb0f3a1ef50",
+          "translation": "在第一种情形中，将存在一个有理数 $r$，使得"
+        },
+        {
+          "id": "p605-b11",
+          "source": "$$f(x+y)<f(r)<f(x)+f(y).$$",
+          "sourceSha256": "8d51cf9f8423782c74959d56b98396b74502510712f6597ba0efcb20e6360678"
+        },
+        {
+          "id": "p605-b12",
+          "source": "But this would mean that",
+          "sourceSha256": "426f6afc2b18774a9bddc7b838db909652312d18bd497258f6e304db395ba058",
+          "translation": "但这意味着"
+        },
+        {
+          "id": "p605-b13",
+          "source": "$$x+y<r.$$",
+          "sourceSha256": "edb69afaf5591431eae92821053946f1191a7b48b914fd0dfae5cad63f902d0e"
+        },
+        {
+          "id": "p605-b14",
+          "source": "Therefore $r$ could be written as the sum of two rational numbers",
+          "sourceSha256": "c6f51556cb86c91acff16047094a67ae292fb8b7058495692f863240582b998a",
+          "translation": "因此，$r$ 可以写成两个有理数之和，"
+        },
+        {
+          "id": "p605-b15",
+          "source": "$$r=r_1+r_2,\\qquad\\text{where }x<r_1\\text{ and }y<r_2.$$",
+          "sourceSha256": "48279d7a60549252e198fc7995b76243c170a840348e069802931a57b39a1eaf"
+        },
+        {
+          "id": "p605-b16",
+          "source": "Then, using the facts checked about $f$ for *rational* numbers, it would follow that",
+          "sourceSha256": "aafd71cb139896ce2102b6891a484088756a022a989e4c23eb80fc568e7f8aed",
+          "translation": "于是，利用已经对*有理数*检验过的关于 $f$ 的事实，可得"
+        },
+        {
+          "id": "p605-b17",
+          "source": "$$f(r)=f(r_1+r_2)=f(r_1)+f(r_2)>f(x)+f(y),$$",
+          "sourceSha256": "d2f1d5ba6130e8e84185aba20efd78b1cdd8f0510a318f6685c272e72ee1ace8"
+        },
+        {
+          "id": "p605-b18",
+          "source": "a contradiction. The other case is handled similarly.",
+          "sourceSha256": "255bf04bb13687ccb402d4ad1e3d48d74c275037e0af8da51c7e4628bcb0102b",
+          "translation": "这是矛盾。另一种情形类似处理。"
+        },
+        {
+          "id": "p605-b19",
+          "source": "Finally, if $x$ and $y$ are positive real numbers, the same sort of reasoning shows that",
+          "sourceSha256": "b03eca1db88811de56a9928f19b8b46e8d6e604cf3a7b59d3ce0ad73431315af",
+          "translation": "最后，如果 $x$ 和 $y$ 是正实数，同样的推理表明"
+        },
+        {
+          "id": "p605-b20",
+          "source": "$$f(x\\cdot y)=f(x)\\cdot f(y);$$",
+          "sourceSha256": "ad97d4cdbe4b410ddfaa538fcb5a0588223daa50453ec49ce14734026b991855"
+        },
+        {
+          "id": "p605-b21",
+          "source": "the general case is then a simple consequence. ■",
+          "sourceSha256": "54b070be2415eaead81ea3b012358bb7f1225dfc3d7b0f5df661a8e15cc4399b",
+          "translation": "一般情形便是它的简单推论。■"
+        },
+        {
+          "id": "p605-b22",
+          "source": "This theorem brings to an end our investigation of the real numbers, and resolves any doubts about them: There is a complete ordered field and, up to isomorphism, only one complete ordered field. It is an important part of a mathematical education to follow a construction of the real numbers in detail, but it is not necessary to refer ever again to this particular construction. It is utterly irrelevant that a real number happens to be a collection of rational numbers, and such a fact should never enter the proof of any important theorem about the real numbers. Reasonable proofs should use only the fact that the real numbers are a complete ordered field, because this property of the real numbers characterizes them up to isomorphism, and any significant mathematical property of the real numbers will be true for all isomorphic fields. To be candid I should admit that this last assertion is just a prejudice of the author, but it is one shared by almost all other mathematicians.",
+          "sourceSha256": "fede6c8b08ec91b573beb56805a6f587706f4dd207ea591396f5728df207593b",
+          "translation": "这个定理结束了我们对实数的研究，也消除了关于实数的所有疑虑：存在一个完备有序域，而且在同构意义下，只有一个完备有序域。详细地跟随一遍实数的构造，是数学教育的重要组成部分，但以后再也不必引用这个具体构造。一个实数碰巧是有理数的集合，这完全无关紧要；任何关于实数的重要定理的证明，都不应使用这个事实。合理的证明只应使用实数构成完备有序域这一事实，因为这个性质在同构意义下刻画了实数，而实数的任何有意义的数学性质，都会对所有与之同构的域成立。坦率地说，我应该承认，最后这句话只是作者的一种偏见，不过几乎所有其他数学家也都抱有同样的偏见。"
+        }
+      ]
+    },
+    {
+      "printed": 606,
+      "sourceSha256": "23b9cd07033a5fd71b3767b2bd78a5507cbcfa31de16a7400fd4bf5d2233018e",
+      "blocks": [
+        {
+          "id": "p606-b1",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p606-b2",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p606-b3",
+          "source": "Let $f$ be an isomorphism from $F_1$ to $F_2$.",
+          "sourceSha256": "5bf14ce96813ad5fad636302acbec0fb087dee4279f517929ffd65abbc379858",
+          "translation": "设 $f$ 是从 $F_1$ 到 $F_2$ 的一个同构。"
+        },
+        {
+          "id": "p606-b4",
+          "source": "(a) Show that $f(0)=0$ and $f(1)=1$. (Here $0$ and $1$ on the left denote elements in $F_1$, while $0$ and $1$ on the right denote elements of $F_2$.)",
+          "sourceSha256": "d05433291479b7f727dfc46a5b934c245bc3cb64c8149dfb21a843c8d83c2bf5",
+          "translation": "(a) 证明 $f(0)=0$ 和 $f(1)=1$。（这里左边的 $0$ 和 $1$ 表示 $F_1$ 中的元素，而右边的 $0$ 和 $1$ 表示 $F_2$ 中的元素。）"
+        },
+        {
+          "id": "p606-b5",
+          "source": "(b) Show that $f(-a)=-f(a)$ and $f(a^{-1})=f(a)^{-1}$, for $a\\ne0$.",
+          "sourceSha256": "294898dba42033749f322529fd8c220a19eb736a6d42ac43e50773f3942369dd",
+          "translation": "(b) 证明 $f(-a)=-f(a)$，并且在 $a\\ne0$ 时 $f(a^{-1})=f(a)^{-1}$。"
+        },
+        {
+          "id": "p606-b6",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p606-b7",
+          "source": "Here is an opportunity to convince yourself that any significant property of a field is shared by any field isomorphic to it. The point of this problem is to write out very formal proofs until you are certain that all statements of this sort are obvious. $F_1$ and $F_2$ will be two fields which are isomorphic; for simplicity we will denote the operations in both by $+$ and $\\cdot$. Show that:",
+          "sourceSha256": "60aef115044476b935e7d2c2ef90046df6719c47947702dc017d8146c855cc92",
+          "translation": "这里有一个机会，让你确信：一个域的任何有意义的性质，也为每个与它同构的域所共有。本题的要点，是写出十分形式化的证明，直到你确信所有这种类型的陈述都是显然的。设 $F_1$ 和 $F_2$ 是两个同构的域；为简单起见，把两个域中的运算都记为 $+$ 和 $\\cdot$。证明："
+        },
+        {
+          "id": "p606-b8",
+          "source": "(a) If the equation $x^2+1=0$ has a solution in $F_1$, then it has a solution in $F_2$.",
+          "sourceSha256": "b4774880f11d029759b31aa4848c28182f1ceeb8ed5bb8f6be5c57787ae7fc8a",
+          "translation": "(a) 如果方程 $x^2+1=0$ 在 $F_1$ 中有解，那么它在 $F_2$ 中也有解。"
+        },
+        {
+          "id": "p606-b9",
+          "source": "(b) If every polynomial equation $x^n+a_{n-1}\\cdot x^{n-1}+\\cdots+a_0=0$ with $a_0,\\ldots,a_{n-1}$ in $F_1$, has a root in $F_1$, then every polynomial equation $x^n+b_{n-1}\\cdot x^{n-1}+\\cdots+b_0=0$ with $b_0,\\ldots,b_{n-1}$ in $F_2$ has a root in $F_2$.",
+          "sourceSha256": "92f856d49bf42ab4f724ba254f542b8e71f804a890ada2085fda77c8ae12691a",
+          "translation": "(b) 如果每个多项式方程 $x^n+a_{n-1}\\cdot x^{n-1}+\\cdots+a_0=0$，其中 $a_0,\\ldots,a_{n-1}$ 在 $F_1$ 中，都在 $F_1$ 中有根，那么每个多项式方程 $x^n+b_{n-1}\\cdot x^{n-1}+\\cdots+b_0=0$，其中 $b_0,\\ldots,b_{n-1}$ 在 $F_2$ 中，都在 $F_2$ 中有根。"
+        },
+        {
+          "id": "p606-b10",
+          "source": "(c) If $1+\\cdots+1$ (summed $m$ times) $=0$ in $F_1$, then the same is true in $F_2$.",
+          "sourceSha256": "5c533375ab1fa6aab9d6b3c54277acbf287f4d7f35c5a0352089f09a79761e97",
+          "translation": "(c) 如果在 $F_1$ 中有 $1+\\cdots+1$（相加 $m$ 次）$=0$，那么在 $F_2$ 中也同样成立。"
+        },
+        {
+          "id": "p606-b11",
+          "source": "(d) If $F_1$ and $F_2$ are ordered fields (and the isomorphism $f$ satisfies $f(x)<f(y)$ for $x<y$) and $F_1$ is complete, then $F_2$ is complete.",
+          "sourceSha256": "9af17da2e4654ca513f5f5c9f2b27a6f05b023bd2d6d8df3de5bf878452ab8f2",
+          "translation": "(d) 如果 $F_1$ 和 $F_2$ 是有序域（而且同构 $f$ 在 $x<y$ 时满足 $f(x)<f(y)$），并且 $F_1$ 完备，那么 $F_2$ 也完备。"
+        },
+        {
+          "id": "p606-b12",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p606-b13",
+          "source": "Let $f$ be an isomorphism from $F_1$ to $F_2$ and $g$ an isomorphism from $F_2$ to $F_3$. Define the function $g\\circ f$ from $F_1$ to $F_3$ by $(g\\circ f)(x)=g(f(x))$. Show that $g\\circ f$ is an isomorphism.",
+          "sourceSha256": "fdcc3659425881db10db7a82ea55e47543950619e9f60e9e2e7a73cf22cb60e7",
+          "translation": "设 $f$ 是从 $F_1$ 到 $F_2$ 的同构，而 $g$ 是从 $F_2$ 到 $F_3$ 的同构。通过 $(g\\circ f)(x)=g(f(x))$ 定义从 $F_1$ 到 $F_3$ 的函数 $g\\circ f$。证明 $g\\circ f$ 是同构。"
+        },
+        {
+          "id": "p606-b14",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p606-b15",
+          "source": "Suppose that $F$ is a complete ordered field, so that there is an isomorphism $f$ from $\\mathbf R$ to $F$. Show that there is actually only one isomorphism from $\\mathbf R$ to $F$. Hint: In case $F=\\mathbf R$, this is Problem 3-17. Now if $f$ and $g$ are two isomorphisms from $\\mathbf R$ to $F$ consider $g^{-1}\\circ f$.",
+          "sourceSha256": "c2d93372998dc4cfab03e20f4b31dfb5c068dde19dc00b18acefe57abb34f710",
+          "translation": "假设 $F$ 是完备有序域，因此存在从 $\\mathbf R$ 到 $F$ 的同构 $f$。证明实际上从 $\\mathbf R$ 到 $F$ 只有一个同构。提示：在 $F=\\mathbf R$ 的情形中，这就是习题 3-17。现在，如果 $f$ 和 $g$ 是从 $\\mathbf R$ 到 $F$ 的两个同构，考虑 $g^{-1}\\circ f$。"
+        },
+        {
+          "id": "p606-b16",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p606-b17",
+          "source": "Find an isomorphism from $\\mathbf C$ to $\\mathbf C$ other than the identity function.",
+          "sourceSha256": "4bec5b12d51f7b589284ffaef749e964d0499dddbb1576d78195ff38b2e3f37e",
+          "translation": "求一个从 $\\mathbf C$ 到 $\\mathbf C$ 的同构，要求它不是恒等函数。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3359 @@
+{
+  "chapter": 20,
+  "language": "zh-CN",
+  "sourceSha256": "785df81c4730c462a9193d5901f808d07039da9d26144f890015281e721daa83",
+  "paragraphCount": 325,
+  "pages": [
+    {
+      "printed": 411,
+      "sourceSha256": "0409bde726f8f953b853d5e878e5a2247401f2ba2467459a206a95ffa3ee798e",
+      "blocks": [
+        {
+          "id": "p411-b1",
+          "source": "# CHAPTER 20\n# APPROXIMATION BY POLYNOMIAL FUNCTIONS",
+          "sourceSha256": "739fb6f967e1e21e6f03c30d16520ac83d12c11e7c645bc278dd5770c99289b9",
+          "translation": "# 第 20 章\n# 用多项式函数逼近"
+        },
+        {
+          "id": "p411-b2",
+          "source": "There is one sense in which the “elementary functions” are not elementary at all. If $p$ is a polynomial function,",
+          "sourceSha256": "2b1fa1d2c891320fbf1b8a8728713af6fa8a32d1de1bac8679dfbd20d2f6a0f3",
+          "translation": "从某种意义上说，“初等函数”一点也不初等。如果 $p$ 是多项式函数，"
+        },
+        {
+          "id": "p411-b3",
+          "source": "$$p(x)=a_0+a_1x+\\cdots+a_nx^n,$$",
+          "sourceSha256": "38d325c63faa8985dfbf8adcffc1871be46cd641c7d04e7591240cea50c33311"
+        },
+        {
+          "id": "p411-b4",
+          "source": "then $p(x)$ can be computed easily for any number $x$. This is not at all true for functions like sin, log, or exp. At present, to find $\\log x=\\int_1^x1/t\\,dt$ approximately, we must compute some upper or lower sums, and make certain that the error involved in accepting such a sum for $\\log x$ is not too great. Computing $e^x=\\log^{-1}(x)$ would be even more difficult: we would have to compute $\\log a$ for many values of $a$ until we found a number $a$ such that $\\log a$ is approximately $x$—then $a$ would be approximately $e^x$.",
+          "sourceSha256": "60e42c290a1ec18a635ca47123f3aaa27556e14c6ce8c7dc4383c08b26858fbb",
+          "translation": "那么对于任意数 $x$，都很容易计算 $p(x)$。但 sin、log 或 exp 这样的函数完全不是如此。目前，为了近似求出 $\\log x=\\int_1^x1/t\\,dt$，必须计算某些上和或下和，还要确保把这样的和当作 $\\log x$ 时，误差不会太大。计算 $e^x=\\log^{-1}(x)$ 就更困难了：必须对许多 $a$ 的值计算 $\\log a$，直到找到一个数 $a$，使 $\\log a$ 近似等于 $x$——这时 $a$ 才近似等于 $e^x$。"
+        },
+        {
+          "id": "p411-b5",
+          "source": "In this chapter we will obtain important theoretical results which reduce the computation of $f(x)$, for many functions $f$, to the evaluation of polynomial functions. The method depends on finding polynomial functions which are close approximations to $f$. In order to guess a polynomial which is appropriate, it is useful to first examine polynomial functions themselves more thoroughly.",
+          "sourceSha256": "1b21954aa695dd526e1dfa316351ddb914336bc2c0a65bff779ec97050e805a8",
+          "translation": "本章将得到一些重要的理论结果，对于许多函数 $f$，这些结果能把 $f(x)$ 的计算化为多项式函数的求值。这个方法依赖于找到能够很好地近似 $f$ 的多项式函数。为了猜到合适的多项式，先更深入地考察多项式函数本身会很有帮助。"
+        },
+        {
+          "id": "p411-b6",
+          "source": "Suppose that",
+          "sourceSha256": "fec9870e474474d9697ae5c4f9c7b38353d7c2bda8ba0abfc0249ff8b846c6c1",
+          "translation": "假设"
+        },
+        {
+          "id": "p411-b7",
+          "source": "$$p(x)=a_0+a_1x+\\cdots+a_nx^n.$$",
+          "sourceSha256": "0625c5937f7864aac1803c0edf2506327ade86200607947dc0b98a01b54261ff"
+        },
+        {
+          "id": "p411-b8",
+          "source": "It is interesting, and for our purposes very important, to note that the coefficients $a_i$ can be expressed in terms of the value of $p$ and its various derivatives at 0. To begin with, note that",
+          "sourceSha256": "5117a22c0773d7211d4e1d8850f73c2114106a9bae3e11e6d3f6f46674040f47",
+          "translation": "值得注意的是，系数 $a_i$ 可以用 $p$ 及其各阶导数在 0 处的值来表示；这一点既有趣，对我们的目的也非常重要。首先注意"
+        },
+        {
+          "id": "p411-b9",
+          "source": "$$p(0)=a_0.$$",
+          "sourceSha256": "26a993f8b91b64cf87eab7342d3a83eda43728ad6dd4340bbacb601c688ef10b"
+        },
+        {
+          "id": "p411-b10",
+          "source": "Differentiating the original expression for $p(x)$ yields",
+          "sourceSha256": "7a4aceb91aa9db8f17027bb63967c0189945bf065dd4fb59fa4fe8811c7c0fa9",
+          "translation": "对 $p(x)$ 的原表达式求导，得到"
+        },
+        {
+          "id": "p411-b11",
+          "source": "$$p'(x)=a_1+2a_2x+\\cdots+na_nx^{n-1}.$$",
+          "sourceSha256": "0ae84a3ff1cef1b48f0276ac153e524d4ab22a168b648011451315eb500756b4"
+        },
+        {
+          "id": "p411-b12",
+          "source": "Therefore,",
+          "sourceSha256": "875038257bcbbe2d6a85dec6e2757ab7635b070911bbef2968c8d33cc9d8b01d",
+          "translation": "因此，"
+        },
+        {
+          "id": "p411-b13",
+          "source": "$$p'(0)=p^{(1)}(0)=a_1.$$",
+          "sourceSha256": "8a98ccb878b032cb1c716b2a619360006a98a1f9fddae27bd99df40f952d3404"
+        },
+        {
+          "id": "p411-b14",
+          "source": "Differentiating again we obtain",
+          "sourceSha256": "26e4fab59f39924c75b646eccd07713dc9d1051eb0938f66eb8f3fedfabbc11c",
+          "translation": "再次求导，得到"
+        },
+        {
+          "id": "p411-b15",
+          "source": "$$p''(x)=2a_2+3\\cdot2\\cdot a_3x+\\cdots+n(n-1)\\cdot a_nx^{n-2}.$$",
+          "sourceSha256": "3e8dbbb9e81c68732b387ca922c39afe90e8cff0e6e1832e17d70f5736b29be3"
+        },
+        {
+          "id": "p411-b16",
+          "source": "Therefore,",
+          "sourceSha256": "875038257bcbbe2d6a85dec6e2757ab7635b070911bbef2968c8d33cc9d8b01d",
+          "translation": "因此，"
+        },
+        {
+          "id": "p411-b17",
+          "source": "$$p''(0)=p^{(2)}(0)=2a_2.$$",
+          "sourceSha256": "3cd531c59af49d1e11a0a65a8223cac0b5b51b7488f79bc2fa50215cf2834fa6"
+        },
+        {
+          "id": "p411-b18",
+          "source": "In general, we will have",
+          "sourceSha256": "20178881bce0db1a32c98a2f3ef1b94b613bad4f21e8f6db19c6f9eaa4906c3d",
+          "translation": "一般地，有"
+        },
+        {
+          "id": "p411-b19",
+          "source": "$$p^{(k)}(0)=k!a_k\\quad\\text{or}\\quad a_k=\\frac{p^{(k)}(0)}{k!}.$$",
+          "sourceSha256": "41d2060a00b30cfaee57dec6265d0560c0fcba1d67aea7cce1279a98e6951600"
+        },
+        {
+          "id": "p411-b20",
+          "source": "If we agree to define $0!=1$, and recall the notation $p^{(0)}=p$, then this formula holds for $k=0$ also.",
+          "sourceSha256": "9b2b6dc89d322014d7550b99547210f669ed497946b442dc3c90a1e261841c26",
+          "translation": "如果约定 $0!=1$，并回想记号 $p^{(0)}=p$，那么这个公式在 $k=0$ 时也成立。"
+        }
+      ]
+    },
+    {
+      "printed": 412,
+      "sourceSha256": "1101bafd794d79c9ccf2eede05e74b41ebe29ac68724e1f680950ae5b66f426f",
+      "blocks": [
+        {
+          "id": "p412-b1",
+          "source": "If we had begun with a function $p$ that was written as a “polynomial in $(x-a)$,”",
+          "sourceSha256": "91f0db34d1128aba60ed1622db731c827e5d05a26750707fcfa38fe5f3d71eef",
+          "translation": "如果一开始，函数 $p$ 被写成“关于 $(x-a)$ 的多项式”，"
+        },
+        {
+          "id": "p412-b2",
+          "source": "$$p(x)=a_0+a_1(x-a)+\\cdots+a_n(x-a)^n,$$",
+          "sourceSha256": "908689c164255321fefc0ea44a14bf85d2f1e5b97e53b51512fc1a1c7c72a848"
+        },
+        {
+          "id": "p412-b3",
+          "source": "then a similar argument would show that",
+          "sourceSha256": "4ffc017d0956134f11775deb0222e5a0706c3eadfa92dd7280fb0791a50ebfe7",
+          "translation": "那么类似的论证会表明"
+        },
+        {
+          "id": "p412-b4",
+          "source": "$$a_k=\\frac{p^{(k)}(a)}{k!}.$$",
+          "sourceSha256": "6961971dcc98150bfa7dea2f56f45973429eee9c041d6cc75efbb7385a9e4c72"
+        },
+        {
+          "id": "p412-b5",
+          "source": "Suppose now that $f$ is a function (not necessarily a polynomial) such that",
+          "sourceSha256": "b255f11a793928605a68864378de3c814052a1999831442fe5375313a577ce5c",
+          "translation": "现在设 $f$ 是一个函数（不一定是多项式），使得"
+        },
+        {
+          "id": "p412-b6",
+          "source": "$$f^{(1)}(a),\\ldots,f^{(n)}(a)$$",
+          "sourceSha256": "d441e7a9d19a83cbfeeca3cbe90dfcbd86a9c80d83f0442f8b31c7c53da4714e"
+        },
+        {
+          "id": "p412-b7",
+          "source": "all exist. Let",
+          "sourceSha256": "a3c838f1fee870eb6e39bcddce5bf851fe296b504d1cbe3f38ee9ea1985bd028",
+          "translation": "全都存在。令"
+        },
+        {
+          "id": "p412-b8",
+          "source": "$$a_k=\\frac{f^{(k)}(a)}{k!},\\qquad0\\le k\\le n,$$",
+          "sourceSha256": "44ba9b70e3f989514eb088e370ef156921d08376df8e9308945004d9711fbd48"
+        },
+        {
+          "id": "p412-b9",
+          "source": "and define",
+          "sourceSha256": "45c1f4a0dc909ab5a55a418553c52cf28636b576a91a5d7422511f43b7fc0514",
+          "translation": "并定义"
+        },
+        {
+          "id": "p412-b10",
+          "source": "$$P_{n,a}(x)=a_0+a_1(x-a)+\\cdots+a_n(x-a)^n.$$",
+          "sourceSha256": "c7247d54ef92ee49aa35099e15558a034954f83674c35e2c5ab491e7cb4aad14"
+        },
+        {
+          "id": "p412-b11",
+          "source": "The polynomial $P_{n,a}$ is called the **Taylor polynomial of degree $n$ for $f$ at $a$**. (Strictly speaking, we should use an even more complicated expression, like $P_{n,a,f}$, to indicate the dependence on $f$; at times this more precise notation will be useful.) The Taylor polynomial has been defined so that",
+          "sourceSha256": "5542769ff4ca8f5eb6e446a312101e78237d68c2805228fd72d534e97b9e19b2",
+          "translation": "多项式 $P_{n,a}$ 称为 **$f$ 在 $a$ 处的 $n$ 次泰勒多项式**。（严格来说，应当采用更复杂的记号，比如 $P_{n,a,f}$，来表明它依赖于 $f$；有时，这个更精确的记号会很有用。）泰勒多项式的定义，保证了"
+        },
+        {
+          "id": "p412-b12",
+          "source": "$$P_{n,a}^{(k)}(a)=f^{(k)}(a)\\quad\\text{for }0\\le k\\le n;$$",
+          "sourceSha256": "8c05b648a734c55678577c1908b7780d79386f311ccdbdff9840331b964ed874"
+        },
+        {
+          "id": "p412-b13",
+          "source": "in fact, it is clearly the only polynomial of *degree* $\\le n$ with this property.",
+          "sourceSha256": "d1e4616c94bee156e5e3998c5e4a781eb91fd4efa094e34622d4f435c36a1eb5",
+          "translation": "事实上，它显然是具有这一性质的唯一的*次数* $\\le n$ 的多项式。"
+        },
+        {
+          "id": "p412-b14",
+          "source": "Although the coefficients of $P_{n,a,f}$ seem to depend upon $f$ in a fairly complicated way, the most important elementary functions have extremely simple Taylor polynomials. Consider first the function sin. We have",
+          "sourceSha256": "d49e905dd541d87c14ad79149720ad0619e5cfbeae96cd6eb93233260c892817",
+          "translation": "虽然 $P_{n,a,f}$ 的系数似乎以相当复杂的方式依赖于 $f$，但最重要的初等函数却具有极其简单的泰勒多项式。先考虑函数 sin。有"
+        },
+        {
+          "id": "p412-b15",
+          "source": "$$\\begin{aligned}\n\\sin(0)&=0,\\\\\n\\sin'(0)&=\\cos0=1,\\\\\n\\sin''(0)&=-\\sin0=0,\\\\\n\\sin'''(0)&=-\\cos0=-1,\\\\\n\\sin^{(4)}(0)&=\\sin0=0.\n\\end{aligned}$$",
+          "sourceSha256": "c1e2cbff766c1837be210332496ec85b99e92669d0d9ef791cd7c4cb5b3140a0"
+        },
+        {
+          "id": "p412-b16",
+          "source": "From this point on, the derivatives repeat in a cycle of 4. The numbers",
+          "sourceSha256": "605d370fa016a4387a130a9342546f4cf9296a9fdc296e1ad0e7776ffca392f2",
+          "translation": "从这里起，各阶导数以 4 为周期重复。数列"
+        },
+        {
+          "id": "p412-b17",
+          "source": "$$a_k=\\frac{\\sin^{(k)}(0)}{k!}$$",
+          "sourceSha256": "9055848d4da7582d84e3e7674780239fff4512a83a4077ef3f42774ae31e3480"
+        },
+        {
+          "id": "p412-b18",
+          "source": "are",
+          "sourceSha256": "ba78973ddcf98d4e5369f5e722d681d94f5106895e5d6cf6fa3ca8240fabdc14",
+          "translation": "就是"
+        },
+        {
+          "id": "p412-b19",
+          "source": "$$0,\\ 1,\\ 0,\\ -\\frac1{3!},\\ 0,\\ \\frac1{5!},\\ 0,\\ -\\frac1{7!},\\ 0,\\ \\frac1{9!},\\ldots.$$",
+          "sourceSha256": "158f487c80d3bf94a51d1b6168baca19e0d2250af242b06ed45b237f56457578"
+        },
+        {
+          "id": "p412-b20",
+          "source": "Therefore the Taylor polynomial $P_{2n+1,0}$ of degree $2n+1$ for sin at 0 is",
+          "sourceSha256": "ea280b114c39e35c77d25503b0ec244c5446ae3ef8a9bba089735c7a60851b64",
+          "translation": "因此，sin 在 0 处的 $2n+1$ 次泰勒多项式 $P_{2n+1,0}$ 为"
+        },
+        {
+          "id": "p412-b21",
+          "source": "$$P_{2n+1,0}(x)=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\frac{x^7}{7!}+\\cdots+(-1)^n\\frac{x^{2n+1}}{(2n+1)!}.$$",
+          "sourceSha256": "1594379927949c7231ca3800e554db0f41833a3968c8615d44912d634cce7416"
+        },
+        {
+          "id": "p412-b22",
+          "source": "(Of course, $P_{2n+1,0}=P_{2n+2,0}$).",
+          "sourceSha256": "51ad3967733249030adc337aa11e6707b5212bfe8ac20bf29fcb85a50334624f",
+          "translation": "（当然，$P_{2n+1,0}=P_{2n+2,0}$。）"
+        }
+      ]
+    },
+    {
+      "printed": 413,
+      "sourceSha256": "52889f95caaa82ae850f32e7b961799e2f35e8f5b7e5f99a5571b1042d64c79c",
+      "blocks": [
+        {
+          "id": "p413-b1",
+          "source": "The Taylor polynomial $P_{2n,0}$ of degree $2n$ for cos at 0 is (the computations are left to you)",
+          "sourceSha256": "dca9275ad4b029817dedf15fd87e076378304aab2edfe7beabd57e635d4fe709",
+          "translation": "cos 在 0 处的 $2n$ 次泰勒多项式 $P_{2n,0}$ 为（计算留给你）"
+        },
+        {
+          "id": "p413-b2",
+          "source": "$$P_{2n,0}(x)=1-\\frac{x^2}{2!}+\\frac{x^4}{4!}-\\frac{x^6}{6!}+\\cdots+(-1)^n\\frac{x^{2n}}{(2n)!}.$$",
+          "sourceSha256": "5688b9618b23569c44258422c871c3c069998bbb17f78e78cf496826b7a0025c"
+        },
+        {
+          "id": "p413-b3",
+          "source": "The Taylor polynomial for exp is especially easy to compute. Since $\\exp^{(k)}(0)=\\exp(0)=1$ for all $k$, the Taylor polynomial of degree $n$ at 0 is",
+          "sourceSha256": "5b389bc5977c9d77fd7de41c6f3779a2f60649f6ecb9b72135de2fcf5ecf1b72",
+          "translation": "exp 的泰勒多项式尤其容易计算。由于对所有 $k$ 都有 $\\exp^{(k)}(0)=\\exp(0)=1$，它在 0 处的 $n$ 次泰勒多项式为"
+        },
+        {
+          "id": "p413-b4",
+          "source": "$$P_{n,0}(x)=1+\\frac x{1!}+\\frac{x^2}{2!}+\\frac{x^3}{3!}+\\frac{x^4}{4!}+\\cdots+\\frac{x^n}{n!}.$$",
+          "sourceSha256": "2aeeb5d904dbd61651cc5ebb9d432a1a138b504d04ac263362b77fb6f8ddca87"
+        },
+        {
+          "id": "p413-b5",
+          "source": "The Taylor polynomial for log must be computed at some point $a\\ne0$, since log is not even defined at 0. The standard choice is $a=1$. Then",
+          "sourceSha256": "34a7ec28d38f90bb401c7cf8c0d01020b030bc478340e60c5c6f003923707bec",
+          "translation": "log 的泰勒多项式必须在某个 $a\\ne0$ 处计算，因为 log 在 0 处根本没有定义。标准选择是 $a=1$。这时"
+        },
+        {
+          "id": "p413-b6",
+          "source": "$$\\begin{aligned}\n\\log'(x)&=\\frac1x,&\\log'(1)&=1;\\\\\n\\log''(x)&=-\\frac1{x^2},&\\log''(1)&=-1;\\\\\n\\log'''(x)&=\\frac2{x^3},&\\log'''(1)&=2;\n\\end{aligned}$$",
+          "sourceSha256": "eafd08be59af59cac30da1142028539e806b07463f297b926b223b50b698589d"
+        },
+        {
+          "id": "p413-b7",
+          "source": "in general",
+          "sourceSha256": "0b4a74df90171413bd8ca63bf52ae6bff79e5eaf8779b344ad2028fe8e1460bd",
+          "translation": "一般地，"
+        },
+        {
+          "id": "p413-b8",
+          "source": "$$\\log^{(k)}(x)=\\frac{(-1)^{k-1}(k-1)!}{x^k},\\qquad\\log^{(k)}(1)=(-1)^{k-1}(k-1)!.$$",
+          "sourceSha256": "ad19bce6b2272b9bec9455f8647ed7bf4b142bfb09a933acd3315f345754a472"
+        },
+        {
+          "id": "p413-b9",
+          "source": "Therefore the Taylor polynomial of degree $n$ for log at 1 is",
+          "sourceSha256": "ef54ac7b16da5d389c99d1cc6353c0bc4284e2c7009bb0a4355df8bc18506c05",
+          "translation": "所以，log 在 1 处的 $n$ 次泰勒多项式为"
+        },
+        {
+          "id": "p413-b10",
+          "source": "$$P_{n,1}(x)=(x-1)-\\frac{(x-1)^2}2+\\frac{(x-1)^3}3+\\cdots+\\frac{(-1)^{n-1}(x-1)^n}n.$$",
+          "sourceSha256": "09bd1c686e2dd6a0611b82756a263d525b4f35253bd5b5dec7453960929b05a1"
+        },
+        {
+          "id": "p413-b11",
+          "source": "It is often more convenient to consider the function $f(x)=\\log(1+x)$. In this case we can choose $a=0$. We have",
+          "sourceSha256": "6a0cbe0bd401c139b60ab2767f9853e3916f4df5ce0ad86978d5993fea0d979e",
+          "translation": "考虑函数 $f(x)=\\log(1+x)$ 往往更方便。这时可以选 $a=0$。有"
+        },
+        {
+          "id": "p413-b12",
+          "source": "$$f^{(k)}(x)=\\log^{(k)}(1+x),$$",
+          "sourceSha256": "6f92c8e82e87b07b2e877d81982344d4cd6f44eb1c8fabaa74b9058b92deb78d"
+        },
+        {
+          "id": "p413-b13",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p413-b14",
+          "source": "$$f^{(k)}(0)=\\log^{(k)}(1)=(-1)^{k-1}(k-1)!.$$",
+          "sourceSha256": "eea4d89a59f48f80b9edf62abc5fba18b78eee0af81b8b5f049e90bc88ace3e0"
+        },
+        {
+          "id": "p413-b15",
+          "source": "Therefore the Taylor polynomial of degree $n$ for $f$ at 0 is",
+          "sourceSha256": "107a494426094217e0374c59c80c3ee4f1415c2fd2e8ad88ecd261790da4d78f",
+          "translation": "因此，$f$ 在 0 处的 $n$ 次泰勒多项式为"
+        },
+        {
+          "id": "p413-b16",
+          "source": "$$P_{n,0}(x)=x-\\frac{x^2}2+\\frac{x^3}3-\\frac{x^4}4+\\cdots+\\frac{(-1)^{n-1}x^n}n.$$",
+          "sourceSha256": "5f9d21424c20e3ab1d3f23f7d991ed0e1edbebb5453c02a8ed862d12e36ef227"
+        },
+        {
+          "id": "p413-b17",
+          "source": "There is one other elementary function whose Taylor polynomial is important—arctan. The computations of the derivatives begin",
+          "sourceSha256": "bc59d88d2ab486bb217133b15ce0025847c63e84e70633ce783a18e113c39c22",
+          "translation": "还有一个初等函数，其泰勒多项式十分重要——arctan。各阶导数的计算开始如下："
+        },
+        {
+          "id": "p413-b18",
+          "source": "$$\\begin{aligned}\n\\arctan'(x)&=\\frac1{1+x^2}&\\arctan'(0)&=1;\\\\\n\\arctan''(x)&=\\frac{-2x}{(1+x^2)^2},&\\arctan''(0)&=0;\\\\\n\\arctan'''(x)&=\\frac{(1+x^2)^2\\cdot(-2)+2x\\cdot2(1+x^2)\\cdot2x}{(1+x^2)^4},&\\arctan'''(0)&=-2.\n\\end{aligned}$$",
+          "sourceSha256": "dbcaeadf311b140ec4f4c8efbf3cca7cbbd83dab8ab9876456661ed9494a215d"
+        }
+      ]
+    },
+    {
+      "printed": 414,
+      "sourceSha256": "db6076eba18ae44b5720dd33083ff037b468172334d82a12a99812df742f9864",
+      "blocks": [
+        {
+          "id": "p414-b1",
+          "source": "It is clear that this brute force computation will never do. However, the Taylor polynomials of arctan will be easy to find after we have examined the properties of Taylor polynomials more closely—although the Taylor polynomial $P_{n,a,f}$ was simply defined so as to have the same first $n$ derivatives at $a$ as $f$, the connection between $f$ and $P_{n,a,f}$ will actually turn out to be much deeper.",
+          "sourceSha256": "846e1ac1a934f5ee138f9a1dea14d2646ab2215dbeca03ec3a7278196d03c228",
+          "translation": "显然，这样蛮干下去绝不是办法。不过，更仔细地考察泰勒多项式的性质之后，arctan 的泰勒多项式就很容易求出——虽然 $P_{n,a,f}$ 的定义只是为了让它与 $f$ 在 $a$ 处的前 $n$ 阶导数相同，$f$ 与 $P_{n,a,f}$ 的联系实际上却要深刻得多。"
+        },
+        {
+          "id": "p414-b2",
+          "source": "One line of evidence for a closer connection between $f$ and the Taylor polynomials for $f$ may be uncovered by examining the Taylor polynomial of degree 1, which is",
+          "sourceSha256": "ef7616f5c4a659914cba26be37bd664fb4d226c90c6682e91956c78f22f38e05",
+          "translation": "考察一次泰勒多项式，就能发现 $f$ 与 $f$ 的泰勒多项式之间存在更密切联系的一条线索；它是"
+        },
+        {
+          "id": "p414-b3",
+          "source": "$$P_{1,a}(x)=f(a)+f'(a)(x-a).$$",
+          "sourceSha256": "ccba6e1b8b1cfaa64524dcd85585a771f2eaf077476a4fbcf7c8a0eaae8814e0"
+        },
+        {
+          "id": "p414-b4",
+          "source": "Notice that",
+          "sourceSha256": "5f3b16a637f3b2c4bc3e371374c9d895ee88b668796cbf38c608093e0250799d",
+          "translation": "注意"
+        },
+        {
+          "id": "p414-b5",
+          "source": "$$\\frac{f(x)-P_{1,a}(x)}{x-a}=\\frac{f(x)-f(a)}{x-a}-f'(a).$$",
+          "sourceSha256": "18c7283f8db6f592d9c5d05f1dbd5dcdb0d424d0b5781e0e23d22bbc82dd64f0"
+        },
+        {
+          "id": "p414-b6",
+          "source": "Now, by the definition of $f'(a)$ we have",
+          "sourceSha256": "759372db9cfd4dcb4afa394fa734e032a00c3696e655204536be95b617522fa7",
+          "translation": "现在，按 $f'(a)$ 的定义，有"
+        },
+        {
+          "id": "p414-b7",
+          "source": "$$\\lim_{x\\to a}\\frac{f(x)-P_{1,a}(x)}{x-a}=0.$$",
+          "sourceSha256": "4425ee774b7d8bf1f727bb1e77b2b72c0ae15f488e003cfa076a2065d8b54dbc"
+        },
+        {
+          "id": "p414-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:526px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"477 679 526 447\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0433.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "cedb99c99194636ecbf6eb0d264df6bc362977175c51aec9519134a00c050ce4"
+        },
+        {
+          "id": "p414-b9",
+          "source": "In other words, as $x$ approaches $a$ the difference $f(x)-P_{1,a}(x)$ not only becomes small, but actually becomes small even compared to $x-a$. Figure 1 illustrates the graph of $f(x)=e^x$ and of",
+          "sourceSha256": "04c8b960d76ee24e0c483b2dca14d1fdff6f29a4578bbb7ef3663192bfbacbe9",
+          "translation": "换句话说，当 $x$ 趋于 $a$ 时，差 $f(x)-P_{1,a}(x)$ 不仅变小，而且即使与 $x-a$ 相比，也在变小。图 1 画出了 $f(x)=e^x$ 的图像，以及"
+        },
+        {
+          "id": "p414-b10",
+          "source": "$$P_{1,0}(x)=f(0)+f'(0)x=1+x,$$",
+          "sourceSha256": "908d60b085e6c2ac90c9cf4c1b7e51859a1ba669b6617375f433aca228a8be1a"
+        },
+        {
+          "id": "p414-b11",
+          "source": "which is the Taylor polynomial of degree 1 for $f$ at 0. The diagram also shows the graph of",
+          "sourceSha256": "7127bc6a14a2b89e76fcbcc63ae05342bd21eeca4c6a2ed97c2012d95b899323",
+          "translation": "的图像，后者是 $f$ 在 0 处的一次泰勒多项式。图中还画出了"
+        },
+        {
+          "id": "p414-b12",
+          "source": "$$P_{2,0}(x)=f(0)+f'(0)+\\frac{f''(0)}{2!}x^2=1+x+\\frac{x^2}2,$$",
+          "sourceSha256": "4e9d4e78b037a9fb5ecdf5b4cfa587db10d168eaa3a64e8deb29e2fe85f6245c"
+        },
+        {
+          "id": "p414-b13",
+          "source": "which is the Taylor polynomial of degree 2 for $f$ at 0. As $x$ approaches 0, the difference $f(x)-P_{2,0}(x)$ seems to be getting small even faster than the difference",
+          "sourceSha256": "c19f0bf1e4bbe4ec9b35faaa5d1b9fc6a2ee77836581d4171dfc0b66922262dc",
+          "translation": "的图像，它是 $f$ 在 0 处的二次泰勒多项式。当 $x$ 趋于 0 时，差 $f(x)-P_{2,0}(x)$ 似乎比差"
+        }
+      ]
+    },
+    {
+      "printed": 415,
+      "sourceSha256": "0eac59c6c0a88c96db38fa3a1e5defe6a66f051a1ba551fdbc90043d53c23912",
+      "blocks": [
+        {
+          "id": "p415-b1",
+          "source": "$f(x)-P_{1,0}(x)$. As it stands, this assertion is not very precise, but we are now prepared to give it a definite meaning. We have just noted that in general",
+          "sourceSha256": "bee8280a2c05b51db5504e3ccb92988ac7df3cadc4670dccaccb58bdf0b96d02",
+          "translation": "$f(x)-P_{1,0}(x)$ 变小得更快。按目前的说法，这个断言还不够精确，不过现在我们已经准备好赋予它明确的含义。刚才已经注意到，一般地，"
+        },
+        {
+          "id": "p415-b2",
+          "source": "$$\\lim_{x\\to a}\\frac{f(x)-P_{1,a}(x)}{x-a}=0.$$",
+          "sourceSha256": "4425ee774b7d8bf1f727bb1e77b2b72c0ae15f488e003cfa076a2065d8b54dbc"
+        },
+        {
+          "id": "p415-b3",
+          "source": "For $f(x)=e^x$ and $a=0$ this means that",
+          "sourceSha256": "0237a52ff4247a94dfea6dffb58c6d2d7e9f89ff6df2d2b82317c99ca470bad3",
+          "translation": "对于 $f(x)=e^x$ 和 $a=0$，这意味着"
+        },
+        {
+          "id": "p415-b4",
+          "source": "$$\\lim_{x\\to0}\\frac{f(x)-P_{1,0}(x)}x=\\lim_{x\\to0}\\frac{e^x-1-x}x=0.$$",
+          "sourceSha256": "38f52c2cb13a7da228fb0708b657788414c8bb62f3a0e2a2ed7bd241147acd8c"
+        },
+        {
+          "id": "p415-b5",
+          "source": "On the other hand, an easy double application of l’Hôpital’s Rule shows that",
+          "sourceSha256": "4b593f43bb90ba8908c41dd3440287b53a18118e7a2763a4591dbb68f34b4bd2",
+          "translation": "另一方面，简单地连续应用两次洛必达法则，得到"
+        },
+        {
+          "id": "p415-b6",
+          "source": "$$\\lim_{x\\to0}\\frac{e^x-1-x}{x^2}=\\frac12\\ne0.$$",
+          "sourceSha256": "39228e2be45e2e80c9076609d66fd444748ea488c265e065d7df965565ebd583"
+        },
+        {
+          "id": "p415-b7",
+          "source": "Thus, although $f(x)-P_{1,0}(x)$ becomes small compared to $x$, as $x$ approaches 0, it does *not* become small compared to $x^2$. For $P_{2,0}(x)$ the situation is quite different; the extra term $x^2/2$ provides just the right compensation:",
+          "sourceSha256": "cbff63f8cc2d5c2468945f05d51e49629058eb7d3a876aab643c22bd2c23b6eb",
+          "translation": "所以，当 $x$ 趋于 0 时，虽然 $f(x)-P_{1,0}(x)$ 与 $x$ 相比变得很小，但与 $x^2$ 相比却*并不*变小。对于 $P_{2,0}(x)$，情形完全不同；额外的一项 $x^2/2$ 恰好提供了适当的补偿："
+        },
+        {
+          "id": "p415-b8",
+          "source": "$$\\begin{aligned}\n\\lim_{x\\to0}\\frac{e^x-1-x-\\dfrac{x^2}2}{x^2}&=\\lim_{x\\to0}\\frac{e^x-1-x}{2x}\\\\\n&=\\lim_{x\\to0}\\frac{e^x-1}2=0.\n\\end{aligned}$$",
+          "sourceSha256": "eb29d6f77e16ea7210647db4aed2af5e618e39f58aca1fa0a0392a93cb77d057"
+        },
+        {
+          "id": "p415-b9",
+          "source": "This result holds in general—if $f'(a)$ and $f''(a)$ exist, then",
+          "sourceSha256": "23ffee3300eea5033effd04a8364c34faf1ac20f48a2d5b55823e0876b756d38",
+          "translation": "这个结果一般也成立——如果 $f'(a)$ 和 $f''(a)$ 存在，那么"
+        },
+        {
+          "id": "p415-b10",
+          "source": "$$\\lim_{x\\to a}\\frac{f(x)-P_{2,a}(x)}{(x-a)^2}=0;$$",
+          "sourceSha256": "54d322881c23f86f427ec864307b5cf1b4cfbd51964165c7bf27570daf1d5b12"
+        },
+        {
+          "id": "p415-b11",
+          "source": "in fact, the analogous assertion for $P_{n,a}$ is also true.",
+          "sourceSha256": "bf1686098b257627926a035543edac413040e400896fd89bb1f88e3090e27aca",
+          "translation": "事实上，关于 $P_{n,a}$ 的类似断言也成立。"
+        },
+        {
+          "id": "p415-b12",
+          "source": "**THEOREM 1** Suppose that $f$ is a function for which",
+          "sourceSha256": "6dbb885c199c1e0db3a8e408c5c26859c4c3780045719bd3b8e10b5f27a27d74",
+          "translation": "**定理 1** 设 $f$ 是一个函数，且"
+        },
+        {
+          "id": "p415-b13",
+          "source": "$$f'(a),\\ldots,f^{(n)}(a)$$",
+          "sourceSha256": "7103535ccccc15f2417413a116a670cbe0ff3dafaedfe924f0f0bd93c218a64b"
+        },
+        {
+          "id": "p415-b14",
+          "source": "all exist. Let",
+          "sourceSha256": "a3c838f1fee870eb6e39bcddce5bf851fe296b504d1cbe3f38ee9ea1985bd028",
+          "translation": "全都存在。令"
+        },
+        {
+          "id": "p415-b15",
+          "source": "$$a_k=\\frac{f^{(k)}(a)}{k!},\\qquad0\\le k\\le n,$$",
+          "sourceSha256": "44ba9b70e3f989514eb088e370ef156921d08376df8e9308945004d9711fbd48"
+        },
+        {
+          "id": "p415-b16",
+          "source": "and define",
+          "sourceSha256": "45c1f4a0dc909ab5a55a418553c52cf28636b576a91a5d7422511f43b7fc0514",
+          "translation": "并定义"
+        },
+        {
+          "id": "p415-b17",
+          "source": "$$P_{n,a}(x)=a_0+a_1(x-a)+\\cdots+a_n(x-a)^n.$$",
+          "sourceSha256": "c7247d54ef92ee49aa35099e15558a034954f83674c35e2c5ab491e7cb4aad14"
+        },
+        {
+          "id": "p415-b18",
+          "source": "Then",
+          "sourceSha256": "0597f441dcca7c9bb0a79da4d94d03c523c031a3384009afff47ac1fd1a72b95",
+          "translation": "那么"
+        },
+        {
+          "id": "p415-b19",
+          "source": "$$\\lim_{x\\to a}\\frac{f(x)-P_{n,a}(x)}{(x-a)^n}=0.$$",
+          "sourceSha256": "dc85d27d2bd20872e1944362501fc8fd3006dbfdb257152da97ea2f4fee8fac6"
+        }
+      ]
+    },
+    {
+      "printed": 416,
+      "sourceSha256": "708e5f8e9beaa9738b2b32528c421a2b6c6b775b4cf7abdfba371e26895ae503",
+      "blocks": [
+        {
+          "id": "p416-b1",
+          "source": "**PROOF** Writing out $P_{n,a}(x)$ explicitly, we obtain",
+          "sourceSha256": "08af00705ce6c9d97bff0f79df76ede52229b86d805d0e8dc6326e6934a37a58",
+          "translation": "**证明** 显式写出 $P_{n,a}(x)$，得到"
+        },
+        {
+          "id": "p416-b2",
+          "source": "$$\\frac{f(x)-P_{n,a}(x)}{(x-a)^n}=\\frac{f(x)-\\displaystyle\\sum_{i=0}^{n-1}\\frac{f^{(i)}(a)}{i!}(x-a)^i}{(x-a)^n}-\\frac{f^{(n)}(a)}{n!}.$$",
+          "sourceSha256": "7b03d220ca1c889fc0fb43ebc80d0bad09d3dbe231481cebed6f854ff881e922"
+        },
+        {
+          "id": "p416-b3",
+          "source": "It will help to introduce the new functions",
+          "sourceSha256": "27efff6cf1861a6b0ee3a006217cd85729317e48ad8818ee01e0a557be529e96",
+          "translation": "引入两个新函数会有所帮助："
+        },
+        {
+          "id": "p416-b4",
+          "source": "$$Q(x)=\\sum_{i=0}^{n-1}\\frac{f^{(i)}(a)}{i!}(x-a)^i\\quad\\text{and}\\quad g(x)=(x-a)^n;$$",
+          "sourceSha256": "583c32e730d9ee59c09b6bc32d103c7e5b857c1f8a9c995212df11670bf51946"
+        },
+        {
+          "id": "p416-b5",
+          "source": "now we must prove that",
+          "sourceSha256": "4922b79ec99d6bdfe67a890221c6f33b253ea12271c1ee7009b584f8af351680",
+          "translation": "现在需要证明"
+        },
+        {
+          "id": "p416-b6",
+          "source": "$$\\lim_{x\\to a}\\frac{f(x)-Q(x)}{g(x)}=\\frac{f^{(n)}(a)}{n!}.$$",
+          "sourceSha256": "337839e44a643841e887964666190dd87a6497d2e43c0b3d18a39de80efc2309"
+        },
+        {
+          "id": "p416-b7",
+          "source": "Notice that",
+          "sourceSha256": "5f3b16a637f3b2c4bc3e371374c9d895ee88b668796cbf38c608093e0250799d",
+          "translation": "注意"
+        },
+        {
+          "id": "p416-b8",
+          "source": "$$\\begin{gathered}\nQ^{(k)}(a)=f^{(k)}(a),\\quad k\\le n-1,\\\\\ng^{(k)}(x)=n!(x-a)^{n-k}/(n-k)!.\n\\end{gathered}$$",
+          "sourceSha256": "82a35264d52a95647f418d43c1159a2e5aff0ffb7c23c23236207b1da2d04fc5"
+        },
+        {
+          "id": "p416-b9",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "因此"
+        },
+        {
+          "id": "p416-b10",
+          "source": "$$\\begin{aligned}\n\\lim_{x\\to a}[f(x)-Q(x)]&=f(a)-Q(a)=0,\\\\\n\\lim_{x\\to a}[f'(x)-Q'(x)]&=f'(a)-Q'(a)=0,\\\\\n&\\vdots\\\\\n\\lim_{x\\to a}[f^{(n-2)}(x)-Q^{(n-2)}(x)]&=f^{(n-2)}(a)-Q^{(n-2)}(a)=0.\n\\end{aligned}$$",
+          "sourceSha256": "bdd84f3eb41c8505c55e3ee8db4cbbaa6f7e60e3dd29263d6ab68f19945e9041"
+        },
+        {
+          "id": "p416-b11",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "并且"
+        },
+        {
+          "id": "p416-b12",
+          "source": "$$\\lim_{x\\to a}g(x)=\\lim_{x\\to a}g'(x)=\\cdots=\\lim_{x\\to a}g^{(n-2)}(x)=0.$$",
+          "sourceSha256": "75735e96e1ded6fa065dce348cf2656fc2777841fe067b367e4a44f273446c30"
+        },
+        {
+          "id": "p416-b13",
+          "source": "We may therefore apply l’Hôpital’s Rule $n-1$ times to obtain",
+          "sourceSha256": "b2aff318bbd1078ae1fde120d0848e688903e24974d34b505d74c763f830aa4f",
+          "translation": "所以可以应用洛必达法则 $n-1$ 次，得到"
+        },
+        {
+          "id": "p416-b14",
+          "source": "$$\\lim_{x\\to a}\\frac{f(x)-Q(x)}{(x-a)^n}=\\lim_{x\\to a}\\frac{f^{(n-1)}(x)-Q^{(n-1)}(x)}{n!(x-a)}.$$",
+          "sourceSha256": "96a8760afbf6fa25bb0b4b2c3e9a140786945aab1f3ab94738feb3139d19d584"
+        },
+        {
+          "id": "p416-b15",
+          "source": "Since $Q$ is a polynomial of degree $n-1$, its $(n-1)$st derivative is a constant; in fact, $Q^{(n-1)}(x)=f^{(n-1)}(a)$. Thus",
+          "sourceSha256": "e7558f12bc552cb9d5fde2aba5ada636e03fb532cd14221662f56cae5ab88f98",
+          "translation": "由于 $Q$ 是一个 $n-1$ 次多项式，它的 $(n-1)$ 阶导数是常数；事实上，$Q^{(n-1)}(x)=f^{(n-1)}(a)$。因此"
+        },
+        {
+          "id": "p416-b16",
+          "source": "$$\\lim_{x\\to a}\\frac{f(x)-Q(x)}{(x-a)^n}=\\lim_{x\\to a}\\frac{f^{(n-1)}(x)-f^{(n-1)}(a)}{n!(x-a)}$$",
+          "sourceSha256": "11c4c9d816f2584ae6b1c55eceb6730a9a308cb8112a3bd646983262ab4e95b7"
+        },
+        {
+          "id": "p416-b17",
+          "source": "and this last limit is $f^{(n)}(a)/n!$ by definition of $f^{(n)}(a)$. ▮",
+          "sourceSha256": "73d81628f0d8b9384839297b121a13864213fb0efe216e89ced1f244c194d1bb",
+          "translation": "按照 $f^{(n)}(a)$ 的定义，最后这个极限就是 $f^{(n)}(a)/n!$。▮"
+        },
+        {
+          "id": "p416-b18",
+          "source": "One simple consequence of Theorem 1 allows us to perfect the test for local maxima and minima which was developed in Chapter 11. If $a$ is a critical point of $f$, then, according to Theorem 11-5, the function $f$ has a local minimum at $a$ if $f''(a)>0$, and a local maximum at $a$ if $f''(a)<0$. If $f''(a)=0$ no",
+          "sourceSha256": "673da2586efc5a6219b43afe27f5368c39941fd094016d08b522b1bb0474245f",
+          "translation": "定理 1 的一个简单推论，可以完善第 11 章建立的局部极大、极小值判别法。如果 $a$ 是 $f$ 的临界点，那么根据定理 11-5，当 $f''(a)>0$ 时，函数 $f$ 在 $a$ 处有局部极小值；当 $f''(a)<0$ 时，在 $a$ 处有局部极大值。如果 $f''(a)=0$，则无法"
+        }
+      ]
+    },
+    {
+      "printed": 417,
+      "sourceSha256": "8db407a3e9496d291243f054e3d961ba6f34d408121bc07430af37bc6474d5bf",
+      "blocks": [
+        {
+          "id": "p417-b1",
+          "source": "conclusion was possible, but it is conceivable that the sign of $f'''(a)$ might give further information; and if $f'''(a)=0$, then the sign of $f^{(4)}(a)=0$ might be significant. Even more generally, we can ask what happens when",
+          "sourceSha256": "f38fbbd77568821b57f35b469385d83786924928bad301a4980484192096b6d2",
+          "translation": "得出结论，但可以设想，$f'''(a)$ 的符号也许会提供更多信息；而如果 $f'''(a)=0$，那么 $f^{(4)}(a)=0$ 的符号也许就重要了。更一般地，可以问，当"
+        },
+        {
+          "id": "p417-b2",
+          "source": "$$\\begin{gathered}\nf'(a)=f''(a)=\\cdots=f^{(n-1)}(a)=0,\\\\\nf^{(n)}(a)\\ne0.\n\\end{gathered}\\tag{*}$$",
+          "sourceSha256": "9a008c7740c2108f460d573a5c64a9e43f3382a74a683804a99719473eb40d9f"
+        },
+        {
+          "id": "p417-b3",
+          "source": "The situation in this case can be guessed by examining the functions",
+          "sourceSha256": "8233587d740794060ed1c70fc2c3d80371360689f1f972aa7886ac893fc99626",
+          "translation": "时会怎样。考察函数"
+        },
+        {
+          "id": "p417-b4",
+          "source": "$$\\begin{aligned}f(x)&=(x-a)^n,\\\\g(x)&=-(x-a)^n,\\end{aligned}$$",
+          "sourceSha256": "067dd0cfde8bcb0ab01f293bfd73cfdda97c1b356dbb54f5e18e959fd7a5c17c"
+        },
+        {
+          "id": "p417-b5",
+          "source": "which satisfy (*). Notice (Figure 2) that if $n$ is odd, then $a$ is neither a local maximum nor a local minimum point for $f$ or $g$. On the other hand, if $n$ is even, then $f$, with a positive $n$th derivative, has a local minimum at $a$, while $g$, with a negative $n$th derivative, has a local maximum at $a$. Of all functions satisfying (*), these are about the simplest available; nevertheless they indicate the general situation exactly. In fact, the whole point of the next proof is that any function satisfying (*) looks very much like one of these functions, in a sense that is made precise by Theorem 1.",
+          "sourceSha256": "8e2b750b570b175ebfa22457ebfd4d56407f537b4937e5585d73ccd3e10737d8",
+          "translation": "就可以猜测这种情形，它们都满足 (*)。注意（图 2），如果 $n$ 是奇数，那么 $a$ 既不是 $f$ 也不是 $g$ 的局部极大值点或局部极小值点。另一方面，如果 $n$ 是偶数，那么 $n$ 阶导数为正的 $f$ 在 $a$ 处有局部极小值，而 $n$ 阶导数为负的 $g$ 在 $a$ 处有局部极大值。在所有满足 (*) 的函数中，这些几乎是最简单的；不过，它们却准确揭示了一般情形。事实上，下一个证明的全部要点就在于：任何满足 (*) 的函数，都与这些函数中的一个十分相像，而这种相像的精确含义由定理 1 给出。"
+        },
+        {
+          "id": "p417-b6",
+          "source": "**THEOREM 2** Suppose that",
+          "sourceSha256": "0ae0b7ba2798bf2118330872d3a00e611cd2de248ce69bf0211b00e213b82deb",
+          "translation": "**定理 2** 假设"
+        },
+        {
+          "id": "p417-b7",
+          "source": "$$\\begin{gathered}\nf'(a)=\\cdots=f^{(n-1)}(a)=0,\\\\\nf^{(n)}(a)\\ne0.\n\\end{gathered}$$",
+          "sourceSha256": "0fc86075c0d47ad81a7f0cda35f2a2b43c0c9e0aa3c794a6d786bdb2610afaf7"
+        },
+        {
+          "id": "p417-b8",
+          "source": "(1) If $n$ is even and $f^{(n)}(a)>0$, then $f$ has a local minimum at $a$.",
+          "sourceSha256": "f9ef420643b36d97ac3c0e9d9570ab0d6908276846ff0707b19b0cc10ac9314e",
+          "translation": "(1) 如果 $n$ 是偶数，且 $f^{(n)}(a)>0$，那么 $f$ 在 $a$ 处有局部极小值。"
+        },
+        {
+          "id": "p417-b9",
+          "source": "(2) If $n$ is even and $f^{(n)}(a)<0$, then $f$ has a local maximum at $a$.",
+          "sourceSha256": "707d47a95a4e64c6e66f6f0799f5495f12af7dfd60a1343c890ede6c05e2ce58",
+          "translation": "(2) 如果 $n$ 是偶数，且 $f^{(n)}(a)<0$，那么 $f$ 在 $a$ 处有局部极大值。"
+        },
+        {
+          "id": "p417-b10",
+          "source": "(3) If $n$ is odd, then $f$ has neither a local maximum nor a local minimum at $a$.",
+          "sourceSha256": "2fb15e259eb36203498f0619deda2fcdc727c283ce4f0b8cfece69dd8fdca73d",
+          "translation": "(3) 如果 $n$ 是奇数，那么 $f$ 在 $a$ 处既没有局部极大值，也没有局部极小值。"
+        },
+        {
+          "id": "p417-b11",
+          "source": "**PROOF** There is clearly no loss of generality in assuming that $f(a)=0$, since neither the hypotheses nor the conclusion are affected if $f$ is replaced by $f-f(a)$. Then, since the first $n-1$ derivatives of $f$ at $a$ are 0, the Taylor polynomial $P_{n,a}$ of $f$ is",
+          "sourceSha256": "42c439db05fe33fa17ea967c69f5abcc44a5c54aab27d6216cb9f1e88bce9bff",
+          "translation": "**证明** 显然，不妨假设 $f(a)=0$，因为将 $f$ 换成 $f-f(a)$，既不影响假设，也不影响结论。于是，由于 $f$ 在 $a$ 处的前 $n-1$ 阶导数都是 0，$f$ 的泰勒多项式 $P_{n,a}$ 为"
+        },
+        {
+          "id": "p417-b12",
+          "source": "$$\\begin{aligned}\nP_{n,a}(x)&=f(a)+\\frac{f'(a)}{1!}(x-a)+\\cdots+\\frac{f^{(n)}(a)}{n!}(x-a)^n\\\\\n&=\\frac{f^{(n)}(a)}{n!}(x-a)^n.\n\\end{aligned}$$",
+          "sourceSha256": "ec23bb2b160a1cad6ceebcd42aef3656e5676d46f517b3270d4e1352c7eb1072"
+        },
+        {
+          "id": "p417-b13",
+          "source": "Thus, Theorem 1 states that",
+          "sourceSha256": "8e1c3c1ecea75355df4cee3b4818a0a8ce22451a370fefbdac6736823c8e1747",
+          "translation": "因此，定理 1 断言"
+        },
+        {
+          "id": "p417-b14",
+          "source": "$$0=\\lim_{x\\to a}\\frac{f(x)-P_{n,a}(x)}{(x-a)^n}=\\lim_{x\\to a}\\left[\\frac{f(x)}{(x-a)^n}-\\frac{f^{(n)}(a)}{n!}\\right].$$",
+          "sourceSha256": "da38123386675a718133d77827d063c8da1bdedbaf85e2fc75d9bd68442059c6"
+        },
+        {
+          "id": "p417-b15",
+          "source": "Consequently, if $x$ is sufficiently close to $a$, then",
+          "sourceSha256": "954ccbe78dc924195e29556bac9a5cea6fce0aa507a2622c8f7a5d96f36e2084",
+          "translation": "所以，如果 $x$ 足够接近 $a$，那么"
+        },
+        {
+          "id": "p417-b16",
+          "source": "$$\\frac{f(x)}{(x-a)^n}\\quad\\text{has the same sign as}\\quad\\frac{f^{(n)}(a)}{n!}.$$",
+          "sourceSha256": "8f093dca14b1dd2dbc574d619c2e6190693519b2f2efb172b74032a85cc41bfb"
+        },
+        {
+          "id": "p417-b17",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:215px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 920 215 553\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0436.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "d0971a7c226d9ba557fb937cf1054c3eb8450d891bcc3a94df7bc4247b603f21"
+        },
+        {
+          "id": "p417-b18",
+          "source": "Suppose now that $n$ is even. In this case $(x-a)^n>0$ for all $x\\ne a$. Since $f(x)/(x-a)^n$ has the same sign as $f^{(n)}(a)/n!$ for $x$ sufficiently close to $a$, it follows",
+          "sourceSha256": "a19e248c883e5b4389ab25ef3aeef09a51c4883fb671ae7d302396684b0af371",
+          "translation": "现在假设 $n$ 是偶数。这时，对所有 $x\\ne a$ 都有 $(x-a)^n>0$。由于当 $x$ 足够接近 $a$ 时，$f(x)/(x-a)^n$ 与 $f^{(n)}(a)/n!$ 同号，因此"
+        }
+      ]
+    },
+    {
+      "printed": 418,
+      "sourceSha256": "a931fc7c24b5acc6414e16646f7a8da45f434c4ab31f71d9c5459176403b207a",
+      "blocks": [
+        {
+          "id": "p418-b1",
+          "source": "that $f(x)$ itself has the same sign as $f^n(a)/n!$ for $x$ sufficiently close to $a$. If $f^{(n)}(a)>0$, this means that",
+          "sourceSha256": "57733dd0b22ad1e128bbd9dab6062d6396fb0a8ac7216fb419e4dab32b40b743",
+          "translation": "当 $x$ 足够接近 $a$ 时，$f(x)$ 本身也与 $f^n(a)/n!$ 同号。如果 $f^{(n)}(a)>0$，这就意味着"
+        },
+        {
+          "id": "p418-b2",
+          "source": "$$f(x)>0=f(a)$$",
+          "sourceSha256": "e5e1ce0dd90f4d9d89eb0bc56c7c923093f3b43c935f696e3917c5bb0f929d59"
+        },
+        {
+          "id": "p418-b3",
+          "source": "for $x$ close to $a$. Consequently, $f$ has a local minimum at $a$. A similar proof works for the case $f^{(n)}(a)<0$.",
+          "sourceSha256": "ced90350d1bb33bd8ebbb2631cb7b8ccf5aa6dd0b3674c7568c3611ed7f7342e",
+          "translation": "对接近 $a$ 的 $x$ 成立。因此，$f$ 在 $a$ 处有局部极小值。$f^{(n)}(a)<0$ 时的证明类似。"
+        },
+        {
+          "id": "p418-b4",
+          "source": "Now suppose that $n$ is odd. The same argument as before shows that if $x$ is sufficiently close to $a$, then",
+          "sourceSha256": "705ea5b8dc25e9d8b35727534cbe35cfb29678de095054ce4467531844530b0e",
+          "translation": "现在假设 $n$ 是奇数。与前面相同的论证表明，如果 $x$ 足够接近 $a$，那么"
+        },
+        {
+          "id": "p418-b5",
+          "source": "$$\\frac{f(x)}{(x-a)^n}\\quad\\text{always has the same sign.}$$",
+          "sourceSha256": "83fdd33f25b149ea25aca456ac43944c29fe1a54663628bfd2407292d5107bf3"
+        },
+        {
+          "id": "p418-b6",
+          "source": "But $(x-a)^n>0$ for $x>a$ and $(x-a)^n<0$ for $x<a$. Therefore $f(x)$ has *different* signs for $x>a$ and $x<a$. This proves that $f$ has neither a local maximum nor a local minimum at $a$. ▮",
+          "sourceSha256": "801af6805ebb9101b80fc0a5079a2e6530a3bfc637b256b4501eefdceab9b008",
+          "translation": "但当 $x>a$ 时有 $(x-a)^n>0$，当 $x<a$ 时有 $(x-a)^n<0$。因此，$f(x)$ 在 $x>a$ 和 $x<a$ 时具有*不同*的符号。这就证明，$f$ 在 $a$ 处既没有局部极大值，也没有局部极小值。▮"
+        },
+        {
+          "id": "p418-b7",
+          "source": "Although Theorem 2 will settle the question of local maxima and minima for just about any function which arises in practice, it does have some theoretical limitations, because $f^{(k)}(a)$ may be 0 for all $k$. This happens (Figure 3(a)) for the function",
+          "sourceSha256": "57e51c2ce8217bc89430dd0989e0618519e4482f6b116744cdff4031d7765cd9",
+          "translation": "虽然对于实际中几乎任何出现的函数，定理 2 都能解决局部极大、极小值的问题，但它确有一些理论上的局限，因为 $f^{(k)}(a)$ 可能对所有 $k$ 都为 0。函数"
+        },
+        {
+          "id": "p418-b8",
+          "source": "$$f(x)=\\begin{cases}e^{-1/x^2},&x\\ne0\\\\0,&x=0,\\end{cases}$$",
+          "sourceSha256": "f5374d3afe792509181ec2127ceae6c1c8bf3c7f67795b500c6f68d8a246a96d"
+        },
+        {
+          "id": "p418-b9",
+          "source": "which has a minimum at 0, and also for the negative of this function (Figure 3(b)), which has a maximum at 0. Moreover (Figure 3(c)), if",
+          "sourceSha256": "ada346ee131286c12d0e1d0af1e0cf99e6fd6988b19530c5613cb47beed97f3e",
+          "translation": "就是这种情形（图 3(a)），它在 0 处有最小值；这个函数的相反数（图 3(b)）也是如此，但它在 0 处有最大值。此外（图 3(c)），如果"
+        },
+        {
+          "id": "p418-b10",
+          "source": "$$f(x)=\\begin{cases}e^{-1/x^2},&x>0\\\\0,&x=0\\\\-e^{-1/x^2},&x<0,\\end{cases}$$",
+          "sourceSha256": "067b455149cdf4cd25077ad3ea552e68d31dc62a729fd837c69128a281679e91"
+        },
+        {
+          "id": "p418-b11",
+          "source": "then $f^{(k)}(0)=0$ for all $k$, but $f$ has neither a local minimum nor a local maximum at 0.",
+          "sourceSha256": "8d5c36509328542f06c9501edd5437b4791eac422dd56b43755c8e2974926ad9",
+          "translation": "那么对所有 $k$ 都有 $f^{(k)}(0)=0$，但 $f$ 在 0 处既没有局部极小值，也没有局部极大值。"
+        },
+        {
+          "id": "p418-b12",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:384px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"38 249 384 844\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0437.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "ef6855ed32189a6b062ccbbfb2d1a213cca70e18dfe7a7747c77119601eb0e0f"
+        },
+        {
+          "id": "p418-b13",
+          "source": "The conclusion of Theorem 1 is often expressed in terms of an important concept of “order of equality.” Two functions $f$ and $g$ are **equal up to order $n$ at $a$** if",
+          "sourceSha256": "4f9a8b35169f0014504f086a76ca0bdef8734761584a5213080a2158c4abd8af",
+          "translation": "定理 1 的结论，常用“相等的阶”这个重要概念来表述。两个函数 $f$ 和 $g$ 称为**在 $a$ 处直到 $n$ 阶相等**，如果"
+        },
+        {
+          "id": "p418-b14",
+          "source": "$$\\lim_{x\\to a}\\frac{f(x)-g(x)}{(x-a)^n}=0.$$",
+          "sourceSha256": "19bcde1f1f600ae7516f1b6162d70567da5e01482fc3952d8d3064e508d13314"
+        },
+        {
+          "id": "p418-b15",
+          "source": "In the language of this definition, Theorem 1 says that the Taylor polynomial $P_{n,a,f}$ equals $f$ up to order $n$ at $a$. The Taylor polynomial might very well have been designed to make this fact true, because there is at most one polynomial of degree $\\le n$ with this property. This assertion is a consequence of the following elementary theorem.",
+          "sourceSha256": "56f32b0daaf42a8a54bb76f7485216af27013f2b19007ffb043a586a89521cad",
+          "translation": "用这个定义的语言，定理 1 就是说，泰勒多项式 $P_{n,a,f}$ 与 $f$ 在 $a$ 处直到 $n$ 阶相等。泰勒多项式完全可以被设计成专门满足这一事实，因为具有这一性质的次数 $\\le n$ 的多项式至多只有一个。这个断言是下面初等定理的推论。"
+        },
+        {
+          "id": "p418-b16",
+          "source": "**THEOREM 3** Let $P$ and $Q$ be two polynomials in $(x-a)$, of degree $\\le n$, and suppose that $P$ and $Q$ are equal up to order $n$ at $a$. Then $P=Q$.",
+          "sourceSha256": "46d43697460f088d8e7e996624d0935eaee2128eabef89b3043f2a8e6ddc9bf9",
+          "translation": "**定理 3** 设 $P$ 和 $Q$ 是两个关于 $(x-a)$ 的多项式，次数均 $\\le n$，并假设 $P$ 和 $Q$ 在 $a$ 处直到 $n$ 阶相等。那么 $P=Q$。"
+        },
+        {
+          "id": "p418-b17",
+          "source": "**PROOF** Let $R=P-Q$. Since $R$ is a polynomial of degree $\\le n$, it is only necessary to",
+          "sourceSha256": "2b200ba51d778a0b574bad95c197a5cbe3982c2193df178410144382f757e0a4",
+          "translation": "**证明** 令 $R=P-Q$。由于 $R$ 是次数 $\\le n$ 的多项式，只需"
+        }
+      ]
+    },
+    {
+      "printed": 419,
+      "sourceSha256": "b4b5cfd4601f355392b09c707fd33a59212670b6485058ecca05087c069391a2",
+      "blocks": [
+        {
+          "id": "p419-b1",
+          "source": "prove that if",
+          "sourceSha256": "df2e550d6548f9ea8a55e2761d9b13ac0956860c298eb226e1512cba369cb772",
+          "translation": "证明：如果"
+        },
+        {
+          "id": "p419-b2",
+          "source": "$$R(x)=b_0+\\cdots+b_n(x-a)^n$$",
+          "sourceSha256": "a92bfe83d8cf4984d7341c40fd94358d755b40366e50671f9557526a131fa4b2"
+        },
+        {
+          "id": "p419-b3",
+          "source": "satisfies",
+          "sourceSha256": "990f250413537091fd2e725035abc92508c0d5b41aa0c8b137523af07488aa48",
+          "translation": "满足"
+        },
+        {
+          "id": "p419-b4",
+          "source": "$$\\lim_{x\\to a}\\frac{R(x)}{(x-a)^n}=0,$$",
+          "sourceSha256": "cf7f86622efae83f71a99667f38e3fd40d3cd2a8eefcbf89022c6df1aabf0c27"
+        },
+        {
+          "id": "p419-b5",
+          "source": "then $R=0$. Now the hypothesis on $R$ surely imply that",
+          "sourceSha256": "8171964963151dd42bd7c01b00269099a4b26ba3f2249563e60aebb1b23dc6cb",
+          "translation": "那么 $R=0$。现在，对 $R$ 的假设当然意味着"
+        },
+        {
+          "id": "p419-b6",
+          "source": "$$\\lim_{x\\to a}\\frac{R(x)}{(x-a)^i}=0\\quad\\text{for }0\\le i\\le n.$$",
+          "sourceSha256": "c6a743db1bdac8f8b22207ea4cf42fb40a70e00c787b3775db4c877d1b4327d9"
+        },
+        {
+          "id": "p419-b7",
+          "source": "For $i=0$ this condition reads simply $\\lim_{x\\to a}R(x)=0$; on the other hand,",
+          "sourceSha256": "09705b285a97d30011376b1993434eae016692c47f82a843284c225bbabcb16b",
+          "translation": "当 $i=0$ 时，这个条件就是 $\\lim_{x\\to a}R(x)=0$；另一方面，"
+        },
+        {
+          "id": "p419-b8",
+          "source": "$$\\begin{aligned}\n\\lim_{x\\to a}R(x)&=\\lim_{x\\to a}[b_0+b_1(x-a)+\\cdots+b_n(x-a)^n]\\\\\n&=b_0.\n\\end{aligned}$$",
+          "sourceSha256": "33f113b5e8864bbee706e26a6d5110b458b35d9f0803d423acd381cea26524a8"
+        },
+        {
+          "id": "p419-b9",
+          "source": "Thus $b_0=0$ and",
+          "sourceSha256": "1ba1653171f767ceb3a5600c383f9fad10759e00dfdb33a16a294f8fc7ec0869",
+          "translation": "于是 $b_0=0$，而且"
+        },
+        {
+          "id": "p419-b10",
+          "source": "$$R(x)=b_1(x-a)+\\cdots+b_n(x-a)^n.$$",
+          "sourceSha256": "0c32e2ce64b487f08c1a333366d4e381655c5b9fb86e6bc2787cccc771d80156"
+        },
+        {
+          "id": "p419-b11",
+          "source": "Therefore,",
+          "sourceSha256": "875038257bcbbe2d6a85dec6e2757ab7635b070911bbef2968c8d33cc9d8b01d",
+          "translation": "因此，"
+        },
+        {
+          "id": "p419-b12",
+          "source": "$$\\frac{R(x)}{x-a}=b_1+b_2(x-a)+\\cdots+b_n(x-a)^{n-1}$$",
+          "sourceSha256": "54e2983cf1c1bc317b63e6af6c21c60e63b242bd14349e109fb762a1c49b9969"
+        },
+        {
+          "id": "p419-b13",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "并且"
+        },
+        {
+          "id": "p419-b14",
+          "source": "$$\\lim_{x\\to a}\\frac{R(x)}{x-a}=b_1.$$",
+          "sourceSha256": "e64481984d459a5b29c178d0768bca54fd0ae51ffa8cd883180cc2dbc8690ba3"
+        },
+        {
+          "id": "p419-b15",
+          "source": "Thus $b_1=0$ and",
+          "sourceSha256": "b470e53bb75355424c5d5f3220bfbb33c384159b47eb3be7cf8d26ba12b1cf5f",
+          "translation": "所以 $b_1=0$，而且"
+        },
+        {
+          "id": "p419-b16",
+          "source": "$$R(x)=b_2(x-a)^2+\\cdots+b_n(x-a)^n.$$",
+          "sourceSha256": "c53260b75f27e5a437b474628c3d480b3b4d0d127c412630936a8389991da2e4"
+        },
+        {
+          "id": "p419-b17",
+          "source": "Continuing in this way, we find that",
+          "sourceSha256": "87c46438cee09eb0cf08a17fc7a2d659b8208bc5d1917cc31d600172679dfd96",
+          "translation": "如此继续，得到"
+        },
+        {
+          "id": "p419-b18",
+          "source": "$$b_0=\\cdots=b_n=0.\\ \\text{▮}$$",
+          "sourceSha256": "40af7500b4b4f653f40da12b17cd1451152a5d184618affd358aef41a4215da7"
+        },
+        {
+          "id": "p419-b19",
+          "source": "**COROLLARY** Let $f$ be $n$-times differentiable at $a$, and suppose that $P$ is a polynomial in $(x-a)$ of degree $\\le n$, which equals $f$ up to order $n$ at $a$. Then $P=P_{n,a,f}$.",
+          "sourceSha256": "cee052b7447895410979b1c9532fa4b5ab918ff1a8540bdad9f97f1938db1ae7",
+          "translation": "**推论** 设 $f$ 在 $a$ 处 $n$ 次可微，并假设 $P$ 是关于 $(x-a)$ 的次数 $\\le n$ 的多项式，与 $f$ 在 $a$ 处直到 $n$ 阶相等。那么 $P=P_{n,a,f}$。"
+        },
+        {
+          "id": "p419-b20",
+          "source": "**PROOF** Since $P$ and $P_{n,a,f}$ both equal $f$ up to order $n$ at $a$, it is easy to see that $P$ equals $P_{n,a,f}$ up to order $n$ at $a$. Consequently, $P=P_{n,a,f}$ by the Theorem. ▮",
+          "sourceSha256": "eb089c9025d5f259f9b55a986f9450c475c436203124e21f2a2d848dba67e776",
+          "translation": "**证明** 由于 $P$ 和 $P_{n,a,f}$ 都与 $f$ 在 $a$ 处直到 $n$ 阶相等，容易看出，$P$ 与 $P_{n,a,f}$ 在 $a$ 处直到 $n$ 阶相等。因此，由定理，$P=P_{n,a,f}$。▮"
+        },
+        {
+          "id": "p419-b21",
+          "source": "At first sight this corollary appears to have unnecessarily complicated hypotheses; it might seem that the existence of the polynomial $P$ would automatically imply that $f$ is sufficiently differentiable for $P_{n,a,f}$ to exist. But in fact this is not so. For example (Figure 4), suppose that",
+          "sourceSha256": "9bf77f936823992cf8679e855a06d44c70e7f213bf420242b19155f959f6f831",
+          "translation": "乍看之下，这个推论的假设似乎复杂得没有必要；看起来，多项式 $P$ 的存在，应当自动意味着 $f$ 有足够多阶导数，从而使 $P_{n,a,f}$ 存在。但事实并非如此。例如（图 4），假设"
+        },
+        {
+          "id": "p419-b22",
+          "source": "$$f(x)=\\begin{cases}x^{n+1},&x\\text{ irrational}\\\\0,&x\\text{ rational}.\\end{cases}$$",
+          "sourceSha256": "ae8822b7425e4933b14d48b0a2ba1c5b0e3d55db5e63be451a76df00a428ff9a"
+        },
+        {
+          "id": "p419-b23",
+          "source": "If $P(x)=0$, then $P$ is certainly a polynomial of degree $\\le n$ which equals $f$ up to order $n$ at 0. On the other hand, $f'(a)$ does not exist for any $a\\ne0$, so $f''(0)$ is undefined.",
+          "sourceSha256": "8471d6c08295de41cb740b29d9cb2ac71426381c2df6c647c9c043375e474b33",
+          "translation": "若 $P(x)=0$，那么 $P$ 当然是一个次数 $\\le n$ 的多项式，与 $f$ 在 0 处直到 $n$ 阶相等。另一方面，对任何 $a\\ne0$，$f'(a)$ 都不存在，所以 $f''(0)$ 没有定义。"
+        }
+      ]
+    },
+    {
+      "printed": 420,
+      "sourceSha256": "bc94150f7a90e7c3ba4ba9a0e2749418228000f6b6133c588ca84ba9cb9b3ee7",
+      "blocks": [
+        {
+          "id": "p420-b1",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:587px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"478 156 587 356\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0439.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "0fd3d2d2dccf54031866a7d94c564aaa30222036cab313a161363c845a6b9f80"
+        },
+        {
+          "id": "p420-b2",
+          "source": "When $f$ does have $n$ derivatives at $a$, however, the corollary may provide a useful method for finding the Taylor polynomial of $f$. In particular, remember that our first attempt to find the Taylor polynomial for arctan ended in failure. The equation",
+          "sourceSha256": "b919efc88ba36db0507d24e9005fff476af1d7f3b5879af3f7f408e5bf15f6e7",
+          "translation": "不过，当 $f$ 在 $a$ 处确实有 $n$ 阶导数时，这个推论可能提供求 $f$ 的泰勒多项式的有用方法。特别要记得，第一次尝试求 arctan 的泰勒多项式时，我们失败了。等式"
+        },
+        {
+          "id": "p420-b3",
+          "source": "$$\\arctan x=\\int_0^x\\frac1{1+t^2}\\,dt$$",
+          "sourceSha256": "11ae1617cd5f654de30605d1a77878e245d3961509403351a39b76f4bbd14fc7"
+        },
+        {
+          "id": "p420-b4",
+          "source": "suggests a promising method of finding a polynomial close to arctan—divide 1 by $1+t^2$, to obtain a polynomial plus a remainder:",
+          "sourceSha256": "6dbf65dae916de4127d0ec267877aebf595e6fa1187947d0eaae7c8f56c3a259",
+          "translation": "提示了一种有希望找到接近 arctan 的多项式的方法——用 1 除以 $1+t^2$，得到一个多项式加上余项："
+        },
+        {
+          "id": "p420-b5",
+          "source": "$$\\frac1{1+t^2}=1-t^2+t^4-t^6+\\cdots+(-1)^nt^{2n}+\\frac{(-1)^{n+1}t^{2n+2}}{1+t^2}.$$",
+          "sourceSha256": "bb12e2a917411df8d9e8daf19ac33da61c23201f7333e98b99c2a4708f41871e"
+        },
+        {
+          "id": "p420-b6",
+          "source": "This formula, which can be checked easily by multiplying both sides by $1+t^2$, shows that",
+          "sourceSha256": "828c16cb3e6ec73a79502a8cf7b67777d8d3b136d8cfc0fc56c62d3c4d022d20",
+          "translation": "这个公式只需两边乘以 $1+t^2$ 就能轻松验证，它表明"
+        },
+        {
+          "id": "p420-b7",
+          "source": "$$\\begin{aligned}\n\\arctan x&=\\int_0^x1-t^2+t^4-\\cdots+(-1)^nt^{2n}\\,dt+(-1)^{n+1}\\int_0^x\\frac{t^{2n+2}}{1+t^2}\\,dt\\\\\n&=x-\\frac{x^3}3+\\frac{x^5}5-\\cdots+(-1)^n\\frac{x^{2n+1}}{2n+1}+(-1)^{n+1}\\int_0^x\\frac{t^{2n+2}}{1+t^2}\\,dt.\n\\end{aligned}$$",
+          "sourceSha256": "fc00d913d45598673a6ec5ba5f7ac8756fa2c8b7a1f63163ed8001913d29f322"
+        },
+        {
+          "id": "p420-b8",
+          "source": "According to our corollary, the polynomial which appears here will be the Taylor polynomial of degree $2n+1$ for arctan at 0, provided that",
+          "sourceSha256": "c9163a7b871b74e5ad6a46c599fadd75b3e84f0c4710c58746ed84bd5a058efc",
+          "translation": "根据推论，这里出现的多项式就是 arctan 在 0 处的 $2n+1$ 次泰勒多项式，只要"
+        },
+        {
+          "id": "p420-b9",
+          "source": "$$\\lim_{x\\to0}\\frac{\\displaystyle\\int_0^x\\frac{t^{2n+2}}{1+t^2}\\,dt}{x^{2n+1}}=0.$$",
+          "sourceSha256": "3b6cd2f02124695ef2cc527127733902ccfe0d3b36cd0e02c314a72642eb1d76"
+        },
+        {
+          "id": "p420-b10",
+          "source": "Since",
+          "sourceSha256": "98af1ed61831e6ab92bbb2a4d429344c8d0581c77d5c85311c5ed8a3207d2eea",
+          "translation": "由于"
+        },
+        {
+          "id": "p420-b11",
+          "source": "$$\\left|\\int_0^x\\frac{t^{2n+2}}{1+t^2}\\,dt\\right|\\le\\left|\\int_0^xt^{2n+2}\\,dt\\right|=\\frac{|x|^{2n+3}}{2n+3},$$",
+          "sourceSha256": "6d378f44d2a80cbf1a9da2dd0057d83f4393477a460fbc1c8a6821baa1a8f6c5"
+        },
+        {
+          "id": "p420-b12",
+          "source": "this is clearly true. Thus we have found that the Taylor polynomial of degree $2n+1$ for arctan at 0 is",
+          "sourceSha256": "27932069af2c70c2f300e4e50f2a57fe35624c63349c57b447d40e15c0ff56bd",
+          "translation": "这显然成立。因此，已经求出 arctan 在 0 处的 $2n+1$ 次泰勒多项式是"
+        },
+        {
+          "id": "p420-b13",
+          "source": "$$P_{2n+1,0}(x)=x-\\frac{x^3}3+\\frac{x^5}5-\\cdots+(-1)^n\\frac{x^{2n+1}}{2n+1}.$$",
+          "sourceSha256": "29dcdc2e14e6e2ca9443b4c17477e46a1d34c9befa70f211e3a5683bc5d9892d"
+        }
+      ]
+    },
+    {
+      "printed": 421,
+      "sourceSha256": "69e2c32ccd09305eaf8048634fb3b1ba380aeb65f1218d81a33f908f78193f75",
+      "blocks": [
+        {
+          "id": "p421-b1",
+          "source": "By the way, now that we have discovered the Taylor polynomials of arctan, it is possible to work backwards and find $\\arctan^{(k)}(0)$ for all $k$: Since",
+          "sourceSha256": "39c2d29bcda8426fc4be048cfb5645390334a89b59e6acc533f77075b4b00d05",
+          "translation": "顺便说一下，既然已经找到了 arctan 的泰勒多项式，就可以反过来，对所有 $k$ 求出 $\\arctan^{(k)}(0)$：由于"
+        },
+        {
+          "id": "p421-b2",
+          "source": "$$P_{2n+1,0}(x)=x-\\frac{x^3}3+\\frac{x^5}5-\\cdots+(-1)^n\\frac{x^{2n+1}}{2n+1},$$",
+          "sourceSha256": "b5d6a467691254b750fe27ff71c7bbbfea65417f5066d6a5636049e46888273b"
+        },
+        {
+          "id": "p421-b3",
+          "source": "and since this polynomial is, by definition,",
+          "sourceSha256": "1ded210419412b6947e708c3a08a7ed5f5915cfa280a829c2d1f5a16d17e1c0c",
+          "translation": "而这个多项式按定义又是"
+        },
+        {
+          "id": "p421-b4",
+          "source": "$$\\arctan^{(0)}(0)+\\arctan^{(1)}(0)+\\frac{\\arctan^{(2)}(0)}{2!}x^2+\\cdots+\\frac{\\arctan^{(2n+1)}(0)}{(2n+1)!}x^{2n+1},$$",
+          "sourceSha256": "029566eecbacc89d86143f799057da1fb5f4748f2963c009a2c3404a60e29c98"
+        },
+        {
+          "id": "p421-b5",
+          "source": "we can find $\\arctan^{(k)}(0)$ by simply equating the coefficients of $x^k$ in these two polynomials:",
+          "sourceSha256": "67453246b1494f86fd3de6da4957d29106ed912e1a5bc259b81e517b1d15ae3b",
+          "translation": "只需将两个多项式中 $x^k$ 的系数对应相等，就能求出 $\\arctan^{(k)}(0)$："
+        },
+        {
+          "id": "p421-b6",
+          "source": "$$\\begin{gathered}\n\\frac{\\arctan^{(k)}(0)}{k!}=0\\quad\\text{if }k\\text{ is even},\\\\\n\\frac{\\arctan^{(2l+1)}(0)}{(2l+1)!}=\\frac{(-1)^l}{2l+1}\\quad\\text{or}\\quad\\arctan^{(2l+1)}(0)=(-1)^l\\cdot(2l)!.\n\\end{gathered}$$",
+          "sourceSha256": "fbacf7c5a8fcfdc80c4643e54eb30f3c6c489d09e952505ca0647d3babc49f81"
+        },
+        {
+          "id": "p421-b7",
+          "source": "A much more interesting fact emerges if we go back to the original equation",
+          "sourceSha256": "d4681da27ebf8bbda394195659c59eb0e62a35c9d6385c015afd5a115441197b",
+          "translation": "如果回到最初的等式"
+        },
+        {
+          "id": "p421-b8",
+          "source": "$$\\arctan x=x-\\frac{x^3}3+\\frac{x^5}5-\\cdots+(-1)^n\\frac{x^{2n+1}}{2n+1}+(-1)^{n+1}\\int_0^x\\frac{t^{2n+2}}{1+t^2}\\,dt,$$",
+          "sourceSha256": "47628990ce9239a4d7ddce1719d3450d03e2009492889439d594a9e5a80978b5"
+        },
+        {
+          "id": "p421-b9",
+          "source": "and remember the estimate",
+          "sourceSha256": "77e67bfd5933031481d83ba9c95364ba004e8ea15c866dacc1e66e9470513729",
+          "translation": "并记住估计"
+        },
+        {
+          "id": "p421-b10",
+          "source": "$$\\left|\\int_0^x\\frac{t^{2n+2}}{1+t^2}\\,dt\\right|\\le\\frac{|x|^{2n+3}}{2n+3}.$$",
+          "sourceSha256": "1a75ed4a3edb7febb1dfdea4bf58bfd10c0e30fee31ff9b1dcfb97778006a01d"
+        },
+        {
+          "id": "p421-b11",
+          "source": "When $|x|\\le1$, this expression is at most $1/(2n+3)$, and we can make this as small as we like simply by choosing $n$ large enough. In other words, for $|x|\\le1$ *we can use the Taylor polynomials for arctan to compute* $\\arctan x$ *as accurately as we like*. The most important theorems about Taylor polynomials extend this isolated result to other functions, and the Taylor polynomials will soon play quite a new role.",
+          "sourceSha256": "09be0f61466fccb1e4be89ad2d0024fb30914cb9b9ffa370afabb951aad0b115",
+          "translation": "就会出现一个有趣得多的事实。当 $|x|\\le1$ 时，这个表达式至多为 $1/(2n+3)$；只要把 $n$ 取得足够大，就能让它任意小。换句话说，对于 $|x|\\le1$，*可以利用 arctan 的泰勒多项式，以任意要求的精度计算 $\\arctan x$*。关于泰勒多项式最重要的定理，将把这个孤立结果推广到其他函数，而泰勒多项式也即将扮演一个全新的角色。"
+        },
+        {
+          "id": "p421-b12",
+          "source": "The theorems proved so far have always examined the behavior of the Taylor polynomial $P_{n,a}$ for *fixed* $n$, as $x$ approaches $a$. Henceforth we will compare Taylor polynomials $P_{n,a}$ for *fixed* $x$, and different $n$. In anticipation of the coming theorem we introduce some new notation.",
+          "sourceSha256": "58d818359189ba027ddcbfb818182d6f54ba95bec9b6ba9b5585e7f8f6e1d133",
+          "translation": "到目前为止，已经证明的定理总是在*固定* $n$、让 $x$ 趋于 $a$ 时，考察泰勒多项式 $P_{n,a}$ 的表现。从现在起，我们将*固定* $x$，比较不同 $n$ 所对应的泰勒多项式 $P_{n,a}$。为即将出现的定理作准备，先引入一些新记号。"
+        },
+        {
+          "id": "p421-b13",
+          "source": "If $f$ is a function for which $P_{n,a}(x)$ exists, we define the **remainder term** $R_{n,a}(x)$ by",
+          "sourceSha256": "ef1614c38843658f304bd7b376f6910673c3775ffd137a7d4bcebb99cd6dcfba",
+          "translation": "如果函数 $f$ 的 $P_{n,a}(x)$ 存在，我们通过下式定义**余项** $R_{n,a}(x)$："
+        },
+        {
+          "id": "p421-b14",
+          "source": "$$\\begin{aligned}\nf(x)&=P_{n,a}(x)+R_{n,a}(x)\\\\\n&=f(a)+f'(a)(x-a)+\\cdots+\\frac{f^{(n)}(a)}{n!}(x-a)^n+R_{n,a}(x).\n\\end{aligned}$$",
+          "sourceSha256": "4ce70e2ca064ef09735b6873cbc2ea9e0252972c3d4c3ea94492fee75116de47"
+        },
+        {
+          "id": "p421-b15",
+          "source": "We would like to have an expression for $R_{n,a}(x)$ whose size is easy to estimate. There is such an expression, involving an integral, just as in the case for arctan. One way to guess this expression is to begin with the case $n=0$:",
+          "sourceSha256": "2d07fe108bd15d2598e61aef53f123ff241b7e5d7ea193d42f0021bcb25b770d",
+          "translation": "我们希望找到一个便于估计大小的 $R_{n,a}(x)$ 的表达式。确实存在这样的表达式，它涉及一个积分，就像 arctan 的情形一样。猜测这个表达式的一种方法，是从 $n=0$ 开始："
+        },
+        {
+          "id": "p421-b16",
+          "source": "$$f(x)=f(a)+R_{0,a}(x).$$",
+          "sourceSha256": "01c914658af694ffa51b765480357d19f8870af6c288aca79f62f951a4139dbc"
+        }
+      ]
+    },
+    {
+      "printed": 422,
+      "sourceSha256": "cde4564eed642e43890e772876778418232d60ddc5a1c7bde59fd22c45115aa8",
+      "blocks": [
+        {
+          "id": "p422-b1",
+          "source": "The Fundamental Theorem of Calculus enables us to write",
+          "sourceSha256": "29eec241a24b41494a4517610dc5c63993938f1ce3515acb2855c1f49f1f1afe",
+          "translation": "微积分基本定理让我们能够写成"
+        },
+        {
+          "id": "p422-b2",
+          "source": "$$f(x)=f(a)+\\int_a^xf'(t)\\,dt,$$",
+          "sourceSha256": "edd14ff25df98afccebe4a4e9004421f076180eba1cfb5ba45f46129d81a3b07"
+        },
+        {
+          "id": "p422-b3",
+          "source": "so that",
+          "sourceSha256": "ab6b7abe5e492f9b6d750de7961c627380f376d321fccbb8be082915be4cdf03",
+          "translation": "所以"
+        },
+        {
+          "id": "p422-b4",
+          "source": "$$R_{0,a}(x)=\\int_a^xf'(t)\\,dt.$$",
+          "sourceSha256": "a8d9ae914117760ccf1618d987a604fddf4c44f53c16ef423affdf36582f19fb"
+        },
+        {
+          "id": "p422-b5",
+          "source": "A similar expression for $R_{1,a}(x)$ can be derived from this formula using integration by parts in a rather tricky way: Let",
+          "sourceSha256": "ced08460b25e29c9af25ca3f5aa6c7815e246e0cd408677a18a0d9cf71df95b1",
+          "translation": "以一种相当巧妙的方式使用分部积分，可以从这个公式推导出 $R_{1,a}(x)$ 的类似表达式：令"
+        },
+        {
+          "id": "p422-b6",
+          "source": "$$u(t)=f'(t)\\quad\\text{and}\\quad v(t)=t-x$$",
+          "sourceSha256": "4b25a67dcaa3dfff752490038bdcb8aad1add7d0c12ea6f86c5d43cdadb0c449"
+        },
+        {
+          "id": "p422-b7",
+          "source": "(notice that $x$ represents some fixed number in the expression for $v(t)$, so $v'(t)=1$); then",
+          "sourceSha256": "b48ca79fdf797ed1f9c45a6919f7669343b9f1aca9f1ca61310da264eef50d75",
+          "translation": "（注意，在 $v(t)$ 的表达式中，$x$ 表示某个固定的数，因此 $v'(t)=1$）；那么"
+        },
+        {
+          "id": "p422-b8",
+          "source": "$$\\begin{aligned}\n\\int_a^xf'(t)\\,dt&=\\int_a^x\\underset{\\substack{\\downarrow\\\\u(t)}}{f'(t)}\\cdot\\underset{\\substack{\\downarrow\\\\v'(t)}}1\\,dt\\\\\n&=\\left.u(t)v(t)\\right|_a^x-\\int_a^x\\underset{\\substack{\\downarrow\\\\u'(t)}}{f''(t)}\\underset{\\substack{\\downarrow\\\\v(t)}}{(t-x)}\\,dt.\n\\end{aligned}$$",
+          "sourceSha256": "b0338f7a79f8277efd053fcaff56aaad6d44dbc17ea42ccea1f51a9d52cd7475"
+        },
+        {
+          "id": "p422-b9",
+          "source": "Since $v(x)=0$, we obtain",
+          "sourceSha256": "06153fecfa238484a29d9f2f98f6e29c2e4a39e74b33baa087b64b9ddedf8567",
+          "translation": "由于 $v(x)=0$，得到"
+        },
+        {
+          "id": "p422-b10",
+          "source": "$$\\begin{aligned}\nf(x)&=f(a)+\\int_a^xf'(t)\\,dt\\\\\n&=f(a)-u(a)v(a)+\\int_a^xf''(t)(x-t)\\,dt\\\\\n&=f(a)+f'(a)(x-a)+\\int_a^xf''(t)(x-t)\\,dt.\n\\end{aligned}$$",
+          "sourceSha256": "f87febfbdb462b673e72d309f33ced1ea6041ef5507f06bc485a06ff44737aa7"
+        },
+        {
+          "id": "p422-b11",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "于是"
+        },
+        {
+          "id": "p422-b12",
+          "source": "$$R_{1,a}(x)=\\int_a^xf''(t)(x-t)\\,dt.$$",
+          "sourceSha256": "aa5849ce91c29665e4c063b6f9624ee2b01ee405913cba7b5596726ace9f6ad6"
+        },
+        {
+          "id": "p422-b13",
+          "source": "It is hard to give any motivation for choosing $v(t)=t-x$, rather than $v(t)=t$. It just happens to be the choice which works out, the sort of thing one might discover after sufficiently many similar but futile manipulations. However, it is now easy to guess the formula for $R_{2,a}(x)$. If",
+          "sourceSha256": "1f1eb0d1d4fb7f80e7fcbf01de68572a072dbb498ad22248dfd4ed0352e90fc2",
+          "translation": "很难说明，为什么要选 $v(t)=t-x$，而不是 $v(t)=t$。它恰好是能够奏效的选择，是那种在进行足够多次相似却徒劳的运算之后，也许会发现的东西。不过，现在很容易猜出 $R_{2,a}(x)$ 的公式。如果"
+        },
+        {
+          "id": "p422-b14",
+          "source": "$$u(t)=f''(t)\\quad\\text{and}\\quad v(t)=\\frac{-(x-t)^2}2,$$",
+          "sourceSha256": "00e3219da21b1cdd390dc5b8ecd7e92911ac99e0647f8001a014f3479181fdae"
+        },
+        {
+          "id": "p422-b15",
+          "source": "then $v'(t)=(x-t)$, so",
+          "sourceSha256": "c6acf803dce4e462fb43a0f94fbf9b5e4961895f85efeb73fe9348de9ef7e9b2",
+          "translation": "那么 $v'(t)=(x-t)$，所以"
+        },
+        {
+          "id": "p422-b16",
+          "source": "$$\\begin{aligned}\n\\int_a^xf''(t)(x-t)\\,dt&=\\left.u(t)v(t)\\right|_a^x-\\int_a^xf'''(t)\\cdot\\frac{-(x-t)^2}2\\,dt\\\\\n&=\\frac{f''(a)(x-a)^2}2+\\int_a^x\\frac{f'''(t)}2(x-t)^2\\,dt.\n\\end{aligned}$$",
+          "sourceSha256": "acfbcf979b981264dac6d0c4eaa076ac74e34fc64f2fc2a3436445c5a58c96da"
+        },
+        {
+          "id": "p422-b17",
+          "source": "This shows that",
+          "sourceSha256": "259512e61552048463cd7f9c60d176c302b7ea87ac50d6a6e43021e759dc3734",
+          "translation": "这表明"
+        },
+        {
+          "id": "p422-b18",
+          "source": "$$R_{2,a}(x)=\\int_a^x\\frac{f^{(3)}(t)}2(x-t)^2\\,dt.$$",
+          "sourceSha256": "befe95e92cd038b082a5b4c671634ef849725eb18d07212828b1ae3237cefe4f"
+        },
+        {
+          "id": "p422-b19",
+          "source": "You should now have little difficulty giving a rigorous proof, by induction, that",
+          "sourceSha256": "fc163f23e631fa68419d4120a187b4ca1c4f9475a2669f7f7cf5a5888af67cc2",
+          "translation": "现在，你应该不难用归纳法给出严格证明："
+        }
+      ]
+    },
+    {
+      "printed": 423,
+      "sourceSha256": "f04c379b5a3692aa70daa03ece37e6741c59784ee1c7824525e532e7b5a16fd0",
+      "blocks": [
+        {
+          "id": "p423-b1",
+          "source": "if $f^{(n+1)}$ is continuous on $[a,x]$, then",
+          "sourceSha256": "47833358db7adeb9441f4f92228913658822a361e74b59b51fe4793f412f62d2",
+          "translation": "如果 $f^{(n+1)}$ 在 $[a,x]$ 上连续，那么"
+        },
+        {
+          "id": "p423-b2",
+          "source": "$$R_{n,a}(x)=\\int_a^x\\frac{f^{(n+1)}(t)}{n!}(x-t)^n\\,dt.$$",
+          "sourceSha256": "ff97b3a3bc0f5745f552c00fe188e3851fa5e04dc873a24087bb0b0c30a12534"
+        },
+        {
+          "id": "p423-b3",
+          "source": "This formula is called the **integral form of the remainder**, and we can easily estimate it in terms of estimates for $f^{(n+1)}$ on $[a,x]$. If $m$ and $M$ are the minimum and maximum of $f^{(n+1)}/n!$ on $[a,x]$, then $R_{n,a}(x)$ satisfies",
+          "sourceSha256": "4aaf21a9b907f30c79e24daa56a0fa4a55b1918bc01d589ed61d99cde4dacef1",
+          "translation": "这个公式称为**余项的积分形式**，很容易利用对 $f^{(n+1)}$ 在 $[a,x]$ 上的估计来估计它。如果 $m$ 和 $M$ 分别是 $f^{(n+1)}/n!$ 在 $[a,x]$ 上的最小值和最大值，那么 $R_{n,a}(x)$ 满足"
+        },
+        {
+          "id": "p423-b4",
+          "source": "$$m\\int_a^x(x-t)^n\\,dt\\le R_{n,a}(x)\\le M\\int_a^x(x-t)\\,dt,$$",
+          "sourceSha256": "fac1e4df75a58b587162a0ca9837e5ffa3a9573d227ec47c8cf1f141df2dd114"
+        },
+        {
+          "id": "p423-b5",
+          "source": "so we can write",
+          "sourceSha256": "d7d02e22a04648e6a157a440e110ed0be3d462edc62b96e8d5d08b2fb1a9c8b1",
+          "translation": "因此，可以写成"
+        },
+        {
+          "id": "p423-b6",
+          "source": "$$R_{n,a}(x)=\\alpha\\frac{(x-a)^{n+1}}{n+1}$$",
+          "sourceSha256": "4ebb8b9ed49dc8c18085d5ccf85e9ab681ee5b9d6c5e78c36a8675b99537d32a"
+        },
+        {
+          "id": "p423-b7",
+          "source": "for some number $\\alpha$ between $m$ and $M$. Since we’ve assumed that $f^{(n+1)}$ is continuous, this means that for some $t$ in $(a,x)$ we can also write",
+          "sourceSha256": "d3e4d170e85e016761548c444b2cf69c2fbce1ee3ad8a319cc1e98fc6428a26a",
+          "translation": "其中数 $\\alpha$ 介于 $m$ 和 $M$ 之间。由于已经假设 $f^{(n+1)}$ 连续，这意味着，对 $(a,x)$ 中某个 $t$，还可以写成"
+        },
+        {
+          "id": "p423-b8",
+          "source": "$$R_{n,a}(x)=\\frac{f^{(n+1)}(t)}{n!}\\frac{(x-a)^{n+1}}{n+1}=\\frac{f^{(n+1)}}{(n+1)!}(x-a)^{n+1},$$",
+          "sourceSha256": "a50a604805c28842114946c09b5841ae148a2b909cab6d7fa8d6dbe643f7efcf"
+        },
+        {
+          "id": "p423-b9",
+          "source": "which is called the **Lagrange form of the remainder** (these manipulations will look familiar to those who have done Problem 13-23).",
+          "sourceSha256": "bd671893f890e5148d2ab4feaee339aabc8a24f1e3aa588cecc5825fa0eac7ec",
+          "translation": "这称为**余项的拉格朗日形式**（做过习题 13-23 的读者，会觉得这些运算很熟悉）。"
+        },
+        {
+          "id": "p423-b10",
+          "source": "The Lagrange form of the remainder is the one we will need in almost all cases, and we can even give a proof that doesn’t require $f^{(n+1)}$ to be continuous (a refinement admittedly of little importance in most applications, where we often assume that $f$ has derivatives of all orders). This is the form of the remainder that we will choose in our statement of the next theorem (Taylor’s Theorem).",
+          "sourceSha256": "07058f37991816a3f10f0851060112e4960b92d2675eb8ab00cec71a61d7fc26",
+          "translation": "几乎所有情况下，我们需要的都是拉格朗日余项，而且甚至可以给出一个不要求 $f^{(n+1)}$ 连续的证明（必须承认，这种改进在多数应用中意义不大，因为通常会假设 $f$ 有任意阶导数）。陈述下一个定理（泰勒定理）时，我们就选用这种余项形式。"
+        },
+        {
+          "id": "p423-b11",
+          "source": "**LEMMA** Suppose that the function $R$ is $(n+1)$-times differentiable on $[a,b]$, and",
+          "sourceSha256": "5542154f27370b3933e10a8d2b4855168f3f707d3eed6fd96162000ef4d4d725",
+          "translation": "**引理** 假设函数 $R$ 在 $[a,b]$ 上 $(n+1)$ 次可微，并且"
+        },
+        {
+          "id": "p423-b12",
+          "source": "$$R^{(k)}(a)=0\\quad\\text{for }k=0,1,2,\\ldots,n.$$",
+          "sourceSha256": "83bdb0342bb525ad26eb86f1dd8fbce4f7cb20d5edc90eaa930079bbeb483a6a"
+        },
+        {
+          "id": "p423-b13",
+          "source": "Then for any $x$ in $(a,b]$ we have",
+          "sourceSha256": "4fc21885f18db043852eef65dbff8f4fa2ec6b26775b4425771a264f96986e5a",
+          "translation": "那么对 $(a,b]$ 中任意 $x$，都有"
+        },
+        {
+          "id": "p423-b14",
+          "source": "$$\\frac{R(x)}{(x-a)^{n+1}}=\\frac{R^{(n+1)}(t)}{(n+1)!}\\quad\\text{for some }t\\text{ in }(a,x).$$",
+          "sourceSha256": "b19160775c928d867d103b47a5b2cc90368248f8ce2f7829f98285dbebad07c4"
+        },
+        {
+          "id": "p423-b15",
+          "source": "**PROOF** For $n=0$, this is just the Mean Value Theorem, and we will prove the theorem for all $n$ by induction on $n$. To do this we use the Cauchy Mean Value Theorem to write",
+          "sourceSha256": "6b6248af8ae6a972b5f4557390dc8a9e9e6015bb65789f3384835f4291ffe8bc",
+          "translation": "**证明** 当 $n=0$ 时，这就是中值定理；我们将对 $n$ 使用归纳法，证明它对所有 $n$ 都成立。为此，利用柯西中值定理写成"
+        },
+        {
+          "id": "p423-b16",
+          "source": "$$\\begin{aligned}\n\\frac{R(x)}{(x-a)^{n+2}}&=\\frac{R'(z)}{(n+2)(z-a)^{n+1}}\\\\\n&=\\frac1{n+2}\\frac{R'(z)}{(z-a)^{n+1}}\\quad\\text{for some }z\\text{ in }(a,x),\n\\end{aligned}$$",
+          "sourceSha256": "23d7f35bd277598a2805df03cd57191dfb5cb54711d55e9f2ca45d261c1f8bab"
+        },
+        {
+          "id": "p423-b17",
+          "source": "and then apply the induction hypothesis to $R'$ on the interval $[a,z]$ to get",
+          "sourceSha256": "857dbcfcf2602328c2602d682fcd16e45a048912bc962807ffa5a8e33c75ffed",
+          "translation": "再对区间 $[a,z]$ 上的 $R'$ 应用归纳假设，得到"
+        },
+        {
+          "id": "p423-b18",
+          "source": "$$\\begin{aligned}\n\\frac{R(x)}{(x-a)^{n+2}}&=\\frac1{n+2}\\frac{(R')^{(n+1)}(t)}{(n+1)!}\\quad\\text{for some }t\\text{ in }(a,z)\\\\\n&=\\frac{R^{(n+2)}(t)}{(n+2)!}.\\quad\\text{▮}\n\\end{aligned}$$",
+          "sourceSha256": "dbf8f50949536191f30aa81372d5db8c2177bc7f87c202aa0a5bc093dc8cbcc4"
+        }
+      ]
+    },
+    {
+      "printed": 424,
+      "sourceSha256": "6f062339f7482f4f86396d6b9f7d51f385cce58afb6a1bdd7156ba6709cfbfe8",
+      "blocks": [
+        {
+          "id": "p424-b1",
+          "source": "**THEOREM 4 (TAYLOR’S THEOREM)** Suppose that $f',\\ldots,f^{(n+1)}$ are defined on $[a,x]$, and that $R_{n,a}(x)$ is defined by",
+          "sourceSha256": "a2b4561fd2e747d8ff9a70a5c864332b81dec90c697090b296a0afa75304ebd7",
+          "translation": "**定理 4（泰勒定理）** 假设 $f',\\ldots,f^{(n+1)}$ 在 $[a,x]$ 上有定义，而且 $R_{n,a}(x)$ 由下式定义："
+        },
+        {
+          "id": "p424-b2",
+          "source": "$$f(x)=f(a)+f'(a)(x-a)+\\cdots+\\frac{f^{(n)}(a)}{n!}(x-a)^n+R_{n,a}(x).$$",
+          "sourceSha256": "277103692af9bc4aa45eb8cec22d483df9b86e47ae8540edf62845df27df3071"
+        },
+        {
+          "id": "p424-b3",
+          "source": "Then",
+          "sourceSha256": "0597f441dcca7c9bb0a79da4d94d03c523c031a3384009afff47ac1fd1a72b95",
+          "translation": "那么"
+        },
+        {
+          "id": "p424-b4",
+          "source": "$$R_{n,a}(x)=\\frac{f^{(n+1)}(t)}{(n+1)!}(x-a)^{n+1}\\quad\\text{for some }t\\text{ in }(a,x)$$",
+          "sourceSha256": "8febc5d113336c99c305b6b502c35ef13a091cec128c001af2a7c67b8160eab3"
+        },
+        {
+          "id": "p424-b5",
+          "source": "(Lagrange form of the remainder).",
+          "sourceSha256": "b498264e06c4b1b1a00227385c0050f6419a54f3926991a0d0bc902494888089",
+          "translation": "（拉格朗日余项）。"
+        },
+        {
+          "id": "p424-b6",
+          "source": "**PROOF** The function $R_{n,a}$ satisfies the conditions of the Lemma by the very definition of the Taylor polynomial, so",
+          "sourceSha256": "e118a30e9a365f074ad05f57fb7b78fa1240e8587f80f97c80d75c87ea8a6972",
+          "translation": "**证明** 根据泰勒多项式的定义本身，函数 $R_{n,a}$ 满足引理的条件，因此"
+        },
+        {
+          "id": "p424-b7",
+          "source": "$$\\frac{R_{n,a}(x)}{(x-a)^{n+1}}=\\frac{R_{n,a}^{(n+1)}(t)}{(n+1)!}$$",
+          "sourceSha256": "d438e82473b254092351eaca4a6bedf27eb5419ff05712c555dbd5b32ab4530a"
+        },
+        {
+          "id": "p424-b8",
+          "source": "for some $t$ in $(a,x)$. But",
+          "sourceSha256": "36ec11be481da3dab47c3d8f96f67ed650e6c34ef14bfc1385e3c012c1f18fab",
+          "translation": "其中 $t$ 是 $(a,x)$ 中某个数。但"
+        },
+        {
+          "id": "p424-b9",
+          "source": "$$R_{n,a}^{(n+1)}=f^{(n+1)},$$",
+          "sourceSha256": "b09a12dd50df3eef8e4a81afd6d6e60ddf764a15f996cfdf7f6df9c959afd3a6"
+        },
+        {
+          "id": "p424-b10",
+          "source": "since $R_{n,a}-f$ is a polynomial of degree $n$. ▮",
+          "sourceSha256": "51660ba40bd36f7ca8799a79319ee4b2c9e75ca687188cdb2aee4fcd6fe4baa7",
+          "translation": "因为 $R_{n,a}-f$ 是一个 $n$ 次多项式。▮"
+        },
+        {
+          "id": "p424-b11",
+          "source": "Applying Taylor’s Theorem to the functions sin, cos, and exp, with $a=0$, we obtain the following formulas:",
+          "sourceSha256": "1e4733ff30cfa038e875996c34ad8ee1d3c5a5635294df414860f493888eae12",
+          "translation": "取 $a=0$，对函数 sin、cos 和 exp 应用泰勒定理，得到下列公式："
+        },
+        {
+          "id": "p424-b12",
+          "source": "$$\\begin{aligned}\n\\sin x&=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\cdots+(-1)^n\\frac{x^{2n+1}}{(2n+1)!}+\\frac{\\sin^{(2n+2)}(t)}{(2n+2)!}x^{2n+2}\\\\\n\\cos x&=1-\\frac{x^2}{2!}+\\frac{x^4}{4!}-\\cdots+(-1)^n\\frac{x^{2n}}{(2n)!}+\\frac{\\cos^{(2n+1)}(t)}{(2n+1)!}x^{2n+1}\\\\\ne^x&=1+x+\\frac{x^2}{2!}+\\cdots+\\frac{x^n}{n!}+\\frac{e^t}{(n+1)!}x^{n+1}\n\\end{aligned}$$",
+          "sourceSha256": "09040ed552eb002f230c039f6ecfa07bf1f453dcba5e125c8391974dadf0aaea"
+        },
+        {
+          "id": "p424-b13",
+          "source": "(of course, we could actually go one power higher in the remainder terms for sin and cos).",
+          "sourceSha256": "9eb3669cecff902d5d3f3423f8f810944aeb6d300c659f9eee2bac2f6c317043",
+          "translation": "（当然，对于 sin 和 cos，余项中的幂次实际上还可以再提高一阶）。"
+        },
+        {
+          "id": "p424-b14",
+          "source": "Estimates for the first two are especially easy. Since",
+          "sourceSha256": "0fa2118db8b97e83dd3bc7964b9fd899f721ba7a41c74215c427e8114f24ca65",
+          "translation": "前两个余项尤其容易估计。由于"
+        },
+        {
+          "id": "p424-b15",
+          "source": "$$|\\sin^{(2n+2)}(t)|\\le1$$",
+          "sourceSha256": "819b35f95656a004c28b492583d9dc6b8f660ee108ef14f5bff9d2074ca42ab7"
+        },
+        {
+          "id": "p424-b16",
+          "source": "we have",
+          "sourceSha256": "311eecafbfec5e428b3e652becbcd18bf9c9670e490734d5811c85e6a7623ab4",
+          "translation": "有"
+        },
+        {
+          "id": "p424-b17",
+          "source": "$$\\left|\\frac{\\sin^{(2n+2)}(t)}{(2n+2)!}x^{2n+2}\\right|\\le\\frac{|x|^{2n+2}}{(2n+2)!}.$$",
+          "sourceSha256": "3aa64f4d87c24914f40959b1d4bcceef93dd591fe4a58ba0f4525f67bba1d9af"
+        },
+        {
+          "id": "p424-b18",
+          "source": "Similarly, we can show that",
+          "sourceSha256": "f1ecdc4fc80c5cfd886398070bfa59d6ef71558878da7561d844e820517499a0",
+          "translation": "类似地，可以证明"
+        },
+        {
+          "id": "p424-b19",
+          "source": "$$\\left|\\frac{\\cos^{(2n+1)}(t)}{(2n+1)!}x^{2n+1}\\right|\\le\\frac{|x|^{2n+1}}{(2n+1)!}.$$",
+          "sourceSha256": "9f4de13f7ccf6159f8194a35093df2793521b2614622a604c59b5d53ede343d7"
+        }
+      ]
+    },
+    {
+      "printed": 425,
+      "sourceSha256": "10734f76cc12e1908443ce04484702927133407f88ee1af0d3aa0baf501c11ec",
+      "blocks": [
+        {
+          "id": "p425-b1",
+          "source": "These estimates are particularly interesting, because (as proved in Chapter 16) for any $\\varepsilon>0$ we can make",
+          "sourceSha256": "21c5fff45e0c45f9ecc7a92402a85b10c633a697de1d24ebda6de93f4c74c792",
+          "translation": "这些估计特别有意思，因为（正如第 16 章已证明的）对于任意 $\\varepsilon>0$，都可以使"
+        },
+        {
+          "id": "p425-b2",
+          "source": "$$\\frac{x^n}{n!}<\\varepsilon$$",
+          "sourceSha256": "4d055cb8c5e6508a143aaed10b20889333d46040d0e18337841109c484aaec0c"
+        },
+        {
+          "id": "p425-b3",
+          "source": "by choosing $n$ large enough (how large $n$ must be will depend on $x$). This enables us to compute $\\sin x$ to any degree of accuracy desired simply by evaluating the proper Taylor polynomial $P_{n,0}(x)$. For example, suppose we wish to compute $\\sin2$ with an error of less than $10^{-4}$. Since",
+          "sourceSha256": "d3b8e752e6180d240a0ab40693e56a540c7c36e9e065dcdd6d7eefbcebc6656c",
+          "translation": "只要把 $n$ 取得足够大（$n$ 需要多大，将取决于 $x$）。这使我们只需计算适当的泰勒多项式 $P_{n,0}(x)$，就能以任意要求的精度算出 $\\sin x$。例如，假设想计算 $\\sin2$，误差小于 $10^{-4}$。由于"
+        },
+        {
+          "id": "p425-b4",
+          "source": "$$\\sin2=P_{2n+1,0}(2)+R,\\quad\\text{where }|R|\\le\\frac{2^{2n+2}}{(2n+2)!},$$",
+          "sourceSha256": "e201f15177973e7c48a41170a98c32dbc9ede04cc2b3d89194e2d86f4ca84c54"
+        },
+        {
+          "id": "p425-b5",
+          "source": "we can use $P_{2n+1,0}(2)$ as our answer, provided that",
+          "sourceSha256": "e95398d33d18d056df436376072beb8d96e228eb85c7da2e7d9c779c18dc8209",
+          "translation": "就可以用 $P_{2n+1,0}(2)$ 作为答案，只要"
+        },
+        {
+          "id": "p425-b6",
+          "source": "$$\\frac{2^{2n+2}}{(2n+2)!}<10^{-4}.$$",
+          "sourceSha256": "f48f3b8c968c525096d3db7586e8b3a4fc4573a7c02e250b1b1d66b11e58f3e2"
+        },
+        {
+          "id": "p425-b7",
+          "source": "A number $n$ with this property can be found by a straightforward search—it obviously helps to have a table of values for $n!$ and $2^n$ (see page 432). In this case it happens that $n=5$ works, so that",
+          "sourceSha256": "3d30e2af2f17f19bf86adb1a4c63c5f545215541b1ca191dc360d9ee8a222b92",
+          "translation": "具有这一性质的数 $n$，可以通过直接搜索找到——有 $n!$ 和 $2^n$ 的数值表显然很有帮助（见第 432 页）。这次恰好 $n=5$ 就可行，因此"
+        },
+        {
+          "id": "p425-b8",
+          "source": "$$\\begin{aligned}\n\\sin2&=P_{11,0}(2)+R\\\\\n&=2-\\frac{2^3}{3!}+\\frac{2^5}{5!}-\\frac{2^7}{7!}+\\frac{2^9}{9!}-\\frac{2^{11}}{11!}+R,\n\\end{aligned}$$",
+          "sourceSha256": "16f6227ff48ba06e2ded3aefad291d707d81f2400d93a94b0588337b89ed9506"
+        },
+        {
+          "id": "p425-b9",
+          "source": "where $|R|<10^{-4}$.",
+          "sourceSha256": "5aaefa3d8dc92ef426a1bc8ed494e25beb05642025c3e83b9a483a71bfdcb208",
+          "translation": "其中 $|R|<10^{-4}$。"
+        },
+        {
+          "id": "p425-b10",
+          "source": "It is even easier to calculate $\\sin1$ approximately, since",
+          "sourceSha256": "956bf2dcfe17cb7c35d73183607afe46bb2ce83da0e1315d6b6c51eeeb554de8",
+          "translation": "近似计算 $\\sin1$ 更容易，因为"
+        },
+        {
+          "id": "p425-b11",
+          "source": "$$\\sin1=P_{2n+1,0}(1)+R,\\quad\\text{where }|R|\\le\\frac1{(2n+2)!}.$$",
+          "sourceSha256": "cca8a9e78f920940836eae7820edd7ab82d2c5b107c4d6b89d54470b8c092692"
+        },
+        {
+          "id": "p425-b12",
+          "source": "To obtain an error less than $\\varepsilon$ we need only find an $n$ such that",
+          "sourceSha256": "5ab8f33a0f039ac602a56f2aa3005aabfcea620dd95a4ec6fdb9fd7fae14a8bd",
+          "translation": "要使误差小于 $\\varepsilon$，只需找到一个 $n$，使得"
+        },
+        {
+          "id": "p425-b13",
+          "source": "$$\\frac1{(2n+2)!}<\\varepsilon,$$",
+          "sourceSha256": "eba9f9e5b5668f9d8b3b93dd54a4b5b9eded566ce493c11a1c67e8470b4e715a"
+        },
+        {
+          "id": "p425-b14",
+          "source": "and this requires only a brief glance at a table of factorials. (Moreover, the individual terms of $P_{2n+1,0}(1)$ will be easier to handle.)",
+          "sourceSha256": "e961dab5983598df80d557e4c5b60cbc78ab42eac0d959485433db46a75a9c98",
+          "translation": "这只需简单看一下阶乘表即可。（此外，$P_{2n+1,0}(1)$ 中的各项也更容易处理。）"
+        },
+        {
+          "id": "p425-b15",
+          "source": "For very small $x$ the estimates will be even easier. For example,",
+          "sourceSha256": "94477960ce30a2fbe0928d7cd2dbd340281468a72dacfa0ba12f89d3c14b942a",
+          "translation": "对于非常小的 $x$，估计还会更容易。例如，"
+        },
+        {
+          "id": "p425-b16",
+          "source": "$$\\sin\\frac1{10}=P_{2n+1,0}\\left(\\frac1{10}\\right)+R,\\quad\\text{where }|R|\\le\\frac1{10^{2n+2}(2n+2)!}.$$",
+          "sourceSha256": "512bbfe58f9dadf2fd7b6162133134c340e4f73677051d1f04e23242ee9a941c"
+        },
+        {
+          "id": "p425-b17",
+          "source": "To obtain $|R|<10^{-10}$ we can clearly take $n=4$ (and we could even get away with $n=3$). These methods can actually be used to compute tables of sin and cos; a high-speed computer can compute $P_{2n+1,0}(x)$ for many different $x$ in almost no time at all. Nowadays, computers, and even cheap calculators, determine the values of such functions “on-the-fly”, though by specialized methods that are even faster.",
+          "sourceSha256": "222e4385cd45a5dddd4193a92bd7620110eda819368f91253b93423d57a8e4bb",
+          "translation": "要得到 $|R|<10^{-10}$，显然可以取 $n=4$（甚至 $n=3$ 也足够）。这些方法确实可以用来计算 sin 和 cos 的数值表；高速计算机几乎能在瞬间对许多不同的 $x$ 计算 $P_{2n+1,0}(x)$。如今，计算机甚至廉价计算器，都会“即时”计算这些函数的值，不过用的是速度更快的专门方法。"
+        }
+      ]
+    },
+    {
+      "printed": 426,
+      "sourceSha256": "27ad52549e7417bec361dc0c373f98b184aff7c8b4710cf4644fcac663be3da9",
+      "blocks": [
+        {
+          "id": "p426-b1",
+          "source": "Estimating the remainder for $e^x$ is only slightly harder. For simplicity assume that $x\\ge0$ (the estimates for $x\\le0$ are obtained in Problem 15). On the interval $[0,x]$ the maximum value of $e^t$ is $e^x$, since exp is increasing, so",
+          "sourceSha256": "08f968a00f2622ef12a8432e922992ad402aa4c01c86e8d74fe0accf7ca67d3d",
+          "translation": "$e^x$ 的余项估计只稍微困难一些。为简单起见，假设 $x\\ge0$（$x\\le0$ 时的估计见习题 15）。在区间 $[0,x]$ 上，$e^t$ 的最大值为 $e^x$，因为 exp 递增，所以"
+        },
+        {
+          "id": "p426-b2",
+          "source": "$$R_{n,0}\\le\\frac{e^xx^{n+1}}{(n+1)!}.$$",
+          "sourceSha256": "a2027b10ddf30fbd056737ae7bd86310da15ed00706bcef19c2b23f31a710f4d"
+        },
+        {
+          "id": "p426-b3",
+          "source": "Since we already know that $e<4$, we have",
+          "sourceSha256": "3154ff0dcc40568a088a83fb33cc8d40ba66da81045b40cb127b88d44f0ff829",
+          "translation": "由于已经知道 $e<4$，有"
+        },
+        {
+          "id": "p426-b4",
+          "source": "$$\\frac{e^xx^{n+1}}{(n+1)!}<\\frac{4^xx^{n+1}}{(n+1)!},$$",
+          "sourceSha256": "6bf88272d75a4d9f18cd81c43b8155e0fa2ddbf5ef0bd88069ff9caca0cca7fb"
+        },
+        {
+          "id": "p426-b5",
+          "source": "which can be made as small as desired by choosing $n$ sufficiently large. How large $n$ must be will depend on $x$ (and the factor $4^x$ will make things more difficult). Once again, the estimates are easier for small $x$. If $0\\le x\\le1$, then",
+          "sourceSha256": "bfbd2af0bed110c233cede8407423af630d1c6644654f0d03c7a5125f05bbf3a",
+          "translation": "只要把 $n$ 取得足够大，就能让它任意小。$n$ 需要多大，将取决于 $x$（而因子 $4^x$ 会使事情更困难）。同样，$x$ 较小时，估计更容易。如果 $0\\le x\\le1$，那么"
+        },
+        {
+          "id": "p426-b6",
+          "source": "$$e^x=1+x+\\frac{x^2}{2!}+\\cdots+\\frac{x^n}{n!}+R,\\quad\\text{where }0<R<\\frac4{(n+1)!}.$$",
+          "sourceSha256": "9340888aa460feb3493314af787c9ba156a12714bca7fdcd084b66b8706370c1"
+        },
+        {
+          "id": "p426-b7",
+          "source": "In particular, if $n=4$, then",
+          "sourceSha256": "cab95633c41e349af5ba3a652e9137d50d34648d26ce22ba35d3f92de9604778",
+          "translation": "特别地，如果 $n=4$，那么"
+        },
+        {
+          "id": "p426-b8",
+          "source": "$$0<R<\\frac4{5!}<\\frac1{10},$$",
+          "sourceSha256": "cf00f89f0e8e2f1e751e3a6a5dac9ad7d0b541ba3b26c5d470fcabe199d2806f"
+        },
+        {
+          "id": "p426-b9",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p426-b10",
+          "source": "$$\\begin{aligned}\ne=e^1&=1+1+\\frac1{2!}+\\frac1{3!}+\\frac1{4!}+R,\\quad\\text{where }0<R<\\frac1{10}\\\\\n&=2+\\frac{17}{24}\n\\end{aligned}$$",
+          "sourceSha256": "c4421a908e6a4d807d8ddd0b0490d1ff7625e5ffa03a4715a315de2755dd51f4"
+        },
+        {
+          "id": "p426-b11",
+          "source": "which shows that",
+          "sourceSha256": "15e0605ac8a8544c0fd25e712e835e401071f50abe3cf1deea2bf11eaedeb534",
+          "translation": "这表明"
+        },
+        {
+          "id": "p426-b12",
+          "source": "$$2<e<3.$$",
+          "sourceSha256": "54c86a44bea1c001870e54e7559f59a849b53b3b0d45c6070b6984de3a98128f"
+        },
+        {
+          "id": "p426-b13",
+          "source": "(This then shows that",
+          "sourceSha256": "01709aec655e0981473e4226c17f94fa61a7b8fe387128395043a657016517fb",
+          "translation": "（这又表明"
+        },
+        {
+          "id": "p426-b14",
+          "source": "$$0<R<\\frac{3^xx^{n+1}}{(n+1)!},$$",
+          "sourceSha256": "d6e5efb43b4d1f2a083b62230621a69310c6fdb8895c36ed1782805451dfbf95"
+        },
+        {
+          "id": "p426-b15",
+          "source": "allowing us to improve our estimate of $R$ slightly.) By taking $n=7$ you can compute that the first 3 decimals for $e$ are",
+          "sourceSha256": "bd588d0313b2513bb8df1a5c93ba19d9c9ee338f5436301bf51b1fbb18258c67",
+          "translation": "从而可以稍微改进对 $R$ 的估计。）取 $n=7$，就可以算出 $e$ 的小数点后三位为"
+        },
+        {
+          "id": "p426-b16",
+          "source": "$$e=2.718\\ldots$$",
+          "sourceSha256": "2fbd7ecad26076d4d5a3891478a6082b019b03ea7b44ba0227955285bf0dcc05"
+        },
+        {
+          "id": "p426-b17",
+          "source": "(you should check that $n=7$ does give this degree of accuracy, but it would be cruel to insist that you actually do the computations).",
+          "sourceSha256": "967ce34efe168d4e0f32e0a7ad960c66e18d85f0f7cf1dc00460b2523cfe8f81",
+          "translation": "（应当验证，$n=7$ 确实能给出这样的精度，但若坚持让你实际完成计算，就太残忍了）。"
+        },
+        {
+          "id": "p426-b18",
+          "source": "The function arctan is also important but, as you may recall, an expression for $\\arctan^{(k)}(x)$ is hopelessly complicated, so that our expressions for the remainder are pretty useless. On the other hand, our derivation of the Taylor polynomial for arctan automatically provided a formula for the remainder:",
+          "sourceSha256": "099a27f7a6eef00324a6a593e675bd543e068df259a285494973f74cb2a4ef49",
+          "translation": "函数 arctan 也很重要，但你也许记得，$\\arctan^{(k)}(x)$ 的表达式复杂得令人绝望，因此我们的余项表达式几乎派不上用场。另一方面，推导 arctan 的泰勒多项式时，已经自动给出了一个余项公式："
+        },
+        {
+          "id": "p426-b19",
+          "source": "$$\\arctan x=x-\\frac{x^3}3+\\cdots+\\frac{(-1)^nx^{2n+1}}{2n+1}+\\int_0^x\\frac{(-1)^{n+1}t^{2n+2}}{1+t^2}\\,dt.$$",
+          "sourceSha256": "ab59109c60d983492a73e134302d570125a19a73190447c8fcd466a0a269ee5d"
+        }
+      ]
+    },
+    {
+      "printed": 427,
+      "sourceSha256": "0f9f1b95df687565d580ccbe67a9de0687cd16aa6fba7ca2bca15436e27cb4c5",
+      "blocks": [
+        {
+          "id": "p427-b1",
+          "source": "As we have already estimated,",
+          "sourceSha256": "57d24a932d1549f608410978494a50ad08a7ef45a8943955bbbcb25959f8993a",
+          "translation": "正如已经估计过的，"
+        },
+        {
+          "id": "p427-b2",
+          "source": "$$\\left|\\int_0^x\\frac{(-1)^{n+1}t^{2n+2}}{1+t^2}\\,dt\\right|\\le\\left|\\int_0^xt^{2n+2}\\,dt\\right|=\\frac{|x|^{2n+3}}{2n+3}.$$",
+          "sourceSha256": "487ee3582d7a4379e1d98f7db2a5bdad8586ca44d475d06eafa1b146df32d628"
+        },
+        {
+          "id": "p427-b3",
+          "source": "For the moment we will consider only numbers $x$ with $|x|\\le1$. In this case, the remainder term can clearly be made as small as desired by choosing $n$ sufficiently large. In particular,",
+          "sourceSha256": "b81900517e783d00e6e41e36215b25370cdad3e32c8db8ad53d688423b067405",
+          "translation": "暂时只考虑满足 $|x|\\le1$ 的数 $x$。这时，显然只要把 $n$ 取得足够大，就能让余项任意小。特别地，"
+        },
+        {
+          "id": "p427-b4",
+          "source": "$$\\arctan1=1-\\frac13+\\frac15-\\cdots+\\frac{(-1)^n}{2n+1}+R,\\quad\\text{where }|R|<\\frac1{2n+3}.$$",
+          "sourceSha256": "1e2969d668c983564056df190b371f6658492007f22ff9cc70dade0087346a52"
+        },
+        {
+          "id": "p427-b5",
+          "source": "With this estimate it is easy to find an $n$ which will make the remainder less than any preassigned number; on the other hand, $n$ will usually have to be so large as to make computations hopelessly long. To obtain a remainder $<10^{-4}$, for example, we must take $n>(10^4-3)/2$. This is really a shame, because $\\arctan1=\\pi/4$, so the Taylor polynomial for arctan should allow us to compute $\\pi$. Fortunately, there are some clever tricks which enable us to surmount these difficulties. Since",
+          "sourceSha256": "3f14bad6fcc3d232eaaa48452cbdb100cd6a3627b6ac1efcde95f1115d391f72",
+          "translation": "有了这个估计，很容易找到一个 $n$，使余项小于任意预先指定的数；不过，$n$ 通常必须大到让计算长得令人绝望。例如，要使余项 $<10^{-4}$，必须取 $n>(10^4-3)/2$。这实在可惜，因为 $\\arctan1=\\pi/4$，所以 arctan 的泰勒多项式本来应该能让我们计算 $\\pi$。幸好，有一些巧妙的技巧可以克服这些困难。由于"
+        },
+        {
+          "id": "p427-b6",
+          "source": "$$|R_{2n+1,0}(x)|<\\frac{|x|^{2n+3}}{2n+3},$$",
+          "sourceSha256": "89d5c22ae0225abe5b457e6d7580a7d9c86916601ebf4b96423381a3089513dc"
+        },
+        {
+          "id": "p427-b7",
+          "source": "much smaller $n$’s will work for only somewhat smaller $x$’s. The trick for computing $\\pi$ is to express $\\arctan1$ in terms of $\\arctan x$ for smaller $x$; Problem 6 shows how this can be done in a convenient way.",
+          "sourceSha256": "e0e7f1aa535d8fbb58cfe9ff1c6e44a64755f3d8f71425f5d24d861ecc12dc67",
+          "translation": "只要 $x$ 稍小一些，小得多的 $n$ 就够用了。计算 $\\pi$ 的技巧，是用较小 $x$ 对应的 $\\arctan x$ 来表示 $\\arctan1$；习题 6 说明了怎样方便地做到这一点。"
+        },
+        {
+          "id": "p427-b8",
+          "source": "From the calculations on page 413, we see that for $x\\ge0$ we have",
+          "sourceSha256": "f6512d55e613bcd5a5750eb083ea5ef61ddef4ae6cd305c23187646dfb498987",
+          "translation": "从第 413 页的计算可以看出，对于 $x\\ge0$，有"
+        },
+        {
+          "id": "p427-b9",
+          "source": "$$\\log(1+x)=x-\\frac{x^2}2+\\frac{x^3}3-\\frac{x^4}4+\\cdots+\\frac{(-1)^{n-1}x^n}n+\\frac{(-1)^n}{n+1}t^{n+1}$$",
+          "sourceSha256": "893a159584139e1c5ba011a887eeaf4323cf3c1c99449efcd14236d85cbacf02"
+        },
+        {
+          "id": "p427-b10",
+          "source": "where",
+          "sourceSha256": "b48111c10c65fc119368edafb19f97451759ee90b3f44647368135ca47aa4753",
+          "translation": "其中"
+        },
+        {
+          "id": "p427-b11",
+          "source": "$$\\left|\\frac{(-1)^n}{n+1}t^{n+1}\\right|\\le\\frac{x^{n+1}}{n+1}$$",
+          "sourceSha256": "49350d822fbf8813d851cb8101691736751a1b288d1ce3f60ae8d74e153853f6"
+        },
+        {
+          "id": "p427-b12",
+          "source": "and there is a slightly more complicated estimate when $-1<x<0$ (Problem 16). For this function the remainder term can be made as small as desired by choosing $n$ sufficiently large, provided that $-1<x\\le1$.",
+          "sourceSha256": "64b37e8b795bc51b357f4f335147834c3200167c925c21b56d7f31a776729a92",
+          "translation": "而当 $-1<x<0$ 时，估计稍微复杂一些（习题 16）。对于这个函数，只要 $-1<x\\le1$，就能通过把 $n$ 取得足够大，使余项任意小。"
+        },
+        {
+          "id": "p427-b13",
+          "source": "The behavior of the remainder terms for arctan and $f(x)=\\log(x+1)$ is quite another matter when $|x|>1$. In this case, the estimates",
+          "sourceSha256": "2b5571d48532497083d9a305aeeb569cc0301a41cd9193acba8a5a14eedf93f3",
+          "translation": "当 $|x|>1$ 时，arctan 和 $f(x)=\\log(x+1)$ 的余项表现就完全不同了。这时，估计"
+        },
+        {
+          "id": "p427-b14",
+          "source": "$$\\begin{aligned}\n|R_{2n+1,0}(x)|&<\\frac{|x|^{2n+3}}{2n+3}\\quad\\text{for arctan},\\\\\n|R_{n,0}(x)|&<\\frac{x^{n+1}}{n+1}\\quad(x>0)\\text{ for }f,\n\\end{aligned}$$",
+          "sourceSha256": "8cc5a73dba2b75414054846ce7cbeb70d1544836fb363014744ce1d2532b36a9"
+        },
+        {
+          "id": "p427-b15",
+          "source": "are of no use, because when $|x|>1$ the bounds $x^m/m$ become large as $m$ becomes large. This predicament is unavoidable, and is not just a deficiency of our estimates. It is easy to get estimates in the other direction which show that the remainders actually do remain large. To obtain such an estimate for arctan, note",
+          "sourceSha256": "8193b53a88aed2aeae721aa48c38ddd5ab745be7683298634aa836f99ffd823d",
+          "translation": "没有用，因为当 $|x|>1$ 时，界 $x^m/m$ 随 $m$ 增大而变大。这种困境无法避免，并非仅仅是估计不够好。很容易得到另一个方向的估计，表明余项实际上确实会保持很大。为了对 arctan 得到这样的估计，注意"
+        }
+      ]
+    },
+    {
+      "printed": 428,
+      "sourceSha256": "c93323e990f94e987c515af6b4eb8778924b36af1e04fb17e5d1ad132dde0ebf",
+      "blocks": [
+        {
+          "id": "p428-b1",
+          "source": "that if $t$ is in $[0,x]$ (or in $[x,0]$ if $x<0$), then",
+          "sourceSha256": "7112e0587b0c836c86a6552bf8fc04400beabf51a1b0047a0ca2a296bd3991d5",
+          "translation": "如果 $t$ 位于 $[0,x]$ 中（或当 $x<0$ 时位于 $[x,0]$ 中），那么"
+        },
+        {
+          "id": "p428-b2",
+          "source": "$$1+t^2\\le1+x^2\\le2x^2,\\quad\\text{if }|x|\\ge1,$$",
+          "sourceSha256": "28fc6ccadd2d78399fe4fefd68f2cfc1080cce194aa066dbb8e322c2df8d520e"
+        },
+        {
+          "id": "p428-b3",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p428-b4",
+          "source": "$$\\left|\\int_0^x\\frac{t^{2n+2}}{1+t^2}\\,dt\\right|\\ge\\frac1{2x^2}\\left|\\int_0^xt^{2n+2}\\,dt\\right|=\\frac{|x|^{2n+1}}{4n+6}.$$",
+          "sourceSha256": "f8299a19d4d926b68c929ba0e537fb57f0f2d6d0e9920f8be9d6d6875e5bdc7e"
+        },
+        {
+          "id": "p428-b5",
+          "source": "To get a similar estimate for $\\log(1+x)$, we can use the formula",
+          "sourceSha256": "0b8eb447188937a4d2ecd677a9deae01205a0e6b7be5a86d96b9956a5ad323b7",
+          "translation": "为了对 $\\log(1+x)$ 得到类似的估计，可以利用公式"
+        },
+        {
+          "id": "p428-b6",
+          "source": "$$\\frac1{1+t}=1-t+t^2-\\cdots+(-1)^{n-1}t^{n-1}+\\frac{(-1)^nt^n}{1+t};$$",
+          "sourceSha256": "1bd8851024d6b4aab834d180696597619c38b46502cb242c483a5e95d3f880e4"
+        },
+        {
+          "id": "p428-b7",
+          "source": "to get",
+          "sourceSha256": "6dfced69d78327dd9571f6635eda10e6b30b3a1398af3c2ffa2a5250c39b334a",
+          "translation": "得到"
+        },
+        {
+          "id": "p428-b8",
+          "source": "$$\\begin{aligned}\n\\log(1+x)&=\\int_0^x\\frac1{1+t}\\,dt=x-\\frac{x^2}2+\\frac{x^3}3-\\cdots+(-1)^{n-1}\\frac{x^n}n\\\\\n&\\hspace{4em}+(-1)^n\\int_0^x\\frac{t^n}{1+t}\\,dt.\n\\end{aligned}$$",
+          "sourceSha256": "34856c092c419fdca3641c760f71027675a6db7c6794431a1f87877f800e72e1"
+        },
+        {
+          "id": "p428-b9",
+          "source": "If $x>0$, then for $t$ in $[0,x]$ we have",
+          "sourceSha256": "a18bd5cc10338cac58d5cd2baf72946409e75c9758461a1ad4b5eaf437c1f1e9",
+          "translation": "如果 $x>0$，那么对 $[0,x]$ 中的 $t$，有"
+        },
+        {
+          "id": "p428-b10",
+          "source": "$$1+t\\le1+x\\le2x,\\quad\\text{if }x\\ge1,$$",
+          "sourceSha256": "b8104f9fa422e5109b8c100cf6cb57c59ad416a944ee6154eadc51fde0ec78e5"
+        },
+        {
+          "id": "p428-b11",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p428-b12",
+          "source": "$$\\int_0^x\\frac{t^n}{t+1}\\,dt\\ge\\frac1{2x}\\int_0^xt^n\\,dt=\\frac{x^n}{2n+2}.$$",
+          "sourceSha256": "edaafebc5f43e60db4658772f4f63726ed956ac46b5a36e7668ffc0998d20509"
+        },
+        {
+          "id": "p428-b13",
+          "source": "These estimates show that if $|x|>1$, then the remainder terms become large as $n$ becomes large. In other words, for $|x|>1$, the Taylor polynomials for arctan and $f$ *are of no use whatsoever in computing* $\\arctan x$ *and* $\\log(x+1)$. This is no tragedy, because the values of these functions can be found for any $x$ once they are known for all $x$ with $|x|<1$.",
+          "sourceSha256": "00b2a67e7e6b388a185a2ce9fbd2dbd0377a6e98a4dbe11503508ded292af016",
+          "translation": "这些估计表明，如果 $|x|>1$，余项会随 $n$ 增大而变大。换句话说，对于 $|x|>1$，arctan 和 $f$ 的泰勒多项式，*对计算 $\\arctan x$ 和 $\\log(x+1)$ 完全无用*。这并不是什么灾难，因为一旦知道所有满足 $|x|<1$ 的 $x$ 对应的函数值，就能求出任意 $x$ 对应的值。"
+        },
+        {
+          "id": "p428-b14",
+          "source": "This same situation occurs in a spectacular way for the function",
+          "sourceSha256": "e9266b02a8d56d9201fb50ba93932413e935b0e9d55dc3de6279c4ad9174f7c1",
+          "translation": "同样的情形在下面这个函数中表现得格外鲜明："
+        },
+        {
+          "id": "p428-b15",
+          "source": "$$f(x)=\\begin{cases}e^{-1/x^2},&x\\ne0\\\\0,&x=0.\\end{cases}$$",
+          "sourceSha256": "c1603178b03d5842c1dcf3a869dcbe3b23ab4f0691d1c7eec08f5e10756d3a3f"
+        },
+        {
+          "id": "p428-b16",
+          "source": "We have already seen that $f^{(k)}(0)=0$ for every natural number $k$. This means that the Taylor polynomial $P_{n,0}$ for $f$ is",
+          "sourceSha256": "1b8a7be80fcdc85ffc01350c69242e79802fd6c317d1a2ab0deed9680c2b69b8",
+          "translation": "我们已经看到，对每个自然数 $k$，都有 $f^{(k)}(0)=0$。这意味着 $f$ 的泰勒多项式 $P_{n,0}$ 为"
+        },
+        {
+          "id": "p428-b17",
+          "source": "$$\\begin{aligned}\nP_{n,0}(x)&=f(0)+f'(0)x+\\frac{f''(0)}{2!}x^2+\\cdots+\\frac{f^{(n)}(0)}{n!}x^n\\\\\n&=0.\n\\end{aligned}$$",
+          "sourceSha256": "db8bcf2ae24995d8f952520df0fb5bed2ffe416844c53fa6d582dba82c330131"
+        },
+        {
+          "id": "p428-b18",
+          "source": "In other words, the remainder term $R_{n,0}(x)$ always equals $f(x)$, and the Taylor polynomial is useless for computing $f(x)$, except for $x=0$. Eventually we will be able to offer some explanation for the behavior of this function, which is such a disconcerting illustration of the limitations of Taylor’s Theorem.",
+          "sourceSha256": "e3db49574375b4641da4f522d1fc372fe096ddb1eea132602fd79985b4f77d90",
+          "translation": "换句话说，余项 $R_{n,0}(x)$ 始终等于 $f(x)$；除了 $x=0$ 以外，泰勒多项式对计算 $f(x)$ 毫无用处。这个函数令人不安地展示了泰勒定理的局限，最终我们将能够对它的行为作出一些解释。"
+        },
+        {
+          "id": "p428-b19",
+          "source": "The word “compute” has been used so often in connection with our estimates for the remainder term, that the significance of Taylor’s Theorem might be misconstrued. It is true that Taylor’s Theorem can be used as a computational aid",
+          "sourceSha256": "9fdde63b5d1d1ff5d1888c432b31aa35326a0e0c431e3ae726fbfb0055fd2307",
+          "translation": "在讨论余项估计时，“计算”这个词出现得如此频繁，以至于可能使人误解泰勒定理的意义。泰勒定理确实可以作为计算工具"
+        }
+      ]
+    },
+    {
+      "printed": 429,
+      "sourceSha256": "c0c024a5cf509a69fdcead4cc1d147e3c8040674e99af90b918fd99aeab14ae1",
+      "blocks": [
+        {
+          "id": "p429-b1",
+          "source": "(despite its ignominious failure in the previous example), but it has even more important theoretical consequences. Most of these will be developed in succeeding chapters, but two proofs will illustrate some ways in which Taylor’s Theorem may be used. The first illustration will be particularly impressive to those who have waded through the proof, in Chapter 16, that $\\pi$ is irrational.",
+          "sourceSha256": "5648e1d7be6ff06b2f1e4073fc4c74203f721b39cb1298be28b7dd090d8e212b",
+          "translation": "（尽管在上一个例子中，它败得很不体面），但它还有更重要的理论推论。多数将在后续章节展开，不过这里用两个证明来展示泰勒定理的一些用途。对于那些艰难读完了第 16 章 $\\pi$ 无理性证明的读者，第一个例子会尤其令人印象深刻。"
+        },
+        {
+          "id": "p429-b2",
+          "source": "**THEOREM 5** $e$ is irrational.",
+          "sourceSha256": "e3b5f08802d3fa2f98599609e7b974f9857ad9cacbc018e9121e4f3523690ce6",
+          "translation": "**定理 5** $e$ 是无理数。"
+        },
+        {
+          "id": "p429-b3",
+          "source": "**PROOF** We know that, for any $n$,",
+          "sourceSha256": "79eed7d31e310dd5dbf0bdb12f7678ca4124ea570875fb5d49e6f33df0ba608c",
+          "translation": "**证明** 我们知道，对于任意 $n$，"
+        },
+        {
+          "id": "p429-b4",
+          "source": "$$e=e^1=1+\\frac1{1!}+\\frac1{2!}+\\cdots+\\frac1{n!}+R_n,\\quad\\text{where }0<R_n<\\frac3{(n+1)!}.$$",
+          "sourceSha256": "0d1ff48edf26f65c3faa95546a33ede30d57253fbfc013927f26ddb08c759239"
+        },
+        {
+          "id": "p429-b5",
+          "source": "Suppose that $e$ were rational, say $e=a/b$, where $a$ and $b$ are positive integers. Choose $n>b$ and also $n>3$. Then",
+          "sourceSha256": "083f451e12e6dfb92af903d7ad9fc5e1998c864a70bcfd21c7053913b06be011",
+          "translation": "假设 $e$ 是有理数，比如 $e=a/b$，其中 $a$ 和 $b$ 是正整数。选取 $n>b$，并且 $n>3$。那么"
+        },
+        {
+          "id": "p429-b6",
+          "source": "$$\\frac ab=1+1+\\frac1{2!}+\\cdots+\\frac1{n!}+R_n,$$",
+          "sourceSha256": "ce84c61a7f653066255154757942c6ed7df45d161bab78e60cb08d8fb57a8228"
+        },
+        {
+          "id": "p429-b7",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p429-b8",
+          "source": "$$\\frac{n!a}b=n!+n!+\\frac{n!}{2!}+\\cdots+\\frac{n!}{n!}+n!R_n.$$",
+          "sourceSha256": "3ad143b1f47f012e0bd886a9ad8c851ad14945836fb80a745f572c675fba87bb"
+        },
+        {
+          "id": "p429-b9",
+          "source": "Every term in this equation other than $n!R_n$ is an integer (the left side is an integer because $n>b$). Consequently, $n!R_n$ must be an integer also. But",
+          "sourceSha256": "0c985580e6f12ee6a3a7f312c53d468f6953541d9adee1b40df98bf01dba35d8",
+          "translation": "这个等式中，除了 $n!R_n$ 以外，每一项都是整数（左边是整数，因为 $n>b$）。因此，$n!R_n$ 也必须是整数。但是"
+        },
+        {
+          "id": "p429-b10",
+          "source": "$$0<R_n<\\frac3{(n+1)!},$$",
+          "sourceSha256": "845d8906dd929188f6c3f71154ac7028f8c5122d5795ba56aeb6cc373e47e327"
+        },
+        {
+          "id": "p429-b11",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p429-b12",
+          "source": "$$0<n!R_n<\\frac3{n+1}<\\frac34<1,$$",
+          "sourceSha256": "afa937cf7c58bc1a7998c22ddf5dd5218038a931ef983188fb708b93f85f30e4"
+        },
+        {
+          "id": "p429-b13",
+          "source": "which is impossible for an integer. ▮",
+          "sourceSha256": "f137dc2f17f9d7836197d9d6d6a14a44bc0d766273a4b646592ac0a384d8f4e6",
+          "translation": "这对整数来说不可能。▮"
+        },
+        {
+          "id": "p429-b14",
+          "source": "The second illustration is merely a straightforward demonstration of a fact proved in Chapter 15: If",
+          "sourceSha256": "757b40c13aa962d9316c4288f2ee679acd1554a3808f226241e3e42dfd10e731",
+          "translation": "第二个例子，只是对第 15 章已经证明过的事实给出一个直接证明：如果"
+        },
+        {
+          "id": "p429-b15",
+          "source": "$$\\begin{aligned}f''+f&=0,\\\\f(0)&=0,\\\\f'(0)&=0,\\end{aligned}$$",
+          "sourceSha256": "c219ffead8910bcb54827f8def9cf4c0879f02aa6099c6971287faac3c348baf"
+        },
+        {
+          "id": "p429-b16",
+          "source": "then $f=0$. To prove this, observe first that $f^{(k)}$ exists for every $k$; in fact",
+          "sourceSha256": "4dc82d7ddabf8c3b13c4a5734858f37a2c24329c30729b9448ff8a4d2a2fafca",
+          "translation": "那么 $f=0$。为证明这一点，先注意，对每个 $k$，$f^{(k)}$ 都存在；事实上"
+        },
+        {
+          "id": "p429-b17",
+          "source": "$$\\begin{aligned}\nf^{(3)}&=(f'')'=-f',\\\\\nf^{(4)}&=(f^{(3)})'=(-f')'=-f''=f,\\\\\nf^{(5)}&=(f^{(4)})'=f',\\\\\n&\\text{etc.}\n\\end{aligned}$$",
+          "sourceSha256": "809fe67b14f511bcdaf0fb45ebb0a7a085dca471066f5d09e6bfd5d75ae218cf"
+        }
+      ]
+    },
+    {
+      "printed": 430,
+      "sourceSha256": "05d9dead7f2556ac4a6295537fc3803f3098e07d44f64837098c198fb6d429ca",
+      "blocks": [
+        {
+          "id": "p430-b1",
+          "source": "This shows, not only that all $f^{(k)}$ exist, but also that there are at most 4 different ones: $f$, $f'$, $-f$, $-f'$. Since $f(0)=f'(0)=0$, all $f^{(k)}(0)$ are 0. Now Taylor’s Theorem states, for any $n$, that",
+          "sourceSha256": "45fe4d3720469783fcbb0871ba2bf9a16ac522fcc5ed612f1112f411f811a440",
+          "translation": "这不仅表明所有 $f^{(k)}$ 都存在，还表明它们至多只有 4 个不同的函数：$f$、$f'$、$-f$、$-f'$。由于 $f(0)=f'(0)=0$，所有 $f^{(k)}(0)$ 都为 0。现在，泰勒定理断言，对任意 $n$，"
+        },
+        {
+          "id": "p430-b2",
+          "source": "$$f(x)=\\frac{f^{(n+1)}(t)}{(n+1)!}(x-a)^n$$",
+          "sourceSha256": "8d3bfbec7b7036d7c9f7e49f74a52fd6afec8d197cd6a5067e59f76ac76522b6"
+        },
+        {
+          "id": "p430-b3",
+          "source": "for some $t$ in $[0,x]$. Each function $f^{(n+1)}$ is continuous (since $f^{(n+2)}$ exists), so for any particular $x$ there is a number $M$ such that",
+          "sourceSha256": "92eb5b335be94100e51432cd31d6376e824fb04c44e8f40b112f02eeecc828ee",
+          "translation": "其中 $t$ 是 $[0,x]$ 中某个数。每个函数 $f^{(n+1)}$ 都连续（因为 $f^{(n+2)}$ 存在），所以对任意固定的 $x$，都存在一个数 $M$，使得"
+        },
+        {
+          "id": "p430-b4",
+          "source": "$$|f^{(n+1)}(t)|\\le M\\quad\\text{for }0\\le t\\le x,\\text{ and }\\mathit{all}\\ n$$",
+          "sourceSha256": "2d0d76717f42452d4b43dd928e0c3de49b7acdf6384690d5cd064d313287b8b4"
+        },
+        {
+          "id": "p430-b5",
+          "source": "(we can add the phrase “and all $n$” because there are only four different $f^{(k)}$). Thus",
+          "sourceSha256": "93a8745e05a8f79f26dd53a0013974bb2b03a5fecba9d57d057c1a8c2198472f",
+          "translation": "（可以加上“以及所有 $n$”这几个字，因为不同的 $f^{(k)}$ 只有四个）。因此"
+        },
+        {
+          "id": "p430-b6",
+          "source": "$$|f(x)|\\le\\frac{M|x|^{n+1}}{(n+1)!}.$$",
+          "sourceSha256": "c82d0b3ad1481a8b849266ab482962f53fc0d3a24810159b19df06c109004bde"
+        },
+        {
+          "id": "p430-b7",
+          "source": "Since this is true for every $n$, and since $|x|^n/n!$ can be made as small as desired by choosing $n$ sufficiently large, this shows that $|f(x)|\\le\\varepsilon$ for any $\\varepsilon>0$; consequently, $f(x)=0$.",
+          "sourceSha256": "dd70bc88764bfb7cff66619f6ad2714384e9ecc3a42eed2bbeb32293f7afe5d8",
+          "translation": "由于这对每个 $n$ 都成立，而且只要把 $n$ 取得足够大，就能使 $|x|^n/n!$ 任意小，所以对任意 $\\varepsilon>0$ 都有 $|f(x)|\\le\\varepsilon$；因此，$f(x)=0$。"
+        },
+        {
+          "id": "p430-b8",
+          "source": "The other uses to which Taylor’s Theorem will be put in succeeding chapters are closely related to the computational considerations which have concerned us for much of this chapter. If the remainder term $R_{n,a}(x)$ can be made as small as desired by choosing $n$ sufficiently large, then $f(x)$ can be computed to any degree of accuracy desired by using the polynomials $P_{n,a}(x)$. As we require greater and greater accuracy we must add on more and more terms. If we are willing to add up infinitely many terms (in theory at least!), then we ought to be able to ignore the remainder completely. There should be “infinite sums” like",
+          "sourceSha256": "10830d78c41277d8fc427c2de92b434c22c25eb24c33e561bf6244da8330b586",
+          "translation": "后续章节中泰勒定理的其他用途，与本章大部分篇幅所关注的计算问题密切相关。如果可以通过把 $n$ 取得足够大，让余项 $R_{n,a}(x)$ 任意小，那么利用多项式 $P_{n,a}(x)$，就能以任意要求的精度计算 $f(x)$。要求的精度越高，需要加上的项就越多。如果愿意把无穷多项加起来（至少在理论上！），那么应当能够完全忽略余项。应当存在这样的“无穷和”："
+        },
+        {
+          "id": "p430-b9",
+          "source": "$$\\begin{aligned}\n\\sin x&=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\frac{x^7}{7!}+\\cdots,\\\\\n\\cos x&=1-\\frac{x^2}{2!}+\\frac{x^4}{4!}-\\frac{x^6}{6!}+\\frac{x^8}{8!}-\\cdots,\\\\\ne^x&=1+x+\\frac{x^2}{2!}+\\frac{x^3}{3!}+\\frac{x^4}{4!}+\\cdots,\\\\\n\\arctan x&=x-\\frac{x^3}3+\\frac{x^5}5-\\frac{x^7}7+\\cdots\\quad\\text{if }|x|\\le1,\\\\\n\\log(1+x)&=x-\\frac{x^2}2+\\frac{x^3}3-\\frac{x^4}4+\\cdots\\quad\\text{if }-1<x\\le1.\n\\end{aligned}$$",
+          "sourceSha256": "2a9c3fa29764d4bf5b32024e7cdf743c023b59ec8c46ac7ce53b3cd75e4b254d"
+        },
+        {
+          "id": "p430-b10",
+          "source": "We are almost completely prepared for this step. Only one obstacle remains—we have never even defined an infinite sum. Chapters 22 and 23 contain the necessary definitions.",
+          "sourceSha256": "fa67753b65ab5e40011fd0847edc6f306935f64155ba14f2dcdf5242ab730ec9",
+          "translation": "我们几乎已为这一步做好了全部准备。只剩一个障碍——我们甚至还从未定义过无穷和。第 22 章和第 23 章包含所需的定义。"
+        }
+      ]
+    },
+    {
+      "printed": 431,
+      "sourceSha256": "a5fda3dfbc219ccafafa0019caf815da2e07816b1ce773d80e815da708e9cb45",
+      "blocks": [
+        {
+          "id": "p431-b1",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p431-b2",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p431-b3",
+          "source": "Find the Taylor polynomials (of the indicated degree, and at the indicated point) for the following functions.",
+          "sourceSha256": "3f8e31d4486cd82b42970348fc49fb2a1f63f597f2c71ea26123183cb601b559",
+          "translation": "求下列函数在指定点处、指定次数的泰勒多项式。"
+        },
+        {
+          "id": "p431-b4",
+          "source": "(i) $f(x)=e^{e^x}$; degree 3, at 0.",
+          "sourceSha256": "a09f56bddaa7b5a4e13495a8fbc9f656dafc31d05426b908152476dd243740df",
+          "translation": "(i) $f(x)=e^{e^x}$；在 0 处，3 次。"
+        },
+        {
+          "id": "p431-b5",
+          "source": "(ii) $f(x)=e^{\\sin x}$, degree 3, at 0.",
+          "sourceSha256": "60f44528b4e9909a20909baec0f8c8523e0fa1878621675b733da79def553f4c",
+          "translation": "(ii) $f(x)=e^{\\sin x}$；在 0 处，3 次。"
+        },
+        {
+          "id": "p431-b6",
+          "source": "(iii) sin; degree $2n$, at $\\dfrac\\pi2$.",
+          "sourceSha256": "a190a3a3e8fdd02e6d0de242e1c41afcf54a61f5f7e8c5a7c8f9bc2831d31a7f",
+          "translation": "(iii) sin；在 $\\dfrac\\pi2$ 处，$2n$ 次。"
+        },
+        {
+          "id": "p431-b7",
+          "source": "(iv) cos; degree $2n$, at $\\pi$.",
+          "sourceSha256": "52cc1abc7e973b8b4fa1f4df125279613063fe4d65a6b89fdcd3d09246536d59",
+          "translation": "(iv) cos；在 $\\pi$ 处，$2n$ 次。"
+        },
+        {
+          "id": "p431-b8",
+          "source": "(v) exp; degree $n$, at 1.",
+          "sourceSha256": "6376f4e5602db8107a6a6fce8ffea8fb9b849c76bfec87124ecc46c7d2707401",
+          "translation": "(v) exp；在 1 处，$n$ 次。"
+        },
+        {
+          "id": "p431-b9",
+          "source": "(vi) log; degree $n$, at 2.",
+          "sourceSha256": "330b5f5ae2cacc500fa73adde279c990c7cc9db8a7f488a6a2788cb54f871f45",
+          "translation": "(vi) log；在 2 处，$n$ 次。"
+        },
+        {
+          "id": "p431-b10",
+          "source": "(vii) $f(x)=x^5+x^3+x$; degree 4, at 0.",
+          "sourceSha256": "1f44052570628df476c8b6271e8a00cb2eeae8022ed8b1ec8772d49fe4d254e4",
+          "translation": "(vii) $f(x)=x^5+x^3+x$；在 0 处，4 次。"
+        },
+        {
+          "id": "p431-b11",
+          "source": "(viii) $f(x)=x^5+x^3+x$; degree 4, at 1.",
+          "sourceSha256": "605e88a027cedad80b43397f03b53fb1d67d7dbb7e31ce804900087b2ed064a1",
+          "translation": "(viii) $f(x)=x^5+x^3+x$；在 1 处，4 次。"
+        },
+        {
+          "id": "p431-b12",
+          "source": "(ix) $f(x)=\\dfrac1{1+x^2}$; degree $2n+1$, at 0.",
+          "sourceSha256": "9363a2e79e235816f72245959676af7f9af14ab43ef203b292af3526c5012d73",
+          "translation": "(ix) $f(x)=\\dfrac1{1+x^2}$；在 0 处，$2n+1$ 次。"
+        },
+        {
+          "id": "p431-b13",
+          "source": "(x) $f(x)=\\dfrac1{1+x}$; degree $n$, at 0.",
+          "sourceSha256": "7b6ad8c59b0d5d62a479c0188d92d9d00a697e8852ef9ea343df3596e971ce94",
+          "translation": "(x) $f(x)=\\dfrac1{1+x}$；在 0 处，$n$ 次。"
+        },
+        {
+          "id": "p431-b14",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p431-b15",
+          "source": "Write each of the following polynomials in $x$ as a polynomial in $(x-3)$. (It is only necessary to compute the Taylor polynomial at 3, of the same degree as the original polynomial. Why?)",
+          "sourceSha256": "bef9d3bf6bf4c0b9a3856eaa69afc1e0eb10703b49140c3eb5d47e0795f2a7df",
+          "translation": "把下面每个关于 $x$ 的多项式，写成关于 $(x-3)$ 的多项式。（只需计算它在 3 处、次数与原多项式相同的泰勒多项式。为什么？）"
+        },
+        {
+          "id": "p431-b16",
+          "source": "(i) $x^2-4x-9$.",
+          "sourceSha256": "6c27ae4a7f07416e5e2b630560e6d71af20c020466f71a855c7ce6f6e8891f6a"
+        },
+        {
+          "id": "p431-b17",
+          "source": "(ii) $x^4-12x^3+44x^2+2x+1$.",
+          "sourceSha256": "6a877879518767080dd1142cd85ea8da959d87e8c043a720b73283da7f7f8d27"
+        },
+        {
+          "id": "p431-b18",
+          "source": "(iii) $x^5$.",
+          "sourceSha256": "fadb34bf3ce821e35ffc499196683fab1ca0c7f3db593e7a39a94ab4b99f704b"
+        },
+        {
+          "id": "p431-b19",
+          "source": "(iv) $ax^2+bx+c$.",
+          "sourceSha256": "d56707a53dc5518c11616261117424a79b49436e45e4cbbaa47af4c1a093996e"
+        },
+        {
+          "id": "p431-b20",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p431-b21",
+          "source": "Write down a sum (using $\\sum$ notation) which equals each of the following numbers to within the specified accuracy. To minimize needless computation, consult the tables for $2^n$ and $n!$ on the next page.",
+          "sourceSha256": "8dabe7c08efb28bea9355c80cea00de29ab2035e22d009e8ab3aa962e36f28f4",
+          "translation": "写出一个和式（使用 $\\sum$ 记号），使它在指定精度内等于下面相应的数。为了尽量减少无谓计算，请查阅下一页的 $2^n$ 和 $n!$ 数值表。"
+        },
+        {
+          "id": "p431-b22",
+          "source": "(i) $\\sin1$; error $<10^{-17}$.",
+          "sourceSha256": "fe8e605ab9b5c298902440f2428cda383918197a03671e0f0058729875f0bea0",
+          "translation": "(i) $\\sin1$；误差 $<10^{-17}$。"
+        },
+        {
+          "id": "p431-b23",
+          "source": "(ii) $\\sin2$; error $<10^{-12}$.",
+          "sourceSha256": "aca6be3fdc320a9dd993949c495184a53b961ee0d65665143bb36d13d58d06cf",
+          "translation": "(ii) $\\sin2$；误差 $<10^{-12}$。"
+        },
+        {
+          "id": "p431-b24",
+          "source": "(iii) $\\sin\\frac12$; error $<10^{-20}$.",
+          "sourceSha256": "51f1b7794554842d854e9eff9b3d67035c566460db0071ea0095c50bc25a154d",
+          "translation": "(iii) $\\sin\\frac12$；误差 $<10^{-20}$。"
+        },
+        {
+          "id": "p431-b25",
+          "source": "(iv) $e$; error $<10^{-4}$.",
+          "sourceSha256": "a9d664ce6ac63a471234fa61ab331059fbd3ba9eea286967e8f675b1927a5ec3",
+          "translation": "(iv) $e$；误差 $<10^{-4}$。"
+        },
+        {
+          "id": "p431-b26",
+          "source": "(v) $e^2$; error $<10^{-5}$.",
+          "sourceSha256": "7f1def2c4c56984d1ffe6ce8622874c08bc05398df2a6335a81a26a1b9ef6e38",
+          "translation": "(v) $e^2$；误差 $<10^{-5}$。"
+        }
+      ]
+    },
+    {
+      "printed": 432,
+      "sourceSha256": "fbc613e4d020c23981c776739ebe08e5490b9cb08555ea8f046a501a048e02ff",
+      "blocks": [
+        {
+          "id": "p432-b1",
+          "source": "<table aria-label=\"Powers of two and factorials\">\n<thead><tr><th>$n$</th><th>$2^n$</th><th>$n!$</th></tr></thead>\n<tbody>\n<tr><td>1</td><td>2</td><td>1</td></tr>\n<tr><td>2</td><td>4</td><td>2</td></tr>\n<tr><td>3</td><td>8</td><td>6</td></tr>\n<tr><td>4</td><td>16</td><td>24</td></tr>\n<tr><td>5</td><td>32</td><td>120</td></tr>\n<tr><td>6</td><td>64</td><td>720</td></tr>\n<tr><td>7</td><td>128</td><td>5,040</td></tr>\n<tr><td>8</td><td>256</td><td>40,320</td></tr>\n<tr><td>9</td><td>512</td><td>362,880</td></tr>\n<tr><td>10</td><td>1,024</td><td>3,628,800</td></tr>\n<tr><td>11</td><td>2,048</td><td>39,916,800</td></tr>\n<tr><td>12</td><td>4,096</td><td>479,001,600</td></tr>\n<tr><td>13</td><td>8,192</td><td>6,227,020,800</td></tr>\n<tr><td>14</td><td>16,384</td><td>87,178,291,200</td></tr>\n<tr><td>15</td><td>32,768</td><td>1,307,674,368,000</td></tr>\n<tr><td>16</td><td>65,536</td><td>20,922,789,888,000</td></tr>\n<tr><td>17</td><td>131,072</td><td>355,687,428,096,000</td></tr>\n<tr><td>18</td><td>262,144</td><td>6,402,373,705,728,000</td></tr>\n<tr><td>19</td><td>524,888</td><td>121,645,100,408,832,000</td></tr>\n<tr><td>20</td><td>1,048,576</td><td>2,432,902,008,176,640,000</td></tr>\n</tbody>\n</table>",
+          "sourceSha256": "ad8052cbfae22523621bc6107b6cf7ed5acf9f21dc553967dd5d3353a182ce11"
+        },
+        {
+          "id": "p432-b2",
+          "source": "### \\*4.",
+          "sourceSha256": "a3712dafdc31ab29cac3b70126b5e8ef50ff5fde77ff1963c3d7c8263afac800"
+        },
+        {
+          "id": "p432-b3",
+          "source": "This problem is similar to the previous one, except that the errors demanded are so small that the tables cannot be used. You will have to do a little thinking, and in some cases it may be necessary to consult the proof, in Chapter 16, that $x^n/n!$ can be made small by choosing $n$ large—the proof actually provides a method for finding the appropriate $n$. In the previous problem it was possible to find rather short sums; in fact, it was possible to find the smallest $n$ which makes the estimate of the remainder given by Taylor’s Theorem less than the desired error. But in this problem, finding *any* specific sum is a moral victory (provided you can demonstrate that the sum works).",
+          "sourceSha256": "c919e339318d8321dd3528dae6b33a3eca256bef76997a8ae6815cd8e2552779",
+          "translation": "本题与上一题类似，不过要求的误差小得无法使用数值表。你得稍微动动脑筋；某些情况下，可能需要查阅第 16 章中“把 $n$ 取得足够大，就能使 $x^n/n!$ 很小”的证明——那个证明确实提供了寻找适当 $n$ 的方法。上一题中，可以找到相当短的和式；事实上，可以找到最小的 $n$，使泰勒定理给出的余项估计小于所需误差。但在本题中，能找到*任何*具体的和式，就算精神上的胜利（前提是你能证明它确实可行）。"
+        },
+        {
+          "id": "p432-b4",
+          "source": "(i) $\\sin1$; error $<10^{-(10^{10})}$.",
+          "sourceSha256": "e897b8e295882780dc175f39c570fc8dec3c4e869e0f05c10658834471e3d9ab",
+          "translation": "(i) $\\sin1$；误差 $<10^{-(10^{10})}$。"
+        },
+        {
+          "id": "p432-b5",
+          "source": "(ii) $e$; error $<10^{-1,000}$.",
+          "sourceSha256": "ec11b6f07d81c5caf1b28e5b052f682c05bc76db7a6f61475ce7024a69a07210",
+          "translation": "(ii) $e$；误差 $<10^{-1,000}$。"
+        },
+        {
+          "id": "p432-b6",
+          "source": "(iii) $\\sin10$; error $<10^{-20}$.",
+          "sourceSha256": "eb1b2890e058347e33c8e35e13b0cdf379667227a983a2fd7b876c8922878683",
+          "translation": "(iii) $\\sin10$；误差 $<10^{-20}$。"
+        },
+        {
+          "id": "p432-b7",
+          "source": "(iv) $e^{10}$; error $<10^{-30}$.",
+          "sourceSha256": "5910eea947d06b2202ee41f8f0052c8ab3b39b41f3beff3cc40726fb5f354cf0",
+          "translation": "(iv) $e^{10}$；误差 $<10^{-30}$。"
+        },
+        {
+          "id": "p432-b8",
+          "source": "(v) $\\arctan\\frac1{10}$; error $<10^{-(10^{10})}$.",
+          "sourceSha256": "60021cf86bbd553626f9f9c5371f824ed3ccc479fa231c0c5ded5dddbdd1c035",
+          "translation": "(v) $\\arctan\\frac1{10}$；误差 $<10^{-(10^{10})}$。"
+        },
+        {
+          "id": "p432-b9",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p432-b10",
+          "source": "(a) In Problem 11-41 you showed that the equation $x^2=\\cos x$ has precisely two solutions. Use the third degree Taylor polynomial of cos to show that the solutions are approximately $\\pm\\sqrt{2/3}$, and find bounds on the error. Then use the fifth degree Taylor polynomial to get a better approximation.",
+          "sourceSha256": "0c292b754c41ba2205de33ee63e7f9374fd9c168c1d298dca90eabb00500633f",
+          "translation": "(a) 在习题 11-41 中，你证明了方程 $x^2=\\cos x$ 恰好有两个解。使用 cos 的三次泰勒多项式，证明这两个解近似为 $\\pm\\sqrt{2/3}$，并给出误差界。再使用五次泰勒多项式，得到更好的近似。"
+        },
+        {
+          "id": "p432-b11",
+          "source": "(b) Similarly, estimate the solutions of the equation $2x^2=x\\sin x+\\cos^2x$.",
+          "sourceSha256": "c35e00cdea93f82f9a45ea61ab11d3b8dcca5f65d81153830e2d7506e2745f3a",
+          "translation": "(b) 类似地，估计方程 $2x^2=x\\sin x+\\cos^2x$ 的解。"
+        }
+      ]
+    },
+    {
+      "printed": 433,
+      "sourceSha256": "7c2f673f781d41e9d5ca7c7300e6ee541c8183217c321dd89e6a727d32354661",
+      "blocks": [
+        {
+          "id": "p433-b1",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p433-b2",
+          "source": "(a) Prove, using Problem 15-9, that",
+          "sourceSha256": "5133d62525c16cf732bd5575364eb6203e29dd14e880197598118ea8ffa26cfd",
+          "translation": "(a) 利用习题 15-9，证明"
+        },
+        {
+          "id": "p433-b3",
+          "source": "$$\\begin{aligned}\\frac\\pi4&=\\arctan\\frac12+\\arctan\\frac13,\\\\\\frac\\pi4&=4\\arctan\\frac15-\\arctan\\frac1{239}.\\end{aligned}$$",
+          "sourceSha256": "0ff001d3917ce34a42d1ee475bb864379a169ec83fdc1c60fc6ab2c33e38b111"
+        },
+        {
+          "id": "p433-b4",
+          "source": "(b) Show that $\\pi=3.14159\\ldots$. (Every budding mathematician should verify a few decimals of $\\pi$, but the purpose of this exercise is not to set you off on an immense calculation. If the second expression in part (a) is used, the first 5 decimals for $\\pi$ can be computed with remarkably little work.)",
+          "sourceSha256": "a897b50a27632e9491c65cfd63a90b966105b4b1e53a017bfffc435e19d71624",
+          "translation": "(b) 证明 $\\pi=3.14159\\ldots$。（每个初出茅庐的数学家，都应该验证 $\\pi$ 的几位小数，但本题并不是要让你开始一场庞大的计算。如果使用 (a) 中的第二个表达式，只需少得惊人的工作，就能算出 $\\pi$ 的小数点后五位。）"
+        },
+        {
+          "id": "p433-b5",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p433-b6",
+          "source": "Suppose that $a_i$ and $b_i$ are the coefficients in the Taylor polynomials at $a$ of $f$ and $g$, respectively. In other words, $a_i=f^{(i)}(a)/i!$ and $b_i=g^{(i)}(a)/i!$. Find the coefficients $c_i$ of the Taylor polynomials at $a$ of the following functions, in terms of the $a_i$’s and $b_i$’s.",
+          "sourceSha256": "affabf809b2534da5059eacb654360097521ebcb7bd2f673edebd2779a569130",
+          "translation": "设 $a_i$ 和 $b_i$ 分别是 $f$ 和 $g$ 在 $a$ 处的泰勒多项式的系数。换句话说，$a_i=f^{(i)}(a)/i!$、$b_i=g^{(i)}(a)/i!$。用各个 $a_i$ 和 $b_i$，表示下列函数在 $a$ 处的泰勒多项式的系数 $c_i$。"
+        },
+        {
+          "id": "p433-b7",
+          "source": "(i) $f+g$.",
+          "sourceSha256": "65defa1275beab2d074b7346667cea9a46be3e3ead9a83e80b213acf2319da4a"
+        },
+        {
+          "id": "p433-b8",
+          "source": "(ii) $fg$.",
+          "sourceSha256": "781ce77247d1d8d5242b4974c0b4fbf6703bdad262585ee81e550109dc9856d6"
+        },
+        {
+          "id": "p433-b9",
+          "source": "(iii) $f'$.",
+          "sourceSha256": "1adcd479190c806ca4916db747b601efa35a4aaea9c527409ebe1b48b29dd101"
+        },
+        {
+          "id": "p433-b10",
+          "source": "(iv) $h(x)=\\displaystyle\\int_a^xf(t)\\,dt$.",
+          "sourceSha256": "d773775bb6d71a2d11f310e9690dc88ab0075ce62cc90fea81abfec889f00049"
+        },
+        {
+          "id": "p433-b11",
+          "source": "(v) $k(x)=\\displaystyle\\int_0^xf(t)\\,dt$.",
+          "sourceSha256": "8fd91a9bafda7193e6a21da4403c72b40e5d65b0155d9b53e2362c8c45893a52"
+        },
+        {
+          "id": "p433-b12",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p433-b13",
+          "source": "(a) Prove that the Taylor polynomial of $f(x)=\\sin(x^2)$ of degree $4n+2$ at 0 is",
+          "sourceSha256": "a4f70cf6a3698bd35e6a452c498034ee577000897c96594da4fa07b5b232450c",
+          "translation": "(a) 证明，$f(x)=\\sin(x^2)$ 在 0 处的 $4n+2$ 次泰勒多项式为"
+        },
+        {
+          "id": "p433-b14",
+          "source": "$$x^2-\\frac{x^6}{3!}+\\frac{x^{10}}{5!}-\\cdots+(-1)^n\\frac{x^{4n+2}}{(2n+1)!}.$$",
+          "sourceSha256": "fd1833909def06fd63c6fff0a5b7adeb58138d3eb6b8b9e80ceac66d83515bf9"
+        },
+        {
+          "id": "p433-b15",
+          "source": "Hint: If $P$ is the Taylor polynomial of degree $2n+1$ for sin at 0, then $\\sin x=P(x)+R(x)$, where $\\lim\\limits_{x\\to0}R(x)/x^{2n+1}=0$. What does this imply about $\\lim\\limits_{x\\to0}R(x^2)/x^{4n+2}$?",
+          "sourceSha256": "94cb1df8fad1e78fda499aff50c585200ca401e622f0d233a78a119115f8d582",
+          "translation": "提示：如果 $P$ 是 sin 在 0 处的 $2n+1$ 次泰勒多项式，那么 $\\sin x=P(x)+R(x)$，其中 $\\lim\\limits_{x\\to0}R(x)/x^{2n+1}=0$。这对 $\\lim\\limits_{x\\to0}R(x^2)/x^{4n+2}$ 意味着什么？"
+        },
+        {
+          "id": "p433-b16",
+          "source": "(b) Find $f^{(k)}(0)$ for all $k$.",
+          "sourceSha256": "194e5bd330bb0e30133177547ced92285f758f5bf48bb126a3d0ae58af1be699",
+          "translation": "(b) 对所有 $k$，求 $f^{(k)}(0)$。"
+        },
+        {
+          "id": "p433-b17",
+          "source": "(c) In general, if $f(x)=g(x^m)$, find $f^{(k)}(0)$ in terms of the derivatives of $g$ at 0.",
+          "sourceSha256": "35e54164a5d9955c5ba43b396ca7cb7878267dbcd3094648c330fcc341254394",
+          "translation": "(c) 一般地，如果 $f(x)=g(x^m)$，用 $g$ 在 0 处的各阶导数表示 $f^{(k)}(0)$。"
+        },
+        {
+          "id": "p433-b18",
+          "source": "The ideas in this problem can be extended significantly, in ways that are explored in the next three problems.",
+          "sourceSha256": "80d61146d5311ff2cdd051b8d97540cdb6f44f1fc3734baed99c32cfdb3f6732",
+          "translation": "本题的想法可以作出相当广泛的推广，下面三道题将加以探讨。"
+        },
+        {
+          "id": "p433-b19",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p433-b20",
+          "source": "(a) Problem 7 (i) amounts to the equation",
+          "sourceSha256": "2eb45796f1cdb2ddf7630419f0acd9c52a1a751e101e3e88b7d9de2f9414bbcb",
+          "translation": "(a) 习题 7(i) 等价于等式"
+        },
+        {
+          "id": "p433-b21",
+          "source": "$$P_{n,a,f+g}=P_{n,a,f}+P_{n,a,g}.$$",
+          "sourceSha256": "08d10dd4d1926629d65b34a865ed69784fbfb0042977f5184a97921b2e7c8996"
+        },
+        {
+          "id": "p433-b22",
+          "source": "Give a more direct proof by writing",
+          "sourceSha256": "6724f1f5c2e12722bcd19d59a622f34b5712c8b05c18772dccd1dbd68aac6f9c",
+          "translation": "写成"
+        },
+        {
+          "id": "p433-b23",
+          "source": "$$\\begin{aligned}f(x)&=P_{n,a,f}(x)+R_{n,a,f}(x)\\\\g(x)&=P_{n,a,g}(x)+R_{n,a,g}(x),\\end{aligned}$$",
+          "sourceSha256": "7f47d742430ebeddf1a3bafb0c50886420fdee8fa1be76aeb1b275e43430268a"
+        },
+        {
+          "id": "p433-b24",
+          "source": "and using the obvious fact about $R_{n,a,f}+R_{n,a,g}$.",
+          "sourceSha256": "f794bf934f4939840b49cc5d16c9eb047cee58f735d9629f3e1a0ee86edd0f10",
+          "translation": "并利用关于 $R_{n,a,f}+R_{n,a,g}$ 的显然事实，给出一个更直接的证明。"
+        }
+      ]
+    },
+    {
+      "printed": 434,
+      "sourceSha256": "d328c73ab83b8b52d23562873c1d06b7ca1b8927e078d40b7f4bd55576043e74",
+      "blocks": [
+        {
+          "id": "p434-b1",
+          "source": "(b) Similarly, Problem 7 (ii) could be used to show that",
+          "sourceSha256": "bb0f7e576b93fd63862c1214c26667a36f4d1520a2e1b56e87d386341f76663b",
+          "translation": "(b) 类似地，习题 7(ii) 可以用来证明"
+        },
+        {
+          "id": "p434-b2",
+          "source": "$$P_{n,a,fg}=[P_{n,a,f}\\cdot P_{n,a,g}]_n,$$",
+          "sourceSha256": "09cd9b8ffa2356b4e4128db400b7b8287bf100f6f0b6e45946716f5e8bed810a"
+        },
+        {
+          "id": "p434-b3",
+          "source": "where $[P]_n$ denotes the **truncation** of $P$ to degree $n$, the sum of all terms of $P$ of degree $\\le n$ [with $P$ written as a polynomial in $x-a$]. Again, give a more direct proof, using obvious facts about products involving terms of the form $R_n$.",
+          "sourceSha256": "7595c2c50a82edef2d06259f6dd15d4327d36ce51101c54edf1f1baf455a3bdf",
+          "translation": "其中 $[P]_n$ 表示把 $P$ **截断**到 $n$ 次，即 $P$ 中所有次数 $\\le n$ 的项之和［这里将 $P$ 写成关于 $x-a$ 的多项式］。再次利用含有形如 $R_n$ 的项的乘积的显然事实，给出一个更直接的证明。"
+        },
+        {
+          "id": "p434-b4",
+          "source": "(c) Prove that if $p$ and $q$ are polynomials in $x-a$ and $\\lim\\limits_{x\\to0}R(x)/(x-a)^n=0$, then",
+          "sourceSha256": "d219a527d7568bb8b0664613412017fa3f7de09639fd14d5338a3e6cef45cca1",
+          "translation": "(c) 证明：如果 $p$ 和 $q$ 是关于 $x-a$ 的多项式，且 $\\lim\\limits_{x\\to0}R(x)/(x-a)^n=0$，那么"
+        },
+        {
+          "id": "p434-b5",
+          "source": "$$p(q(x)+R(x))=p(q(x))+\\bar R(x)$$",
+          "sourceSha256": "802275cdca82d0e9efd1e437b6d774cc95271cd96ee20ff93915bb4559a43b36"
+        },
+        {
+          "id": "p434-b6",
+          "source": "where",
+          "sourceSha256": "b48111c10c65fc119368edafb19f97451759ee90b3f44647368135ca47aa4753",
+          "translation": "其中"
+        },
+        {
+          "id": "p434-b7",
+          "source": "$$\\lim_{x\\to0}\\bar R(x)/(x-a)^n=0.$$",
+          "sourceSha256": "eecfdbac30d695de0fa78e83dc89ffdcdb3c9aa63e74229f6edfc6ecdf4cc514"
+        },
+        {
+          "id": "p434-b8",
+          "source": "Also note that if $p$ is a polynomial in $x-a$ having only terms of degree $>n$, and $q$ is a polynomial in $x-a$ whose constant term is 0, then all terms of $p(q(x-a))$ are of degree $>n$.",
+          "sourceSha256": "ad4cbf107f851fc7b2f0962b3b143d2fc88aa6eee4630fc12e144b4e29f55b5d",
+          "translation": "还要注意：如果 $p$ 是只含次数 $>n$ 的项的关于 $x-a$ 的多项式，而 $q$ 是常数项为 0 的关于 $x-a$ 的多项式，那么 $p(q(x-a))$ 的所有项的次数都 $>n$。"
+        },
+        {
+          "id": "p434-b9",
+          "source": "(d) If $a=0$ and $b=g(a)=0$, then",
+          "sourceSha256": "a717752cf419978c424c17f87796ec4465580a2fee7f5afa38c0a0919f534910",
+          "translation": "(d) 如果 $a=0$ 且 $b=g(a)=0$，那么"
+        },
+        {
+          "id": "p434-b10",
+          "source": "$$P_{n,a,f\\circ g}=[P_{n,b,f}\\circ P_{n,a,g}]_n.$$",
+          "sourceSha256": "1b9c85f982ecafbda17ee2f8932607f55a06cd08090735af1f36a20af51d6d2f"
+        },
+        {
+          "id": "p434-b11",
+          "source": "(Problem 8 is a special case.)",
+          "sourceSha256": "4ce303b8c83c554fba73491ec378085644118f5b0213e27fbfe6240ef8b836a6",
+          "translation": "（习题 8 是一个特例。）"
+        },
+        {
+          "id": "p434-b12",
+          "source": "(e) The same result actually holds for all $a$ and any value of $g(a)$. Hint: Consider $F(x)=f(x+g(a))$, $G(x)=g(x+a)$ and $H(x)=G(x)-g(a)$.",
+          "sourceSha256": "03ce33c81eb563dde60a59b28903769b2db14a491438adb1d74ef80492b53f12",
+          "translation": "(e) 同一个结果实际上对所有 $a$ 以及 $g(a)$ 的任意值都成立。提示：考虑 $F(x)=f(x+g(a))$、$G(x)=g(x+a)$ 和 $H(x)=G(x)-g(a)$。"
+        },
+        {
+          "id": "p434-b13",
+          "source": "(f) If $g(a)=0$, then",
+          "sourceSha256": "e81a2bfa122afb00f94966097ff457e67fffeb2bda3d60f9976e0a2cef2afd24",
+          "translation": "(f) 如果 $g(a)=0$，那么"
+        },
+        {
+          "id": "p434-b14",
+          "source": "$$P_{n,a,\\frac1{1-g}}=[1+P_{n,a,g}+(P_{n,a,g})^2+\\cdots+(P_{n,a,g})^n]_n.$$",
+          "sourceSha256": "403fa67e46a747cdffa9e72c631245bdca3853328ce1c0ef028a0825ce0e7c21"
+        },
+        {
+          "id": "p434-b15",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p434-b16",
+          "source": "For the following applications of Problem 9, we assume $a=0$ for simplicity, and just write $P_{n,f}$ instead of $P_{n,a,f}$.",
+          "sourceSha256": "f83dfee2e219aa0a0e61629a4412c31492138440e0adca5bd70a423389f582fa",
+          "translation": "在下面这些习题 9 的应用中，为简单起见，假设 $a=0$，并将 $P_{n,a,f}$ 简写为 $P_{n,f}$。"
+        },
+        {
+          "id": "p434-b17",
+          "source": "(a) For $f(x)=e^x$ and $g(x)=\\sin x$, find $P_{5,f+g}(x)$.",
+          "sourceSha256": "fdd4ee12791c189379c98552d884edcb38dace80bbc997b4a0b7f672257fd1c1",
+          "translation": "(a) 对于 $f(x)=e^x$ 和 $g(x)=\\sin x$，求 $P_{5,f+g}(x)$。"
+        },
+        {
+          "id": "p434-b18",
+          "source": "(b) For the same $f$ and $g$, find $P_{5,fg}$.",
+          "sourceSha256": "86d750233c7546b9c654dad733f62bd06b55a94ffab4a4c4f40faad4c100a2ec",
+          "translation": "(b) 对于同样的 $f$ 和 $g$，求 $P_{5,fg}$。"
+        },
+        {
+          "id": "p434-b19",
+          "source": "(c) Find $P_{5,\\tan}(x)$. Hint: First use Problem 9 (f) and the value of $P_{5,\\cos}(x)$ to find $P_{5,1/\\cos}(x)$. (Answer: $x+\\frac{x^3}3+\\frac{2x^5}{15}$)",
+          "sourceSha256": "355a35b62382a2c43485cd578fd4c0bdb023c36e4c571b33337928b02772d51a",
+          "translation": "(c) 求 $P_{5,\\tan}(x)$。提示：先利用习题 9(f) 和 $P_{5,\\cos}(x)$ 的值，求 $P_{5,1/\\cos}(x)$。（答案：$x+\\frac{x^3}3+\\frac{2x^5}{15}$）"
+        },
+        {
+          "id": "p434-b20",
+          "source": "(d) Find $P_{4,f}$ for $f(x)=e^{2x}\\cos x$. (Answer: $1+2x+\\frac32x^2+\\frac13x^3-\\frac7{24}x^4$)",
+          "sourceSha256": "debbd3d57c949c72c3c6d9ff1c6a7b1f01340e5cc03f1d25e0ab56b0d2f4cfa8",
+          "translation": "(d) 对于 $f(x)=e^{2x}\\cos x$，求 $P_{4,f}$。（答案：$1+2x+\\frac32x^2+\\frac13x^3-\\frac7{24}x^4$）"
+        },
+        {
+          "id": "p434-b21",
+          "source": "(e) Find $P_{5,f}$ for $f(x)=\\sin x/\\cos2x$. (Answer: $x+\\frac{11}6x^3+\\frac{361}{120}x^5$)",
+          "sourceSha256": "06a7e0de40322a0568bd2a085281e97273d26d2533acaa4781cf3b6f36f35d52",
+          "translation": "(e) 对于 $f(x)=\\sin x/\\cos2x$，求 $P_{5,f}$。（答案：$x+\\frac{11}6x^3+\\frac{361}{120}x^5$）"
+        },
+        {
+          "id": "p434-b22",
+          "source": "(f) Find $P_{6,f}$ for $f(x)=x^3/[(1+x^2)e^x]$. (Answer: $x^3-x^4-\\frac12x^5+\\frac56x^6$)",
+          "sourceSha256": "2853b356a172678cfee3cf5de88a052da0e95af151fbbfb36b887c721397b489",
+          "translation": "(f) 对于 $f(x)=x^3/[(1+x^2)e^x]$，求 $P_{6,f}$。（答案：$x^3-x^4-\\frac12x^5+\\frac56x^6$）"
+        },
+        {
+          "id": "p434-b23",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p434-b24",
+          "source": "Calculations of this sort may be used to evaluate limits that we might otherwise try to find through laborious use of l’Hôpital’s Rule. Find the following:",
+          "sourceSha256": "3a17cff1c2d69cdab88705e15fe87979ede45e17004f466666fb1560661a99a4",
+          "translation": "这类计算可以用来求极限，否则我们可能会辛苦地使用洛必达法则。求下面的极限："
+        },
+        {
+          "id": "p434-b25",
+          "source": "(a) $\\displaystyle\\lim_{x\\to0}\\frac{e^x-1-x-\\frac12x^2}{x-\\sin x}=\\lim_{x\\to0}\\frac{N(x)}{D(x)}$.",
+          "sourceSha256": "b184ccf888b706cd7ffb05a1034b3de4aafc716d0d168c2d66f6e3c060b679c5"
+        },
+        {
+          "id": "p434-b26",
+          "source": "Hint: First find $P_{3,0,N}(x)$ and $P_{3,0,D}(x)$ for the numerator and denominator $N(x)$ and $D(x)$.",
+          "sourceSha256": "c9f1a6aa675ba05539eca164500ea691c456d60469a25ea929ed572cb85e78ec",
+          "translation": "提示：先分别对分子 $N(x)$ 和分母 $D(x)$ 求 $P_{3,0,N}(x)$ 与 $P_{3,0,D}(x)$。"
+        }
+      ]
+    },
+    {
+      "printed": 435,
+      "sourceSha256": "1d578396836984f4d2961bf781e6a423f1a776cd879c384ada03918068a42cde",
+      "blocks": [
+        {
+          "id": "p435-b1",
+          "source": "(b) $\\displaystyle\\lim_{x\\to0}\\frac{\\dfrac{e^x}{1+x}-1-\\frac12x^2}{x-\\sin x}$.",
+          "sourceSha256": "cc1a8052f1b764b7da01e4b088e0b9603bcd1cbe633ffe3aff1154d818e99e01"
+        },
+        {
+          "id": "p435-b2",
+          "source": "Hint: For the term $e^x/(1+x)$, first write $1/(1+x)=1-x+x^2-x^3+\\cdots$.",
+          "sourceSha256": "2fc90c0bf4c2fea7defe71c0dd9d1bbeb0cb7789e3cb7340bee45d67b3de97a3",
+          "translation": "提示：对于 $e^x/(1+x)$ 这一项，先写出 $1/(1+x)=1-x+x^2-x^3+\\cdots$。"
+        },
+        {
+          "id": "p435-b3",
+          "source": "(c) $\\displaystyle\\lim_{x\\to0}\\left(\\frac1{\\sin^2x}-\\frac1{x^2}\\right)$.",
+          "sourceSha256": "1d7bf44296cd21dbc4f0886a4b283ec339df8b46fb2355d51c4c8335e87a7840"
+        },
+        {
+          "id": "p435-b4",
+          "source": "(d) $\\displaystyle\\lim_{x\\to0}\\frac{1-\\cos(x^2)}{x^2\\sin^2x}$.",
+          "sourceSha256": "7444530fcde802c9a6d1a51ab8c7fea019d4d360fa59173ebcc5a1a8bfeb1576"
+        },
+        {
+          "id": "p435-b5",
+          "source": "(e) $\\displaystyle\\lim_{x\\to0}\\frac1{\\sin^2x}-\\frac1{\\sin(x^2)}$.",
+          "sourceSha256": "7a08f513badf150b8048b6170c37aae6fba711dd811a16a5dafb2f3239b54661"
+        },
+        {
+          "id": "p435-b6",
+          "source": "(f) $\\displaystyle\\lim_{x\\to0}\\frac{(\\sin x)(\\arctan x)-x^2}{1-\\cos(x^2)}$.",
+          "sourceSha256": "a7443ba461ed0f082b854025a8d572902df0471b69e0c9af41f2d09aa060201d"
+        },
+        {
+          "id": "p435-b7",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p435-b8",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "令"
+        },
+        {
+          "id": "p435-b9",
+          "source": "$$f(x)=\\begin{cases}\\dfrac{\\sin x}x,&x\\ne0\\\\1,&x=0.\\end{cases}$$",
+          "sourceSha256": "3bcfb77743ab1a85e6307dd876a19f20c3c95471fffa8289b263ed32192c27f7"
+        },
+        {
+          "id": "p435-b10",
+          "source": "Starting with the Taylor polynomial of degree $2n+1$ for $\\sin x$, together with the estimate for the remainder term derived on page 424, show that",
+          "sourceSha256": "77c22922928538478d157a37af02026b71a929e3a5458b3f9381c30fce502f89",
+          "translation": "从 $\\sin x$ 的 $2n+1$ 次泰勒多项式出发，结合第 424 页得到的余项估计，证明"
+        },
+        {
+          "id": "p435-b11",
+          "source": "$$f(x)=\\left(1-\\frac{x^2}{3!}+\\frac{x^4}{5!}+\\cdots+(-1)^n\\frac{x^{2n}}{(2n+1)!}\\right)+R_{2n,0,f}(x)$$",
+          "sourceSha256": "e1ba7a85d33eec29feb31929d10d59d4982c3c3681df7cbfcb96573c62da2230"
+        },
+        {
+          "id": "p435-b12",
+          "source": "where",
+          "sourceSha256": "b48111c10c65fc119368edafb19f97451759ee90b3f44647368135ca47aa4753",
+          "translation": "其中"
+        },
+        {
+          "id": "p435-b13",
+          "source": "$$|R_{2n,0,f}(x)|\\le\\frac{|x|^{2n+1}}{(2n+2)!},$$",
+          "sourceSha256": "1c1a50e16501683034c3f0c2bd147c09e7b23e832369e367231e8180516acdf1"
+        },
+        {
+          "id": "p435-b14",
+          "source": "and use this to conclude that",
+          "sourceSha256": "657a3a2cffe6e9ee1291bf16c2b90ad4f90c04645903627792831fe70894c92e",
+          "translation": "并利用这一结果得出"
+        },
+        {
+          "id": "p435-b15",
+          "source": "$$\\int_0^1f\\approx\\int_0^1\\left(1-\\frac{x^2}{3!}+\\frac{x^4}{5!}\\right)\\,dx=\\frac{1703}{1800}\\approx.946$$",
+          "sourceSha256": "a700f629b7af3c0ed6efb38704f6b736e87af21fb95c2ccdc0872d53f2309a2b"
+        },
+        {
+          "id": "p435-b16",
+          "source": "with an error of less than $10^{-3}$.",
+          "sourceSha256": "01c81f17f895a83312a6bbe2947dbf26a5541f7fa45b891599c7ec2c055ac8b3",
+          "translation": "其误差小于 $10^{-3}$。"
+        },
+        {
+          "id": "p435-b17",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p435-b18",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "令"
+        },
+        {
+          "id": "p435-b19",
+          "source": "$$f(x)=\\begin{cases}\\dfrac{e^x-1}x,&x\\ne0\\\\1,&x=0.\\end{cases}$$",
+          "sourceSha256": "7072c946dd9c07e3b8574def0732b0ed90698ed0568e7f07fa67586227109c82"
+        },
+        {
+          "id": "p435-b20",
+          "source": "(a) Find the Taylor polynomial of degree $n$ for $f$ at 0, compute $f^{(k)}(0)$, and give an estimate for the remainder term $R_{n,0,f}$.",
+          "sourceSha256": "43d8a89cf6e70814d002d6423f1619f8bc5e6403d04dced7e96998000f8dd0a9",
+          "translation": "(a) 求 $f$ 在 0 处的 $n$ 次泰勒多项式，计算 $f^{(k)}(0)$，并给出余项 $R_{n,0,f}$ 的一个估计。"
+        },
+        {
+          "id": "p435-b21",
+          "source": "(b) Compute $\\displaystyle\\int_0^1f$ with an error of less than $10^{-4}$.",
+          "sourceSha256": "12e554771d0539c580e30f4209509b1bc09f1f043694eca669857674f42620cc",
+          "translation": "(b) 计算 $\\displaystyle\\int_0^1f$，使误差小于 $10^{-4}$。"
+        },
+        {
+          "id": "p435-b22",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p435-b23",
+          "source": "Estimate $\\displaystyle\\int_0^{0.1}\\exp(x^2)\\,dx$ with an error of less than $10^{-5}$.",
+          "sourceSha256": "7baf9a90ff797ff6d9e0924cfc75398bba438c815a5f4930dfbb07514fc35a74",
+          "translation": "估计 $\\displaystyle\\int_0^{0.1}\\exp(x^2)\\,dx$，使误差小于 $10^{-5}$。"
+        }
+      ]
+    },
+    {
+      "printed": 436,
+      "sourceSha256": "0162622e53feed5ee3303efda0e528df98cdd2a446687fe27837dafc37c0c0ba",
+      "blocks": [
+        {
+          "id": "p436-b1",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p436-b2",
+          "source": "Prove that if $x\\le0$, then the remainder term $R_{n,0}$ for $e^x$ satisfies",
+          "sourceSha256": "72d52381c9692531182c14c59e06c5b4205420f18a64bc118610aa666133e05f",
+          "translation": "证明：如果 $x\\le0$，那么 $e^x$ 的余项 $R_{n,0}$ 满足"
+        },
+        {
+          "id": "p436-b3",
+          "source": "$$|R_{n,0}|\\le\\frac{|x|^{n+1}}{(n+1)!}.$$",
+          "sourceSha256": "02de8b1ac723d8f89b57c6ee88373773f45aa06493d67a44022f84b709e34c4e"
+        },
+        {
+          "id": "p436-b4",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p436-b5",
+          "source": "Prove that if $-1<x\\le0$, then the remainder term $R_{n,0}$ for $\\log(1+x)$ satisfies",
+          "sourceSha256": "7ff816fa2662c813159c507ca4274cdfdf06776afe90f6f971126583dfb6ea6b",
+          "translation": "证明：如果 $-1<x\\le0$，那么 $\\log(1+x)$ 的余项 $R_{n,0}$ 满足"
+        },
+        {
+          "id": "p436-b6",
+          "source": "$$|R_{n,0}|\\le\\frac{|x|^{n+1}}{(1+x)(n+1)}.$$",
+          "sourceSha256": "7d42d27789af8ffd35ce5ba3769ab12783ee71db8ea134cd3f0ed69cd07b318a"
+        },
+        {
+          "id": "p436-b7",
+          "source": "### \\*17.",
+          "sourceSha256": "73a87ca782297c86bcc31aae8078c33ff3d47b9a248bb5a447ed5cbbf5874320"
+        },
+        {
+          "id": "p436-b8",
+          "source": "(a) Show that if $|g'(x)|\\le M|x-a|^n$ for $|x-a|<\\delta$, then $|g(x)-g(a)|\\le M|x-a|^{n+1}/(n+1)$ for $|x-a|<\\delta$.",
+          "sourceSha256": "a3fc00dca83f1cb7317592fdf7078e2ea115ad357c6924a48db9f8c5af1d6179",
+          "translation": "(a) 证明：如果当 $|x-a|<\\delta$ 时有 $|g'(x)|\\le M|x-a|^n$，那么当 $|x-a|<\\delta$ 时有 $|g(x)-g(a)|\\le M|x-a|^{n+1}/(n+1)$。"
+        },
+        {
+          "id": "p436-b9",
+          "source": "(b) Use part (a) to show that if $\\lim\\limits_{x\\to a}g'(x)/(x-a)^n=0$, then",
+          "sourceSha256": "d3fc996dec93604cd4e7d45117a296981b176549629ad5f1fc671914b1578368",
+          "translation": "(b) 利用 (a) 证明：如果 $\\lim\\limits_{x\\to a}g'(x)/(x-a)^n=0$，那么"
+        },
+        {
+          "id": "p436-b10",
+          "source": "$$\\lim_{x\\to a}\\frac{g(x)-g(a)}{(x-a)^{n+1}}=0.$$",
+          "sourceSha256": "aeced4665edcc6b8b0ca53b6c8f066ea62fea8b48e31ae225dfceb4ca47d8b79"
+        },
+        {
+          "id": "p436-b11",
+          "source": "(c) Show that if $g(x)=f(x)-P_{n,a,f}(x)$, then $g'(x)=f'(x)-P_{n-1,a,f'}(x)$.",
+          "sourceSha256": "e639cf4a62e1dee12569c9e8f32140d2de4ac3bbbd1ab7427cf3f4714be7dd4e",
+          "translation": "(c) 证明：如果 $g(x)=f(x)-P_{n,a,f}(x)$，那么 $g'(x)=f'(x)-P_{n-1,a,f'}(x)$。"
+        },
+        {
+          "id": "p436-b12",
+          "source": "(d) Give an inductive proof of Theorem 1, without using l’Hôpital’s Rule.",
+          "sourceSha256": "40f419b476d50c0c0fa584ee3ef96018d9aad9003c539f69c793f5963a477693",
+          "translation": "(d) 不使用洛必达法则，给出定理 1 的一个归纳证明。"
+        },
+        {
+          "id": "p436-b13",
+          "source": "### 18.",
+          "sourceSha256": "ea685e12aa5506177e8354425cc5ef641b0955faf096533840903cb00fca83d4"
+        },
+        {
+          "id": "p436-b14",
+          "source": "Deduce Theorem 1 as a corollary of Taylor’s Theorem, with any form of the remainder. (The catch is that it will be necessary to assume one more derivative than in the hypotheses for Theorem 1.)",
+          "sourceSha256": "0509a0c24fd7ee31c0c61db9674bde8f7b6e213ef8a92fefc709fbe0aa609723",
+          "translation": "将定理 1 作为泰勒定理的推论推导出来，余项可以采用任意一种形式。（这里的麻烦在于：必须比定理 1 的假设多要求一阶导数存在。）"
+        },
+        {
+          "id": "p436-b15",
+          "source": "### 19.",
+          "sourceSha256": "8b09a7bace93d37dfe88ea4c6c08a187efc4b2a287262ba51ada7accf660adbf"
+        },
+        {
+          "id": "p436-b16",
+          "source": "Lagrange’s method for proving Taylor’s Theorem used the following device. We consider a fixed number $x$ and write",
+          "sourceSha256": "c4138e54ff7939ca87fcec3eb02946217a202610906a658115b06753f1bbe837",
+          "translation": "拉格朗日证明泰勒定理的方法使用了下面的技巧。我们考虑一个固定的数 $x$，并写成"
+        },
+        {
+          "id": "p436-b17",
+          "source": "$$f(x)=f(t)+f'(t)(x-t)+\\cdots+\\frac{f^{(n)}(t)}{n!}(x-t)^n+S(t)\\tag{*}$$",
+          "sourceSha256": "9e7b972a692815509ff7084c63d0f59ab69be92e301606ea5b8d8e0cb02c6927"
+        },
+        {
+          "id": "p436-b18",
+          "source": "for $S(t)=R_{n,t}(x)$. The notation is a tip-off that we are going to consider the right side as giving the value of some function for a given $t$, and then write down the fact the derivative of this function is 0, since it equals the constant function whose value is always $f(x)$. To make sure you understand the roles of $x$ and $t$, check that if",
+          "sourceSha256": "b1d3c8bcc55b524cdcab4a7ad6185ab12af6b2cda6ac9a4a0e4a10a98eaeb58c",
+          "translation": "其中 $S(t)=R_{n,t}(x)$。这个记号已经透露出我们的意图：把右边看作某个函数在给定的 $t$ 处的值，然后写出这个函数的导数为 0 这一事实，因为它等于那个取值恒为 $f(x)$ 的常函数。为了确保你理解了 $x$ 和 $t$ 各自的角色，请验证：如果"
+        },
+        {
+          "id": "p436-b19",
+          "source": "$$g(t)=\\frac{f^{(k)}(t)}{k!}(x-t)^k,$$",
+          "sourceSha256": "a235d6da0e01c045f6119eeb024a1b4225fdcbbd0fe6b780d2a37472e07fdd57"
+        },
+        {
+          "id": "p436-b20",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p436-b21",
+          "source": "$$\\begin{aligned}\ng'(t)&=\\frac{f^{(k)}(t)}{k!}k(x-t)^{k-1}(-1)+\\frac{f^{(k+1)}(t)}{k!}(x-t)^k\\\\\n&=-\\frac{f^{(k)}(t)}{(k-1)!}(x-t)^{k-1}+\\frac{f^{(k+1)}(t)}{k!}(x-t)^k.\n\\end{aligned}$$",
+          "sourceSha256": "331a4bcd78258aa336eacc1d07c5ee40932924882c2e1aa9b584724e466d0909"
+        }
+      ]
+    },
+    {
+      "printed": 437,
+      "sourceSha256": "58614732c25cf9e08babd1fe347d871552a343b7b1707d9845d0d52e3fdd81d1",
+      "blocks": [
+        {
+          "id": "p437-b1",
+          "source": "(a) Show that",
+          "sourceSha256": "109a77a00a2500c61b680da4498bb81fe08b0c64628b598c495b502e4d87bb24",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p437-b2",
+          "source": "$$\\begin{aligned}\n0={}&f'(t)+\\left[-f'(t)+\\frac{f''(t)}{1!}(x-t)\\right]\\\\\n&+\\left[\\frac{-f''(t)}{1!}(x-t)+\\frac{f^{(3)}(t)}{2!}(x-t)^2\\right]\\\\\n&\\qquad+\\cdots\\\\\n&+\\left[\\frac{-f^{(n)}(t)}{(n-1)!}(x-t)^{n-1}+\\frac{f^{(n+1)}(t)}{n!}(x-t)^n\\right]\\\\\n&\\qquad+S'(t),\n\\end{aligned}$$",
+          "sourceSha256": "ece9395c94d8e139ef6f6b625db40f036dae5059a3a8534bc038b575a5661ba5"
+        },
+        {
+          "id": "p437-b3",
+          "source": "and notice that everything collapses to",
+          "sourceSha256": "c520f013efe393cc15c4c5f103cfb72d188ccaf047d5f2ce9756da91267840db",
+          "translation": "并注意到各项消去后，整个式子归结为"
+        },
+        {
+          "id": "p437-b4",
+          "source": "$$S'(t)=-\\frac{f^{(n+1)}(t)}{n!}(x-t)^n.$$",
+          "sourceSha256": "cf21c3403d49ae49317a30fbe12f4367f127af6f226b4b91ea2aac54dd8f178c"
+        },
+        {
+          "id": "p437-b5",
+          "source": "Noting that",
+          "sourceSha256": "6c482f7c28ed12f1933a0c24819cdab0170e2c09e01c0e698cf0f99798c1b04b",
+          "translation": "注意到"
+        },
+        {
+          "id": "p437-b6",
+          "source": "$$\\begin{aligned}S(x)&=R_{n,x}(x)=0,\\\\S(a)&=R_{n,a}(x),\\end{aligned}$$",
+          "sourceSha256": "e4b9c016165c4f12acd625e97fdeba992132b1597fcd8057cd8772a29907fc17"
+        },
+        {
+          "id": "p437-b7",
+          "source": "apply the Cauchy Mean Value Theorem to the functions $S$ and $h(t)=(x-t)^{n+1}$ on $[a,x]$ to obtain the Lagrange form of the remainder (Lagrange actually handled this part of the argument differently).",
+          "sourceSha256": "22958fc5d2f11f31f8073c798e190870f5cd3b97ea4c1b54032e201bba4ad4d9",
+          "translation": "对函数 $S$ 和 $h(t)=(x-t)^{n+1}$ 在 $[a,x]$ 上应用柯西中值定理，即可得到拉格朗日形式的余项（拉格朗日本人对论证的这一部分采用了不同的处理方式）。"
+        },
+        {
+          "id": "p437-b8",
+          "source": "(b) Similarly, apply the regular Mean Value Theorem to $S$ to obtain the strange hybrid formula",
+          "sourceSha256": "06d48fadd7aedf102779d06930be21bae9540e17306d4f888badc2a16c65b8ec",
+          "translation": "(b) 类似地，对 $S$ 应用通常的中值定理，得到下面这个奇特的混合公式"
+        },
+        {
+          "id": "p437-b9",
+          "source": "$$R_{n,a}(x)=\\frac{f^{(n+1)}(t)}{n!}(x-t)^n(x-a).$$",
+          "sourceSha256": "7730a163dd19e41c85375cd6b4a888dd2ba9949f7089d27ab923e33c45ebd1b7"
+        },
+        {
+          "id": "p437-b10",
+          "source": "This is called the **Cauchy form of the remainder**.",
+          "sourceSha256": "6114dfe1cfccb8401ba1e309a9aa2796e3e5ea9228dc51dd01bf928e7d486afd",
+          "translation": "这称为**柯西形式的余项**。"
+        },
+        {
+          "id": "p437-b11",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p437-b12",
+          "source": "Deduce the Cauchy and Lagrange forms of the remainder from the integral form on page 423, using Problem 13-23. There will be the same catch as in Problem 18.",
+          "sourceSha256": "14175e693ec3db27fa71fae368da96268e0ffa0b6454fb6b29c65b0da8979755",
+          "translation": "利用习题 13-23，从第 423 页余项的积分形式推导出柯西形式和拉格朗日形式。这里会遇到与习题 18 相同的麻烦。"
+        },
+        {
+          "id": "p437-b13",
+          "source": "I know of only one situation where the Cauchy form of the remainder is used. The next problem is preparation for that eventuality.",
+          "sourceSha256": "a077ecd1e08dbb8ce1eb11dece82341af0d4129104afd6f3adad6d15f417a2ad",
+          "translation": "据我所知，只有一种情形会用到柯西形式的余项。下一道题就是为这种情形作准备。"
+        },
+        {
+          "id": "p437-b14",
+          "source": "### 21.",
+          "sourceSha256": "d908d228d4604b1dd2f9729637ede6c5eb59c7f91a5ba1fe1a64623fe814b30d"
+        },
+        {
+          "id": "p437-b15",
+          "source": "For every number $\\alpha$, and every natural number $n$, we define the “binomial coefficient”",
+          "sourceSha256": "c92a80f30777c7ef131875cd6f3a23a7a348f2223f6040ae87690f064f9bbcb8",
+          "translation": "对于每个数 $\\alpha$ 和每个自然数 $n$，我们定义“二项式系数”为"
+        },
+        {
+          "id": "p437-b16",
+          "source": "$$\\binom\\alpha n=\\frac{\\alpha(\\alpha-1)\\cdots(\\alpha-n+1)}{n!},$$",
+          "sourceSha256": "ddc4324d8679d37be89c33eb75988a417f83d6859d9667e573e19ea2461a743d"
+        },
+        {
+          "id": "p437-b17",
+          "source": "and we define $\\binom\\alpha0=1$, as usual. If $\\alpha$ is not an integer, then $\\binom\\alpha n$ is never 0, and alternates in sign for $n>\\alpha$. Show that the Taylor polynomial of degree $n$ for $f(x)=(1+x)^\\alpha$ at 0 is $P_{n,0}(x)=\\displaystyle\\sum_{k=0}^n\\binom\\alpha kx^k$, and that the Cauchy and Lagrange forms of the remainder are the following:",
+          "sourceSha256": "ca7e1851e0357efa7557afab9a7da5351a0ecb9ce393153c93a07eb3f4a5a5af",
+          "translation": "并且像往常一样，定义 $\\binom\\alpha0=1$。如果 $\\alpha$ 不是整数，那么 $\\binom\\alpha n$ 永远不为 0，而且当 $n>\\alpha$ 时符号交替变化。证明：$f(x)=(1+x)^\\alpha$ 在 0 处的 $n$ 次泰勒多项式为 $P_{n,0}(x)=\\displaystyle\\sum_{k=0}^n\\binom\\alpha kx^k$，而余项的柯西形式和拉格朗日形式如下："
+        }
+      ]
+    },
+    {
+      "printed": 438,
+      "sourceSha256": "a1bed047527b00ff8e06b3f1ad43d51ee53742cc925400988c0f492bff01bb8b",
+      "blocks": [
+        {
+          "id": "p438-b1",
+          "source": "Cauchy form:",
+          "sourceSha256": "4eff78688f469e23b366b2d1a1987bc49d56350ca2b30915a5b622c03ace431b",
+          "translation": "柯西形式："
+        },
+        {
+          "id": "p438-b2",
+          "source": "$$\\begin{aligned}\nR_{n,0}(x)&=\\frac{\\alpha(\\alpha-1)\\cdot\\ldots\\cdot(\\alpha-n)}{n!}x(x-t)^n(1+t)^{\\alpha-n-1}\\\\\n&=\\frac{\\alpha(\\alpha-1)\\cdot\\ldots\\cdot(\\alpha-n)}{n!}x(1+t)^{\\alpha-1}\\left(\\frac{x-t}{1+t}\\right)^n\\\\\n&=(n+1)\\binom\\alpha{n+1}x(1+t)^{\\alpha-1}\\left(\\frac{x-t}{1+t}\\right)^n,\\quad t\\text{ in }(0,x)\\text{ or }(x,0).\n\\end{aligned}$$",
+          "sourceSha256": "df810290d7d0e5b83ec0f3a127bed63dcafe0e83b462491c8ef6ce31ffef8f4a"
+        },
+        {
+          "id": "p438-b3",
+          "source": "Lagrange form:",
+          "sourceSha256": "fd5a95fe77d18cf79b6919f1bbb76d60078695b804ca19bbe4b0667038147e9e",
+          "translation": "拉格朗日形式："
+        },
+        {
+          "id": "p438-b4",
+          "source": "$$\\begin{aligned}\nR_{n,0}(x)&=\\frac{\\alpha(\\alpha-1)\\cdot\\ldots\\cdot(\\alpha-n)}{(n+1)!}x^{n+1}(1+t)^{\\alpha-n-1}\\\\\n&=\\binom\\alpha{n+1}x^{n+1}(1+t)^{\\alpha-n-1},\\quad t\\text{ in }(0,x)\\text{ or }(x,0).\n\\end{aligned}$$",
+          "sourceSha256": "78c07e86b21b83a62a512f276028e573ca788e8a22bf8ed12bb16d4464fa3d72"
+        },
+        {
+          "id": "p438-b5",
+          "source": "Estimates for these remainder terms are rather difficult to handle, and are postponed to Problem 23-21.",
+          "sourceSha256": "abbff386ba7035ad2d3af32f32fdfeb91a78f4e3fb696eb6a59dbfca5c89589d",
+          "translation": "这些余项的估计相当难以处理，我们将其推迟到习题 23-21。"
+        },
+        {
+          "id": "p438-b6",
+          "source": "### 22.",
+          "sourceSha256": "ce146eae8f2fb4609bfd66abfe5008807912c8203d51e87d6ba4e238e91e9395"
+        },
+        {
+          "id": "p438-b7",
+          "source": "(a) Suppose that $f$ is twice differentiable on $(0,\\infty)$ and that $|f(x)|\\le M_0$ for all $x>0$, while $|f''(x)|\\le M_2$ for all $x>0$. Use an appropriate Taylor polynomial to prove that for any $x>0$ we have",
+          "sourceSha256": "e41d9e1a29db14aef1053c587ed8f3fe5c92f6d0bd0d4ae47f46485d8e93c449",
+          "translation": "(a) 设 $f$ 在 $(0,\\infty)$ 上二阶可导，并且对所有 $x>0$ 都有 $|f(x)|\\le M_0$，同时对所有 $x>0$ 都有 $|f''(x)|\\le M_2$。使用适当的泰勒多项式，证明对于任意 $x>0$，都有"
+        },
+        {
+          "id": "p438-b8",
+          "source": "$$|f'(x)|\\le\\frac2hM_0+\\frac h2M_2\\quad\\text{for all }h>0.$$",
+          "sourceSha256": "d152e0af7dc8a55b5d064214ab88f0e1f0a1657f4b187fd26bcf6b8bb275962b"
+        },
+        {
+          "id": "p438-b9",
+          "source": "(b) Show that for all $x>0$ we have",
+          "sourceSha256": "22d1463de63fa2438bd93b4430a82a72d938f120a0a979c82dabcc2cf3eba14c",
+          "translation": "(b) 证明对于所有 $x>0$，都有"
+        },
+        {
+          "id": "p438-b10",
+          "source": "$$|f'(x)|\\le2\\sqrt{M_0M_2}.$$",
+          "sourceSha256": "28870730744aee1e8f7df76a713bcd953813281f2e2cc09ea0246a0e2e732c66"
+        },
+        {
+          "id": "p438-b11",
+          "source": "Hint: Consider the smallest value of the expression appearing in (a).",
+          "sourceSha256": "92eae338e7f5350599c9db1984fe76125492b9cd66f913587da7ee444a17f55f",
+          "translation": "提示：考虑 (a) 中出现的表达式的最小值。"
+        },
+        {
+          "id": "p438-b12",
+          "source": "(c) If $f$ is twice differentiable on $(0,\\infty)$, $f''$ is bounded, and $f(x)$ approaches 0 as $x\\to\\infty$, then also $f'(x)$ approaches 0 as $x\\to\\infty$.",
+          "sourceSha256": "2d7f664724d6c4d81af1ef0c45264bc445a66f096cb799106d05874ece9c6fd3",
+          "translation": "(c) 如果 $f$ 在 $(0,\\infty)$ 上二阶可导，$f''$ 有界，而且当 $x\\to\\infty$ 时 $f(x)$ 趋于 0，那么当 $x\\to\\infty$ 时 $f'(x)$ 也趋于 0。"
+        },
+        {
+          "id": "p438-b13",
+          "source": "(d) If $\\lim\\limits_{x\\to\\infty}f(x)$ exists and $\\lim\\limits_{x\\to\\infty}f''(x)$ exists, then $\\lim\\limits_{x\\to\\infty}f''(x)=\\lim\\limits_{x\\to\\infty}f'(x)=0$. (Compare Problem 11-34.)",
+          "sourceSha256": "d06a88f73ec929a0a0c826c0fc5d6c3941246ff5e97383f376aba50cabb587ca",
+          "translation": "(d) 如果 $\\lim\\limits_{x\\to\\infty}f(x)$ 存在，而且 $\\lim\\limits_{x\\to\\infty}f''(x)$ 存在，那么 $\\lim\\limits_{x\\to\\infty}f''(x)=\\lim\\limits_{x\\to\\infty}f'(x)=0$。（与习题 11-34 比较。）"
+        },
+        {
+          "id": "p438-b14",
+          "source": "### 23.",
+          "sourceSha256": "fcb56ced3fb587a05b1e3f24ccfaee441ca9356f2d715d9e8ba59a341ae068ec"
+        },
+        {
+          "id": "p438-b15",
+          "source": "(a) Prove that if $f''(a)$ exists, then",
+          "sourceSha256": "cb4b253e627db8e0b49d604fd36a88f9e5eefa73003d2384cc6c7564d8877d25",
+          "translation": "(a) 证明：如果 $f''(a)$ 存在，那么"
+        },
+        {
+          "id": "p438-b16",
+          "source": "$$f''(a)=\\lim_{h\\to0}\\frac{f(a+h)+f(a-h)-2f(a)}{h^2}.$$",
+          "sourceSha256": "101d18bbebf458e6d74aaf6ba113de4e18e4a7d46bc77078288677742421a467"
+        },
+        {
+          "id": "p438-b17",
+          "source": "The limit on the right is called the *Schwarz second derivative* of $f$ at $a$. Hint: Use the Taylor polynomial $P_{2,a}(x)$ with $x=a+h$ and with $x=a-h$.",
+          "sourceSha256": "1eaa71f4e956b6362a8f1fb5c845a67f044e4451fe6aea8b23ac83a39df3203d",
+          "translation": "右边的极限称为 $f$ 在 $a$ 处的*施瓦茨二阶导数*。提示：使用泰勒多项式 $P_{2,a}(x)$，分别取 $x=a+h$ 和 $x=a-h$。"
+        },
+        {
+          "id": "p438-b18",
+          "source": "(b) Let $f(x)=x^2$ for $x\\ge0$, and $-x^2$ for $x\\le0$. Show that",
+          "sourceSha256": "bd50e07be6be7e65e0c3e00c65d8818c33a37b6200b8a70fd40a306abaff99ae",
+          "translation": "(b) 令 $x\\ge0$ 时 $f(x)=x^2$，$x\\le0$ 时函数值为 $-x^2$。证明"
+        },
+        {
+          "id": "p438-b19",
+          "source": "$$\\lim_{h\\to0}\\frac{f(0+h)+f(0-h)-2f(0)}{h^2}$$",
+          "sourceSha256": "f214e6044d8caa4b4b82b20011a3645997deff3764ab5b42a9d05372f0131d16"
+        },
+        {
+          "id": "p438-b20",
+          "source": "exists, even though $f''(0)$ does not.",
+          "sourceSha256": "ccb194ec377999d14a18236dd1171fdd1ee1c35bae01a017dc2004e3165a1441",
+          "translation": "存在，尽管 $f''(0)$ 并不存在。"
+        },
+        {
+          "id": "p438-b21",
+          "source": "(c) Prove that if $f$ has a local maximum at $a$, and the Schwarz second derivative of $f$ at $a$ exists, then it is $\\le0$.",
+          "sourceSha256": "38c817c384872f88064349986e5e347cabb625b9625029dacbfd94913eeee36e",
+          "translation": "(c) 证明：如果 $f$ 在 $a$ 处有局部最大值，而且 $f$ 在 $a$ 处的施瓦茨二阶导数存在，那么它 $\\le0$。"
+        }
+      ]
+    },
+    {
+      "printed": 439,
+      "sourceSha256": "b5d7381655e9c0bb2fdce9dc9ed6997e69a54b78298bf640efa605f77b0b02ea",
+      "blocks": [
+        {
+          "id": "p439-b1",
+          "source": "(d) Prove that if $f'''(a)$ exists, then",
+          "sourceSha256": "516d6234505cad636a7787cf6f6f0b88788c6ffb2541ab1d12d5a05b63336c1e",
+          "translation": "(d) 证明：如果 $f'''(a)$ 存在，那么"
+        },
+        {
+          "id": "p439-b2",
+          "source": "$$\\frac{f'''(a)}3=\\lim_{h\\to0}\\frac{f(a+h)-f(a-h)-2hf'(a)}{h^3}.$$",
+          "sourceSha256": "c72bc1fba15618289e48e962eb6a97db1b7cdb0cc0ebaf5b9c103af95f7d48cc"
+        },
+        {
+          "id": "p439-b3",
+          "source": "### 24.",
+          "sourceSha256": "1fb8b304cd861a73c12374de97d67ebaec8b5558d02cf56f4db6adadfe75d8aa"
+        },
+        {
+          "id": "p439-b4",
+          "source": "Use the Taylor polynomial $P_{1,a,f}$, together with the remainder, to prove a weak form of Theorem 2 of the Appendix to Chapter 11: If $f''>0$, then the graph of $f$ always lies above the tangent line of $f$, except at the point of contact.",
+          "sourceSha256": "e5fe2d0bcd12b5042bc0f81ebb91def756b70e2d729013ef4e333baa8b8681b1",
+          "translation": "利用泰勒多项式 $P_{1,a,f}$ 及其余项，证明第 11 章附录中定理 2 的一个较弱形式：如果 $f''>0$，那么除切点外，$f$ 的图像始终位于 $f$ 的切线上方。"
+        },
+        {
+          "id": "p439-b5",
+          "source": "### \\*25.",
+          "sourceSha256": "969c41a169f709c47ceb17d5f16e689e573277d9f86816baa730264f8820a0b5"
+        },
+        {
+          "id": "p439-b6",
+          "source": "Problem 18-43 presented a rather complicated proof that $f=0$ if $f''-f=0$ and $f(0)=f'(0)=0$. Give another proof, using Taylor’s Theorem. (This problem is really a preliminary skirmish before doing battle with the general case in Problem 26, and is meant to convince you that Taylor’s Theorem is a good tool for tackling such problems, even though tricks work out more neatly for special cases.)",
+          "sourceSha256": "f02e805964689c85764d64864ea392252236761b6fe1f2d6e0c4feab7ea52bf5",
+          "translation": "习题 18-43 用一个相当复杂的证明说明：如果 $f''-f=0$ 且 $f(0)=f'(0)=0$，那么 $f=0$。请用泰勒定理给出另一个证明。（这道题其实是在习题 26 中与一般情形正面交锋之前的一次小规模交手，目的是让你相信：即使对特殊情形使用巧妙的技巧能够得到更简洁的解答，泰勒定理仍然是处理这类问题的有力工具。）"
+        },
+        {
+          "id": "p439-b7",
+          "source": "### \\*\\*26.",
+          "sourceSha256": "64a1014cdbaf8d0bdbf45f646cdca57e2b0c748ea641b0d45dc44b05096baf2a"
+        },
+        {
+          "id": "p439-b8",
+          "source": "Consider a function $f$ which satisfies the differential equation",
+          "sourceSha256": "76c39cd3a101f4c8efa1c89abe33f50bfb4707700af7aa73edecdc805984899d",
+          "translation": "考虑一个函数 $f$，它满足微分方程"
+        },
+        {
+          "id": "p439-b9",
+          "source": "$$f^{(n)}=\\sum_{j=0}^{n-1}a_jf^{(j)},$$",
+          "sourceSha256": "fd16d797f1facc0448163e21b4234b04e219671e483bbbfc214e6dffb009798c"
+        },
+        {
+          "id": "p439-b10",
+          "source": "for certain numbers $a_0,\\ldots,a_{n-1}$. Several special cases have already received detailed treatment, either in the text or in other problems; in particular, we have found all functions satisfying $f'=f$, or $f''+f=0$, or $f''-f=0$. The trick in Problem 18-42 enables us to find many solutions for such equations, but doesn’t say whether these are the only solutions. This requires a *uniqueness* result, which will be supplied by this problem. At the end you will find some (necessarily sketchy) remarks about the general solution.",
+          "sourceSha256": "147d8f4d40257ef35df1327341920b3fb64a089e7db701d70c72d3f029e9d8f7",
+          "translation": "其中 $a_0,\\ldots,a_{n-1}$ 是某些数。几个特殊情形已经在正文或其他习题中得到详细处理；特别地，我们已经找到了满足 $f'=f$、$f''+f=0$ 或 $f''-f=0$ 的所有函数。习题 18-42 中的技巧让我们能够找到这类方程的许多解，却没有说明它们是否就是全部的解。这需要一个*唯一性*结果，本题将给出这个结果。最后，你还会看到一些关于通解的说明（这些说明必然只能是粗略的）。"
+        },
+        {
+          "id": "p439-b11",
+          "source": "(a) Derive the following formula for $f^{(n+1)}$ (let us agree that “$a_{-1}$” will be 0):",
+          "sourceSha256": "46e5bf199327c966db51a8d77602c9882631689bf76af0be8d4e26a1c5ae2f82",
+          "translation": "(a) 推导出下面这个关于 $f^{(n+1)}$ 的公式（我们约定“$a_{-1}$”为 0）："
+        },
+        {
+          "id": "p439-b12",
+          "source": "$$f^{(n+1)}=\\sum_{j=0}^{n-1}(a_{j-1}+a_{n-1}a_j)f^{(j)}.$$",
+          "sourceSha256": "4d109bff71e613ac2c2796056daaaf1fe7e3229234dcaa0b48e0e82f997a992f"
+        },
+        {
+          "id": "p439-b13",
+          "source": "(b) Deduce a formula for $f^{(n+2)}$.",
+          "sourceSha256": "4a4396bd0a32df1d76c2677f00e3e7249ed3415e4e1cc84b748309d3e9ca908c",
+          "translation": "(b) 推导出 $f^{(n+2)}$ 的一个公式。"
+        },
+        {
+          "id": "p439-b14",
+          "source": "The formula in part (b) is not going to be used; it was inserted only to convince you that a general formula for $f^{(n+k)}$ is out of the question. On the other hand, as part (c) shows, it is not very hard to obtain estimates on the size of $f^{(n+k)}(x)$.",
+          "sourceSha256": "06e51f016a1cf55e0c5ca5e84540d19a56ad88555cdff62915229517bee3c8bd",
+          "translation": "(b) 中的公式并不会用到；把它加进来，只是为了让你相信：写出 $f^{(n+k)}$ 的一般公式是行不通的。另一方面，正如 (c) 所表明的，要估计 $f^{(n+k)}(x)$ 的大小却并不太难。"
+        },
+        {
+          "id": "p439-b15",
+          "source": "(c) Let $N=\\max(1,|a_0|,\\ldots,|a_{n-1}|)$. Then $|a_{j-1}+a_{n-1}a_j|\\le2N^2$; this means that",
+          "sourceSha256": "f681bcbf78afd6d76fc3f8b17f167f18481792743b2cecb97837505e1d17d9e7",
+          "translation": "(c) 令 $N=\\max(1,|a_0|,\\ldots,|a_{n-1}|)$。那么 $|a_{j-1}+a_{n-1}a_j|\\le2N^2$；这意味着"
+        },
+        {
+          "id": "p439-b16",
+          "source": "$$f^{(n+1)}=\\sum_{j=0}^{n-1}b_j{}^1f^{(j)},\\quad\\text{where }|b_j{}^1|\\le2N^2.$$",
+          "sourceSha256": "a0b50652ab4355acc45561480f5aced73c8dcc24867a248915394df947ec48f0"
+        }
+      ]
+    },
+    {
+      "printed": 440,
+      "sourceSha256": "f2d677657684ef84e8adf15e71ca4a27b61e9627a92bfe6d3e59013ef095315f",
+      "blocks": [
+        {
+          "id": "p440-b1",
+          "source": "Show that",
+          "sourceSha256": "ef0fa5d710a2c9a7cae34308cbb6303eaba9d752f277a43d65825d5ddded74f8",
+          "translation": "证明"
+        },
+        {
+          "id": "p440-b2",
+          "source": "$$f^{(n+2)}=\\sum_{j=0}^{n-1}b_j{}^2f^{(j)},\\quad\\text{where }|b_j{}^2|\\le4N^3,$$",
+          "sourceSha256": "a6829d7fff642283a9ccf8d9a8033754c8acd7c0cf2c884cd607e09234fe0db9"
+        },
+        {
+          "id": "p440-b3",
+          "source": "and, more generally,",
+          "sourceSha256": "dacb7de6c37addbf2696b57e0154d12bfd04a6b3dc02912fa800ddeec416d702",
+          "translation": "以及更一般地，"
+        },
+        {
+          "id": "p440-b4",
+          "source": "$$f^{(n+k)}=\\sum_{j=0}^{n-1}b_j{}^kf^{(j)},\\quad\\text{where }|b_j{}^k|\\le2^kN^{k+1}.$$",
+          "sourceSha256": "08584da1f7b1e81a0afa91b541eb902fd6494b7acbcca7bfd2be5d31b12b527a"
+        },
+        {
+          "id": "p440-b5",
+          "source": "(d) Conclude from part (c) that, for any particular number $x$, there is a number $M$ such that",
+          "sourceSha256": "97b2e6ec410b07fa483c2ac254f96861510e917a2ab8889ce7dde8b1c5925622",
+          "translation": "(d) 由 (c) 得出：对于任意一个给定的数 $x$，都存在一个数 $M$，使得"
+        },
+        {
+          "id": "p440-b6",
+          "source": "$$|f^{(n+k)}(x)|\\le M\\cdot2^kN^{k+1}\\quad\\text{for all }k.$$",
+          "sourceSha256": "e4150d4f87e6abd57bf98610b964ac43b2ca950983a96469b53c8d42f78f4e70"
+        },
+        {
+          "id": "p440-b7",
+          "source": "(e) Now suppose that $f(0)=f'(0)=\\cdots=f^{(n-1)}(0)=0$. Show that",
+          "sourceSha256": "f920a8e0e7fd12ceb38fc5d3772a33075a06100be75bbfb45d274aca802b3017",
+          "translation": "(e) 现在假设 $f(0)=f'(0)=\\cdots=f^{(n-1)}(0)=0$。证明"
+        },
+        {
+          "id": "p440-b8",
+          "source": "$$|f(x)|\\le\\frac{M\\cdot2^{k+1}N^{k+2}|x|^{n+k+1}}{(n+k+1)!}\\le\\frac{M\\cdot|2Nx|^{n+k+1}}{(n+k+1)!},$$",
+          "sourceSha256": "57cd91df02bcf9f6801d52fa70b51f22027b2fd18fe1353e8e9d7605cbf7bb2c"
+        },
+        {
+          "id": "p440-b9",
+          "source": "and conclude that $f=0$.",
+          "sourceSha256": "75cab89d6ddd962f0417b8d4e97c0860544d38f2b2bf94e0c071f31a7f2575ca",
+          "translation": "并由此得出 $f=0$。"
+        },
+        {
+          "id": "p440-b10",
+          "source": "(f) Show that if $f_1$ and $f_2$ are both solutions of the differential equation",
+          "sourceSha256": "71180c302beb17d7f109987157adc07fab850152f1304cbabe570969ec1658d1",
+          "translation": "(f) 证明：如果 $f_1$ 和 $f_2$ 都是微分方程"
+        },
+        {
+          "id": "p440-b11",
+          "source": "$$f^{(n)}=\\sum_{j=0}^{n-1}a_jf^{(j)},$$",
+          "sourceSha256": "fd16d797f1facc0448163e21b4234b04e219671e483bbbfc214e6dffb009798c"
+        },
+        {
+          "id": "p440-b12",
+          "source": "and $f_1^{(j)}(0)=f_2^{(j)}(0)$ for $0\\le j\\le n-1$, then $f_1=f_2$.",
+          "sourceSha256": "37d2f46b2585dda35ab20d91c5308b55b6fe2adef2fdd9a3d3ac8de2832fed8f",
+          "translation": "的解，并且当 $0\\le j\\le n-1$ 时有 $f_1^{(j)}(0)=f_2^{(j)}(0)$，那么 $f_1=f_2$。"
+        },
+        {
+          "id": "p440-b13",
+          "source": "In other words, the solutions of this differential equation are determined by the “initial conditions” (the values $f^{(j)}(0)$ for $0\\le j\\le n-1$). This means that we can find *all* solutions once we can find enough solutions to obtain any given set of initial conditions. If the equation",
+          "sourceSha256": "a5fdf3eab8e61ce811da7adf9ed9005599f01205f2d82bb7ba37f948583e0b15",
+          "translation": "换句话说，这个微分方程的解由“初始条件”（即 $0\\le j\\le n-1$ 时 $f^{(j)}(0)$ 的值）决定。这意味着，只要我们能找到足够多的解，使得任意给定的一组初始条件都能实现，就能找到*所有*的解。如果方程"
+        },
+        {
+          "id": "p440-b14",
+          "source": "$$x^n-a_{n-1}x^{n-1}-\\cdots-a_0=0$$",
+          "sourceSha256": "ea0f58a5a999c1277855c50d87712b59b49b1f0ae9e15654e4b80b88ac1933ed"
+        },
+        {
+          "id": "p440-b15",
+          "source": "has $n$ distinct roots $\\alpha_1,\\ldots,\\alpha_n$, then any function of the form",
+          "sourceSha256": "3997f9897efe64f956305b19ae882d4893ff09ef5221965cc2133055f991b0ba",
+          "translation": "有 $n$ 个互不相同的根 $\\alpha_1,\\ldots,\\alpha_n$，那么任何具有如下形式的函数"
+        },
+        {
+          "id": "p440-b16",
+          "source": "$$f(x)=c_1e^{\\alpha_1x}+\\cdots+c_ne^{\\alpha_nx}$$",
+          "sourceSha256": "2b3e66ea9b900ee134d94411ac3d4d8f24aad35eb2f4210ffd3b233f964af572"
+        },
+        {
+          "id": "p440-b17",
+          "source": "is a solution, and",
+          "sourceSha256": "a4d0f06a1e96a3c39e78a4cab12adf807c1c649225930e09677d15d830453bdb",
+          "translation": "都是一个解，并且"
+        },
+        {
+          "id": "p440-b18",
+          "source": "$$\\begin{aligned}f(0)&=c_1+\\cdots+c_n,\\\\f'(0)&=\\alpha_1c_1+\\cdots+\\alpha_nc_n,\\\\&\\vdots\\\\f^{(n-1)}(0)&=\\alpha_1^{n-1}c_1+\\cdots+\\alpha_n^{n-1}c_n.\\end{aligned}$$",
+          "sourceSha256": "00003392b34cb8e13e54228dbc3789593580886e5e0ea99f2d614041ab3282e8"
+        },
+        {
+          "id": "p440-b19",
+          "source": "As a matter of fact, every solution is of this form, because we can obtain any set of numbers on the left side by choosing the $c$’s properly, but we will not try to prove this last assertion. (It is a purely algebraic fact, which you can easily check for $n=2$ or 3.) These remarks are also true if some",
+          "sourceSha256": "ef4583b31643f8a6e25cc2fb728a144744ac5a03aae373b61e419480a55b3027",
+          "translation": "事实上，每个解都具有这种形式，因为只要适当地选择各个 $c$，就能使左边得到任意一组给定的数；不过，我们不打算证明这最后一个断言。（这是一个纯粹的代数事实，你可以很容易地验证 $n=2$ 或 3 的情形。）如果有些"
+        }
+      ]
+    },
+    {
+      "printed": 441,
+      "sourceSha256": "b97643b2ec6e10c413dfc9a0e9c954af2a343cc0266b9b62562d8962433e45e2",
+      "blocks": [
+        {
+          "id": "p441-b1",
+          "source": "of the roots are multiple roots, and even in the more general situation considered in Chapter 27.",
+          "sourceSha256": "5e6fcaceeaa2acca3f3f85c704569b7943c3002ab7d98043a3f1134d252d7d83",
+          "translation": "根是重根，这些说明也同样成立；甚至在第 27 章所考虑的更一般的情形中也成立。"
+        },
+        {
+          "id": "p441-b2",
+          "source": "### \\*\\*27.",
+          "sourceSha256": "44e6d6dbbd3ebd93478798491972121fc13ada591ea4a689760bf134a6921baa"
+        },
+        {
+          "id": "p441-b3",
+          "source": "(a) Suppose that $f$ is a continuous function on $[a,b]$ with $f(a)=f(b)$ and that for all $x$ in $(a,b)$ the Schwarz second derivative of $f$ at $x$ is 0 (Problem 23). Show that $f$ is constant on $[a,b]$. Hint: Suppose that $f(x)>f(a)$ for some $x$ in $(a,b)$. Consider the function",
+          "sourceSha256": "a2d257d9c702b31db1f261419bd8a5922a757d7258ee74ecfb063c726928ba9c",
+          "translation": "(a) 设 $f$ 是 $[a,b]$ 上的连续函数，满足 $f(a)=f(b)$，并且对于 $(a,b)$ 中的所有 $x$，$f$ 在 $x$ 处的施瓦茨二阶导数均为 0（习题 23）。证明 $f$ 在 $[a,b]$ 上是常数。提示：假设对于 $(a,b)$ 中的某个 $x$，有 $f(x)>f(a)$。考虑函数"
+        },
+        {
+          "id": "p441-b4",
+          "source": "$$g(x)=f(x)-\\varepsilon(x-a)(b-x)$$",
+          "sourceSha256": "28b5785aa13428c995fe4faa12b5f37132cc087ba212dbe70ad38e00ad585085"
+        },
+        {
+          "id": "p441-b5",
+          "source": "with $g(a)=g(b)=f(a)$. For sufficiently small $\\varepsilon>0$ we will have $g(x)>g(a)$, so $g$ will have a maximum point $y$ in $(a,b)$. Now use Problem 23(c) (the Schwarz second derivative of $(x-a)(b-x)$ is simply its ordinary second derivative).",
+          "sourceSha256": "9fd5ad9c1500cbd718539e865f16afaed78294e99cf0cdf08b45d380bbdc7f39",
+          "translation": "它满足 $g(a)=g(b)=f(a)$。对于充分小的 $\\varepsilon>0$，有 $g(x)>g(a)$，所以 $g$ 将在 $(a,b)$ 中有一个最大值点 $y$。现在利用习题 23(c)（$(x-a)(b-x)$ 的施瓦茨二阶导数就是它通常的二阶导数）。"
+        },
+        {
+          "id": "p441-b6",
+          "source": "(b) If $f$ is a continuous function on $[a,b]$ whose Schwarz second derivative is 0 at all points of $(a,b)$, then $f$ is linear.",
+          "sourceSha256": "28f1b57bae7bab61f959551e278d04055ce105e6f075c4445e7686c74aa9fd66",
+          "translation": "(b) 如果 $f$ 是 $[a,b]$ 上的连续函数，并且它在 $(a,b)$ 的所有点处的施瓦茨二阶导数都为 0，那么 $f$ 是线性函数。"
+        },
+        {
+          "id": "p441-b7",
+          "source": "### \\*28.",
+          "sourceSha256": "75d78f2bb351ceed4e366ef355cf2da48be591c770d28c34d48aba743eea4c6d"
+        },
+        {
+          "id": "p441-b8",
+          "source": "(a) Let $f(x)=x^4\\sin1/x^2$ for $x\\ne0$, and $f(0)=0$. Show that $f=0$ up to order 2 at 0, even though $f''(0)$ does not exist.",
+          "sourceSha256": "c6f62e20f4cd8c3c474a80554a47a219c09c9ebfb4573cfab1a2426e84d01afb",
+          "translation": "(a) 令 $x\\ne0$ 时 $f(x)=x^4\\sin1/x^2$，并令 $f(0)=0$。证明 $f=0$ 在 0 处直到 2 阶相等，尽管 $f''(0)$ 并不存在。"
+        },
+        {
+          "id": "p441-b9",
+          "source": "This example is slightly more complex, but also slightly more impressive, than the example in the text, because both $f'(a)$ and $f''(a)$ exist for $a\\ne0$. Thus, for each number $a$ there is another number $m(a)$ such that",
+          "sourceSha256": "0b5e734aeb5cd4b1229174fa74b08a71e19092e87bc21cb2ce3125ce9d2885fb",
+          "translation": "这个例子比正文中的例子稍微复杂一些，但也稍微更令人印象深刻，因为当 $a\\ne0$ 时，$f'(a)$ 和 $f''(a)$ 都存在。因此，对于每个数 $a$，都存在另一个数 $m(a)$，使得"
+        },
+        {
+          "id": "p441-b10",
+          "source": "$$f(x)=f(a)+f'(a)(x-a)+\\frac{m(a)}2(x-a)^2+R_a(x),\\tag{*}$$",
+          "sourceSha256": "86180712563f153c23f824fc62b18f1d578666b984e75f2c32ba4c4b0944f363"
+        },
+        {
+          "id": "p441-b11",
+          "source": "$$\\text{where }\\lim_{x\\to a}\\frac{R_a(x)}{(x-a)^2}=0;$$",
+          "sourceSha256": "42463d79651d299a1bbfadef7d990150b36d5fc39456c500bbf36701a11548c6"
+        },
+        {
+          "id": "p441-b12",
+          "source": "namely, $m(a)=f''(a)$ for $a\\ne0$, and $m(0)=0$. Notice that the function $m$ defined in this way is not continuous.",
+          "sourceSha256": "705aefc113fdc2e7f278c907ae4989e599b5228ffd13212e3ada666410530af9",
+          "translation": "具体来说，$a\\ne0$ 时 $m(a)=f''(a)$，并且 $m(0)=0$。注意，以这种方式定义的函数 $m$ 并不连续。"
+        },
+        {
+          "id": "p441-b13",
+          "source": "(b) Suppose that $f$ is a differentiable function such that $(*)$ holds for all $a$, with $m(a)=0$. Use Problem 27 to show that $f''(a)=m(a)=0$ for all $a$.",
+          "sourceSha256": "ff76c3e1279b37b1dbde5123b974f59aeb8cb6fe07b42bbd266afe4d9987b90c",
+          "translation": "(b) 设 $f$ 是一个可导函数，对所有 $a$ 都满足 $(*)$，其中 $m(a)=0$。利用习题 27 证明，对于所有 $a$ 都有 $f''(a)=m(a)=0$。"
+        },
+        {
+          "id": "p441-b14",
+          "source": "(c) Now suppose that $(*)$ holds for all $a$, and that $m$ is continuous. Prove that for all $a$ the second derivative $f''(a)$ exists and equals $m(a)$.",
+          "sourceSha256": "4a3f6d8f9133f3b1e59d8fcf8866ea787b70a2f8d3d9c01c7bdfc8ae9453896a",
+          "translation": "(c) 现在假设 $(*)$ 对所有 $a$ 都成立，而且 $m$ 连续。证明：对于所有 $a$，二阶导数 $f''(a)$ 都存在，并且等于 $m(a)$。"
+        }
+      ]
+    }
+  ]
+}

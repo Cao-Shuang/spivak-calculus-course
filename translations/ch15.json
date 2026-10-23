@@ -1,0 +1,2400 @@
+{
+  "chapter": 15,
+  "language": "zh-CN",
+  "sourceSha256": "11b88b67a72e9d78dd338a189b93ef48617d836742a39a8fb012e9d09c71e467",
+  "paragraphCount": 226,
+  "pages": [
+    {
+      "printed": 303,
+      "sourceSha256": "40cd8222e88b03ef893afdad0ba821f6890c642907a67f3e43503de7a6b5c0dc",
+      "blocks": [
+        {
+          "id": "p303-b1",
+          "source": "# CHAPTER 15  THE TRIGONOMETRIC FUNCTIONS",
+          "sourceSha256": "d8b1d89fefd11fbfc96d2c5efe50125754f1c412572c31adc933407d3c53696c",
+          "translation": "# 第 15 章　三角函数"
+        },
+        {
+          "id": "p303-b2",
+          "source": "The definitions of the functions sin and cos are considerably more subtle than one might suspect. For this reason, this chapter begins with some informal and intuitive definitions, which should not be scrutinized too carefully, as they shall soon be replaced by the formal definitions which we really intend to use.",
+          "sourceSha256": "c13d7418f2d0e44ae1d6ebe25cac8683071654d61330df20f1b8311bbd597719",
+          "translation": "函数 sin 和 cos 的定义，远比人们可能想到的要微妙。因此，本章先给出一些非正式的直观定义，不必过分仔细地审查它们，因为很快就会用我们真正打算采用的正式定义来取代它们。"
+        },
+        {
+          "id": "p303-b3",
+          "source": "In elementary geometry an angle is simply the union of two half-lines with a common initial point (Figure 1).",
+          "sourceSha256": "5e4b6543f3642da7d0d467c5ca00bbd1c09522f12373291ebbe8b09e47ba0110",
+          "translation": "在初等几何中，角只是具有公共起点的两条射线的并集（图 1）。"
+        },
+        {
+          "id": "p303-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:633px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"477 532 633 260\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0321.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "f25e1a874e360236da98cc67463fbfac005e3b331e246c69cd1271041ddfff89"
+        },
+        {
+          "id": "p303-b5",
+          "source": "More useful for trigonometry are “directed angles,” which may be regarded as pairs $(l_1,l_2)$ of half-lines with the same initial point, visualized as in Figure 2.",
+          "sourceSha256": "7c5f1992d7050056be4255fb480e04862609ee04f1a2de292ad527a7023005a7",
+          "translation": "对于三角学，更有用的是“有向角”，可以把它看成起点相同的射线对 $(l_1,l_2)$，如图 2 所示。"
+        },
+        {
+          "id": "p303-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"477 940 693 339\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0321.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "13fa621f0edb3dd68caa57edefe94ba23b12023a8b71193f59b028d5f9c68dab"
+        },
+        {
+          "id": "p303-b7",
+          "source": "If for $l_1$ we always choose the positive half of the horizontal axis, a directed angle is described completely by the second half-line (Figure 3).",
+          "sourceSha256": "6ab612aeaea57e71dcf60f160491d973f2fa11b95e691143c95f2d5d7f3e4e7a",
+          "translation": "如果总把 $l_1$ 取为水平轴的正半轴，那么只要给出第二条射线，就完全确定了一个有向角（图 3）。"
+        },
+        {
+          "id": "p303-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:383px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"24 1161 383 305\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0321.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "f810d73a61d926b485026ad9334a95d961534a93dd00a6e771bd6afc460bfcff"
+        },
+        {
+          "id": "p303-b9",
+          "source": "Since each half-line intersects the unit circle precisely once, a directed angle is described, even more simply, by a point on the unit circle (Figure 4), that is, by a point $(x,y)$ with $x^2+y^2=1$.",
+          "sourceSha256": "cd18ac6f19f675e647e02e72a766d7b5a5d4f22bd8d05d2e72f1dba56c1511b8",
+          "translation": "由于每条射线都与单位圆恰好相交一次，有向角还可以更简单地用单位圆上的一个点来描述（图 4），也就是满足 $x^2+y^2=1$ 的点 $(x,y)$。"
+        }
+      ]
+    },
+    {
+      "printed": 304,
+      "sourceSha256": "d926896c49f893ae91e610ac1588b4f3486ff4da568284e26994476f65de7c4c",
+      "blocks": [
+        {
+          "id": "p304-b1",
+          "source": "The sine and cosine of a directed angle can now be defined as follows (Figure 5): a directed angle is determined by a point $(x,y)$ with $x^2+y^2=1$; the sine of the angle is defined as $y$, and the cosine as $x$.",
+          "sourceSha256": "f4ab0fc30f5aef548cb12a25fc4b52528515bd427833a51252290a291ace3bd6",
+          "translation": "现在可以如下定义有向角的正弦和余弦（图 5）：有向角由满足 $x^2+y^2=1$ 的点 $(x,y)$ 确定；该角的正弦定义为 $y$，余弦定义为 $x$。"
+        },
+        {
+          "id": "p304-b2",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:365px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 208 365 324\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0323.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "13d9425fb53c1e7479ff92a2234d3f3fcd65909837f0dc28b192680ee1611e99"
+        },
+        {
+          "id": "p304-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:365px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 696 365 323\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0323.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "c0482c805c726c0637a018175aff061c468cec80b035f7552cbfa9900825d8c3"
+        },
+        {
+          "id": "p304-b4",
+          "source": "Despite the aura of precision surrounding the previous paragraph, we are not yet finished with the definitions of sin and cos. Indeed, we have barely begun. What we have defined is the sine and cosine of a directed angle; what we *want* to define is $\\sin x$ and $\\cos x$ for each *number* $x$. The usual procedure for doing this depends on associating an angle to every number. The oldest method is to “measure angles in degrees.” An angle “all the way around” is associated to $360$, an angle “half-way around” is associated to $180$, an angle “a quarter way around” to $90$, etc. (Figure 6). The angle associated, in this manner, to the number $x$, is called “the angle of $x$ degrees.” The angle of $0$ degrees is the same as the angle of $360$ degrees, and this ambiguity is purposely extended further, so that an angle of $90$ degrees is also an angle of $360+90$ degrees, etc. One can now define a function, which we will denote by $\\sin^\\circ$, as follows:",
+          "sourceSha256": "51b64c5b1d0a7bc88c1fcf069cffb8d35ed7b589134b8484f5ef5b5dc5a06d9d",
+          "translation": "尽管上一段看起来十分精确，sin 和 cos 的定义仍未完成。事实上，我们才刚刚开始。刚才定义的是有向角的正弦与余弦；而我们*想要*定义的，是每个*数* $x$ 所对应的 $\\sin x$ 和 $\\cos x$。通常的做法，是把每个数与一个角联系起来。最古老的方法是“用度数度量角”。“转一整圈”的角对应于 $360$，“转半圈”的角对应于 $180$，“转四分之一圈”的角对应于 $90$，等等（图 6）。这样与数 $x$ 相联系的角，称为“$x$ 度角”。$0$ 度角与 $360$ 度角相同，而且我们有意进一步扩展这种不唯一性，使 $90$ 度角也就是 $360+90$ 度角，等等。现在可以如下定义一个函数，记为 $\\sin^\\circ$："
+        },
+        {
+          "id": "p304-b5",
+          "source": "$$\\sin^\\circ(x)=\\text{sine of the angle of }x\\text{ degrees}.$$",
+          "sourceSha256": "f964076972102d4181fcd79aa11be82899530227be7f7d5c3ee8efc78fa43cf4"
+        },
+        {
+          "id": "p304-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:365px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 1148 365 321\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0323.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 6</figcaption>\n</figure>",
+          "sourceSha256": "3c434a868b2e14b45bb3d3a44c02abf1ab5471117807b0c8bf46cc81afaa0d69"
+        },
+        {
+          "id": "p304-b7",
+          "source": "There are two difficulties with this approach. Although it may be clear what we mean by an angle of $90$ or $45$ degrees, it is not quite clear what an angle of $\\sqrt2$ degrees is, for example. Even if this difficulty could be circumvented, it is unlikely that this system, depending as it does on the arbitrary choice of $360$, will lead to elegant results—it would be sheer luck if the function $\\sin^\\circ$ had mathematically pleasing properties.",
+          "sourceSha256": "2eb6a4aefd67e2d206840be9b284f78f2113223fe4f9abd5b35cc5e9406da6e2",
+          "translation": "这种做法有两个困难。虽然 $90$ 度或 $45$ 度角是什么意思，也许很清楚，但比如说，$\\sqrt2$ 度角是什么，就不那么清楚了。即使能绕过这个困难，这套依赖于任意选择的 $360$ 的体系，也不大可能产生优美的结果——如果函数 $\\sin^\\circ$ 具有数学上令人满意的性质，那只能说是碰巧走运。"
+        },
+        {
+          "id": "p304-b8",
+          "source": "“Radian measure” appears to offer a remedy for both these defects. Given any number $x$, choose a point $P$ on the unit circle such that $x$ is the length of the arc of the circle beginning at $(1,0)$ and running counterclockwise to $P$ (Figure 7). The directed angle determined by $P$ is called “the angle of $x$ radians.” Since the length of the whole circle is $2\\pi$, the angle of $x$ radians and the angle of $2\\pi+x$ radians are identical. A function $\\sin^r$ can now be defined as follows:",
+          "sourceSha256": "a67e8b3f2e1a3c8ba9b193e26686bf48187ffe14fe0da82b647cbc7eeb260298",
+          "translation": "“弧度制”似乎为这两个缺陷都提供了补救办法。给定任意数 $x$，在单位圆上选取一点 $P$，使 $x$ 是从 $(1,0)$ 出发，沿逆时针方向到达 $P$ 的圆弧长度（图 7）。由 $P$ 确定的有向角，称为“$x$ 弧度角”。由于整个圆的周长是 $2\\pi$，$x$ 弧度角与 $2\\pi+x$ 弧度角相同。现在可以如下定义函数 $\\sin^r$："
+        },
+        {
+          "id": "p304-b9",
+          "source": "$$\\sin^r(x)=\\text{sine of the angle of }x\\text{ radians}.$$",
+          "sourceSha256": "d5f8e0516cfb9ecaab0656103c06a0f7a8c6e65d6107ed6ee657af164eee9ef3"
+        },
+        {
+          "id": "p304-b10",
+          "source": "This same method can easily be adopted to define $\\sin^\\circ$; since we want to have $\\sin^\\circ360=\\sin^r2\\pi$, we can define",
+          "sourceSha256": "3db0d908fcef3410f3292b7916fc31d7dc4a9f8446bc3f6b1f8cd86a5d92d505",
+          "translation": "同样的方法也很容易用来定义 $\\sin^\\circ$；由于我们希望 $\\sin^\\circ360=\\sin^r2\\pi$，可以定义"
+        },
+        {
+          "id": "p304-b11",
+          "source": "$$\\sin^\\circ x=\\sin^r\\frac{2\\pi x}{360}=\\sin^r\\frac{\\pi x}{180}.$$",
+          "sourceSha256": "8c9bfb51fc092af6d642052686e1a9b85766830b5d39bbb7e454ef19e45b3f38"
+        },
+        {
+          "id": "p304-b12",
+          "source": "We shall soon drop the superscript $r$ in $\\sin^r$, since $\\sin^r$ (and not $\\sin^\\circ$) is the only function which will interest us; before we do, a few words of warning are advisable.",
+          "sourceSha256": "584b9ec9519fa7e07691473a0d187f78cbe0ad136231a2246dc41f32e66ec2a2",
+          "translation": "我们很快会省去 $\\sin^r$ 中的上标 $r$，因为我们关心的函数只有 $\\sin^r$（而不是 $\\sin^\\circ$）；不过在省去之前，最好先提醒几句。"
+        },
+        {
+          "id": "p304-b13",
+          "source": "The expressions $\\sin^\\circ x$ and $\\sin^r x$ are sometimes written",
+          "sourceSha256": "0aa90a0c52f2cfbb746d58722ba0f05b367a38f6a8be23cc45e5ee301fd91725",
+          "translation": "表达式 $\\sin^\\circ x$ 和 $\\sin^r x$ 有时被写成"
+        },
+        {
+          "id": "p304-b14",
+          "source": "$$\\begin{gathered}\\sin x^\\circ\\\\\\sin x\\text{ radians},\\end{gathered}$$",
+          "sourceSha256": "1b9d735e26bff4f33267240652da6a8ffdf0be6971bc70d3a24b0324f073c287"
+        },
+        {
+          "id": "p304-b15",
+          "source": "but this notation is quite misleading; a number $x$ is simply a number—it does not carry a banner indicating that it is “in degrees” or “in radians.” If the meaning",
+          "sourceSha256": "ce513112ebabe198dc64cf78147a4a09b27d0674675bb05254122f974b513966",
+          "translation": "但这种记号很容易误导人；数 $x$ 就只是一个数——它不会带着一面旗子，标明自己“以度为单位”或“以弧度为单位”。如果对记号"
+        }
+      ]
+    },
+    {
+      "printed": 305,
+      "sourceSha256": "f6abf6f02a17cc5f4bbc38fc5ae8c3b55284c0e14aee514355c284e8733e56e0",
+      "blocks": [
+        {
+          "id": "p305-b1",
+          "source": "of the notation “$\\sin x$” is in doubt one usually asks:",
+          "sourceSha256": "15e34101511bebdd5351ebd6718f6bb438ed2fab17606bfc3e804e71ec8f4fa9",
+          "translation": "“$\\sin x$”的含义有疑问，人们通常会问："
+        },
+        {
+          "id": "p305-b2",
+          "source": "“Is $x$ in degrees or radians?”",
+          "sourceSha256": "2ceed71dfa050d79e73de3718d1b306b166969e8baccbcae285bc44a0de203e8",
+          "translation": "“$x$ 是度数还是弧度？”"
+        },
+        {
+          "id": "p305-b3",
+          "source": "but what one means is:",
+          "sourceSha256": "5b60ebd6384bffe01d16c9fa73c22dd72a046ad358451c22380ec8b216bc5cc9",
+          "translation": "但真正想问的是："
+        },
+        {
+          "id": "p305-b4",
+          "source": "“Do you mean ‘$\\sin^\\circ$’ or ‘$\\sin^r$’?”",
+          "sourceSha256": "d78af0197472e0330984418587665a405ff65e4e9547dfb4b0c3fafd82a3f1ce",
+          "translation": "“你指的是‘$\\sin^\\circ$’，还是‘$\\sin^r$’？”"
+        },
+        {
+          "id": "p305-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:383px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 188 383 323\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0324.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 7</figcaption>\n</figure>",
+          "sourceSha256": "aeff9d56f0a07e2f73f8c4dbef020b3593079f61db494d19dc40b305cafd81ea"
+        },
+        {
+          "id": "p305-b6",
+          "source": "Even for mathematicians, addicted to precision, these remarks might be dispensable, were it not for the fact that failure to take them into account will lead to incorrect answers to certain problems (an example is given in Problem 19).",
+          "sourceSha256": "09f4e0c84fc655cd3d8819da616cd6ea534b9b062d948abe3f11dcb6a2031908",
+          "translation": "即使对于痴迷精确的数学家，这些话也许都可有可无；但若不注意它们，就会在某些问题中得到错误答案（习题 19 给出了一个例子），因此仍有必要说明。"
+        },
+        {
+          "id": "p305-b7",
+          "source": "Although the function $\\sin^r$ is the function which we wish to denote simply by sin (and use exclusively henceforth), there is a difficulty involved even in the definition of $\\sin^r$. Our proposed definition depends on the concept of the length of a curve. Although the length of a curve has been defined in several problems, it is also easy to reformulate the definition in terms of areas. (A treatment in terms of length is outlined in Problem 28.)",
+          "sourceSha256": "2a6887797a564bd893c2e8a47dfa3d986636a4bf325087c2c2fec93f8861c929",
+          "translation": "虽然 $\\sin^r$ 是我们打算直接记作 sin（并在此后专门使用）的函数，但就连 $\\sin^r$ 的定义也有一个困难。我们提出的定义依赖于曲线长度这个概念。虽然已经在若干习题中定义过曲线长度，但也很容易用面积来重新表述这个定义。（习题 28 概述了用长度处理的方法。）"
+        },
+        {
+          "id": "p305-b8",
+          "source": "Suppose that $x$ is the length of the arc of the unit circle from $(1,0)$ to $P$; this arc thus contains $x/2\\pi$ of the total length $2\\pi$ of the circumference of the unit circle. Let $S$ denote the “sector” shown in Figure 8; $S$ is bounded by the unit circle, the horizontal axis, and the half-line through $(0,0)$ and $P$. The area of $S$ should be $x/2\\pi$ times the area inside the unit circle, which we expect to be $\\pi$; thus $S$ should have area",
+          "sourceSha256": "b15b59f1bd410722d02727281a2705ab51cf637043561593666c042718444ffb",
+          "translation": "设 $x$ 是单位圆上从 $(1,0)$ 到 $P$ 的圆弧长度；那么这段弧占单位圆总周长 $2\\pi$ 的 $x/2\\pi$。用 $S$ 表示图 8 中的“扇形”；$S$ 由单位圆、水平轴，以及经过 $(0,0)$ 和 $P$ 的射线围成。$S$ 的面积应当等于单位圆内部面积的 $x/2\\pi$ 倍，而单位圆面积预期为 $\\pi$；因此 $S$ 的面积应当为"
+        },
+        {
+          "id": "p305-b9",
+          "source": "$$\\frac{x}{2\\pi}\\cdot\\pi=\\frac x2.$$",
+          "sourceSha256": "dda15a0eca0ab6a6159555d028b58798f27cdf256c8ef3fba8cdd0b7cd5730b3"
+        },
+        {
+          "id": "p305-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:358px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 566 358 324\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0324.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 8</figcaption>\n</figure>",
+          "sourceSha256": "f3a4f5e7588ab4b8083cac5c8945e875305f24a01ec3af8962198d1613a451e3"
+        },
+        {
+          "id": "p305-b11",
+          "source": "We can therefore define $\\cos x$ and $\\sin x$ as the coordinates of the point $P$ which determines a sector of area $x/2$.",
+          "sourceSha256": "6b32ef9e1ac4d6cdbbbda24e88b3588f582cf4651f5ba1cafa56a202ab565f09",
+          "translation": "因此，可以把 $\\cos x$ 和 $\\sin x$ 定义为点 $P$ 的坐标，这个点确定一个面积为 $x/2$ 的扇形。"
+        },
+        {
+          "id": "p305-b12",
+          "source": "With these remarks as background, the rigorous definition of the functions sin and cos now begins. The first definition identifies $\\pi$ as the area of the unit circle—more precisely, as twice the area of a semicircle (Figure 9).",
+          "sourceSha256": "cef4ca5e1b020dd6e48d64d815ff7ee7af9b84a049f613b33bbbd3ac5e2c0ffc",
+          "translation": "有了这些背景，函数 sin 和 cos 的严格定义现在正式开始。第一个定义把 $\\pi$ 确定为单位圆的面积——更精确地说，是半圆面积的两倍（图 9）。"
+        },
+        {
+          "id": "p305-b13",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p305-b14",
+          "source": "$$\\pi=2\\cdot\\int_{-1}^1\\sqrt{1-x^2}dx.$$",
+          "sourceSha256": "b6aaf58ddecc3927ac383e6a7d4727aff5cd04202ababf16dc3c734f82721b29"
+        },
+        {
+          "id": "p305-b15",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:405px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"40 1205 405 233\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0324.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 9</figcaption>\n</figure>",
+          "sourceSha256": "f6ddc8913ebea45730b974e82a02203633e93828d5eca612c7314900bed5656b"
+        },
+        {
+          "id": "p305-b16",
+          "source": "(This definition is not offered simply as an embellishment; to define the trigonometric functions it will be necessary to first define $\\sin x$ and $\\cos x$ only for $0\\le x\\le\\pi$.)",
+          "sourceSha256": "d7eb37f2a0ef60a669f32b4adbc9efe0ebeb8e0abc52a3b3a7b6c00402cea41d",
+          "translation": "（这个定义并不是为了装饰门面；为了定义三角函数，必须先只在 $0\\le x\\le\\pi$ 的范围内定义 $\\sin x$ 和 $\\cos x$。）"
+        },
+        {
+          "id": "p305-b17",
+          "source": "The second definition is meant to describe, for $-1\\le x\\le1$, the area $A(x)$ of the sector bounded by the unit circle, the horizontal axis, and the half-line through $(x,\\sqrt{1-x^2})$. If $0\\le x\\le1$, this area can be expressed (Figure 10) as the sum of the area of a triangle and the area of a region under the unit circle:",
+          "sourceSha256": "c278b0c7baaf0fa4d05929560af182b7ccee5185d022e76b72d3bd0f631ae397",
+          "translation": "第二个定义旨在对于 $-1\\le x\\le1$，描述由单位圆、水平轴，以及经过 $(x,\\sqrt{1-x^2})$ 的射线所围扇形的面积 $A(x)$。若 $0\\le x\\le1$，这个面积可以表示为一个三角形的面积与单位圆下方一个区域的面积之和（图 10）："
+        },
+        {
+          "id": "p305-b18",
+          "source": "$$\\frac{x\\sqrt{1-x^2}}2+\\int_x^1\\sqrt{1-t^2}dt.$$",
+          "sourceSha256": "d768272cba3d0ca710345055fd0c4d14a16fc818061a7a9672a47212967be0e4"
+        }
+      ]
+    },
+    {
+      "printed": 306,
+      "sourceSha256": "275263f373dda8b23ed8f840b2792ebcbbf0a37e7c19699732b836b93e843c97",
+      "blocks": [
+        {
+          "id": "p306-b1",
+          "source": "This same formula happens to work for $-1\\le x\\le0$ also. In this case (Figure 11), the term",
+          "sourceSha256": "1d64f84e96b44c2521fe9f661a4929f2c9b4d9deb0d4df09b8562b47b82195c0",
+          "translation": "同一个公式碰巧也适用于 $-1\\le x\\le0$。在这种情形中（图 11），项"
+        },
+        {
+          "id": "p306-b2",
+          "source": "$$\\frac{x\\sqrt{1-x^2}}2$$",
+          "sourceSha256": "896539131e15a022f45bc31a82503141763453df0d196e955cd7f8cb11744669"
+        },
+        {
+          "id": "p306-b3",
+          "source": "is negative, and represents the area of the triangle which must be subtracted from the term",
+          "sourceSha256": "4fb14a88d7c9537398606e9e102f5d8700b40b01e3a443dc33d4ee8d8118df4a",
+          "translation": "为负，它表示必须从下列项中减去的三角形面积："
+        },
+        {
+          "id": "p306-b4",
+          "source": "$$\\int_x^1\\sqrt{1-t^2}dt.$$",
+          "sourceSha256": "0112282b1de4b929a0840bff4fdb13409c9dd59f57621aadbf0c0eca208a5d7d"
+        },
+        {
+          "id": "p306-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:391px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"39 130 391 238\" role=\"img\" aria-label=\"Figure 10\"><image href=\"pages/book/0325.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 10</figcaption>\n</figure>",
+          "sourceSha256": "923dfd366320de1ad1ee3ad561c3698fbc7e0ffc41d7aefee824862473a5f3fe"
+        },
+        {
+          "id": "p306-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:386px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"38 575 386 238\" role=\"img\" aria-label=\"Figure 11\"><image href=\"pages/book/0325.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 11</figcaption>\n</figure>",
+          "sourceSha256": "cef884efb4ac56bc1aa22029c4aed04bbdfa2728e62d7a78e06fd59905d9cac6"
+        },
+        {
+          "id": "p306-b7",
+          "source": "**DEFINITION** If $-1\\le x\\le1$, then",
+          "sourceSha256": "3c00b35179d02475ccaeac93818a2f5f70cceb2fc3e96c43883174aa815ad1fa",
+          "translation": "**定义** 如果 $-1\\le x\\le1$，那么"
+        },
+        {
+          "id": "p306-b8",
+          "source": "$$A(x)=\\frac{x\\sqrt{1-x^2}}2+\\int_x^1\\sqrt{1-t^2}dt.$$",
+          "sourceSha256": "d69be38481944576522366415417393f1ffa2e674213036dabc4dc4fd91cb9a6"
+        },
+        {
+          "id": "p306-b9",
+          "source": "Notice that if $-1<x<1$, then $A$ is differentiable at $x$ and (using the Fundamental Theorem of Calculus),",
+          "sourceSha256": "8cf9148433793b5f9049f3ccd029244abff22a62e37bb83dd99a8ba1c76e5b6d",
+          "translation": "注意，如果 $-1<x<1$，那么 $A$ 在 $x$ 处可微，而且（利用微积分基本定理）"
+        },
+        {
+          "id": "p306-b10",
+          "source": "$$\\begin{aligned}A'(x)&=\\frac12\\left[x\\cdot\\frac{-2x}{2\\sqrt{1-x^2}}+\\sqrt{1-x^2}\\right]-\\sqrt{1-x^2}\\\\\n&=\\frac12\\left[\\frac{-x^2+(1-x^2)}{\\sqrt{1-x^2}}\\right]-\\sqrt{1-x^2}\\\\\n&=\\frac{1-2x^2}{2\\sqrt{1-x^2}}-\\sqrt{1-x^2}\\\\\n&=\\frac{1-2x^2-2(1-x^2)}{2\\sqrt{1-x^2}}\\\\\n&=\\frac{-1}{2\\sqrt{1-x^2}}.\\end{aligned}$$",
+          "sourceSha256": "ecc1d572bd7b8b7437d76f345998e4ad4a7495dc48b4a18ec378846619bac767"
+        },
+        {
+          "id": "p306-b11",
+          "source": "Notice also (Figure 12) that on the interval $[-1,1]$ the function $A$ decreases from",
+          "sourceSha256": "b695947526cf1d088b4066273d749c1bd06cacf56d3dd7fdd7dc39db9b1dcc60",
+          "translation": "还要注意（图 12），在区间 $[-1,1]$ 上，函数 $A$ 从"
+        },
+        {
+          "id": "p306-b12",
+          "source": "$$A(-1)=0+\\int_{-1}^1\\sqrt{1-t^2}dt=\\frac\\pi2$$",
+          "sourceSha256": "6d216c877b57000403a8f7dee900789095a115d6b6e8711ef81f85667cc93445"
+        },
+        {
+          "id": "p306-b13",
+          "source": "to $A(1)=0$. This follows directly from the definition of $A$, and also from the fact that its derivative is negative on $(-1,1)$.",
+          "sourceSha256": "61cd3790031f00fbb4f5162b76167641bc2d815ebfbc0b8f7368603d6ab11d3c",
+          "translation": "递减到 $A(1)=0$。这可以直接从 $A$ 的定义得到，也可以由它的导数在 $(-1,1)$ 上为负这一事实得到。"
+        },
+        {
+          "id": "p306-b14",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:303px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"46 864 303 298\" role=\"img\" aria-label=\"Figure 12\"><image href=\"pages/book/0325.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 12</figcaption>\n</figure>",
+          "sourceSha256": "43b5fea183e575296cddce29cb7313f6a946b76eb9f0a73146acf93cb73e1058"
+        },
+        {
+          "id": "p306-b15",
+          "source": "For $0\\le x\\le\\pi$ we wish to define $\\cos x$ and $\\sin x$ as the coordinates of a point $P=(\\cos x,\\sin x)$ on the unit circle which determines a sector whose area is $x/2$ (Figure 13). In other words:",
+          "sourceSha256": "2f68b13251d45535d8fd7aa64a951c2035c24e6e76c4593ca7b0c1df4308af7a",
+          "translation": "对于 $0\\le x\\le\\pi$，我们希望将 $\\cos x$ 和 $\\sin x$ 定义为单位圆上一点 $P=(\\cos x,\\sin x)$ 的坐标，使该点确定的扇形面积为 $x/2$（图 13）。换句话说："
+        },
+        {
+          "id": "p306-b16",
+          "source": "**DEFINITION** If $0\\le x\\le\\pi$, then **$\\cos x$** is the unique number in $[-1,1]$ such that",
+          "sourceSha256": "7fd5d4809252b54e848be9064a0d06ee6345ea13ce7044bbeb269c025b42cdb7",
+          "translation": "**定义** 如果 $0\\le x\\le\\pi$，那么 **$\\cos x$** 是 $[-1,1]$ 中使下式成立的唯一的数："
+        },
+        {
+          "id": "p306-b17",
+          "source": "$$A(\\cos x)=\\frac x2;$$",
+          "sourceSha256": "47eb55b7f69f24a2c2dbcb20b015262f9a713425c7ee95ba5d356e9e43f4d9ed"
+        },
+        {
+          "id": "p306-b18",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "并且"
+        },
+        {
+          "id": "p306-b19",
+          "source": "$$\\sin x=\\sqrt{1-(\\cos x)^2}.$$",
+          "sourceSha256": "2a6bbff6f9b5f2b263dba31014a92e4e325b329271db894a9c821a3ed3112003"
+        }
+      ]
+    },
+    {
+      "printed": 307,
+      "sourceSha256": "b25adc7f450f64e38924dbc49624d6e68e007a5e4daf9e4bbf48967836edd5bb",
+      "blocks": [
+        {
+          "id": "p307-b1",
+          "source": "This definition actually requires a few words of justification. In order to know that there is a number $y$ satisfying $A(y)=x/2$, we use the fact that $A$ is continuous, and that $A$ takes on the values $0$ and $\\pi/2$. This tacit appeal to the Intermediate Value Theorem is crucial, if we want to make our preliminary definition precise. Having made, and justified, our definition, we can now proceed quite rapidly.",
+          "sourceSha256": "7a4e33835e20fd466f4650a73627e6aae9e28f2a10b66f6cc9783ce4b11e12aa",
+          "translation": "这个定义实际上还需要几句论证。要知道确实存在一个数 $y$ 满足 $A(y)=x/2$，必须利用 $A$ 连续，以及 $A$ 取到 $0$ 和 $\\pi/2$ 这两个值的事实。如果想把初步的定义变得精确，这里对介值定理的默默使用至关重要。既然已经给出定义并论证了它的合理性，现在就能很快地向前推进。"
+        },
+        {
+          "id": "p307-b2",
+          "source": "**THEOREM 1** If $0<x<\\pi$, then",
+          "sourceSha256": "bad41b66c34f1d6ef42f184bc8b5c600de87b354619e62bc3abe4a8bd1e82763",
+          "translation": "**定理 1** 如果 $0<x<\\pi$，那么"
+        },
+        {
+          "id": "p307-b3",
+          "source": "$$\\begin{aligned}\\cos'(x)&=-\\sin x,\\\\\\sin'(x)&=\\cos x.\\end{aligned}$$",
+          "sourceSha256": "a4789ed9e699ca679832994e6da0d6f4afe4fb6c60a4a4e8bfd0083fe647e613"
+        },
+        {
+          "id": "p307-b4",
+          "source": "**PROOF** If $B=2A$, then the definition $A(\\cos x)=x/2$ can be written",
+          "sourceSha256": "8bf5435dc5e517b465c5d275be66f96f4e5815f63bd4afb1c441b6f7b02618fd",
+          "translation": "**证明** 如果 $B=2A$，那么定义 $A(\\cos x)=x/2$ 可以写成"
+        },
+        {
+          "id": "p307-b5",
+          "source": "$$B(\\cos x)=x;$$",
+          "sourceSha256": "62dbd163396b770750d7b119db2baabb8ddbabbc1cbce535514d829f70b3393a"
+        },
+        {
+          "id": "p307-b6",
+          "source": "in other words, cos is just the inverse of $B$. We have already computed that",
+          "sourceSha256": "d7ab0ffefd2fe04d8d1a3f017e376898e55188562cf0aa2346a80dccccd5910a",
+          "translation": "换句话说，cos 就是 $B$ 的反函数。我们已经算出"
+        },
+        {
+          "id": "p307-b7",
+          "source": "$$A'(x)=-\\frac1{2\\sqrt{1-x^2}},$$",
+          "sourceSha256": "fbede27883ae989cf3f47ad3b2adbf95bc55b3e7a818234f4514a7b1f24e7f6d"
+        },
+        {
+          "id": "p307-b8",
+          "source": "from which we conclude that",
+          "sourceSha256": "5e41de042cdcdb3bea35f6bcceb02bf5b4aa830f5bac775bbd5c736fcd0c54ad",
+          "translation": "由此得到"
+        },
+        {
+          "id": "p307-b9",
+          "source": "$$B'(x)=-\\frac1{\\sqrt{1-x^2}}.$$",
+          "sourceSha256": "4dec896af21b7953864fb09203c7df9afa70bb2f05f318b49b98b2262957e720"
+        },
+        {
+          "id": "p307-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:296px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"38 663 296 213\" role=\"img\" aria-label=\"Figure 13\"><image href=\"pages/book/0327.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 13</figcaption>\n</figure>",
+          "sourceSha256": "b58de4543085a21c1c99adb9bda4fd950ead6cf828ec7fd9edb48fb5f9fa2f2a"
+        },
+        {
+          "id": "p307-b11",
+          "source": "Consequently,",
+          "sourceSha256": "25837488c62c9eb55760f3ec62697b2c46f8988775e0626d641e0c728d8a4558",
+          "translation": "因此，"
+        },
+        {
+          "id": "p307-b12",
+          "source": "$$\\begin{aligned}\\cos'(x)&=(B^{-1})'(x)\\\\&=\\frac1{B'(B^{-1}(x))}\\\\\n&=\\frac1{-\\dfrac1{\\sqrt{1-[B^{-1}(x)]^2}}}\\\\\n&=-\\sqrt{1-(\\cos x)^2}\\\\&=-\\sin x.\\end{aligned}$$",
+          "sourceSha256": "0bbe40af0e7c515c2b072225ef40743c2c494991cfa56b59a63b8669e3b070a8"
+        },
+        {
+          "id": "p307-b13",
+          "source": "Since",
+          "sourceSha256": "98af1ed61831e6ab92bbb2a4d429344c8d0581c77d5c85311c5ed8a3207d2eea",
+          "translation": "由于"
+        },
+        {
+          "id": "p307-b14",
+          "source": "$$\\sin x=\\sqrt{1-(\\cos x)^2},$$",
+          "sourceSha256": "944e6599e9d93d63d4ab40eca8b0946f4bb59e59df13cf2ad2d375e37184e6e9"
+        },
+        {
+          "id": "p307-b15",
+          "source": "we also obtain",
+          "sourceSha256": "be02e1f0011e657a574a2d20a579de4ef1e3569a131ba0834b360d7170519345",
+          "translation": "还得到"
+        },
+        {
+          "id": "p307-b16",
+          "source": "$$\\begin{aligned}\\sin'(x)&=\\frac12\\cdot\\frac{-2\\cos x\\cdot\\cos'(x)}{\\sqrt{1-(\\cos x)^2}}\\\\\n&=\\frac{\\cos x\\sin x}{\\sin x}\\\\&=\\cos x.\\quad\\blacksquare\\end{aligned}$$",
+          "sourceSha256": "cd88c66116138d443ffb458772298f8dc69a86caa1471580cac6bdee03d4ee1f"
+        },
+        {
+          "id": "p307-b17",
+          "source": "The information contained in Theorem 1 can be used to sketch the graphs of",
+          "sourceSha256": "6da2709cb65a99850349718aba6520d70d8006c0aecd1656ac104157582233ce",
+          "translation": "定理 1 中的信息，可以用来画出"
+        }
+      ]
+    },
+    {
+      "printed": 308,
+      "sourceSha256": "49d167789650b304b958edd74a32616ee63ceeff82154c074a2e074ee65523c6",
+      "blocks": [
+        {
+          "id": "p308-b1",
+          "source": "sin and cos on the interval $[0,\\pi]$. Since",
+          "sourceSha256": "b73cd52bd742493787077e23107c8d82c1b90e2bde59925b977d808ff1ac4071",
+          "translation": "sin 和 cos 在区间 $[0,\\pi]$ 上的图像。由于"
+        },
+        {
+          "id": "p308-b2",
+          "source": "$$\\cos'(x)=-\\sin x<0,\\quad0<x<\\pi,$$",
+          "sourceSha256": "497c9c5aa02fb5ab64530b3ed61621a3dd4e50556ed6408f5598aca97631dd31"
+        },
+        {
+          "id": "p308-b3",
+          "source": "the function cos decreases from $\\cos0=1$ to $\\cos\\pi=-1$ (Figure 14). Consequently, $\\cos y=0$ for a unique $y$ in $[0,\\pi]$. To find $y$, we note that the definition of cos,",
+          "sourceSha256": "b1c4397f5e3f5f2a0679acee895af618277db6e4cabc95d30b877fe35995903f",
+          "translation": "函数 cos 从 $\\cos0=1$ 递减到 $\\cos\\pi=-1$（图 14）。因此，$[0,\\pi]$ 中恰好有一个 $y$ 使 $\\cos y=0$。为求出 $y$，注意 cos 的定义"
+        },
+        {
+          "id": "p308-b4",
+          "source": "$$A(\\cos x)=\\frac x2,$$",
+          "sourceSha256": "49ff4394da034b2a40aaa8cf76ed7405a3f93e6ea2c891e7534b3c14f4c8d240"
+        },
+        {
+          "id": "p308-b5",
+          "source": "means that",
+          "sourceSha256": "48ca4a834414dd3b7fec988c4c32b3a1a0f97f6fa06edc4654bdc253af912edb",
+          "translation": "意味着"
+        },
+        {
+          "id": "p308-b6",
+          "source": "$$A(0)=\\frac y2,$$",
+          "sourceSha256": "36930b00ccbfbd540c2e87765b29ce9d02eec84d220d78bde05fdd7a2ea26160"
+        },
+        {
+          "id": "p308-b7",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p308-b8",
+          "source": "$$y=2\\int_0^1\\sqrt{1-t^2}dt.$$",
+          "sourceSha256": "31ef36acb0b0ff34287c82ab3a00e9c1480450feef2cab2286bef0d6e01cc962"
+        },
+        {
+          "id": "p308-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:310px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"38 129 310 214\" role=\"img\" aria-label=\"Figure 14\"><image href=\"pages/book/0326.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 14</figcaption>\n</figure>",
+          "sourceSha256": "efd5747212f43d917c0d5c61e4ccb2f66e87151d619968b4ec7227431403d08d"
+        },
+        {
+          "id": "p308-b10",
+          "source": "It is easy to see that",
+          "sourceSha256": "3e61141e188c523c99545880b131cb297ddc559b720330be11d3ba889d57a298",
+          "translation": "容易看出"
+        },
+        {
+          "id": "p308-b11",
+          "source": "$$\\int_{-1}^0\\sqrt{1-t^2}dt=\\int_0^1\\sqrt{1-t^2}dt$$",
+          "sourceSha256": "5fe4628935236dfb746a7b9090b73561f76de3c1f747e8bc568a966ed4882d2f"
+        },
+        {
+          "id": "p308-b12",
+          "source": "so we can also write",
+          "sourceSha256": "b5ade9ea12ad3e4d20e46b711f7a3be6ce6deb13372c96b277028226b5c71a38",
+          "translation": "因此也可以写成"
+        },
+        {
+          "id": "p308-b13",
+          "source": "$$y=\\int_{-1}^1\\sqrt{1-t^2}dt=\\frac\\pi2.$$",
+          "sourceSha256": "38743fa06624ac8521b5424078afa9f45b82831ac2e02347c1f86dea56f74fa0"
+        },
+        {
+          "id": "p308-b14",
+          "source": "Now we have",
+          "sourceSha256": "1e2c38720a7f427853bd05986811c16b86eb37770818b17d7162cee2c3599490",
+          "translation": "现在有"
+        },
+        {
+          "id": "p308-b15",
+          "source": "$$\\sin'(x)=\\cos x\\begin{cases}>0,&0<x<\\pi/2\\\\<0,&\\pi/2<x<\\pi,\\end{cases}$$",
+          "sourceSha256": "b4f6cb927b24a6395750635152093bf7c4ea7acf13c28b30108382ad1aa11563"
+        },
+        {
+          "id": "p308-b16",
+          "source": "so sin increases on $[0,\\pi/2]$ from $\\sin0=0$ to $\\sin\\pi/2=1$, and then decreases on $[\\pi/2,\\pi]$ to $\\sin\\pi=0$ (Figure 15).",
+          "sourceSha256": "306da029f0af85895ffd8312afa9242fc047aa7eee2a5bd4fa8d5bdb6490dd34",
+          "translation": "所以 sin 在 $[0,\\pi/2]$ 上从 $\\sin0=0$ 递增到 $\\sin\\pi/2=1$，然后在 $[\\pi/2,\\pi]$ 上递减到 $\\sin\\pi=0$（图 15）。"
+        },
+        {
+          "id": "p308-b17",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:318px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"38 489 318 155\" role=\"img\" aria-label=\"Figure 15\"><image href=\"pages/book/0326.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 15</figcaption>\n</figure>",
+          "sourceSha256": "3befd0874464f8e4c841e5714eea52a332e7033931119950bcc4a40614f9e77d"
+        },
+        {
+          "id": "p308-b18",
+          "source": "The values of $\\sin x$ and $\\cos x$ for $x$ not in $[0,\\pi]$ are most easily defined by a two-step piecing together process:",
+          "sourceSha256": "c5ef540c5f96cd65f21d4a817f66edb86dd2226a0c0dc9462f6df135c50fd27a",
+          "translation": "当 $x$ 不属于 $[0,\\pi]$ 时，$\\sin x$ 和 $\\cos x$ 的值，最容易通过分两步拼接的方式来定义："
+        },
+        {
+          "id": "p308-b19",
+          "source": "(1) If $\\pi\\le x\\le2\\pi$, then",
+          "sourceSha256": "c9122ebe2451296fd33959a13b4bcb9e72bb23f30a145a28b1daab38bedbfcc6",
+          "translation": "(1) 如果 $\\pi\\le x\\le2\\pi$，那么"
+        },
+        {
+          "id": "p308-b20",
+          "source": "$$\\begin{aligned}\\sin x&=-\\sin(2\\pi-x),\\\\\\cos x&=\\cos(2\\pi-x).\\end{aligned}$$",
+          "sourceSha256": "3e9d5d5899b952780ccc60c06ba9afd79744d7d263354aeb814ccbec071b33bb"
+        },
+        {
+          "id": "p308-b21",
+          "source": "Figure 16 shows the graphs of sin and cos on $[0,2\\pi]$.",
+          "sourceSha256": "08c0cd6ced72b73f35d8d80355292411cdab7ce131c3021935f643364d35ac95",
+          "translation": "图 16 画出了 sin 和 cos 在 $[0,2\\pi]$ 上的图像。"
+        },
+        {
+          "id": "p308-b22",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:290px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"46 1011 290 415\" role=\"img\" aria-label=\"Figure 16\"><image href=\"pages/book/0326.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 16</figcaption>\n</figure>",
+          "sourceSha256": "3419f4b44e5a1f262a258c9f9174e386d7ae8871a39b48bebd13d0ec32c621a4"
+        },
+        {
+          "id": "p308-b23",
+          "source": "(2) If $x=2\\pi k+x'$ for some integer $k$, and some $x'$ in $[0,2\\pi]$, then",
+          "sourceSha256": "68814baa763b5042eebd043beac10495456c9649883f0590c27441271c16d888",
+          "translation": "(2) 如果对某个整数 $k$ 以及 $[0,2\\pi]$ 中某个 $x'$，有 $x=2\\pi k+x'$，那么"
+        },
+        {
+          "id": "p308-b24",
+          "source": "$$\\begin{aligned}\\sin x&=\\sin x',\\\\\\cos x&=\\cos x'.\\end{aligned}$$",
+          "sourceSha256": "6ee7c782401d5c7ef22c95686482f604a41f9906861b440a17d4c63d7462ecfb"
+        },
+        {
+          "id": "p308-b25",
+          "source": "Figure 17 shows the graphs of sin and cos, now defined on all of $\\mathbf R$.",
+          "sourceSha256": "b11d3c7463dba68fc6b70d0ec9107c033a245eb39ad7d41d42a7a7717d1f8a1b",
+          "translation": "图 17 画出了 sin 和 cos 的图像，它们现在已定义在整个 $\\mathbf R$ 上。"
+        },
+        {
+          "id": "p308-b26",
+          "source": "Having extended the functions sin and cos to $\\mathbf R$, we must now check that the basic properties of these functions continue to hold. In most cases this is easy. For example, it is clear that the equation",
+          "sourceSha256": "51b8d34226865336b3de8d5ecf179927f544e2ec31c545b7ecfd0b62b5305ad9",
+          "translation": "将函数 sin 和 cos 延拓到 $\\mathbf R$ 之后，现在必须验证这些函数的基本性质仍然成立。大多数情况下，这很容易。例如，显然等式"
+        },
+        {
+          "id": "p308-b27",
+          "source": "$$\\sin^2x+\\cos^2x=1$$",
+          "sourceSha256": "fa5acd6ad1d353b1533dd7c69c2d3e1555a93d80bd999939930171a3afee710d"
+        }
+      ]
+    },
+    {
+      "printed": 309,
+      "sourceSha256": "ed3e51803f7e756096263c159d54601f3c1c1a898fb9548f8ae8790e153a6a08",
+      "blocks": [
+        {
+          "id": "p309-b1",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"448 144 730 417\" role=\"img\" aria-label=\"Figure 17\"><image href=\"pages/book/0328.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 17</figcaption>\n</figure>",
+          "sourceSha256": "7d9f06a4440c18706293ff1964cf7c75ba65254ae9569b3bb22aaf73f84128c7"
+        },
+        {
+          "id": "p309-b2",
+          "source": "holds for all $x$. It is also not hard to prove that",
+          "sourceSha256": "56c81e4e593c3a3b9495ebbf9664faa355833681c68777c6996e3e4c5548382d",
+          "translation": "对所有 $x$ 都成立。也不难证明"
+        },
+        {
+          "id": "p309-b3",
+          "source": "$$\\begin{aligned}\\sin'(x)&=\\cos x,\\\\\\cos'(x)&=-\\sin x,\\end{aligned}$$",
+          "sourceSha256": "416b9103325338f3ce5ba5161f16a93def0277ab61424ff89ae4985c658c77b9"
+        },
+        {
+          "id": "p309-b4",
+          "source": "if $x$ is not a multiple of $\\pi$. For example, if $\\pi<x<2\\pi$, then",
+          "sourceSha256": "8e1e3ce78a4a15dd9bf39ddaafd46cada05b0f44b8e77b2f1cad9e6fd80772cf",
+          "translation": "只要 $x$ 不是 $\\pi$ 的整数倍。例如，如果 $\\pi<x<2\\pi$，那么"
+        },
+        {
+          "id": "p309-b5",
+          "source": "$$\\sin x=-\\sin(2\\pi-x),$$",
+          "sourceSha256": "dcdba30fa00d8bd1c9df225ee22284f7c17831693155f1d3278eeb5536936254"
+        },
+        {
+          "id": "p309-b6",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p309-b7",
+          "source": "$$\\begin{aligned}\\sin'(x)&=-\\sin'(2\\pi-x)\\cdot(-1)\\\\&=\\cos(2\\pi-x)\\\\&=\\cos x.\\end{aligned}$$",
+          "sourceSha256": "356e52ffe60a4f52991c13394c970d62fcc894ad888e19471ed58750d02fb2e7"
+        },
+        {
+          "id": "p309-b8",
+          "source": "If $x$ is a multiple of $\\pi$ we resort to a trick; it is only necessary to apply Theorem 11-7 to conclude that the same formulas are true in this case also.",
+          "sourceSha256": "ef3b9f3cf60d5f00ce34428eef10bdc89a5cede45caae9fb69f5fbba94a507d5",
+          "translation": "如果 $x$ 是 $\\pi$ 的整数倍，我们就借助一个技巧；只需应用定理 11-7，就能得出在这种情形中，同样的公式也成立。"
+        },
+        {
+          "id": "p309-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:603px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"448 1051 603 489\" role=\"img\" aria-label=\"Figure 18\"><image href=\"pages/book/0328.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n</figure>",
+          "sourceSha256": "b8cd3caa9108ff58a0222411fca1c15c6c11949331c7a467f83f0dea2db5ddcb"
+        }
+      ]
+    },
+    {
+      "printed": 310,
+      "sourceSha256": "ae12880a0b3d4198905f9bc5540a453fa98c24413aef7f108a0c49a5f069440e",
+      "blocks": [
+        {
+          "id": "p310-b1",
+          "source": "The other standard trigonometric functions present no difficulty at all. We define",
+          "sourceSha256": "3d4edce0e188b0b247b6ea9c86123a4251ebcbd1cc3ce8946c4ed2fcdda8ce1b",
+          "translation": "其他标准三角函数的定义毫无困难。我们定义"
+        },
+        {
+          "id": "p310-b2",
+          "source": "$$\\left.\\begin{aligned}\\sec x&=\\frac1{\\cos x}\\\\\\tan x&=\\frac{\\sin x}{\\cos x}\\end{aligned}\\right\\}\\quad x\\ne k\\pi+\\pi/2,$$",
+          "sourceSha256": "d7d4ddaab64081563d129ae3635ad174b130c0133b90a97012df3dd1750c3854"
+        },
+        {
+          "id": "p310-b3",
+          "source": "$$\\left.\\begin{aligned}\\csc x&=\\frac1{\\sin x}\\\\\\cot x&=\\frac{\\cos x}{\\sin x}\\end{aligned}\\right\\}\\quad x\\ne k\\pi.$$",
+          "sourceSha256": "e78f8c78c3e6107349719a677422aca5eff8d7d96fa114bbbc608475d81b8e48"
+        },
+        {
+          "id": "p310-b4",
+          "source": "The graphs are sketched in Figure 18. It is a good idea to convince yourself that the general features of these graphs can be predicted from the derivatives of these functions, which are listed in the next theorem (there is no need to memorize the statement of the theorem, since the results can be rederived whenever needed.)",
+          "sourceSha256": "edd573e92418e8a9a85110a062ed1e3b58ce9d64cb2a4f5effbfa8391e718cee",
+          "translation": "图 18 给出了它们的图像。你最好亲自确认，这些图像的大致特征可以从导数预测出来；下一个定理列出了这些导数（不必背诵定理的陈述，因为需要时随时可以重新推导）。"
+        },
+        {
+          "id": "p310-b5",
+          "source": "**THEOREM 2** If $x\\ne k\\pi+\\pi/2$, then",
+          "sourceSha256": "7d289ab618ad3d18527065f4b8fc06adffc066dd8028dd001a32817da1de7d6e",
+          "translation": "**定理 2** 如果 $x\\ne k\\pi+\\pi/2$，那么"
+        },
+        {
+          "id": "p310-b6",
+          "source": "$$\\begin{aligned}\\sec'(x)&=\\sec x\\tan x,\\\\\\tan'(x)&=\\sec^2x.\\end{aligned}$$",
+          "sourceSha256": "c70468ecc39e3e8b9c739949006c99053c4ac51fe731e6c0963f958ee76f31ee"
+        },
+        {
+          "id": "p310-b7",
+          "source": "If $x\\ne k\\pi$, then",
+          "sourceSha256": "4ab35943b037fefefd8ccf7555a28386cd22bc86b128a5c2ed6e8d6678cb5518",
+          "translation": "如果 $x\\ne k\\pi$，那么"
+        },
+        {
+          "id": "p310-b8",
+          "source": "$$\\begin{aligned}\\csc'(x)&=-\\csc x\\cot x,\\\\\\cot'(x)&=-\\csc^2x.\\end{aligned}$$",
+          "sourceSha256": "cc3e3d9c15131018ba8a2fad8d0f0f83624fbd89a074c917a22c5c7d686750a5"
+        },
+        {
+          "id": "p310-b9",
+          "source": "**PROOF** Left to you (a straightforward computation). ▮",
+          "sourceSha256": "28b571330cbbe7de353e898c3f27a3e0a41d9049a2e09359cbf627ecc7927e60",
+          "translation": "**证明** 留给你（直接计算即可）。▮"
+        },
+        {
+          "id": "p310-b10",
+          "source": "The inverses of the trigonometric functions are also easily differentiated. The trigonometric functions are not one-one, so it is first necessary to restrict them to suitable intervals; the largest possible length obtainable is $\\pi$, and the intervals usually chosen are (Figure 19)",
+          "sourceSha256": "b28f9ed403db3c70436d6714a55d4652bd16bfd59bdd7ffa7a659f28b5ef620b",
+          "translation": "三角函数的反函数也很容易求导。三角函数不是一一的，因此必须先将它们限制在适当的区间上；能够取得的最大区间长度为 $\\pi$，通常选取的区间是（图 19）"
+        },
+        {
+          "id": "p310-b11",
+          "source": "$$\\begin{aligned}[-\\pi/2,\\pi/2]&\\quad\\text{for sin},\\\\\n{}[0,\\pi]&\\quad\\text{for cos},\\\\\n(-\\pi/2,\\pi/2)&\\quad\\text{for tan}.\\end{aligned}$$",
+          "sourceSha256": "90f5f648f418bf4451a6ea406c6c8d1afb1942ed71e6a7378ac9b58aa6eade4f"
+        },
+        {
+          "id": "p310-b12",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:259px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"39 111 259 586\" role=\"img\" aria-label=\"Figure 19\"><image href=\"pages/book/0329.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 19</figcaption>\n</figure>",
+          "sourceSha256": "f2d39f115a59b3784cf671598379a9137184492815b31a7d787ef9164d27f513"
+        },
+        {
+          "id": "p310-b13",
+          "source": "(The inverses of the other trigonometric functions are so rarely used that they will not even be discussed here.)",
+          "sourceSha256": "7707d77f48da3f61236b62015b55d2d8e72649e3b77e57c18ec5b9e8343625a7",
+          "translation": "（其他三角函数的反函数使用得极少，因此这里甚至不予讨论。）"
+        },
+        {
+          "id": "p310-b14",
+          "source": "The inverse of the function",
+          "sourceSha256": "dcf8ea8a9969293a8a0e865a0c33ccac7b48f90647b13f8dadc4bc4b74e573fc",
+          "translation": "函数"
+        },
+        {
+          "id": "p310-b15",
+          "source": "$$f(x)=\\sin x,\\quad-\\pi/2\\le x\\le\\pi/2$$",
+          "sourceSha256": "7b699aa37a8fd6a4de6f0f1192efe71d9d666ffd37831ba34bc0f0e7dda34a94"
+        },
+        {
+          "id": "p310-b16",
+          "source": "is denoted by **arcsin** (Figure 20); the domain of arcsin is $[-1,1]$. The notation $\\sin^{-1}$ has been avoided because arcsin is not the inverse of sin (which is not one-one), but of the restricted function $f$; sometimes this function $f$ is denoted by Sin, and arcsin by $\\operatorname{Sin}^{-1}$.",
+          "sourceSha256": "7427c80248776205eaae2bd138c4ceeb42b57cf6ee879f1334c46f16d73a1014",
+          "translation": "的反函数记作 **arcsin**（图 20）；arcsin 的定义域为 $[-1,1]$。我们避免使用记号 $\\sin^{-1}$，因为 arcsin 不是 sin（它不是一一的）的反函数，而是限制后的函数 $f$ 的反函数；有时把这个函数 $f$ 记作 Sin，并把 arcsin 记作 $\\operatorname{Sin}^{-1}$。"
+        },
+        {
+          "id": "p310-b17",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:249px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"46 1007 249 492\" role=\"img\" aria-label=\"Figure 20\"><image href=\"pages/book/0329.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 20</figcaption>\n</figure>",
+          "sourceSha256": "adf026433cf477a24fe8f4a0afe15e9ea481a4b289c401dcbfc4fec1617ba446"
+        }
+      ]
+    },
+    {
+      "printed": 311,
+      "sourceSha256": "79e24663ef75ec515e46599568be348ffad1646f5cf5bb48e96b3196dec3acb4",
+      "blocks": [
+        {
+          "id": "p311-b1",
+          "source": "The inverse of the function",
+          "sourceSha256": "dcf8ea8a9969293a8a0e865a0c33ccac7b48f90647b13f8dadc4bc4b74e573fc",
+          "translation": "函数"
+        },
+        {
+          "id": "p311-b2",
+          "source": "$$g(x)=\\cos x,\\quad0\\le x\\le\\pi$$",
+          "sourceSha256": "8507a03a7a5c451129bc6f7564599a98b11ad9a7dd82948a58a2eae770ebf2af"
+        },
+        {
+          "id": "p311-b3",
+          "source": "is denoted by **arccos** (Figure 21); the domain of arccos is $[-1,1]$. Sometimes $g$ is denoted by Cos, and arccos by $\\operatorname{Cos}^{-1}$.",
+          "sourceSha256": "42a8a9bf32773fde2a461fab1b7a66d6b0f95eea786606a3e615b3a7c72d5397",
+          "translation": "的反函数记作 **arccos**（图 21）；arccos 的定义域为 $[-1,1]$。有时将 $g$ 记作 Cos，而将 arccos 记作 $\\operatorname{Cos}^{-1}$。"
+        },
+        {
+          "id": "p311-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:450px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"26 290 450 276\" role=\"img\" aria-label=\"Figure 21\"><image href=\"pages/book/0330.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 21</figcaption>\n</figure>",
+          "sourceSha256": "cf2d5d5ddabbebb3a627c14e754c41dd3a48ba53f7972f0dec5b9477fabbd23e"
+        },
+        {
+          "id": "p311-b5",
+          "source": "The inverse of the function",
+          "sourceSha256": "dcf8ea8a9969293a8a0e865a0c33ccac7b48f90647b13f8dadc4bc4b74e573fc",
+          "translation": "函数"
+        },
+        {
+          "id": "p311-b6",
+          "source": "$$h(x)=\\tan x,\\quad-\\pi/2<x<\\pi/2$$",
+          "sourceSha256": "1f9acf00b31cfb2628b8ec5914fb7fa5f42f6b99dca46d9874280c5d521ecada"
+        },
+        {
+          "id": "p311-b7",
+          "source": "is denoted by **arctan** (Figure 22); arctan is one of the simplest examples of a differentiable function which is bounded even though it is one-one on all of $\\mathbf R$. Sometimes the function $h$ is denoted by Tan, and arctan by $\\operatorname{Tan}^{-1}$.",
+          "sourceSha256": "67a95bcfcab5de957eab1fa7d5dfb1398143d9d6641dc63ec3a8d8f5c052a5a5",
+          "translation": "的反函数记作 **arctan**（图 22）；arctan 是这样一类可微函数最简单的例子之一：虽然在整个 $\\mathbf R$ 上一一，却仍然有界。有时将函数 $h$ 记作 Tan，而将 arctan 记作 $\\operatorname{Tan}^{-1}$。"
+        },
+        {
+          "id": "p311-b8",
+          "source": "The derivatives of the inverse trigonometric functions are surprisingly simple, and do not involve trigonometric functions at all. Finding the derivatives is a simple matter, but to express them in a suitable form we will have to simplify expressions like",
+          "sourceSha256": "ff7517b69227586d7690b64a89a5b050432df4ea120c7ba691d860acc691c550",
+          "translation": "反三角函数的导数简单得令人惊讶，完全不涉及三角函数。求导本身很简单，但为了把结果写成适当的形式，必须化简下面这样的表达式："
+        },
+        {
+          "id": "p311-b9",
+          "source": "$$\\cos(\\arcsin x),\\quad\\sec(\\arctan x).$$",
+          "sourceSha256": "0a62a18c4f66d790f4082d7a239de7074f728279e496ab84bdcf07f4bef26f2b"
+        },
+        {
+          "id": "p311-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:628px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"493 722 628 236\" role=\"img\" aria-label=\"Figure 22\"><image href=\"pages/book/0330.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 22</figcaption>\n</figure>",
+          "sourceSha256": "01637ef4ad31bbd9bda1203faa00714ee8c64d48518a30262ee3e569c16bcffd"
+        },
+        {
+          "id": "p311-b11",
+          "source": "A little picture is the best way to remember the correct simplifications. For example, Figure 23 shows a directed angle whose sine is $x$—the angle shown is thus an angle of $(\\arcsin x)$ radians; consequently $\\cos(\\arcsin x)$ is the length of the other side, namely, $\\sqrt{1-x^2}$. However, in the proof of the next theorem we will not resort to such pictures.",
+          "sourceSha256": "7bb62b6a13db312a297c2aeb7c5f03ecced8dc5e54aa621d27853bf1cf0cfa2f",
+          "translation": "画一个小图，是记住正确化简结果的最好办法。例如，图 23 画出了一个正弦值为 $x$ 的有向角——所以图中的角是 $(\\arcsin x)$ 弧度角；因此 $\\cos(\\arcsin x)$ 就是另一边的长度，即 $\\sqrt{1-x^2}$。不过，在下一个定理的证明中，我们不会求助于这样的图。"
+        },
+        {
+          "id": "p311-b12",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:144px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"50 1059 144 172\" role=\"img\" aria-label=\"Figure 23\"><image href=\"pages/book/0330.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 23</figcaption>\n</figure>",
+          "sourceSha256": "418504797e6124cf5ca00ea64958eac6c84d71ca0f8a91e7af886256f811ceba"
+        },
+        {
+          "id": "p311-b13",
+          "source": "**THEOREM 3** If $-1<x<1$, then",
+          "sourceSha256": "85fe78bdd785bc15f017603c6a3416ab5288f24aa1fbdf146fd793ac20b42074",
+          "translation": "**定理 3** 如果 $-1<x<1$，那么"
+        },
+        {
+          "id": "p311-b14",
+          "source": "$$\\begin{aligned}\\arcsin'(x)&=\\frac1{\\sqrt{1-x^2}},\\\\\n\\arccos'(x)&=\\frac{-1}{\\sqrt{1-x^2}}.\\end{aligned}$$",
+          "sourceSha256": "c4c59235feddd4cdd35d2cd175433fe056dc2d28a855d65a04b53c6ac7fb6261"
+        },
+        {
+          "id": "p311-b15",
+          "source": "Moreover, for all $x$ we have",
+          "sourceSha256": "e49a002c72fde7bfccaf44978b6eec7756aea5af9391e196982835d24c90a59d",
+          "translation": "此外，对所有 $x$，都有"
+        },
+        {
+          "id": "p311-b16",
+          "source": "$$\\arctan'(x)=\\frac1{1+x^2}.$$",
+          "sourceSha256": "05f77b0cf2f700c3328d1cd9afe6500002a66d2f8d0354677f9f8cea117bb9c7"
+        }
+      ]
+    },
+    {
+      "printed": 312,
+      "sourceSha256": "03e892811c285945418279f04cddfc7718353358e9d97615d8f67d9689e8e86a",
+      "blocks": [
+        {
+          "id": "p312-b1",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p312-b2",
+          "source": "$$\\begin{aligned}\\arcsin'(x)&=(f^{-1})'(x)\\\\\n&=\\frac1{f'(f^{-1}(x))}\\\\&=\\frac1{\\sin'(\\arcsin x)}\\\\&=\\frac1{\\cos(\\arcsin x)}.\\end{aligned}$$",
+          "sourceSha256": "dce87d2fa0ee1feba5daf394929a0c8da7236c9d12f743e07cfdc5ba33934e67"
+        },
+        {
+          "id": "p312-b3",
+          "source": "Now",
+          "sourceSha256": "fe18013d93d22f4f2a70344d30c00fe62d2ef29189ae5d25ccbda81fbd9c92b0",
+          "translation": "现在"
+        },
+        {
+          "id": "p312-b4",
+          "source": "$$[\\sin(\\arcsin x)]^2+[\\cos(\\arcsin x)]^2=1,$$",
+          "sourceSha256": "1b21f005bef9a5452f4d4dd4d363aef3c3855170a19f8e52c09f59da4dbf86c5"
+        },
+        {
+          "id": "p312-b5",
+          "source": "that is,",
+          "sourceSha256": "5647e274eb21c46ac72b17e43eb17c3f42c4cee66202d6dce25ecdaefba31d95",
+          "translation": "即"
+        },
+        {
+          "id": "p312-b6",
+          "source": "$$x^2+[\\cos(\\arcsin x)]^2=1;$$",
+          "sourceSha256": "ed7d97e914ecb99ac89d9a6a755b0472f9e9d3878c78897a2b347cd6df262b08"
+        },
+        {
+          "id": "p312-b7",
+          "source": "therefore,",
+          "sourceSha256": "0333b56a9b9eb4d134b28ad06f508ce4c641e3cc41f48ba51a814e51cca69ca0",
+          "translation": "因此，"
+        },
+        {
+          "id": "p312-b8",
+          "source": "$$\\cos(\\arcsin x)=\\sqrt{1-x^2}.$$",
+          "sourceSha256": "dbc40c977bbff9056e844e9947286b45b5fa558ddcfab90e12457a8770fd3e49"
+        },
+        {
+          "id": "p312-b9",
+          "source": "(The positive square root is to be taken because $\\arcsin x$ is in $(-\\pi/2,\\pi/2)$, so $\\cos(\\arcsin x)>0$.) This proves the first formula.",
+          "sourceSha256": "7e8c1bd12bb0c77167021f4dc051c4048baf75b94052047514c383e521341d94",
+          "translation": "（应取正平方根，因为 $\\arcsin x$ 位于 $(-\\pi/2,\\pi/2)$ 中，所以 $\\cos(\\arcsin x)>0$。）这就证明了第一个公式。"
+        },
+        {
+          "id": "p312-b10",
+          "source": "The second formula has already been established (in the proof of Theorem 1). It is also possible to imitate the proof for the first formula, a valuable exercise if that proof presented any difficulties. The third formula is proved as follows.",
+          "sourceSha256": "b147ec1c636453821a7a64a0b72b99acfbc86e2cf4e4fc1b3895ab4decc8ca74",
+          "translation": "第二个公式已经建立过（在定理 1 的证明中）。也可以模仿第一个公式的证明；如果你觉得那个证明有困难，这会是一道有价值的练习。第三个公式证明如下。"
+        },
+        {
+          "id": "p312-b11",
+          "source": "$$\\begin{aligned}\\arctan'(x)&=(h^{-1})'(x)\\\\\n&=\\frac1{h'(h^{-1}(x))}\\\\&=\\frac1{\\tan'(\\arctan x)}\\\\&=\\frac1{\\sec^2(\\arctan x)}.\\end{aligned}$$",
+          "sourceSha256": "8661c3dfa96d071c3fdae799a6a6db3272618385d908d72d3b495e1147c10976"
+        },
+        {
+          "id": "p312-b12",
+          "source": "Dividing both sides of the identity",
+          "sourceSha256": "f762602a845939bd9fe893ef8c3dcb8a59f268073ac60543e6bca011b21fa598",
+          "translation": "把恒等式"
+        },
+        {
+          "id": "p312-b13",
+          "source": "$$\\sin^2a+\\cos^2a=1$$",
+          "sourceSha256": "66ea5743f9764485797ef217057c3a90eee8cba1959979559b690717847a7746"
+        },
+        {
+          "id": "p312-b14",
+          "source": "by $\\cos^2a$ yields",
+          "sourceSha256": "0f61e568fb25322d6c8a0903ad04395b52671e408a720bd791972847d49f4876",
+          "translation": "两边都除以 $\\cos^2a$，得到"
+        },
+        {
+          "id": "p312-b15",
+          "source": "$$\\tan^2a+1=\\sec^2a.$$",
+          "sourceSha256": "510eabea1ff5bf9a5f4c6150e8632562fd734b2e8b0003286f5055360136499a"
+        },
+        {
+          "id": "p312-b16",
+          "source": "It follows that",
+          "sourceSha256": "6204539c6a801ce3ed340a5b52e72f42d1f21000d35fdcc77e1e34c6d2a854ab",
+          "translation": "由此得到"
+        },
+        {
+          "id": "p312-b17",
+          "source": "$$[\\tan(\\arctan x)]^2+1=\\sec^2(\\arctan x),$$",
+          "sourceSha256": "7542ebbcddc4eeafac91ad538f5a528fe6018687e428b5c221b91c84d95d7ccc"
+        },
+        {
+          "id": "p312-b18",
+          "source": "or",
+          "sourceSha256": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+          "translation": "或者"
+        },
+        {
+          "id": "p312-b19",
+          "source": "$$x^2+1=\\sec^2(\\arctan x),$$",
+          "sourceSha256": "1850a24e63c8103b6a72149749780be2cb9754e61273fff5d9c018af21cd5de0"
+        },
+        {
+          "id": "p312-b20",
+          "source": "which proves the third formula. ▮",
+          "sourceSha256": "11df30cf73e45ba712b700ccd9f200e128bedcab9060776ae59f3a9ac1f9a5b9",
+          "translation": "这就证明了第三个公式。▮"
+        },
+        {
+          "id": "p312-b21",
+          "source": "The traditional proof of the formula $\\sin'(x)=\\cos x$ (quite different from the one given here) is outlined in Problem 27. This proof depends upon first establishing",
+          "sourceSha256": "4141bc73df2034c7496b55a8ac0e74742706a4678fb9acf6012f2bce1618cfce",
+          "translation": "公式 $\\sin'(x)=\\cos x$ 的传统证明（与这里给出的证明十分不同），在习题 27 中作了概述。那个证明依赖于先建立"
+        }
+      ]
+    },
+    {
+      "printed": 313,
+      "sourceSha256": "824b3befbdd0234e07beed83323090d795e91c95cd3376de019cc7ad3f0ec122",
+      "blocks": [
+        {
+          "id": "p313-b1",
+          "source": "the limit",
+          "sourceSha256": "d8e42c6966ee829abb426f9a498211f9bfc5dd9ddc2e4640ec21ffae758de81a",
+          "translation": "极限"
+        },
+        {
+          "id": "p313-b2",
+          "source": "$$\\lim_{h\\to0}\\frac{\\sin h}h=1,$$",
+          "sourceSha256": "66105fcd95fa43b402ed36f406b54850e90551037715ebeb907ad6bff696878e"
+        },
+        {
+          "id": "p313-b3",
+          "source": "and the “addition formula”",
+          "sourceSha256": "841004a5a37c64d2c34a6fcb5ea9d1286c29c56d30d9ccea30d45d61374e794b",
+          "translation": "以及“加法公式”"
+        },
+        {
+          "id": "p313-b4",
+          "source": "$$\\sin(x+y)=\\sin x\\cos y+\\cos x\\sin y.$$",
+          "sourceSha256": "aa53954c17f3bcc2a06554c5f7c6ac6d274f54d0dc70e84d86cfa46859565977"
+        },
+        {
+          "id": "p313-b5",
+          "source": "Both of these formulas can be derived easily now that the derivative of sin and cos are known. The first is just the special case $\\sin'(0)=\\cos0$. The second depends on a beautiful characterization of the functions sin and cos. In order to derive this result we need a lemma whose proof involves a clever trick; a more straightforward proof will be supplied in Part IV.",
+          "sourceSha256": "0fff8ea6ded07031c8278a6b187dc4001a65464210130ae25916ffad1a1314cc",
+          "translation": "现在已经知道 sin 和 cos 的导数，这两个公式都很容易推导。第一个不过是特殊情形 $\\sin'(0)=\\cos0$。第二个则依赖于对函数 sin 和 cos 的一个优美刻画。为了推导这个结果，需要一个引理，其证明用到了一个巧妙的技巧；第四部分将给出一个更直接的证明。"
+        },
+        {
+          "id": "p313-b6",
+          "source": "**LEMMA** Suppose $f$ has a second derivative everywhere and that",
+          "sourceSha256": "024609b8c5fdd3678801bd7e5fa824def32c18039d247c1e28066c9188117916",
+          "translation": "**引理** 假设 $f$ 处处有二阶导数，并且"
+        },
+        {
+          "id": "p313-b7",
+          "source": "$$\\begin{aligned}f''+f&=0,\\\\f(0)&=0,\\\\f'(0)&=0.\\end{aligned}$$",
+          "sourceSha256": "0d3ea805e1cb1a76c0afb2f8665ad509de040b8ab981d9376970539414503e0c"
+        },
+        {
+          "id": "p313-b8",
+          "source": "Then $f=0$.",
+          "sourceSha256": "643516bbba8c4215042fe71f904df528a9609a3d6523b89bd1fea4181328ada2",
+          "translation": "那么 $f=0$。"
+        },
+        {
+          "id": "p313-b9",
+          "source": "**PROOF** Multiplying both sides of the first equation by $f'$ yields",
+          "sourceSha256": "dc234834c785cfcd114146f62f80b176f37f357bd82730107f6de895152c229d",
+          "translation": "**证明** 将第一个等式的两边乘以 $f'$，得到"
+        },
+        {
+          "id": "p313-b10",
+          "source": "$$f'f''+ff'=0.$$",
+          "sourceSha256": "53d9eefb0cee70bfece991bf6f991d7299ee56132f7084996664a52228085944"
+        },
+        {
+          "id": "p313-b11",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "于是"
+        },
+        {
+          "id": "p313-b12",
+          "source": "$$[(f')^2+f^2]'=2(f'f''+ff')=0,$$",
+          "sourceSha256": "90d5bcb67eacd039ae5aec17aaba2723128e7f1082908fb760ad4ba628ea60d7"
+        },
+        {
+          "id": "p313-b13",
+          "source": "so $(f')^2+f^2$ is a constant function. From $f(0)=0$ and $f'(0)=0$ it follows that the constant is $0$; thus",
+          "sourceSha256": "7e8e3ff4a5a099eab94eb6f869bb777384261500f9e548b7fa13420f1a6e3598",
+          "translation": "所以 $(f')^2+f^2$ 是常数函数。由 $f(0)=0$ 和 $f'(0)=0$ 可知，这个常数为 $0$；因此"
+        },
+        {
+          "id": "p313-b14",
+          "source": "$$[f'(x)]^2+[f(x)]^2=0\\quad\\text{for all }x.$$",
+          "sourceSha256": "bba702334b4836b68a6766dc8f2802dff9ed8c3c0cb147291a1773569629b2c5"
+        },
+        {
+          "id": "p313-b15",
+          "source": "This implies that",
+          "sourceSha256": "000b7be8338ee4e0c5b89dd697e2d9a3d329e68e6b774ac2637509385575f71e",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p313-b16",
+          "source": "$$f(x)=0\\quad\\text{for all }x.\\quad\\blacksquare$$",
+          "sourceSha256": "c5dda3fa7d87021671149edf0fe6bdd66b62a00273c31fa496774ff8cadfe758"
+        },
+        {
+          "id": "p313-b17",
+          "source": "**THEOREM 4** If $f$ has a second derivative everywhere and",
+          "sourceSha256": "024cedf0fd34c65248633e723eb15735ba3875144221d528918ae3a183e15789",
+          "translation": "**定理 4** 如果 $f$ 处处有二阶导数，而且"
+        },
+        {
+          "id": "p313-b18",
+          "source": "$$\\begin{aligned}f''+f&=0,\\\\f(0)&=a,\\\\f'(0)&=b,\\end{aligned}$$",
+          "sourceSha256": "caadbc6b5c4a3efbaf91b7d30ebbd1302a42d94b12781df3412506336c7ea441"
+        },
+        {
+          "id": "p313-b19",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p313-b20",
+          "source": "$$f=b\\cdot\\sin+a\\cdot\\cos.$$",
+          "sourceSha256": "2991ad10b4e3e0425955102c879b518cdde00f0c29be5816ed1a031a0d0a904e"
+        },
+        {
+          "id": "p313-b21",
+          "source": "(In particular, if $f(0)=0$ and $f'(0)=1$, then $f=\\sin$; if $f(0)=1$ and $f'(0)=0$, then $f=\\cos$.)",
+          "sourceSha256": "3f4e8bbc777644cb4ed1f8c99e444fd0b93f50075389f5705217433271e62a2d",
+          "translation": "（特别地，如果 $f(0)=0$ 且 $f'(0)=1$，那么 $f=\\sin$；如果 $f(0)=1$ 且 $f'(0)=0$，那么 $f=\\cos$。）"
+        }
+      ]
+    },
+    {
+      "printed": 314,
+      "sourceSha256": "c23fb170df06ebe3a095e1acd0c16a9507fbd3ee2b0b38613f51cd3ded335c0f",
+      "blocks": [
+        {
+          "id": "p314-b1",
+          "source": "**PROOF** Let",
+          "sourceSha256": "00975257967be9e73b079cf34e8ea88998a3fbfca30bf96d383c8c36bc439a20",
+          "translation": "**证明** 令"
+        },
+        {
+          "id": "p314-b2",
+          "source": "$$g(x)=f(x)-b\\sin x-a\\cos x.$$",
+          "sourceSha256": "a5ef9b3b3809b085ae8bc0be935cdd95f40e221b6cbe46fc0d5fd67997e09bf3"
+        },
+        {
+          "id": "p314-b3",
+          "source": "Then",
+          "sourceSha256": "0597f441dcca7c9bb0a79da4d94d03c523c031a3384009afff47ac1fd1a72b95",
+          "translation": "那么"
+        },
+        {
+          "id": "p314-b4",
+          "source": "$$\\begin{aligned}g'(x)&=f'(x)-b\\cos x+a\\sin x,\\\\\ng''(x)&=f''(x)+b\\sin x+a\\cos x.\\end{aligned}$$",
+          "sourceSha256": "c0ef137557142657804694018453e24efbd7800171f6e6eb624d6d3496694450"
+        },
+        {
+          "id": "p314-b5",
+          "source": "Consequently,",
+          "sourceSha256": "25837488c62c9eb55760f3ec62697b2c46f8988775e0626d641e0c728d8a4558",
+          "translation": "因此，"
+        },
+        {
+          "id": "p314-b6",
+          "source": "$$\\begin{aligned}g''+g&=0,\\\\g(0)&=0,\\\\g'(0)&=0,\\end{aligned}$$",
+          "sourceSha256": "43cb15f6a40c07ea7d113898cedfbef6160e504d43268177e96aa84e78c971a0"
+        },
+        {
+          "id": "p314-b7",
+          "source": "which shows that",
+          "sourceSha256": "15e0605ac8a8544c0fd25e712e835e401071f50abe3cf1deea2bf11eaedeb534",
+          "translation": "这表明"
+        },
+        {
+          "id": "p314-b8",
+          "source": "$$0=g(x)=f(x)-b\\sin x-a\\cos x,\\quad\\text{for all }x.\\quad\\blacksquare$$",
+          "sourceSha256": "f04766b03a123c4d78a04aa0ce6477c9ba11f549759f7656815847d0b34c6b7d"
+        },
+        {
+          "id": "p314-b9",
+          "source": "**THEOREM 5** If $x$ and $y$ are any two numbers, then",
+          "sourceSha256": "6e9184f4f9187ae1f7aeb7f390a67e07947eee7ead734c62cb93bba90b58cdc4",
+          "translation": "**定理 5** 如果 $x$ 和 $y$ 是任意两个数，那么"
+        },
+        {
+          "id": "p314-b10",
+          "source": "$$\\begin{aligned}\\sin(x+y)&=\\sin x\\cos y+\\cos x\\sin y,\\\\\n\\cos(x+y)&=\\cos x\\cos y-\\sin x\\sin y.\\end{aligned}$$",
+          "sourceSha256": "0846c7cd978a9318de56cbc46c5c0ee166c85ed62e1cafcdc79136a97e47b448"
+        },
+        {
+          "id": "p314-b11",
+          "source": "**PROOF** For any particular number $y$ we can define a function $f$ by",
+          "sourceSha256": "79bc9cc95de05eecc9457a97a76a0d86729477e30378dbad9ee64ae98d300d49",
+          "translation": "**证明** 对于任意一个固定的数 $y$，可以定义函数 $f$ 为"
+        },
+        {
+          "id": "p314-b12",
+          "source": "$$f(x)=\\sin(x+y).$$",
+          "sourceSha256": "88ca9d752f6c4304ca0d97a1472b775b86236a9ba2fa1facbfe0413237e53af5"
+        },
+        {
+          "id": "p314-b13",
+          "source": "Then",
+          "sourceSha256": "0597f441dcca7c9bb0a79da4d94d03c523c031a3384009afff47ac1fd1a72b95",
+          "translation": "那么"
+        },
+        {
+          "id": "p314-b14",
+          "source": "$$\\begin{aligned}f'(x)&=\\cos(x+y)\\\\f''(x)&=-\\sin(x+y).\\end{aligned}$$",
+          "sourceSha256": "75f7a263d72fa164610f0903b37bde0079a024db2aea2dbeb1eed4fb55f2aeee"
+        },
+        {
+          "id": "p314-b15",
+          "source": "Consequently,",
+          "sourceSha256": "25837488c62c9eb55760f3ec62697b2c46f8988775e0626d641e0c728d8a4558",
+          "translation": "因此，"
+        },
+        {
+          "id": "p314-b16",
+          "source": "$$\\begin{aligned}f''+f&=0,\\\\f(0)&=\\sin y,\\\\f'(0)&=\\cos y.\\end{aligned}$$",
+          "sourceSha256": "467901356b4907a39ab4027554bb6e970a93286adb46f75c8b1db55bb548b958"
+        },
+        {
+          "id": "p314-b17",
+          "source": "It follows from Theorem 4 that",
+          "sourceSha256": "8ee0ed0c9f61bcb2f2b075325705e8838a495406a1c1bcae9e5f912ad2a6bbee",
+          "translation": "由定理 4 得到"
+        },
+        {
+          "id": "p314-b18",
+          "source": "$$f=(\\cos y)\\cdot\\sin+(\\sin y)\\cdot\\cos;$$",
+          "sourceSha256": "c34a445205f71f8e2d9444474776f12488723ebf9d1e9e737c0fea46de9fab62"
+        },
+        {
+          "id": "p314-b19",
+          "source": "that is,",
+          "sourceSha256": "5647e274eb21c46ac72b17e43eb17c3f42c4cee66202d6dce25ecdaefba31d95",
+          "translation": "即"
+        },
+        {
+          "id": "p314-b20",
+          "source": "$$\\sin(x+y)=\\cos y\\sin x+\\sin y\\cos x,\\quad\\text{for all }x.$$",
+          "sourceSha256": "5244d8cb902184fd3abf9573dac483f1aa817ff19b6d0ba3d7f6ca8f9abe02e5"
+        },
+        {
+          "id": "p314-b21",
+          "source": "Since any number $y$ could have been chosen to begin with, this proves the first formula for all $x$ and $y$.",
+          "sourceSha256": "95b288a67605b5ff609f97865cdb9a0f1690635f0eff75e38f5f2e6014f958be",
+          "translation": "由于起初可以选取任意数 $y$，这就证明了第一个公式对所有 $x$ 和 $y$ 都成立。"
+        },
+        {
+          "id": "p314-b22",
+          "source": "The second formula is proved similarly. ▮",
+          "sourceSha256": "4e7e4d27e753f9d8caf59088baecbf91bb1588ca23c1c0c7e8e415f02faafe55",
+          "translation": "第二个公式的证明类似。▮"
+        },
+        {
+          "id": "p314-b23",
+          "source": "As a conclusion to this chapter, and as a prelude to Chapter 18, we will mention an alternative approach to the definition of the function sin. Since",
+          "sourceSha256": "2a553e92eec437766adbf6d2ef6b288e9e88925dd5025d879b54f715f5c2a106",
+          "translation": "作为本章的结束，也作为第 18 章的前奏，我们来提一下定义函数 sin 的另一条途径。由于"
+        },
+        {
+          "id": "p314-b24",
+          "source": "$$\\arcsin'(x)=\\frac1{\\sqrt{1-x^2}}\\quad\\text{for }-1<x<1,$$",
+          "sourceSha256": "c33011856b67b4c0951ad7c12a37c7e0dfe5989b0a3570ca6287cee3e585b479"
+        }
+      ]
+    },
+    {
+      "printed": 315,
+      "sourceSha256": "61050f3c4c69461b13246638887baeea1b8717c50f847335cf9d3ccaf0698032",
+      "blocks": [
+        {
+          "id": "p315-b1",
+          "source": "it follows from the Second Fundamental Theorem of Calculus that",
+          "sourceSha256": "7525aa8fa96da7dbbc22df330bd1d71441700074e169787f1c9ef46471e1ddfc",
+          "translation": "由微积分第二基本定理可知"
+        },
+        {
+          "id": "p315-b2",
+          "source": "$$\\arcsin x=\\arcsin x-\\arcsin0=\\int_0^x\\frac1{\\sqrt{1-t^2}}dt.$$",
+          "sourceSha256": "e749519e5eda2ae5956bfa4f14f547d9d776ebff2c3865beebb3a2e20f0185dd"
+        },
+        {
+          "id": "p315-b3",
+          "source": "This equation could have been taken as the *definition* of arcsin. It would follow immediately that",
+          "sourceSha256": "f678b01d5c903993ad7375f43f0f931aa0539b77dae690b5390510b4b09a121d",
+          "translation": "这个等式本来可以作为 arcsin 的*定义*。这样就能立即得到"
+        },
+        {
+          "id": "p315-b4",
+          "source": "$$\\arcsin'(x)=\\frac1{\\sqrt{1-x^2}};$$",
+          "sourceSha256": "04e9e6716e49b675aafa08af6fb2fa119be1f3e5186724f9a1adc055feb8021b"
+        },
+        {
+          "id": "p315-b5",
+          "source": "the function sin could then be defined as $(\\arcsin)^{-1}$ and the formula for the derivative of an inverse function would show that",
+          "sourceSha256": "9d2cf014d9a765f88bf3160cde540c4a802c3cfe4f293eae27248b3525f1852b",
+          "translation": "接着，可以把函数 sin 定义为 $(\\arcsin)^{-1}$，再由反函数的求导公式得到"
+        },
+        {
+          "id": "p315-b6",
+          "source": "$$\\sin'(x)=\\sqrt{1-\\sin^2x},$$",
+          "sourceSha256": "b49dad4aa08831e3ddd8711196cd770ff709bc8e4ecedddd8660f331ba7944d2"
+        },
+        {
+          "id": "p315-b7",
+          "source": "which could be defined as $\\cos x$. Eventually, one could show that $A(\\cos x)=x/2$, recovering at the very end of the development the definition with which we started. While much of this presentation would proceed more rapidly, the definition would be utterly unmotivated; the reasonableness of the definitions would be known to the author, but not to the student, for whom it was intended! Nevertheless, as we shall see in Chapter 18, an approach of this sort is sometimes very reasonable indeed.",
+          "sourceSha256": "091048ba47aa58a5aa5ab363f180d2e52ef65bea992b70b78be7593169599c39",
+          "translation": "而这又可以定义为 $\\cos x$。最终，可以证明 $A(\\cos x)=x/2$，在整个论述的最后，重新得到我们起初采用的定义。虽然这种讲法的许多步骤会进行得更快，但这个定义将毫无动机可言；定义的合理性只有作者知道，面向的学生却不知道！不过，正如第 18 章将看到的，这类方法有时确实非常合理。"
+        },
+        {
+          "id": "p315-b8",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p315-b9",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p315-b10",
+          "source": "Differentiate each of the following functions.",
+          "sourceSha256": "42e546c066394de1133468c4d1a97afbe0fcfc71797c3f42af24878351592d28",
+          "translation": "对下面每个函数求导。"
+        },
+        {
+          "id": "p315-b11",
+          "source": "(i) $f(x)=\\arctan(\\arctan(\\arctan x)).$",
+          "sourceSha256": "7e211c069a2f789bd943d8710665fa17f099b9bf6ae3158bcb4c1db9b6fdfaff"
+        },
+        {
+          "id": "p315-b12",
+          "source": "(ii) $f(x)=\\arcsin(\\arctan(\\arccos x)).$",
+          "sourceSha256": "6e4d6707a218eb036d6e676f7690dbd80148d52d8c0e1e64bad3f3f22410fd93"
+        },
+        {
+          "id": "p315-b13",
+          "source": "(iii) $f(x)=\\arctan(\\tan x\\arctan x).$",
+          "sourceSha256": "189ba799c38bbba663b25104d6b63cfb880ccf67b22cc5b02da026e307c33853"
+        },
+        {
+          "id": "p315-b14",
+          "source": "(iv) $\\displaystyle f(x)=\\arcsin\\left(\\frac1{\\sqrt{1+x^2}}\\right).$",
+          "sourceSha256": "781690a8937305bbc11202cac7c7f207fc822b4bbfbaf9476deb622b6013b7a0"
+        },
+        {
+          "id": "p315-b15",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p315-b16",
+          "source": "Find the following limits by l’Hôpital’s Rule.",
+          "sourceSha256": "e9222063b39b1a0c5a9247643bf702408fc6b9318f53bd82c92672f7e6a8cd58",
+          "translation": "用洛必达法则求下列极限。"
+        },
+        {
+          "id": "p315-b17",
+          "source": "(i) $\\displaystyle\\lim_{x\\to0}\\frac{\\sin x-x+x^3/6}{x^3}.$",
+          "sourceSha256": "335a42ea8adcfb21ae18bdedb999a82c5ebb15ff30f72808dd41b7b75e3408f7"
+        },
+        {
+          "id": "p315-b18",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to0}\\frac{\\sin x-x+x^3/6}{x^4}.$",
+          "sourceSha256": "aa8c1ada7be6e0ae3c38a97d35bc00ab757ba67c426f98eeae11e0de18cbbbdd"
+        },
+        {
+          "id": "p315-b19",
+          "source": "(iii) $\\displaystyle\\lim_{x\\to0}\\frac{\\cos x-1+x^2/2}{x^2}.$",
+          "sourceSha256": "53d894dcccbd029b7382823195f1c42bae647c82ab1608593c57f01aa7f5e56e"
+        },
+        {
+          "id": "p315-b20",
+          "source": "(iv) $\\displaystyle\\lim_{x\\to0}\\frac{\\cos x-1+x^2/2}{x^4}.$",
+          "sourceSha256": "956e478865c277eb26619779ae77479d549410f55d1f7b582222ef481fff2f6a"
+        },
+        {
+          "id": "p315-b21",
+          "source": "(v) $\\displaystyle\\lim_{x\\to0}\\frac{\\arctan x-x+x^3/3}{x^3}.$",
+          "sourceSha256": "c9c0a5ac53017ec3e0b24d3fa2837a94f2b1b3efd2d14a813757372b455097e3"
+        },
+        {
+          "id": "p315-b22",
+          "source": "(vi) $\\displaystyle\\lim_{x\\to0}\\left(\\frac1x-\\frac1{\\sin x}\\right).$",
+          "sourceSha256": "926f1ca87731cf215dd9abba6e8291e6700eede3564140a5838ce8e07fbfe794"
+        }
+      ]
+    },
+    {
+      "printed": 316,
+      "sourceSha256": "2681c1e21d8d98aec5ee2843ba60414c742b2dc3b8b448bd2069f31c610f8fb7",
+      "blocks": [
+        {
+          "id": "p316-b1",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p316-b2",
+          "source": "Let $\\displaystyle f(x)=\\begin{cases}\\dfrac{\\sin x}x,&x\\ne0\\\\1,&x=0.\\end{cases}$",
+          "sourceSha256": "1d30c37f66d99e16102913fb12f4ebb8c1c0e473fc6ac0b9333de5e9e41cc56e",
+          "translation": "令 $\\displaystyle f(x)=\\begin{cases}\\dfrac{\\sin x}x,&x\\ne0\\\\1,&x=0.\\end{cases}$"
+        },
+        {
+          "id": "p316-b3",
+          "source": "(a) Find $f'(0)$.",
+          "sourceSha256": "22500ed695d2a893b7ae97ecce0ec662fe70c6bc9acd10271c5dcce755f73991",
+          "translation": "(a) 求 $f'(0)$。"
+        },
+        {
+          "id": "p316-b4",
+          "source": "(b) Find $f''(0)$.",
+          "sourceSha256": "74afbaadf77235c5a6ee56e1e436a7cc494277222cf29f8e5ab9a78306f8505c",
+          "translation": "(b) 求 $f''(0)$。"
+        },
+        {
+          "id": "p316-b5",
+          "source": "At this point, you will almost certainly have to use l’Hôpital’s Rule, but in Chapter 24 we will be able to find $f^{(k)}(0)$ for all $k$, with almost no work at all.",
+          "sourceSha256": "312d7a3fdd23b950f34679f1d76ff79e08fb85ee3b40ceac67aa1a1038396198",
+          "translation": "到这一步，你几乎肯定必须使用洛必达法则；但到了第 24 章，我们将能够对所有 $k$，几乎不费力地求出 $f^{(k)}(0)$。"
+        },
+        {
+          "id": "p316-b6",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p316-b7",
+          "source": "Graph the following functions.",
+          "sourceSha256": "dc4a6b5b4e473416db2d6d07e96107aa7e8851c1b06230e4c2e66d4dc157f220",
+          "translation": "画出下列函数的图像。"
+        },
+        {
+          "id": "p316-b8",
+          "source": "(a) $f(x)=\\sin2x.$",
+          "sourceSha256": "906f2de4130f6fab52e0a6ae89e5c45244eaf8bfd2b87ae3ea673127248eac68"
+        },
+        {
+          "id": "p316-b9",
+          "source": "(b) $f(x)=\\sin(x^2)$. (A pretty respectable sketch of this graph can be obtained using only a picture of the graph of sin. Indeed, pure thought is your only hope in this problem, because determining the sign of the derivative $f'(x)=\\cos(x^2)\\cdot2x$ is no easier than determining the behavior of $f$ directly. The formula for $f'(x)$ does indicate one important fact, however—$f'(0)=0$, which must be true since $f$ is even, and which should be clear in your graph.)",
+          "sourceSha256": "8bbb539592e4386f1d7c314cc3d501d18ad3a9eca105e77d20760256ea43db97",
+          "translation": "(b) $f(x)=\\sin(x^2)$。（只凭 sin 的图像，就可以画出相当像样的草图。事实上，这道题唯一的希望就是纯粹思考，因为判断导数 $f'(x)=\\cos(x^2)\\cdot2x$ 的符号，并不比直接判断 $f$ 的变化更容易。不过，$f'(x)$ 的公式确实指出了一个重要事实——$f'(0)=0$；由于 $f$ 是偶函数，这必然成立，而且在你的图中也应清楚地表现出来。）"
+        },
+        {
+          "id": "p316-b10",
+          "source": "(c) $f(x)=\\sin x+\\sin2x$. (It will probably be instructive to first draw the graphs of $g(x)=\\sin x$ and $h(x)=\\sin2x$ carefully on the same set of axes, from $0$ to $2\\pi$, and guess what the sum will look like. You can easily find out how many critical points $f$ has on $[0,2\\pi]$ by considering the derivative of $f$. You can then determine the nature of these critical points by finding out the sign of $f$ at each point; your sketch will probably suggest the answer.)",
+          "sourceSha256": "0c50b22a4a31c91cef82e3501c58be81492c593902c43fad0d569909b3eca5eb",
+          "translation": "(c) $f(x)=\\sin x+\\sin2x$。（先在同一坐标系中，从 $0$ 到 $2\\pi$ 仔细画出 $g(x)=\\sin x$ 和 $h(x)=\\sin2x$ 的图像，再猜测它们的和是什么样子，可能很有启发。考虑 $f$ 的导数，就很容易确定 $f$ 在 $[0,2\\pi]$ 上有多少个临界点。然后，通过确定 $f$ 在每一点的符号，就可以判断这些临界点的性质；你的草图大概会提示答案。）"
+        },
+        {
+          "id": "p316-b11",
+          "source": "(d) $f(x)=\\tan x-x$. (First determine the behavior of $f$ in $(-\\pi/2,\\pi/2)$; in the intervals $(k\\pi-\\pi/2,k\\pi+\\pi/2)$ the graph of $f$ will look exactly the same, except moved up a certain amount. Why?)",
+          "sourceSha256": "c0b3cbf840027e15ed9f5a468013a2b715c8b9dd67d460cd46fdff8d5c3421a7",
+          "translation": "(d) $f(x)=\\tan x-x$。（先确定 $f$ 在 $(-\\pi/2,\\pi/2)$ 上的变化情况；在区间 $(k\\pi-\\pi/2,k\\pi+\\pi/2)$ 上，$f$ 的图像形状完全一样，只是向上移动了某个量。为什么？）"
+        },
+        {
+          "id": "p316-b12",
+          "source": "(e) $f(x)=\\sin x-x$. (The material in the Appendix to Chapter 11 will be particularly helpful for this function.)",
+          "sourceSha256": "60df5acf58761bb2425ecd562001f5225f6134f34bac1a0aedba6c0041ff34d4",
+          "translation": "(e) $f(x)=\\sin x-x$。（第 11 章附录的内容，对这个函数尤其有帮助。）"
+        },
+        {
+          "id": "p316-b13",
+          "source": "(f) $\\displaystyle f(x)=\\begin{cases}\\dfrac{\\sin x}x,&x\\ne0\\\\1,&x=0.\\end{cases}$",
+          "sourceSha256": "1a61ae09cf3f080ac9d13f457d481124452f36b785bbea4d8d02e6bc0d561b89"
+        },
+        {
+          "id": "p316-b14",
+          "source": "(Part (d) should enable you to determine approximately where the zeros of $f'$ are located. Notice that $f$ is even and continuous at $0$; also consider the size of $f$ for large $x$.)",
+          "sourceSha256": "334f232acbf778e16bb0ad2a5cc2762db5cbfb425085bcee719ef46b970e3092",
+          "translation": "（(d) 应当能帮助你大致确定 $f'$ 的零点位置。注意 $f$ 是偶函数，而且在 $0$ 处连续；还要考虑 $x$ 很大时 $f$ 的大小。）"
+        },
+        {
+          "id": "p316-b15",
+          "source": "(g) $f(x)=x\\sin x.$",
+          "sourceSha256": "436462bb97323687ebafffcf75ef178ee3bcc95cf80150913680dbbb9c5e24b5"
+        },
+        {
+          "id": "p316-b16",
+          "source": "### \\*5.",
+          "sourceSha256": "e3d6f6f84b1f496f75eae3b58ba1ea193dfc481f889a3fe6a0fb00f97a63563c"
+        },
+        {
+          "id": "p316-b17",
+          "source": "The *hyperbolic spiral* is the graph of the function $f(\\theta)=a/\\theta$ in polar coordinates (Chapter 4, Appendix 3). Sketch this curve, paying particular attention to its behavior for $\\theta$ close to $0$.",
+          "sourceSha256": "c5d2993b756bf6b892dfc5d9b1c3b09e506c170698fe4d9d45f7a820104f5bfa",
+          "translation": "*双曲螺线*是函数 $f(\\theta)=a/\\theta$ 在极坐标下的图像（第 4 章附录 3）。画出这条曲线，特别注意 $\\theta$ 接近 $0$ 时的情形。"
+        },
+        {
+          "id": "p316-b18",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p316-b19",
+          "source": "Prove the addition formula for cos.",
+          "sourceSha256": "954576d30ac13cb73f4b8edaaa3dc0428afd1f61d47b2036d6acd17918af20c2",
+          "translation": "证明 cos 的加法公式。"
+        }
+      ]
+    },
+    {
+      "printed": 317,
+      "sourceSha256": "41840cea9738ea4cd60a0b804ce54f981f1bf18e187ebea3bdc0ba78ebedf740",
+      "blocks": [
+        {
+          "id": "p317-b1",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p317-b2",
+          "source": "(a) From the addition formula for sin and cos derive formulas for $\\sin2x$, $\\cos2x$, $\\sin3x$, and $\\cos3x$.",
+          "sourceSha256": "c064e8706760525d0f7d990290aeea50d6930ebca6edfcd19462bd5aa4a0cb87",
+          "translation": "(a) 从 sin 和 cos 的加法公式推导 $\\sin2x$、$\\cos2x$、$\\sin3x$ 和 $\\cos3x$ 的公式。"
+        },
+        {
+          "id": "p317-b3",
+          "source": "(b) Use these formulas to find the following values of the trigonometric functions (usually deduced by geometric arguments in elementary trigonometry):",
+          "sourceSha256": "68bec208c079e9b4859d209c3772dfe28e47d9a86f3fa70e7e3e77695dce2b13",
+          "translation": "(b) 利用这些公式，求出下列三角函数值（初等三角学中通常通过几何论证得到）："
+        },
+        {
+          "id": "p317-b4",
+          "source": "$$\\begin{aligned}\\sin\\frac\\pi4&=\\cos\\frac\\pi4=\\frac{\\sqrt2}2,\\\\\n\\tan\\frac\\pi4&=1,\\\\\\sin\\frac\\pi6&=\\frac12,\\\\\\cos\\frac\\pi6&=\\frac{\\sqrt3}2.\\end{aligned}$$",
+          "sourceSha256": "29a3a7efe701ccad0e5a99aace8c67a657e76c8049a7f6ccffd19b10dc1ac622"
+        },
+        {
+          "id": "p317-b5",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p317-b6",
+          "source": "(a) Show that $A\\sin(x+B)$ can be written as $a\\sin x+b\\cos x$ for suitable $a$ and $b$. (One of the theorems in this chapter provides a one-line proof. You should also be able to figure out what $a$ and $b$ are.)",
+          "sourceSha256": "51904ada5c5e4ab8c5c44211fc5d8765c3bdd4c21ba876b44132e3fb18c6b018",
+          "translation": "(a) 证明：选取适当的 $a$ 和 $b$，可以把 $A\\sin(x+B)$ 写成 $a\\sin x+b\\cos x$。（本章某个定理提供了一个只有一行的证明。你也应该能弄清 $a$ 和 $b$ 是什么。）"
+        },
+        {
+          "id": "p317-b7",
+          "source": "(b) Conversely, given $a$ and $b$, find numbers $A$ and $B$ such that $a\\sin x+b\\cos x=A\\sin(x+B)$ for all $x$.",
+          "sourceSha256": "451e06fee43ac1cbee5af9ab2c1cda8eaebb164c4386e0e9fcae6e8c63fc1a9f",
+          "translation": "(b) 反过来，给定 $a$ 和 $b$，求数 $A$ 和 $B$，使得对所有 $x$ 都有 $a\\sin x+b\\cos x=A\\sin(x+B)$。"
+        },
+        {
+          "id": "p317-b8",
+          "source": "(c) Use part (b) to graph $f(x)=\\sqrt3\\sin x+\\cos x$.",
+          "sourceSha256": "7cd9a1b4420263918be59ad410b3200bc755cc71430794290415d5902d0ab527",
+          "translation": "(c) 利用 (b)，画出 $f(x)=\\sqrt3\\sin x+\\cos x$ 的图像。"
+        },
+        {
+          "id": "p317-b9",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p317-b10",
+          "source": "(a) Prove that",
+          "sourceSha256": "5fd957c03a4a5c36f0dc505bfedc633c34bfb7dc8fb6d6e0639736d4fcc5d37c",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p317-b11",
+          "source": "$$\\tan(x+y)=\\frac{\\tan x+\\tan y}{1-\\tan x\\tan y}$$",
+          "sourceSha256": "a6960226343a9d620ef21ed104f594004f237f52cae75ece23ff446b31703f50"
+        },
+        {
+          "id": "p317-b12",
+          "source": "provided that $x$, $y$, and $x+y$ are not of the form $k\\pi+\\pi/2$. (Use the addition formulas for sin and cos.)",
+          "sourceSha256": "7c47d32665e95681a9ad9ad70a028ad04e4bed372163b7c394e3a00a5eb13755",
+          "translation": "前提是 $x$、$y$ 和 $x+y$ 都不具有 $k\\pi+\\pi/2$ 的形式。（使用 sin 和 cos 的加法公式。）"
+        },
+        {
+          "id": "p317-b13",
+          "source": "(b) Prove that",
+          "sourceSha256": "c01c6f723571a0bec9b72e9c13def70ffca88ba56ed84a156f192129403a5fdb",
+          "translation": "(b) 证明"
+        },
+        {
+          "id": "p317-b14",
+          "source": "$$\\arctan x+\\arctan y=\\arctan\\left(\\frac{x+y}{1-xy}\\right),$$",
+          "sourceSha256": "fad4db080592b14b35d7d4341c8d195f3f3dacd6bbb349fe4ab344aa8ff6694f"
+        },
+        {
+          "id": "p317-b15",
+          "source": "indicating any necessary restrictions on $x$ and $y$. Hint: Replace $x$ by $\\arctan x$ and $y$ by $\\arctan y$ in part (a).",
+          "sourceSha256": "a9ce5bbe93354c02f76f50c98b021c4d9b7d1d17b08a8af18d7d10977ef8113a",
+          "translation": "并指出对 $x$ 和 $y$ 所需的任何限制。提示：在 (a) 中，把 $x$ 换成 $\\arctan x$，把 $y$ 换成 $\\arctan y$。"
+        },
+        {
+          "id": "p317-b16",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p317-b17",
+          "source": "Prove that",
+          "sourceSha256": "bd05d81834d558ff6258ab898c195fc8fed52ba9be04f6f90e4270d8bdb0bbcb",
+          "translation": "证明"
+        },
+        {
+          "id": "p317-b18",
+          "source": "$$\\arcsin\\alpha+\\arcsin\\beta=\\arcsin\\left(\\alpha\\sqrt{1-\\beta^2}+\\beta\\sqrt{1-\\alpha^2}\\right),$$",
+          "sourceSha256": "3293aa6fd316b46b19e34e35360453f07c4a4a274abdea0d8149b67766750b05"
+        },
+        {
+          "id": "p317-b19",
+          "source": "indicating any restrictions on $\\alpha$ and $\\beta$.",
+          "sourceSha256": "43f968dae789840f659d2b1797a01dbeb082cea151c89c4b6b000c241983b1c0",
+          "translation": "并指出对 $\\alpha$ 和 $\\beta$ 的任何限制。"
+        },
+        {
+          "id": "p317-b20",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p317-b21",
+          "source": "Prove that if $m$ and $n$ are any numbers, then",
+          "sourceSha256": "572e045eecab4779cc40f6fae9d3eedfb6a2359ccd6be09c879adbdce738cb84",
+          "translation": "证明：如果 $m$ 和 $n$ 是任意数，那么"
+        },
+        {
+          "id": "p317-b22",
+          "source": "$$\\begin{aligned}\\sin mx\\sin nx&=\\tfrac12[\\cos(m-n)x-\\cos(m+n)x],\\\\\n\\sin mx\\cos nx&=\\tfrac12[\\sin(m+n)x+\\sin(m-n)x],\\\\\n\\cos mx\\cos nx&=\\tfrac12[\\cos(m+n)x+\\cos(m-n)x].\\end{aligned}$$",
+          "sourceSha256": "f546ebae1ddb744f472665d168d9a4ed26fcb5239a95179dc554594ca3aa0a26"
+        }
+      ]
+    },
+    {
+      "printed": 318,
+      "sourceSha256": "b3806949c5090be504a8285401b96c152180b84361b1df02cbc32d6e6cf07c79",
+      "blocks": [
+        {
+          "id": "p318-b1",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p318-b2",
+          "source": "Prove that if $m$ and $n$ are natural numbers, then",
+          "sourceSha256": "fa131df7750651e79c1b30147b96f1a6ea1bef75395f731dd01221240318a1ed",
+          "translation": "证明：如果 $m$ 和 $n$ 是自然数，那么"
+        },
+        {
+          "id": "p318-b3",
+          "source": "$$\\int_{-\\pi}^\\pi\\sin mx\\sin nx\\,dx=\\begin{cases}0,&m\\ne n\\\\\\pi,&m=n,\\end{cases}$$",
+          "sourceSha256": "8c8ec180c89429cc22d5847ce582f61822dcd084d5fa1b55c17eba951b2bac8e"
+        },
+        {
+          "id": "p318-b4",
+          "source": "$$\\int_{-\\pi}^\\pi\\cos mx\\cos nx\\,dx=\\begin{cases}0,&m\\ne n\\\\\\pi,&m=n,\\end{cases}$$",
+          "sourceSha256": "0fc2b5eba0ed867b4bd0df259cb423a5e38a6616ba295eeef57c65f5365f8072"
+        },
+        {
+          "id": "p318-b5",
+          "source": "$$\\int_{-\\pi}^\\pi\\sin mx\\cos nx\\,dx=0.$$",
+          "sourceSha256": "44ab9a9d14d9a086a62fd0c946aa35c04aab3285519c5aa53a66ffc8511c54d3"
+        },
+        {
+          "id": "p318-b6",
+          "source": "These relations are particularly important in the theory of Fourier series. Although this topic will receive serious attention only in the Suggested Reading (see reference [26]), the next problem provides a hint as to their importance.",
+          "sourceSha256": "4bb8ad51ee992ae8996ea566c5ffadaaa117bc9e61e6f1db6cb0e61c72e96467",
+          "translation": "这些关系在傅里叶级数理论中特别重要。虽然只有在“推荐阅读”（见参考文献 [26]）中才会认真讨论这个主题，但下一题会提示它们的重要性。"
+        },
+        {
+          "id": "p318-b7",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p318-b8",
+          "source": "(a) If $f$ is integrable on $[-\\pi,\\pi]$, show that the minimum value of",
+          "sourceSha256": "f780046d1a46f5485eddfde439f870daa268b98d14a2d113a04ccd565d1aa542",
+          "translation": "(a) 如果 $f$ 在 $[-\\pi,\\pi]$ 上可积，证明下面的式子取得最小值"
+        },
+        {
+          "id": "p318-b9",
+          "source": "$$\\int_{-\\pi}^\\pi(f(x)-a\\cos nx)^2dx$$",
+          "sourceSha256": "ce60ed7a63b4118c46bd1094b167f7d66b58ed9bd34e3ad7d0ae9fe66f390f5a"
+        },
+        {
+          "id": "p318-b10",
+          "source": "occurs when",
+          "sourceSha256": "c1b1558b52066135db96aa5d8be7ce270377fcb08ccce7ba9ca4fd220e8bbee4",
+          "translation": "当"
+        },
+        {
+          "id": "p318-b11",
+          "source": "$$a=\\frac1\\pi\\int_{-\\pi}^\\pi f(x)\\cos nx\\,dx,$$",
+          "sourceSha256": "ed9e6f60e43ca5322445f42a0e5f8410478d0b9854e15b3956d9a83fe576d2f5"
+        },
+        {
+          "id": "p318-b12",
+          "source": "and the minimum value of",
+          "sourceSha256": "3c9f2999e7be38e76e520ebb1f798f686eda167c2ffc2a116a71af7d2af3bfaf",
+          "translation": "而下面的式子取得最小值"
+        },
+        {
+          "id": "p318-b13",
+          "source": "$$\\int_{-\\pi}^\\pi(f(x)-a\\sin nx)^2dx$$",
+          "sourceSha256": "cd812f3956f7dc1037f614bb2235963c8b556776bd48aa5734feb8373d12b3c7"
+        },
+        {
+          "id": "p318-b14",
+          "source": "when",
+          "sourceSha256": "15eaa75240aed625be3e142205df3adbbb7051802b32f450e40276be8582b6d8",
+          "translation": "当"
+        },
+        {
+          "id": "p318-b15",
+          "source": "$$a=\\frac1\\pi\\int_{-\\pi}^\\pi f(x)\\sin nx\\,dx.$$",
+          "sourceSha256": "ebe306c70f7f58b6a518f8aed4fe8f5f5850371df0f5027a4ed352229fc1bbc3"
+        },
+        {
+          "id": "p318-b16",
+          "source": "(In each case, bring $a$ outside the integral sign, obtaining a quadratic expression in $a$.)",
+          "sourceSha256": "207e518e6cee7721135e0b160b79893328beb93b6463952f42b878a2d1101845",
+          "translation": "（在每一种情形中，把 $a$ 提到积分号外，就得到一个关于 $a$ 的二次式。）"
+        },
+        {
+          "id": "p318-b17",
+          "source": "(b) Define",
+          "sourceSha256": "7856f1d6002f291add1b18d8e7657c5af4c03a89c69e86ff29453e9e9edb4f74",
+          "translation": "(b) 定义"
+        },
+        {
+          "id": "p318-b18",
+          "source": "$$\\begin{aligned}a_n&=\\frac1\\pi\\int_{-\\pi}^\\pi f(x)\\cos nx\\,dx,\\quad n=0,1,2,\\ldots,\\\\\nb_n&=\\frac1\\pi\\int_{-\\pi}^\\pi f(x)\\sin nx\\,dx,\\quad n=1,2,3,\\ldots.\\end{aligned}$$",
+          "sourceSha256": "dc4d007b4db2e27c582442fda527d7a8b416e73b7210e30371b0d804d43a5ee9"
+        },
+        {
+          "id": "p318-b19",
+          "source": "Show that if $c_i$ and $d_i$ are any numbers, then",
+          "sourceSha256": "0820b682a205262745e3aacae35e269864f561e85ec3b95c5c0c283fcd4c2574",
+          "translation": "证明：如果 $c_i$ 和 $d_i$ 是任意数，那么"
+        },
+        {
+          "id": "p318-b20",
+          "source": "$$\\begin{aligned}\n&\\int_{-\\pi}^\\pi\\left(f(x)-\\left[\\frac{c_0}2+\\sum_{n=1}^N c_n\\cos nx+d_n\\sin nx\\right]\\right)^2dx\\\\\n&=\\int_{-\\pi}^\\pi[f(x)]^2dx-2\\pi\\left(\\frac{a_0c_0}2+\\sum_{n=1}^N a_nc_n+b_nd_n\\right)+\\pi\\left(\\frac{c_0^2}2+\\sum_{n=1}^N c_n^2+d_n^2\\right)\\\\\n&=\\int_{-\\pi}^\\pi[f(x)]^2dx-\\pi\\left(\\frac{a_0^2}2+\\sum_{n=1}^N a_n^2+b_n^2\\right)\\\\\n&\\qquad+\\pi\\left(\\left(\\frac{c_0}{\\sqrt2}-\\frac{a_0}{\\sqrt2}\\right)^2+\\sum_{n=1}^N(c_n-a_n)^2+(d_n-b_n)^2\\right),\n\\end{aligned}$$",
+          "sourceSha256": "7bdd223e22acdf06b5eade5a69116baff1a35a72e4512544b9a3a4235c8404d4"
+        }
+      ]
+    },
+    {
+      "printed": 319,
+      "sourceSha256": "ae4b57438a1aa0cd188134fab11e2ba611dc32942272a7bb9576a672e9055f3d",
+      "blocks": [
+        {
+          "id": "p319-b1",
+          "source": "thus showing that the first integral is smallest when $a_i=c_i$ and $b_i=d_i$. In other words, among all “linear combinations” of the functions $s_n(x)=\\sin nx$ and $c_n(x)=\\cos nx$ for $1\\le n\\le N$, the particular function",
+          "sourceSha256": "14f2b10b7f7632a7ab0f0e928294ef48e5503bc0d1ea6d738a128f1f75d740c6",
+          "translation": "从而表明，第一个积分在 $a_i=c_i$ 且 $b_i=d_i$ 时最小。换句话说，在函数 $s_n(x)=\\sin nx$ 和 $c_n(x)=\\cos nx$（$1\\le n\\le N$）的所有“线性组合”中，特定的函数"
+        },
+        {
+          "id": "p319-b2",
+          "source": "$$g(x)=\\frac{a_0}2+\\sum_{n=1}^N a_n\\cos nx+b_n\\sin nx$$",
+          "sourceSha256": "d51234bc6baae6bbcfbf004b04652f7eabe1639e59c04b2db826397de8a4c1ab"
+        },
+        {
+          "id": "p319-b3",
+          "source": "has the “closest fit” to $f$ on $[-\\pi,\\pi]$.",
+          "sourceSha256": "8b224cb179088fbe0f52ad057dc195fe5eb59b116ca186881b444e73dda10789",
+          "translation": "在 $[-\\pi,\\pi]$ 上与 $f$ “拟合得最接近”。"
+        },
+        {
+          "id": "p319-b4",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p319-b5",
+          "source": "(a) Find a formula for $\\sin x+\\sin y$. (Notice that this also gives a formula for $\\sin x-\\sin y$.) Hint: First find a formula for $\\sin(a+b)+\\sin(a-b)$. What good does that do?",
+          "sourceSha256": "ccd88fde58b8cf09403284166c70e7d9016b459e966d0d0ff7365be060355d34",
+          "translation": "(a) 求 $\\sin x+\\sin y$ 的公式。（注意，这也给出了 $\\sin x-\\sin y$ 的公式。）提示：先求 $\\sin(a+b)+\\sin(a-b)$ 的公式。这能帮上什么忙？"
+        },
+        {
+          "id": "p319-b6",
+          "source": "(b) Also find a formula for $\\cos x+\\cos y$ and $\\cos x-\\cos y$.",
+          "sourceSha256": "d5c45047558757a68d2ad3dfe1603c76a2a19700873662660ad3f83f18bc8185",
+          "translation": "(b) 再求 $\\cos x+\\cos y$ 和 $\\cos x-\\cos y$ 的公式。"
+        },
+        {
+          "id": "p319-b7",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p319-b8",
+          "source": "(a) Starting from the formula for $\\cos2x$, derive formulas for $\\sin^2x$ and $\\cos^2x$ in terms of $\\cos2x$.",
+          "sourceSha256": "cd4087063876319044d00742fa62311cbf8f709e826e86e49c96b94192e23536",
+          "translation": "(a) 从 $\\cos2x$ 的公式出发，推导用 $\\cos2x$ 表示 $\\sin^2x$ 和 $\\cos^2x$ 的公式。"
+        },
+        {
+          "id": "p319-b9",
+          "source": "(b) Prove that",
+          "sourceSha256": "c01c6f723571a0bec9b72e9c13def70ffca88ba56ed84a156f192129403a5fdb",
+          "translation": "(b) 证明"
+        },
+        {
+          "id": "p319-b10",
+          "source": "$$\\cos\\frac x2=\\sqrt{\\frac{1+\\cos x}2}\\quad\\text{and}\\quad\\sin\\frac x2=\\sqrt{\\frac{1-\\cos x}2}$$",
+          "sourceSha256": "7cebeb3e75faae1f25132eb4e54fc5a74d2a646f061b6bb498569324dea887a8"
+        },
+        {
+          "id": "p319-b11",
+          "source": "for $0\\le x\\le\\pi/2$.",
+          "sourceSha256": "e4d6ab510a471447fe2f477200886053bc6e006deec49c702d90228e6be0a0e9",
+          "translation": "对 $0\\le x\\le\\pi/2$ 成立。"
+        },
+        {
+          "id": "p319-b12",
+          "source": "(c) Use part (a) to find $\\int_a^b\\sin^2x\\,dx$ and $\\int_a^b\\cos^2x\\,dx$.",
+          "sourceSha256": "f72d44c7c935272179c4d8a1012c5c7dc5832ab25a4995ffdc921f1415f8752e",
+          "translation": "(c) 利用 (a)，求 $\\int_a^b\\sin^2x\\,dx$ 和 $\\int_a^b\\cos^2x\\,dx$。"
+        },
+        {
+          "id": "p319-b13",
+          "source": "(d) Graph $f(x)=\\sin^2x$.",
+          "sourceSha256": "2237d78e92b496e72b97bcf049b370603387510e264f229149174e242b9e4d87",
+          "translation": "(d) 画出 $f(x)=\\sin^2x$ 的图像。"
+        },
+        {
+          "id": "p319-b14",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p319-b15",
+          "source": "Find $\\sin(\\arctan x)$ and $\\cos(\\arctan x)$ as expressions not involving trigonometric functions. Hint: $y=\\arctan x$ means that $x=\\tan y=\\sin y/\\cos y=\\sin y/\\sqrt{1-\\sin^2y}$.",
+          "sourceSha256": "eb76b0d9ee215bf5cead49f54b3664711516cdf17207a39397208da09642bb42",
+          "translation": "将 $\\sin(\\arctan x)$ 和 $\\cos(\\arctan x)$ 写成不含三角函数的表达式。提示：$y=\\arctan x$ 意味着 $x=\\tan y=\\sin y/\\cos y=\\sin y/\\sqrt{1-\\sin^2y}$。"
+        },
+        {
+          "id": "p319-b16",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p319-b17",
+          "source": "If $x=\\tan u/2$, express $\\sin u$ and $\\cos u$ in terms of $x$. (Use Problem 16; the answers should be very simple expressions.)",
+          "sourceSha256": "679633da4e27e876ab79340982ee8805a1c86b7403add9def1afabc60db3b6a9",
+          "translation": "如果 $x=\\tan u/2$，用 $x$ 表示 $\\sin u$ 和 $\\cos u$。（使用习题 16；答案应当是非常简单的表达式。）"
+        },
+        {
+          "id": "p319-b18",
+          "source": "### 18.",
+          "sourceSha256": "ea685e12aa5506177e8354425cc5ef641b0955faf096533840903cb00fca83d4"
+        },
+        {
+          "id": "p319-b19",
+          "source": "(a) Prove that $\\sin(x+\\pi/2)=\\cos x$. (All along we have been drawing the graphs of sin and cos as if this were the case.)",
+          "sourceSha256": "c9233bc300934927d7671b9f6e9c7f5205c4a57d7f4458872fd22aa6e651c8f1",
+          "translation": "(a) 证明 $\\sin(x+\\pi/2)=\\cos x$。（一直以来，我们画 sin 和 cos 的图像时，都已经当作这是事实。）"
+        },
+        {
+          "id": "p319-b20",
+          "source": "(b) What is $\\arcsin(\\cos x)$ and $\\arccos(\\sin x)$?",
+          "sourceSha256": "7c1c69b384d29d239dee487562db59216193be1f4b9bc94893a10136f19691eb",
+          "translation": "(b) $\\arcsin(\\cos x)$ 和 $\\arccos(\\sin x)$ 分别是什么？"
+        },
+        {
+          "id": "p319-b21",
+          "source": "### 19.",
+          "sourceSha256": "8b09a7bace93d37dfe88ea4c6c08a187efc4b2a287262ba51ada7accf660adbf"
+        },
+        {
+          "id": "p319-b22",
+          "source": "(a) Find $\\int_0^1\\frac1{1+t^2}dt$. Hint: The answer is not $45$.",
+          "sourceSha256": "e0d468877018fbfc3a7c5e82d444dae1834df3eb51a671ad9bab78a9f19a53b3",
+          "translation": "(a) 求 $\\int_0^1\\frac1{1+t^2}dt$。提示：答案不是 $45$。"
+        },
+        {
+          "id": "p319-b23",
+          "source": "(b) Find $\\int_0^\\infty\\frac1{1+t^2}dt$.",
+          "sourceSha256": "e55c4264e51c8848337a68aa89f6666c6c592be4bf2dc2f06eeb333889716a72",
+          "translation": "(b) 求 $\\int_0^\\infty\\frac1{1+t^2}dt$。"
+        },
+        {
+          "id": "p319-b24",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p319-b25",
+          "source": "Find $\\lim_{x\\to\\infty}x\\sin\\dfrac1x$.",
+          "sourceSha256": "100c4b5e652b96ca2db10c5ee117d1fa989cdc90758209980107ee4f92d9622d",
+          "translation": "求 $\\lim_{x\\to\\infty}x\\sin\\dfrac1x$。"
+        },
+        {
+          "id": "p319-b26",
+          "source": "### 21.",
+          "sourceSha256": "d908d228d4604b1dd2f9729637ede6c5eb59c7f91a5ba1fe1a64623fe814b30d"
+        },
+        {
+          "id": "p319-b27",
+          "source": "(a) Define functions $\\sin^\\circ$ and $\\cos^\\circ$ by $\\sin^\\circ(x)=\\sin(\\pi x/180)$ and $\\cos^\\circ(x)=\\cos(\\pi x/180)$. Find $(\\sin^\\circ)'$ and $(\\cos^\\circ)'$ in terms of these same functions.",
+          "sourceSha256": "0bb8d429f0defbf7cb9c31cf7b7f72954115a2687b39300b3b9751e0796160d7",
+          "translation": "(a) 通过 $\\sin^\\circ(x)=\\sin(\\pi x/180)$ 和 $\\cos^\\circ(x)=\\cos(\\pi x/180)$ 定义函数 $\\sin^\\circ$ 和 $\\cos^\\circ$。用这些函数本身表示 $(\\sin^\\circ)'$ 和 $(\\cos^\\circ)'$。"
+        },
+        {
+          "id": "p319-b28",
+          "source": "(b) Find $\\lim_{x\\to0}\\dfrac{\\sin^\\circ x}x$ and $\\lim_{x\\to\\infty}x\\sin^\\circ\\dfrac1x$.",
+          "sourceSha256": "295f980a0bd3c534dde7058bbbe5014d4803b2849cc1357c2e833c039af84fdb",
+          "translation": "(b) 求 $\\lim_{x\\to0}\\dfrac{\\sin^\\circ x}x$ 和 $\\lim_{x\\to\\infty}x\\sin^\\circ\\dfrac1x$。"
+        },
+        {
+          "id": "p319-b29",
+          "source": "### 22.",
+          "sourceSha256": "ce146eae8f2fb4609bfd66abfe5008807912c8203d51e87d6ba4e238e91e9395"
+        },
+        {
+          "id": "p319-b30",
+          "source": "Prove that every point on the unit circle is of the form $(\\cos\\theta,\\sin\\theta)$ for at least one (and hence for infinitely many) numbers $\\theta$.",
+          "sourceSha256": "f3c1f5abd3d6f2109c7d7aed089485051c56630cd711ef9fc0377f86efe0e840",
+          "translation": "证明：单位圆上的每个点，都至少对应一个（因而也对应无穷多个）数 $\\theta$，使它具有形式 $(\\cos\\theta,\\sin\\theta)$。"
+        }
+      ]
+    },
+    {
+      "printed": 320,
+      "sourceSha256": "61b48b15f4168f4b4bb5a8d01b5a8f979ed3d203c25b5944ae5799ad7467eeaf",
+      "blocks": [
+        {
+          "id": "p320-b1",
+          "source": "### 23.",
+          "sourceSha256": "fcb56ced3fb587a05b1e3f24ccfaee441ca9356f2d715d9e8ba59a341ae068ec"
+        },
+        {
+          "id": "p320-b2",
+          "source": "(a) Prove that $\\pi$ is the maximum possible length of an interval on which sin is one-one, and that such an interval must be of the form $[2k\\pi-\\pi/2,2k\\pi+\\pi/2]$ or $[2k\\pi+\\pi/2,2(k+1)\\pi-\\pi/2]$.",
+          "sourceSha256": "e3d1763be9d218aee5056db0b7edf06ae35824a2b4661e668f336119316c8c94",
+          "translation": "(a) 证明：使 sin 一一的区间，其最大可能长度为 $\\pi$，而且这样的区间必须具有形式 $[2k\\pi-\\pi/2,2k\\pi+\\pi/2]$ 或 $[2k\\pi+\\pi/2,2(k+1)\\pi-\\pi/2]$。"
+        },
+        {
+          "id": "p320-b3",
+          "source": "(b) Suppose we let $g(x)=\\sin x$ for $x$ in $(2k\\pi-\\pi/2,2k\\pi+\\pi/2)$. What is $(g^{-1})'$?",
+          "sourceSha256": "a9865fbe0016b99652c1beef8331b97e0db8fc5b577c1fa2f126dca401d509e8",
+          "translation": "(b) 假设对 $(2k\\pi-\\pi/2,2k\\pi+\\pi/2)$ 中的 $x$，令 $g(x)=\\sin x$。$(g^{-1})'$ 是什么？"
+        },
+        {
+          "id": "p320-b4",
+          "source": "### 24.",
+          "sourceSha256": "1fb8b304cd861a73c12374de97d67ebaec8b5558d02cf56f4db6adadfe75d8aa"
+        },
+        {
+          "id": "p320-b5",
+          "source": "Let $f(x)=\\sec x$ for $0\\le x\\le\\pi$. Find the domain of $f^{-1}$ and sketch its graph.",
+          "sourceSha256": "c31969feb166d6c0701de99cad49e881d8e829976f3d20d839619c5407a5445f",
+          "translation": "对于 $0\\le x\\le\\pi$，令 $f(x)=\\sec x$。求 $f^{-1}$ 的定义域，并画出它的图像。"
+        },
+        {
+          "id": "p320-b6",
+          "source": "### 25.",
+          "sourceSha256": "e243042975caa2efce0a7385b48b4be10d7c1f2cfeac6357090078c2f5eb5e34"
+        },
+        {
+          "id": "p320-b7",
+          "source": "Prove that $|\\sin x-\\sin y|<|x-y|$ for all numbers $x\\ne y$. Hint: The same statement, with $<$ replaced by $\\le$, is a very straightforward consequence of a well-known theorem; simple supplementary considerations then allow $\\le$ to be improved to $<$.",
+          "sourceSha256": "1124ca175b84f481807228f18b794660c6b811bd4ba30bcc5a3117f5f09073ba",
+          "translation": "证明：对于所有 $x\\ne y$，都有 $|\\sin x-\\sin y|<|x-y|$。提示：将其中的 $<$ 换成 $\\le$ 后，所得陈述是一个熟知定理的直接推论；再作一些简单的补充考虑，就能把 $\\le$ 改进为 $<$。"
+        },
+        {
+          "id": "p320-b8",
+          "source": "### \\*26.",
+          "sourceSha256": "fa04b9562895195d9e378e798dabcc9ed3bb411bf9015aed98cb0bb6241e3311"
+        },
+        {
+          "id": "p320-b9",
+          "source": "It is an excellent test of intuition to predict the value of",
+          "sourceSha256": "4ac4a3f6d47a0e787312da60d43474508816e85e0b112b18f142b804feb93ad0",
+          "translation": "预测下面的极限值，是检验直觉的一种极好方式："
+        },
+        {
+          "id": "p320-b10",
+          "source": "$$\\lim_{\\lambda\\to\\infty}\\int_a^b f(x)\\sin\\lambda x\\,dx.$$",
+          "sourceSha256": "636888ddc9b7d2fdd6377fd78b5fd1e900577e910276d4e795d7edeff62a818b"
+        },
+        {
+          "id": "p320-b11",
+          "source": "Continuous functions should be most accessible to intuition, but once you get the right idea for a proof the limit can easily be established for any integrable $f$.",
+          "sourceSha256": "301bf8ea0336e1706d203beaa4f71daafbe2fa8e849885759b12852b6b39bff0",
+          "translation": "连续函数应该最容易凭直觉把握，但只要找到正确的证明思路，对任何可积的 $f$，都可以很容易地建立这个极限。"
+        },
+        {
+          "id": "p320-b12",
+          "source": "(a) Show that $\\lim_{\\lambda\\to\\infty}\\int_c^d\\sin\\lambda x\\,dx=0$, by computing the integral explicitly.",
+          "sourceSha256": "f67fd5753cf200b828fead988073a049c3ba717f7658fcd376f3cb58c017e134",
+          "translation": "(a) 通过显式计算积分，证明 $\\lim_{\\lambda\\to\\infty}\\int_c^d\\sin\\lambda x\\,dx=0$。"
+        },
+        {
+          "id": "p320-b13",
+          "source": "(b) Show that if $s$ is a step function on $[a,b]$ (terminology from Problem 13-26), then $\\lim_{\\lambda\\to\\infty}\\int_a^b s(x)\\sin\\lambda x\\,dx=0$.",
+          "sourceSha256": "c5445e416a577d2d411f98c269863d426ca6babb52a0aa7bd463c70470ec4330",
+          "translation": "(b) 证明：如果 $s$ 是 $[a,b]$ 上的阶梯函数（术语见习题 13-26），那么 $\\lim_{\\lambda\\to\\infty}\\int_a^b s(x)\\sin\\lambda x\\,dx=0$。"
+        },
+        {
+          "id": "p320-b14",
+          "source": "(c) Finally, use Problem 13-26 to show that $\\lim_{\\lambda\\to\\infty}\\int_a^b f(x)\\sin\\lambda x\\,dx=0$ for any function $f$ which is integrable on $[a,b]$. This result, like Problem 12, plays an important role in the theory of Fourier series; it is known as the Riemann-Lebesgue Lemma.",
+          "sourceSha256": "1f49e85dd5ce9038ccbbbe69f0115002daa980c2aefc542893a0b466bf61814b",
+          "translation": "(c) 最后，利用习题 13-26，证明对任何在 $[a,b]$ 上可积的函数 $f$，都有 $\\lim_{\\lambda\\to\\infty}\\int_a^b f(x)\\sin\\lambda x\\,dx=0$。这个结果与习题 12 一样，在傅里叶级数理论中起着重要作用；它称为黎曼–勒贝格引理。"
+        },
+        {
+          "id": "p320-b15",
+          "source": "### 27.",
+          "sourceSha256": "01de3c63fd790d0deac18299d79a16ecfff7727c478f7c8964568f07245d3eec"
+        },
+        {
+          "id": "p320-b16",
+          "source": "This problem outlines the classical approach to the trigonometric functions. The shaded sector in Figure 24 has area $x/2$.",
+          "sourceSha256": "e79c8c10434a5bf15814d162cfc45c3652eda0983c0d42c3fe239103915648aa",
+          "translation": "本题概述三角函数的经典处理方法。图 24 中阴影扇形的面积为 $x/2$。"
+        },
+        {
+          "id": "p320-b17",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:265px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"39 983 265 246\" role=\"img\" aria-label=\"Figure 24\"><image href=\"pages/book/0338.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 24</figcaption>\n</figure>",
+          "sourceSha256": "ee7c6d009c1a040474bbe165b79cde1c5cbfed6a3df24a0e774c060130de9177"
+        },
+        {
+          "id": "p320-b18",
+          "source": "(a) By considering the triangles $OAB$ and $OCB$ prove that if $0<x<\\pi/4$, then",
+          "sourceSha256": "186aca429e0c6e32ce2fd8e3f71fc48b89d6a02e13c3bff517aa43ed3c29919a",
+          "translation": "(a) 考虑三角形 $OAB$ 和 $OCB$，证明：如果 $0<x<\\pi/4$，那么"
+        },
+        {
+          "id": "p320-b19",
+          "source": "$$\\frac{\\sin x}2<\\frac x2<\\frac{\\sin x}{2\\cos x}.$$",
+          "sourceSha256": "1f995310d613e3be33efcdfc9974a470ab5373229004dfcf49a6f9f8afb71134"
+        },
+        {
+          "id": "p320-b20",
+          "source": "(b) Conclude that",
+          "sourceSha256": "3e659373e111c89abdb580f056d6724a128fcb3aa5aed820f93ab3720313215e",
+          "translation": "(b) 由此得出"
+        },
+        {
+          "id": "p320-b21",
+          "source": "$$\\cos x<\\frac{\\sin x}x<1,$$",
+          "sourceSha256": "3b2bd32800d9aa4919ba36f87ecf06a73c46ff199fea1a97fb89437adfeeb1f4"
+        },
+        {
+          "id": "p320-b22",
+          "source": "and prove that",
+          "sourceSha256": "fbeae2acd02fa6c36e45c20d7b8c414c9d4a77a6f02b8645a408801e500fcf6d",
+          "translation": "并证明"
+        },
+        {
+          "id": "p320-b23",
+          "source": "$$\\lim_{x\\to0}\\frac{\\sin x}x=1.$$",
+          "sourceSha256": "283fedb1fe5d1d5560dfe15d0dbba634f1e50c1316b6805367d6f41a2d165a57"
+        },
+        {
+          "id": "p320-b24",
+          "source": "(c) Use this limit to find",
+          "sourceSha256": "b1ed13c5620a8cf755097c627dbec075e9320f19aab1debbe9b63d171ddf1591",
+          "translation": "(c) 利用这个极限，求"
+        },
+        {
+          "id": "p320-b25",
+          "source": "$$\\lim_{x\\to0}\\frac{1-\\cos x}x.$$",
+          "sourceSha256": "13ef4ee4e8ad8ab513184bbe84444a9b4382cb574f2caf7317672e9f528ff158"
+        }
+      ]
+    },
+    {
+      "printed": 321,
+      "sourceSha256": "13049a6c400191d84083763af9421bb91b7f62e0c28849876a008b7f5d670fec",
+      "blocks": [
+        {
+          "id": "p321-b1",
+          "source": "(d) Using parts (b) and (c), and the addition formula for sin, find $\\sin'(x)$, starting from the definition of the derivative.",
+          "sourceSha256": "f4c154a27c4f57810d38b9d02c2455dbfdcb3093264093c97d2a73cd0318872c",
+          "translation": "(d) 利用 (b)、(c) 以及 sin 的加法公式，从导数定义出发求 $\\sin'(x)$。"
+        },
+        {
+          "id": "p321-b2",
+          "source": "### \\*28.",
+          "sourceSha256": "75d78f2bb351ceed4e366ef355cf2da48be591c770d28c34d48aba743eea4c6d"
+        },
+        {
+          "id": "p321-b3",
+          "source": "This problem gives a treatment of the trigonometric functions in terms of length, and uses Problem 13-25. Let $f(x)=\\sqrt{1-x^2}$ for $-1\\le x\\le1$. Define $\\mathcal L(x)$ to be the length of $f$ on $[x,1]$.",
+          "sourceSha256": "8137788e8bd89522310b392e0ef4bfdc9cf0860f900aff0fcb04e47471171d67",
+          "translation": "本题利用习题 13-25，从长度出发处理三角函数。对 $-1\\le x\\le1$，令 $f(x)=\\sqrt{1-x^2}$。把 $\\mathcal L(x)$ 定义为 $f$ 在 $[x,1]$ 上的长度。"
+        },
+        {
+          "id": "p321-b4",
+          "source": "(a) Show that",
+          "sourceSha256": "109a77a00a2500c61b680da4498bb81fe08b0c64628b598c495b502e4d87bb24",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p321-b5",
+          "source": "$$\\mathcal L(x)=\\int_x^1\\frac1{\\sqrt{1-t^2}}dt.$$",
+          "sourceSha256": "b7ffe70708d6dc7cf665a8158ef8a34c1b36205d99da6bc09cffcb83429e0da4"
+        },
+        {
+          "id": "p321-b6",
+          "source": "(This is an improper integral, as defined in Problem 14-28, so you must first prove the corresponding assertion for the length on $[x,1-\\varepsilon]$ and then prove that $\\mathcal L(x)$ is the limit of these lengths as $\\varepsilon\\to0^+$.)",
+          "sourceSha256": "6762b20d3217324f228b0cdcac24c57266733a40405e388627eb02dee5cdc3af",
+          "translation": "（这是习题 14-28 所定义的反常积分，因此必须先证明关于 $[x,1-\\varepsilon]$ 上长度的相应结论，再证明 $\\mathcal L(x)$ 是这些长度在 $\\varepsilon\\to0^+$ 时的极限。）"
+        },
+        {
+          "id": "p321-b7",
+          "source": "(b) Show that",
+          "sourceSha256": "87fa4c209da94246118a4450a4cef5838b3ce8b8d46033b776afbac9b6f404e0",
+          "translation": "(b) 证明"
+        },
+        {
+          "id": "p321-b8",
+          "source": "$$\\mathcal L'(x)=-\\frac1{\\sqrt{1-x^2}}\\quad\\text{for }-1<x<1.$$",
+          "sourceSha256": "7a0e753811addd45e4be818b62954c4711f1c39bcf9a71d2a94504107bbb92bc"
+        },
+        {
+          "id": "p321-b9",
+          "source": "(c) Define $\\pi$ as $\\mathcal L(-1)$. For $0\\le x\\le\\pi$, define $\\cos x$ by $\\mathcal L(\\cos x)=x$, and define $\\sin x=\\sqrt{1-\\cos^2x}$. Prove that $\\cos'(x)=-\\sin x$ and $\\sin'(x)=\\cos x$ for $0<x<\\pi$.",
+          "sourceSha256": "05a550b8d8dc8ea6d7b89708a88c52a09194280cd2dba84e362ea01f27415654",
+          "translation": "(c) 将 $\\pi$ 定义为 $\\mathcal L(-1)$。对于 $0\\le x\\le\\pi$，通过 $\\mathcal L(\\cos x)=x$ 定义 $\\cos x$，并定义 $\\sin x=\\sqrt{1-\\cos^2x}$。证明：当 $0<x<\\pi$ 时，有 $\\cos'(x)=-\\sin x$ 且 $\\sin'(x)=\\cos x$。"
+        },
+        {
+          "id": "p321-b10",
+          "source": "### \\*29.",
+          "sourceSha256": "70b3ed45c72b15e9dc31aa08c5e6e588618ba3912d06a4aa38b41d62115e2624"
+        },
+        {
+          "id": "p321-b11",
+          "source": "Yet another development of the trigonometric functions was briefly mentioned in the text—starting with inverse functions defined by integrals. It is convenient to begin with arctan, since this function is defined for all $x$. To do this problem, pretend that you have never heard of the trigonometric functions.",
+          "sourceSha256": "702f1b99405306caf2964a234be8b152b755a5830f60baacafb361968ab37488",
+          "translation": "正文中曾简要提到三角函数的又一种建立方式——从积分定义的反函数出发。由 arctan 开始很方便，因为这个函数对所有 $x$ 都有定义。做这道题时，假装你从未听说过三角函数。"
+        },
+        {
+          "id": "p321-b12",
+          "source": "(a) Let $\\alpha(x)=\\int_0^x(1+t^2)^{-1}dt$. Prove that $\\alpha$ is odd and increasing, and that $\\lim_{x\\to\\infty}\\alpha(x)$ and $\\lim_{x\\to-\\infty}\\alpha(x)$ both exist, and are negatives of each other. If we define $\\pi=2\\lim_{x\\to\\infty}\\alpha(x)$, then $\\alpha^{-1}$ is defined on $(-\\pi/2,\\pi/2)$.",
+          "sourceSha256": "e3fcab8b1859e352a64dad482f7f5b5275ef7d8abc963018fa5d55ed6b8987f7",
+          "translation": "(a) 令 $\\alpha(x)=\\int_0^x(1+t^2)^{-1}dt$。证明 $\\alpha$ 是奇函数且递增，并且 $\\lim_{x\\to\\infty}\\alpha(x)$ 与 $\\lim_{x\\to-\\infty}\\alpha(x)$ 都存在，互为相反数。如果定义 $\\pi=2\\lim_{x\\to\\infty}\\alpha(x)$，那么 $\\alpha^{-1}$ 的定义域是 $(-\\pi/2,\\pi/2)$。"
+        },
+        {
+          "id": "p321-b13",
+          "source": "(b) Show that $(\\alpha^{-1})'(x)=1+[\\alpha^{-1}(x)]^2$.",
+          "sourceSha256": "4be58e791370b24b84a3fd862ed10a55150d265b7ce908f3bc71bfd757647893",
+          "translation": "(b) 证明 $(\\alpha^{-1})'(x)=1+[\\alpha^{-1}(x)]^2$。"
+        },
+        {
+          "id": "p321-b14",
+          "source": "(c) For $-\\pi/2<x<\\pi/2$, define $\\tan x=\\alpha^{-1}(x)$, and then define $\\sin x=\\tan x/\\sqrt{1+\\tan^2x}$. Show that",
+          "sourceSha256": "47fbe0354c1d23c43bbfe12809069fc4ef2e2a22898f736e7ccd4affb3691332",
+          "translation": "(c) 对于 $-\\pi/2<x<\\pi/2$，定义 $\\tan x=\\alpha^{-1}(x)$，再定义 $\\sin x=\\tan x/\\sqrt{1+\\tan^2x}$。证明"
+        },
+        {
+          "id": "p321-b15",
+          "source": "(i) $\\displaystyle\\lim_{x\\to\\pi/2^-}\\sin x=1$",
+          "sourceSha256": "f684b42af03a42189b24455aededd9a420547fc0a581961e3889d44f94abb008"
+        },
+        {
+          "id": "p321-b16",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to-\\pi/2^+}\\sin x=-1$",
+          "sourceSha256": "2a39ee2273f6f257a0b80596ffc69778e198e8d34fb539998daaa784fb613ca9"
+        },
+        {
+          "id": "p321-b17",
+          "source": "(iii) $\\displaystyle\\sin'(x)=\\begin{cases}\\dfrac{\\sin x}{\\tan x},&-\\pi/2<x<\\pi/2\\text{ and }x\\ne0\\\\1,&x=0\\end{cases}$",
+          "sourceSha256": "a0f7ccac15da703b89402c0d776ca23cd52b7094c3d9144b30149956de4e24e0"
+        },
+        {
+          "id": "p321-b18",
+          "source": "(iv) $\\sin''(x)=-\\sin x$ for $-\\pi/2<x<\\pi2$.",
+          "sourceSha256": "d70604b70e27a41ca6cd6ce41894d8770487ed515beedabc3245e6c871bc56a9",
+          "translation": "(iv) 当 $-\\pi/2<x<\\pi2$ 时，$\\sin''(x)=-\\sin x$。"
+        },
+        {
+          "id": "p321-b19",
+          "source": "### \\*30.",
+          "sourceSha256": "167bdd116a2087adc4f5048255b176761ccc565074b4e2eac8766561c7e11e51"
+        },
+        {
+          "id": "p321-b20",
+          "source": "If we are willing to assume that certain differential equations have solutions, another approach to the trigonometric functions is possible. Suppose, in particular, that there is some function $y_0$ which is not always $0$ and which satisfies $y_0''+y_0=0$.",
+          "sourceSha256": "1839dc64f22bb21a62ff4ec7de5d3d0edc5ceecd5aef20fcd78b5ed520aac27d",
+          "translation": "如果愿意假设某些微分方程有解，就可以采用另一种方法来建立三角函数。特别地，假设存在一个不恒为 $0$ 的函数 $y_0$，满足 $y_0''+y_0=0$。"
+        }
+      ]
+    },
+    {
+      "printed": 322,
+      "sourceSha256": "d11635fa7310aa970d23eb2da11ce9bfaa3ec425d6be7ccf4f31579565d96d3b",
+      "blocks": [
+        {
+          "id": "p322-b1",
+          "source": "(a) Prove that $y_0^2+(y_0')^2$ is constant, and conclude that either $y_0(0)\\ne0$ or $y_0'(0)\\ne0$.",
+          "sourceSha256": "3bd9c2b3e1f05ed475262d3a3a86750146a8f6887ff49a87c15d2de97168644b",
+          "translation": "(a) 证明 $y_0^2+(y_0')^2$ 是常数，并由此得出 $y_0(0)\\ne0$ 或 $y_0'(0)\\ne0$。"
+        },
+        {
+          "id": "p322-b2",
+          "source": "(b) Prove that there is a function $s$ satisfying $s''+s=0$ and $s(0)=0$ and $s'(0)=1$. Hint: Try $s$ of the form $ay_0+by_0'$.",
+          "sourceSha256": "8c094edfe071141fa03ab77bb8341f43767f25430ed51c9e60b541a934a25b50",
+          "translation": "(b) 证明：存在函数 $s$，满足 $s''+s=0$、$s(0)=0$ 和 $s'(0)=1$。提示：尝试取形如 $ay_0+by_0'$ 的 $s$。"
+        },
+        {
+          "id": "p322-b3",
+          "source": "If we define $\\sin=s$ and $\\cos=s'$, then almost all facts about trigonometric functions become trivial. There is one point which requires work, however—producing the number $\\pi$. This is most easily done using an exercise from the Appendix to Chapter 11:",
+          "sourceSha256": "4cd5b1ef8f8cd242f383c2b61a12cac14844d222288a1c2e5095b4f3a84c4ae5",
+          "translation": "如果定义 $\\sin=s$ 和 $\\cos=s'$，那么关于三角函数的几乎所有事实都变得轻而易举。不过，有一点仍需要下功夫——构造出数 $\\pi$。使用第 11 章附录中的一道习题，最容易做到这一点："
+        },
+        {
+          "id": "p322-b4",
+          "source": "(c) Use Problem 6 of the Appendix to Chapter 11 to prove that $\\cos x$ cannot be positive for all $x>0$. It follows that there is a smallest $x_0>0$ with $\\cos x_0=0$, and we can define $\\pi=2x_0$.",
+          "sourceSha256": "55ed6a69eab602696831a32af696c10f159137df9665ed4ab9a75a0d51b824f4",
+          "translation": "(c) 利用第 11 章附录的习题 6，证明 $\\cos x$ 不可能对所有 $x>0$ 都为正。因此存在最小的 $x_0>0$，使得 $\\cos x_0=0$，于是可以定义 $\\pi=2x_0$。"
+        },
+        {
+          "id": "p322-b5",
+          "source": "(d) Prove that $\\sin\\pi/2=1$. (Since $\\sin^2+\\cos^2=1$, we have $\\sin\\pi/2=\\pm1$; the problem is to decide why $\\sin\\pi/2$ is positive.)",
+          "sourceSha256": "2ddf7b59cc822434fe3ee7dacb5860bdc1e3180d5fe2cbe420a8d1d9c1a7c5af",
+          "translation": "(d) 证明 $\\sin\\pi/2=1$。（由于 $\\sin^2+\\cos^2=1$，有 $\\sin\\pi/2=\\pm1$；问题在于说明为什么 $\\sin\\pi/2$ 为正。）"
+        },
+        {
+          "id": "p322-b6",
+          "source": "(e) Find $\\cos\\pi$, $\\sin\\pi$, $\\cos2\\pi$, and $\\sin2\\pi$. (Naturally you may use any addition formulas, since these can be derived once we know that $\\sin'=\\cos$ and $\\cos'=-\\sin$.)",
+          "sourceSha256": "024a1f3cbda24a162b5cdfce7cb28e4b33b97dc7bb49cf8c316991e920ff7739",
+          "translation": "(e) 求 $\\cos\\pi$、$\\sin\\pi$、$\\cos2\\pi$ 和 $\\sin2\\pi$。（当然可以使用任何加法公式，因为一旦知道 $\\sin'=\\cos$ 和 $\\cos'=-\\sin$，这些公式就都能推导出来。）"
+        },
+        {
+          "id": "p322-b7",
+          "source": "(f) Prove that cos and sin are periodic with period $2\\pi$.",
+          "sourceSha256": "ee67277682ce363afe24579e30bf4f556a06c300a4e3f884f952bebd1e5d71b3",
+          "translation": "(f) 证明 cos 和 sin 都是以 $2\\pi$ 为周期的周期函数。"
+        },
+        {
+          "id": "p322-b8",
+          "source": "### 31.",
+          "sourceSha256": "c2a230851d457202448280e05f5df5e0c9dc069d235a5c511aa1e04b450cf4ed"
+        },
+        {
+          "id": "p322-b9",
+          "source": "(a) After all the work involved in the definition of sin, it would be disconcerting to find that sin is actually a rational function. Prove that it isn’t. (There is a simple property of sin which a rational function cannot possibly have.)",
+          "sourceSha256": "3306449d1f20e4e775aa3c5e8b4166df526107ce432d2a4afcb177fb829281a8",
+          "translation": "(a) 为定义 sin 费了这么多功夫，如果最后发现 sin 实际上只是一个有理函数，那可真令人沮丧。证明它不是有理函数。（sin 有一个简单的性质，是有理函数绝不可能具有的。）"
+        },
+        {
+          "id": "p322-b10",
+          "source": "(b) Prove that sin isn’t even defined implicitly by an algebraic equation; that is, there do not exist rational functions $f_0,\\ldots,f_{n-1}$ such that",
+          "sourceSha256": "f3b6ebb56f43caea567bbec8fa709b6213ca19f52451ad689e0104485b8becdd",
+          "translation": "(b) 证明，sin 甚至不能由一个代数方程隐式定义；也就是说，不存在有理函数 $f_0,\\ldots,f_{n-1}$，使得"
+        },
+        {
+          "id": "p322-b11",
+          "source": "$$(\\sin x)^n+f_{n-1}(x)(\\sin x)^{n-1}+\\cdots+f_0(x)=0\\quad\\text{for all }x.$$",
+          "sourceSha256": "3fbb824d7fc0d6951882c6275907cc245fb0e5edda073f4f91444c809a10c30d"
+        },
+        {
+          "id": "p322-b12",
+          "source": "Hint: Prove that $f_0=0$, so that $\\sin x$ can be factored out. The remaining factor is $0$ except perhaps at multiples of $\\pi$. But this implies that it is $0$ for all $x$. (Why?) You are now set up for a proof by induction.",
+          "sourceSha256": "81cc248e5fc720fb20a8b0f0890a09661a29c05fa4390447f5bcd99777cc6831",
+          "translation": "提示：证明 $f_0=0$，从而可以提出因子 $\\sin x$。剩下的因子，除了在 $\\pi$ 的整数倍处可能例外以外，处处为 $0$。但这意味着，它对所有 $x$ 都为 $0$。（为什么？）这样，你就为归纳证明做好了准备。"
+        },
+        {
+          "id": "p322-b13",
+          "source": "### \\*32.",
+          "sourceSha256": "fd12a1dae35c1b34b53a701c44666a7afc9d85c4908e57d2c401a971e98948f8"
+        },
+        {
+          "id": "p322-b14",
+          "source": "Suppose that $\\phi_1$ and $\\phi_2$ satisfy",
+          "sourceSha256": "34a95894e5b86538d863675ea6fd4731a4d7af3c04f0561cc473cde17c98553c",
+          "translation": "设 $\\phi_1$ 和 $\\phi_2$ 满足"
+        },
+        {
+          "id": "p322-b15",
+          "source": "$$\\begin{aligned}\\phi_1''+g_1\\phi_1&=0,\\\\\\phi_2''+g_2\\phi_2&=0,\\end{aligned}$$",
+          "sourceSha256": "6dab467ad671e269823b8544a34bf10963c1e85951bcb59b09c248e838f1b4ce"
+        },
+        {
+          "id": "p322-b16",
+          "source": "and that $g_2>g_1$.",
+          "sourceSha256": "df1acdcd6826d2681d87aab0308c74cfe7030de741a8647e2db0bc1530d6faf0",
+          "translation": "并且 $g_2>g_1$。"
+        },
+        {
+          "id": "p322-b17",
+          "source": "(a) Show that",
+          "sourceSha256": "109a77a00a2500c61b680da4498bb81fe08b0c64628b598c495b502e4d87bb24",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p322-b18",
+          "source": "$$\\phi_1''\\phi_2-\\phi_2''\\phi_1-(g_2-g_1)\\phi_1\\phi_2=0.$$",
+          "sourceSha256": "d9116c8d2388cbb44a2bd9f043b42033964ac20ea6dafb869d59c72cc1a550c3"
+        },
+        {
+          "id": "p322-b19",
+          "source": "(b) Show that if $\\phi_1(x)>0$ and $\\phi_2(x)>0$ for all $x$ in $(a,b)$, then",
+          "sourceSha256": "7d977ee971926f0038e486beecac981f258a3963209c586b4c41c509b5b89f8d",
+          "translation": "(b) 证明：如果对 $(a,b)$ 中所有 $x$ 都有 $\\phi_1(x)>0$ 且 $\\phi_2(x)>0$，那么"
+        },
+        {
+          "id": "p322-b20",
+          "source": "$$\\int_a^b[\\phi_1''\\phi_2-\\phi_2''\\phi_1]>0,$$",
+          "sourceSha256": "078648335a605988fd5500b76c17140fd434ba5cbad74c3d388e422967c15e85"
+        },
+        {
+          "id": "p322-b21",
+          "source": "and conclude that",
+          "sourceSha256": "87f89648110dd0f8c4011d4158ce3d572c78c7daf4b194bea224650aa2d49c4a",
+          "translation": "并由此得出"
+        },
+        {
+          "id": "p322-b22",
+          "source": "$$[\\phi_1'(b)\\phi_2(b)-\\phi_1'(a)\\phi_2(a)]-[\\phi_1(b)\\phi_2'(b)-\\phi_1(a)\\phi_2'(a)]>0.$$",
+          "sourceSha256": "8012f7d4edd3abdd3dd1470d12766df9b544f23808414e5614735f77ca39483d"
+        }
+      ]
+    },
+    {
+      "printed": 323,
+      "sourceSha256": "9ed0a5fb69f2a4da120e86a6d0d6505ae552b22ad1e02bbe92df24cc82342dab",
+      "blocks": [
+        {
+          "id": "p323-b1",
+          "source": "(c) Show that in this case we cannot have $\\phi_1(a)=\\phi_1(b)=0$. Hint: Consider the sign of $\\phi_1'(a)$ and $\\phi_1'(b)$.",
+          "sourceSha256": "eb44543cb5a4cb60807a0472d982351ef22eeb93e1ad0bbe39be7feab0ff6fc7",
+          "translation": "(c) 证明，在这种情形下，不可能有 $\\phi_1(a)=\\phi_1(b)=0$。提示：考虑 $\\phi_1'(a)$ 和 $\\phi_1'(b)$ 的符号。"
+        },
+        {
+          "id": "p323-b2",
+          "source": "(d) Show that the equations $\\phi_1(a)=\\phi_1(b)=0$ are also impossible if $\\phi_1>0$, $\\phi_2<0$ or $\\phi_1<0$, $\\phi_2>0$, or $\\phi_1<0$, $\\phi_2<0$ on $(a,b)$. (You should be able to do this with almost no extra work.)",
+          "sourceSha256": "e13a6bcf05e1f860db77c2964744026e43ddd4fc6a22fda9ad3abd1740c9b785",
+          "translation": "(d) 证明：如果在 $(a,b)$ 上有 $\\phi_1>0$、$\\phi_2<0$，或者 $\\phi_1<0$、$\\phi_2>0$，或者 $\\phi_1<0$、$\\phi_2<0$，等式 $\\phi_1(a)=\\phi_1(b)=0$ 也不可能成立。（应该几乎不必额外费力就能做到。）"
+        },
+        {
+          "id": "p323-b3",
+          "source": "The net result of this problem may be stated as follows: if $a$ and $b$ are consecutive zeros of $\\phi_1$, then $\\phi_2$ must have a zero somewhere between $a$ and $b$. This result, in a slightly more general form, is known as the Sturm Comparison Theorem. As a particular example, any solution of the differential equation",
+          "sourceSha256": "890066bfa03f1e6de60037669ecf93080672e160c8b9ca8dd411f1edf9dd4689",
+          "translation": "本题的最终结果可以表述为：如果 $a$ 和 $b$ 是 $\\phi_1$ 的相邻两个零点，那么 $\\phi_2$ 必定在 $a$ 与 $b$ 之间某处有一个零点。这个结果的稍广泛形式，称为 Sturm（施图姆）比较定理。举一个具体的例子，微分方程"
+        },
+        {
+          "id": "p323-b4",
+          "source": "$$y''+(x+1)y=0$$",
+          "sourceSha256": "8b228612a0bd23d2bc2024a1789dc594b76f055f4452e8dccde7efd2d0b1214e"
+        },
+        {
+          "id": "p323-b5",
+          "source": "must have at least one zero in any interval $(n\\pi,(n+1)\\pi)$.",
+          "sourceSha256": "35d92f88c87adba88c1b3f82a4105f70c25a4fe73553e9a1e0a1d401c4639acc",
+          "translation": "的任何解，在任意区间 $(n\\pi,(n+1)\\pi)$ 中都必须至少有一个零点。"
+        },
+        {
+          "id": "p323-b6",
+          "source": "### 33.",
+          "sourceSha256": "c12eaf6341852cae6b1a2cd13f1fdd1b6509e938d566771e0b1cb36e9069bcca"
+        },
+        {
+          "id": "p323-b7",
+          "source": "(a) Using the formula for $\\sin x-\\sin y$ derived in Problem 14, show that",
+          "sourceSha256": "f6cab2786345ead600131d1d6b260104d78a586f6556a4979516f663fbcb46c4",
+          "translation": "(a) 利用习题 14 中推导的 $\\sin x-\\sin y$ 公式，证明"
+        },
+        {
+          "id": "p323-b8",
+          "source": "$$\\sin(k+\\tfrac12)x-\\sin(k-\\tfrac12)x=2\\sin\\frac x2\\cos kx.$$",
+          "sourceSha256": "2b0388ce764584c52a9d27629d84abd91ce9f6bd6e50b4c39dbf16b5c380d7ee"
+        },
+        {
+          "id": "p323-b9",
+          "source": "(b) Conclude that",
+          "sourceSha256": "3e659373e111c89abdb580f056d6724a128fcb3aa5aed820f93ab3720313215e",
+          "translation": "(b) 由此得出"
+        },
+        {
+          "id": "p323-b10",
+          "source": "$$\\frac12+\\cos x+\\cos2x+\\cdots+\\cos nx=\\frac{\\sin(n+\\frac12)x}{2\\sin\\frac x2}.$$",
+          "sourceSha256": "67014794d7333274fadc42088763326d8c7590d216f07faff373f61f53de2523"
+        },
+        {
+          "id": "p323-b11",
+          "source": "Like two other results in this problem set, this equation is very important in the study of Fourier series, and we also make use of it in Problems 19-43 and 23-22.",
+          "sourceSha256": "d48102c070b6bc965c65ba2ec25ad35d6e5045042f82a763e685ca0eb4154494",
+          "translation": "与本习题组中另外两个结果一样，这个等式在傅里叶级数的研究中非常重要，我们还将在习题 19-43 和 23-22 中使用它。"
+        },
+        {
+          "id": "p323-b12",
+          "source": "(c) Similarly, derive the formula",
+          "sourceSha256": "8dd2b768fcca6d7a3c182b45a6a7d15f65a6317023d3844f4c24dbbf3c868107",
+          "translation": "(c) 类似地，推导公式"
+        },
+        {
+          "id": "p323-b13",
+          "source": "$$\\sin x+\\sin2x+\\cdots+\\sin nx=\\frac{\\sin\\left(\\frac{n+1}2x\\right)\\sin\\left(\\frac n2x\\right)}{\\sin\\frac x2}.$$",
+          "sourceSha256": "053449bad8f8f6e367e259461717be9db5a0f3be2af95e17a6589a5da971a9f2"
+        },
+        {
+          "id": "p323-b14",
+          "source": "(A more natural derivation of these formulas will be given in Problem 27-14.)",
+          "sourceSha256": "6994c6b52f64b86eecb6a87e86fe918c621ebcb6fdc128689141060ba4de56f9",
+          "translation": "（习题 27-14 将给出这些公式的一种更自然的推导。）"
+        },
+        {
+          "id": "p323-b15",
+          "source": "(d) Use parts (b) and (c) to find $\\int_0^b\\sin x\\,dx$ and $\\int_0^b\\cos x\\,dx$ directly from the definition of the integral.",
+          "sourceSha256": "8541adf072c7c227af4d682a05dcf91ff7c92545ae4c7b54cf27749d06648214",
+          "translation": "(d) 利用 (b) 和 (c)，直接从积分定义求出 $\\int_0^b\\sin x\\,dx$ 和 $\\int_0^b\\cos x\\,dx$。"
+        }
+      ]
+    }
+  ]
+}

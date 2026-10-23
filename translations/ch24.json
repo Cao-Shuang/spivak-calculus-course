@@ -1,0 +1,2650 @@
+{
+  "chapter": 24,
+  "language": "zh-CN",
+  "sourceSha256": "76ed520db1996201a0f5029859067ebc548632debada948e1cd3e6c71d498dc3",
+  "paragraphCount": 265,
+  "pages": [
+    {
+      "printed": 499,
+      "sourceSha256": "fed36c7a971d87880afe40f1bcd7dd89cb51e038f5935dc2968e75265084b07b",
+      "blocks": [
+        {
+          "id": "p499-b1",
+          "source": "# CHAPTER 24\n# UNIFORM CONVERGENCE AND POWER SERIES",
+          "sourceSha256": "1ca0c75cb5bd39a224bd8d5f375f1dbb453761206aeb5fe0c0b85dc848ea2d07",
+          "translation": "# 第 24 章\n# 一致收敛与幂级数"
+        },
+        {
+          "id": "p499-b2",
+          "source": "The considerations at the end of the previous chapter suggest an entirely new way of looking at infinite series. Our attention will shift from particular infinite sums to equations like",
+          "sourceSha256": "4f499643cd6bededcdbcb987aa2ccf0d52cd69b56c81353bd21953c00a2fb0ad",
+          "translation": "上一章末尾的讨论，提出了一种看待无穷级数的全新方式。我们的注意力将从某个具体的无穷和，转向下面这样的等式："
+        },
+        {
+          "id": "p499-b3",
+          "source": "$$e^x=1+\\frac{x}{1!}+\\frac{x^2}{2!}+\\cdots$$",
+          "sourceSha256": "bb832a2e51db0548c9777e697f331599af180cc2f494624e1bda86184966d70c"
+        },
+        {
+          "id": "p499-b4",
+          "source": "which concern sums of quantities that depend on $x$. In other words, we are interested in *functions* defined by equations of the form",
+          "sourceSha256": "42d2efe3937cc9e012a022c85b568b1cc1d0fabebd2655239de2464f699e53f6",
+          "translation": "这里求和的各个量依赖于 $x$。换句话说，我们关心的是由下列形式的等式定义的*函数*："
+        },
+        {
+          "id": "p499-b5",
+          "source": "$$f(x)=f_1(x)+f_2(x)+f_3(x)+\\cdots$$",
+          "sourceSha256": "53fdbbbd0b41a47138f71a7d2843b232bb64dfb7e18b11ac33b3b08389f480c6"
+        },
+        {
+          "id": "p499-b6",
+          "source": "(in the previous example $f_n(x)=x^{n-1}/(n-1)!$). In such a situation $\\{f_n\\}$ will be some sequence of functions; for each $x$ we obtain a sequence of numbers $\\{f_n(x)\\}$, and $f(x)$ is the sum of this sequence. In order to analyze such functions it will certainly be necessary to remember that each sum",
+          "sourceSha256": "63630aeed14c29e637c045f2d4402df6dfb5359a00cdbe7adf2c36c77e343889",
+          "translation": "（在前面的例子中，$f_n(x)=x^{n-1}/(n-1)!$）。在这种情况下，$\\{f_n\\}$ 是某个函数列；对于每个 $x$，我们得到一个数列 $\\{f_n(x)\\}$，而 $f(x)$ 就是这个数列的和。要分析这样的函数，当然必须记住，每个和"
+        },
+        {
+          "id": "p499-b7",
+          "source": "$$f_1(x)+f_2(x)+f_3(x)+\\cdots$$",
+          "sourceSha256": "469c4ccb65ce7943e79acf11878aec60ebf35d1c096a6f7733ad1193b25dd1ef"
+        },
+        {
+          "id": "p499-b8",
+          "source": "is, by definition, the limit of the sequence",
+          "sourceSha256": "6c60e7ee0a861d48bcdc894ed8056b9e449322e03e3b6d5701e0f7ba5d92e2fb",
+          "translation": "按定义都是下面这个数列的极限："
+        },
+        {
+          "id": "p499-b9",
+          "source": "$$f_1(x),\\ f_1(x)+f_2(x),\\ f_1(x)+f_2(x)+f_3(x),\\ \\ldots.$$",
+          "sourceSha256": "340b0d6bcdf49d8eb67dd0425bd0932d6b0527a48d8429331580ee9b7011f697"
+        },
+        {
+          "id": "p499-b10",
+          "source": "If we define a new sequence of functions $\\{s_n\\}$ by",
+          "sourceSha256": "68b72815d5f72d80430bbf1769acc3277335e27f98cda5516154ec48d2849e18",
+          "translation": "如果用下式定义一个新的函数列 $\\{s_n\\}$："
+        },
+        {
+          "id": "p499-b11",
+          "source": "$$s_n=f_1+\\cdots+f_n,$$",
+          "sourceSha256": "2c8b694c8f8c61b58d15c7be2f7ffb26a082cc6cf3bcde456f51ee86cbfbd750"
+        },
+        {
+          "id": "p499-b12",
+          "source": "then we can express this fact more succinctly by writing",
+          "sourceSha256": "a31d8673ccd0832a63a3b31ef74b5c75597a5cdd72f5b446b0d0ca3b47e849d6",
+          "translation": "那么，我们就可以把这个事实更简洁地写成"
+        },
+        {
+          "id": "p499-b13",
+          "source": "$$f(x)=\\lim_{n\\to\\infty}s_n(x).$$",
+          "sourceSha256": "813d66a265820d1d5fb650f4c8a502305e06c2236fc670d0f3c4037e0949c4c7"
+        },
+        {
+          "id": "p499-b14",
+          "source": "For some time we shall therefore concentrate on functions defined as limits,",
+          "sourceSha256": "fd9c555f9cca690a3864eb27916053bf78008329140ae8c8f778e2070d082c92",
+          "translation": "因此，接下来一段时间，我们将集中研究通过极限定义的函数，"
+        },
+        {
+          "id": "p499-b15",
+          "source": "$$f(x)=\\lim_{n\\to\\infty}f_n(x),$$",
+          "sourceSha256": "ddd550e4c9758207f5eca4cf354604edc2629ac17f25bd9ae4f512f46f919f77"
+        },
+        {
+          "id": "p499-b16",
+          "source": "rather than on functions defined as infinite sums. The total body of results about such functions can be summed up very easily: nothing one would hope to be true actually is—instead we have a splendid collection of counterexamples. The first of these shows that even if each $f_n$ is continuous, the function $f$ may not be! Contrary to what you may expect, the functions $f_n$ will be very simple. Figure 1 shows the graphs of the functions",
+          "sourceSha256": "803622aa8f4aa2df7fdd6b489aba2b7e424afc5b03ca9b38623e233a05cdae8a",
+          "translation": "而不是通过无穷和定义的函数。关于这类函数的全部结果，很容易概括：我们希望成立的事情，一件也没有真的成立——取而代之的是一批精彩的反例。第一个反例表明，即使每个 $f_n$ 都连续，函数 $f$ 也可能不连续！与你可能预想的相反，函数 $f_n$ 将非常简单。图 1 展示了下列函数的图像："
+        },
+        {
+          "id": "p499-b17",
+          "source": "$$f_n(x)=\\begin{cases}x^n,&0\\le x\\le1\\\\1,&x\\ge1.\\end{cases}$$",
+          "sourceSha256": "4175872e6ca0eda15d897f11f458a1dfd7908775d0ff3ae08336b3001d1395e7"
+        },
+        {
+          "id": "p499-b18",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:394px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 970 394 324\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0518.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 1</figcaption></figure>",
+          "sourceSha256": "2a37a63ff7dfa905a2f1243a8c58e62b2eabb81fc6185c4aba299ab69dbc2140"
+        }
+      ]
+    },
+    {
+      "printed": 500,
+      "sourceSha256": "adaea38a20b4faeecf86e79f40cd89fb20c84b7b494b1279636271867ecc9e53",
+      "blocks": [
+        {
+          "id": "p500-b1",
+          "source": "These functions are all continuous, but the function $f(x)=\\lim_{n\\to\\infty}f_n(x)$ is not continuous; in fact,",
+          "sourceSha256": "d697d9f6a757e7932f71ac78299c1b76c07d6ab199b65ace7bb64467b93a13ab",
+          "translation": "这些函数全都连续，但函数 $f(x)=\\lim_{n\\to\\infty}f_n(x)$ 并不连续；事实上，"
+        },
+        {
+          "id": "p500-b2",
+          "source": "$$\\lim_{n\\to\\infty}f_n(x)=\\begin{cases}0,&0\\le x<1\\\\1,&x\\ge1.\\end{cases}$$",
+          "sourceSha256": "45c8a673a3f15941c5b79cf72a7b0d447a2bf36711549689b1f11e862124afe1"
+        },
+        {
+          "id": "p500-b3",
+          "source": "Another example of this same phenomenon is illustrated in Figure 2; the functions $f_n$ are defined by",
+          "sourceSha256": "3f6c6eae4979101096b1cde1ec1e20daed6cdf589984d28bd29b952a82c2eb5d",
+          "translation": "图 2 展示了同一现象的另一个例子；函数 $f_n$ 定义为"
+        },
+        {
+          "id": "p500-b4",
+          "source": "$$f_n(x)=\\begin{cases}-1,&x\\le-\\dfrac1n\\\\nx,&-\\dfrac1n\\le x\\le\\dfrac1n\\\\1,&\\dfrac1n\\le x.\\end{cases}$$",
+          "sourceSha256": "98b884904c06d9b349911160f8f67b84d56f3e8828deb59dd253a2b0f18c4177"
+        },
+        {
+          "id": "p500-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:424px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"38 104 424 379\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0519.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 2</figcaption></figure>",
+          "sourceSha256": "a447e2d24a02915054e48b4b7521cf3092fee6034a6afa95ac454053002326e0"
+        },
+        {
+          "id": "p500-b6",
+          "source": "In this case, if $x<0$, then $f_n(x)$ is eventually (i.e., for large enough $n$) equal to $-1$, and if $x>0$, then $f_n(x)$ is eventually $1$, while $f_n(0)=0$ for all $n$. Thus",
+          "sourceSha256": "9988970d4a4ae941ed12c35e55e3f5d0411a80edd7d5d9d7e46a1411495f78da",
+          "translation": "在这个例子中，如果 $x<0$，那么 $f_n(x)$ 最终（即对于充分大的 $n$）等于 $-1$；如果 $x>0$，那么 $f_n(x)$ 最终等于 $1$；而对于所有 $n$，都有 $f_n(0)=0$。因此"
+        },
+        {
+          "id": "p500-b7",
+          "source": "$$\\lim_{n\\to\\infty}f_n(x)=\\begin{cases}-1,&x<0\\\\0,&x=0\\\\1,&x>0;\\end{cases}$$",
+          "sourceSha256": "5304e4a1f375d439094da5f03d2f903a18f399131038df28fdce103092fa9105"
+        },
+        {
+          "id": "p500-b8",
+          "source": "so, once again, the function $f(x)=\\lim_{n\\to\\infty}f_n(x)$ is not continuous.",
+          "sourceSha256": "40e3d8e00f8602cd0d7dad077c02a6fe1cd1626d65c09c584d1a3886fb4c692b",
+          "translation": "所以，函数 $f(x)=\\lim_{n\\to\\infty}f_n(x)$ 再次不连续。"
+        },
+        {
+          "id": "p500-b9",
+          "source": "By rounding off the corners in the previous examples it is even possible to produce a sequence of *differentiable* functions $\\{f_n\\}$ for which the function $f(x)=\\lim_{n\\to\\infty}f_n(x)$ is not continuous. One such sequence is easy to define explicitly:",
+          "sourceSha256": "3e3688bdd07d555f924266f8c831e6cb90e68f1dc53a5d9552da9e4b8fd189e2",
+          "translation": "把前面例子中的拐角磨圆，甚至可以构造出一个*可导*函数列 $\\{f_n\\}$，而函数 $f(x)=\\lim_{n\\to\\infty}f_n(x)$ 仍不连续。其中一个这样的函数列很容易显式定义："
+        },
+        {
+          "id": "p500-b10",
+          "source": "$$f_n(x)=\\begin{cases}-1,&x\\le-\\dfrac1n\\\\\\sin\\dfrac{n\\pi x}{2},&-\\dfrac1n\\le x\\le\\dfrac1n\\\\1,&\\dfrac1n\\le x.\\end{cases}$$",
+          "sourceSha256": "ba60893d9be379e8288cb40078ba528e63c523f11a1e5d5ecc709fd801ef7c47"
+        },
+        {
+          "id": "p500-b11",
+          "source": "These functions are differentiable (Figure 3), but we still have",
+          "sourceSha256": "88a70deec9be05b3f266704479ab71f3f024bd7d007c447ab7bcf3678ebe7648",
+          "translation": "这些函数可导（图 3），但我们仍然有"
+        },
+        {
+          "id": "p500-b12",
+          "source": "$$\\lim_{n\\to\\infty}f_n(x)=\\begin{cases}-1,&x<0\\\\0,&x=0\\\\1,&x>0.\\end{cases}$$",
+          "sourceSha256": "db9a1206849ec6aeef389dbb18f2924f1ee1d06c9ca20555cd9eaf97c2c0a06d"
+        },
+        {
+          "id": "p500-b13",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:402px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"45 533 402 379\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0519.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 3</figcaption></figure>",
+          "sourceSha256": "e7f6cd7360d97db71b38da635a5aef69e202c4bd2e5304bddc74242d2581f37f"
+        },
+        {
+          "id": "p500-b14",
+          "source": "Continuity and differentiability are, moreover, not the only properties for which problems arise. Another difficulty is illustrated by the sequence $\\{f_n\\}$ shown in Figure 4; on the interval $[0,1/n]$ the graph of $f_n$ forms an isosceles triangle of altitude $n$, while $f_n(x)=0$ for $x\\ge1/n$. These functions may be defined explicitly as follows:",
+          "sourceSha256": "58929d438c4bf361244b98846828cd1a30e65fb86502e979261cb9017aa49fbd",
+          "translation": "此外，连续性和可导性并不是唯一会出问题的性质。图 4 中的函数列 $\\{f_n\\}$ 展示了另一种困难；在区间 $[0,1/n]$ 上，$f_n$ 的图像形成一个高为 $n$ 的等腰三角形，而当 $x\\ge1/n$ 时，$f_n(x)=0$。这些函数可以显式定义如下："
+        },
+        {
+          "id": "p500-b15",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:395px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"45 968 395 532\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0519.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 4</figcaption></figure>",
+          "sourceSha256": "faa7dc5f90ee389a328391bc56760f222c9be91337975b77d14514ffaace70d3"
+        }
+      ]
+    },
+    {
+      "printed": 501,
+      "sourceSha256": "a1e583e50412004cfa650e847f91be8ea3d251ced3ec410fe540116a967a1c8a",
+      "blocks": [
+        {
+          "id": "p501-b1",
+          "source": "$$f_n(x)=\\begin{cases}2n^2x,&0\\le x\\le\\dfrac1{2n}\\\\2n-2n^2x,&\\dfrac1{2n}\\le x\\le\\dfrac1n\\\\0,&\\dfrac1n\\le x\\le1.\\end{cases}$$",
+          "sourceSha256": "51bd1a406ec3f35d934cad1c4daa831ca3e81b1daf654e52e2610f5f717bf657"
+        },
+        {
+          "id": "p501-b2",
+          "source": "Because this sequence varies so erratically near $0$, our primitive mathematical instincts might suggest that $\\lim_{n\\to\\infty}f_n(x)$ does not always exist. Nevertheless, this limit does exist for all $x$, and the function $f(x)=\\lim_{n\\to\\infty}f_n(x)$ is even continuous. In fact, if $x>0$, then $f_n(x)$ is eventually $0$, so $\\lim_{n\\to\\infty}f_n(x)=0$; moreover, $f_n(0)=0$ for all $n$, so that we certainly have $\\lim_{n\\to\\infty}f_n(0)=0$. In other words, $f(x)=\\lim_{n\\to\\infty}f_n(x)=0$ for all $x$. On the other hand, the integral quickly reveals the strange behavior of this sequence; we have",
+          "sourceSha256": "77753fcededf757eb647e9e11e4c6121f96656b2d9ec327d25dc79f4864733b1",
+          "translation": "由于这个函数列在 $0$ 附近变化得如此不规则，我们朴素的数学直觉可能会认为 $\\lim_{n\\to\\infty}f_n(x)$ 并不总是存在。然而，这个极限对所有 $x$ 都存在，而且函数 $f(x)=\\lim_{n\\to\\infty}f_n(x)$ 甚至是连续的。事实上，如果 $x>0$，那么 $f_n(x)$ 最终等于 $0$，所以 $\\lim_{n\\to\\infty}f_n(x)=0$；此外，对于所有 $n$ 都有 $f_n(0)=0$，因此当然有 $\\lim_{n\\to\\infty}f_n(0)=0$。换句话说，对于所有 $x$，都有 $f(x)=\\lim_{n\\to\\infty}f_n(x)=0$。另一方面，积分很快就揭示出这个函数列的奇特行为；我们有"
+        },
+        {
+          "id": "p501-b3",
+          "source": "$$\\int_0^1f_n(x)\\,dx=\\frac12,$$",
+          "sourceSha256": "adf00ea5c8a59e562a45556bf4253df8a0a994b04c5ed1d1be43f133c0c40d3a"
+        },
+        {
+          "id": "p501-b4",
+          "source": "but",
+          "sourceSha256": "cdc29937887188ad3702d1831d5b7ec66333a2a909e1f242432eb168d4c7b08b",
+          "translation": "但是"
+        },
+        {
+          "id": "p501-b5",
+          "source": "$$\\int_0^1f(x)\\,dx=0.$$",
+          "sourceSha256": "c96a08535efc34e63f7c74383c68303e3ff3834a295680303aabb6ef2c002003"
+        },
+        {
+          "id": "p501-b6",
+          "source": "Thus,",
+          "sourceSha256": "b51424969dca6c4a51cb06b624a682b000acccf6bb0fc2dd8414503d23d60326",
+          "translation": "因此，"
+        },
+        {
+          "id": "p501-b7",
+          "source": "$$\\lim_{n\\to\\infty}\\int_0^1f_n(x)\\,dx\\ne\\int_0^1\\lim_{n\\to\\infty}f_n(x)\\,dx.$$",
+          "sourceSha256": "857d3f468f3af54b4058c665cc5b65fa6ce70f090c31e3b9ede26e794ac95a23"
+        },
+        {
+          "id": "p501-b8",
+          "source": "This particular sequence of functions behaves in a way that we really never imagined when we first considered functions defined by limits. Although it is true that",
+          "sourceSha256": "d33b3e131c479e754fbff633a546c3a4f2e26360a607e65b9fb349efb471491d",
+          "translation": "这个特殊函数列的行为，是我们最初考虑通过极限定义函数时根本未曾想到的。虽然确实有"
+        },
+        {
+          "id": "p501-b9",
+          "source": "$$f(x)=\\lim_{n\\to\\infty}f_n(x)\\quad\\text{for each }x\\text{ in }[0,1],$$",
+          "sourceSha256": "8cc7a4033d6f3f791afbfaf4e941257fdaa4d9654726f72d8ec464ae9b422ae8"
+        },
+        {
+          "id": "p501-b10",
+          "source": "the graphs of the functions $f_n$ do not “approach” the graph of $f$ in the sense of lying close to it—if, as in Figure 5, we draw a strip around $f$ of total width $2\\varepsilon$ (allowing a width of $\\varepsilon$ above and below), then the graphs of $f_n$ do not lie completely within this strip, no matter how large an $n$ we choose. Of course, for each $x$ there is some $N$ such that the point $(x,f_n(x))$ lies in this strip for $n>N$; this assertion just amounts to the fact that $\\lim_{n\\to\\infty}f_n(x)=f(x)$. But it is necessary to choose larger and larger $N$’s as $x$ is chosen closer and closer to $0$, and no one $N$ will work for all $x$ at once.",
+          "sourceSha256": "693d7e573fb0595e105c91bd7833af29992731ff757a745a76d74caf3910fa52",
+          "translation": "但函数 $f_n$ 的图像并没有在“靠近”的意义上“趋向”$f$ 的图像——如果像图 5 那样，在 $f$ 的图像周围画一条总宽度为 $2\\varepsilon$ 的带状区域（上方和下方各留出 $\\varepsilon$ 的宽度），那么无论选取多大的 $n$，$f_n$ 的图像都不会完全落在这个带状区域内。当然，对于每个 $x$，都存在某个 $N$，使得当 $n>N$ 时，点 $(x,f_n(x))$ 落在这个带状区域内；这句话恰好就是 $\\lim_{n\\to\\infty}f_n(x)=f(x)$。但随着 $x$ 选得越来越接近 $0$，就必须选择越来越大的 $N$；不存在一个能同时适用于所有 $x$ 的 $N$。"
+        },
+        {
+          "id": "p501-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:391px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 189 391 532\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0520.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 5</figcaption></figure>",
+          "sourceSha256": "6419f1918ccd27895bcaeec5b18790bfa49c67ca1d9a13e5e1289f71c0f0b632"
+        },
+        {
+          "id": "p501-b12",
+          "source": "The same situation actually occurs, though less blatantly, for each of the other examples given previously. Figure 6 illustrates this point for the sequence",
+          "sourceSha256": "c1ab79335537125fc316bc4810e67954a9a56c161ceb0d4b71139cd7e9784258",
+          "translation": "实际上，先前给出的其他各个例子中也有同样的情况，只是没有这么明显。图 6 用下面这个函数列说明了这一点："
+        },
+        {
+          "id": "p501-b13",
+          "source": "$$f_n(x)=\\begin{cases}x^n,&0\\le x\\le1\\\\1,&x\\ge1.\\end{cases}$$",
+          "sourceSha256": "4175872e6ca0eda15d897f11f458a1dfd7908775d0ff3ae08336b3001d1395e7"
+        },
+        {
+          "id": "p501-b14",
+          "source": "A strip of total width $2\\varepsilon$ has been drawn around the graph of $f(x)=\\lim_{n\\to\\infty}f_n(x)$. If $\\varepsilon<\\frac12$, this strip consists of two pieces, which contain no points with second",
+          "sourceSha256": "a1cb8aa4967f23c8cb58e417f6f36da1916e1f50441987becf053ca2accc97aa",
+          "translation": "在 $f(x)=\\lim_{n\\to\\infty}f_n(x)$ 的图像周围画出了总宽度为 $2\\varepsilon$ 的带状区域。如果 $\\varepsilon<\\frac12$，这个区域由两部分组成，其中没有任何点的第二个"
+        },
+        {
+          "id": "p501-b15",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:386px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 1018 386 326\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0520.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 6</figcaption></figure>",
+          "sourceSha256": "8dadc042c61979db8a1cf35f3c413775d1f4760f0073ce8e929508c4a0218a01"
+        }
+      ]
+    },
+    {
+      "printed": 502,
+      "sourceSha256": "b92b11ba0538bc67cf34679a2124dc28e684ec53a3a8b48553d729697dd8f665",
+      "blocks": [
+        {
+          "id": "p502-b1",
+          "source": "coordinate equal to $\\frac12$; since each function $f_n$ takes on the value $\\frac12$, the graph of each $f_n$ fails to lie within this strip. Once again, for each point $x$ there is some $N$ such that $(x,f_n(x))$ lies in the strip for $n>N$; but it is not possible to pick one $N$ which works for all $x$ at once.",
+          "sourceSha256": "36c808fcab96434ddf5ad7184dac65c3b75beaf46426d1b56cd72b3cfa56e72d",
+          "translation": "坐标等于 $\\frac12$；由于每个函数 $f_n$ 都取到值 $\\frac12$，每个 $f_n$ 的图像都不完全位于这个带状区域内。同样，对于每个点 $x$，都存在某个 $N$，使得当 $n>N$ 时，$(x,f_n(x))$ 落在带状区域内；但是，不可能选出一个同时适用于所有 $x$ 的 $N$。"
+        },
+        {
+          "id": "p502-b2",
+          "source": "It is easy to check that precisely the same situation occurs for each of the other examples. In each case we have a function $f$, and a sequence of functions $\\{f_n\\}$, all defined on some set $A$, such that",
+          "sourceSha256": "9eda859a2951ea2c5f1019749fe3af9b2053394439902d77c0b06a4d7aadf9c2",
+          "translation": "很容易验证，其他各个例子也都出现完全相同的情况。在每个例子中，都有一个函数 $f$ 和一个函数列 $\\{f_n\\}$，它们全都定义在某个集合 $A$ 上，并且"
+        },
+        {
+          "id": "p502-b3",
+          "source": "$$f(x)=\\lim_{n\\to\\infty}f_n(x)\\quad\\text{for all }x\\text{ in }A.$$",
+          "sourceSha256": "00f345c7d3282b1e5400dfe0c8028e870447cc18c8fc8ae2f77339961d71c504"
+        },
+        {
+          "id": "p502-b4",
+          "source": "This means that",
+          "sourceSha256": "041259ea12f12eb18f933aa1e8d8e689e381c18f1f462e7a4542e2bc357126de",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p502-b5",
+          "source": "for all $\\varepsilon>0$, and for all $x$ in $A$, there is some $N$ such that if $n>N$, then $|f(x)-f_n(x)|<\\varepsilon$.",
+          "sourceSha256": "9ad1951952618d059ae90b2f845ebe8bdae1ffa2c14916e857c50142f328790a",
+          "translation": "对于所有 $\\varepsilon>0$，以及 $A$ 中的所有 $x$，都存在某个 $N$，使得如果 $n>N$，那么 $|f(x)-f_n(x)|<\\varepsilon$。"
+        },
+        {
+          "id": "p502-b6",
+          "source": "But in each case different $N$’s must be chosen for different $x$’s, and in each case it is *not* true that",
+          "sourceSha256": "f9af9fa9cb3c290a6cea88a9cb735007688e53266687add6b34d76d786512bc6",
+          "translation": "但是，在每个例子中，都必须针对不同的 $x$ 选择不同的 $N$；而且在每个例子中，下面的陈述都*不*成立："
+        },
+        {
+          "id": "p502-b7",
+          "source": "for all $\\varepsilon>0$ there is some $N$ such that for all $x$ in $A$, if $n>N$, then $|f(x)-f_n(x)|<\\varepsilon$.",
+          "sourceSha256": "045685b986955442ff87a613d308a7073624636a729b7a1b6c46310f9c4bbcb2",
+          "translation": "对于所有 $\\varepsilon>0$，都存在某个 $N$，使得对于 $A$ 中的所有 $x$，如果 $n>N$，那么 $|f(x)-f_n(x)|<\\varepsilon$。"
+        },
+        {
+          "id": "p502-b8",
+          "source": "Although this condition differs from the first only by a minor displacement of the phrase “for all $x$ in $A$,” it has a totally different significance. If a sequence $\\{f_n\\}$ satisfies this second condition, then the graphs of $f_n$ eventually lie close to the graph of $f$, as illustrated in Figure 7. This condition turns out to be just the one which makes the study of limit functions feasible.",
+          "sourceSha256": "a28b8706360293b2316345092cd722a402d435459fd92dc1465974697828a907",
+          "translation": "虽然这个条件与第一个条件仅仅相差短语“对于 $A$ 中的所有 $x$”的位置略有移动，但它的意义完全不同。如果函数列 $\\{f_n\\}$ 满足第二个条件，那么 $f_n$ 的图像最终就会靠近 $f$ 的图像，如图 7 所示。事实证明，恰恰是这个条件使极限函数的研究成为可行。"
+        },
+        {
+          "id": "p502-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:392px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"38 197 392 304\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0521.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 7</figcaption></figure>",
+          "sourceSha256": "80595656a135389d2e1700cb28acac1df61dcc14db559f3d4411f0e24fe007d6"
+        },
+        {
+          "id": "p502-b10",
+          "source": "## DEFINITION",
+          "sourceSha256": "676bc8347a70e5e93cbff5e0571ad9eecf86b072557f09f8796edced86dfc6e2",
+          "translation": "## 定义"
+        },
+        {
+          "id": "p502-b11",
+          "source": "Let $\\{f_n\\}$ be a sequence of functions defined on $A$, and let $f$ be a function which is also defined on $A$. Then $f$ is called the **uniform limit of $\\{f_n\\}$ on $A$** if for every $\\varepsilon>0$ there is some $N$ such that for all $x$ in $A$,",
+          "sourceSha256": "182010faef6097ebc3d0b8d948ab57453e6918216424f5574a1821054d93bb13",
+          "translation": "设 $\\{f_n\\}$ 是定义在 $A$ 上的函数列，$f$ 也是定义在 $A$ 上的函数。如果对于每个 $\\varepsilon>0$，都存在某个 $N$，使得对于 $A$ 中的所有 $x$，都有下列关系，那么称 $f$ 为 **$\\{f_n\\}$ 在 $A$ 上的一致极限**："
+        },
+        {
+          "id": "p502-b12",
+          "source": "$$\\text{if }n>N,\\text{ then }|f(x)-f_n(x)|<\\varepsilon.$$",
+          "sourceSha256": "0e10a930fdf7606e947bd8b516ad3cb99c219c94c954cd731e5ae8a8903b9a50"
+        },
+        {
+          "id": "p502-b13",
+          "source": "We also say that $\\{f_n\\}$ **converges uniformly to $f$ on $A$**, or that $f_n$ **approaches $f$ uniformly on $A$**.",
+          "sourceSha256": "a3861042f82ff663d0acaaec6456225475794de1f16cde38988057907349e9bf",
+          "translation": "我们也说，$\\{f_n\\}$ **在 $A$ 上一致收敛于 $f$**，或者 $f_n$ **在 $A$ 上一致趋近于 $f$**。"
+        },
+        {
+          "id": "p502-b14",
+          "source": "As a contrast to this definition, if we know only that",
+          "sourceSha256": "f241d5dade2444f0194a06c0907c593e90d53d9aba760b3192424208d24c8a24",
+          "translation": "与这个定义相对，如果我们仅仅知道"
+        },
+        {
+          "id": "p502-b15",
+          "source": "$$f(x)=\\lim_{n\\to\\infty}f_n(x)\\quad\\text{for each }x\\text{ in }A,$$",
+          "sourceSha256": "b214550ba5cb71f60903e34316a81903e676dcfc2ac4369913bf6132a775a165"
+        },
+        {
+          "id": "p502-b16",
+          "source": "then we say that $\\{f_n\\}$ **converges pointwise to $f$ on $A$**. Clearly, uniform convergence implies pointwise convergence (but not conversely!).",
+          "sourceSha256": "e6983b1c43c84b40f3c809fb2c76ab7291b516872339c1efa8db5984f8343908",
+          "translation": "那么就说，$\\{f_n\\}$ **在 $A$ 上逐点收敛于 $f$**。显然，一致收敛蕴含逐点收敛（反过来却不成立！）。"
+        },
+        {
+          "id": "p502-b17",
+          "source": "Evidence for the usefulness of uniform convergence is not at all difficult to amass. Integrals represent a particularly easy topic; Figure 7 makes it almost obvious that if $\\{f_n\\}$ converges uniformly to $f$, then the integral of $f_n$ can be made as close to the integral of $f$ as desired. Expressed more precisely, we have the following theorem.",
+          "sourceSha256": "15c63963b25753d87998748c080a9f14ec62c4fc8e553d9cfbe9043dd763d90c",
+          "translation": "要积累一致收敛有用的证据，一点也不困难。积分是一个特别容易处理的话题；图 7 几乎显而易见地表明，如果 $\\{f_n\\}$ 一致收敛于 $f$，那么 $f_n$ 的积分可以任意接近 $f$ 的积分。更精确地说，我们有以下定理。"
+        }
+      ]
+    },
+    {
+      "printed": 503,
+      "sourceSha256": "5a91ba482c72a910b94dc1cd9cccf237517b43695fd4a80a54a70a4657cc22c9",
+      "blocks": [
+        {
+          "id": "p503-b1",
+          "source": "## THEOREM 1",
+          "sourceSha256": "53fac1876c9bcfd6bbc4adffba3ffd8cf1b717338f29618152217c60c4746f5f",
+          "translation": "## 定理 1"
+        },
+        {
+          "id": "p503-b2",
+          "source": "Suppose that $\\{f_n\\}$ is a sequence of functions which are integrable on $[a,b]$, and that $\\{f_n\\}$ converges uniformly on $[a,b]$ to a function $f$ which is integrable on $[a,b]$. Then",
+          "sourceSha256": "5e873efa115e11364d1645c7b4322bb6448dd684fc7cdb78ed2bdaa2c1b77356",
+          "translation": "假设 $\\{f_n\\}$ 是一列在 $[a,b]$ 上可积的函数，而且 $\\{f_n\\}$ 在 $[a,b]$ 上一致收敛于函数 $f$，后者在 $[a,b]$ 上可积。那么"
+        },
+        {
+          "id": "p503-b3",
+          "source": "$$\\int_a^b f=\\lim_{n\\to\\infty}\\int_a^b f_n.$$",
+          "sourceSha256": "57f9ca531f3c8b3974d999c52b8ffb19980a59179838edc759beda1bc09f0837"
+        },
+        {
+          "id": "p503-b4",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p503-b5",
+          "source": "Let $\\varepsilon>0$. There is some $N$ such that for all $n>N$ we have",
+          "sourceSha256": "3987f009bedc8cae202d42730f0ccf4a32772013b302bf0813100ab871642017",
+          "translation": "设 $\\varepsilon>0$。存在某个 $N$，使得对于所有 $n>N$，都有"
+        },
+        {
+          "id": "p503-b6",
+          "source": "$$|f(x)-f_n(x)|<\\varepsilon\\qquad\\text{for all }x\\text{ in }[a,b].$$",
+          "sourceSha256": "14dcf9f3ad1eed04f4cab803ae14315a6f93e1cac4b3df1086ae5a4b8e9503ad"
+        },
+        {
+          "id": "p503-b7",
+          "source": "Thus, if $n>N$ we have",
+          "sourceSha256": "b4d7c7989fb1ba152770d0e2eb1f2afb98c31fee07e813e7bc137be1f1786983",
+          "translation": "因此，如果 $n>N$，就有"
+        },
+        {
+          "id": "p503-b8",
+          "source": "$$\\begin{aligned}\\left|\\int_a^bf(x)\\,dx-\\int_a^bf_n(x)\\,dx\\right|&=\\left|\\int_a^b[f(x)-f_n(x)]\\,dx\\right|\\\\&\\le\\int_a^b|f(x)-f_n(x)|\\,dx\\\\&\\le\\int_a^b\\varepsilon\\,dx\\\\&=\\varepsilon(b-a).\\end{aligned}$$",
+          "sourceSha256": "565504524b7e3a21512201804cb6d3904b6134d28db14e0b7b7d05eb9d605dde"
+        },
+        {
+          "id": "p503-b9",
+          "source": "Since this is true for any $\\varepsilon>0$, it follows that",
+          "sourceSha256": "092093a6c6c10ffff0cea208c24bf23a0e5e1512ce4acc448228f01612af3bca",
+          "translation": "由于这对任意 $\\varepsilon>0$ 都成立，所以"
+        },
+        {
+          "id": "p503-b10",
+          "source": "$$\\int_a^b f=\\lim_{n\\to\\infty}\\int_a^b f_n.\\quad\\blacksquare$$",
+          "sourceSha256": "6accdd6d31cc47b6b1e3ca0fc62f2f2d71de708ed7c651e9e84e03e2b8527dd6"
+        },
+        {
+          "id": "p503-b11",
+          "source": "The treatment of continuity is only a little bit more difficult, involving an “$\\varepsilon/3$-argument,” a three-step estimate of $|f(x)-f(x+h)|$. If $\\{f_n\\}$ is a sequence of continuous functions which converges uniformly to $f$, then there is some $n$ such that",
+          "sourceSha256": "e49cb9ea71201db6392975b8ebe8f41756be60504f3955df8edc039672a3eb9b",
+          "translation": "连续性的处理只稍微困难一些，需要一个“$\\varepsilon/3$ 论证”，即分三步估计 $|f(x)-f(x+h)|$。如果 $\\{f_n\\}$ 是一个一致收敛于 $f$ 的连续函数列，那么存在某个 $n$，使得"
+        },
+        {
+          "id": "p503-b12",
+          "source": "$$|f(x)-f_n(x)|<\\frac\\varepsilon3,\\tag{1}$$",
+          "sourceSha256": "4473461eab22abb1003e537387e04f9feb87ee3e10a0bb0c3d253201731d752b"
+        },
+        {
+          "id": "p503-b13",
+          "source": "$$|f(x+h)-f_n(x+h)|<\\frac\\varepsilon3.\\tag{2}$$",
+          "sourceSha256": "54aea38f6ab8d23f3d5d8e84f2202289932054ba44b76137d23e09d97c8e02b2"
+        },
+        {
+          "id": "p503-b14",
+          "source": "Moreover, since $f_n$ is continuous, for sufficiently small $h$ we have",
+          "sourceSha256": "26b12f5c56a3c6ea65e1db3ed65f42676c365021a6d6deeb85169ed96280e6cf",
+          "translation": "此外，由于 $f_n$ 连续，对于充分小的 $h$，有"
+        },
+        {
+          "id": "p503-b15",
+          "source": "$$|f_n(x)-f_n(x+h)|<\\frac\\varepsilon3.\\tag{3}$$",
+          "sourceSha256": "7b90042737cb64a8ceee7beba8785ef742c47ac24f4429edb770575e74daa151"
+        },
+        {
+          "id": "p503-b16",
+          "source": "It will follow from (1), (2), and (3) that $|f(x)-f(x+h)|<\\varepsilon$. In order to obtain (3), however, we must restrict the size of $|h|$ in a way that cannot be predicted until $n$ has already been chosen; it is therefore quite essential that there be some fixed $n$ which makes (2) true, no matter how small $|h|$ may be—it is precisely at this point that uniform convergence enters the proof.",
+          "sourceSha256": "c41c01fe5ba0bf5753f653bfb876e2307fe75529b20382f9d115f87f616ac3f5",
+          "translation": "由 (1)、(2) 和 (3) 将得到 $|f(x)-f(x+h)|<\\varepsilon$。不过，为了得到 (3)，我们必须限制 $|h|$ 的大小，而限制的具体方式在选定 $n$ 之前无法预知；因此，必须存在某个固定的 $n$，使得无论 $|h|$ 多么小，(2) 都成立——一致收敛恰恰是在这里进入证明的。"
+        },
+        {
+          "id": "p503-b17",
+          "source": "## THEOREM 2",
+          "sourceSha256": "9fc963cfb0602ba9c0088ef4562d4aa1212f85de78653a5fb5bf14e8009ff8a7",
+          "translation": "## 定理 2"
+        },
+        {
+          "id": "p503-b18",
+          "source": "Suppose that $\\{f_n\\}$ is a sequence of functions which are continuous on $[a,b]$, and that $\\{f_n\\}$ converges uniformly on $[a,b]$ to $f$. Then $f$ is also continuous on $[a,b]$.",
+          "sourceSha256": "c6264c581e066811e231257538215004c304bc48d0fa9188ce10fa6a838387ef",
+          "translation": "假设 $\\{f_n\\}$ 是一列在 $[a,b]$ 上连续的函数，而且 $\\{f_n\\}$ 在 $[a,b]$ 上一致收敛于 $f$。那么 $f$ 在 $[a,b]$ 上也连续。"
+        },
+        {
+          "id": "p503-b19",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p503-b20",
+          "source": "For each $x$ in $[a,b]$ we must prove that $f$ is continuous at $x$. We will deal only with $x$ in $(a,b)$; the cases $x=a$ and $x=b$ require the usual simple modifications.",
+          "sourceSha256": "8da308e22fc014a611858bd363d63acb84e4184be5f93e6d17b0b94ed3898f28",
+          "translation": "对于 $[a,b]$ 中的每个 $x$，我们必须证明 $f$ 在 $x$ 处连续。我们只处理 $x$ 在 $(a,b)$ 中的情形；$x=a$ 和 $x=b$ 的情形只需作通常的简单修改。"
+        }
+      ]
+    },
+    {
+      "printed": 504,
+      "sourceSha256": "6fe02ec7ff10302e66d4a443b3741136cddb4525ece642cbb803dcb217bdf980",
+      "blocks": [
+        {
+          "id": "p504-b1",
+          "source": "Let $\\varepsilon>0$. Since $\\{f_n\\}$ converges uniformly to $f$ on $[a,b]$, there is some $n$ such that",
+          "sourceSha256": "13b7ea8b47147579b9bc4587886703e05325c00febf7dd3200b28ef42739d8ad",
+          "translation": "设 $\\varepsilon>0$。由于 $\\{f_n\\}$ 在 $[a,b]$ 上一致收敛于 $f$，存在某个 $n$，使得"
+        },
+        {
+          "id": "p504-b2",
+          "source": "$$|f(y)-f_n(y)|<\\frac\\varepsilon3\\quad\\text{for all }y\\text{ in }[a,b].$$",
+          "sourceSha256": "388bc79c687541dc0db45b7207dcc628a7e8f8b34aa58de19c2329178555e188"
+        },
+        {
+          "id": "p504-b3",
+          "source": "In particular, for all $h$ such that $x+h$ is in $[a,b]$, we have",
+          "sourceSha256": "5a3442c55791811bbea700db9624d293872e22a22d6e389189d38a6b0ed02c1c",
+          "translation": "特别地，对于所有使 $x+h$ 位于 $[a,b]$ 中的 $h$，都有"
+        },
+        {
+          "id": "p504-b4",
+          "source": "$$|f(x)-f_n(x)|<\\frac\\varepsilon3,\\tag{1}$$",
+          "sourceSha256": "4473461eab22abb1003e537387e04f9feb87ee3e10a0bb0c3d253201731d752b"
+        },
+        {
+          "id": "p504-b5",
+          "source": "$$|f(x+h)-f_n(x+h)|<\\frac\\varepsilon3.\\tag{2}$$",
+          "sourceSha256": "54aea38f6ab8d23f3d5d8e84f2202289932054ba44b76137d23e09d97c8e02b2"
+        },
+        {
+          "id": "p504-b6",
+          "source": "Now $f_n$ is continuous, so there is some $\\delta>0$ such that for $|h|<\\delta$ we have",
+          "sourceSha256": "38478deef68f1f0c8caad383697941a821cf211e0d37df4750c9c6ae9de780fb",
+          "translation": "现在，$f_n$ 连续，所以存在某个 $\\delta>0$，使得当 $|h|<\\delta$ 时有"
+        },
+        {
+          "id": "p504-b7",
+          "source": "$$|f_n(x)-f_n(x+h)|<\\frac\\varepsilon3.\\tag{3}$$",
+          "sourceSha256": "7b90042737cb64a8ceee7beba8785ef742c47ac24f4429edb770575e74daa151"
+        },
+        {
+          "id": "p504-b8",
+          "source": "Thus, if $|h|<\\delta$, then",
+          "sourceSha256": "63daf11cb0f3af33109857346e52ac8913a088e9d26f8119e09794e451e3de55",
+          "translation": "因此，如果 $|h|<\\delta$，那么"
+        },
+        {
+          "id": "p504-b9",
+          "source": "$$\\begin{aligned}&|f(x+h)-f(x)|\\\\&\\quad=|f(x+h)-f_n(x+h)+f_n(x+h)-f_n(x)+f_n(x)-f(x)|\\\\&\\quad\\le|f(x+h)-f_n(x+h)|+|f_n(x+h)-f_n(x)|+|f_n(x)-f(x)|\\\\&\\quad<\\frac\\varepsilon3+\\frac\\varepsilon3+\\frac\\varepsilon3\\\\&\\quad=\\varepsilon.\\end{aligned}$$",
+          "sourceSha256": "761aa6103d80bc9738e0dd8e4383f2acaff1c9a99be44c7a88d9d97220aae070"
+        },
+        {
+          "id": "p504-b10",
+          "source": "This proves that $f$ is continuous at $x$. ■",
+          "sourceSha256": "6173cdf5e810df76f93500476b1f66fda91bc2d2ae31c9b131096ce02f616355",
+          "translation": "这就证明了 $f$ 在 $x$ 处连续。■"
+        },
+        {
+          "id": "p504-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:500px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"480 962 505 371\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0523.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 8</figcaption></figure>",
+          "sourceSha256": "de76b5182f4ef6d5fe3ba2623a4ada3ccbb4f42e068c45415b4e80d74ab6db3c"
+        },
+        {
+          "id": "p504-b12",
+          "source": "After the two noteworthy successes provided by Theorem 1 and Theorem 2, the situation for differentiability turns out to be very disappointing. If each $f_n$ is differentiable, and if $\\{f_n\\}$ converges uniformly to $f$, it is still not necessarily true that $f$ is differentiable. For example, Figure 8 shows that there is a sequence of differentiable functions $\\{f_n\\}$ which converges uniformly to the function $f(x)=|x|$.",
+          "sourceSha256": "46f4fc7dd9b9d4a9cfdd74156ab5e66c545e29121e7136f77e699eb6a3c7a6e5",
+          "translation": "定理 1 和定理 2 带来了两次值得注意的成功，但可导性的情形却令人非常失望。即使每个 $f_n$ 都可导，而且 $\\{f_n\\}$ 一致收敛于 $f$，$f$ 仍然未必可导。例如，图 8 表明，存在一个可导函数列 $\\{f_n\\}$，一致收敛于函数 $f(x)=|x|$。"
+        }
+      ]
+    },
+    {
+      "printed": 505,
+      "sourceSha256": "29ed66be1197f639d171d190ff832195175f3d60d8002dd51a8cb9b1f8d1185d",
+      "blocks": [
+        {
+          "id": "p505-b1",
+          "source": "Even if $f$ is differentiable, it may not be true that",
+          "sourceSha256": "81d371156f1ada37cf1f067c0bf0565ff7e74975f11a669df7d9e69726c70104",
+          "translation": "即使 $f$ 可导，也未必有"
+        },
+        {
+          "id": "p505-b2",
+          "source": "$$f'(x)=\\lim_{n\\to\\infty}f_n'(x);$$",
+          "sourceSha256": "214de724b433d5ba464a0faaf7ba992a8471719943fd36ee0c16ef9535d31caf"
+        },
+        {
+          "id": "p505-b3",
+          "source": "this is not at all surprising if we reflect that a smooth function can be approximated by very rapidly oscillating functions. For example (Figure 9), if",
+          "sourceSha256": "82a9bb7ab8a1e428a4db9f95e12b05863237fdc8ab98a3cc8323c904620d137a",
+          "translation": "只要想到光滑函数也可以用振荡得非常快的函数逼近，这就一点也不令人意外了。例如（图 9），如果"
+        },
+        {
+          "id": "p505-b4",
+          "source": "$$f_n(x)=\\frac1n\\sin(n^2x),$$",
+          "sourceSha256": "acce14b64ff557f2240c31e97bbbabfd2a2c48faeb369213cc4c3c93a72ef814"
+        },
+        {
+          "id": "p505-b5",
+          "source": "then $\\{f_n\\}$ converges uniformly to the function $f(x)=0$, but",
+          "sourceSha256": "a3c626f2ba22e9a37ec1fa13d8118537b366fab53330255d045194c086032667",
+          "translation": "那么 $\\{f_n\\}$ 一致收敛于函数 $f(x)=0$，但是"
+        },
+        {
+          "id": "p505-b6",
+          "source": "$$f_n'(x)=n\\cos(n^2x),$$",
+          "sourceSha256": "4b95b113c1ae20b7a8f00e2249d4a9eeb66444779be1115d70e12961e0420caa"
+        },
+        {
+          "id": "p505-b7",
+          "source": "and $\\lim_{n\\to\\infty}n\\cos(n^2x)$ does not always exist (for example, it does not exist if $x=0$).",
+          "sourceSha256": "740de7a9901dc64fbe183efab5477a7f6a11a284b73e84cb0dce3af1bd8ed22f",
+          "translation": "而 $\\lim_{n\\to\\infty}n\\cos(n^2x)$ 并不总是存在（例如，当 $x=0$ 时它就不存在）。"
+        },
+        {
+          "id": "p505-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:780px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"453 579 785 350\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0524.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg></figure>",
+          "sourceSha256": "e6f5132950e5d921a69a93bea2a7bd73769c06bea132838ed100da07d581dea9"
+        },
+        {
+          "id": "p505-b9",
+          "source": "Despite such examples, the Fundamental Theorem of Calculus practically guarantees that some sort of theorem about derivatives will be a consequence of Theorem 1; the crucial hypothesis is that $\\{f_n'\\}$ converges uniformly (to some continuous function).",
+          "sourceSha256": "7008861c066dd2d0affb0b23b93ea9d11e1ea873e92814552f35a324b7a63716",
+          "translation": "尽管有这些例子，微积分基本定理几乎保证了：某种关于导数的定理应当可以作为定理 1 的推论得到；关键假设是 $\\{f_n'\\}$ 一致收敛（于某个连续函数）。"
+        },
+        {
+          "id": "p505-b10",
+          "source": "## THEOREM 3",
+          "sourceSha256": "b8edca4ea9f8b240e9615c405ac5fd2537d8c2c927895fdef57abda9f71f2199",
+          "translation": "## 定理 3"
+        },
+        {
+          "id": "p505-b11",
+          "source": "Suppose that $\\{f_n\\}$ is a sequence of functions which are differentiable on $[a,b]$, with integrable derivatives $f_n'$, and that $\\{f_n\\}$ converges (pointwise) to $f$. Suppose, moreover, that $\\{f_n'\\}$ converges uniformly on $[a,b]$ to some continuous function $g$. Then $f$ is differentiable and",
+          "sourceSha256": "0d8500e624e4a15359c667c681a7ed5d20c46029c5a9d469409fde9388da6b41",
+          "translation": "假设 $\\{f_n\\}$ 是一列在 $[a,b]$ 上可导的函数，其导数 $f_n'$ 可积，而且 $\\{f_n\\}$（逐点）收敛于 $f$。再假设 $\\{f_n'\\}$ 在 $[a,b]$ 上一致收敛于某个连续函数 $g$。那么 $f$ 可导，并且"
+        },
+        {
+          "id": "p505-b12",
+          "source": "$$f'(x)=\\lim_{n\\to\\infty}f_n'(x).$$",
+          "sourceSha256": "e32305ab0796cf87bb201b95db7e7250a6450054695ac654f465e8cce6e3052a"
+        },
+        {
+          "id": "p505-b13",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p505-b14",
+          "source": "Applying Theorem 1 to the interval $[a,x]$, we see that for each $x$ we have",
+          "sourceSha256": "75220a6ae8a3f0d81b568f1625d225170313bf04a52e4fbdb68dc69972c51327",
+          "translation": "把定理 1 应用于区间 $[a,x]$，可见对于每个 $x$，都有"
+        },
+        {
+          "id": "p505-b15",
+          "source": "$$\\begin{aligned}\\int_a^xg&=\\lim_{n\\to\\infty}\\int_a^xf_n'\\\\&=\\lim_{n\\to\\infty}[f_n(x)-f_n(a)]\\\\&=f(x)-f(a).\\end{aligned}$$",
+          "sourceSha256": "8846c56396958337e16a895a5ba3dc4b94d05e542d61a06df1906e2a7bb3d806"
+        }
+      ]
+    },
+    {
+      "printed": 506,
+      "sourceSha256": "64a5177251cbd53a8741a29bd416c4630a65ece45604aafba929f13943b22e1f",
+      "blocks": [
+        {
+          "id": "p506-b1",
+          "source": "Since $g$ is continuous, it follows that $f'(x)=g(x)=\\lim_{n\\to\\infty}f_n'(x)$ for all $x$ in the interval $[a,b]$. ■",
+          "sourceSha256": "5e13087d24ce98f36ff1f69ca2b3125b128901f66c147165b25266b61060243b",
+          "translation": "由于 $g$ 连续，对于区间 $[a,b]$ 中的所有 $x$，都有 $f'(x)=g(x)=\\lim_{n\\to\\infty}f_n'(x)$。■"
+        },
+        {
+          "id": "p506-b2",
+          "source": "Now that the basic facts about uniform limits have been established, it is clear how to treat functions defined as infinite sums,",
+          "sourceSha256": "dddc1345496e355d0f1b0aa45c1333f3e847a6f5c2d360e2294d4dd1f28af547",
+          "translation": "既然一致极限的基本事实已经建立，如何处理通过无穷和定义的函数也就清楚了："
+        },
+        {
+          "id": "p506-b3",
+          "source": "$$f(x)=f_1(x)+f_2(x)+f_3(x)+\\cdots.$$",
+          "sourceSha256": "7bd78dcc5d57a6c3fbc275707d45513c34006c7df14e1ae719b4156351db8bf5"
+        },
+        {
+          "id": "p506-b4",
+          "source": "This equation means that",
+          "sourceSha256": "938d25c0d6c65dfef653a1ba3fd757ef9492803b74b547bc0adc64832da2a261",
+          "translation": "这个等式意味着"
+        },
+        {
+          "id": "p506-b5",
+          "source": "$$f(x)=\\lim_{n\\to\\infty}f_1(x)+\\cdots+f_n(x);$$",
+          "sourceSha256": "abea5d541f396e97ed0fa763cbaabfc0b0916ceb7506136aaf9ddb7c7e9d3d40"
+        },
+        {
+          "id": "p506-b6",
+          "source": "our previous theorems apply when the new sequence",
+          "sourceSha256": "ced9095bde629256c8aca44169cc326354a93336a85e395f9f806bc5f3e2f89b",
+          "translation": "当新的函数列"
+        },
+        {
+          "id": "p506-b7",
+          "source": "$$f_1,\\ f_1+f_2,\\ f_1+f_2+f_3,\\ \\ldots$$",
+          "sourceSha256": "2c585d73d7d30e9c6ce5b6d519d20b121618a1d4f219801f7dde080308b6199f"
+        },
+        {
+          "id": "p506-b8",
+          "source": "converges uniformly to $f$. Since this is the only case we shall ever be interested in, we single it out with a definition.",
+          "sourceSha256": "7715aa0630bf537d369f02cc814353050d4726b8b7458a98de3bd844dfb82ff5",
+          "translation": "一致收敛于 $f$ 时，我们前面的定理就适用。由于我们只关心这种情形，便用一个定义把它单独列出来。"
+        },
+        {
+          "id": "p506-b9",
+          "source": "## DEFINITION",
+          "sourceSha256": "676bc8347a70e5e93cbff5e0571ad9eecf86b072557f09f8796edced86dfc6e2",
+          "translation": "## 定义"
+        },
+        {
+          "id": "p506-b10",
+          "source": "The series $\\displaystyle\\sum_{n=1}^\\infty f_n$ **converges uniformly** (more formally: the sequence $\\{f_n\\}$ is **uniformly summable**) **to $f$ on $A$**, if the sequence",
+          "sourceSha256": "2ecb55d44936f31c3819c66cf1d0e4e9aec5fc774001d01032f4e8005240e149",
+          "translation": "如果下面的函数列一致收敛，就称级数 $\\displaystyle\\sum_{n=1}^\\infty f_n$ **在 $A$ 上一致收敛于 $f$**（更正式地说：数列 $\\{f_n\\}$ **一致可求和**）："
+        },
+        {
+          "id": "p506-b11",
+          "source": "$$f_1,\\ f_1+f_2,\\ f_1+f_2+f_3,\\ \\ldots$$",
+          "sourceSha256": "2c585d73d7d30e9c6ce5b6d519d20b121618a1d4f219801f7dde080308b6199f"
+        },
+        {
+          "id": "p506-b12",
+          "source": "converges uniformly to $f$ on $A$.",
+          "sourceSha256": "8e3a4b3207600d8d4773a4167c9d887a05878209c08ad949133df0b2e1236418",
+          "translation": "这里，一致收敛是在 $A$ 上以 $f$ 为极限。"
+        },
+        {
+          "id": "p506-b13",
+          "source": "We can now apply each of Theorems 1, 2, and 3 to uniformly convergent series; the results may be stated in one common corollary.",
+          "sourceSha256": "2352cd0f5fd7b2e8eb8b3c048b53c23c5b87cbcd9b8c6d7e0d369e4f0d8701b8",
+          "translation": "现在，我们可以把定理 1、2、3 分别应用于一致收敛级数；所得结果可以合并为一个推论。"
+        },
+        {
+          "id": "p506-b14",
+          "source": "## COROLLARY",
+          "sourceSha256": "70ed7cf52f92a7aea604b6b124d570a295680364c043c14ac60a54887c91044f",
+          "translation": "## 推论"
+        },
+        {
+          "id": "p506-b15",
+          "source": "Let $\\displaystyle\\sum_{n=1}^\\infty f_n$ converge uniformly to $f$ on $[a,b]$.",
+          "sourceSha256": "8e6ddfb530ebb0d782307a674780e8f53166569e5225fc9e7a5a2c35b1851082",
+          "translation": "设 $\\displaystyle\\sum_{n=1}^\\infty f_n$ 在 $[a,b]$ 上一致收敛于 $f$。"
+        },
+        {
+          "id": "p506-b16",
+          "source": "(1) If each $f_n$ is continuous on $[a,b]$, then $f$ is continuous on $[a,b]$.",
+          "sourceSha256": "a689b35c6b1ed87b04d118f66570448c1a342dcf2884a71b1081e48ceec93b3a",
+          "translation": "(1) 如果每个 $f_n$ 都在 $[a,b]$ 上连续，那么 $f$ 在 $[a,b]$ 上连续。"
+        },
+        {
+          "id": "p506-b17",
+          "source": "(2) If $f$ and each $f_n$ is integrable on $[a,b]$, then",
+          "sourceSha256": "062d1781d05a860d2051d38a5d718823fc57e3f203ab56a9017d36af5b3a9a4f",
+          "translation": "(2) 如果 $f$ 及每个 $f_n$ 都在 $[a,b]$ 上可积，那么"
+        },
+        {
+          "id": "p506-b18",
+          "source": "$$\\int_a^bf=\\sum_{n=1}^\\infty\\int_a^bf_n.$$",
+          "sourceSha256": "7902094b3d6c7cd758eed2fdd381d8584d14914cf308256a5aa004021e93a9a9"
+        },
+        {
+          "id": "p506-b19",
+          "source": "Moreover, if $\\displaystyle\\sum_{n=1}^\\infty f_n$ converges (pointwise) to $f$ on $[a,b]$, each $f_n$ has an integrable derivative $f_n'$ and $\\displaystyle\\sum_{n=1}^\\infty f_n'$ converges uniformly on $[a,b]$ to some continuous function, then",
+          "sourceSha256": "9af215a661b5150709a7f88a744875e3aea70ab075fd11c03a66177a76416027",
+          "translation": "此外，如果 $\\displaystyle\\sum_{n=1}^\\infty f_n$ 在 $[a,b]$ 上（逐点）收敛于 $f$，每个 $f_n$ 都有可积导数 $f_n'$，而且 $\\displaystyle\\sum_{n=1}^\\infty f_n'$ 在 $[a,b]$ 上一致收敛于某个连续函数，那么"
+        },
+        {
+          "id": "p506-b20",
+          "source": "$$(3)\\quad f'(x)=\\sum_{n=1}^\\infty f_n'(x)\\qquad\\text{for all }x\\text{ in }[a,b].$$",
+          "sourceSha256": "f5ab7b8bbb77c8449de569cb23608c0e872e129a174f6fac0fb9df524a17e899"
+        }
+      ]
+    },
+    {
+      "printed": 507,
+      "sourceSha256": "ec0388fb10c625c201ac0d040b10d72a027caa8df24887047e16c76444f3ccd5",
+      "blocks": [
+        {
+          "id": "p507-b1",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p507-b2",
+          "source": "(1) If each $f_n$ is continuous, then so is each $f_1+\\cdots+f_n$, and $f$ is the uniform limit of the sequence $f_1,\\ f_1+f_2,\\ f_1+f_2+f_3,\\ \\ldots$, so $f$ is continuous by Theorem 2.",
+          "sourceSha256": "faa1514a7ceb6df1e86a9aead61a12306eb69e14b83a16bada830cc1ddb2bba9",
+          "translation": "(1) 如果每个 $f_n$ 都连续，那么每个 $f_1+\\cdots+f_n$ 也连续；而 $f$ 是函数列 $f_1,\\ f_1+f_2,\\ f_1+f_2+f_3,\\ \\ldots$ 的一致极限，所以根据定理 2，$f$ 连续。"
+        },
+        {
+          "id": "p507-b3",
+          "source": "(2) Since $f_1,\\ f_1+f_2,\\ f_1+f_2+f_3,\\ \\ldots$ converges uniformly to $f$, it follows from Theorem 1 that",
+          "sourceSha256": "61389aefa2fb5a9c14e02f9ff984decbdec696709be198e51739af0d41235b8c",
+          "translation": "(2) 由于 $f_1,\\ f_1+f_2,\\ f_1+f_2+f_3,\\ \\ldots$ 一致收敛于 $f$，由定理 1 得到"
+        },
+        {
+          "id": "p507-b4",
+          "source": "$$\\begin{aligned}\\int_a^bf&=\\lim_{n\\to\\infty}\\int_a^b(f_1+\\cdots+f_n)\\\\&=\\lim_{n\\to\\infty}\\left(\\int_a^bf_1+\\cdots+\\int_a^bf_n\\right)\\\\&=\\sum_{n=1}^\\infty\\int_a^bf_n.\\end{aligned}$$",
+          "sourceSha256": "31fd09f44a7d2e93ce10d212f7a0f6b73e47cf4090700df3f763754c67475ce9"
+        },
+        {
+          "id": "p507-b5",
+          "source": "(3) Each function $f_1+\\cdots+f_n$ is differentiable, with derivative $f_1'+\\cdots+f_n'$, and $f_1',\\ f_1'+f_2',\\ f_1'+f_2'+f_3',\\ \\ldots$ converges uniformly to a continuous function, by hypothesis. It follows from Theorem 3 that",
+          "sourceSha256": "ccf6d3111b5958490c855df7d5bc12b90b65f6abd56203f7ececb5eea5a6ee89",
+          "translation": "(3) 每个函数 $f_1+\\cdots+f_n$ 都可导，其导数为 $f_1'+\\cdots+f_n'$；而根据假设，$f_1',\\ f_1'+f_2',\\ f_1'+f_2'+f_3',\\ \\ldots$ 一致收敛于一个连续函数。由定理 3 得到"
+        },
+        {
+          "id": "p507-b6",
+          "source": "$$\\begin{aligned}f'(x)&=\\lim_{n\\to\\infty}[f_1'(x)+\\cdots+f_n'(x)]\\\\&=\\sum_{n=1}^\\infty f_n'(x).\\quad\\blacksquare\\end{aligned}$$",
+          "sourceSha256": "537837fe75fbbfab375b9c23d280e4c89058a70faca40c4e3c71ed79c43968bc"
+        },
+        {
+          "id": "p507-b7",
+          "source": "At the moment this corollary is not very useful, since it seems quite difficult to predict when the sequence $f_1,\\ f_1+f_2,\\ f_1+f_2+f_3,\\ldots$ will converge uniformly. The most important condition which ensures such uniform convergence is provided by the following theorem; the proof is almost a triviality because of the cleverness with which the very simple hypotheses have been chosen.",
+          "sourceSha256": "5869e8440fdd969df65624c9fb9635359fa7e7accb97d2c29827e0262888a63f",
+          "translation": "目前，这个推论还不太有用，因为要预先判断函数列 $f_1,\\ f_1+f_2,\\ f_1+f_2+f_3,\\ldots$ 何时一致收敛，似乎相当困难。下面的定理给出了保证这种一致收敛的最重要条件；由于它巧妙地选取了非常简单的假设，其证明几乎轻而易举。"
+        },
+        {
+          "id": "p507-b8",
+          "source": "## THEOREM 4 (THE WEIERSTRASS M-TEST)",
+          "sourceSha256": "028e6ee7e6ea4aaa1269825873eed94db6d447359ea554bcd40f3223d54bf6ca",
+          "translation": "## 定理 4（魏尔斯特拉斯 M 判别法）"
+        },
+        {
+          "id": "p507-b9",
+          "source": "Let $\\{f_n\\}$ be a sequence of functions defined on $A$, and suppose that $\\{M_n\\}$ is a sequence of numbers such that",
+          "sourceSha256": "a366edd2f4f5a421e2ddc07af5cbd292faf38dd14becb4490f7d28691d10c5ae",
+          "translation": "设 $\\{f_n\\}$ 是定义在 $A$ 上的函数列，并假设 $\\{M_n\\}$ 是满足下列条件的数列："
+        },
+        {
+          "id": "p507-b10",
+          "source": "$$|f_n(x)|\\le M_n\\qquad\\text{for all }x\\text{ in }A.$$",
+          "sourceSha256": "c5d288a0ec848c3a723d14898569550fd2a25a878ca30694447779bca985f35e"
+        },
+        {
+          "id": "p507-b11",
+          "source": "Suppose moreover that $\\displaystyle\\sum_{n=1}^\\infty M_n$ converges. Then for each $x$ in $A$ the series $\\displaystyle\\sum_{n=1}^\\infty f_n(x)$ converges (in fact, it converges absolutely), and $\\displaystyle\\sum_{n=1}^\\infty f_n$ converges uniformly on $A$ to the function",
+          "sourceSha256": "ff4f1ce1d723b10aa00c756153b2dc308baaf3cae1e2d6373723d7de31d9522d",
+          "translation": "再假设 $\\displaystyle\\sum_{n=1}^\\infty M_n$ 收敛。那么，对于 $A$ 中的每个 $x$，级数 $\\displaystyle\\sum_{n=1}^\\infty f_n(x)$ 都收敛（事实上，它绝对收敛），而且 $\\displaystyle\\sum_{n=1}^\\infty f_n$ 在 $A$ 上一致收敛于函数"
+        },
+        {
+          "id": "p507-b12",
+          "source": "$$f(x)=\\sum_{n=1}^\\infty f_n(x).$$",
+          "sourceSha256": "b2b79fce0daa3b73012ee5b74a5ec1cb51e070587dfc2b0e90cff584695dce2b"
+        }
+      ]
+    },
+    {
+      "printed": 508,
+      "sourceSha256": "f08d763390b1d41da86878524ec09eee4c53c706fff1b42cdeeccaf69214cc2d",
+      "blocks": [
+        {
+          "id": "p508-b1",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p508-b2",
+          "source": "For each $x$ in $A$ the series $\\displaystyle\\sum_{n=1}^\\infty|f_n(x)|$ converges, by the comparison test; consequently $\\displaystyle\\sum_{n=1}^\\infty f_n(x)$ converges (absolutely). Moreover, for all $x$ in $A$ we have",
+          "sourceSha256": "038c806928863c29effc2a9c519253447872be0770e98d5f53562a28a0083008",
+          "translation": "对于 $A$ 中的每个 $x$，根据比较判别法，级数 $\\displaystyle\\sum_{n=1}^\\infty|f_n(x)|$ 收敛；因此 $\\displaystyle\\sum_{n=1}^\\infty f_n(x)$（绝对）收敛。此外，对于 $A$ 中的所有 $x$，有"
+        },
+        {
+          "id": "p508-b3",
+          "source": "$$\\begin{aligned}\\bigl|f(x)-[f_1(x)+\\cdots+f_N(x)]\\bigr|&=\\left|\\sum_{n=N+1}^\\infty f_n(x)\\right|\\\\&\\le\\sum_{n=N+1}^\\infty|f_n(x)|\\\\&\\le\\sum_{n=N+1}^\\infty M_n.\\end{aligned}$$",
+          "sourceSha256": "bacb713bd69032d18d711add6216bdf7b283054529d6d866f8bf9bce93ce1b9a"
+        },
+        {
+          "id": "p508-b4",
+          "source": "Since $\\displaystyle\\sum_{n=1}^\\infty M_n$ converges, the number $\\displaystyle\\sum_{n=N+1}^\\infty M_n$ can be made as small as desired, by choosing $N$ sufficiently large. ■",
+          "sourceSha256": "2e15af6b5479417e222f0dec7f878cafc32aff21224ae395b95c8947872e9fc6",
+          "translation": "由于 $\\displaystyle\\sum_{n=1}^\\infty M_n$ 收敛，只要选择充分大的 $N$，数 $\\displaystyle\\sum_{n=N+1}^\\infty M_n$ 就可以任意小。■"
+        },
+        {
+          "id": "p508-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:726px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"483 801 729 292\" role=\"img\" aria-label=\"Figure 10\"><image href=\"pages/book/0528.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 10</figcaption></figure>",
+          "sourceSha256": "efe727c5cd07a8c1f212497265c0b8a5c232e0d4b480b136c885a99a0e8bdcc7"
+        },
+        {
+          "id": "p508-b6",
+          "source": "The following sequence $\\{f_n\\}$ illustrates a simple application of the Weierstrass $M$-test. Let $\\{x\\}$ denote the distance from $x$ to the nearest integer (the graph of $f(x)=\\{x\\}$ is illustrated in Figure 10). Now define",
+          "sourceSha256": "0a2efe7c4970e8e32dd7ad830998b69d8da26601275feed851a43920d934c2fe",
+          "translation": "下面的函数列 $\\{f_n\\}$ 展示了魏尔斯特拉斯 $M$ 判别法的一个简单应用。用 $\\{x\\}$ 表示 $x$ 到最近整数的距离（$f(x)=\\{x\\}$ 的图像如图 10 所示）。现在定义"
+        },
+        {
+          "id": "p508-b7",
+          "source": "$$f_n(x)=\\frac1{10^n}\\{10^nx\\}.$$",
+          "sourceSha256": "d3b84659eb7f5da8753d1f3b32857956111d79a41eb678276eb243df1d2d344c"
+        },
+        {
+          "id": "p508-b8",
+          "source": "The functions $f_1$ and $f_2$ are shown in Figure 11 (but to make the drawings simpler, $10^n$ has been replaced by $2^n$). This sequence of functions has been defined so that the Weierstrass $M$-test automatically applies: clearly",
+          "sourceSha256": "026a63b9af5e1f29260a1f7e370b17538185ff1635581c6e21d0a4d25606946d",
+          "translation": "图 11 画出了函数 $f_1$ 和 $f_2$（不过为了简化图形，把 $10^n$ 换成了 $2^n$）。这个函数列的定义使魏尔斯特拉斯 $M$ 判别法自动适用：显然"
+        },
+        {
+          "id": "p508-b9",
+          "source": "$$|f_n(x)|\\le\\frac1{10^n}\\qquad\\text{for all }x,$$",
+          "sourceSha256": "9768bcb39904f46eb4a69c0ad9d0651b187e9f29c6bebf1fe0e857f87afc800b"
+        },
+        {
+          "id": "p508-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:251px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 1050 252 455\" role=\"img\" aria-label=\"Figure 11\"><image href=\"pages/book/0528.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 11</figcaption></figure>",
+          "sourceSha256": "99219cf3339d74142ba27229fbb4583dd72c3014d69de1181493abe114cf8bdf"
+        }
+      ]
+    },
+    {
+      "printed": 509,
+      "sourceSha256": "48abd9be8e078aabd0ea63ca9edebb8b09895c743e38510809200e77fe98f314",
+      "blocks": [
+        {
+          "id": "p509-b1",
+          "source": "and $\\displaystyle\\sum_{n=1}^\\infty1/10^n$ converges. Thus $\\displaystyle\\sum_{n=1}^\\infty f_n$ converges uniformly; since each $f_n$ is continuous, the corollary implies that the function",
+          "sourceSha256": "3443769ea24d9cf7ccc5d82f23f9a10d28906b61c6b6c6609ffc0c826b008128",
+          "translation": "而且 $\\displaystyle\\sum_{n=1}^\\infty1/10^n$ 收敛。因此 $\\displaystyle\\sum_{n=1}^\\infty f_n$ 一致收敛；由于每个 $f_n$ 都连续，由推论可知，函数"
+        },
+        {
+          "id": "p509-b2",
+          "source": "$$f(x)=\\sum_{n=1}^\\infty f_n(x)=\\sum_{n=1}^\\infty\\frac1{10^n}\\{10^nx\\}$$",
+          "sourceSha256": "6132528213ecfdd3d53af8ac11e648722ce7e377fe83e62bb9215d7658be9bb3"
+        },
+        {
+          "id": "p509-b3",
+          "source": "is also continuous. Figure 12 shows the graph of the first few partial sums $f_1+\\cdots+f_n$. As $n$ increases, the graphs become harder and harder to draw, and the infinite sum $\\displaystyle\\sum_{n=1}^\\infty f_n$ is quite undrawable, as shown by the following theorem (included mainly as an interesting sidelight, to be skipped if you find the going too rough).",
+          "sourceSha256": "53f492f02bf2e376acac7d1b9a125cdc168f488a15a1545f1264f7b910af5470",
+          "translation": "也连续。图 12 显示了前几个部分和 $f_1+\\cdots+f_n$ 的图像。随着 $n$ 增大，图像越来越难画，而无穷和 $\\displaystyle\\sum_{n=1}^\\infty f_n$ 的图像根本无法画出，如下一个定理所示（收录这一定理主要是作为一则有趣的旁证；如果你觉得太难，可以跳过）。"
+        },
+        {
+          "id": "p509-b4",
+          "source": "## THEOREM 5",
+          "sourceSha256": "c94f9199fe34be84f23f58e99462e4d11daa375dd377566a2e16a173494ca323",
+          "translation": "## 定理 5"
+        },
+        {
+          "id": "p509-b5",
+          "source": "The function",
+          "sourceSha256": "9bd46db7bec99e0c589fa18a58df44c34061cf0aafb9d99dae0723e39d0c3861",
+          "translation": "函数"
+        },
+        {
+          "id": "p509-b6",
+          "source": "$$f(x)=\\sum_{n=1}^\\infty\\frac1{10^n}\\{10^nx\\}$$",
+          "sourceSha256": "80116b00a7aa4a1e9293012875dd97b3e180dd4fdcefe51e1763fed595238009"
+        },
+        {
+          "id": "p509-b7",
+          "source": "is continuous everywhere and differentiable nowhere!",
+          "sourceSha256": "57f1da4f4b3ffaff5dd4c88f399372afb6ad7a3f43af71de174ebb3d7684b196",
+          "translation": "处处连续，却处处不可导！"
+        },
+        {
+          "id": "p509-b8",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p509-b9",
+          "source": "We have just shown that $f$ is continuous; this is the only part of the proof which uses uniform convergence. We will prove that $f$ is not differentiable at $a$, for any $a$, by the straightforward method of exhibiting a particular sequence $\\{h_m\\}$ approaching $0$ for which",
+          "sourceSha256": "7945333d135f7dcea17a81bac30d0ddf49cbeb6ad2db9ee3e5eb3e69f984b3f3",
+          "translation": "我们刚刚已经说明 $f$ 连续；这是证明中唯一使用一致收敛的部分。对于任意 $a$，我们将用一种直接的方法证明 $f$ 在 $a$ 处不可导：给出一个趋于 $0$ 的特定数列 $\\{h_m\\}$，使得"
+        },
+        {
+          "id": "p509-b10",
+          "source": "$$\\lim_{m\\to\\infty}\\frac{f(a+h_m)-f(a)}{h_m}$$",
+          "sourceSha256": "397a3761243c075dad8bc1ae4006190e7fe35c93147a1c5cfdf5b2c12f807301"
+        },
+        {
+          "id": "p509-b11",
+          "source": "does not exist. It obviously suffices to consider only those numbers $a$ satisfying $0<a\\le1$.",
+          "sourceSha256": "fc97d7f44c23e905771723d947305419b8ce79ff53a19faf4cd3e74665a376a1",
+          "translation": "不存在。显然，只需考虑满足 $0<a\\le1$ 的那些数 $a$。"
+        },
+        {
+          "id": "p509-b12",
+          "source": "Suppose that the decimal expansion of $a$ is",
+          "sourceSha256": "138f2cafdf00958e4d8080f53d0cf88bce1e22cc4822352a12eda2ed689e1429",
+          "translation": "假设 $a$ 的十进制展开为"
+        },
+        {
+          "id": "p509-b13",
+          "source": "$$a=0.a_1a_2a_3a_4\\ldots.$$",
+          "sourceSha256": "43a898b31ee57ad853246e2c7ebdb9892550283513e1e5b76cc1d33ea1e36107"
+        },
+        {
+          "id": "p509-b14",
+          "source": "Let $h_m=10^{-m}$ if $a_m\\ne4$ or $9$, but let $h_m=-10^{-m}$ if $a_m=4$ or $9$ (the reason for these two exceptions will appear soon). Then",
+          "sourceSha256": "29aa7081ac5cd187eab21f505a70f93cd1028fc41852b210265cef10802a0446",
+          "translation": "当 $a_m\\ne4$ 且该位也不等于 $9$ 时，令 $h_m=10^{-m}$；但当 $a_m=4$ 或 $9$ 时，令 $h_m=-10^{-m}$（这两个例外的原因很快就会明白）。那么"
+        },
+        {
+          "id": "p509-b15",
+          "source": "$$\\begin{aligned}\\frac{f(a+h_m)-f(a)}{h_m}&=\\sum_{n=1}^\\infty\\frac1{10^n}\\cdot\\frac{\\{10^n(a+h_m)\\}-\\{10^na\\}}{\\pm10^{-m}}\\\\&=\\sum_{n=1}^\\infty\\pm10^{m-n}[\\{10^n(a+h_m)\\}-\\{10^na\\}].\\end{aligned}$$",
+          "sourceSha256": "9f73550e94f285d2ea4e9133e64c7577f9653cbc9e832d423eb68f7fb3a66822"
+        },
+        {
+          "id": "p509-b16",
+          "source": "This infinite series is really a finite sum, because if $n\\ge m$, then $10^nh_m$ is an integer, so",
+          "sourceSha256": "27e608745cf2c5ec231d436f63b8745b6596447a42441c1ecabeeb5bd273b524",
+          "translation": "这个无穷级数实际上是有限和，因为如果 $n\\ge m$，那么 $10^nh_m$ 是整数，所以"
+        },
+        {
+          "id": "p509-b17",
+          "source": "$$\\{10^n(a+h_m)\\}-\\{10^na\\}=0.$$",
+          "sourceSha256": "d8b619e18cdc0d0e687656b7dff6ad65c2611e31c3b3d8c24a7afc61a64297e5"
+        },
+        {
+          "id": "p509-b18",
+          "source": "On the other hand, for $n<m$ we can write",
+          "sourceSha256": "9e82aa2278e62dc3d812dd759c5bedb0d5107bc3387e8cd115d7880f61f77eb4",
+          "translation": "另一方面，对于 $n<m$，可以写成"
+        },
+        {
+          "id": "p509-b19",
+          "source": "$$\\begin{aligned}10^na&=\\text{integer}+0.a_{n+1}a_{n+2}a_{n+3}\\ldots a_m\\ldots\\\\10^n(a+h_m)&=\\text{integer}+0.a_{n+1}a_{n+2}a_{n+3}\\ldots(a_m\\pm1)\\ldots\\end{aligned}$$",
+          "sourceSha256": "219ee1e2ffc2bc42c60b95a0955293b3e34d783803e676a579ddedc3e347ece2"
+        }
+      ]
+    },
+    {
+      "printed": 510,
+      "sourceSha256": "bd6be8d468cc429ba4208f8b9595dbc4878a7f743f0631a5bf2f86be4ee2e319",
+      "blocks": [
+        {
+          "id": "p510-b1",
+          "source": "(in order for the second equation to be true it is essential that we choose $h_m=-10^{-m}$ when $a_m=9$). Now suppose that",
+          "sourceSha256": "8e22e7ed36437dceaea11285db4a5dc16f500695d5dcdef4ed5fb25297578b9a",
+          "translation": "（为了使第二个等式成立，必须在 $a_m=9$ 时选择 $h_m=-10^{-m}$）。现在假设"
+        },
+        {
+          "id": "p510-b2",
+          "source": "$$0.a_{n+1}a_{n+2}a_{n+3}\\ldots a_m\\cdots\\le\\tfrac12.$$",
+          "sourceSha256": "59c2f0c6da6a97bea0e028910c46803777ad130a8bf023eb8c0c5f55a78041e7"
+        },
+        {
+          "id": "p510-b3",
+          "source": "Then we also have",
+          "sourceSha256": "c7711c4e2b881e89e880531045aff50b29e5d59679a79455c6b24b3ad60e09c6",
+          "translation": "那么我们也有"
+        },
+        {
+          "id": "p510-b4",
+          "source": "$$0.a_{n+1}a_{n+2}a_{n+3}\\ldots(a_m\\pm1)\\cdots\\le\\tfrac12$$",
+          "sourceSha256": "a1e73b160f48a921c43435361ab453e62658927c49acefd9903ccf29597cb129"
+        },
+        {
+          "id": "p510-b5",
+          "source": "(in the special case $m=n+1$ the second equation is true because we chose $h_m=-10^{-m}$ when $a_m=4$). This means that",
+          "sourceSha256": "c9101fddda0ec3733514dcaa7d295a7a621071df011907a19e869cfd3c0fee30",
+          "translation": "（在特殊情形 $m=n+1$ 中，第二个等式成立，是因为我们在 $a_m=4$ 时选择了 $h_m=-10^{-m}$）。这意味着"
+        },
+        {
+          "id": "p510-b6",
+          "source": "$$\\{10^n(a+h_m)\\}-\\{10^na\\}=\\pm10^{n-m},$$",
+          "sourceSha256": "4c0724d7dc00c86907a52a5cb7cda610739e58061e49a26bd3439b39388e5452"
+        },
+        {
+          "id": "p510-b7",
+          "source": "and exactly the same equation can be derived when $0.a_{n+1}a_{n+2}a_{n+3}\\ldots>\\frac12$. Thus, for $n<m$ we have",
+          "sourceSha256": "19bea0d2f3eeb2cfb54174e92c00e80679624c58d62f201b06a8f861020d10ed",
+          "translation": "而当 $0.a_{n+1}a_{n+2}a_{n+3}\\ldots>\\frac12$ 时，可以得到完全相同的等式。因此，对于 $n<m$，有"
+        },
+        {
+          "id": "p510-b8",
+          "source": "$$10^{m-n}[\\{10^n(a+h_m)\\}-\\{10^na\\}]=\\pm1.$$",
+          "sourceSha256": "fb577500452089bc18dbf3f77bc9e56c385328e4bfa3acfdbef34609516197fa"
+        },
+        {
+          "id": "p510-b9",
+          "source": "In other words,",
+          "sourceSha256": "376930fb6d6ad7ed38259f212227b6fc302725bffd7fa614f54665847d80f308",
+          "translation": "换句话说，"
+        },
+        {
+          "id": "p510-b10",
+          "source": "$$\\frac{f(a+h_m)-f(a)}{h_m}$$",
+          "sourceSha256": "0fda9101060d6904d007983f96a9a4b968cffcd45f094dd0f0a0da2ca14e5752"
+        },
+        {
+          "id": "p510-b11",
+          "source": "is the sum of $m-1$ numbers, each of which is $\\pm1$. Now adding $+1$ or $-1$ to a number changes it from odd to even, and vice versa. The sum of $m-1$ numbers each $\\pm1$ is therefore an *even integer* if $m$ is odd, and an *odd integer* if $m$ is even. Consequently the sequence of ratios",
+          "sourceSha256": "c670c6d83d3d98762686de0c4fa5021b8c2927a014f99e88b11e2883bff0cf18",
+          "translation": "是 $m-1$ 个数的和，每个数都为 $\\pm1$。给一个数加上 $+1$ 或 $-1$，会把它从奇数变成偶数，反之亦然。因此，$m-1$ 个各为 $\\pm1$ 的数的和，在 $m$ 为奇数时是*偶整数*，在 $m$ 为偶数时是*奇整数*。所以，比值构成的数列"
+        },
+        {
+          "id": "p510-b12",
+          "source": "$$\\frac{f(a+h_m)-f(a)}{h_m}$$",
+          "sourceSha256": "0fda9101060d6904d007983f96a9a4b968cffcd45f094dd0f0a0da2ca14e5752"
+        },
+        {
+          "id": "p510-b13",
+          "source": "cannot possibly converge, since it is a sequence of integers which are alternately odd and even. ■",
+          "sourceSha256": "197431b9d3fa052be7aff09d873bbc23ecbd9303805dbcbb60d5b8609964faa1",
+          "translation": "不可能收敛，因为它是一个奇偶交替的整数数列。■"
+        },
+        {
+          "id": "p510-b14",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:396px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 362 398 996\" role=\"img\" aria-label=\"Figure 12\"><image href=\"pages/book/0527.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 12</figcaption></figure>",
+          "sourceSha256": "1a786ada0982bc215ff14778053afcb95b4bfba5a09888f3ee4300681e826d3d"
+        },
+        {
+          "id": "p510-b15",
+          "source": "In addition to its role in the previous theorem, the Weierstrass $M$-test is an ideal tool for analyzing functions which are very well behaved. We will give special attention to functions of the form",
+          "sourceSha256": "630dd9868afefbf3a43c5e5ac7179306f2cbf6f1491c348520bc570a044083f3",
+          "translation": "除了在前一个定理中发挥作用外，魏尔斯特拉斯 $M$ 判别法也是分析性质非常良好的函数的理想工具。我们将特别关注形如下式的函数："
+        },
+        {
+          "id": "p510-b16",
+          "source": "$$f(x)=\\sum_{n=0}^\\infty a_n(x-a)^n,$$",
+          "sourceSha256": "065a00bd79a3742af58d7b5caf5475aa4de75df6ee581c006195da83be526339"
+        },
+        {
+          "id": "p510-b17",
+          "source": "which can also be described by the equation",
+          "sourceSha256": "fdfe10f87213217d94ee85d03f61ee1c0e378aa028c32fdc2f1b8d32194a9987",
+          "translation": "它们也可以用下面的等式来描述："
+        },
+        {
+          "id": "p510-b18",
+          "source": "$$f(x)=\\sum_{n=0}^\\infty f_n(x),$$",
+          "sourceSha256": "af09e25a6ad5ed55d268617a758a2b07ffbd28911d4989d02601f01c87b8d8b6"
+        },
+        {
+          "id": "p510-b19",
+          "source": "for $f_n(x)=a_n(x-a)^n$. Such an infinite sum, of functions which depend only on powers of $(x-a)$, is called a **power series centered at $a$**. For the sake of simplicity, we will usually concentrate on power series centered at $0$,",
+          "sourceSha256": "b5910192cdd3b44d3c545a913c1f1f5e3ce1256e50b5e821144d3e6bbc0059ab",
+          "translation": "其中 $f_n(x)=a_n(x-a)^n$。这样的无穷和，其各函数只依赖于 $(x-a)$ 的幂，称为**以 $a$ 为中心的幂级数**。为简单起见，我们通常集中考虑以 $0$ 为中心的幂级数，"
+        },
+        {
+          "id": "p510-b20",
+          "source": "$$f(x)=\\sum_{n=0}^\\infty a_nx^n.$$",
+          "sourceSha256": "4f6b291398d0cdf78e85fc7a1a6efb9588c6a2d4d5d7a87ceb6a2a4f24186c20"
+        }
+      ]
+    },
+    {
+      "printed": 511,
+      "sourceSha256": "0fd72c5ce0a4771393523830f75260d391bc0c2cab822a677e1ac25fe274f1db",
+      "blocks": [
+        {
+          "id": "p511-b1",
+          "source": "One especially important group of power series are those of the form",
+          "sourceSha256": "364bb2632d5f1827b6fbb689ebd7b67e7df025e2e6490376f3f509698fcb2020",
+          "translation": "一类特别重要的幂级数具有如下形式："
+        },
+        {
+          "id": "p511-b2",
+          "source": "$$\\sum_{n=0}^\\infty\\frac{f^{(n)}(a)}{n!}(x-a)^n,$$",
+          "sourceSha256": "9c46d6ed4a09cc23d694b2ae210dc0e771ce88da744ed74c07146acdbd7351a0"
+        },
+        {
+          "id": "p511-b3",
+          "source": "where $f$ is some function which has derivatives of all orders at $a$; this series is called the **Taylor series for $f$ at $a$**. Of course, it is not necessarily true that",
+          "sourceSha256": "ea2b1a76b31903bd39cf3df17f3e434d7874ec4a3888eb20d358b99d0af5ef64",
+          "translation": "其中 $f$ 是在 $a$ 处具有各阶导数的某个函数；这个级数称为 **$f$ 在 $a$ 处的泰勒级数**。当然，下面的等式未必成立："
+        },
+        {
+          "id": "p511-b4",
+          "source": "$$f(x)=\\sum_{n=0}^\\infty\\frac{f^{(n)}(a)}{n!}(x-a)^n;$$",
+          "sourceSha256": "f65dacd9fce150a2bd2a6a8d2a894c65628ff03074f67b2d35feb01531771f9f"
+        },
+        {
+          "id": "p511-b5",
+          "source": "this equation holds only when the remainder terms satisfy $\\lim_{n\\to\\infty}R_{n,a}(x)=0$.",
+          "sourceSha256": "c3cb14a746ac7cf0e34ef9b9f22c484e92aec4b3e3161872fd83b2ecc772fd5c",
+          "translation": "这个等式只有在余项满足 $\\lim_{n\\to\\infty}R_{n,a}(x)=0$ 时才成立。"
+        },
+        {
+          "id": "p511-b6",
+          "source": "We already know that a power series $\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ does not necessarily converge for all $x$. For example, the power series",
+          "sourceSha256": "c915d8f3a21aa67a51df5ac9619be7a01efe6e8c992e24a3b1af8ac1248711c0",
+          "translation": "我们已经知道，幂级数 $\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ 未必对所有 $x$ 都收敛。例如，幂级数"
+        },
+        {
+          "id": "p511-b7",
+          "source": "$$x-\\frac{x^3}3+\\frac{x^5}5-\\frac{x^7}7+\\cdots$$",
+          "sourceSha256": "68196efc19cb82e15dfadfe9aa46c164ee8f0c08d6c46901ec1e0427787b9b86"
+        },
+        {
+          "id": "p511-b8",
+          "source": "converges only for $|x|\\le1$, while the power series",
+          "sourceSha256": "a860b499e34a254d71e7edfcdfa26fb3d20f35b9becffc3522b44c4c0ec8eab7",
+          "translation": "只在 $|x|\\le1$ 时收敛，而幂级数"
+        },
+        {
+          "id": "p511-b9",
+          "source": "$$x-\\frac{x^2}2+\\frac{x^3}3-\\frac{x^4}4+\\frac{x^5}5+\\cdots$$",
+          "sourceSha256": "329fbf013a22b26c1141b0443620205a75705afd6d37c9adfb2893fc9386b6e9"
+        },
+        {
+          "id": "p511-b10",
+          "source": "converges only for $-1<x\\le1$. It is even possible to produce a power series which converges only for $x=0$. For example, the power series",
+          "sourceSha256": "fb93424978f9c5fe91d1d384ab799f258100b05dfa12cb083a3f91bc6878f318",
+          "translation": "只在 $-1<x\\le1$ 时收敛。甚至可以构造一个仅在 $x=0$ 时收敛的幂级数。例如，幂级数"
+        },
+        {
+          "id": "p511-b11",
+          "source": "$$\\sum_{n=0}^\\infty n!x^n$$",
+          "sourceSha256": "d3a121edd103f1f69f2c922d902bba8d0105c37061d6ae5038ff0641efe251c4"
+        },
+        {
+          "id": "p511-b12",
+          "source": "does not converge for $x\\ne0$; indeed, the ratios",
+          "sourceSha256": "95073b8d6bf32c41547e15501fb3276d0c53dc5c87bbc4861315f6f1f6a140f6",
+          "translation": "在 $x\\ne0$ 时不收敛；事实上，比值"
+        },
+        {
+          "id": "p511-b13",
+          "source": "$$\\frac{(n+1)!(x^{n+1})}{n!x^n}=(n+1)x$$",
+          "sourceSha256": "376e2851e7581a860c78204d482bb58e505ef51bb05266171ee44ab97ec6142a"
+        },
+        {
+          "id": "p511-b14",
+          "source": "are unbounded for any $x\\ne0$. If a power series $\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ does converge for some $x_0\\ne0$ however, then a great deal can be said about the series $\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ for $|x|<|x_0|$.",
+          "sourceSha256": "838fe6e424bbe2a123368cd826ec1004529fae69daa5bbfe29ac2d0987ac39ee",
+          "translation": "对任意 $x\\ne0$ 都无界。不过，如果一个幂级数 $\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ 确实在某个 $x_0\\ne0$ 处收敛，那么对于 $|x|<|x_0|$ 时的级数 $\\displaystyle\\sum_{n=0}^\\infty a_nx^n$，就有许多可以说的了。"
+        },
+        {
+          "id": "p511-b15",
+          "source": "## THEOREM 6",
+          "sourceSha256": "c85b1ed4f66d3fbbfc101c93d64c8ca44d95489433b72304a330fd5e7a947197",
+          "translation": "## 定理 6"
+        },
+        {
+          "id": "p511-b16",
+          "source": "Suppose that the series",
+          "sourceSha256": "250ad468991b2fd5b53d33dd6990471ef1c7d860f682743c6a30c9c7412eb2b9",
+          "translation": "假设级数"
+        },
+        {
+          "id": "p511-b17",
+          "source": "$$f(x_0)=\\sum_{n=0}^\\infty a_nx_0^n$$",
+          "sourceSha256": "738bd153549a77f85cdc0656cf83102f24a658b1fd01bafa0741471082776a56"
+        },
+        {
+          "id": "p511-b18",
+          "source": "converges, and let $a$ be any number with $0<a<|x_0|$. Then on $[-a,a]$ the series",
+          "sourceSha256": "daa9c2c86f981aa9cab0676fa1545bda5c7d08634df8d77379b823a9a7b0db64",
+          "translation": "收敛，并设 $a$ 是任意一个满足 $0<a<|x_0|$ 的数。那么在 $[-a,a]$ 上，级数"
+        },
+        {
+          "id": "p511-b19",
+          "source": "$$f(x)=\\sum_{n=0}^\\infty a_nx^n$$",
+          "sourceSha256": "ccd0e24f5d4a88bdc0a47a6659dcc058eb2e4ed87685a65d28d909ed70729c6f"
+        }
+      ]
+    },
+    {
+      "printed": 512,
+      "sourceSha256": "b729aa14661c48f1851f1b3190673287c52bb6c3506a2aae977a241674092c63",
+      "blocks": [
+        {
+          "id": "p512-b1",
+          "source": "converges uniformly (and absolutely). Moreover, the same is true for the series",
+          "sourceSha256": "0f10de5b0ef2fb78cb8178af03d7124a91f8ef0c5d4e5bfeae259f0ac6324c25",
+          "translation": "一致（并且绝对）收敛。此外，下面的级数也具有相同的性质："
+        },
+        {
+          "id": "p512-b2",
+          "source": "$$g(x)=\\sum_{n=1}^\\infty na_nx^{n-1}.$$",
+          "sourceSha256": "a4a06d3c15f04d39d25f01b80b755886820c022d7a1bba9fb986db0153a025cd"
+        },
+        {
+          "id": "p512-b3",
+          "source": "Finally, $f$ is differentiable and",
+          "sourceSha256": "7e23cbbb6568f7be99e1a5ab07363a7c30356d1616ca56a686262da80e39c26a",
+          "translation": "最后，$f$ 可导，并且"
+        },
+        {
+          "id": "p512-b4",
+          "source": "$$f'(x)=\\sum_{n=1}^\\infty na_nx^{n-1}$$",
+          "sourceSha256": "6f99b21233d96b85c031a3f66ceb4e03fe5b54c9af0aed35cf0326241b5bbd69"
+        },
+        {
+          "id": "p512-b5",
+          "source": "for all $x$ with $|x|<|x_0|$.",
+          "sourceSha256": "877734bc20081eebbd33f130e7808e9ba8e9319ddc5ed970f40087314cc4a490",
+          "translation": "对所有满足 $|x|<|x_0|$ 的 $x$ 成立。"
+        },
+        {
+          "id": "p512-b6",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p512-b7",
+          "source": "Since $\\displaystyle\\sum_{n=0}^\\infty a_nx_0^n$ converges, the terms $a_nx_0^n$ approach $0$. Hence they are surely bounded: there is some number $M$ such that",
+          "sourceSha256": "62bca78b86c0644bfe3eb9c4c769b6c8b982330b68ef4b099340f980a5cf9738",
+          "translation": "由于 $\\displaystyle\\sum_{n=0}^\\infty a_nx_0^n$ 收敛，各项 $a_nx_0^n$ 趋于 $0$。因而它们必定有界：存在某个数 $M$，使得"
+        },
+        {
+          "id": "p512-b8",
+          "source": "$$|a_nx_0^n|=|a_n|\\cdot|x_0^n|\\le M\\qquad\\text{for all }n.$$",
+          "sourceSha256": "4bb6a8d365182db96a4ae600c2621cb2eeac5c1922583c4adb7019b1daf61d86"
+        },
+        {
+          "id": "p512-b9",
+          "source": "Now if $x$ is in $[-a,a]$, then $|x|\\le|a|$, so",
+          "sourceSha256": "b2f9fc6fde451d0d62593f05173eb4faba8b5a8eb3e10e061d9e510466a93ae0",
+          "translation": "现在，如果 $x$ 位于 $[-a,a]$ 中，那么 $|x|\\le|a|$，所以"
+        },
+        {
+          "id": "p512-b10",
+          "source": "$$\\begin{aligned}|a_nx^n|&=|a_n|\\cdot|x^n|\\\\&\\le|a_n|\\cdot|a^n|\\\\&=|a_n|\\cdot|x_0|^n\\cdot\\left|\\frac a{x_0}\\right|^n\\qquad\\text{(this is the clever step)}\\\\&\\le M\\left|\\frac a{x_0}\\right|^n.\\end{aligned}$$",
+          "sourceSha256": "43dd9fc4b12220aa06c3a5d66d377079824c3c0579a4c1401bbb7d733d9fbe32"
+        },
+        {
+          "id": "p512-b11",
+          "source": "But $|a/x_0|<1$, so the (geometric) series",
+          "sourceSha256": "0769c101b975d22e0fa93294e618070f2ef98bd21c3de5166979460923b6002c",
+          "translation": "但是 $|a/x_0|<1$，所以（几何）级数"
+        },
+        {
+          "id": "p512-b12",
+          "source": "$$\\sum_{n=0}^\\infty M\\left|\\frac a{x_0}\\right|^n=M\\sum_{n=0}^\\infty\\left|\\frac a{x_0}\\right|^n$$",
+          "sourceSha256": "4c38c0d6c4c865209ee95f025565b0c52a08bb21f571922b73f90c320cf5d63d"
+        },
+        {
+          "id": "p512-b13",
+          "source": "converges. Choosing $M\\cdot|a/x_0|^n$ as the number $M_n$ in the Weierstrass $M$-test, it follows that $\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ converges uniformly on $[-a,a]$.",
+          "sourceSha256": "cf9932c43398c3fe9d5e41d5e589cf00fb7f3f819a377db5f83cc56e04d71e3f",
+          "translation": "收敛。在魏尔斯特拉斯 $M$ 判别法中，选择 $M\\cdot|a/x_0|^n$ 作为数 $M_n$，便可得到 $\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ 在 $[-a,a]$ 上一致收敛。"
+        },
+        {
+          "id": "p512-b14",
+          "source": "To prove the same assertion for $g(x)=\\displaystyle\\sum_{n=1}^\\infty na_nx^{n-1}$ notice that",
+          "sourceSha256": "d9afd4c4fe61f5b40976196b4e5a36d830be4ac5d620e52a3aeb0234e463bc31",
+          "translation": "为了对 $g(x)=\\displaystyle\\sum_{n=1}^\\infty na_nx^{n-1}$ 证明相同的结论，注意到"
+        },
+        {
+          "id": "p512-b15",
+          "source": "$$\\begin{aligned}|na_nx^{n-1}|&=n|a_n|\\cdot|x^{n-1}|\\\\&\\le n|a_n|\\cdot|a^{n-1}|\\\\&=\\frac{|a_n|}{|a|}\\cdot|x_0|^n n\\left|\\frac a{x_0}\\right|^n\\\\&\\le\\frac M{|a|}n\\left|\\frac a{x_0}\\right|^n.\\end{aligned}$$",
+          "sourceSha256": "e81dee066022c761e91fc4495474151486005ed24d83dab9ac649a4ac8987630"
+        },
+        {
+          "id": "p512-b16",
+          "source": "Since $|a/x_0|<1$, the series",
+          "sourceSha256": "a0138a5896554d3d13dee0c69c45caf107326792fa0676c6fb4cfdc82c9fc48b",
+          "translation": "由于 $|a/x_0|<1$，级数"
+        },
+        {
+          "id": "p512-b17",
+          "source": "$$\\sum_{n=1}^\\infty\\frac M{|a|}n\\left|\\frac a{x_0}\\right|^n=\\frac M{|a|}\\sum_{n=1}^\\infty n\\left|\\frac a{x_0}\\right|^n$$",
+          "sourceSha256": "446c5bef517402d8636d7c83fe75004b1ec7c9f139e6a0a8253a9d77540893d8"
+        },
+        {
+          "id": "p512-b18",
+          "source": "converges (this fact was proved in Chapter 23 as an application of the ratio test).",
+          "sourceSha256": "e047ac1cdce8d17d5f889087848daceccb7674ee63c5020349081375dab208cc",
+          "translation": "收敛（这个事实在第 23 章中已经作为比值判别法的应用证明过）。"
+        }
+      ]
+    },
+    {
+      "printed": 513,
+      "sourceSha256": "32c581231dfd2f81a36a6798d8d7b47ad24356c7c03197cb9383557a8fca5135",
+      "blocks": [
+        {
+          "id": "p513-b1",
+          "source": "Another appeal to the Weierstrass $M$-test proves that $\\displaystyle\\sum_{n=1}^\\infty na_nx^{n-1}$ converges uniformly on $[-a,a]$.",
+          "sourceSha256": "dd72b24968cd36d7fa87fcbfffee226e3f6be2995c6b046b5087df4bbd548373",
+          "translation": "再次使用魏尔斯特拉斯 $M$ 判别法，即可证明 $\\displaystyle\\sum_{n=1}^\\infty na_nx^{n-1}$ 在 $[-a,a]$ 上一致收敛。"
+        },
+        {
+          "id": "p513-b2",
+          "source": "Finally, our corollary proves, first that $g$ is continuous, and then that",
+          "sourceSha256": "965b18dec8bf126c1c8d616760252ed1e72f345a3a227bbf758165ac77dd9820",
+          "translation": "最后，我们的推论首先证明 $g$ 连续，然后证明"
+        },
+        {
+          "id": "p513-b3",
+          "source": "$$f'(x)=g(x)=\\sum_{n=1}^\\infty na_nx^{n-1}\\qquad\\text{for }x\\text{ in }[-a,a].$$",
+          "sourceSha256": "cfb1abaaf493d7da6beb5625f953eda126e01d2d3e8c87e248ceae07b5f1861d"
+        },
+        {
+          "id": "p513-b4",
+          "source": "Since we could have chosen any number $a$ with $0<a<|x_0|$, this result holds for all $x$ with $|x|<|x_0|$. ■",
+          "sourceSha256": "fef9fb9271d169c0371693913fd51fafba6395358beb6d4c2d337954d9b91f26",
+          "translation": "由于可以选取任意满足 $0<a<|x_0|$ 的数 $a$，这个结果对所有满足 $|x|<|x_0|$ 的 $x$ 都成立。■"
+        },
+        {
+          "id": "p513-b5",
+          "source": "We are now in a position to manipulate power series with ease. Most algebraic manipulations are fairly straightforward consequences of general theorems about infinite series. For example, suppose that $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ and $g(x)=\\displaystyle\\sum_{n=0}^\\infty b_nx^n$, where the two power series both converge for some $x_0$. Then for $|x|<|x_0|$ we have",
+          "sourceSha256": "5d1d5c9be7befde509e23d92380d07d76382dec6c11ca92323f2ff591f798f9d",
+          "translation": "现在，我们已经能够自如地运算幂级数了。大多数代数运算，都是无穷级数一般定理相当直接的推论。例如，假设 $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$、$g(x)=\\displaystyle\\sum_{n=0}^\\infty b_nx^n$，其中两个幂级数都在某个 $x_0$ 处收敛。那么，当 $|x|<|x_0|$ 时，有"
+        },
+        {
+          "id": "p513-b6",
+          "source": "$$\\sum_{n=0}^\\infty a_nx^n+\\sum_{n=0}^\\infty b_nx^n=\\sum_{n=0}^\\infty(a_nx^n+b_nx^n)=\\sum_{n=0}^\\infty(a_n+b_n)x^n.$$",
+          "sourceSha256": "afe48e5ebfb87ade873f32ca98c6549b0dc659fbee933d76e3d5c9487ef497ff"
+        },
+        {
+          "id": "p513-b7",
+          "source": "So the series $h(x)=\\displaystyle\\sum_{n=0}^\\infty(a_n+b_n)x^n$ also converges for $|x|<|x_0|$, and $h=f+g$ for these $x$.",
+          "sourceSha256": "d205344377490baa60bc994844fffd180927fe3d832ccbe527295cf601cd181a",
+          "translation": "所以级数 $h(x)=\\displaystyle\\sum_{n=0}^\\infty(a_n+b_n)x^n$ 在 $|x|<|x_0|$ 时也收敛，而且对于这些 $x$，有 $h=f+g$。"
+        },
+        {
+          "id": "p513-b8",
+          "source": "The treatment of products is just a little more involved. If $|x|<|x_0|$, then we know that the series $\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ and $\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ converge *absolutely*. So it follows from Theorem 23-9 that the product $\\displaystyle\\sum_{n=0}^\\infty a_nx^n\\cdot\\sum_{n=0}^\\infty b_nx^n$ is given by",
+          "sourceSha256": "4f783def762e570ce93ecfbae8bda1c8bcc6a0e2c68f8fe6b68254cee948aefc",
+          "translation": "乘积的处理只稍微复杂一点。如果 $|x|<|x_0|$，我们知道级数 $\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ 和 $\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ 都*绝对*收敛。因此，由定理 23-9，乘积 $\\displaystyle\\sum_{n=0}^\\infty a_nx^n\\cdot\\sum_{n=0}^\\infty b_nx^n$ 等于"
+        },
+        {
+          "id": "p513-b9",
+          "source": "$$\\sum_{i=0}^\\infty\\sum_{j=0}^\\infty a_ix^ib_jx^j,$$",
+          "sourceSha256": "841473a57640a6379f18168b70d5f6bdb0ef5002e53f6e4d8a373c82e4a17205"
+        },
+        {
+          "id": "p513-b10",
+          "source": "where the elements $a_ix^ib_jx^j$ are arranged in any order. In particular, we can choose the arrangement",
+          "sourceSha256": "420bc4a6e29e8512902bba8b011f4811cf999c0add7b0c404f3aadbb5477ea75",
+          "translation": "其中，各项 $a_ix^ib_jx^j$ 可以按任意顺序排列。特别地，可以选择如下排列："
+        },
+        {
+          "id": "p513-b11",
+          "source": "$$a_0b_0+(a_0b_1+a_1b_0)x+(a_0b_2+a_1b_1+a_2b_0)x^2+\\cdots$$",
+          "sourceSha256": "61c97169943ab0eb2a23cbeac64968424ab6fbefbaf3fb6764964e302d815571"
+        },
+        {
+          "id": "p513-b12",
+          "source": "which can be written as",
+          "sourceSha256": "c2d18a0962377346561e5d076716b7c4e7ecb7adb29703a81756764b753bf39d",
+          "translation": "它可以写成"
+        },
+        {
+          "id": "p513-b13",
+          "source": "$$\\sum_{n=0}^\\infty c_nx^n\\quad\\text{for }c_n=\\sum_{k=0}^na_kb_{n-k}.$$",
+          "sourceSha256": "545c13f7b10e3b791ab5e0784dcd7acdd7d824ac28cdafa4797e4d292caa21c6"
+        },
+        {
+          "id": "p513-b14",
+          "source": "This is the “Cauchy product” that was introduced in Problem 23-10. Thus, the Cauchy product $h(x)=\\displaystyle\\sum_{n=0}^\\infty c_nx^n$ also converges for $|x|<|x_0|$ and $h=fg$ for these $x$.",
+          "sourceSha256": "4b536120ef9eec38fa9aec5e2c92d3a16e67b107d38efc57e0286506409a22f6",
+          "translation": "这就是习题 23-10 中引入的“柯西乘积”。因此，柯西乘积 $h(x)=\\displaystyle\\sum_{n=0}^\\infty c_nx^n$ 在 $|x|<|x_0|$ 时也收敛，而且对于这些 $x$，有 $h=fg$。"
+        }
+      ]
+    },
+    {
+      "printed": 514,
+      "sourceSha256": "0b4c5a6e250e5e6a62ad957e936c2ae458056d1fe6722f05adf34c550ab143eb",
+      "blocks": [
+        {
+          "id": "p514-b1",
+          "source": "Finally, suppose that $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$, where $a_0\\ne0$, so that $f(0)=a_0\\ne0$. Then we can try to find a power series $\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ which represents $1/f$. This means that we want to have",
+          "sourceSha256": "0d817964c6847b845c88bd491dacb7b9f4a43df3f80b7bbc17ac488ff9c452f2",
+          "translation": "最后，假设 $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$，其中 $a_0\\ne0$，所以 $f(0)=a_0\\ne0$。那么，我们可以尝试寻找一个表示 $1/f$ 的幂级数 $\\displaystyle\\sum_{n=0}^\\infty b_nx^n$。这意味着我们希望有"
+        },
+        {
+          "id": "p514-b2",
+          "source": "$$\\sum_{n=0}^\\infty a_nx^n\\cdot\\sum_{n=0}^\\infty b_nx^n=1=1+0\\cdot x+0\\cdot x^2+\\cdots.$$",
+          "sourceSha256": "e7c7204c569f5b6313128c2389f18a940973ff658574716d270c9b47c1d82f86"
+        },
+        {
+          "id": "p514-b3",
+          "source": "Since the left side of this equation will be given by the Cauchy product, we want to have",
+          "sourceSha256": "5bdf885c1b3568783a00560ed1ed5f0374b7fda3713d7211b0d1a8df0cef08ef",
+          "translation": "由于这个等式的左边将由柯西乘积给出，因此我们希望有"
+        },
+        {
+          "id": "p514-b4",
+          "source": "$$\\begin{aligned}a_0b_0&=1\\\\a_0b_1+a_1b_0&=0\\\\a_0b_2+a_1b_1+a_2b_0&=0\\\\&\\ldots\\end{aligned}$$",
+          "sourceSha256": "67584d05b5a97155f875074ae46715aee4768fd9c7ad39fee610b7e6377ec6b3"
+        },
+        {
+          "id": "p514-b5",
+          "source": "Since $a_0\\ne0$, we can solve the first of these equations for $b_0$. Then we can solve the second for $b_1$, etc. Of course, we still have to prove that the new series $\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ does converge for some $x\\ne0$. This is left as an exercise (Problem 18).",
+          "sourceSha256": "8e29676d94cb3523d561ac425dd67e81a21a322b7733d3ed9e169027e5cf360c",
+          "translation": "由于 $a_0\\ne0$，可以从第一个等式解出 $b_0$，然后从第二个等式解出 $b_1$，如此等等。当然，我们仍然必须证明，新的级数 $\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ 确实在某个 $x\\ne0$ 处收敛。这一点留作练习（习题 18）。"
+        },
+        {
+          "id": "p514-b6",
+          "source": "For derivatives, Theorem 6 gives us all the information we need. In particular, when we apply Theorem 6 to the infinite series",
+          "sourceSha256": "b62f1c59dcfffebb979de40bd5ff59d286cec8b02aa9cd8de73f5878577fcee0",
+          "translation": "对于导数，定理 6 提供了我们所需的全部信息。特别地，把定理 6 应用于无穷级数"
+        },
+        {
+          "id": "p514-b7",
+          "source": "$$\\begin{aligned}\\sin x&=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\frac{x^7}{7!}+\\frac{x^9}{9!}-\\cdots,\\\\\\cos x&=1-\\frac{x^2}{2!}+\\frac{x^4}{4!}-\\frac{x^6}{6!}+\\frac{x^8}{8!}-\\cdots,\\\\e^x&=1+\\frac x{1!}+\\frac{x^2}{2!}+\\frac{x^3}{3!}+\\frac{x^4}{4!}+\\cdots,\\end{aligned}$$",
+          "sourceSha256": "a9ef9093a9be58054350ca1d844896498aedc071355fc8490c073ed5987e7c6c"
+        },
+        {
+          "id": "p514-b8",
+          "source": "we get precisely the results which are expected. Each of these converges for any $x_0$, hence the conclusions of Theorem 6 apply for any $x$:",
+          "sourceSha256": "5b06d1e1f4c7cad9fca35a2c3f6409c3f8851fc2bdd7a555a27e376303ec04e4",
+          "translation": "便恰好得到预期的结果。每个级数都对任意 $x_0$ 收敛，因此定理 6 的结论对任意 $x$ 都适用："
+        },
+        {
+          "id": "p514-b9",
+          "source": "$$\\begin{aligned}\\sin'(x)&=1-\\frac{3x^2}{3!}+\\frac{5x^4}{5!}-\\cdots=\\cos x,\\\\\\cos'(x)&=-\\frac{2x}{2!}+\\frac{4x^3}{4!}-\\frac{6x^5}{6!}+\\cdots=-\\sin x,\\\\\\exp'(x)&=1+\\frac{2x}{2!}+\\frac{3x^2}{3!}+\\cdots=\\exp(x).\\end{aligned}$$",
+          "sourceSha256": "8c7ef7a65d73bcf6d8378b4e6b4fb29a07788692d668442e3aa3b33222f12e7b"
+        },
+        {
+          "id": "p514-b10",
+          "source": "For the functions $\\arctan$ and $f(x)=\\log(1+x)$ the situation is only slightly more complicated. Since the series",
+          "sourceSha256": "dda5b30cd3d31d4f087a205a8a1ed863db96dc764d1a643d8593ecdaed4a83fc",
+          "translation": "对于函数 $\\arctan$ 和 $f(x)=\\log(1+x)$，情形只稍微复杂一些。由于级数"
+        },
+        {
+          "id": "p514-b11",
+          "source": "$$\\arctan x=x-\\frac{x^3}3+\\frac{x^5}5-\\frac{x^7}7+\\cdots$$",
+          "sourceSha256": "493db427eed05cc77a015f324fed3dcc6cd85c2aa3e9f6ca4568137fb2f21558"
+        }
+      ]
+    },
+    {
+      "printed": 515,
+      "sourceSha256": "3159f56f58e8a8daeb80b881b7ccfe7a8c27593f41fee4d22a38042914a6f935",
+      "blocks": [
+        {
+          "id": "p515-b1",
+          "source": "converges for $x_0=1$, it also converges for $|x|<1$, and",
+          "sourceSha256": "9a75728a9bd02431d05432916f5f348612767b71f3e154fde3a826e7c76901f8",
+          "translation": "在 $x_0=1$ 处收敛，它在 $|x|<1$ 时也收敛，并且"
+        },
+        {
+          "id": "p515-b2",
+          "source": "$$\\arctan'(x)=1-x^2+x^4-x^6+\\cdots=\\frac1{1+x^2}\\qquad\\text{for }|x|<1.$$",
+          "sourceSha256": "789b5400a37eefed42ffb2aeee05636f74693c7b70cb42d2f707be94206e7d31"
+        },
+        {
+          "id": "p515-b3",
+          "source": "In this case, the series happens to converge for $x=-1$ also. However, the formula for the derivative is not correct for $x=1$ or $x=-1$; indeed the series",
+          "sourceSha256": "a9d4683509d0570bae83e1b8a095e0e1237dab097efc12cbf6c1af9dec48dfc6",
+          "translation": "在这个例子中，原级数碰巧在 $x=-1$ 处也收敛。不过，导数公式在 $x=1$ 或 $x=-1$ 处并不正确；事实上，级数"
+        },
+        {
+          "id": "p515-b4",
+          "source": "$$1-x^2+x^4-x^6+\\cdots$$",
+          "sourceSha256": "82e31562620f41330faa57afe64d4ea3aa89d47605af742f81f9fee3d2664bad"
+        },
+        {
+          "id": "p515-b5",
+          "source": "diverges for $x=1$ and $x=-1$. Notice that this does not contradict Theorem 6, which proves that the derivative is given by the expected formula only for $|x|<|x_0|$.",
+          "sourceSha256": "9d120ba357e86667eeeb3d88808865dbc8cbbd889a84b949be3bbe165ee98dc7",
+          "translation": "在 $x=1$ 和 $x=-1$ 处都发散。注意，这并不违背定理 6，因为定理 6 只证明：在 $|x|<|x_0|$ 时，导数才由预期的公式给出。"
+        },
+        {
+          "id": "p515-b6",
+          "source": "Since the series",
+          "sourceSha256": "c7d5b57c65bf117404965a2a587b2eda833a348d47ccb070fc6f8112800d1dbd",
+          "translation": "由于级数"
+        },
+        {
+          "id": "p515-b7",
+          "source": "$$\\log(1+x)=x-\\frac{x^2}2+\\frac{x^3}3-\\frac{x^4}4+\\frac{x^5}5-\\cdots$$",
+          "sourceSha256": "717749578a9022a5ca79a4b8e998526b6cf9185c58b7f9a5c889d74359689eaf"
+        },
+        {
+          "id": "p515-b8",
+          "source": "converges for $x_0=1$, it also converges for $|x|<1$, and",
+          "sourceSha256": "9a75728a9bd02431d05432916f5f348612767b71f3e154fde3a826e7c76901f8",
+          "translation": "在 $x_0=1$ 处收敛，它在 $|x|<1$ 时也收敛，并且"
+        },
+        {
+          "id": "p515-b9",
+          "source": "$$\\frac1{1+x}=\\log'(1+x)=1-x+x^2-x^3+\\cdots\\qquad\\text{for }|x|<1.$$",
+          "sourceSha256": "fea8c13f68356dcebfe6c5c29586bfc8374df13398cc9f7f06670acd3e4ac3c8"
+        },
+        {
+          "id": "p515-b10",
+          "source": "In this case, the original series does not converge for $x=-1$; moreover, the differentiated series does not converge for $x=1$.",
+          "sourceSha256": "5639e68b6aad63f7b09a691d94b1939c02cce400b64bae9c381ebdacf6d9b211",
+          "translation": "在这个例子中，原级数在 $x=-1$ 处不收敛；此外，求导后得到的级数在 $x=1$ 处不收敛。"
+        },
+        {
+          "id": "p515-b11",
+          "source": "All the considerations which apply to a power series will automatically apply to its derivative, at the points where the derivative is represented by a power series. If",
+          "sourceSha256": "df3b3ef47e4a18650647218b6ab0022a08726b699c51920b89a752fcf9083959",
+          "translation": "在导数能够由幂级数表示的那些点，适用于幂级数的全部讨论，自然也适用于它的导数。如果"
+        },
+        {
+          "id": "p515-b12",
+          "source": "$$f(x)=\\sum_{n=0}^\\infty a_nx^n$$",
+          "sourceSha256": "ccd0e24f5d4a88bdc0a47a6659dcc058eb2e4ed87685a65d28d909ed70729c6f"
+        },
+        {
+          "id": "p515-b13",
+          "source": "converges for all $x$ in some interval $(-R,R)$, then Theorem 6 implies that",
+          "sourceSha256": "a866ca3a31b7dcd146efedbc590caf0a028dfcd8eafa2e760f572097e92f7460",
+          "translation": "对某个区间 $(-R,R)$ 中的所有 $x$ 都收敛，那么定理 6 蕴含"
+        },
+        {
+          "id": "p515-b14",
+          "source": "$$f'(x)=\\sum_{n=1}^\\infty na_nx^{n-1}$$",
+          "sourceSha256": "6f99b21233d96b85c031a3f66ceb4e03fe5b54c9af0aed35cf0326241b5bbd69"
+        },
+        {
+          "id": "p515-b15",
+          "source": "for all $x$ in $(-R,R)$. Applying Theorem 6 once again we find that",
+          "sourceSha256": "46353a8ce35c08b5065923a1fca3be3fb9495a104e1de0b09bb4bf5d298c1ba8",
+          "translation": "对 $(-R,R)$ 中的所有 $x$ 成立。再次应用定理 6，得到"
+        },
+        {
+          "id": "p515-b16",
+          "source": "$$f''(x)=\\sum_{n=2}^\\infty n(n-1)a_nx^{n-2},$$",
+          "sourceSha256": "571ee31f1dce2d183021e6e601c836126f2d41bddfff52b8f687da0fd0718b26"
+        },
+        {
+          "id": "p515-b17",
+          "source": "and proceeding by induction we find that",
+          "sourceSha256": "e33feb0f422d00950ffe9cf9383887018555ff336796f8f7258bba24c3f04ea8",
+          "translation": "然后用归纳法继续下去，得到"
+        },
+        {
+          "id": "p515-b18",
+          "source": "$$f^{(k)}(x)=\\sum_{n=k}^\\infty n(n-1)\\cdot\\ldots\\cdot(n-k+1)a_nx^{n-k}.$$",
+          "sourceSha256": "0a399a20e09af5269660a060b57b6251ad166c10826777297aeb2c88232f5330"
+        },
+        {
+          "id": "p515-b19",
+          "source": "Thus, a function defined by a power series which converges in some interval $(-R,R)$ is automatically infinitely differentiable in that interval. Moreover, the previous equation implies that",
+          "sourceSha256": "ca3db6ae813a97c0569b8efcdc9a9ee541eb0224a1e841356fa33d69ff9343f4",
+          "translation": "因此，在某个区间 $(-R,R)$ 上由收敛幂级数定义的函数，必然在该区间上无穷次可导。此外，前一个等式蕴含"
+        },
+        {
+          "id": "p515-b20",
+          "source": "$$f^{(k)}(0)=k!a_k,$$",
+          "sourceSha256": "37330ef6eec44aead4fe3031f811e87a6bc562076f97b776aca3daff0ed833cb"
+        },
+        {
+          "id": "p515-b21",
+          "source": "so that",
+          "sourceSha256": "ab6b7abe5e492f9b6d750de7961c627380f376d321fccbb8be082915be4cdf03",
+          "translation": "所以"
+        },
+        {
+          "id": "p515-b22",
+          "source": "$$a_k=\\frac{f^{(k)}(0)}{k!}.$$",
+          "sourceSha256": "49897b740c2adf1d5f1d72243cacf53cc545cecaf52fda24b0b992a7cf34f87f"
+        }
+      ]
+    },
+    {
+      "printed": 516,
+      "sourceSha256": "e1dd310225aa458b4b61f8a0cf5a217a679511a160ddf72be75780fde35cc78e",
+      "blocks": [
+        {
+          "id": "p516-b1",
+          "source": "In other words, *a convergent power series centered at $0$ is always the Taylor series at $0$ of the function which it defines*.",
+          "sourceSha256": "2c599f2de5319dc1822643520bde5421ee22df36121cb892c5c9d7ade71da353",
+          "translation": "换句话说，*以 $0$ 为中心的收敛幂级数，总是它所定义的函数在 $0$ 处的泰勒级数*。"
+        },
+        {
+          "id": "p516-b2",
+          "source": "On this happy note we could easily end our study of power series and Taylor series. A careful assessment of our situation will reveal some unexplained facts, however.",
+          "sourceSha256": "c37fd6cb0bd0629f20cdb9876db8fa19a9f924894cb0375bf75bd093df43f1d5",
+          "translation": "我们完全可以带着这个令人愉快的结论，结束对幂级数与泰勒级数的研究。不过，仔细审视目前的状况，就会发现一些尚未解释的事实。"
+        },
+        {
+          "id": "p516-b3",
+          "source": "The Taylor series of $\\sin$, $\\cos$, and $\\exp$ are as satisfactory as we could desire; they converge for all $x$, and can be differentiated term-by-term for all $x$. The Taylor series of the function $f(x)=\\log(1+x)$ is slightly less pleasing, because it converges only for $-1<x\\le1$, but this deficiency is a necessary consequence of the basic nature of power series. If the Taylor series for $f$ converged for any $x_0$ with $|x_0|>1$, then it would converge on the interval $(-|x_0|,|x_0|)$, and on this interval the function which it defines would be differentiable, and thus continuous. But this is impossible, since it is unbounded on the interval $(-1,1)$, where it equals $\\log(1+x)$.",
+          "sourceSha256": "ffc223a58529353750c41876bd6051fb4a185c5801397453a4b52b2965dddcce",
+          "translation": "$\\sin$、$\\cos$ 和 $\\exp$ 的泰勒级数，令人满意得无以复加；它们对所有 $x$ 都收敛，也对所有 $x$ 都可以逐项求导。函数 $f(x)=\\log(1+x)$ 的泰勒级数稍不那么令人满意，因为它只在 $-1<x\\le1$ 时收敛；但这个缺陷是幂级数基本性质的必然结果。如果 $f$ 的泰勒级数在某个满足 $|x_0|>1$ 的 $x_0$ 处收敛，那么它就在区间 $(-|x_0|,|x_0|)$ 上收敛；在这个区间上，它定义的函数可导，因而连续。但这是不可能的，因为它在区间 $(-1,1)$ 上等于 $\\log(1+x)$，而在那里无界。"
+        },
+        {
+          "id": "p516-b4",
+          "source": "The Taylor series for $\\arctan$ is more difficult to comprehend—there seems to be no possible excuse for the refusal of this series to converge when $|x|>1$. This mysterious behavior is exemplified even more strikingly by the function $f(x)=1/(1+x^2)$, an infinitely differentiable function which is the next best thing to a polynomial function. The Taylor series of $f$ is given by",
+          "sourceSha256": "06e5a941e6bd35ef3714cea457096ffe19e4849a21b37e03db48360eb9227338",
+          "translation": "$\\arctan$ 的泰勒级数更难理解——当 $|x|>1$ 时，这个级数拒绝收敛，似乎找不到任何可能的理由。函数 $f(x)=1/(1+x^2)$ 更鲜明地表现出这种神秘行为；它无穷次可导，而且其简单程度仅次于多项式函数。$f$ 的泰勒级数为"
+        },
+        {
+          "id": "p516-b5",
+          "source": "$$f(x)=\\frac1{1+x^2}=1-x^2+x^4-x^6+x^8-\\cdots.$$",
+          "sourceSha256": "0e11d61ca0b5cf3e4e32598c89c30fe0da0e0bcafad7159df266dcb7973378fd"
+        },
+        {
+          "id": "p516-b6",
+          "source": "If $|x|\\ge1$ the Taylor series does not converge at all. Why? What unseen obstacle prevents the Taylor series from extending past $1$ and $-1$? Asking this sort of question is always dangerous, since we may have to settle for an unsympathetic answer: it happens because it happens—that’s the way things are! In this case there does happen to be an explanation, but this explanation is impossible to give at the present time; although the question is about real numbers, it can be answered intelligently only when placed in a broader context. It will therefore be necessary to devote two chapters to quite new material before completing our discussion of Taylor series in Chapter 27.",
+          "sourceSha256": "c09f16269c94727c7fb8e8ae46f1cca87a65a0805e8a19ebfee455367305ee1d",
+          "translation": "如果 $|x|\\ge1$，泰勒级数根本不收敛。为什么？是什么看不见的障碍，阻止了泰勒级数越过 $1$ 和 $-1$？提出这类问题总是危险的，因为我们可能不得不接受一个毫不体贴的回答：发生了就是发生了——事情就是这样！在这个例子中，碰巧确实有一个解释，但目前还无法给出；虽然问题涉及实数，却只有把它放进一个更广阔的背景，才能给出有意义的回答。因此，在第 27 章完成对泰勒级数的讨论之前，我们需要用两章来研究全新的内容。"
+        },
+        {
+          "id": "p516-b7",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p516-b8",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p516-b9",
+          "source": "For each of the following sequences $\\{f_n\\}$, determine the pointwise limit of $\\{f_n\\}$ (if it exists) on the indicated interval, and decide whether $\\{f_n\\}$ converges uniformly to this function.",
+          "sourceSha256": "59dafb3c496946336caf0692b5696c2fca88f67577c1510239599a35fcb696c4",
+          "translation": "对于以下各个函数列 $\\{f_n\\}$，确定 $\\{f_n\\}$ 在指定区间上的逐点极限（如果存在），并判断 $\\{f_n\\}$ 是否一致收敛于这个函数。"
+        },
+        {
+          "id": "p516-b10",
+          "source": "(i) $f_n(x)=\\sqrt[n]x$, on $[0,1]$.",
+          "sourceSha256": "5aeeef5a33cc0c06f289fa95195ea097fb5fbfd20fd3c0c99fc199363395763a",
+          "translation": "(i) $f_n(x)=\\sqrt[n]x$，在 $[0,1]$ 上。"
+        },
+        {
+          "id": "p516-b11",
+          "source": "(ii) $f_n(x)=\\begin{cases}0,&x\\le n\\\\x-n,&x\\ge n,\\end{cases}$ on $[a,b]$, and on $\\mathbf R$.",
+          "sourceSha256": "0f0c35a37bd04057e50f992ff26f1f2798a24d64bb7c218c51d350eb00737360",
+          "translation": "(ii) $f_n(x)=\\begin{cases}0,&x\\le n\\\\x-n,&x\\ge n,\\end{cases}$，分别在 $[a,b]$ 和 $\\mathbf R$ 上。"
+        }
+      ]
+    },
+    {
+      "printed": 517,
+      "sourceSha256": "9c9a68f55c6c3f08d7fa317787ddbac1ebf4d57a4c7bd271390f9726f87fd321",
+      "blocks": [
+        {
+          "id": "p517-b1",
+          "source": "(iii) $f_n(x)=\\dfrac{e^x}{x^n}$, on $(1,\\infty)$.",
+          "sourceSha256": "d9483763120e4af3e7b890851e6e6fa8f27dde223ac88a5f72169aa1d69fc814",
+          "translation": "(iii) $f_n(x)=\\dfrac{e^x}{x^n}$，在 $(1,\\infty)$ 上。"
+        },
+        {
+          "id": "p517-b2",
+          "source": "(iv) $f_n(x)=e^{-nx^2}$, on $[-1,1]$.",
+          "sourceSha256": "b20d1957e1065a455a07c276eca5664f47322c113c150ef653f27990479cf906",
+          "translation": "(iv) $f_n(x)=e^{-nx^2}$，在 $[-1,1]$ 上。"
+        },
+        {
+          "id": "p517-b3",
+          "source": "(v) $f_n(x)=\\dfrac{e^{-x^2}}n$, on $\\mathbf R$.",
+          "sourceSha256": "13b0372b50c1583b273e98f5bda04595c92bc7cfdf4087015a87e0750fce0df3",
+          "translation": "(v) $f_n(x)=\\dfrac{e^{-x^2}}n$，在 $\\mathbf R$ 上。"
+        },
+        {
+          "id": "p517-b4",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p517-b5",
+          "source": "This problem asks for the same information as in Problem 1, but the functions are not so easy to analyze. Some hints are given at the end.",
+          "sourceSha256": "42bcd82630387afb180b383c043347b5f6720a6bea6c29ef726f38326ae8e85d",
+          "translation": "本题要求与习题 1 相同，但这些函数不那么容易分析。末尾给出了一些提示。"
+        },
+        {
+          "id": "p517-b6",
+          "source": "(i) $f_n(x)=x^n-x^{2n}$ on $[0,1]$.",
+          "sourceSha256": "3e024cf34170698de3cbf896b3de2a4741b59a771ffc2ab83bb41b0bd9e39ab5",
+          "translation": "(i) $f_n(x)=x^n-x^{2n}$，在 $[0,1]$ 上。"
+        },
+        {
+          "id": "p517-b7",
+          "source": "(ii) $f_n(x)=\\dfrac{nx}{1+n+x}$ on $[0,\\infty)$.",
+          "sourceSha256": "dc74689ff7bd755ec6ba12f85f977389ca1b8f6591acb859a643d152ec1512a6",
+          "translation": "(ii) $f_n(x)=\\dfrac{nx}{1+n+x}$，在 $[0,\\infty)$ 上。"
+        },
+        {
+          "id": "p517-b8",
+          "source": "(iii) $f_n(x)=\\sqrt{x^2+\\dfrac1{n^2}}$ on $[a,\\infty)$, $a>0$.",
+          "sourceSha256": "c49bd998184be476e71db935c934ce8fd757b27627b895cbaf65a8d9114483b2",
+          "translation": "(iii) $f_n(x)=\\sqrt{x^2+\\dfrac1{n^2}}$，在 $[a,\\infty)$ 上，其中 $a>0$。"
+        },
+        {
+          "id": "p517-b9",
+          "source": "(iv) $f_n(x)=\\sqrt{x^2+\\dfrac1{n^2}}$ on $\\mathbf R$.",
+          "sourceSha256": "65617a5ace3f29b3ed30cc4c375696dd521290feb34bc15c105f8961d97d5d92",
+          "translation": "(iv) $f_n(x)=\\sqrt{x^2+\\dfrac1{n^2}}$，在 $\\mathbf R$ 上。"
+        },
+        {
+          "id": "p517-b10",
+          "source": "(v) $f_n(x)=\\sqrt{x+\\dfrac1n}-\\sqrt x$ on $[a,\\infty)$, $a>0$.",
+          "sourceSha256": "49dff58c0d898ed450acaae43caf780e53dd9706927c99a9e48e4a761c0c6491",
+          "translation": "(v) $f_n(x)=\\sqrt{x+\\dfrac1n}-\\sqrt x$，在 $[a,\\infty)$ 上，其中 $a>0$。"
+        },
+        {
+          "id": "p517-b11",
+          "source": "(vi) $f_n(x)=\\sqrt{x+\\dfrac1n}-\\sqrt x$ on $[0,\\infty)$.",
+          "sourceSha256": "021c37e655df8c907dc246373ddbd83137a8390202ff5679f93efc28212ba30c",
+          "translation": "(vi) $f_n(x)=\\sqrt{x+\\dfrac1n}-\\sqrt x$，在 $[0,\\infty)$ 上。"
+        },
+        {
+          "id": "p517-b12",
+          "source": "(vii) $f_n(x)=n\\left(\\sqrt{x+\\dfrac1n}-\\sqrt x\\right)$ on $[a,\\infty)$, $a>0$.",
+          "sourceSha256": "1528c610b83f23edf36e0cd20a821cdf90d848a9729cdfd90b96d0a76ed123e5",
+          "translation": "(vii) $f_n(x)=n\\left(\\sqrt{x+\\dfrac1n}-\\sqrt x\\right)$，在 $[a,\\infty)$ 上，其中 $a>0$。"
+        },
+        {
+          "id": "p517-b13",
+          "source": "(viii) $f_n(x)=n\\left(\\sqrt{x+\\dfrac1n}-\\sqrt x\\right)$ on $[0,\\infty)$ and on $(0,\\infty)$.",
+          "sourceSha256": "83de34b46ce3024c935b5ed7701577998e1497d449938a9bf188f838ba3c74d4",
+          "translation": "(viii) $f_n(x)=n\\left(\\sqrt{x+\\dfrac1n}-\\sqrt x\\right)$，分别在 $[0,\\infty)$ 和 $(0,\\infty)$ 上。"
+        },
+        {
+          "id": "p517-b14",
+          "source": "Hints: (i) For each $n$, find the maximum of $|f-f_n|$ on $[0,1]$. (ii) For each $n$, consider $|f(x)-f_n(x)|$ for $x$ large. (iii) Mean Value Theorem. (iv) Give a separate estimate of $|f(x)-f_n(x)|$ for small $|x|$. (vii) Use (v).",
+          "sourceSha256": "5ec233767ea140d1d9ae5ec878a9e57c1eb7b6ba69d3b39f82273da640a50dc9",
+          "translation": "提示：(i) 对于每个 $n$，求 $|f-f_n|$ 在 $[0,1]$ 上的最大值。(ii) 对于每个 $n$，考察 $x$ 很大时的 $|f(x)-f_n(x)|$。(iii) 中值定理。(iv) 对于较小的 $|x|$，另行估计 $|f(x)-f_n(x)|$。(vii) 使用 (v)。"
+        },
+        {
+          "id": "p517-b15",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p517-b16",
+          "source": "Find the Taylor series at $0$ for each of the following functions.",
+          "sourceSha256": "1c389f1ec74ba419fc169b9cca02ba7314f9e479a4e488894f5b06ed4726035a",
+          "translation": "求以下各函数在 $0$ 处的泰勒级数。"
+        },
+        {
+          "id": "p517-b17",
+          "source": "(i) $f(x)=\\dfrac1{x-a}$, $a\\ne0$.",
+          "sourceSha256": "a4a82b4b182421e56c70af8d845ed5f105b35b2e7bc27a496aa1d2504834afb0"
+        },
+        {
+          "id": "p517-b18",
+          "source": "(ii) $f(x)=\\log(x-a)$, $a<0$.",
+          "sourceSha256": "d7d8f5b639eae36a08953e88c3f6a567afe283c10aab7fd06447d387ad984af9"
+        },
+        {
+          "id": "p517-b19",
+          "source": "(iii) $f(x)=\\dfrac1{\\sqrt{1-x}}=(1-x)^{-1/2}$. (Use Problem 20-21.)",
+          "sourceSha256": "dc788813c611675d8fcaf9300f389d18c420d977b59400d026b712e8d13fe54d",
+          "translation": "(iii) $f(x)=\\dfrac1{\\sqrt{1-x}}=(1-x)^{-1/2}$。（使用习题 20-21。）"
+        },
+        {
+          "id": "p517-b20",
+          "source": "(iv) $f(x)=\\dfrac1{\\sqrt{1-x^2}}$.",
+          "sourceSha256": "0dac34563b7202d9ef6e05a5d219c8d784cad49f875a2d004c2298f2dab6bf02"
+        },
+        {
+          "id": "p517-b21",
+          "source": "(v) $f(x)=\\arcsin x$.",
+          "sourceSha256": "8b2e2bd93049080a05190838c694d0dbb6bdd642836fb5b57be4e1a642a458c1"
+        }
+      ]
+    },
+    {
+      "printed": 518,
+      "sourceSha256": "68dce528af946e25685ab85e3dfab8754830bffc64c15288481589804343840b",
+      "blocks": [
+        {
+          "id": "p518-b1",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p518-b2",
+          "source": "Find each of the following infinite sums.",
+          "sourceSha256": "0c5ec09c8569e76209f4203c81a4870cdf6b9e59839438bb250441b950b446fc",
+          "translation": "求以下各个无穷和。"
+        },
+        {
+          "id": "p518-b3",
+          "source": "(i) $1-x+\\dfrac{x^2}{2!}-\\dfrac{x^3}{3!}+\\dfrac{x^4}{4!}-\\cdots$.",
+          "sourceSha256": "942edea77c925bd75cbf41b5573b82646d95e2c08b9dc66812601bd192c88476"
+        },
+        {
+          "id": "p518-b4",
+          "source": "(ii) $1-x^3+x^6-x^9+\\cdots$ for $|x|<1$.",
+          "sourceSha256": "abafd8a16a0188027fbc051b5e703db1660e0738605c88bf09581c4543d9fdca",
+          "translation": "(ii) $1-x^3+x^6-x^9+\\cdots$，其中 $|x|<1$。"
+        },
+        {
+          "id": "p518-b5",
+          "source": "Hint: What is $1-x+x^2-x^3+\\cdots$?",
+          "sourceSha256": "f8f006c221b87b1284e369aa3e21a2773bf024ef4f348b8219f490abdf6c5881",
+          "translation": "提示：$1-x+x^2-x^3+\\cdots$ 等于什么？"
+        },
+        {
+          "id": "p518-b6",
+          "source": "(iii) $\\dfrac{x^2}2-\\dfrac{x^3}{3\\cdot2}+\\dfrac{x^4}{4\\cdot3}-\\dfrac{x^5}{5\\cdot4}+\\cdots$ for $|x|<1$.",
+          "sourceSha256": "74f5ebdedb73ef89512a8258c1cc2b70cb1c4c6ee1909aff22fd11ae52c09d55",
+          "translation": "(iii) $\\dfrac{x^2}2-\\dfrac{x^3}{3\\cdot2}+\\dfrac{x^4}{4\\cdot3}-\\dfrac{x^5}{5\\cdot4}+\\cdots$，其中 $|x|<1$。"
+        },
+        {
+          "id": "p518-b7",
+          "source": "Hint: Differentiate.",
+          "sourceSha256": "5a6279c0080a10950359217625df8852a48ebef2e191990ce0f74f8e84dfadd8",
+          "translation": "提示：求导。"
+        },
+        {
+          "id": "p518-b8",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p518-b9",
+          "source": "Evaluate the following infinite sums. (In most cases they are $f(a)$ where $a$ is some obvious number and $f(x)$ is given by some power series. To evaluate the various power series, manipulate them until some well-known power series emerge.)",
+          "sourceSha256": "c8b937d476b52fbb13fb34663360a9f99befd96ace81650b413ae327845131fb",
+          "translation": "计算以下无穷和。（大多数情况下，它们都是 $f(a)$，其中 $a$ 是某个显而易见的数，而 $f(x)$ 由某个幂级数给出。要计算这些幂级数，就对它们进行变换，直到出现某个熟知的幂级数。）"
+        },
+        {
+          "id": "p518-b10",
+          "source": "(i) $\\displaystyle\\sum_{n=0}^\\infty\\frac{(-1)^n2^{2n}\\pi^{2n}}{(2n)!}$.",
+          "sourceSha256": "8536baeb7f68bbfac7d4e52d0549e963386ede007388bf64eec6c06224f7129a"
+        },
+        {
+          "id": "p518-b11",
+          "source": "(ii) $\\displaystyle\\sum_{n=0}^\\infty\\frac1{(2n)!}$.",
+          "sourceSha256": "6e8c17f666f3a6383bc499ff23756ba314b209756d90786cc5950384dd79f6cb"
+        },
+        {
+          "id": "p518-b12",
+          "source": "(iii) $\\displaystyle\\sum_{n=0}^\\infty\\frac1{2n+1}\\left(\\frac12\\right)^{2n+1}$.",
+          "sourceSha256": "2738cc87866e3315ff15dea785f0c17edcae719e23275982d55401054586c99a"
+        },
+        {
+          "id": "p518-b13",
+          "source": "(iv) $\\displaystyle\\sum_{n=0}^\\infty\\frac n{2^n}$.",
+          "sourceSha256": "b13ad6a7a5264b7d7ce3cb9e231d9188789f29733f8723aea5d93c1bdd445f13"
+        },
+        {
+          "id": "p518-b14",
+          "source": "(v) $\\displaystyle\\sum_{n=0}^\\infty\\frac1{3^n(n+1)}$.",
+          "sourceSha256": "ccecddf1a015917e8168d4c21e6ec2416014093bea3d7fb1e87df28050e650ed"
+        },
+        {
+          "id": "p518-b15",
+          "source": "(vi) $\\displaystyle\\sum_{n=0}^\\infty\\frac{2n+1}{2^nn!}$.",
+          "sourceSha256": "fab513878686969dca8d38c8d147147edb80a3237b969d25f69d32e29d7af1fa"
+        },
+        {
+          "id": "p518-b16",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p518-b17",
+          "source": "If $f(x)=(\\sin x)/x$ for $x\\ne0$ and $f(0)=1$, find $f^{(k)}(0)$. Hint: Find the power series for $f$.",
+          "sourceSha256": "2d68fdc32e89f1f5702e9cb6c5fc5507b5a82162f29f7070348a6f2af3fefa2c",
+          "translation": "如果 $x\\ne0$ 时 $f(x)=(\\sin x)/x$，并且 $f(0)=1$，求 $f^{(k)}(0)$。提示：求 $f$ 的幂级数。"
+        },
+        {
+          "id": "p518-b18",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p518-b19",
+          "source": "In this problem we deduce the binomial series $(1+x)^\\alpha=\\displaystyle\\sum_{n=0}^\\infty\\binom\\alpha n x^n$, $|x|<1$ without all the work of Problem 23-21, although we will use a fact established in part (a) of that problem—the series $f(x)=\\displaystyle\\sum_{n=0}^\\infty\\binom\\alpha n x^n$ does converge for $|x|<1$.",
+          "sourceSha256": "d61fe9e3852c32b701a8269edb0b0aae042e4edcf634245aa551ec09c5a0305b",
+          "translation": "本题将推导二项级数 $(1+x)^\\alpha=\\displaystyle\\sum_{n=0}^\\infty\\binom\\alpha n x^n$，$|x|<1$，而无须重复习题 23-21 中的全部工作；不过，我们将使用那道题 (a) 中建立的事实——级数 $f(x)=\\displaystyle\\sum_{n=0}^\\infty\\binom\\alpha n x^n$ 在 $|x|<1$ 时确实收敛。"
+        }
+      ]
+    },
+    {
+      "printed": 519,
+      "sourceSha256": "e07a222a6b8cada3ec8151de035d10eafffe90423927ccca0e015d5f245fc6fc",
+      "blocks": [
+        {
+          "id": "p519-b1",
+          "source": "(a) Prove that $(1+x)f'(x)=\\alpha f(x)$ for $|x|<1$.",
+          "sourceSha256": "d22b4797b932b0513e88ee5fd82b213b9662c55eb12b1d4343887b823a794843",
+          "translation": "(a) 证明：对于 $|x|<1$，有 $(1+x)f'(x)=\\alpha f(x)$。"
+        },
+        {
+          "id": "p519-b2",
+          "source": "(b) Now show that any function $f$ satisfying part (a) is of the form $f(x)=c(1+x)^\\alpha$ for some constant $c$, and use this fact to establish the binomial series. Hint: Consider $g(x)=f(x)/(1+x)^\\alpha$.",
+          "sourceSha256": "8c0fdc83803993aec066fa50d52ce0c6bcd03b1158f8647b5028d426ff09c65b",
+          "translation": "(b) 现在证明：任何满足 (a) 的函数 $f$，对于某个常数 $c$ 都具有形式 $f(x)=c(1+x)^\\alpha$；并利用这一事实建立二项级数。提示：考虑 $g(x)=f(x)/(1+x)^\\alpha$。"
+        },
+        {
+          "id": "p519-b3",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p519-b4",
+          "source": "Suppose that $f_n$ are nonnegative bounded functions on $A$ and let $M_n=\\sup f_n$. If $\\displaystyle\\sum_{n=1}^\\infty f_n$ converges uniformly on $A$, does it follow that $\\displaystyle\\sum_{n=1}^\\infty M_n$ converges (a converse to the Weierstrass $M$-test)?",
+          "sourceSha256": "4d91cefed64cee5919f63808331ba9f2e30296168af5b307ad3bbc43f8ae95ba",
+          "translation": "假设 $f_n$ 是 $A$ 上的非负有界函数，并令 $M_n=\\sup f_n$。如果 $\\displaystyle\\sum_{n=1}^\\infty f_n$ 在 $A$ 上一致收敛，是否能推出 $\\displaystyle\\sum_{n=1}^\\infty M_n$ 收敛（即魏尔斯特拉斯 $M$ 判别法的逆命题）？"
+        },
+        {
+          "id": "p519-b5",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p519-b6",
+          "source": "Prove that the series",
+          "sourceSha256": "36937681cf9580056017d8b7e8837a3804cc47b881bd1d72ebc592edb0e76822",
+          "translation": "证明级数"
+        },
+        {
+          "id": "p519-b7",
+          "source": "$$\\sum_{n=1}^\\infty\\frac x{n(1+nx^2)}$$",
+          "sourceSha256": "150668c1161b4f824c0ce8207c657eabc8732f1a1e43777a38e23fc72ef87397"
+        },
+        {
+          "id": "p519-b8",
+          "source": "converges uniformly on $\\mathbf R$.",
+          "sourceSha256": "1d699b615a06c3fbb80d4a92a05b93adc66b9fc66263702452beeb86040d21ea",
+          "translation": "在 $\\mathbf R$ 上一致收敛。"
+        },
+        {
+          "id": "p519-b9",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p519-b10",
+          "source": "(a) Prove that the series",
+          "sourceSha256": "9fcff2cc899832a4242130e80266128ad1f22572965b464f1611daa3f46e99f7",
+          "translation": "(a) 证明级数"
+        },
+        {
+          "id": "p519-b11",
+          "source": "$$\\sum_{n=0}^\\infty2^n\\sin\\frac1{3^nx}$$",
+          "sourceSha256": "eaa2a6692a75a0c31a13e2224cd226e48c12d231aa3cbfd42dfe28c0a6d04aea"
+        },
+        {
+          "id": "p519-b12",
+          "source": "converges uniformly on $[a,\\infty)$ for $a>0$. Hint: $\\displaystyle\\lim_{h\\to0}(\\sin h)/h=1$.",
+          "sourceSha256": "abe7acbae3b58df679dcaee383041cee4a440a3b437a4fe9c6e14ceb8c8486dd",
+          "translation": "在 $a>0$ 时于 $[a,\\infty)$ 上一致收敛。提示：$\\displaystyle\\lim_{h\\to0}(\\sin h)/h=1$。"
+        },
+        {
+          "id": "p519-b13",
+          "source": "(b) By considering the sum from $N$ to $\\infty$ for $x=2/(\\pi3^N)$, show that the series does not converge uniformly on $(0,\\infty)$.",
+          "sourceSha256": "6677685d09ecd5f25a4e3d0aa1e24e60577dd52d6fca707f838140c8c3c6fd7d",
+          "translation": "(b) 对 $x=2/(\\pi3^N)$，考察从 $N$ 到 $\\infty$ 的和，说明这个级数在 $(0,\\infty)$ 上不一致收敛。"
+        },
+        {
+          "id": "p519-b14",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p519-b15",
+          "source": "(a) Prove that the series",
+          "sourceSha256": "9fcff2cc899832a4242130e80266128ad1f22572965b464f1611daa3f46e99f7",
+          "translation": "(a) 证明级数"
+        },
+        {
+          "id": "p519-b16",
+          "source": "$$f(x)=\\sum_{n=0}^\\infty\\frac{nx}{1+n^4x^2}$$",
+          "sourceSha256": "0225d0566ae0e8549f4730216d5b636ef9515ddf6766279cd933564d669de9d7"
+        },
+        {
+          "id": "p519-b17",
+          "source": "converges uniformly on $[a,\\infty)$ for $a>0$. Hint: First find the maximum of $nx/(1+n^4x^2)$ on $[0,\\infty)$.",
+          "sourceSha256": "5874085d89362f66a02ada44353120220e0c450392c81f0bd92bcc2eb65259f3",
+          "translation": "在 $a>0$ 时于 $[a,\\infty)$ 上一致收敛。提示：先求 $nx/(1+n^4x^2)$ 在 $[0,\\infty)$ 上的最大值。"
+        },
+        {
+          "id": "p519-b18",
+          "source": "(b) Show that",
+          "sourceSha256": "87fa4c209da94246118a4450a4cef5838b3ce8b8d46033b776afbac9b6f404e0",
+          "translation": "(b) 证明"
+        },
+        {
+          "id": "p519-b19",
+          "source": "$$f\\left(\\frac1N\\right)\\ge\\frac N2\\sum_{n\\ge\\sqrt N}\\frac1{n^3},$$",
+          "sourceSha256": "67f44d9de3e5a70b7a160a4e4817bb3f0a02c8b5c25b8d52e8c4bef4e4bf5dab"
+        },
+        {
+          "id": "p519-b20",
+          "source": "and by using an integral to estimate the sum, show that $f(1/N^2)\\ge1/4$. Conclude that the series does not converge uniformly on $\\mathbf R$.",
+          "sourceSha256": "eb494bfc2e66688c1645ca47507e44cc258a2849927f89a7346fb1d3c31e7b39",
+          "translation": "并利用积分估计这个和，证明 $f(1/N^2)\\ge1/4$。由此得出，这个级数在 $\\mathbf R$ 上不一致收敛。"
+        },
+        {
+          "id": "p519-b21",
+          "source": "(c) What about the series",
+          "sourceSha256": "0f5a2d65a8114a44cecd1588bfb8a330d739849b37f39554ba86657380258c18",
+          "translation": "(c) 下面这个级数的情形如何？"
+        },
+        {
+          "id": "p519-b22",
+          "source": "$$\\sum_{n=0}^\\infty\\frac{nx}{1+n^5x^2}?$$",
+          "sourceSha256": "60316311896779d24e8ab9b55ece2d5d8af0a4f9ada0032b029bbce795db1124"
+        }
+      ]
+    },
+    {
+      "printed": 520,
+      "sourceSha256": "4cc8bf4a4ddc062f7e39399d5d816b8b31d8f0da8d3427f2a8f53b2436ff11d8",
+      "blocks": [
+        {
+          "id": "p520-b1",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p520-b2",
+          "source": "(a) Use Problem 15-33 and Abel’s Lemma (Problem 19-36) to obtain a “uniform Cauchy condition”, showing that for any $\\varepsilon>0$,",
+          "sourceSha256": "ff54fadf734728745332197995c61ab78407db33d1b854e0801fb257833b94b2",
+          "translation": "(a) 使用习题 15-33 和阿贝尔引理（习题 19-36），得到一个“一致柯西条件”，说明对于任意 $\\varepsilon>0$，"
+        },
+        {
+          "id": "p520-b3",
+          "source": "$$\\left|\\sum_{k=m}^n\\frac{\\sin kx}k\\right|$$",
+          "sourceSha256": "a6a6d00a92e5c1b500f1b1c83efff5b3d8a9584d1f49b7325aaf8120aeec07a8"
+        },
+        {
+          "id": "p520-b4",
+          "source": "can be made arbitrarily small on the whole interval $[\\varepsilon,2\\pi-\\varepsilon]$ by choosing $m$ (and $n$) large enough. Conclude that the series",
+          "sourceSha256": "29abc154d0b830877c20289feb8acb60450ff723e586dfbfebf5b57fbf15d732",
+          "translation": "只要选择足够大的 $m$（以及 $n$），就能使这个量在整个区间 $[\\varepsilon,2\\pi-\\varepsilon]$ 上任意小。由此得出，级数"
+        },
+        {
+          "id": "p520-b5",
+          "source": "$$\\sum_{n=1}^\\infty\\frac{\\sin nx}n$$",
+          "sourceSha256": "2a58a0e858db9e15dca3b53d7b063c98be080416f3ca1092ba9b280a63637658"
+        },
+        {
+          "id": "p520-b6",
+          "source": "converges uniformly on $[\\varepsilon,2\\pi-\\varepsilon]$ for $\\varepsilon>0$.",
+          "sourceSha256": "c4289049f48a872cbef2339528f6aeeab729023951e42798536dc6710a40a809",
+          "translation": "在 $\\varepsilon>0$ 时于 $[\\varepsilon,2\\pi-\\varepsilon]$ 上一致收敛。"
+        },
+        {
+          "id": "p520-b7",
+          "source": "(b) For $x=\\pi/N$, with $N$ large, show that",
+          "sourceSha256": "0b5c387b73c4c8948d236f2a9a9587473912da39869348063f4b9627d9578e10",
+          "translation": "(b) 对于 $x=\\pi/N$，其中 $N$ 很大，证明"
+        },
+        {
+          "id": "p520-b8",
+          "source": "$$\\left|\\sum_{k=N}^{2N}\\sin kx\\right|=\\left|\\sum_{k=0}^N\\sin kx\\right|\\ge\\frac N\\pi.$$",
+          "sourceSha256": "4fe23a822ecb770575770be0159a12767b33cd750ecef4725bcc81ff2abe30d1"
+        },
+        {
+          "id": "p520-b9",
+          "source": "Conclude that",
+          "sourceSha256": "a3421824c69582242d754adfef772c94c369fd01a66d2699f4b162882bef15b9",
+          "translation": "由此得出"
+        },
+        {
+          "id": "p520-b10",
+          "source": "$$\\left|\\sum_{k=N}^{2N}\\frac{\\sin kx}k\\right|\\ge\\frac1{2\\pi},$$",
+          "sourceSha256": "264c3d93170bc38bd919054537944dca341f44d05192bccda420081b8372c63c"
+        },
+        {
+          "id": "p520-b11",
+          "source": "and that the series does not converge uniformly on $[0,2\\pi]$.",
+          "sourceSha256": "8df446a484c6da23d029aa05676b2f497d3958d7e2afa021316a3c42a1ca664e",
+          "translation": "并且这个级数在 $[0,2\\pi]$ 上不一致收敛。"
+        },
+        {
+          "id": "p520-b12",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p520-b13",
+          "source": "(a) Suppose that $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ converges for all $x$ in some interval $(-R,R)$ and that $f(x)=0$ for all $x$ in $(-R,R)$. Prove that each $a_n=0$. (If you remember the formula for $a_n$ this is easy.)",
+          "sourceSha256": "2a2e160b344ce211d71025e55f6bab4362889d4170bc30a1a5aba6d8e63f07b9",
+          "translation": "(a) 假设 $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ 对某个区间 $(-R,R)$ 中的所有 $x$ 都收敛，并且对 $(-R,R)$ 中的所有 $x$ 都有 $f(x)=0$。证明每个 $a_n=0$。（如果你记得 $a_n$ 的公式，这就很容易。）"
+        },
+        {
+          "id": "p520-b14",
+          "source": "(b) Suppose we know only that $f(x_n)=0$ for some sequence $\\{x_n\\}$ with $\\lim_{n\\to\\infty}x_n=0$. Prove again that each $a_n=0$. Hint: First show that $f(0)=a_0=0$; then that $f'(0)=a_1=0$, etc.",
+          "sourceSha256": "26d0957d795e25b2035d0d2c838f3650bda8007c3fdc910759c4cb7c662fe3f9",
+          "translation": "(b) 假设我们只知道，对于某个满足 $\\lim_{n\\to\\infty}x_n=0$ 的数列 $\\{x_n\\}$，有 $f(x_n)=0$。再次证明每个 $a_n=0$。提示：先说明 $f(0)=a_0=0$，再说明 $f'(0)=a_1=0$，如此等等。"
+        },
+        {
+          "id": "p520-b15",
+          "source": "This result shows that if $f(x)=e^{-1/x^2}\\sin1/x$ for $x\\ne0$, then $f$ cannot possibly be written as a power series. It also shows that a function defined by a power series cannot be $0$ for $x\\le0$ but nonzero for $x>0$—thus a power series cannot describe the motion of a particle which has remained at rest until time $0$, and then begins to move!",
+          "sourceSha256": "8d4e1c287b14b2acc4e0800198f7569aa4df5872d7a690a1b92d2a374aca8598",
+          "translation": "这个结果表明：如果 $x\\ne0$ 时 $f(x)=e^{-1/x^2}\\sin1/x$，那么 $f$ 就不可能写成幂级数。它还表明，通过幂级数定义的函数，不可能在 $x\\le0$ 时等于 $0$，却在 $x>0$ 时非零——因此，幂级数无法描述一个在时刻 $0$ 之前一直静止、随后才开始运动的质点！"
+        },
+        {
+          "id": "p520-b16",
+          "source": "(c) Suppose that $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ and $g(x)=\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ converge for all $x$ in some interval containing $0$ and that $f(t_m)=g(t_m)$ for some sequence $\\{t_m\\}$ converging to $0$. Show that $a_n=b_n$ for each $n$.",
+          "sourceSha256": "9515523c493c41d02e841e46b2dbd5b0b53dd5280bab58081b748aedb334aa0f",
+          "translation": "(c) 假设 $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ 和 $g(x)=\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ 对包含 $0$ 的某个区间中的所有 $x$ 都收敛，并且对于某个收敛于 $0$ 的数列 $\\{t_m\\}$，有 $f(t_m)=g(t_m)$。证明对于每个 $n$，都有 $a_n=b_n$。"
+        },
+        {
+          "id": "p520-b17",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p520-b18",
+          "source": "Prove that if $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ is an even function, then $a_n=0$ for $n$ odd, and if $f$ is an odd function, then $a_n=0$ for $n$ even.",
+          "sourceSha256": "b52210a64a0a3a461da5a25370a36f2dd314b73730acfc6a0773032ca66443e9",
+          "translation": "证明：如果 $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ 是偶函数，那么当 $n$ 为奇数时有 $a_n=0$；如果 $f$ 是奇函数，那么当 $n$ 为偶数时有 $a_n=0$。"
+        }
+      ]
+    },
+    {
+      "printed": 521,
+      "sourceSha256": "6e389c79ffc766bab8b6da94299d31ae1e97c2ee41015e3b84bd7db3dd6650e7",
+      "blocks": [
+        {
+          "id": "p521-b1",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p521-b2",
+          "source": "Show that the power series for $f(x)=\\log(1-x)$ converges only for $-1\\le x<1$, and that the power series for $g(x)=\\log[(1+x)/(1-x)]$ converges only for $x$ in $(-1,1)$.",
+          "sourceSha256": "a788c605cae84815b6801c3f46cc4773c04bf1dbf33a1f5723ee93698526608d",
+          "translation": "证明 $f(x)=\\log(1-x)$ 的幂级数只在 $-1\\le x<1$ 时收敛，而 $g(x)=\\log[(1+x)/(1-x)]$ 的幂级数只在 $x$ 属于 $(-1,1)$ 时收敛。"
+        },
+        {
+          "id": "p521-b3",
+          "source": "### \\*16.",
+          "sourceSha256": "f63edeb4dbccfdc649f956ca6c68709a605b569f278ea9d361bd034f417fda87"
+        },
+        {
+          "id": "p521-b4",
+          "source": "Recall that the Fibonacci sequence $\\{a_n\\}$ is defined by $a_1=a_2=1$, $a_{n+1}=a_n+a_{n-1}$.",
+          "sourceSha256": "2a405820757cb2c2ddda73629a2ff857eb3e3d912d2083204a86556bf987939e",
+          "translation": "回忆斐波那契数列 $\\{a_n\\}$ 的定义：$a_1=a_2=1$、$a_{n+1}=a_n+a_{n-1}$。"
+        },
+        {
+          "id": "p521-b5",
+          "source": "(a) Show that $a_{n+1}/a_n\\le2$.",
+          "sourceSha256": "f9e9642412b6e4e025be4097f7a131dc538a26eb6b200f008718ba0423c5f36e",
+          "translation": "(a) 证明 $a_{n+1}/a_n\\le2$。"
+        },
+        {
+          "id": "p521-b6",
+          "source": "(b) Let",
+          "sourceSha256": "5a4db9e89c1a75808bbce5e71bb11bb29c418fe7f2e0ce671a9db7c1792a6c61",
+          "translation": "(b) 令"
+        },
+        {
+          "id": "p521-b7",
+          "source": "$$f(x)=\\sum_{n=1}^\\infty a_nx^{n-1}=1+x+2x^2+3x^3+\\cdots.$$",
+          "sourceSha256": "398fa4125853cfbdd9b796b24a0e87a23c1573bc54b96980c6788e2abc7723d0"
+        },
+        {
+          "id": "p521-b8",
+          "source": "Use the ratio test to prove that $f(x)$ converges if $|x|<1/2$.",
+          "sourceSha256": "1506a637a49bcf8751a65abdafa8047e3a1d60da95fd4f34f6f603fa032edfe1",
+          "translation": "利用比值判别法证明：如果 $|x|<1/2$，那么 $f(x)$ 收敛。"
+        },
+        {
+          "id": "p521-b9",
+          "source": "(c) Prove that if $|x|<1/2$, then",
+          "sourceSha256": "98e8058056d1e18c1c4c1ed9ad2e19babeefb863726db6793141419646149802",
+          "translation": "(c) 证明：如果 $|x|<1/2$，那么"
+        },
+        {
+          "id": "p521-b10",
+          "source": "$$f(x)=\\frac{-1}{x^2+x-1}.$$",
+          "sourceSha256": "7be79a04d7d329a6939025b4446f15fe94293b0ce5e746c4fd7c221827e8ac29"
+        },
+        {
+          "id": "p521-b11",
+          "source": "Hint: This equation can be written $f(x)-xf(x)-x^2f(x)=1$.",
+          "sourceSha256": "8a06fb0431c7aa3b292958c19dae50c6997fe978165871b4684063d92baa4f3a",
+          "translation": "提示：这个等式可以写成 $f(x)-xf(x)-x^2f(x)=1$。"
+        },
+        {
+          "id": "p521-b12",
+          "source": "(d) Use the partial fraction decomposition for $1/(x^2+x-1)$, and the power series for $1/(x-a)$, to obtain another power series for $f$.",
+          "sourceSha256": "edabe916c756b1af989bb77f6d956b27f4a06d7853219de25afc59082139558f",
+          "translation": "(d) 利用 $1/(x^2+x-1)$ 的部分分式分解，以及 $1/(x-a)$ 的幂级数，得到 $f$ 的另一个幂级数。"
+        },
+        {
+          "id": "p521-b13",
+          "source": "(e) Since the two power series obtained for $f$ must be the same (they are both the Taylor series of the function), conclude that",
+          "sourceSha256": "666dfc9b709629c8f65edded2fb6229931701a066617f4b9f50e2909d3a4405d",
+          "translation": "(e) 由于得到的两个 $f$ 的幂级数必定相同（它们都是这个函数的泰勒级数），由此得出"
+        },
+        {
+          "id": "p521-b14",
+          "source": "$$a_n=\\frac{\\left(\\dfrac{1+\\sqrt5}2\\right)^n-\\left(\\dfrac{1-\\sqrt5}2\\right)^n}{\\sqrt5}.$$",
+          "sourceSha256": "93f429085b2db0ca5a70e5a37770e7f8fe136155f9bca73881625b794390a077"
+        },
+        {
+          "id": "p521-b15",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p521-b16",
+          "source": "Let $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ and $g(x)=\\displaystyle\\sum_{n=0}^\\infty b_nx^n$. Suppose we merely knew that $f(x)g(x)=\\displaystyle\\sum_{n=0}^\\infty c_nx^n$ for some $c_n$, but we didn’t know how to multiply series in general. Use Leibniz’s formula (Problem 10-20) to show directly that this series for $fg$ must indeed be the Cauchy product of the series for $f$ and $g$.",
+          "sourceSha256": "9369403eb2463ec77d5c6878c21e61331bedca54389118b7ffc1620cdad5d7fb",
+          "translation": "设 $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$、$g(x)=\\displaystyle\\sum_{n=0}^\\infty b_nx^n$。假设我们只知道对于某些 $c_n$，有 $f(x)g(x)=\\displaystyle\\sum_{n=0}^\\infty c_nx^n$，却不知道一般情况下怎样相乘级数。利用莱布尼茨公式（习题 10-20），直接说明 $fg$ 的这个级数确实必定是 $f$ 和 $g$ 的级数的柯西乘积。"
+        },
+        {
+          "id": "p521-b17",
+          "source": "### 18.",
+          "sourceSha256": "ea685e12aa5506177e8354425cc5ef641b0955faf096533840903cb00fca83d4"
+        },
+        {
+          "id": "p521-b18",
+          "source": "Suppose that $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ converges for some $x_0$, and that $a_0\\ne0$; for simplicity, we’ll assume that $a_0=1$. Let $\\{b_n\\}$ be the sequence defined recursively by",
+          "sourceSha256": "049fe6a8d3380f24fbef92c2852dd51131c546fbb9631e2e5ac3b5c324762ae6",
+          "translation": "假设 $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ 在某个 $x_0$ 处收敛，而且 $a_0\\ne0$；为简单起见，假设 $a_0=1$。设 $\\{b_n\\}$ 是由下式递归定义的数列："
+        },
+        {
+          "id": "p521-b19",
+          "source": "$$\\begin{aligned}b_0&=1\\\\b_n&=-\\sum_{k=0}^{n-1}b_ka_{n-k}.\\end{aligned}$$",
+          "sourceSha256": "4511e4401faaa300eb5f3b682a9986adedfcb74729fdefbbb67423faf3b837dd"
+        }
+      ]
+    },
+    {
+      "printed": 522,
+      "sourceSha256": "6afdaf559c29b04a7606df6974f87703fee982587216129e7a4efd58a716d5c4",
+      "blocks": [
+        {
+          "id": "p522-b1",
+          "source": "The aim of this problem is to show that $\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ also converges for some $x\\ne0$, so that it represents $1/f$ for small enough $|x|$.",
+          "sourceSha256": "ccc38399e035bf502dcfaa0b2ad5ec47286ca5abe5e135bdae884a27b6382e72",
+          "translation": "本题的目标是说明，$\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ 也在某个 $x\\ne0$ 处收敛，因此对于充分小的 $|x|$，它表示 $1/f$。"
+        },
+        {
+          "id": "p522-b2",
+          "source": "(a) If all $|a_nx_0^n|\\le M$, show that",
+          "sourceSha256": "89431103c23a6be6271fc109231050883b199fd4c161ebb5f931bb5e8186541c",
+          "translation": "(a) 如果所有 $|a_nx_0^n|\\le M$，证明"
+        },
+        {
+          "id": "p522-b3",
+          "source": "$$|b_nx_0^n|\\le M\\sum_{k=0}^{n-1}|b_kx_0^k|.$$",
+          "sourceSha256": "25098b252fa78b7f2414b42112bdcf5ee085abaa3f70c694a16883ee11be5be0"
+        },
+        {
+          "id": "p522-b4",
+          "source": "(b) Choose $M$ so that $|a_nx_0^n|\\le M$, and also so that $M/(M^2-1)\\le1$. Show that",
+          "sourceSha256": "c97d113f0e43e0646a98e14fd7c7a9635b21f0b848eed0e6f9bd426dfc4b6d38",
+          "translation": "(b) 选择 $M$，使得 $|a_nx_0^n|\\le M$，并且 $M/(M^2-1)\\le1$。证明"
+        },
+        {
+          "id": "p522-b5",
+          "source": "$$|b_nx_0^n|\\le M^{2n}.$$",
+          "sourceSha256": "b233a59b82a814dd6e58dd7b60707807ca32b5b7598fac76f310d1ca285e58e8"
+        },
+        {
+          "id": "p522-b6",
+          "source": "(c) Conclude that $\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ converges for $|x|$ sufficiently small.",
+          "sourceSha256": "7ddca87d24ee6e7165a2d915230322bffe979a9f3a4252896dced3f5b0539ee2",
+          "translation": "(c) 由此得出，对于充分小的 $|x|$，$\\displaystyle\\sum_{n=0}^\\infty b_nx^n$ 收敛。"
+        },
+        {
+          "id": "p522-b7",
+          "source": "### \\*19.",
+          "sourceSha256": "7e4f2b11b162b6abc626b910cd4565b2247b0ee93dbac4aad15418c46a98a3e3"
+        },
+        {
+          "id": "p522-b8",
+          "source": "Suppose that $\\displaystyle\\sum_{n=0}^\\infty a_n$ converges. We know that the series $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ must converge uniformly on $[-a,a]$ for $0<a<1$, but it may not converge uniformly on $[-1,1]$; in fact, it may not even converge at the point $-1$ (for example, if $f(x)=\\log(1+x)$). However, a beautiful theorem of Abel shows that the series *does* converge uniformly on $[0,1]$. Consequently, $f$ is continuous on $[0,1]$, and in particular, $\\displaystyle\\sum_{n=0}^\\infty a_n=\\lim_{x\\to1^-}\\sum_{n=0}^\\infty a_nx^n$. Prove Abel’s Theorem by noticing that if $|a_m+\\cdots+a_n|<\\varepsilon$, then $|a_mx^m+\\cdots+a_nx^n|<\\varepsilon$, by Abel’s Lemma (Problem 19-36).",
+          "sourceSha256": "a9b4dba3186d8c33d6d021dfc59cc1b6aba8fab6e9f612c23cdcb6be01f3e3d9",
+          "translation": "假设 $\\displaystyle\\sum_{n=0}^\\infty a_n$ 收敛。我们知道，级数 $f(x)=\\displaystyle\\sum_{n=0}^\\infty a_nx^n$ 对于 $0<a<1$ 必定在 $[-a,a]$ 上一致收敛，但它未必在 $[-1,1]$ 上一致收敛；事实上，它甚至可能在点 $-1$ 处不收敛（例如 $f(x)=\\log(1+x)$ 时）。然而，阿贝尔的一个优美定理表明，这个级数*确实*在 $[0,1]$ 上一致收敛。因此，$f$ 在 $[0,1]$ 上连续，特别地，$\\displaystyle\\sum_{n=0}^\\infty a_n=\\lim_{x\\to1^-}\\sum_{n=0}^\\infty a_nx^n$。证明阿贝尔定理，方法是注意到：根据阿贝尔引理（习题 19-36），如果 $|a_m+\\cdots+a_n|<\\varepsilon$，那么 $|a_mx^m+\\cdots+a_nx^n|<\\varepsilon$。"
+        },
+        {
+          "id": "p522-b9",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p522-b10",
+          "source": "A sequence $\\{a_n\\}$ is called **Abel summable** if $\\displaystyle\\lim_{x\\to1^-}\\sum_{n=0}^\\infty a_nx^n$ exists; Problem 19 shows that a summable sequence is necessarily Abel summable. Find a sequence which is Abel summable, but which is not summable. Hint: Look over the list of Taylor series until you find one which does not converge at $1$, even though the function it represents is continuous at $1$.",
+          "sourceSha256": "3ddeab352b86363d3b2257e19efa6017926df8b5d274862f3e25dfb4eb73e629",
+          "translation": "如果 $\\displaystyle\\lim_{x\\to1^-}\\sum_{n=0}^\\infty a_nx^n$ 存在，就称数列 $\\{a_n\\}$ **阿贝尔可求和**；习题 19 表明，可求和数列必定阿贝尔可求和。找一个阿贝尔可求和、但不可求和的数列。提示：查看泰勒级数表，找出一个在 $1$ 处不收敛、但它所表示的函数在 $1$ 处连续的级数。"
+        },
+        {
+          "id": "p522-b11",
+          "source": "### 21.",
+          "sourceSha256": "d908d228d4604b1dd2f9729637ede6c5eb59c7f91a5ba1fe1a64623fe814b30d"
+        },
+        {
+          "id": "p522-b12",
+          "source": "(a) Using Problem 19, find the following infinite sums.",
+          "sourceSha256": "1aae05b33f5df89b2fdb707e409b068ab796ef2a980a10de95e64961cf7160e8",
+          "translation": "(a) 利用习题 19，求以下无穷和。"
+        },
+        {
+          "id": "p522-b13",
+          "source": "(i) $\\dfrac1{2\\cdot1}-\\dfrac1{3\\cdot2}+\\dfrac1{4\\cdot3}-\\dfrac1{5\\cdot4}+\\cdots$.",
+          "sourceSha256": "f740a9b99823322072c71a8bfff7757c52b7a59a527e1e8cbd61fc42797ee972"
+        },
+        {
+          "id": "p522-b14",
+          "source": "(ii) $1-\\frac14+\\frac17-\\frac1{10}+\\cdots$.",
+          "sourceSha256": "446ac9967c8445215f6df0a77e2c7a732ce952921f71aa5ed3e0ebae6a8a1b82"
+        },
+        {
+          "id": "p522-b15",
+          "source": "(b) Let $\\displaystyle\\sum_{n=0}^\\infty c_n$ be the Cauchy product of two convergent power series $\\displaystyle\\sum_{n=0}^\\infty a_n$ and $\\displaystyle\\sum_{n=0}^\\infty b_n$, and suppose merely that $\\displaystyle\\sum_{n=0}^\\infty c_n$ converges. Prove that, in fact, it converges to the product $\\displaystyle\\sum_{n=0}^\\infty a_n\\cdot\\sum_{n=0}^\\infty b_n$.",
+          "sourceSha256": "b133b622d09a934386c58e4aae1e3221281d4dde57d4309381f9190ab8c744f7",
+          "translation": "(b) 设 $\\displaystyle\\sum_{n=0}^\\infty c_n$ 是两个收敛级数 $\\displaystyle\\sum_{n=0}^\\infty a_n$ 和 $\\displaystyle\\sum_{n=0}^\\infty b_n$ 的柯西乘积，并且只假设 $\\displaystyle\\sum_{n=0}^\\infty c_n$ 收敛。证明它实际上收敛于乘积 $\\displaystyle\\sum_{n=0}^\\infty a_n\\cdot\\sum_{n=0}^\\infty b_n$。"
+        }
+      ]
+    },
+    {
+      "printed": 523,
+      "sourceSha256": "76657a6da54b806f4b9a62da3bd63a45e698b2c999eeab0ba593109ece0f68a1",
+      "blocks": [
+        {
+          "id": "p523-b1",
+          "source": "### 22.",
+          "sourceSha256": "ce146eae8f2fb4609bfd66abfe5008807912c8203d51e87d6ba4e238e91e9395"
+        },
+        {
+          "id": "p523-b2",
+          "source": "(a) Show that the series",
+          "sourceSha256": "5b4395d7c32dff1ede407b43ed01738705ce8bf2dee8b92014e1418fbb6aa56b",
+          "translation": "(a) 证明级数"
+        },
+        {
+          "id": "p523-b3",
+          "source": "$$\\sum_{n=0}^\\infty\\frac{x^{2n+1}}{2n+1}-\\frac{x^{n+1}}{2n+2}$$",
+          "sourceSha256": "ede476ad16b26704acc820ee6145966c70c52a52c277660dfaadb12a57543c0e"
+        },
+        {
+          "id": "p523-b4",
+          "source": "converges uniformly to $\\frac12\\log(x+1)$ on $[-a,a]$ for $0<a<1$, but that at $1$ it converges to $\\log2$. (Why doesn’t this contradict Abel’s Theorem (Problem 19)?",
+          "sourceSha256": "180e61d1078b246462cc52fd1a7f003622771a6391d75c539ddf3c48372127b2",
+          "translation": "在 $0<a<1$ 时，于 $[-a,a]$ 上一致收敛于 $\\frac12\\log(x+1)$，但在 $1$ 处收敛于 $\\log2$。（为什么这不违背阿贝尔定理（习题 19）？"
+        },
+        {
+          "id": "p523-b5",
+          "source": "### 23.",
+          "sourceSha256": "fcb56ced3fb587a05b1e3f24ccfaee441ca9356f2d715d9e8ba59a341ae068ec"
+        },
+        {
+          "id": "p523-b6",
+          "source": "(a) Suppose that $\\{f_n\\}$ is a sequence of bounded (not necessarily continuous) functions on $[a,b]$ which converge uniformly to $f$ on $[a,b]$. Prove that $f$ is bounded on $[a,b]$.",
+          "sourceSha256": "09b9122b1ad61d5148e0bec6ad3532bf7d75946ef56816a18537a6dfdac86c2a",
+          "translation": "(a) 假设 $\\{f_n\\}$ 是 $[a,b]$ 上的有界函数列（未必连续），在 $[a,b]$ 上一致收敛于 $f$。证明 $f$ 在 $[a,b]$ 上有界。"
+        },
+        {
+          "id": "p523-b7",
+          "source": "(b) Find a sequence of continuous functions on $[a,b]$ which converge pointwise to an unbounded function on $[a,b]$.",
+          "sourceSha256": "d647d1c843fbfa6b9a4a0e4572739aa048a5b53a366322619480afad0f3c35b2",
+          "translation": "(b) 找一个 $[a,b]$ 上的连续函数列，逐点收敛于 $[a,b]$ 上的一个无界函数。"
+        },
+        {
+          "id": "p523-b8",
+          "source": "### 24.",
+          "sourceSha256": "1fb8b304cd861a73c12374de97d67ebaec8b5558d02cf56f4db6adadfe75d8aa"
+        },
+        {
+          "id": "p523-b9",
+          "source": "Suppose that $f$ is differentiable. Prove that the function $f'$ is the pointwise limit of a sequence of continuous functions. (Since we already know examples of discontinuous derivatives, this provides another example where the pointwise limit of continuous functions is not continuous.)",
+          "sourceSha256": "c4d1ba2ef507eb528ed0886ac7001894fbd725673238026e2351ace48b31204c",
+          "translation": "假设 $f$ 可导。证明函数 $f'$ 是某个连续函数列的逐点极限。（由于我们已经知道不连续导数的例子，这就又提供了一个连续函数列的逐点极限不连续的例子。）"
+        },
+        {
+          "id": "p523-b10",
+          "source": "### 25.",
+          "sourceSha256": "e243042975caa2efce0a7385b48b4be10d7c1f2cfeac6357090078c2f5eb5e34"
+        },
+        {
+          "id": "p523-b11",
+          "source": "Find a sequence of integrable functions $\\{f_n\\}$ which converges to the (nonintegrable) function $f$ that is $1$ on the rationals and $0$ on the irrationals. Hint: Each $f_n$ will be $0$ except at a few points.",
+          "sourceSha256": "3f2d25b7458698cfdf90c9ad685e50b15b83f230e7c0c66c06a1b35c3efa2a54",
+          "translation": "找一个可积函数列 $\\{f_n\\}$，收敛于那个在有理数处等于 $1$、在无理数处等于 $0$ 的（不可积）函数 $f$。提示：每个 $f_n$ 除了少数几个点之外都为 $0$。"
+        },
+        {
+          "id": "p523-b12",
+          "source": "### 26.",
+          "sourceSha256": "e0a0eda9f4171fbdc2f78618f10a33fea6c704a744eb8323db3535cb65310a23"
+        },
+        {
+          "id": "p523-b13",
+          "source": "(a) Prove that if $f$ is the uniform limit of $\\{f_n\\}$ on $[a,b]$ and each $f_n$ is integrable on $[a,b]$, then so is $f$. (So one of the hypotheses in Theorem 1 was unnecessary.)",
+          "sourceSha256": "fee95e14b3bafbf3ff26074d83435cc72473eaf9ac72a2e2681f3023fb37680b",
+          "translation": "(a) 证明：如果 $f$ 是 $\\{f_n\\}$ 在 $[a,b]$ 上的一致极限，而且每个 $f_n$ 都在 $[a,b]$ 上可积，那么 $f$ 也可积。（所以，定理 1 中有一个假设是不必要的。）"
+        },
+        {
+          "id": "p523-b14",
+          "source": "(b) In Theorem 3 we assumed only that $\\{f_n\\}$ converges pointwise to $f$. Show that the remaining hypotheses ensure that $\\{f_n\\}$ actually converges uniformly to $f$.",
+          "sourceSha256": "1e2a6e396040a3bd3f8cbe23df6ae860fd6982aaa3a884d20d6448b6eaa1f840",
+          "translation": "(b) 在定理 3 中，我们只假设 $\\{f_n\\}$ 逐点收敛于 $f$。证明其余假设保证 $\\{f_n\\}$ 实际上一致收敛于 $f$。"
+        },
+        {
+          "id": "p523-b15",
+          "source": "(c) Suppose that in Theorem 3 we do not assume $\\{f_n\\}$ converges to a function $f$, but instead assume only that $f_n(x_0)$ converges for some $x_0$ in $[a,b]$. Show that $f_n$ does converge (uniformly) to some $f$ (with $f'=g$).",
+          "sourceSha256": "455bc9940b888c1b7cdd92e00c8dbf552dc39b04996feb9a26380de047d76c2d",
+          "translation": "(c) 假设在定理 3 中，我们不假设 $\\{f_n\\}$ 收敛于某个函数 $f$，而只假设对 $[a,b]$ 中的某个 $x_0$，$f_n(x_0)$ 收敛。证明 $f_n$ 确实（一致）收敛于某个 $f$（并且 $f'=g$）。"
+        },
+        {
+          "id": "p523-b16",
+          "source": "(d) Prove that the series",
+          "sourceSha256": "97c1942d56b720178f6ab702c6b755d9d4ec7caf941674ca33dfd9df9bac8497",
+          "translation": "(d) 证明级数"
+        },
+        {
+          "id": "p523-b17",
+          "source": "$$\\sum_{n=1}^\\infty\\frac{(-1)^n}{x+n}$$",
+          "sourceSha256": "88311e43c6825ccf96389993b17197ed8467e02d21aa9585ea001216c9de88d6"
+        },
+        {
+          "id": "p523-b18",
+          "source": "converges uniformly on $[0,\\infty)$.",
+          "sourceSha256": "818da2cbb1bee8dc0f04afffb6417b82bdcbf978b3562f06a2ed9ae65c94c684",
+          "translation": "在 $[0,\\infty)$ 上一致收敛。"
+        },
+        {
+          "id": "p523-b19",
+          "source": "### 27.",
+          "sourceSha256": "01de3c63fd790d0deac18299d79a16ecfff7727c478f7c8964568f07245d3eec"
+        },
+        {
+          "id": "p523-b20",
+          "source": "Suppose that $f_n$ are continuous functions on $[0,1]$ that converge uniformly to $f$. Prove that",
+          "sourceSha256": "98c0f05cb2cff6ab96564bdd829928ededc7b45aec4fcf923afdd6b8ec0564b9",
+          "translation": "假设 $f_n$ 是 $[0,1]$ 上的连续函数，一致收敛于 $f$。证明"
+        },
+        {
+          "id": "p523-b21",
+          "source": "$$\\lim_{n\\to\\infty}\\int_0^{1-1/n}f_n=\\int_0^1 f.$$",
+          "sourceSha256": "477f73c7506eedd07ebcbf5d6861c67aea29928f7483bb6f32c982e6678c3ed5"
+        },
+        {
+          "id": "p523-b22",
+          "source": "Is this true if the convergence isn’t uniform?",
+          "sourceSha256": "6bd24104fa15e711b3554ff1feadf7138a3be93967d1452db136c471e54fd43e",
+          "translation": "如果收敛不是一致的，这仍然成立吗？"
+        }
+      ]
+    },
+    {
+      "printed": 524,
+      "sourceSha256": "5905a96c4da2c018d5066ea36959b7f2c931abc73af0beafd75811251a1f6679",
+      "blocks": [
+        {
+          "id": "p524-b1",
+          "source": "### 28.",
+          "sourceSha256": "99710235075939b06c843e9bd945573c4f9f13f6f1481388af7da8a53884193f"
+        },
+        {
+          "id": "p524-b2",
+          "source": "(a) Suppose that $\\{f_n\\}$ is a sequence of continuous functions on $[a,b]$ which approaches $0$ pointwise. Suppose moreover that we have $f_n(x)\\ge f_{n+1}(x)\\ge0$ for all $n$ and all $x$ in $[a,b]$. Prove that $\\{f_n\\}$ actually approaches $0$ uniformly on $[a,b]$. Hint: Suppose not, choose an appropriate sequence of points $x_n$ in $[a,b]$, and apply the Bolzano-Weierstrass theorem.",
+          "sourceSha256": "397989d3b55c82dfef93c4e3c5c0dd681a80219a7de545389671b9090b975186",
+          "translation": "(a) 假设 $\\{f_n\\}$ 是 $[a,b]$ 上的连续函数列，逐点趋于 $0$。再假设对于所有 $n$，以及 $[a,b]$ 中的所有 $x$，都有 $f_n(x)\\ge f_{n+1}(x)\\ge0$。证明 $\\{f_n\\}$ 实际上在 $[a,b]$ 上一致趋于 $0$。提示：假设不然，在 $[a,b]$ 中选择一个适当的点列 $x_n$，并应用博尔查诺–魏尔斯特拉斯定理。"
+        },
+        {
+          "id": "p524-b3",
+          "source": "(b) Prove Dini’s Theorem: If $\\{f_n\\}$ is a nonincreasing sequence of continuous functions on $[a,b]$ which approaches the continuous function $f$ pointwise, then $\\{f_n\\}$ also approaches $f$ uniformly on $[a,b]$. (The same result holds if $\\{f_n\\}$ is a nondecreasing sequence.)",
+          "sourceSha256": "99be4bc356f6c7f0e243f2fe1d20a2d7424b74bdb7e3d5d958a62762938aac63",
+          "translation": "(b) 证明迪尼定理：如果 $\\{f_n\\}$ 是 $[a,b]$ 上的非增连续函数列，逐点趋于连续函数 $f$，那么 $\\{f_n\\}$ 也在 $[a,b]$ 上一致趋于 $f$。（如果 $\\{f_n\\}$ 是非减函数列，同样的结论也成立。）"
+        },
+        {
+          "id": "p524-b4",
+          "source": "(c) Does Dini’s Theorem hold if $f$ isn’t continuous? How about if $[a,b]$ is replaced by the open interval $(a,b)$?",
+          "sourceSha256": "b0f7ae0d595401baee272cd555b6b38977917a8a9552d256f5106c3d9fd0be17",
+          "translation": "(c) 如果 $f$ 不连续，迪尼定理还成立吗？如果把 $[a,b]$ 换成开区间 $(a,b)$，又如何？"
+        },
+        {
+          "id": "p524-b5",
+          "source": "### 29.",
+          "sourceSha256": "2b03e98fafcd40e8fdba5086d1753ea10425470a6703dc5959a8d997b5c69ba4"
+        },
+        {
+          "id": "p524-b6",
+          "source": "(a) Suppose that $\\{f_n\\}$ is a sequence of continuous functions on $[a,b]$ that converges uniformly to $f$. Prove that if $x_n$ approaches $x$, then $f_n(x_n)$ approaches $f(x)$.",
+          "sourceSha256": "9e0f6d944c0d3f3b344557d57cdfa437e8f62486dce34ee8c821926f698addd4",
+          "translation": "(a) 假设 $\\{f_n\\}$ 是 $[a,b]$ 上的连续函数列，一致收敛于 $f$。证明：如果 $x_n$ 趋于 $x$，那么 $f_n(x_n)$ 趋于 $f(x)$。"
+        },
+        {
+          "id": "p524-b7",
+          "source": "(b) Is this statement true without assuming that the $f_n$ are continuous?",
+          "sourceSha256": "62866fef69465f5c8c88ab239065e3135bd13cb6fd032435cd4ef1ea29e57205",
+          "translation": "(b) 如果不假设各个 $f_n$ 连续，这个陈述还成立吗？"
+        },
+        {
+          "id": "p524-b8",
+          "source": "(c) Prove the converse of part (a): If $f$ is continuous on $[a,b]$ and $\\{f_n\\}$ is a sequence with the property that $f_n(x_n)$ approaches $f(x)$ whenever $x_n$ approaches $x$, then $f_n$ converges uniformly to $f$ on $[a,b]$. Hint: If not, there is an $\\varepsilon>0$ and a sequence $x_n$ with $|f_n(x_n)-f(x_n)|>\\varepsilon$ for infinitely many distinct $x_n$. Then use the Bolzano-Weierstrass theorem.",
+          "sourceSha256": "2367e82842d81ed001c2b28f51efc79f223e08d66bf01b53449662415ceabf60",
+          "translation": "(c) 证明 (a) 的逆命题：如果 $f$ 在 $[a,b]$ 上连续，而函数列 $\\{f_n\\}$ 具有这样的性质——每当 $x_n$ 趋于 $x$ 时，$f_n(x_n)$ 就趋于 $f(x)$——那么 $f_n$ 在 $[a,b]$ 上一致收敛于 $f$。提示：否则，就存在一个 $\\varepsilon>0$ 和一个数列 $x_n$，使无穷多个互不相同的 $x_n$ 满足 $|f_n(x_n)-f(x_n)|>\\varepsilon$。然后使用博尔查诺–魏尔斯特拉斯定理。"
+        },
+        {
+          "id": "p524-b9",
+          "source": "### 30.",
+          "sourceSha256": "3af8d9cda2244caa10c3e85da41840dc8c8c907907fa1a17e47f6da23b5d7ba1"
+        },
+        {
+          "id": "p524-b10",
+          "source": "This problem outlines a completely different approach to the integral; consequently, it is unfair to use any facts about integrals learned previously.",
+          "sourceSha256": "91c5b1c89b39895254a3f7aa64140b07c676c1a0e73a903c6bd2b6335b9897b9",
+          "translation": "本题概述一种完全不同的积分处理方法；因此，使用先前学过的任何积分事实，都不算公平。"
+        },
+        {
+          "id": "p524-b11",
+          "source": "(a) Let $s$ be a step function on $[a,b]$, so that $s$ is constant on $(t_{i-1},t_i)$ for some partition $\\{t_0,\\ldots,t_n\\}$ of $[a,b]$. Define $\\displaystyle\\int_a^b s$ as $\\displaystyle\\sum_{i=1}^n s_i\\cdot(t_i-t_{i-1})$ where $s_i$ is the (constant) value of $s$ on $(t_{i-1},t_i)$. Show that this definition does not depend on the partition $\\{t_0,\\ldots,t_n\\}$.",
+          "sourceSha256": "acb1eb8ca0cba1c279d7851e9fc73c33db11caec4d6a566267695a5433a557fd",
+          "translation": "(a) 设 $s$ 是 $[a,b]$ 上的阶梯函数，因此对于 $[a,b]$ 的某个分割 $\\{t_0,\\ldots,t_n\\}$，$s$ 在 $(t_{i-1},t_i)$ 上为常数。把 $\\displaystyle\\int_a^b s$ 定义为 $\\displaystyle\\sum_{i=1}^n s_i\\cdot(t_i-t_{i-1})$，其中 $s_i$ 是 $s$ 在 $(t_{i-1},t_i)$ 上的（常数）值。证明这个定义不依赖于分割 $\\{t_0,\\ldots,t_n\\}$。"
+        },
+        {
+          "id": "p524-b12",
+          "source": "(b) A function $f$ is called a **regulated** function on $[a,b]$ if it is the uniform limit of a sequence of step functions $\\{s_n\\}$ on $[a,b]$. Show that in this case there is, for every $\\varepsilon>0$, some $N$ such that for $m,n>N$ we have $|s_n(x)-s_m(x)|<\\varepsilon$ for all $x$ in $[a,b]$.",
+          "sourceSha256": "7aa9a05f5ddf8dbe81948a66e820a0e0b7ea6eefba6ad34078b1a209b7be223e",
+          "translation": "(b) 如果函数 $f$ 是 $[a,b]$ 上某个阶梯函数列 $\\{s_n\\}$ 的一致极限，就称它是 $[a,b]$ 上的**有规函数**。证明在这种情况下，对于每个 $\\varepsilon>0$，都存在某个 $N$，使得当 $m,n>N$ 时，对于 $[a,b]$ 中的所有 $x$，都有 $|s_n(x)-s_m(x)|<\\varepsilon$。"
+        },
+        {
+          "id": "p524-b13",
+          "source": "(c) Show that the sequence of numbers $\\displaystyle\\left\\{\\int_a^b s_n\\right\\}$ will be a Cauchy sequence.",
+          "sourceSha256": "9251ff5f058b382f47aae58f30dfd4a0d848972176f170b645bda791eb6a2326",
+          "translation": "(c) 证明数列 $\\displaystyle\\left\\{\\int_a^b s_n\\right\\}$ 是一个柯西数列。"
+        },
+        {
+          "id": "p524-b14",
+          "source": "(d) Suppose that $\\{t_n\\}$ is another sequence of step functions on $[a,b]$ which converges uniformly to $f$. Show that for every $\\varepsilon>0$ there is an $N$ such that for $n>N$ we have $|s_n(x)-t_n(x)|<\\varepsilon$ for $x$ in $[a,b]$.",
+          "sourceSha256": "2f47a2f990ce39e9b99e95f107316d068faa8fa382d5c6822e9432cce0befcc1",
+          "translation": "(d) 假设 $\\{t_n\\}$ 是 $[a,b]$ 上另一个一致收敛于 $f$ 的阶梯函数列。证明：对于每个 $\\varepsilon>0$，都存在一个 $N$，使得当 $n>N$ 时，对于 $[a,b]$ 中的 $x$，都有 $|s_n(x)-t_n(x)|<\\varepsilon$。"
+        },
+        {
+          "id": "p524-b15",
+          "source": "(e) Conclude that $\\displaystyle\\lim_{n\\to\\infty}\\int_a^b s_n=\\lim_{n\\to\\infty}\\int_a^b t_n$. This means that we can *define* $\\displaystyle\\int_a^b f$ to be $\\displaystyle\\lim_{n\\to\\infty}s_n$ for any sequence of step functions $\\{s_n\\}$ converging uniformly to $f$. The only remaining question is: Which functions are regulated?",
+          "sourceSha256": "4b24621a1800cbb1100cc3ca5db2d909b333ad5de1fd16b82b5b11dcf10c399e",
+          "translation": "(e) 由此得出 $\\displaystyle\\lim_{n\\to\\infty}\\int_a^b s_n=\\lim_{n\\to\\infty}\\int_a^b t_n$。这意味着，对于任意一个一致收敛于 $f$ 的阶梯函数列 $\\{s_n\\}$，我们都可以把 $\\displaystyle\\int_a^b f$ *定义*为 $\\displaystyle\\lim_{n\\to\\infty}s_n$。唯一剩下的问题是：哪些函数是有规函数？"
+        }
+      ]
+    },
+    {
+      "printed": 525,
+      "sourceSha256": "ce2ef73bfce814d40eb56d33928d0addf6aa3b08116a9f2ba03a61edeb3387b0",
+      "blocks": [
+        {
+          "id": "p525-b1",
+          "source": "\\*(f) Prove that a continuous function is regulated. Hint: To find a step function $s$ on $[a,b]$ with $|f(x)-s(x)|<\\varepsilon$ for all $x$ in $[a,b]$, consider all $y$ for which there is such a step function on $[a,y]$.",
+          "sourceSha256": "a46bbc99986008f79ed8dadbf1b57934692f71968d688fbac14ce7222384f5b6",
+          "translation": "\\*(f) 证明连续函数是有规函数。提示：要在 $[a,b]$ 上找到一个阶梯函数 $s$，使得对于 $[a,b]$ 中的所有 $x$ 都有 $|f(x)-s(x)|<\\varepsilon$，可以考虑所有这样的 $y$：在 $[a,y]$ 上存在满足要求的阶梯函数。"
+        },
+        {
+          "id": "p525-b2",
+          "source": "(g) Every step function $s$ has the property that $\\lim_{x\\to a^+}s(x)$ and $\\lim_{x\\to a^-}s(x)$ exist for all $a$. Conclude that every regulated function has the same property, and find an integrable function that is not regulated. (It is also true that, conversely, every function $f$ with the property that $\\lim_{x\\to a^+}f(x)$ and $\\lim_{x\\to a^-}f(x)$ exist for all $a$ is regulated.)",
+          "sourceSha256": "a20500aa0c06367ba240f0fa5fe4948dc895276f4955b384d6110a144526134a",
+          "translation": "(g) 每个阶梯函数 $s$ 都具有如下性质：对于所有 $a$，$\\lim_{x\\to a^+}s(x)$ 和 $\\lim_{x\\to a^-}s(x)$ 都存在。由此得出，每个有规函数也具有相同性质，并找一个可积但不是有规函数的例子。（反过来也成立：每个函数 $f$，只要对于所有 $a$，$\\lim_{x\\to a^+}f(x)$ 和 $\\lim_{x\\to a^-}f(x)$ 都存在，就必定是有规函数。）"
+        },
+        {
+          "id": "p525-b3",
+          "source": "### \\*31.",
+          "sourceSha256": "974c089cdf53e11063b75481acdd1c80c1bb6795ae519d0f41ebf3acceb351f8"
+        },
+        {
+          "id": "p525-b4",
+          "source": "Find a sequence $\\{f_n\\}$ approaching $f$ uniformly on $[0,1]$ for which we have $\\lim_{n\\to\\infty}$ (length of $f_n$ on $[0,1]$) $\\ne$ length of $f$ on $[0,1]$. (Length is defined in Problem 13-25, but the simplest example will involve functions the length of whose graphs will be obvious.)",
+          "sourceSha256": "5a482bdba4b96e7af6b9be77464aa356a69aa625fcbec5fc4b8cbdc5a16fe60c",
+          "translation": "找一个在 $[0,1]$ 上一致趋于 $f$ 的函数列 $\\{f_n\\}$，使得 $\\lim_{n\\to\\infty}$（$f_n$ 在 $[0,1]$ 上的长度）$\\ne$ $f$ 在 $[0,1]$ 上的长度。（长度在习题 13-25 中定义，但最简单的例子会涉及图像长度显而易见的函数。）"
+        }
+      ]
+    }
+  ]
+}

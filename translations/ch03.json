@@ -1,0 +1,1632 @@
+{
+  "chapter": 3,
+  "language": "zh-CN",
+  "sourceSha256": "4161600f0338384f9bbaa1c977d59d9451c1fe50728a4c6b71ad1e531f7114ae",
+  "paragraphCount": 177,
+  "pages": [
+    {
+      "printed": 39,
+      "sourceSha256": "b2d6066e79a6f74eedfc4f6a49c03bae8de4c8576efc3f24cf0ef6c502c4f861",
+      "blocks": [
+        {
+          "id": "p39-b1",
+          "source": "# CHAPTER 3  FUNCTIONS",
+          "sourceSha256": "06465c8c506fedff336df24fe02674b49dfbf0b6195f7f478412dda8f003cbf2",
+          "translation": "# 第 3 章　函数"
+        },
+        {
+          "id": "p39-b2",
+          "source": "Undoubtedly the most important concept in all of mathematics is that of a function—in almost every branch of modern mathematics functions turn out to be the central objects of investigation. It will therefore probably not surprise you to learn that the concept of a function is one of great generality. Perhaps it will be a relief to learn that, for the present, we will be able to restrict our attention to functions of a very special kind; even this small class of functions will exhibit sufficient variety to engage our attention for quite some time. We will not even begin with a proper definition. For the moment a provisional definition will enable us to discuss functions at length, and will illustrate the intuitive notion of functions, as understood by mathematicians. Later, we will consider and discuss the advantages of the modern mathematical definition. Let us therefore begin with the following:",
+          "sourceSha256": "f272716dc7b034d178fc88f09e37fd50894b2c76e0289a5b1efc12f65124f1bd",
+          "translation": "函数无疑是整个数学中最重要的概念——在现代数学几乎每一个分支中，函数都是研究的中心对象。因此，得知函数概念具有极大的普遍性，你大概不会感到惊讶。也许令你宽慰的是，目前我们可以把注意力限制在一种非常特殊的函数上；即使这一小类函数，其丰富多样的面貌也足够我们研究相当长一段时间。我们甚至不打算从一个正式的定义开始。眼下，一个暂定的定义就足以让我们充分讨论函数，并说明数学家所理解的函数的直观概念。稍后，我们会考察现代数学定义，并讨论它的优点。因此，先从下面的定义开始："
+        },
+        {
+          "id": "p39-b3",
+          "source": "**PROVISIONAL DEFINITION**",
+          "sourceSha256": "96c23deb6bd8f2a089880faa7293f5e102678d6aa95cf39159657b22bbf5a52f",
+          "translation": "**暂定定义**"
+        },
+        {
+          "id": "p39-b4",
+          "source": "A function is a rule which assigns, to each of certain real numbers, some other real number.",
+          "sourceSha256": "8f8470443cfc4d78a659fb4d2f5ec5656484b8f3335c5bfbd106cb2de9070ade",
+          "translation": "函数是一种规则，它给某些实数中的每一个指定一个实数。"
+        },
+        {
+          "id": "p39-b5",
+          "source": "The following examples of functions are meant to illustrate and amplify this definition, which, admittedly, requires some such clarification.",
+          "sourceSha256": "e02f42b32ae42da8b1219eb696ad269d15a34afd914373c626f97d16c53a1fee",
+          "translation": "下面这些函数的例子，旨在说明并充实这个定义；诚然，这一定义确实需要这样的澄清。"
+        },
+        {
+          "id": "p39-b6",
+          "source": "*Example 1* The rule which assigns to each number the square of that number.",
+          "sourceSha256": "e4baf32c7ee449abf5af2dea72a245a0de396cc40275c9ab930ef8fa2dd05eb6",
+          "translation": "*例 1* 给每个数指定它的平方的规则。"
+        },
+        {
+          "id": "p39-b7",
+          "source": "*Example 2* The rule which assigns to each number $y$ the number",
+          "sourceSha256": "aa7b25ac6173f887fdfb6234b3dad423286f93b9687ca7d0f53bb54216f4c11a",
+          "translation": "*例 2* 给每个数 $y$ 指定如下数的规则："
+        },
+        {
+          "id": "p39-b8",
+          "source": "$$\\frac{y^3+3y+5}{y^2+1}.$$",
+          "sourceSha256": "d4fe7e9eb4cca13fef39cac68de27d8900f10e613e3ae9b720472629516faf1d"
+        },
+        {
+          "id": "p39-b9",
+          "source": "*Example 3* The rule which assigns to each number $c\\ne1,-1$ the number",
+          "sourceSha256": "4f428a37ccc4db6a55d1713e625c037eaa7fed27331db597923a4f51230fb952",
+          "translation": "*例 3* 给每个数 $c\\ne1,-1$ 指定如下数的规则："
+        },
+        {
+          "id": "p39-b10",
+          "source": "$$\\frac{c^3+3c+5}{c^2-1}.$$",
+          "sourceSha256": "2554e99a5e369b4247ba1645346f801dddce11746ca3a0ad1c2486fde9e77e66"
+        },
+        {
+          "id": "p39-b11",
+          "source": "*Example 4* The rule which assigns to each number $x$ satisfying $-17\\le x\\le\\pi/3$ the number $x^2$.",
+          "sourceSha256": "aeb46b8dbe1e648aefed2bc1b677a3866eba6b431c88ddecdcdc2cfa77d9fe94",
+          "translation": "*例 4* 给满足 $-17\\le x\\le\\pi/3$ 的每个数 $x$ 指定数 $x^2$ 的规则。"
+        },
+        {
+          "id": "p39-b12",
+          "source": "*Example 5* The rule which assigns to each number $a$ the number 0 if $a$ is irrational, and the number 1 if $a$ is rational.",
+          "sourceSha256": "3e0f7b7ff66f566fd7d1e208fe4d2d26f15a41ca6e61bf49baca203b7aef96f0",
+          "translation": "*例 5* 给每个数 $a$ 指定数的规则：若 $a$ 是无理数，就指定 0；若 $a$ 是有理数，就指定 1。"
+        },
+        {
+          "id": "p39-b13",
+          "source": "*Example 6* The rule which assigns",
+          "sourceSha256": "1cd6932802f4d6afd7be96425e4c7c76333b9861fcbd9a0bb8f0beb074c16625",
+          "translation": "*例 6* 按照下式指定数的规则："
+        },
+        {
+          "id": "p39-b14",
+          "source": "$$\\begin{gathered}\n\\text{to 2 the number 5,}\\\\\n\\text{to 17 the number }\\frac{36}{\\pi},\n\\end{gathered}$$",
+          "sourceSha256": "b8f7fb680e9bab4f2c9980aae4ffe16bb47a3ba595d80ef0fa235eebdf95a2f8"
+        }
+      ]
+    },
+    {
+      "printed": 40,
+      "sourceSha256": "81f7816d950212d3df6d75c2900e158edbfe9cc6dfbed9827adc2e60b660668e",
+      "blocks": [
+        {
+          "id": "p40-b1",
+          "source": "$$\\begin{gathered}\n\\text{to }\\frac{\\pi^2}{17}\\text{ the number 28,}\\\\\n\\text{to }\\frac{36}{\\pi}\\text{ the number 28,}\n\\end{gathered}$$",
+          "sourceSha256": "5ad461d2fae22fb87b460690f0502454823a0044d96b8291fc35f1b6cc4df0d6"
+        },
+        {
+          "id": "p40-b2",
+          "source": "and to any $y\\ne2,17,\\pi^2/17$, or $36/\\pi$, the number 16 if $y$ is of the form $a+b\\sqrt2$ for $a,b$ in $\\mathbf Q$.",
+          "sourceSha256": "71d9b00ea8ae48431ca96cfa51750a3ad8a0a15bcdfa2202eaed88c83c20959c",
+          "translation": "而对于任意满足 $y\\ne2,17,\\pi^2/17$、且也不等于 $36/\\pi$ 的数，如果 $y$ 具有 $a+b\\sqrt2$ 的形式，其中 $a,b$ 属于 $\\mathbf Q$，就给它指定数 16。"
+        },
+        {
+          "id": "p40-b3",
+          "source": "*Example 7* The rule which assigns to each number $t$ the number $t^3+x$. (This rule depends, of course, on what the number $x$ is, so we are really describing infinitely many different functions, one for each number $x$.)",
+          "sourceSha256": "7cdd546687ea4a0d06f241047f46b7100f92a405929a4ebfc93f9c787eda26fd",
+          "translation": "*例 7* 给每个数 $t$ 指定数 $t^3+x$ 的规则。（当然，这条规则取决于数 $x$ 是多少，所以我们实际上描述了无穷多个不同的函数，每个数 $x$ 对应一个。）"
+        },
+        {
+          "id": "p40-b4",
+          "source": "*Example 8* The rule which assigns to each number $z$ the number of 7’s in the decimal expansion of $z$, if this number is finite, and $-\\pi$ if there are infinitely many 7’s in the decimal expansion of $z$.",
+          "sourceSha256": "2453a08ba7cc611ee1e81063180a5bd0867014daeedbfe750925297769f24b7a",
+          "translation": "*例 8* 给每个数 $z$ 指定如下数的规则：如果 $z$ 的小数展开中只有有限个 7，就指定其中 7 的个数；如果 $z$ 的小数展开中有无穷多个 7，就指定 $-\\pi$。"
+        },
+        {
+          "id": "p40-b5",
+          "source": "One thing should be abundantly clear from these examples—a function is *any* rule that assigns numbers to certain other numbers, not just a rule which can be expressed by an algebraic formula, or even by one uniform condition which applies to every number; nor is it necessarily a rule which you, or anybody else, can actually apply in practice (no one knows, for example, what rule 8 associates to $\\pi$). Moreover, the rule may neglect some numbers and it may not even be clear to which numbers the function applies (try to determine, for example, whether the function in Example 6 applies to $\\pi$). The set of numbers to which a function does apply is called the **domain** of the function.",
+          "sourceSha256": "0ca7ccb6fd96977ce95bb5520ef4b69601dddff04f7861809f571e6c774942b9",
+          "translation": "从这些例子应当十分清楚地看出：函数是给某些数指定数的*任何*规则，绝不局限于可以用代数公式表达的规则，甚至不必由一条适用于每个数的统一条件来表达；它也不必是你或任何其他人实际上能够执行的规则（例如，谁也不知道规则 8 给 $\\pi$ 指定什么数）。此外，规则可以不处理某些数，甚至它适用于哪些数也可能并不清楚（例如，试着判断例 6 中的函数是否适用于 $\\pi$）。函数所适用的数构成的集合，称为函数的**定义域**。"
+        },
+        {
+          "id": "p40-b6",
+          "source": "Before saying anything else about functions we badly need some notation. Since throughout this book we shall frequently be talking about functions (indeed we shall hardly ever talk about anything else) we need a convenient way of naming functions, and of referring to functions in general. The standard practice is to denote a function by a letter. For obvious reasons the letter “$f$” is a favorite, thereby making “$g$” and “$h$” other obvious candidates, but any letter (or any reasonable symbol, for that matter) will do, not excluding “$x$” and “$y$”, although these letters are usually reserved for indicating numbers. If $f$ is a function, then the number which $f$ associates to a number $x$ is denoted by $f(x)$—this symbol is read “$f$ of $x$” and is often called the **value of $f$ at $x$**. Naturally, if we denote a function by $x$, some other letter must be chosen to denote the number (a perfectly legitimate, though perverse, choice would be “$f$,” leading to the symbol $x(f)$). Note that the symbol $f(x)$ makes sense only for $x$ in the domain of $f$; for other $x$ the symbol $f(x)$ is not defined.",
+          "sourceSha256": "8d0a90bd43340b0870b8b16e5c9480ae4f3f1772e7c08084b5ff5912e625ea9e",
+          "translation": "在继续讨论函数之前，我们迫切需要一些记号。贯穿本书，我们将经常谈论函数（事实上，几乎不会谈论别的东西），因此需要一种方便的方式来给函数命名，并泛指函数。通常的做法是用字母表示函数。出于显而易见的原因，字母“$f$”最受青睐，于是“$g$”和“$h$”也成为自然的选择；不过，任何字母（其实，任何合理的符号）都可以，甚至包括“$x$”和“$y$”，尽管这两个字母通常留作表示数。如果 $f$ 是一个函数，那么 $f$ 给数 $x$ 指定的数记作 $f(x)$——这一符号读作“$f$ 在 $x$ 处的值”，也常称为 **$f$ 在 $x$ 处的函数值**。当然，如果我们用 $x$ 表示函数，就必须另选一个字母表示数（选“$f$”完全合法，只是有些别扭，这就得到符号 $x(f)$）。注意，符号 $f(x)$ 只有在 $x$ 属于 $f$ 的定义域时才有意义；对于其他 $x$，符号 $f(x)$ 没有定义。"
+        },
+        {
+          "id": "p40-b7",
+          "source": "If the functions defined in Examples 1–8 are denoted by $f,g,h,r,s,\\theta,\\alpha_x$, and $y$, then we can rewrite their definitions as follows:",
+          "sourceSha256": "7c87502bb89b09f82c55ec8cb2c4d3bf7db0f798c35cc49443dceda096c08229",
+          "translation": "如果把例 1–8 中定义的函数记为 $f,g,h,r,s,\\theta,\\alpha_x$ 和 $y$，那么可以把它们的定义改写如下："
+        },
+        {
+          "id": "p40-b8",
+          "source": "$$\\begin{array}{ll}\n(1)&f(x)=x^2\\quad\\text{for all }x.\\\\[8pt]\n(2)&g(y)=\\dfrac{y^3+3y+5}{y^2+1}\\quad\\text{for all }y.\\\\[10pt]\n(3)&h(c)=\\dfrac{c^3+3c+5}{c^2-1}\\quad\\text{for all }c\\ne1,-1.\n\\end{array}$$",
+          "sourceSha256": "c360259f26af46521bc2a6ef0c371728ba119c06809325798de64751cd395771"
+        }
+      ]
+    },
+    {
+      "printed": 41,
+      "sourceSha256": "a56980dcb6a50125be6c696da5b1a5ae1c46b73ca7576498c582fbc742be68e6",
+      "blocks": [
+        {
+          "id": "p41-b1",
+          "source": "$$\\begin{array}{ll}\n(4)&r(x)=x^2\\quad\\text{for all }x\\text{ such that }-17\\le x\\le\\pi/3.\\\\[8pt]\n(5)&s(x)=\\begin{cases}0,&x\\text{ irrational}\\\\1,&x\\text{ rational.}\\end{cases}\\\\[10pt]\n(6)&\\theta(x)=\\begin{cases}\n5,&x=2\\\\[4pt]\n\\dfrac{36}{\\pi},&x=17\\\\[8pt]\n28,&x=\\dfrac{\\pi^2}{17}\\\\[8pt]\n28,&x=\\dfrac{36}{\\pi}\\\\[8pt]\n16,&x\\ne2,17,\\dfrac{\\pi^2}{17},\\text{ or }\\dfrac{36}{\\pi},\\text{ and }x=a+b\\sqrt2\\text{ for }a,b\\text{ in }\\mathbf Q.\n\\end{cases}\\\\[10pt]\n(7)&\\alpha_x(t)=t^3+x\\quad\\text{for all numbers }t.\\\\[8pt]\n(8)&y(x)=\\begin{cases}\nn,&\\text{exactly }n\\text{ 7's appear in the decimal expansion of }x\\\\\n-\\pi,&\\text{infinitely many 7's appear in the decimal expansion of }x.\n\\end{cases}\n\\end{array}$$",
+          "sourceSha256": "61b513c6e673ecbcb0fa1ef3b02a9e7060ab8d33581d0978ce8be8bbd331d900"
+        },
+        {
+          "id": "p41-b2",
+          "source": "These definitions illustrate the common procedure adopted for defining a function $f$—indicating what $f(x)$ is for every number $x$ in the domain of $f$. (Notice that this is exactly the same as indicating $f(a)$ for every number $a$, or $f(b)$ for every number $b$, etc.) In practice, certain abbreviations are tolerated. Definition (1) could be written simple",
+          "sourceSha256": "1b10daf26db935337f54c1f04faf3e9ffc478a9ed0340a8b393cc93aa97941b3",
+          "translation": "这些定义说明了定义函数 $f$ 时通常采用的办法——对 $f$ 的定义域中的每个数 $x$，指出 $f(x)$ 是什么。（注意，这完全等同于对每个数 $a$ 指出 $f(a)$，或对每个数 $b$ 指出 $f(b)$，等等。）实际使用中，允许某些简写。定义 (1) 可以简单写作"
+        },
+        {
+          "id": "p41-b3",
+          "source": "$$(1)\\qquad f(x)=x^2$$",
+          "sourceSha256": "e72ccde853a8a14bc0938222ac9aeb5043d51d0f510aa8b69e06ecee4c5030b8"
+        },
+        {
+          "id": "p41-b4",
+          "source": "the qualifying phrase “for all $x$” being understood. Of course, for definition (4) the only possible abbreviation is",
+          "sourceSha256": "78683f0e9c6d0b2bbdfb6bec51634ac8ba2852599e671ce847f1736ddb8bcc40",
+          "translation": "其中默认包含限定语“对于所有 $x$”。当然，对于定义 (4)，唯一可能的简写是"
+        },
+        {
+          "id": "p41-b5",
+          "source": "$$(4)\\qquad r(x)=x^2,\\qquad -17\\le x\\le\\pi/3.$$",
+          "sourceSha256": "6bbcc918e9c797cf9fab8af4f9c662d5e66d1d280c1a8c8f39434f70a549fc80"
+        },
+        {
+          "id": "p41-b6",
+          "source": "It is usually understood that a definition such as",
+          "sourceSha256": "1e0d59cd767d8f287823797110f7083d4f330be0e8c3a3a3bf09b256b543b2fc",
+          "translation": "通常约定，像下面这样的定义"
+        },
+        {
+          "id": "p41-b7",
+          "source": "$$k(x)=\\frac1x+\\frac1{x-1},\\qquad x\\ne0,1$$",
+          "sourceSha256": "db3b26c05c6b66c87cbcfb4dc789f5c696746d1dc864424130f00b57bcb693c0"
+        },
+        {
+          "id": "p41-b8",
+          "source": "can be shortened to",
+          "sourceSha256": "2e16b71e2144e962ab87c39a02bdf93728138439211d77e5f7039f7a00aba4ca",
+          "translation": "可以简写为"
+        },
+        {
+          "id": "p41-b9",
+          "source": "$$k(x)=\\frac1x+\\frac1{x-1};$$",
+          "sourceSha256": "b40217b4bb6fcca0b96092f2ec4ec1e00112b29fe89fac1fe8cfa6d073d3a901"
+        },
+        {
+          "id": "p41-b10",
+          "source": "in other words, *unless the domain is explicitly restricted further, it is understood to consist of all numbers for which the definition makes any sense at all.*",
+          "sourceSha256": "0e6c77ecbd8a4d1005f809f3c854d0c31c8ccf2cf98d41e0b839f81a8bf853f5",
+          "translation": "换句话说，*除非另外明确限制定义域，否则就默认定义域由使定义有意义的所有数构成。*"
+        },
+        {
+          "id": "p41-b11",
+          "source": "You should have little difficulty checking the following assertions about the functions defined above:",
+          "sourceSha256": "185bf1750377fa89135db9448940a54d1ee67ef8334d071c86d86b4a7559151a",
+          "translation": "核实下面这些关于前述函数的断言，你应该不会感到困难："
+        },
+        {
+          "id": "p41-b12",
+          "source": "$$\\begin{gathered}\nf(x+1)=f(x)+2x+1;\\\\\ng(x)=h(x)\\text{ if }x^3+3x+5=0;\\\\\nr(x+1)=r(x)+2x+1\\text{ if }-17\\le x\\le\\frac\\pi3-1;\n\\end{gathered}$$",
+          "sourceSha256": "89c5044ff24804daf3cd1d6b15c3cf8d09600029542786a567efb0a10e3a8718"
+        }
+      ]
+    },
+    {
+      "printed": 42,
+      "sourceSha256": "b38746112978073d1e2b478dbf6fd0a33813061244a25278d16550106eb3e564",
+      "blocks": [
+        {
+          "id": "p42-b1",
+          "source": "$$\\begin{gathered}\ns(x+y)=s(x)\\text{ if }y\\text{ is rational};\\\\\n\\theta\\left(\\frac{\\pi^2}{17}\\right)=\\theta\\left(\\frac{36}{\\pi}\\right);\\\\\n\\alpha_x(x)=x\\cdot[f(x)+1];\\\\\ny\\left(\\frac13\\right)=0,\\ y\\left(\\frac79\\right)=-\\pi.\n\\end{gathered}$$",
+          "sourceSha256": "ebd349c9d7cef5dbd7c020de2ede9b09bce43d13d35e17d9c1863ffe7cab2f4c"
+        },
+        {
+          "id": "p42-b2",
+          "source": "If the expression $f(s(a))$ looks unreasonable to you, then you are forgetting that $s(a)$ is a number like any other number, so that $f(s(a))$ makes sense. As a matter of fact, $f(s(a))=s(a)$ for all $a$. Why? Even more complicated expressions than $f(s(a))$ are, after a first exposure, no more difficult to unravel. The expression",
+          "sourceSha256": "302630d7c901329a07a10c0b880e3be11c6f0583cbf5b44fcdb015c2377af032",
+          "translation": "如果你觉得表达式 $f(s(a))$ 不合情理，那就是忘了 $s(a)$ 和其他数一样，也是一个数，所以 $f(s(a))$ 有意义。事实上，对所有 $a$ 都有 $f(s(a))=s(a)$。为什么？即使比 $f(s(a))$ 更复杂的表达式，初次熟悉之后，解析起来也不会更困难。表达式"
+        },
+        {
+          "id": "p42-b3",
+          "source": "$$f(r(s(\\theta(\\alpha_3(y(\\tfrac13)))))), $$",
+          "sourceSha256": "210bfba88d9dca9af8bfe10c3bb5d19604cfba9be63923acdd7d2f9a58c62838"
+        },
+        {
+          "id": "p42-b4",
+          "source": "formidable as it appears, may be evaluated quite easily with a little patience:",
+          "sourceSha256": "510da95624e59b6c1da3da01ae223965f8298f165db0351eade17b8794d94790",
+          "translation": "虽然看起来令人望而生畏，但只要稍有耐心，就很容易计算："
+        },
+        {
+          "id": "p42-b5",
+          "source": "$$\\begin{aligned}\n&f(r(s(\\theta(\\alpha_3(y(\\tfrac13))))))\\\\\n={}&f(r(s(\\theta(\\alpha_3(0)))))\\\\\n={}&f(r(s(\\theta(3))))\\\\\n={}&f(r(s(16)))\\\\\n={}&f(r(1))\\\\\n={}&f(1)\\\\\n={}&1.\n\\end{aligned}$$",
+          "sourceSha256": "f44d309cdd561e4538cbee8865b9b752bd08860a6a0a71dd1c19a61d8b482aa2"
+        },
+        {
+          "id": "p42-b6",
+          "source": "The first few problems at the end of this chapter give further practice manipulating this symbolism.",
+          "sourceSha256": "8fe3d35ae70551756e9090551e0c6f817ecc0d0e5a3a150401649762076378b1",
+          "translation": "本章末尾的前几道习题，可以让你进一步练习这些符号的运用。"
+        },
+        {
+          "id": "p42-b7",
+          "source": "The function defined in (1) is a rather special example of an extremely important class of functions, the polynomial functions. A function $f$ is a **polynomial function** if there are real numbers $a_0,\\ldots,a_n$ such that",
+          "sourceSha256": "ecc7063d41f8b881f592159ec3901aa2e8869090f1a1fbdfddc75e980fc62f3c",
+          "translation": "(1) 中定义的函数，是一个极其重要的函数类——多项式函数——中颇为特殊的例子。如果存在实数 $a_0,\\ldots,a_n$，使得下式成立，那么函数 $f$ 就称为**多项式函数**："
+        },
+        {
+          "id": "p42-b8",
+          "source": "$$f(x)=a_nx^n+a_{n-1}x^{n-1}+\\cdots+a_2x^2+a_1x+a_0,\\qquad\\text{for all }x$$",
+          "sourceSha256": "03693bf2e734d9349152c55a9014e451b8f36ca935fc797a40ae580ddb90539c"
+        },
+        {
+          "id": "p42-b9",
+          "source": "(when $f(x)$ is written in this form it is usually tacitly assumed that $a_n\\ne0$). The highest power of $x$ with a nonzero coefficient is called the **degree** of $f$; for example, the polynomial function $f$ defined by $f(x)=5x^6+137x^4-\\pi$ has degree 6.",
+          "sourceSha256": "cd89d020faa8afd11b99028e48717a0b7977e943b2c9278a523b162b75f64184",
+          "translation": "（把 $f(x)$ 写成这种形式时，通常默认 $a_n\\ne0$。）具有非零系数的 $x$ 的最高幂，称为 $f$ 的**次数**；例如，由 $f(x)=5x^6+137x^4-\\pi$ 定义的多项式函数 $f$ 的次数是 6。"
+        },
+        {
+          "id": "p42-b10",
+          "source": "The functions defined in (2) and (3) belong to a somewhat larger class of functions, the **rational functions**; these are the functions of the form $p/q$ where $p$ and $q$ are polynomial functions (and $q$ is not the function which is always 0). The rational functions are themselves quite special examples of an even larger class of functions, very thoroughly studied in calculus, which are simpler than many of the functions first mentioned in this chapter. The following are examples of this kind of function:",
+          "sourceSha256": "ddf941f24016705e635e6c51635550dfb80f7d1e2bcaa53f04c83bfcb6edfbfc",
+          "translation": "(2) 和 (3) 中定义的函数属于一个稍大的函数类——**有理函数**；它们是形如 $p/q$ 的函数，其中 $p$ 和 $q$ 是多项式函数（而且 $q$ 不是恒为 0 的函数）。有理函数本身，又是一个更大的函数类中相当特殊的例子；微积分会非常深入地研究后一类函数，它们比本章最初提到的许多函数都简单。下面就是这类函数的一些例子："
+        },
+        {
+          "id": "p42-b11",
+          "source": "$$\\begin{array}{ll}\n(9)&f(x)=\\dfrac{x+x^2+x\\sin^2x}{x\\sin x+x\\sin^2x}.\\\\[10pt]\n(10)&f(x)=\\sin(x^2).\\\\[5pt]\n(11)&f(x)=\\sin(\\sin(x^2)).\n\\end{array}$$",
+          "sourceSha256": "8f1f8cb84fff19814dacc30970e2247ffa09c2f01dc33f52b58d8e654a262806"
+        }
+      ]
+    },
+    {
+      "printed": 43,
+      "sourceSha256": "ea66258b7c9d03d5529f59b491196e4495c46bb8a54cc0f31b59475768c6f24a",
+      "blocks": [
+        {
+          "id": "p43-b1",
+          "source": "$$(12)\\qquad f(x)=\\sin^2(\\sin(\\sin^2(x\\sin^2x^2)))\\cdot\\sin\\left(\\frac{x+\\sin(x\\sin x)}{x+\\sin x}\\right).$$",
+          "sourceSha256": "64e25a9c357afdea6b23e3ac56880bf224337e637b8de3220f3f5d1dce7c67c7"
+        },
+        {
+          "id": "p43-b2",
+          "source": "By what criterion, you may feel impelled to ask, can such functions, especially a monstrosity like (12), be considered simple? The answer is that they can be built up from a few simple functions using a few simple means of combining functions. In order to construct the functions (9)–(12) we need to start with the “identity function” $I$, for which $I(x)=x$, and the “sine function” $\\sin$, whose value $\\sin(x)$ at $x$ is often written simple $\\sin x$. The following are some of the important ways in which functions may be combined to produce new functions.",
+          "sourceSha256": "bbc88080db2a23564568ccf20ce35ab60df2ca6105edfb48dc89ff7c028a9718",
+          "translation": "你也许忍不住要问：依据什么标准，能把这样的函数，尤其是 (12) 这样的庞然大物，称为简单的函数？答案是：它们可以从少数几个简单函数出发，通过少数几种简单的函数组合方式构造出来。要构造函数 (9)–(12)，我们需要从“恒等函数”$I$ 和“正弦函数”$\\sin$ 出发，前者满足 $I(x)=x$，后者在 $x$ 处的值 $\\sin(x)$ 常简写为 $\\sin x$。下面是把函数组合成新函数的几种重要方式。"
+        },
+        {
+          "id": "p43-b3",
+          "source": "If $f$ and $g$ are any two functions, we can define a new function $f+g$, called the **sum** of $f$ and $g$, by the equation",
+          "sourceSha256": "8ec8e663c95637065df6784033041ff655007c3342dd7a9e6b19a290149f4afd",
+          "translation": "如果 $f$ 和 $g$ 是任意两个函数，我们就可以用下式定义一个新函数 $f+g$，称为 $f$ 与 $g$ 的**和**："
+        },
+        {
+          "id": "p43-b4",
+          "source": "$$(f+g)(x)=f(x)+g(x).$$",
+          "sourceSha256": "5fd1cfae2214720df8b448466551ba2f95876a392ead6969332c3991f059b4f4"
+        },
+        {
+          "id": "p43-b5",
+          "source": "Note that according to the conventions we have adopted, the domain of $f+g$ consists of all $x$ for which “$f(x)+g(x)$” makes sense, i.e., the set of all $x$ in both domain $f$ and domain $g$. If $A$ and $B$ are any two sets, then $A\\cap B$ (read “$A$ intersect $B$” or “the intersection of $A$ and $B$”) denotes the set of $x$ in both $A$ and $B$; this notation allows us to write $\\operatorname{domain}(f+g)=\\operatorname{domain}f\\cap\\operatorname{domain}g$.",
+          "sourceSha256": "e153a28458803319e4135e5dc49cda28d4be739bfb622e491e79527a8eef6e78",
+          "translation": "注意，按照我们采用的约定，$f+g$ 的定义域由使“$f(x)+g(x)$”有意义的所有 $x$ 组成，也就是同时属于 $f$ 的定义域和 $g$ 的定义域的所有 $x$ 的集合。如果 $A$ 和 $B$ 是任意两个集合，那么 $A\\cap B$（读作“$A$ 交 $B$”或“$A$ 与 $B$ 的交集”）表示同时属于 $A$ 和 $B$ 的所有 $x$ 构成的集合；用这一记号，可以写出 $\\operatorname{domain}(f+g)=\\operatorname{domain}f\\cap\\operatorname{domain}g$。"
+        },
+        {
+          "id": "p43-b6",
+          "source": "In a similar vein, we define the **product** $f\\cdot g$ and the **quotient** $\\dfrac fg$ (or $f/g$) of $f$ and $g$ by",
+          "sourceSha256": "f520d5486a9386466bd1dc9b41065beed7a80ccd2bcb0f6c48248f345166f0b1",
+          "translation": "类似地，用下式定义 $f$ 和 $g$ 的**积** $f\\cdot g$ 以及**商** $\\dfrac fg$（或 $f/g$）："
+        },
+        {
+          "id": "p43-b7",
+          "source": "$$(f\\cdot g)(x)=f(x)\\cdot g(x)$$",
+          "sourceSha256": "2429ab9ef57db385539cc2281a9c0dbdbc5a802750fd2d548117fdb601cfd084"
+        },
+        {
+          "id": "p43-b8",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "以及"
+        },
+        {
+          "id": "p43-b9",
+          "source": "$$\\left(\\frac fg\\right)(x)=\\frac{f(x)}{g(x)}.$$",
+          "sourceSha256": "195b7c1071ef7387c9af2461cbf95b9e414ce67e946cb429276db4b3928fd12d"
+        },
+        {
+          "id": "p43-b10",
+          "source": "Moreover, if $g$ is a function and $c$ is a number, we define a new function $c\\cdot g$ by",
+          "sourceSha256": "28aef5068c594f9031f6fa8655ddcce64c4fc68c5d8da173ba8f380c06bb35ad",
+          "translation": "此外，如果 $g$ 是一个函数，$c$ 是一个数，就用下式定义一个新函数 $c\\cdot g$："
+        },
+        {
+          "id": "p43-b11",
+          "source": "$$(c\\cdot g)(x)=c\\cdot g(x).$$",
+          "sourceSha256": "233ea0deacbdcbec9bfef134890220f971f0a21c1fd8eef8ac87e3c9c7ad4af3"
+        },
+        {
+          "id": "p43-b12",
+          "source": "This becomes a special case of the notation $f\\cdot g$ if we agree that the symbol $c$ should also represent the function $f$ defined by $f(x)=c$; such a function, which has the same value for all numbers $x$, is called a **constant function**.",
+          "sourceSha256": "eee8d1f9d9c69bcc2f73ca1a6beccd6f0808e5aed031d8b92aa8efde1313d24d",
+          "translation": "如果约定符号 $c$ 也表示由 $f(x)=c$ 定义的函数 $f$，那么这就成为记号 $f\\cdot g$ 的一个特例；这种对于所有数 $x$ 都取同一个值的函数，称为**常数函数**。"
+        },
+        {
+          "id": "p43-b13",
+          "source": "The domain of $f\\cdot g$ is $\\operatorname{domain}f\\cap\\operatorname{domain}g$, and the domain of $c\\cdot g$ is simply the domain of $g$. On the other hand, the domain of $f/g$ is rather complicated—it may be written $\\operatorname{domain}f\\cap\\operatorname{domain}g\\cap\\{x:g(x)\\ne0\\}$, the symbol $\\{x:g(x)\\ne0\\}$ denoting the set of numbers $x$ such that $g(x)\\ne0$. In general, $\\{x:\\ldots\\}$ denotes the set of all $x$ such that “$\\ldots$” is true. Thus $\\{x:x^3+3<11\\}$ denotes the set of all numbers $x$ such that $x^3<8$, and consequently $\\{x:x^3+3<11\\}=\\{x:x<2\\}$. Either of these symbols could just as well have been written using $y$ everywhere instead of $x$. Variations of this notation are common, but hardly require any discussion. Any one can guess that $\\{x>0:x^3<8\\}$ denotes the set of positive numbers whose cube is less than 8; it could be expressed more formally as $\\{x:x>0\\text{ and }x^3<8\\}$. Incidentally, this set is equal to the set $\\{x:0<x<2\\}$. One",
+          "sourceSha256": "6190aafec58c6ae0a67d05d8cf37a00a95fdc4ac796c268cca8571eb60819c20",
+          "translation": "$f\\cdot g$ 的定义域是 $\\operatorname{domain}f\\cap\\operatorname{domain}g$，而 $c\\cdot g$ 的定义域就是 $g$ 的定义域。另一方面，$f/g$ 的定义域相当复杂——可以把它写成 $\\operatorname{domain}f\\cap\\operatorname{domain}g\\cap\\{x:g(x)\\ne0\\}$，其中符号 $\\{x:g(x)\\ne0\\}$ 表示满足 $g(x)\\ne0$ 的所有数 $x$ 的集合。一般来说，$\\{x:\\ldots\\}$ 表示使“$\\ldots$”成立的所有 $x$ 的集合。因此，$\\{x:x^3+3<11\\}$ 表示满足 $x^3<8$ 的所有数 $x$ 的集合，从而 $\\{x:x^3+3<11\\}=\\{x:x<2\\}$。这两个符号中的任何一个，都可以把每处 $x$ 换成 $y$ 来写。这种记号的变式很常见，却几乎不需要讨论。谁都猜得出，$\\{x>0:x^3<8\\}$ 表示立方小于 8 的正数的集合；更正式地，它可以写成 $\\{x:x>0\\text{ and }x^3<8\\}$。顺便说一句，这个集合等于集合 $\\{x:0<x<2\\}$。有一种"
+        }
+      ]
+    },
+    {
+      "printed": 44,
+      "sourceSha256": "4626ebe6fd5613d87681d0c5b3c9f0ecdcc88b40cb2a002d3e734d0c1091ebfc",
+      "blocks": [
+        {
+          "id": "p44-b1",
+          "source": "variation is slightly less transparent, but very standard. The set $\\{1,3,2,4\\}$, for example, contains just the four numbers 1, 2, 3, and 4; it can also be denoted by $\\{x:x=1\\text{ or }x=3\\text{ or }x=2\\text{ or }x=4\\}$.",
+          "sourceSha256": "6e56bb875588aa7ad4e0bc616ea25fe6b1cb2251bfacc5f8993bf35ab5206d4d",
+          "translation": "变式稍微不那么直观，但非常标准。例如，集合 $\\{1,3,2,4\\}$ 只包含 1、2、3、4 这四个数；它也可以记作 $\\{x:x=1\\text{ or }x=3\\text{ or }x=2\\text{ or }x=4\\}$。"
+        },
+        {
+          "id": "p44-b2",
+          "source": "Certain facts about the sum, product, and quotient of functions are obvious consequences of facts about sums, products, and quotients of numbers. For example, it is very easy to prove that",
+          "sourceSha256": "d14504a293eb34afd7eb766a6d7cde376ce61153855e2ce317ec929d4f2ff8e9",
+          "translation": "关于函数的和、积、商的某些事实，是数的和、积、商的相应事实的直接推论。例如，很容易证明"
+        },
+        {
+          "id": "p44-b3",
+          "source": "$$(f+g)+h=f+(g+h).$$",
+          "sourceSha256": "0ee244c327871d7a7cc46e8891675cda72efebfd6229a2d0fcfbf45722100e96"
+        },
+        {
+          "id": "p44-b4",
+          "source": "The proof is characteristic of almost every proof which demonstrates that two functions are equal—the two functions must be shown to have the same domain, and the same value at any number in the domain. For example, to prove that $(f+g)+h=f+(g+h)$, note that unraveling the definition of the two sides gives",
+          "sourceSha256": "4603388b1271f92e127c8f3bede838c55febb2d5ff616fb567b7ae8ab5cda8e1",
+          "translation": "这个证明体现了几乎所有证明两个函数相等的论证的共同特点——必须证明这两个函数有相同的定义域，并且在定义域中的任意数处取相同的值。例如，要证明 $(f+g)+h=f+(g+h)$，只需注意，展开两边的定义就得到"
+        },
+        {
+          "id": "p44-b5",
+          "source": "$$\\begin{aligned}\n[(f+g)+h](x)&=(f+g)(x)+h(x)\\\\\n&=[f(x)+g(x)]+h(x)\n\\end{aligned}$$",
+          "sourceSha256": "83589e6d2eec1e6ecbef40d9e4165dc76088fcf153bb84265d92240a85b5f255"
+        },
+        {
+          "id": "p44-b6",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "以及"
+        },
+        {
+          "id": "p44-b7",
+          "source": "$$\\begin{aligned}\n[f+(g+h)](x)&=f(x)+(g+h)(x)\\\\\n&=f(x)+[g(x)+h(x)],\n\\end{aligned}$$",
+          "sourceSha256": "54541d69cb69880ea713535f94835cd7fd40870d9ba95464bb702ef3ae2ddfb8"
+        },
+        {
+          "id": "p44-b8",
+          "source": "and the equality of $[f(x)+g(x)]+h(x)$ and $f(x)+[g(x)+h(x)]$ is a fact about numbers. In this proof the equality of the two domains was not explicitly mentioned because this is obvious, as soon as we begin to write down these equations; the domain of $(f+g)+h$ and of $f+(g+h)$ is clearly $\\operatorname{domain}f\\cap\\operatorname{domain}g\\cap\\operatorname{domain}h$. We naturally write $f+g+h$ for $(f+g)+h=f+(g+h)$, precisely as we did for numbers.",
+          "sourceSha256": "52fb73313c2552a937e42977fe7773840cb852a703d8a23b305af0e6a6ccec26",
+          "translation": "而 $[f(x)+g(x)]+h(x)$ 与 $f(x)+[g(x)+h(x)]$ 相等，是关于数的一个事实。在这个证明中，没有明确提到两个定义域相等，因为一旦写出这些等式，这一点就显而易见了：$(f+g)+h$ 与 $f+(g+h)$ 的定义域显然都是 $\\operatorname{domain}f\\cap\\operatorname{domain}g\\cap\\operatorname{domain}h$。我们自然把 $(f+g)+h=f+(g+h)$ 写作 $f+g+h$，完全像对数所做的那样。"
+        },
+        {
+          "id": "p44-b9",
+          "source": "It is just as easy to prove that $(f\\cdot g)\\cdot h=f\\cdot(g\\cdot h)$, and this function is denoted by $f\\cdot g\\cdot h$. The equations $f+g=g+f$ and $f\\cdot g=g\\cdot f$ should also present no difficulty.",
+          "sourceSha256": "3ed73f11705cecaac0464770b5dff9924bbfe1bf08a0334c873e37aed7ea44ca",
+          "translation": "证明 $(f\\cdot g)\\cdot h=f\\cdot(g\\cdot h)$ 也同样容易，我们把这个函数记作 $f\\cdot g\\cdot h$。等式 $f+g=g+f$ 和 $f\\cdot g=g\\cdot f$ 也应该不会带来任何困难。"
+        },
+        {
+          "id": "p44-b10",
+          "source": "Using the operations $+,\\cdot,/$ we can now express the function $f$ defined in (9) by",
+          "sourceSha256": "17acf35bad227f9304a00a732a64cc66cf76dc589a9c4b5a5980747129bcb63f",
+          "translation": "利用运算 $+,\\cdot,/$，现在可以把 (9) 中定义的函数 $f$ 表示为"
+        },
+        {
+          "id": "p44-b11",
+          "source": "$$f=\\frac{I+I\\cdot I+I\\cdot\\sin\\cdot\\sin}{I\\cdot\\sin+I\\cdot\\sin\\cdot\\sin}.$$",
+          "sourceSha256": "09f38beda3fc51e0466d99410088b7e4d59ceefabd8059a5c83ff7deeb5052c1"
+        },
+        {
+          "id": "p44-b12",
+          "source": "It should be clear, however, that we cannot express function (10) this way. We require yet another way of combining functions. This combination, the composition of two functions, is by far the most important.",
+          "sourceSha256": "e1c9152f66332b6400d68bae891be7d73abdaaaaf5095e9a409ecdc0c25de13a",
+          "translation": "不过，显然不能用这种方式表示函数 (10)。我们还需要另一种组合函数的方法。这种组合，即两个函数的复合，是所有组合方式中最重要的一种。"
+        },
+        {
+          "id": "p44-b13",
+          "source": "If $f$ and $g$ are any two functions, we define a new function $f\\circ g$, the **composition** of $f$ and $g$, by",
+          "sourceSha256": "325e023de02d1ad2fe5ffc91767fffdbd8675bcd22e92b3f6f0860f033733147",
+          "translation": "如果 $f$ 和 $g$ 是任意两个函数，就用下式定义一个新函数 $f\\circ g$，称为 $f$ 与 $g$ 的**复合**："
+        },
+        {
+          "id": "p44-b14",
+          "source": "$$(f\\circ g)(x)=f(g(x));$$",
+          "sourceSha256": "9fd9c3b3d4b9ce795f6d11fba9e4790e835a012b060b86a4cef6dd595e2fdad1"
+        },
+        {
+          "id": "p44-b15",
+          "source": "the domain of $f\\circ g$ is $\\{x:x\\text{ is in domain }g\\text{ and }g(x)\\text{ is in domain }f\\}$. The symbol “$f\\circ g$” is often read “$f$ circle $g$.” Compared to the phrase “the composition of $f$ and $g$” this has the advantage of brevity, of course, but there is another advantage of far greater import: there is much less chance of confusing $f\\circ g$ with $g\\circ f$, and",
+          "sourceSha256": "b4d670de5697c23de4e582d46d03b59f166d50a33075ea9ce6ca875ae9b71d9a",
+          "translation": "$f\\circ g$ 的定义域是 $\\{x:x\\text{ is in domain }g\\text{ and }g(x)\\text{ is in domain }f\\}$。符号“$f\\circ g$”常读作“$f$ 圈 $g$”。同“$f$ 与 $g$ 的复合”这一说法相比，它当然具有简短的优点，但还有一个重要得多的优点：这样就不容易把 $f\\circ g$ 与 $g\\circ f$ 混淆，而"
+        }
+      ]
+    },
+    {
+      "printed": 45,
+      "sourceSha256": "4ff50b5edd4b65fa41a408545992e6aa63a04a4458790ac9e1e05ba28e895c76",
+      "blocks": [
+        {
+          "id": "p45-b1",
+          "source": "these must not be confused, since they are not usually equal; in fact, almost any $f$ and $g$ chosen at random will illustrate this point (try $f=I\\cdot I$ and $g=\\sin$, for example). Lest you become too apprehensive about the operation of composition, let us hasten to point out that composition is associative:",
+          "sourceSha256": "22b8550910d25d9021d4a8424ea3a860b3c1b02bea64105ad5aab4fb6fee4e7b",
+          "translation": "两者绝不能混淆，因为它们通常并不相等；事实上，几乎随便选取的 $f$ 和 $g$ 都能说明这一点（例如，试试 $f=I\\cdot I$ 和 $g=\\sin$）。为了不让你对复合运算过于担心，我们赶紧指出，复合满足结合律："
+        },
+        {
+          "id": "p45-b2",
+          "source": "$$(f\\circ g)\\circ h=f\\circ(g\\circ h)$$",
+          "sourceSha256": "b1691fc8d74dd58bc681aae2af689ddb26bc771ba3f37cb7189147fbe8fe6137"
+        },
+        {
+          "id": "p45-b3",
+          "source": "(and the proof is a triviality); this function is denoted by $f\\circ g\\circ h$. We can now write the functions (10), (11), (12) as",
+          "sourceSha256": "931f869ed80f31aa7f227414af86ea99124fc53aeb93b5f0e1bc713551495820",
+          "translation": "（证明轻而易举）；这个函数记作 $f\\circ g\\circ h$。现在可以把函数 (10)、(11)、(12) 写成"
+        },
+        {
+          "id": "p45-b4",
+          "source": "$$\\begin{array}{ll}\n(10)&f=\\sin\\circ(I\\cdot I),\\\\[4pt]\n(11)&f=\\sin\\circ\\sin\\circ(I\\cdot I),\\\\[4pt]\n(12)&\\begin{aligned}\nf={}&(\\sin\\cdot\\sin)\\circ\\sin\\circ(\\sin\\cdot\\sin)\\circ(I\\cdot[(\\sin\\cdot\\sin)\\circ(I\\cdot I)])\\cdot\\\\\n&\\sin\\circ\\left(\\frac{I+\\sin\\circ(I\\cdot\\sin)}{I+\\sin}\\right).\n\\end{aligned}\n\\end{array}$$",
+          "sourceSha256": "049e54b2a1c403d2a66527d3774b268dbbb9a17088bfe2b1784694d0b0595476"
+        },
+        {
+          "id": "p45-b5",
+          "source": "One fact has probably already become clear. Although this method of writing functions reveals their “structure” very clearly, it is hardly short or convenient. The shortest name for the function $f$ such that $f(x)=\\sin(x^2)$ for all $x$ unfortunately seems to be “the function $f$ such that $f(x)=\\sin(x^2)$ for all $x$.” The need for abbreviating this clumsy description has been clear for two hundred years, but no reasonable abbreviation has received universal acclaim. At present the strongest contender for this honor is something like",
+          "sourceSha256": "c3f1cebf9e3d2dc043b5217c996d7eac08dfa859e8b703187b8a9e2d0e03d80f",
+          "translation": "有一个事实大概已经很清楚了。虽然这种写函数的方式能够非常清晰地揭示其“结构”，但它既不简短，也不方便。对于满足“对所有 $x$ 都有 $f(x)=\\sin(x^2)$”的函数 $f$，不幸的是，最简短的名称似乎仍然是“对所有 $x$ 都满足 $f(x)=\\sin(x^2)$ 的函数 $f$”。两百年来，人们一直清楚地知道需要简化这种笨拙的说法，但没有任何合理的简写获得普遍赞同。目前，最有希望获此殊荣的写法大致是"
+        },
+        {
+          "id": "p45-b6",
+          "source": "$$x\\to\\sin(x^2)$$",
+          "sourceSha256": "f6b97afb0b10005b6200fd78ead3d457e2380cd3fd95473e0712f76711392d4d"
+        },
+        {
+          "id": "p45-b7",
+          "source": "(read “$x$ goes to $\\sin(x^2)$” or just “$x$ arrow $\\sin(x^2)$”), but it is hardly popular among writers of calculus textbooks. In this book we will tolerate a certain amount of ellipsis, and speak of “the function $f(x)=\\sin(x^2)$.” Even more popular is the quite drastic abbreviation: “the function $\\sin(x^2)$.” For the sake of precision we will never use this description, which, strictly speaking, confuses a number and a function, but it is so convenient that you will probably end up adopting it for personal use. As with any convention, utility is the motivating factor, and this criterion is reasonable so long as the slight logical deficiencies cause no confusion. On occasion, confusion will arise unless a more precise description is used. For example, “the function $x+t^3$” is an ambiguous phrase; it could mean either",
+          "sourceSha256": "37f0bd1ae8f7fbd121d95d5d141c01480e1eb866cfc0b85ca36ab86f7f4d0b6b",
+          "translation": "（读作“$x$ 映到 $\\sin(x^2)$”，或干脆读作“$x$ 箭头 $\\sin(x^2)$”），但它在微积分教材作者中并不怎么流行。在本书中，我们容许一定程度的省略，使用“函数 $f(x)=\\sin(x^2)$”的说法。更流行的是一种相当大胆的简写：“函数 $\\sin(x^2)$”。为了精确起见，我们绝不采用这种说法；严格说来，它混淆了数与函数，但它实在太方便了，你很可能最终还是会在自己使用时采纳它。和任何约定一样，实用性是这样做的动机；只要轻微的逻辑缺陷不造成混淆，这一标准就是合理的。有时，如果不采用更精确的描述，就会产生混淆。例如，“函数 $x+t^3$”是一个有歧义的说法；它既可能指"
+        },
+        {
+          "id": "p45-b8",
+          "source": "$$x\\to x+t^3,\\text{ i.e., the function }f\\text{ such that }f(x)=x+t^3\\text{ for all }x$$",
+          "sourceSha256": "7fc7ebb4242ca3db24844a24dde539ae0a58ca9311559abde51078d5cc69a31a"
+        },
+        {
+          "id": "p45-b9",
+          "source": "or",
+          "sourceSha256": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+          "translation": "也可能指"
+        },
+        {
+          "id": "p45-b10",
+          "source": "$$t\\to x+t^3,\\text{ i.e., the function }f\\text{ such that }f(t)=x+t^3\\text{ for all }t.$$",
+          "sourceSha256": "3014a795f44e36e3441322b69cfd06cf4546f49a5c3e15d083c20ad0e612739a"
+        },
+        {
+          "id": "p45-b11",
+          "source": "As we shall see, however, for many important concepts associated with functions, calculus has a notation which contains the “$x$” built in.",
+          "sourceSha256": "c7067dfd947a4f096b0fe52e34f3936d08f6f0f95c79c6931b2bdd2a2573da89",
+          "translation": "不过，我们将会看到，对于许多与函数有关的重要概念，微积分采用的记号本身就内含了“$x$”。"
+        },
+        {
+          "id": "p45-b12",
+          "source": "By now we have made a sufficiently extensive investigation of functions to warrant reconsidering our definition. We have defined a function as a “rule,” but it is hardly clear what this means. If we ask “What happens if you break this rule?” it is not easy to say whether this question is merely facetious or actually profound.",
+          "sourceSha256": "53aca24fcb0e1c0573d9c5e38a5cfc3c785acf387b73636c16faaaf427567f82",
+          "translation": "到目前为止，我们对函数的研究已经足够广泛，可以重新审视我们的定义了。我们把函数定义为一种“规则”，但这究竟是什么意思，却很不清楚。如果问“违反这条规则会怎样？”，那么很难说这个问题只是一句玩笑，还是确实颇为深刻。"
+        }
+      ]
+    },
+    {
+      "printed": 46,
+      "sourceSha256": "2c992e75b0100e2e780b7a5d1bce3568e09c4f442d8f73d0d302e87ceda78c79",
+      "blocks": [
+        {
+          "id": "p46-b1",
+          "source": "A more substantial objection to the use of the word “rule” is that",
+          "sourceSha256": "47f4372c07b4cf7bca1fdd97f09c724f38e74528ec757502d37f02dffd94d6f6",
+          "translation": "使用“规则”一词还有一个更实质性的缺陷，那就是"
+        },
+        {
+          "id": "p46-b2",
+          "source": "$$f(x)=x^2$$",
+          "sourceSha256": "7c8e14b37e602a522ab61454e7c482a6091030294481130925609f2db847f2a6"
+        },
+        {
+          "id": "p46-b3",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "和"
+        },
+        {
+          "id": "p46-b4",
+          "source": "$$f(x)=x^2+3x+3-3(x+1)$$",
+          "sourceSha256": "51a9ce852345c96e4d55943aa806f99595fa9cbe66e1dbdfa778b77b9464ecb9"
+        },
+        {
+          "id": "p46-b5",
+          "source": "are certainly *different* rules, if by a rule we mean the actual instructions given for determining $f(x)$; nevertheless, we want",
+          "sourceSha256": "c4d5ed60dfb7d189a9f1644d9457fc86878e9c07b9c63feb7085c31ea3a978cd",
+          "translation": "如果所谓规则是指确定 $f(x)$ 所给出的实际指令，那么这显然是*不同的*规则；尽管如此，我们却希望"
+        },
+        {
+          "id": "p46-b6",
+          "source": "$$f(x)=x^2$$",
+          "sourceSha256": "7c8e14b37e602a522ab61454e7c482a6091030294481130925609f2db847f2a6"
+        },
+        {
+          "id": "p46-b7",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "和"
+        },
+        {
+          "id": "p46-b8",
+          "source": "$$f(x)=x^2+3x+3-c(x+1)$$",
+          "sourceSha256": "4d6f27ddec69478be518339d400a3b7850f111c09d4ad6eb1a742f52e176fac2"
+        },
+        {
+          "id": "p46-b9",
+          "source": "to define the same function. For this reason, a function is sometimes defined as an “association” between numbers; unfortunately the word “association” escapes the objections raised against “rule” only because it is even more vague.",
+          "sourceSha256": "6681f8625dec48837afbcd49d0b0ef92e333b93c3763ed576e6bcf9b27c54cbf",
+          "translation": "定义同一个函数。因此，有时人们把函数定义为数之间的某种“对应”；不幸的是，“对应”一词能够避开针对“规则”的那些异议，仅仅因为它更加含糊。"
+        },
+        {
+          "id": "p46-b10",
+          "source": "There is, of course, a satisfactory way of defining functions, or we should never have gone to the trouble of criticizing our original definition. But a satisfactory definition can never be constructed by finding synonyms for English words which are troublesome. The definition which mathematicians have finally accepted for “function” is a beautiful example of the means by which intuitive ideas have been incorporated into rigorous mathematics. The correct question to ask about a function is not “What is a rule?” or “What is an association?” but “What does one have to know about a function in order to know all about it?” The answer to the last question is easy—for each number $x$ one needs to know the number $f(x)$; we can imagine a table which would display all the information one could desire about the function $f(x)=x^2$:",
+          "sourceSha256": "64ae38378dea64342b56284893abbd9943d096cb14d7eee871e56613c80bf16d",
+          "translation": "当然，存在一种令人满意的函数定义，否则我们根本不必费力去批评最初的定义。但是，给那些令人困扰的词寻找同义词，永远构造不出一个令人满意的定义。数学家最终接受的“函数”定义，是把直观观念纳入严密数学的一个美妙范例。关于函数，正确的问题不是“什么是规则？”或“什么是对应？”，而是“要完全了解一个函数，我们需要知道些什么？”最后这个问题的答案很简单：对于每个数 $x$，我们需要知道数 $f(x)$；可以设想一张表，展示我们想知道的关于函数 $f(x)=x^2$ 的全部信息："
+        },
+        {
+          "id": "p46-b11",
+          "source": "$$\\begin{array}{rr}\nx&f(x)\\\\ \\hline\n1&1\\\\\n-1&1\\\\\n2&4\\\\\n-2&4\\\\\n\\sqrt2&2\\\\\n-\\sqrt2&2\\\\\n\\pi&\\pi^2\\\\\n-\\pi&\\pi^2\n\\end{array}$$",
+          "sourceSha256": "fefaf0766da9180d45ed8c93913d259eb5dda64f9593f918643d0b2927be0095"
+        },
+        {
+          "id": "p46-b12",
+          "source": "It is not even necessary to arrange the numbers in a table (which would actually be impossible if we wanted to list all of them). Instead of a two column array we can consider various pairs of numbers",
+          "sourceSha256": "8d5c88fb4ad56f104ccdf52c02f2ae288227461ce2a8e05349b4591be26d7542",
+          "translation": "甚至不必把这些数排成一张表（事实上，要列出所有数是不可能的）。我们可以不采用两列的排列方式，而考虑各种数对"
+        },
+        {
+          "id": "p46-b13",
+          "source": "$$(1,1),\\ (-1,1),\\ (2,4),\\ (-2,4),\\ (\\pi,\\pi^2),\\ (\\sqrt2,2),\\ldots$$",
+          "sourceSha256": "4068845b37b33edccfa521fd0e212cac0177d4f578d1df5a3849a2c05be58fe3"
+        }
+      ]
+    },
+    {
+      "printed": 47,
+      "sourceSha256": "d0c4b69e51b38966e6f46486b6b60e5bbd8de2519563ce6467119cd0113831dd",
+      "blocks": [
+        {
+          "id": "p47-b1",
+          "source": "simply collected together into a set.$^{*}$ To find $f(1)$ we simply take the second number of the pair whose first member is 1; to find $f(\\pi)$ we take the second number of the pair whose first member is $\\pi$. We seem to be saying that a function might as well be defined as a collection of pairs of numbers. For example, if we were given the following collection (which contains just 5 pairs):",
+          "sourceSha256": "36e5e0e397cfc716de4050154f8a2f0f19bf47d2a40ff7c34428eefd65860a53",
+          "translation": "把它们简单地汇集成一个集合。$^{*}$ 要找 $f(1)$，只需取第一个数为 1 的数对中的第二个数；要找 $f(\\pi)$，就取第一个数为 $\\pi$ 的数对中的第二个数。看来，我们完全可以把函数定义为数对的一个集合。例如，给定下面这个集合（只含 5 个数对）："
+        },
+        {
+          "id": "p47-b2",
+          "source": "$$f=\\{(1,7),\\ (3,7),\\ (5,3),\\ (4,8),\\ (8,4)\\},$$",
+          "sourceSha256": "08cc60f0d2a7fac885add26e9cffc1b45bfb6adace00c91599f252ab330c6352"
+        },
+        {
+          "id": "p47-b3",
+          "source": "then $f(1)=7$, $f(3)=7$, $f(5)=3$, $f(4)=8$, $f(8)=4$ and 1, 3, 4, 5, 8 are the only numbers in the domain of $f$. If we consider the collection",
+          "sourceSha256": "4587549e5c7a67eb9574170d61ef43dce981c45b6e34780634559d531b979104",
+          "translation": "那么 $f(1)=7$、$f(3)=7$、$f(5)=3$、$f(4)=8$、$f(8)=4$，而且 $f$ 的定义域中只有 1、3、4、5、8 这些数。如果考虑集合"
+        },
+        {
+          "id": "p47-b4",
+          "source": "$$f=\\{(1,7),\\ (3,7),\\ (2,5),\\ (1,8),\\ (8,4)\\},$$",
+          "sourceSha256": "79c6fadb5bd17fdd2563780d2bb8283d4848d914ae0b6747874dc8cb7671ad96"
+        },
+        {
+          "id": "p47-b5",
+          "source": "then $f(3)=7$, $f(2)=5$, $f(8)=4$; but it is impossible to decide whether $f(1)=7$ or $f(1)=8$. In other words, a function cannot be defined to be any old collection of pairs of numbers; we must rule out the possibility which arose in this case. We are therefore led to the following definition.",
+          "sourceSha256": "f9aa383445d74140cbafd152ce06093c3d33141fd52ca40591986d1cb0baaef9",
+          "translation": "那么 $f(3)=7$、$f(2)=5$、$f(8)=4$；但却无法判断究竟是 $f(1)=7$ 还是 $f(1)=8$。换句话说，不能把函数定义为任意一个数对集合；必须排除本例出现的可能性。于是，我们得到下面的定义。"
+        },
+        {
+          "id": "p47-b6",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p47-b7",
+          "source": "A **function** is a collection of pairs of numbers with the following property: if $(a,b)$ and $(a,c)$ are both in the collection, then $b=c$; in other words, the collection must not contain two different pairs with the same first element.",
+          "sourceSha256": "48616433c8d983564bbe4aaa43923327989e28bf7a016f22eb2239334dd47481",
+          "translation": "**函数**是一个具有如下性质的数对集合：如果 $(a,b)$ 和 $(a,c)$ 都属于这个集合，那么 $b=c$；换句话说，这个集合不能包含第一元素相同的两个不同数对。"
+        },
+        {
+          "id": "p47-b8",
+          "source": "This is our first full-fledged definition, and illustrates the format we shall always use to define significant new concepts. These definitions are so important (at least as important as theorems) that it is essential to know when one is actually at hand, and to distinguish them from comments, motivating remarks, and casual explanations. They will be preceded by the word **DEFINITION**, contain the term being defined in boldface letters, and constitute a paragraph unto themselves.",
+          "sourceSha256": "18bbbcaf533913ba90ef14d28f75cf6a89971ed07312dd0bde4beb6e18fe8408",
+          "translation": "这是我们的第一个完整正式的定义，也展示了我们在定义重要新概念时将一贯采用的格式。这些定义极其重要（至少和定理一样重要），因此，务必认清何时出现的是一个真正的定义，并把它与评论、动机说明和随意的解释区别开来。定义前面会标出“**定义**”二字，被定义的术语用粗体显示，而且定义本身独立成段。"
+        },
+        {
+          "id": "p47-b9",
+          "source": "There is one more definition (actually defining two things at once) which can now be made rigorously:",
+          "sourceSha256": "99192270661d5d96d2d40068edc472b5f29d31feda0859f748d7906a0562349e",
+          "translation": "现在还可以严格地给出另一个定义（实际上同时定义了两样东西）："
+        },
+        {
+          "id": "p47-b10",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p47-b11",
+          "source": "If $f$ is a function, the **domain** of $f$ is the set of all $a$ for which there is some $b$ such that $(a,b)$ is in $f$. If $a$ is in the domain of $f$, it follows from the definition of a function that there is, in fact, a *unique* number $b$ such that $(a,b)$ is in $f$. This unique $b$ is denoted by **$f(a)$**.",
+          "sourceSha256": "f22163079f5e5d573a93320d3b283dece31e19b6550cd3d73d24b73b9dc2d375",
+          "translation": "如果 $f$ 是一个函数，那么 $f$ 的**定义域**就是如下所有 $a$ 的集合：存在某个 $b$，使得 $(a,b)$ 属于 $f$。如果 $a$ 属于 $f$ 的定义域，那么由函数的定义可知，实际上存在*唯一的*数 $b$，使得 $(a,b)$ 属于 $f$。这个唯一的 $b$ 记为 **$f(a)$**。"
+        },
+        {
+          "id": "p47-b12",
+          "source": "With this definition we have reached our goal: the important thing about a function $f$ is that a number $f(x)$ is determined for each number $x$ in its domain. You may feel that we have also reached the point where an intuitive definition has been replaced by an abstraction with which the mind can hardly grapple. Two consolations may be offered. First, although a function has been defined as a",
+          "sourceSha256": "33423f510a255c730e54dfb64a84804f83a1aced4bd23317b03a5f984cc24f53",
+          "translation": "有了这个定义，我们就达到了目标：函数 $f$ 的重要之处在于，对于其定义域中的每个数 $x$，都确定了一个数 $f(x)$。你也许觉得，我们同时也走到了这样一步：一个直观的定义，被一种头脑几乎无法把握的抽象所取代。对此，可以给你两点安慰。第一，尽管函数被定义为"
+        },
+        {
+          "id": "p47-b13",
+          "source": "<aside class=\"original-footnote\">",
+          "sourceSha256": "a988ce88c87a15fb3986b485f02072e557038b84df66813596e575c7dd6a397f"
+        },
+        {
+          "id": "p47-b14",
+          "source": "\\* The pairs occurring here are often called “ordered pairs,” to emphasize that, for example, $(2,4)$ is not the same pair as $(4,2)$. It is only fair to warn that we are going to define functions in terms of ordered pairs, another undefined term. Ordered pairs can be defined, however, and an appendix to this chapter has been provided for skeptics.",
+          "sourceSha256": "524eb7fb4af189cf101d40145cd56a93242fa4dcad84c95d53d8fc09b7c27450",
+          "translation": "\\* 这里出现的数对通常称为“有序对”，用来强调，例如，$(2,4)$ 与 $(4,2)$ 不是同一个数对。公平起见，应当事先提醒你：我们将用“有序对”来定义函数，而这个术语也尚未定义。不过，有序对是可以定义的，本章附录就是为持怀疑态度的读者准备的。"
+        },
+        {
+          "id": "p47-b15",
+          "source": "</aside>",
+          "sourceSha256": "0ba5ea9cb632c899daab77879064f3273ebba6af8945f2dfeff764c05af0602a"
+        }
+      ]
+    },
+    {
+      "printed": 48,
+      "sourceSha256": "0ce6771d24a921737d522236154d242324143b3e3d16aab4d38a33c60e68b997",
+      "blocks": [
+        {
+          "id": "p48-b1",
+          "source": "collection of pairs, there is nothing to stop you from thinking of a function as a rule. Second, neither the intuitive nor the formal definition indicates the best way of thinking about functions. The best way is to draw pictures; but this requires a chapter all by itself.",
+          "sourceSha256": "a3488ae6687f3510923cd873d254017496115f3dbbaa3dcc04cc2aa737724db2",
+          "translation": "一个数对集合，但没有任何东西妨碍你把函数想成一条规则。第二，无论直观定义还是形式定义，都没有指出理解函数的最佳方式。最佳方式是画图；不过，这需要单独用一章来讲。"
+        },
+        {
+          "id": "p48-b2",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p48-b3",
+          "source": "### 1. Let $f(x)=1/(1+x)$. What is",
+          "sourceSha256": "4bda0fb985049a30775cd1e660f297cd842a6085a8dc3ace819e481f3fe66dda",
+          "translation": "### 1. 设 $f(x)=1/(1+x)$。求"
+        },
+        {
+          "id": "p48-b4",
+          "source": "(i) $f(f(x))$ (for which $x$ does this make sense?).",
+          "sourceSha256": "3902400a709937310a9f41b2f9d4054b9829e5b7809e731a2ee849d80751b55f",
+          "translation": "(i) $f(f(x))$（对于哪些 $x$，这个表达式有意义？）。"
+        },
+        {
+          "id": "p48-b5",
+          "source": "(ii) $\\displaystyle f\\left(\\frac1x\\right)$.",
+          "sourceSha256": "97e9d81ae9ff11a2e2ec6528927744a19cb2c02f9aa5fa4cc7c4df7062a3537b"
+        },
+        {
+          "id": "p48-b6",
+          "source": "(iii) $f(cx)$.",
+          "sourceSha256": "c3ea97c787f807821174dafcdc8fdef3412e36f3ec84f960a0b3b89c1a04db15"
+        },
+        {
+          "id": "p48-b7",
+          "source": "(iv) $f(x+y)$.",
+          "sourceSha256": "9ce74223a0192bb5fb1319dd07df8754a6249160a2325a184d6c86c916e9fcac"
+        },
+        {
+          "id": "p48-b8",
+          "source": "(v) $f(x)+f(y)$.",
+          "sourceSha256": "e02442ea96c13654866d5f47e22d07403d8d9047fb9837296c0e11177b840eae"
+        },
+        {
+          "id": "p48-b9",
+          "source": "(vi) For which numbers $c$ is there a number $x$ such that $f(cx)=f(x)$. Hint: There are a lot more than you might think at first glance.",
+          "sourceSha256": "201010b6585b580eea0184a148d28caf8872a08488e57d691ceb6db57d2c727b",
+          "translation": "(vi) 对于哪些数 $c$，存在数 $x$ 使得 $f(cx)=f(x)$？提示：这样的数比你乍看之下以为的多得多。"
+        },
+        {
+          "id": "p48-b10",
+          "source": "(vii) For which numbers $c$ is it true that $f(cx)=f(x)$ for two different numbers $x$?",
+          "sourceSha256": "d61d5266ed5cc5ecd5f0a9afc714ba6ba9c59bd3301b548eef8cb7e82bd0460e",
+          "translation": "(vii) 对于哪些数 $c$，有两个不同的数 $x$ 使 $f(cx)=f(x)$ 成立？"
+        },
+        {
+          "id": "p48-b11",
+          "source": "### 2. Let $g(x)=x^2$, and let",
+          "sourceSha256": "7420f935436788d70da2491f1e248c2c36fb4836dd0b37945f759a10aea574e9",
+          "translation": "### 2. 设 $g(x)=x^2$，并设"
+        },
+        {
+          "id": "p48-b12",
+          "source": "$$h(x)=\\begin{cases}0,&x\\text{ rational}\\\\1,&x\\text{ irrational.}\\end{cases}$$",
+          "sourceSha256": "9e75f6e4678b7db8fe5e690eb2722481e00fc276502d6bf9836aee778a6d4801"
+        },
+        {
+          "id": "p48-b13",
+          "source": "(i) For which $y$ is $h(y)\\le y$?",
+          "sourceSha256": "06f6fc61e345a18446ec1e3c3a8133c4b0954b7b3b89e810bdaf0094566f4692",
+          "translation": "(i) 对于哪些 $y$，有 $h(y)\\le y$？"
+        },
+        {
+          "id": "p48-b14",
+          "source": "(ii) For which $y$ is $h(y)\\le g(y)$?",
+          "sourceSha256": "d58911d625e5207906c422895c7e3c64f63c096a8a4c5e87b8206dff01103fb6",
+          "translation": "(ii) 对于哪些 $y$，有 $h(y)\\le g(y)$？"
+        },
+        {
+          "id": "p48-b15",
+          "source": "(iii) What is $g(h(z))-h(z)$?",
+          "sourceSha256": "bef17d603e35ee594b9c661bfd0c86cc26126d6a4457e62117ee0223d240b910",
+          "translation": "(iii) $g(h(z))-h(z)$ 是什么？"
+        },
+        {
+          "id": "p48-b16",
+          "source": "(iv) For which $w$ is $g(w)\\le w$?",
+          "sourceSha256": "3d96eaf7d5de1fcf9818584224d42fcff45985e66e233e7259b66299dd2cc174",
+          "translation": "(iv) 对于哪些 $w$，有 $g(w)\\le w$？"
+        },
+        {
+          "id": "p48-b17",
+          "source": "(v) For which $\\varepsilon$ is $g(g(\\varepsilon))=g(\\varepsilon)$?",
+          "sourceSha256": "01a9cc2ca74cf90bd8279adea5be1d540c9bbe0a3e08573d6659f30671e1b598",
+          "translation": "(v) 对于哪些 $\\varepsilon$，有 $g(g(\\varepsilon))=g(\\varepsilon)$？"
+        },
+        {
+          "id": "p48-b18",
+          "source": "### 3. Find the domain of the functions defined by the following formulas.",
+          "sourceSha256": "4fab2839ad5aa8ea0550647ba0967b4b895192d9235192885dad333e1c308b13",
+          "translation": "### 3. 求由下列公式定义的函数的定义域。"
+        },
+        {
+          "id": "p48-b19",
+          "source": "(i) $f(x)=\\sqrt{1-x^2}$.",
+          "sourceSha256": "c66998131de1d26ec45bec18cc97718ac6139ba67fff6553556b48d74794ff30"
+        },
+        {
+          "id": "p48-b20",
+          "source": "(ii) $f(x)=\\sqrt{1-\\sqrt{1-x^2}}$.",
+          "sourceSha256": "a7a7980198c091138d9ebb6734184e1696269362646beba469bfa4817cc0d43c"
+        },
+        {
+          "id": "p48-b21",
+          "source": "(iii) $\\displaystyle f(x)=\\frac1{x-1}+\\frac1{x-2}$.",
+          "sourceSha256": "9048bf70e960d673a322f2088788e9d8e02de0bea2b24430c966cb3856d4ca30"
+        },
+        {
+          "id": "p48-b22",
+          "source": "(iv) $f(x)=\\sqrt{1-x^2}+\\sqrt{x^2-1}$.",
+          "sourceSha256": "e793e5669ac8000b3d6570c96198c9403938bffefe8144a55834710aae00178a"
+        },
+        {
+          "id": "p48-b23",
+          "source": "(v) $f(x)=\\sqrt{1-x}+\\sqrt{x-2}$.",
+          "sourceSha256": "deb64fc109a5826ebe58dd724dfdfc87dee31cd7dd9d56de091eba4f04fd830b"
+        },
+        {
+          "id": "p48-b24",
+          "source": "### 4. Let $S(x)=x^2$, let $P(x)=2^x$, and let $s(x)=\\sin x$. Find each of the following. In each case your answer should be a *number*.",
+          "sourceSha256": "27c4fe9b8ac0ae65e5d628c6b76863877d6c7e9bd139e0c89ef558bdeb0d07b3",
+          "translation": "### 4. 设 $S(x)=x^2$、$P(x)=2^x$、$s(x)=\\sin x$。求下列各式的值。每一问的答案都应是一个*数*。"
+        },
+        {
+          "id": "p48-b25",
+          "source": "(i) $(S\\circ P)(y)$.",
+          "sourceSha256": "f22bc96f7d6972b19726e23b09d23a9be3753674e6e3af15e829ae842eb66dd8"
+        },
+        {
+          "id": "p48-b26",
+          "source": "(ii) $(S\\circ s)(y)$.",
+          "sourceSha256": "d3d2cab9bcca5964a32536b50a3610673a4d67b9cbd3711708431f736b363339"
+        },
+        {
+          "id": "p48-b27",
+          "source": "(iii) $(S\\circ P\\circ s)(t)+(s\\circ P)(t)$.",
+          "sourceSha256": "7f41001ebbb9d95e6cd4285d47c66061563d004a1b491ab7c6257fb39f1d5de7"
+        },
+        {
+          "id": "p48-b28",
+          "source": "(iv) $s(t^3)$.",
+          "sourceSha256": "961c71fcb4fd2626d58b3ec63368567cd323ce2b282b7bf34155c74f64094f4e"
+        },
+        {
+          "id": "p48-b29",
+          "source": "### 5. Express each of the following functions in terms of $S$, $P$, $s$, using only $+$, $\\cdot$, and $\\circ$ (for example, the answer to (i) is $P\\circ s$). In each case your",
+          "sourceSha256": "4b09958ff7993ebc68e1c36f779b3164a9d8365bdbf0bde6ad6334dc19097748",
+          "translation": "### 5. 用 $S$、$P$、$s$ 表示下面每个函数，只能使用 $+$、$\\cdot$ 和 $\\circ$（例如，(i) 的答案是 $P\\circ s$）。每一问的"
+        }
+      ]
+    },
+    {
+      "printed": 49,
+      "sourceSha256": "4c122f875b3da3fd3c3abca869b1b36c23519c177fdb7e7397fe70e86df460a9",
+      "blocks": [
+        {
+          "id": "p49-b1",
+          "source": "answer should be a *function*.",
+          "sourceSha256": "fca47c0e15e3ac678854fa2f9a8cd83d8e07a6a07a284c36a15f966d9cd4c8c6",
+          "translation": "答案都应是一个*函数*。"
+        },
+        {
+          "id": "p49-b2",
+          "source": "(i) $f(x)=2^{\\sin x}$.",
+          "sourceSha256": "b040416e8dddb38ed6d560ec8de7de8fde3f63204c5573d122cc63c827c0a3dd"
+        },
+        {
+          "id": "p49-b3",
+          "source": "(ii) $f(x)=\\sin2^x$.",
+          "sourceSha256": "99df4778f09f97e5502d32b0eed24d7c02b2d0c7a567d388c37c70dc413ef8ab"
+        },
+        {
+          "id": "p49-b4",
+          "source": "(iii) $f(x)=\\sin x^2$.",
+          "sourceSha256": "9aa8bac31adeaf087ddcf1ba11eebe6ad416954c82c353ea0aa6bf52efb08ff9"
+        },
+        {
+          "id": "p49-b5",
+          "source": "(iv) $f(x)=\\sin^2x$ (remember that $\\sin^2x$ is an abbreviation for $(\\sin x)^2$).",
+          "sourceSha256": "4384822786a8f02d86576cd2f698132b967ff299d52f63dcb4032b4f4e0e16ee",
+          "translation": "(iv) $f(x)=\\sin^2x$（记住，$\\sin^2x$ 是 $(\\sin x)^2$ 的简写）。"
+        },
+        {
+          "id": "p49-b6",
+          "source": "(v) $f(t)=2^{2^t}$. (Note: $a^{b^c}$ *always* means $a^{(b^c)}$; this convention is adopted because $(a^b)^c$ can be written more simply as $a^{bc}$.)",
+          "sourceSha256": "9f79bb1d2b72378b6a6804c1a04c34af6c06bac094109924d43f239eb0ded403",
+          "translation": "(v) $f(t)=2^{2^t}$。（注意：$a^{b^c}$ *总是*指 $a^{(b^c)}$；采用这一约定，是因为 $(a^b)^c$ 可以更简单地写作 $a^{bc}$。）"
+        },
+        {
+          "id": "p49-b7",
+          "source": "(vi) $f(u)=\\sin(2^u+2^{u^2})$.",
+          "sourceSha256": "99fd872a21bcc11a912ae8649d96c660f59e6f97e4cfa8b3eb67f20950107e77"
+        },
+        {
+          "id": "p49-b8",
+          "source": "(vii) $f(y)=\\sin(\\sin(\\sin(2^{2^{2^{\\sin y}}})))$.",
+          "sourceSha256": "0c2b629d58cdc6d50af53baf212c733afcc4a56606394045f7181552c90a48f3"
+        },
+        {
+          "id": "p49-b9",
+          "source": "(viii) $f(a)=2^{\\sin^2a}+\\sin(a^2)+2^{\\sin(a^2+\\sin a)}$.",
+          "sourceSha256": "ea7ae2624fbac5b60ae61e511b8fea5e83dcb9367e28fb99108a092d31208a1e"
+        },
+        {
+          "id": "p49-b10",
+          "source": "Polynomial functions, because they are simple, yet flexible, occupy a favored role in most investigations of functions. The following two problems illustrate their flexibility, and guide you through a derivation of their most important elementary properties.",
+          "sourceSha256": "f14d5aa9d228c2bdd7e74f1cd05b1f5bc7e39eea94accd64b6900724c52ded20",
+          "translation": "多项式函数既简单又灵活，因此在大多数函数研究中占有特殊地位。下面两道习题说明它们的灵活性，并引导你推导出它们最重要的初等性质。"
+        },
+        {
+          "id": "p49-b11",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p49-b12",
+          "source": "(a) If $x_1,\\ldots,x_n$ are distinct numbers, find a polynomial function $f_i$ of degree $n-1$ which is 1 at $x_i$ and 0 at $x_j$ for $j\\ne i$. Hint: the product of all $(x-x_j)$ for $j\\ne i$, is 0 at $x_j$ if $j\\ne i$. (This product is usually denoted by",
+          "sourceSha256": "520995e6fccb52530af6aad3fe6e69640f362d5d2842e893898274fbbdfa2540",
+          "translation": "(a) 如果 $x_1,\\ldots,x_n$ 是互不相同的数，求一个次数为 $n-1$ 的多项式函数 $f_i$，使它在 $x_i$ 处等于 1，而当 $j\\ne i$ 时，在 $x_j$ 处等于 0。提示：所有满足 $j\\ne i$ 的因子 $(x-x_j)$ 的乘积，在 $j\\ne i$ 时于 $x_j$ 处等于 0。（这个乘积通常记作"
+        },
+        {
+          "id": "p49-b13",
+          "source": "$$\\prod_{\\substack{j=1\\\\j\\ne i}}^n(x-x_j),$$",
+          "sourceSha256": "e55d94f178d5075532f346982c715ffb24031478295407851e06138a2ae805f2"
+        },
+        {
+          "id": "p49-b14",
+          "source": "the symbol $\\Pi$ (capital pi) playing the same role for products that $\\Sigma$ plays for sums.)",
+          "sourceSha256": "2a59e868d8deff2a90c39ff7dfb8a9f2bb1eeeb655efea6db155ffa478397cf2",
+          "translation": "其中符号 $\\Pi$（大写的 pi）对乘积所起的作用，与 $\\Sigma$ 对求和所起的作用相同。）"
+        },
+        {
+          "id": "p49-b15",
+          "source": "(b) Now find a polynomial function $f$ of degree $n-1$ such that $f(x_i)=a_i$, where $a_1,\\ldots,a_n$ are given numbers. (You should use the functions $f_i$ from part (a). The formula you will obtain is called the “Lagrange interpolation formula.”)",
+          "sourceSha256": "1406000e8a3725cbfc585367dcf12eafdd57d5ae06c1005b940a9ae2b70681e0",
+          "translation": "(b) 现在求一个次数为 $n-1$ 的多项式函数 $f$，使 $f(x_i)=a_i$，其中 $a_1,\\ldots,a_n$ 是给定的数。（你应当使用 (a) 中的函数 $f_i$。所得公式称为“拉格朗日插值公式”。）"
+        },
+        {
+          "id": "p49-b16",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p49-b17",
+          "source": "(a) Prove that for any polynomial function $f$, and any number $a$, there is a polynomial function $g$, and a number $b$, such that $f(x)=(x-a)g(x)+b$ for all $x$. (The idea is simply to divide $(x-a)$ into $f(x)$ by long division, until a constant remainder is left. For example, the calculation",
+          "sourceSha256": "03223a1214b811cd9e31bb83f385bd6dbf7430fd6d82ff4d7a0df3ca281dae22",
+          "translation": "(a) 证明：对于任意多项式函数 $f$ 和任意数 $a$，都存在多项式函数 $g$ 和数 $b$，使得对所有 $x$ 都有 $f(x)=(x-a)g(x)+b$。（思路就是用 $(x-a)$ 对 $f(x)$ 作长除法，直到剩下一个常数余项。例如，下面的计算"
+        },
+        {
+          "id": "p49-b18",
+          "source": "<table aria-label=\"Polynomial long division\" class=\"original-long-division\">\n<tbody>\n<tr><td></td><td>$x^2$</td><td>$+x$</td><td>$-2$</td><td></td></tr>\n<tr><td>$x-1\\big)$</td><td class=\"rule-top\">$x^3$</td><td class=\"rule-top\"></td><td class=\"rule-top\">$-3x$</td><td class=\"rule-top\">$+1$</td></tr>\n<tr><td></td><td>$x^3$</td><td class=\"rule-bottom\">$-x^2$</td><td class=\"rule-bottom\"></td><td></td></tr>\n<tr><td></td><td></td><td>$x^2$</td><td>$-3x$</td><td></td></tr>\n<tr><td></td><td></td><td class=\"rule-bottom\">$x^2$</td><td class=\"rule-bottom\">$-x$</td><td></td></tr>\n<tr><td></td><td></td><td></td><td>$-2x$</td><td>$+1$</td></tr>\n<tr><td></td><td></td><td></td><td class=\"rule-bottom\">$-2x$</td><td class=\"rule-bottom\">$+2$</td></tr>\n<tr><td></td><td></td><td></td><td></td><td>$-1$</td></tr>\n</tbody>\n</table>",
+          "sourceSha256": "3c52bba0bf2b6181d68259f67cbb6bb4a4c27790be01c14687cd1ac9613f0480"
+        }
+      ]
+    },
+    {
+      "printed": 50,
+      "sourceSha256": "4b9b3ca7074ad9bd1830ed133e4111bc653668dacb5b91df4a2d859dfd633ad8",
+      "blocks": [
+        {
+          "id": "p50-b1",
+          "source": "shows that $x^3-3x+1=(x-1)(x^2+x-2)-1$. A formal proof is possible by induction on the degree of $f$.)",
+          "sourceSha256": "0cd3d0184abbd0ac84b129c0a885803b0c2b7c61e7f94a52efeacb3aae41728c",
+          "translation": "说明 $x^3-3x+1=(x-1)(x^2+x-2)-1$。严格的证明可以对 $f$ 的次数使用归纳法。）"
+        },
+        {
+          "id": "p50-b2",
+          "source": "(b) Prove that if $f(a)=0$, then $f(x)=(x-a)g(x)$ for some polynomial function $g$. (The converse is obvious.)",
+          "sourceSha256": "d16ef29f7e4d12d9f3cf791dfdbcee6679ddca6a3c8467b94f60748f6586ef4c",
+          "translation": "(b) 证明：如果 $f(a)=0$，那么对于某个多项式函数 $g$，有 $f(x)=(x-a)g(x)$。（逆命题显然成立。）"
+        },
+        {
+          "id": "p50-b3",
+          "source": "(c) Prove that if $f$ is a polynomial function of degree $n$, then $f$ has at most $n$ roots, i.e., there are at most $n$ numbers $a$ with $f(a)=0$.",
+          "sourceSha256": "ad92d2cbeced92824b83525c21ae941e9b0a216904a1b279677e607cc2c40ca6",
+          "translation": "(c) 证明：如果 $f$ 是次数为 $n$ 的多项式函数，那么 $f$ 至多有 $n$ 个根，也就是说，至多有 $n$ 个数 $a$ 满足 $f(a)=0$。"
+        },
+        {
+          "id": "p50-b4",
+          "source": "(d) Show that for each $n$ there is a polynomial function of degree $n$ with $n$ roots. If $n$ is even find a polynomial function of degree $n$ with no roots, and if $n$ is odd find one with only one root.",
+          "sourceSha256": "a644d779122ee76ea13e2380b370f378768eece1eee28b053b0e4051c2b5c1b1",
+          "translation": "(d) 证明：对于每个 $n$，都存在一个次数为 $n$、具有 $n$ 个根的多项式函数。如果 $n$ 是偶数，找一个次数为 $n$、没有根的多项式函数；如果 $n$ 是奇数，找一个只有一个根的多项式函数。"
+        },
+        {
+          "id": "p50-b5",
+          "source": "### 8. For which numbers $a$, $b$, $c$, and $d$ will the function",
+          "sourceSha256": "f69f63c5bc876558d6fd429b3e276109ee2642f63d144923f885bcd287341cf4",
+          "translation": "### 8. 对于哪些数 $a$、$b$、$c$ 和 $d$，函数"
+        },
+        {
+          "id": "p50-b6",
+          "source": "$$f(x)=\\frac{ax+b}{cx+d}$$",
+          "sourceSha256": "dc929c578a221d6d311a143fd8316df3ba1fd7812b51c6d71d5be745659f3c1a"
+        },
+        {
+          "id": "p50-b7",
+          "source": "satisfy $f(f(x))=x$ for all $x$ (for which this equation makes sense)?",
+          "sourceSha256": "c60283e36043fec3806a8615afc366ce3d08416b6435182064ca34ed04f32d57",
+          "translation": "对所有使等式有意义的 $x$ 都满足 $f(f(x))=x$？"
+        },
+        {
+          "id": "p50-b8",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p50-b9",
+          "source": "(a) If $A$ is any set of real numbers, define a function $C_A$ as follows:",
+          "sourceSha256": "fe807608726c77863245050c9e8cae9a59a25db4070cdf80cece0cead0d49244",
+          "translation": "(a) 如果 $A$ 是实数的任意一个集合，按如下方式定义函数 $C_A$："
+        },
+        {
+          "id": "p50-b10",
+          "source": "$$C_A(x)=\\begin{cases}1,&x\\text{ in }A\\\\0,&x\\text{ not in }A.\\end{cases}$$",
+          "sourceSha256": "06bb151df0f19be9ad77a7cdcd6bb1f233d30fa692b6d5f138f10458d2abf6be"
+        },
+        {
+          "id": "p50-b11",
+          "source": "Find expressions for $C_{A\\cap B}$ and $C_{A\\cup B}$ and $C_{\\mathbf R-A}$, in terms of $C_A$ and $C_B$. (The symbol $A\\cap B$ was defined in this chapter, but the other two may be new to you. They can be defined as follows:",
+          "sourceSha256": "dd71e4dde3373b6fe95c01f9c73feda99a138cefe5db00d78ad0a086dcdd6cbb",
+          "translation": "用 $C_A$ 和 $C_B$ 表示 $C_{A\\cap B}$、$C_{A\\cup B}$ 和 $C_{\\mathbf R-A}$。（符号 $A\\cap B$ 已在本章定义过，但另外两个可能是你尚未见过的。它们的定义如下："
+        },
+        {
+          "id": "p50-b12",
+          "source": "$$\\begin{gathered}\nA\\cup B=\\{x:x\\text{ is in }A\\text{ or }x\\text{ is in }B\\},\\\\\n\\mathbf R-A=\\{x:x\\text{ is in }\\mathbf R\\text{ but }x\\text{ is not in }A\\}.)\n\\end{gathered}$$",
+          "sourceSha256": "8c746d71bf73db7ff0c1dd86dab60f77554b0ce19e83dc1c2c97d76a4a618bda"
+        },
+        {
+          "id": "p50-b13",
+          "source": "(b) Suppose $f$ is a function such that $f(x)=0$ or 1 for each $x$. Prove that there is a set $A$ such that $f=C_A$.",
+          "sourceSha256": "de9a05e5ea207529d8bb26b39c319cc9aba9a5d19860ba38abc87cd80faea8c9",
+          "translation": "(b) 设 $f$ 是一个函数，对于每个 $x$，$f(x)=0$ 或等于 1。证明：存在一个集合 $A$，使得 $f=C_A$。"
+        },
+        {
+          "id": "p50-b14",
+          "source": "(c) Show that $f=f^2$ if and only if $f=C_A$ for some set $A$.",
+          "sourceSha256": "bab26a13008a1d29b6b78d4f69536e744310eda0f278863ba7bd024d7dafc878",
+          "translation": "(c) 证明：$f=f^2$ 当且仅当对某个集合 $A$ 有 $f=C_A$。"
+        },
+        {
+          "id": "p50-b15",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p50-b16",
+          "source": "(a) For which functions $f$ is there a function $g$ such that $f=g^2$? Hint: You can certainly answer this question if “function” is replaced by “number.”",
+          "sourceSha256": "d6419bca5ae6bc957b5db636c2c08c36372b8939eed50611fe2d595dd6c36d4a",
+          "translation": "(a) 对于哪些函数 $f$，存在函数 $g$ 使 $f=g^2$？提示：如果把“函数”换成“数”，你肯定能回答这个问题。"
+        },
+        {
+          "id": "p50-b17",
+          "source": "(b) For which functions $f$ is there a function $g$ such that $f=1/g$?",
+          "sourceSha256": "e5a3507ef465e978500ee9e2864b7c8f34919ad4c12ff6ce7f18a8ccfe63f4d9",
+          "translation": "(b) 对于哪些函数 $f$，存在函数 $g$ 使 $f=1/g$？"
+        },
+        {
+          "id": "p50-b18",
+          "source": "\\*(c) For which functions $b$ and $c$ can we find a function $x$ such that",
+          "sourceSha256": "ac947bcdbb079a101b38c71d9118443b1d2f26942d2371c6612e055b12beb273",
+          "translation": "\\*(c) 对于哪些函数 $b$ 和 $c$，可以找到函数 $x$，使"
+        },
+        {
+          "id": "p50-b19",
+          "source": "$$(x(t))^2+b(t)x(t)+c(t)=0$$",
+          "sourceSha256": "87a9fd9c54bdc1e05c76c70cf35977fdcb20abea1810102e348c87d894c1bf65"
+        },
+        {
+          "id": "p50-b20",
+          "source": "for all numbers $t$?",
+          "sourceSha256": "fc598a087edf944fd7111a6e62bbf4976c0b293a8b2f8f7a8c1326c3838f572f",
+          "translation": "对于所有数 $t$ 成立？"
+        },
+        {
+          "id": "p50-b21",
+          "source": "\\*(d) What conditions must the functions $a$ and $b$ satisfy if there is to be a function $x$ such that",
+          "sourceSha256": "80ef25a60d0496acbe08fb13ea8f280076e85fac32599606c98d774af1eec2c6",
+          "translation": "\\*(d) 函数 $a$ 和 $b$ 必须满足什么条件，才存在函数 $x$，使"
+        },
+        {
+          "id": "p50-b22",
+          "source": "$$a(t)x(t)+b(t)=0$$",
+          "sourceSha256": "441a5bcd8a9526caeaac52da06da528240c90677c9c27a90fb01eb33d090c589"
+        },
+        {
+          "id": "p50-b23",
+          "source": "for all numbers $t$? How many such functions $x$ will there be?",
+          "sourceSha256": "fac998fe7c9562888cdadbc1b9ba1dfc12015bf9490d93b2acf65b3989e33ffd",
+          "translation": "对于所有数 $t$ 成立？这样的函数 $x$ 有多少个？"
+        },
+        {
+          "id": "p50-b24",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p50-b25",
+          "source": "(a) Suppose that $H$ is a function and $y$ is a number such that $H(H(y))=y$. What is",
+          "sourceSha256": "8c248be259545de8a04cca541e408218cfeb70af6f017c7f4d59e8861676ca8d",
+          "translation": "(a) 假设 $H$ 是一个函数，$y$ 是一个满足 $H(H(y))=y$ 的数。求"
+        },
+        {
+          "id": "p50-b26",
+          "source": "$$\\underbrace{H(H(H(\\cdots(H(y)\\cdots)))}_{80\\text{ times}}?$$",
+          "sourceSha256": "b668f93fa78188a08f04412a900b0f826fcb21fbafadcd908b20e4f3918ff7b1"
+        }
+      ]
+    },
+    {
+      "printed": 51,
+      "sourceSha256": "7022280dc3733124fcdf7d2a0ab7d220d879b7b27e0acb270ebc0e794e3ba257",
+      "blocks": [
+        {
+          "id": "p51-b1",
+          "source": "(b) Same question if 80 is replaced by 81.",
+          "sourceSha256": "caadf76ea15e39dde2ba188aa8330aa8b317fa2bc96343ae7abeab91a7ebad1f",
+          "translation": "(b) 把 80 换成 81，回答同样的问题。"
+        },
+        {
+          "id": "p51-b2",
+          "source": "(c) Same question if $H(H(y))=H(y)$.",
+          "sourceSha256": "f91ccb7bc72af8f6e70543f8d5e939f70ef3a8b53b9b2a34cbf8f2306284e069",
+          "translation": "(c) 如果 $H(H(y))=H(y)$，回答同样的问题。"
+        },
+        {
+          "id": "p51-b3",
+          "source": "\\*(d) Find a function $H$ such that $H(H(x))=H(x)$ for all numbers $x$, and such that $H(1)=36$, $H(2)=\\pi/3$, $H(13)=47$, $H(36)=36$, $H(\\pi/3)=\\pi/3$, $H(47)=47$. (Don’t try to “solve” for $H(x)$; there are many functions $H$ with $H(H(x))=H(x)$. The extra conditions on $H$ are supposed to suggest a way of finding a suitable $H$.)",
+          "sourceSha256": "b85dfeeaef8c54004a51913a84e7be2aa02caa0eda1352982cc8cb64d80293df",
+          "translation": "\\*(d) 找一个函数 $H$，使得对于所有数 $x$ 都有 $H(H(x))=H(x)$，并且满足 $H(1)=36$、$H(2)=\\pi/3$、$H(13)=47$、$H(36)=36$、$H(\\pi/3)=\\pi/3$、$H(47)=47$。（不要试图“解出”$H(x)$；满足 $H(H(x))=H(x)$ 的函数 $H$ 有很多。对 $H$ 的附加条件，意在启发你找到一个合适的 $H$。）"
+        },
+        {
+          "id": "p51-b4",
+          "source": "\\*(e) Find a function $H$ such that $H(H(x))=H(x)$ for all $x$, and such that $H(1)=7$, $H(17)=18$.",
+          "sourceSha256": "819d75c8dc5b9e5b6cae001b745c4418a23b5fee5c95de897259c840e215e14c",
+          "translation": "\\*(e) 找一个函数 $H$，使得对于所有 $x$ 都有 $H(H(x))=H(x)$，并且满足 $H(1)=7$、$H(17)=18$。"
+        },
+        {
+          "id": "p51-b5",
+          "source": "### 12. A function $f$ is **even** if $f(x)=f(-x)$ and **odd** if $f(x)=-f(-x)$. For example, $f$ is even if $f(x)=x^2$ or $f(x)=|x|$ or $f(x)=\\cos x$, while $f$ is odd if $f(x)=x$ or $f(x)=\\sin x$.",
+          "sourceSha256": "db78f58447083e1c9f57d60f953f1ab073f331c5e0bb24be035669abab807eba",
+          "translation": "### 12. 如果 $f(x)=f(-x)$，则称函数 $f$ 为**偶函数**；如果 $f(x)=-f(-x)$，则称它为**奇函数**。例如，当 $f(x)=x^2$、$f(x)=|x|$ 或 $f(x)=\\cos x$ 时，$f$ 是偶函数；而当 $f(x)=x$ 或 $f(x)=\\sin x$ 时，$f$ 是奇函数。"
+        },
+        {
+          "id": "p51-b6",
+          "source": "(a) Determine whether $f+g$ is even, odd, or not necessarily either, in the four cases obtained by choosing $f$ even or odd, and $g$ even or odd. (Your answers can most conveniently be displayed in a $2\\times2$ table.)",
+          "sourceSha256": "4371e27cb9f826debbd4a8207ad9a7a7fae96493ea26f010e0a2f6aaea29f3a4",
+          "translation": "(a) 分别选取 $f$ 为奇函数或偶函数、$g$ 为奇函数或偶函数，得到四种情况。在每一种情况下，判断 $f+g$ 是偶函数、奇函数，还是两者都不一定。（用一张 $2\\times2$ 的表来呈现答案最为方便。）"
+        },
+        {
+          "id": "p51-b7",
+          "source": "(b) Do the same for $f\\cdot g$.",
+          "sourceSha256": "a1b268cd005fec3a037cc277fdad01b8600c422479f7bcc2e3f4171dcceb5b71",
+          "translation": "(b) 对 $f\\cdot g$ 做同样的判断。"
+        },
+        {
+          "id": "p51-b8",
+          "source": "(c) Do the same for $f\\circ g$.",
+          "sourceSha256": "4a8e266380b6855377f9e7699f27c477d8dd7d31332513debaed5637c549275b",
+          "translation": "(c) 对 $f\\circ g$ 做同样的判断。"
+        },
+        {
+          "id": "p51-b9",
+          "source": "(d) Prove that every even function $f$ can be written $f(x)=g(|x|)$, for infinitely many functions $g$.",
+          "sourceSha256": "9935a21924d90a84c88d70b95a23f5e3f25875ec8d64dc94de6b3c76127c5dcc",
+          "translation": "(d) 证明：每一个偶函数 $f$ 都可以写成 $f(x)=g(|x|)$，而且这样的函数 $g$ 有无穷多个。"
+        },
+        {
+          "id": "p51-b10",
+          "source": "### \\*13.",
+          "sourceSha256": "32d65a72b9b7fdf60194382746c3cdcae5d7dde6327b742b064aa101802b9f08"
+        },
+        {
+          "id": "p51-b11",
+          "source": "(a) Prove that any function $f$ with domain $\\mathbf R$ can be written $f=E+O$, where $E$ is even and $O$ is odd.",
+          "sourceSha256": "d5e92cc4cfa0b629559b1014c45669eec182c106517dd6dc934a1d5879cf753c",
+          "translation": "(a) 证明：定义域为 $\\mathbf R$ 的任意函数 $f$ 都可以写成 $f=E+O$，其中 $E$ 是偶函数，$O$ 是奇函数。"
+        },
+        {
+          "id": "p51-b12",
+          "source": "(b) Prove that this way of writing $f$ is unique. (If you try to do part (b) first, by “solving” for $E$ and $O$ you will probably find the solution to part (a).)",
+          "sourceSha256": "7dc8b6dfa299bebdd65682c46f86d48f0147dda049cdbf73186d031ebd8d7a3a",
+          "translation": "(b) 证明：$f$ 的这种写法是唯一的。（如果先尝试做 (b)，通过“解出”$E$ 和 $O$，你很可能会找到 (a) 的解法。）"
+        },
+        {
+          "id": "p51-b13",
+          "source": "### 14. If $f$ is any function, define a new function $|f|$ by $|f|(x)=|f(x)|$. If $f$ and $g$ are functions, define two new functions, $\\max(f,g)$ and $\\min(f,g)$, by",
+          "sourceSha256": "93c40c8626609fdb44723ebd6a19e13c58cfb2a7c4e865807e5740a791fcef21",
+          "translation": "### 14. 对任意函数 $f$，由 $|f|(x)=|f(x)|$ 定义一个新函数 $|f|$。如果 $f$ 和 $g$ 是函数，按下式定义两个新函数 $\\max(f,g)$ 和 $\\min(f,g)$："
+        },
+        {
+          "id": "p51-b14",
+          "source": "$$\\begin{aligned}\n\\max(f,g)(x)&=\\max(f(x),g(x)),\\\\\n\\min(f,g)(x)&=\\min(f(x),g(x)).\n\\end{aligned}$$",
+          "sourceSha256": "9fbc4c6420b3ab2330492e66eb0d6b459b987642fb8450bd2b860916610ead65"
+        },
+        {
+          "id": "p51-b15",
+          "source": "Find an expression for $\\max(f,g)$ and $\\min(f,g)$ in terms of $|\\ |$.",
+          "sourceSha256": "237f72b2247d7a3c52a8a40f31b2e91cb5193c902981b3fc3ef3d0ebf0e4ce88",
+          "translation": "用 $|\\ |$ 表示 $\\max(f,g)$ 和 $\\min(f,g)$。"
+        },
+        {
+          "id": "p51-b16",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p51-b17",
+          "source": "(a) Show that $f=\\max(f,0)+\\min(f,0)$. This particular way of writing $f$ is fairly useful; the functions $\\max(f,0)$ and $\\min(f,0)$ are called the **positive and negative parts** of $f$.",
+          "sourceSha256": "fcde7e5c7639542e2f295a256a21cf36afa3f67c02ff5fac19bb12ef932ce0e8",
+          "translation": "(a) 证明 $f=\\max(f,0)+\\min(f,0)$。$f$ 的这种特殊写法颇为有用；函数 $\\max(f,0)$ 和 $\\min(f,0)$ 称为 $f$ 的**正部和负部**。"
+        },
+        {
+          "id": "p51-b18",
+          "source": "(b) A function $f$ is called **nonnegative** if $f(x)\\ge0$ for all $x$. Prove that any function $f$ can be written $f=g-h$, where $g$ and $h$ are nonnegative, in infinitely many ways. (The “standard way” is $g=\\max(f,0)$ and $h=-\\min(f,0)$.) Hint: Any number can certainly be written as the difference of two nonnegative numbers in infinitely many ways.",
+          "sourceSha256": "88b6b983eeec57137626d1a3138f55ef7f12a17fc313ee310ce9f53b516371df",
+          "translation": "(b) 如果对所有 $x$ 都有 $f(x)\\ge0$，则称函数 $f$ 为**非负函数**。证明：任意函数 $f$ 都可以用无穷多种方式写成 $f=g-h$，其中 $g$ 和 $h$ 都是非负函数。（“标准写法”是 $g=\\max(f,0)$ 和 $h=-\\min(f,0)$。）提示：任意一个数当然都可以用无穷多种方式写成两个非负数的差。"
+        },
+        {
+          "id": "p51-b19",
+          "source": "### \\*16. Suppose $f$ satisfies $f(x+y)=f(x)+f(y)$ for all $x$ and $y$.",
+          "sourceSha256": "0051c9ff594853b24871c89f40dfcf777034d7ba2f2057868ef1c825e85c0015",
+          "translation": "### \\*16. 假设对于所有 $x$ 和 $y$，$f$ 都满足 $f(x+y)=f(x)+f(y)$。"
+        },
+        {
+          "id": "p51-b20",
+          "source": "(a) Prove that $f(x_1+\\cdots+x_n)=f(x_1)+\\cdots+f(x_n)$.",
+          "sourceSha256": "c4ea51320a233abd8f21b5e9cbf26fd93eda5740c00f616bf8406209b69db7e5",
+          "translation": "(a) 证明 $f(x_1+\\cdots+x_n)=f(x_1)+\\cdots+f(x_n)$。"
+        },
+        {
+          "id": "p51-b21",
+          "source": "(b) Prove that there is some number $c$ such that $f(x)=cx$ for all *rational* numbers $x$ (at this point we’re not trying to say anything about $f(x)$ for irrational $x$). Hint: First figure out what $c$ must be. Now prove that",
+          "sourceSha256": "2d2fa33b1e7e0b23d03f977c6198e2de63014ef0fd6e01edaf2fc52443a13399",
+          "translation": "(b) 证明：存在某个数 $c$，使得对所有*有理数* $x$ 都有 $f(x)=cx$（目前我们并不试图对无理数 $x$ 处的 $f(x)$ 作任何断言）。提示：先确定 $c$ 必须是什么。然后证明"
+        }
+      ]
+    },
+    {
+      "printed": 52,
+      "sourceSha256": "e66f1b9686b72f745b97fcb984ee862b3b8d72ab5eb9829a9a08ce5beb2456fc",
+      "blocks": [
+        {
+          "id": "p52-b1",
+          "source": "$f(x)=cx$, first when $x$ is a natural number, then when $x$ is an integer, then when $x$ is the reciprocal of an integer and, finally, for all rational $x$.",
+          "sourceSha256": "d0191268f1fc42586709937e9fc080c568b87692c2fbe2885371e976d87bb32f",
+          "translation": "$f(x)=cx$：先考虑 $x$ 为自然数，再考虑 $x$ 为整数，然后考虑 $x$ 为整数的倒数，最后推广到所有有理数 $x$。"
+        },
+        {
+          "id": "p52-b2",
+          "source": "### \\*17. If $f(x)=0$ for all $x$, then $f$ satisfies $f(x+y)=f(x)+f(y)$ for all $x$ and $y$, and also $f(x\\cdot y)=f(x)\\cdot f(y)$ for all $x$ and $y$. Now suppose that $f$ satisfies these two properties, but that $f(x)$ is not always 0. Prove that $f(x)=x$ for all $x$, as follows:",
+          "sourceSha256": "c33506cf501169be9b672f644bff14363ef2ba8931d500a22b3ee411547eab6d",
+          "translation": "### \\*17. 如果对所有 $x$ 都有 $f(x)=0$，那么 $f$ 对所有 $x$ 和 $y$ 都满足 $f(x+y)=f(x)+f(y)$，并且对所有 $x$ 和 $y$ 都满足 $f(x\\cdot y)=f(x)\\cdot f(y)$。现在假设 $f$ 满足这两个性质，但 $f(x)$ 不恒为 0。按以下步骤证明：对所有 $x$ 都有 $f(x)=x$。"
+        },
+        {
+          "id": "p52-b3",
+          "source": "(a) Prove that $f(1)=1$.",
+          "sourceSha256": "4485d4287a810fb9b7f0de3d1c89e006e6043e8c893cba85e2eff828423348b8",
+          "translation": "(a) 证明 $f(1)=1$。"
+        },
+        {
+          "id": "p52-b4",
+          "source": "(b) Prove that $f(x)=x$ if $x$ is rational.",
+          "sourceSha256": "6c95dbdad3d886d825cff787dcef948029fb49b767687e9bc19ec880b9a5143f",
+          "translation": "(b) 证明：若 $x$ 是有理数，则 $f(x)=x$。"
+        },
+        {
+          "id": "p52-b5",
+          "source": "(c) Prove that $f(x)>0$ if $x>0$. (This part is tricky, but if you have been paying attention to the philosophical remarks accompanying the problems in the last two chapters, you will know what to do.)",
+          "sourceSha256": "bb434d88ca489fc2c34738c14d3ea8750209a7c2069d8599dea131e412c76688",
+          "translation": "(c) 证明：若 $x>0$，则 $f(x)>0$。（这一问颇有技巧，但如果你留意了前两章习题中那些关于思考方法的评述，就会知道该怎么做。）"
+        },
+        {
+          "id": "p52-b6",
+          "source": "(d) Prove that $f(x)>f(y)$ if $x>y$.",
+          "sourceSha256": "cc611648dc22aa488d04098ec076fceadbb40c9cf39b7456c4f15351b3533ccb",
+          "translation": "(d) 证明：若 $x>y$，则 $f(x)>f(y)$。"
+        },
+        {
+          "id": "p52-b7",
+          "source": "(e) Prove that $f(x)=x$ for all $x$. Hint: Use the fact that between any two numbers there is a rational number.",
+          "sourceSha256": "78df3e17530e7751964c267ce0e0709c54fc9615745e89725c603edafcde7759",
+          "translation": "(e) 证明：对于所有 $x$ 都有 $f(x)=x$。提示：利用任意两个数之间都存在有理数这一事实。"
+        },
+        {
+          "id": "p52-b8",
+          "source": "### \\*18. Precisely what conditions must $f$, $g$, $h$, and $k$ satisfy in order that $f(x)g(y)=h(x)k(y)$ for all $x$ and $y$?",
+          "sourceSha256": "b34533443eea999c6187ac81bacc1284e1a0ba2809b207a054c88842d49d8acc",
+          "translation": "### \\*18. $f$、$g$、$h$、$k$ 必须满足什么确切条件，才能使 $f(x)g(y)=h(x)k(y)$ 对所有 $x$ 和 $y$ 都成立？"
+        },
+        {
+          "id": "p52-b9",
+          "source": "### \\*19.",
+          "sourceSha256": "7e4f2b11b162b6abc626b910cd4565b2247b0ee93dbac4aad15418c46a98a3e3"
+        },
+        {
+          "id": "p52-b10",
+          "source": "(a) Prove that there do *not* exist functions $f$ and $g$ with either of the following properties:",
+          "sourceSha256": "f9335797688fa4cef40e55aa5865c6df3ea46decabe28f6b789ec1207a23506b",
+          "translation": "(a) 证明：*不存在*函数 $f$ 和 $g$ 满足下面任一种性质："
+        },
+        {
+          "id": "p52-b11",
+          "source": "(i) $f(x)+g(y)=xy$ for all $x$ and $y$.",
+          "sourceSha256": "7f67dd36eff1790884bde98be5e89bdd2f37bcf774f889052283ffcf72d30062",
+          "translation": "(i) 对所有 $x$ 和 $y$，都有 $f(x)+g(y)=xy$。"
+        },
+        {
+          "id": "p52-b12",
+          "source": "(ii) $f(x)\\cdot g(y)=x+y$ for all $x$ and $y$.",
+          "sourceSha256": "e7f58d0eb16c830b939e084611e1b926269d13f38d7103db5b6011e262cd9013",
+          "translation": "(ii) 对所有 $x$ 和 $y$，都有 $f(x)\\cdot g(y)=x+y$。"
+        },
+        {
+          "id": "p52-b13",
+          "source": "Hint: Try to get some information about $f$ or $g$ by choosing particular values of $x$ and $y$.",
+          "sourceSha256": "c163a8657a779dc1e7fcd69e368cd1fe9b37e7ecbef382333de1ab8f24769dd1",
+          "translation": "提示：通过选取特定的 $x$ 和 $y$，试着得到关于 $f$ 或 $g$ 的一些信息。"
+        },
+        {
+          "id": "p52-b14",
+          "source": "(b) Find functions $f$ and $g$ such that $f(x+y)=g(xy)$ for all $x$ and $y$.",
+          "sourceSha256": "0c7f3a788ac1b6ca4f8a6b099c913877d95a30678c4b6b85bb4ef5b95963499f",
+          "translation": "(b) 找出函数 $f$ 和 $g$，使得对所有 $x$ 和 $y$ 都有 $f(x+y)=g(xy)$。"
+        },
+        {
+          "id": "p52-b15",
+          "source": "### \\*20.",
+          "sourceSha256": "7c0ac0e7a57d06fc4d95e8be6366ac94d249a5dd8169ddd5029639fcb574bd8b"
+        },
+        {
+          "id": "p52-b16",
+          "source": "(a) Find a function $f$, other than a constant function, such that $|f(y)-f(x)|\\le|y-x|$.",
+          "sourceSha256": "cb5f83d9d8e04bae4f1bfe964732455cb8f0cac7434e68adb831933a9d972c6b",
+          "translation": "(a) 找一个满足 $|f(y)-f(x)|\\le|y-x|$ 的非常数函数 $f$。"
+        },
+        {
+          "id": "p52-b17",
+          "source": "(b) Suppose that $f(y)-f(x)\\le(y-x)^2$ for all $x$ and $y$. (Why does this imply that $|f(y)-f(x)|\\le(y-x)^2$?) Prove that $f$ is a constant function. Hint: Divide the interval from $x$ to $y$ into $n$ equal pieces.",
+          "sourceSha256": "4cfa555aba6f447eee378986eaaaa130550fd78ba80b741c93c38a863e80c1df",
+          "translation": "(b) 假设对于所有 $x$ 和 $y$ 都有 $f(y)-f(x)\\le(y-x)^2$。（为什么这意味着 $|f(y)-f(x)|\\le(y-x)^2$？）证明 $f$ 是常数函数。提示：把从 $x$ 到 $y$ 的区间分成 $n$ 等份。"
+        },
+        {
+          "id": "p52-b18",
+          "source": "### 21. Prove or give a counterexample for each of the following assertions:",
+          "sourceSha256": "06de586f21eaac76e65e85a86851d571b9656d3e6188774b65fc256581071be3",
+          "translation": "### 21. 对以下每个断言，给出证明或反例："
+        },
+        {
+          "id": "p52-b19",
+          "source": "(a) $f\\circ(g+h)=f\\circ g+f\\circ h$.",
+          "sourceSha256": "8fc3f8134ee6a30dc8b6edb54a18af0989656b6d147bd40187492b434dbe3065"
+        },
+        {
+          "id": "p52-b20",
+          "source": "(b) $(g+h)\\circ f=g\\circ f+h\\circ f$.",
+          "sourceSha256": "cd66e5e49cbb0f4fb46587de8584610aa58a1fb1815b94d6b1b4f59466271368"
+        },
+        {
+          "id": "p52-b21",
+          "source": "(c) $\\displaystyle\\frac1{f\\circ g}=\\frac1f\\circ g$.",
+          "sourceSha256": "2ad06f546c9725c61624c460c33c13de1842197f0c60f9304cc9d9f7bd2e950d"
+        },
+        {
+          "id": "p52-b22",
+          "source": "(d) $\\displaystyle\\frac1{f\\circ g}=f\\circ\\left(\\frac1g\\right)$.",
+          "sourceSha256": "864e3675a31c04065939f2da8b3eb8724aac8fbf02be6d4f1c7f6fcaea874b3b"
+        },
+        {
+          "id": "p52-b23",
+          "source": "### 22.",
+          "sourceSha256": "ce146eae8f2fb4609bfd66abfe5008807912c8203d51e87d6ba4e238e91e9395"
+        },
+        {
+          "id": "p52-b24",
+          "source": "(a) Suppose $g=h\\circ f$. Prove that if $f(x)=f(y)$, then $g(x)=g(y)$.",
+          "sourceSha256": "ed94478d87c3b853df4f7a447ef19f7339f60341fdbc36d00067ff8232e3403e",
+          "translation": "(a) 假设 $g=h\\circ f$。证明：若 $f(x)=f(y)$，则 $g(x)=g(y)$。"
+        },
+        {
+          "id": "p52-b25",
+          "source": "(b) Conversely, suppose that $f$ and $g$ are two functions such that $g(x)=g(y)$ whenever $f(x)=f(y)$. Prove that $g=h\\circ f$ for some function $h$. Hint: Just try to define $h(z)$ when $z$ is of the form $z=f(x)$ (these are the only $z$ that matter) and use the hypotheses to show that your definition will not run into trouble.",
+          "sourceSha256": "d72353f4d6f5d3e80f3f81ddea843b0fb0830c2eac581049d50e40553c53cd38",
+          "translation": "(b) 反过来，假设 $f$ 和 $g$ 是两个函数，只要 $f(x)=f(y)$ 就有 $g(x)=g(y)$。证明：存在函数 $h$，使 $g=h\\circ f$。提示：只需试着对形如 $z=f(x)$ 的 $z$ 定义 $h(z)$（只有这些 $z$ 才是有关的），并用题设说明你的定义不会发生矛盾。"
+        }
+      ]
+    },
+    {
+      "printed": 53,
+      "sourceSha256": "d50c75bdb08b9e3b1c463789fbb3021668c80dea9be2c047c464fbc732404d41",
+      "blocks": [
+        {
+          "id": "p53-b1",
+          "source": "### 23. Suppose that $f\\circ g=I$, where $I(x)=x$. Prove that",
+          "sourceSha256": "4d031fed53ac011490e0852ed4fe6e93b22c8d3106118b31a3ddd9e97385a6bf",
+          "translation": "### 23. 假设 $f\\circ g=I$，其中 $I(x)=x$。证明："
+        },
+        {
+          "id": "p53-b2",
+          "source": "(a) if $x\\ne y$, then $g(x)\\ne g(y)$;",
+          "sourceSha256": "1a6cd6d74d51f06e525512a9550f2e249280a11aa9fdcd7e8379961a9d7f0254",
+          "translation": "(a) 如果 $x\\ne y$，那么 $g(x)\\ne g(y)$；"
+        },
+        {
+          "id": "p53-b3",
+          "source": "(b) every number $b$ can be written $b=f(a)$ for some number $a$.",
+          "sourceSha256": "028dee3851fb06c28c23c32353fb798b1554014ae32e5379e81e5be4316c0ff8",
+          "translation": "(b) 对每个数 $b$，都存在某个数 $a$，使它可以写成 $b=f(a)$。"
+        },
+        {
+          "id": "p53-b4",
+          "source": "### \\*24.",
+          "sourceSha256": "f798979970ec1033ba5cf3589df2a8d645141a228b89e4b7b95827882426bad3"
+        },
+        {
+          "id": "p53-b5",
+          "source": "(a) Suppose $g$ is a function with the property that $g(x)\\ne g(y)$ if $x\\ne y$. Prove that there is a function $f$ such that $f\\circ g=I$.",
+          "sourceSha256": "b4f1332a152b63d292afdbcd58698aa34cbf9640cfe55f4091a3b5591b85bd3f",
+          "translation": "(a) 假设函数 $g$ 具有这样的性质：只要 $x\\ne y$ 就有 $g(x)\\ne g(y)$。证明：存在函数 $f$，使得 $f\\circ g=I$。"
+        },
+        {
+          "id": "p53-b6",
+          "source": "(b) Suppose that $f$ is a function such that every number $b$ can be written $b=f(a)$ for some number $a$. Prove that there is a function $g$ such that $f\\circ g=I$.",
+          "sourceSha256": "d590fdee8f915ce19229c66cc03e6e5999fe86c4a8234b34b00ce53d828075ca",
+          "translation": "(b) 假设 $f$ 是一个函数，对每个数 $b$，都存在某个数 $a$，使它可以写成 $b=f(a)$。证明：存在函数 $g$，使得 $f\\circ g=I$。"
+        },
+        {
+          "id": "p53-b7",
+          "source": "### \\*25. Find a function $f$ such that $g\\circ f=I$ for some $g$, but such that there is no function $h$ with $f\\circ h=I$.",
+          "sourceSha256": "f575103fbdc42f8d6c1d1b00e676e1a4365847ec46725ec89f5ff83ddfd115ff",
+          "translation": "### \\*25. 找一个函数 $f$，使得对某个 $g$ 有 $g\\circ f=I$，但不存在满足 $f\\circ h=I$ 的函数 $h$。"
+        },
+        {
+          "id": "p53-b8",
+          "source": "### \\*26. Suppose $f\\circ g=I$ and $h\\circ f=I$. Prove that $g=h$. Hint: Use the fact that composition is associative.",
+          "sourceSha256": "0c4b2f69932b2e0001314ef4d595af26231a51e42f82eee7c28328e3938a2e37",
+          "translation": "### \\*26. 假设 $f\\circ g=I$ 且 $h\\circ f=I$。证明 $g=h$。提示：利用复合满足结合律这一事实。"
+        },
+        {
+          "id": "p53-b9",
+          "source": "### 27.",
+          "sourceSha256": "01de3c63fd790d0deac18299d79a16ecfff7727c478f7c8964568f07245d3eec"
+        },
+        {
+          "id": "p53-b10",
+          "source": "(a) Suppose $f(x)=x+1$. Are there any functions $g$ such that $f\\circ g=g\\circ f$?",
+          "sourceSha256": "c71b556becc5834cb1ffb882791d37ceb061793654dc1f1251dc3abc689a4fd5",
+          "translation": "(a) 假设 $f(x)=x+1$。是否存在函数 $g$，使 $f\\circ g=g\\circ f$？"
+        },
+        {
+          "id": "p53-b11",
+          "source": "(b) Suppose $f$ is a constant function. For which functions $g$ does $f\\circ g=g\\circ f$?",
+          "sourceSha256": "1af26ffb178d183b66276be606add66039ea02df4d2dc75b3a916e240d29b95a",
+          "translation": "(b) 假设 $f$ 是常数函数。对于哪些函数 $g$，有 $f\\circ g=g\\circ f$？"
+        },
+        {
+          "id": "p53-b12",
+          "source": "(c) Suppose that $f\\circ g=g\\circ f$ for *all* functions $g$. Show that $f$ is the identity function, $f(x)=x$.",
+          "sourceSha256": "81f24ae0322db7a6ff76d74b4ec728eb3bdbf91bf864c696c5b2f94148461e2d",
+          "translation": "(c) 假设对*所有*函数 $g$ 都有 $f\\circ g=g\\circ f$。证明 $f$ 是恒等函数，即 $f(x)=x$。"
+        },
+        {
+          "id": "p53-b13",
+          "source": "### 28.",
+          "sourceSha256": "99710235075939b06c843e9bd945573c4f9f13f6f1481388af7da8a53884193f"
+        },
+        {
+          "id": "p53-b14",
+          "source": "(a) Let $F$ be the set of all functions whose domain is $\\mathbf R$. Prove that, using $+$ and $\\cdot$ as defined in this chapter, all of properties P1–P9 except P7 hold for $F$, provided 0 and 1 are interpreted as constant functions.",
+          "sourceSha256": "4342c17fcb5c316d730fff68ef2629595e3048ca59a16a455be2bed0bed540ce",
+          "translation": "(a) 设 $F$ 是所有定义域为 $\\mathbf R$ 的函数构成的集合。证明：采用本章定义的 $+$ 和 $\\cdot$，并把 0 和 1 理解为常数函数时，除 P7 外，性质 P1–P9 对 $F$ 全部成立。"
+        },
+        {
+          "id": "p53-b15",
+          "source": "(b) Show that P7 does not hold.",
+          "sourceSha256": "5b7b9d38c7b8f1dbea987e6c64c5723791dff8ceab9a67614c8f881b52e6f34e",
+          "translation": "(b) 说明 P7 不成立。"
+        },
+        {
+          "id": "p53-b16",
+          "source": "\\*(c) Show that P10–P12 cannot hold. In other words, show that there is no collection $P$ of functions in $F$, such that P10–P12 hold for $P$. (It is sufficient, and will simplify things, to consider only functions which are 0 except at two points $x_0$ and $x_1$.)",
+          "sourceSha256": "927963da06cd3690724806f5612d40e47b7f518c248666f27f9b6685e3ce0196",
+          "translation": "\\*(c) 说明 P10–P12 不可能成立。换句话说，证明：不存在由 $F$ 中的函数构成的集合 $P$，使得 P10–P12 对 $P$ 成立。（只考虑除 $x_0$ 和 $x_1$ 两点外处处为 0 的函数就足够了，而且会使问题更简单。）"
+        },
+        {
+          "id": "p53-b17",
+          "source": "(d) Suppose we define $f<g$ to mean that $f(x)<g(x)$ for all $x$. Which of P′10–P′13 (in Problem 1-8) now hold?",
+          "sourceSha256": "967197be79da62bc1311916067b49de3fd80c9789f6d36ecaa1acb9bcdb56c01",
+          "translation": "(d) 假设我们把 $f<g$ 定义为：对所有 $x$ 都有 $f(x)<g(x)$。现在，P′10–P′13（见习题 1-8）中哪些成立？"
+        },
+        {
+          "id": "p53-b18",
+          "source": "(e) If $f<g$, is $h\\circ f<h\\circ g$? Is $f\\circ h<g\\circ h$?",
+          "sourceSha256": "3d47f476f2c9d50e3069aee9db605098d0940771ebd86fc8a556339e3b1d7e7a",
+          "translation": "(e) 如果 $f<g$，是否有 $h\\circ f<h\\circ g$？是否有 $f\\circ h<g\\circ h$？"
+        }
+      ]
+    },
+    {
+      "printed": 54,
+      "sourceSha256": "73ff033bb5cae8ad0b5815a01f4de0f5682b94b039b7444808fc4d58efdad032",
+      "blocks": [
+        {
+          "id": "p54-b1",
+          "source": "## APPENDIX. ORDERED PAIRS",
+          "sourceSha256": "4e6e4238d96d9cee3a840060b9f32b2da96ca3db09f1dd22d0088cccc283ea8a",
+          "translation": "## 附录：有序对"
+        },
+        {
+          "id": "p54-b2",
+          "source": "Not only in the definition of a function, but in other parts of the book as well, it is necessary to use the notion of an ordered pair of objects. A definition has not yet been given, and we have never even stated explicitly what properties an ordered pair is supposed to have. The one property which we will require states formally that the ordered pair $(a,b)$ should be determined by $a$ and $b$, and the order in which they are given:",
+          "sourceSha256": "f1dda1777bc21debbdf9d9f3d77c4786ac418afe3e2180875e2d1fa3f5646346",
+          "translation": "不仅在函数的定义中，在本书的其他部分，也需要使用对象的有序对这一概念。我们还没有给出定义，甚至从未明确说明有序对应当具有什么性质。我们所需要的唯一性质，形式化地表达了如下要求：有序对 $(a,b)$ 应当由 $a$、$b$ 以及给出它们的顺序来确定："
+        },
+        {
+          "id": "p54-b3",
+          "source": "$$\\text{if }(a,b)=(c,d),\\text{ then }a=c\\text{ and }b=d.$$",
+          "sourceSha256": "42864ab2d74df10e791c5622fef834b3e374fef4f766928e5deba949f341068e"
+        },
+        {
+          "id": "p54-b4",
+          "source": "Ordered pairs may be treated most conveniently by simply introducing $(a,b)$ as an undefined term and adopting the basic property as an axiom—since this property is the only significant fact about ordered pairs, there is not much point worrying about what an ordered pair “really” is. Those who find this treatment satisfactory need read no further.",
+          "sourceSha256": "973fda564179e0bd4d471884cef9910add8e1a7fb69847355920dcc8c86d8ba5",
+          "translation": "处理有序对最方便的办法，是直接把 $(a,b)$ 作为一个未定义术语引入，并把这一基本性质作为公理——由于这个性质是关于有序对唯一重要的事实，纠缠有序对“究竟”是什么并没有多大意义。觉得这种处理方式已经令人满意的读者，无须再往下读。"
+        },
+        {
+          "id": "p54-b5",
+          "source": "The rest of this short appendix is for the benefit of those readers who will feel uncomfortable unless ordered pairs are somehow defined so that this basic property becomes a theorem. There is no point in restricting our attention to ordered pairs of numbers; it is just as reasonable, and just as important, to have available the notion of an ordered pair of any two mathematical objects. This means that our definition ought to involve only concepts common to all branches of mathematics. The one common concept which pervades all areas of mathematics is that of a set, and ordered pairs (like everything else in mathematics) can be defined in this context; an ordered pair will turn out to be a set of a rather special sort.",
+          "sourceSha256": "d6da82a307d533a3169be4e40b653fb51a96d0882af8fd66b2e6d935b566e73a",
+          "translation": "本篇简短附录的其余部分，是为这样的读者准备的：除非有序对得到某种定义，使上述基本性质成为定理，否则他们就不能安心。没有必要把注意力限制在数的有序对上；拥有任意两个数学对象的有序对这一概念，同样合理，也同样重要。这意味着我们的定义应当只涉及数学各分支共有的概念。贯穿所有数学领域的一个共同概念就是集合；有序对（和数学中的其他一切一样）可以在这个框架内定义：有序对将成为一种相当特殊的集合。"
+        },
+        {
+          "id": "p54-b6",
+          "source": "The set $\\{a,b\\}$, containing the two elements $a$ and $b$, is an obvious first choice, but will not do as a definition for $(a,b)$, because there is no way of determining from $\\{a,b\\}$ which of $a$ or $b$ is meant to be the first element. A more promising candidate is the rather startling set:",
+          "sourceSha256": "ffc9a2583ef08009d0f86d3d58a03f7079c00b6171d511da69696404853d3269",
+          "translation": "包含 $a$ 和 $b$ 两个元素的集合 $\\{a,b\\}$，显然是第一个可能的选择，但它不能用来定义 $(a,b)$，因为从 $\\{a,b\\}$ 中无法判断 $a$ 和 $b$ 究竟谁应是第一元素。一个更有希望的候选，是下面这个颇令人惊讶的集合："
+        },
+        {
+          "id": "p54-b7",
+          "source": "$$\\{\\{a\\},\\{a,b\\}\\}.$$",
+          "sourceSha256": "93cf3b07b27d7672272ba1ec217109ddcec6df8ac256a96ec3d1708bce1c9eaf"
+        },
+        {
+          "id": "p54-b8",
+          "source": "This set has two members, both of which are *themselves* sets; one member is the set $\\{a\\}$, containing the single member $a$, the other is the set $\\{a,b\\}$. Shocking as it may seem, we are going to define $(a,b)$ to be this set. The justification for this choice is given by the theorem immediately following the definition—the definition works, and there really isn’t anything else worth saying.",
+          "sourceSha256": "c16908d4f47ff95aff79ebb26f91fdd346d539f6235e05b55e90aed3c63498f9",
+          "translation": "这个集合有两个成员，它们*本身*都是集合：一个是只包含成员 $a$ 的集合 $\\{a\\}$，另一个是集合 $\\{a,b\\}$。尽管看起来令人惊讶，我们还是要把 $(a,b)$ 定义为这个集合。紧接定义之后的定理，将说明这种选择的合理性——这个定义行得通，此外确实没有什么值得多说的。"
+        },
+        {
+          "id": "p54-b9",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p54-b10",
+          "source": "$$\\mathbf{(a,b)}=\\{\\{a\\},\\{a,b\\}\\}.$$",
+          "sourceSha256": "eddea5f13aa95ba7cad6de6b62b941194dc6a6d9c9e0e10346035e5a6e5f93f8"
+        },
+        {
+          "id": "p54-b11",
+          "source": "**THEOREM 1** If $(a,b)=(c,d)$, then $a=c$ and $b=d$.",
+          "sourceSha256": "5bc7139f9243c0c6a287008319d0e8893bae7e7b9b85e641b4a205e1da4523f6",
+          "translation": "**定理 1** 如果 $(a,b)=(c,d)$，那么 $a=c$ 且 $b=d$。"
+        },
+        {
+          "id": "p54-b12",
+          "source": "**PROOF** The hypothesis means that",
+          "sourceSha256": "0d99bcb8d88984ee2038fb424b99e91f04c820c512e8becc1fbe5f5893271ef5",
+          "translation": "**证明** 题设的含义是"
+        },
+        {
+          "id": "p54-b13",
+          "source": "$$\\{\\{a\\},\\{a,b\\}\\}=\\{\\{c\\},\\{c,d\\}\\}.$$",
+          "sourceSha256": "49d7d75ed56e6295b96094c8b54d483327b8f8f57b963b4383d5d9e25c1b72b0"
+        },
+        {
+          "id": "p54-b14",
+          "source": "Now $\\{\\{a\\},\\{a,b\\}\\}$ contains just two members, $\\{a\\}$ and $\\{a,b\\}$; and $a$ is the only common element of these two members of $\\{\\{a\\},\\{a,b\\}\\}$. Similarly, $c$ is the unique",
+          "sourceSha256": "c2944a0e985016b05a1c43d8fb58343c14e3f04261703a100248cda862fc275b",
+          "translation": "现在，$\\{\\{a\\},\\{a,b\\}\\}$ 只包含两个成员：$\\{a\\}$ 和 $\\{a,b\\}$；而 $a$ 是 $\\{\\{a\\},\\{a,b\\}\\}$ 的这两个成员唯一共有的元素。类似地，$c$ 是"
+        }
+      ]
+    },
+    {
+      "printed": 55,
+      "sourceSha256": "7f25ac305c87d7e9ec96fa50b04fd2b925b935358e98a264ce87be4752023ff7",
+      "blocks": [
+        {
+          "id": "p55-b1",
+          "source": "common member of both members of $\\{\\{c\\},\\{c,d\\}\\}$. Therefore $a=c$. We therefore have",
+          "sourceSha256": "97d070ebf8f4c3ed86e65b84b1950229f5e9123ea0c6fb9789ef316f2fa6b0b5",
+          "translation": "$\\{\\{c\\},\\{c,d\\}\\}$ 的两个成员唯一共有的元素。因此 $a=c$。于是有"
+        },
+        {
+          "id": "p55-b2",
+          "source": "$$\\{\\{a\\},\\{a,b\\}\\}=\\{\\{a\\},\\{a,d\\}\\},$$",
+          "sourceSha256": "e92c6079fc4ba1bd1fa4187e383f78d3ba6056464fe765cf144f63f84ec59d74"
+        },
+        {
+          "id": "p55-b3",
+          "source": "and only the proof that $b=d$ remains. It is convenient to distinguish 2 cases.",
+          "sourceSha256": "38a4c8b3212a31abb0f70c3ac4267e8a2440ae373a32fb74afcb71c4ab5361d6",
+          "translation": "现在只剩下证明 $b=d$。分成两种情况比较方便。"
+        },
+        {
+          "id": "p55-b4",
+          "source": "*Case 1.* $b=a$. In this case, $\\{a,b\\}=\\{a\\}$, so the set $\\{\\{a\\},\\{a,b\\}\\}$ really has only one member, namely, $\\{a\\}$. The same must be true of $\\{\\{a\\},\\{a,d\\}\\}$, so $\\{a,d\\}=\\{a\\}$, which implies that $d=a=b$.",
+          "sourceSha256": "a9ddc538d5a5fa2da2591b91e85bb77ded80dce2a299f5f3f7dfa7b3882c1517",
+          "translation": "*情形 1。* $b=a$。此时 $\\{a,b\\}=\\{a\\}$，所以集合 $\\{\\{a\\},\\{a,b\\}\\}$ 实际上只有一个成员，即 $\\{a\\}$。$\\{\\{a\\},\\{a,d\\}\\}$ 也必须如此，因此 $\\{a,d\\}=\\{a\\}$，这就意味着 $d=a=b$。"
+        },
+        {
+          "id": "p55-b5",
+          "source": "*Case 2.* $b\\ne a$. In this case, $b$ is in one member of $\\{\\{a\\},\\{a,b\\}\\}$ but not in the other. It must therefore be true that $b$ is in one member of $\\{\\{a\\},\\{a,d\\}\\}$ but not in the other. This can happen only if $b$ is in $\\{a,d\\}$, but $b$ is not in $\\{a\\}$; thus $b=a$ or $b=d$, but $b\\ne a$; so $b=d$. $\\blacksquare$",
+          "sourceSha256": "4d7fe2a13a3ecf455e99d3675d508f12107704a9625d6dc55fb56d1661be83a4",
+          "translation": "*情形 2。* $b\\ne a$。此时 $b$ 属于 $\\{\\{a\\},\\{a,b\\}\\}$ 的一个成员，而不属于另一个。因此，$b$ 也必须属于 $\\{\\{a\\},\\{a,d\\}\\}$ 的一个成员，而不属于另一个。只有在 $b$ 属于 $\\{a,d\\}$、但 $b$ 不属于 $\\{a\\}$ 时才可能如此；于是 $b=a$ 或 $b=d$，但 $b\\ne a$；所以 $b=d$。$\\blacksquare$"
+        }
+      ]
+    }
+  ]
+}

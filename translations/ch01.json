@@ -1,0 +1,1959 @@
+{
+  "chapter": 1,
+  "language": "zh-CN",
+  "sourceSha256": "20b6df8a527c26cf08925352acaa251c54a80f70a08aff5f9a5a09aaec0abb9c",
+  "paragraphCount": 198,
+  "pages": [
+    {
+      "printed": 3,
+      "sourceSha256": "4d62d5d4784df9f1cf21664d44de5868ebe21f0d1050e2fe0b41af9c68853e14",
+      "blocks": [
+        {
+          "id": "p3-b1",
+          "source": "# CHAPTER 1  BASIC PROPERTIES OF NUMBERS",
+          "sourceSha256": "b33f9a82dcd3c321363cdda84b251f5a7d982db88c48ed133b5bb811d686591c",
+          "translation": "# 第 1 章　数的基本性质"
+        },
+        {
+          "id": "p3-b2",
+          "source": "The title of this chapter expresses in a few words the mathematical knowledge required to read this book. In fact, this short chapter is simply an explanation of what is meant by the “basic properties of numbers,” all of which—addition and multiplication, subtraction and division, solutions of equations and inequalities, factoring and other algebraic manipulations—are already familiar to us. Nevertheless, this chapter is not a review. Despite the familiarity of the subject, the survey we are about to undertake will probably seem quite novel; it does not aim to present an extended review of old material, but to condense this knowledge into a few simple and obvious properties of numbers. Some may even seem too obvious to mention, but a surprising number of diverse and important facts turn out to be consequences of the ones we shall emphasize.",
+          "sourceSha256": "dd7f4f66705b1483d0da219743ac02676260616a70c6e2ae5032516536e56eb2",
+          "translation": "本章的标题用寥寥数语概括了阅读本书所需的数学知识。实际上，这短短的一章只是解释所谓的“数的基本性质”究竟是什么意思；这些性质所涉及的加法与乘法、减法与除法、方程与不等式的求解、因式分解以及其他代数运算，我们都已经很熟悉了。然而，本章并不是复习。尽管内容熟悉，我们即将进行的考察却很可能让你感到新鲜；它的目的不是大篇幅地重温旧知识，而是把这些知识浓缩为数的几条简单而显然的性质。其中有些甚至显得太过显然，似乎不值得一提，但许多种类各异而又重要的事实，竟然都可以由我们将着重讨论的那些性质推出。"
+        },
+        {
+          "id": "p3-b3",
+          "source": "Of the twelve properties which we shall study in this chapter, the first nine are concerned with the fundamental operations of addition and multiplication. For the moment we consider only addition: this operation is performed on a pair of numbers—the sum $a+b$ exists for any two given numbers $a$ and $b$ (which may possibly be the same number, of course). It might seem reasonable to regard addition as an operation which can be performed on several numbers at once, and consider the sum $a_1+\\cdots+a_n$ of $n$ numbers $a_1,\\ldots,a_n$ as a basic concept. It is more convenient, however, to consider addition of pairs of numbers only, and to define other sums in terms of sums of this type. For the sum of three numbers $a$, $b$, and $c$, this may be done in two different ways. One can first add $b$ and $c$, obtaining $b+c$, and then add $a$ to this number, obtaining $a+(b+c)$; or one can first add $a$ and $b$, and then add the sum $a+b$ to $c$, obtaining $(a+b)+c$. Of course, the two compound sums obtained are equal, and this fact is the very first property we shall list:",
+          "sourceSha256": "fe4badfb0ed32afcdb0c410a6976c5b37b74c1944bf6fc91448b720632df7f2a",
+          "translation": "本章将研究十二条性质，其中前九条涉及加法和乘法这两种基本运算。暂且只考虑加法：这种运算作用于一对数——对任意给定的两个数 $a$ 和 $b$，和 $a+b$ 都存在（当然，这两个数也可以相同）。把加法看作可以同时作用于几个数的运算，并把 $n$ 个数 $a_1,\\ldots,a_n$ 的和 $a_1+\\cdots+a_n$ 当作基本概念，似乎很合理。不过，只考虑两个数的加法，再用这种和来定义其他的和，会更方便。三个数 $a$、$b$、$c$ 的和可以用两种不同的方式来定义。可以先把 $b$ 和 $c$ 相加，得到 $b+c$，再把 $a$ 加到这个数上，得到 $a+(b+c)$；也可以先把 $a$ 和 $b$ 相加，再把和 $a+b$ 与 $c$ 相加，得到 $(a+b)+c$。当然，所得到的这两个复合的和相等，而这正是我们要列出的第一条性质："
+        },
+        {
+          "id": "p3-b4",
+          "source": "(P1) If $a$, $b$, and $c$ are any numbers, then",
+          "sourceSha256": "79475c495bb3e639230492c53bec0e249264030056176deb0cf8a42ad5445779",
+          "translation": "(P1) 若 $a$、$b$、$c$ 是任意的数，则"
+        },
+        {
+          "id": "p3-b5",
+          "source": "$$a+(b+c)=(a+b)+c.$$",
+          "sourceSha256": "381c6c16bd70e94858dfcde7d5146548e0949c2628a995aa89bfebeb3b35f46f"
+        },
+        {
+          "id": "p3-b6",
+          "source": "The statement of this property clearly renders a separate concept of the sum of three numbers superfluous; we simply agree that $a+b+c$ denotes the number $a+(b+c)=(a+b)+c$. Addition of four numbers requires similar, though slightly more involved, considerations. The symbol $a+b+c+d$ is defined to mean",
+          "sourceSha256": "2cd42781c221a629f51248bcccc0e629c4d333bf6c4c652d6a06ce6e69fd9a1a",
+          "translation": "有了这条性质，显然就无须为三个数的和另立一个概念；我们只需约定，$a+b+c$ 表示数 $a+(b+c)=(a+b)+c$。四个数相加需要作类似但稍微复杂一些的考虑。符号 $a+b+c+d$ 定义为"
+        },
+        {
+          "id": "p3-b7",
+          "source": "$$\\begin{array}{rcl}\n &(1)&((a+b)+c)+d,\\\\\n\\text{or}&(2)&(a+(b+c))+d,\\\\\n\\text{or}&(3)&a+((b+c)+d),\\\\\n\\text{or}&(4)&a+(b+(c+d)),\\\\\n\\text{or}&(5)&(a+b)+(c+d).\n\\end{array}$$",
+          "sourceSha256": "9a1ce97a4e075412ad14a5f1256a991bd7bfc54a3fd60846a5336b92662f41ce"
+        }
+      ]
+    },
+    {
+      "printed": 4,
+      "sourceSha256": "0738d827b33a03066110997e76960f4588de6ed6be2a415e2868edc7bbf9891b",
+      "blocks": [
+        {
+          "id": "p4-b1",
+          "source": "This definition is unambiguous since these numbers are all equal. Fortunately, *this* fact need not be listed separately, since it follows from the property P1 already listed. For example, we know from P1 that",
+          "sourceSha256": "10f80d9f9de70280e42a98d88f285d16281a951f4a459ca665f5ac6e1986698c",
+          "translation": "这个定义没有歧义，因为这些数都相等。幸运的是，*这一*事实不必另行列出，因为它可以从已经列出的性质 P1 推出。例如，由 P1 我们知道"
+        },
+        {
+          "id": "p4-b2",
+          "source": "$$(a+b)+c=a+(b+c),$$",
+          "sourceSha256": "c2c6f462af2f5188b4d032b1ee04a37b83398535238a0bd9d623ea8df407207d"
+        },
+        {
+          "id": "p4-b3",
+          "source": "and it follows immediately that (1) and (2) are equal. The equality of (2) and (3) is a direct consequence of P1, although this may not be apparent at first sight (one must let $b+c$ play the role of $b$ in P1, and $d$ the role of $c$). The equalities $(3)=(4)=(5)$ are also simple to prove.",
+          "sourceSha256": "fa212a2bc6bc9f02886bae407ba65b3460ff4fa2895515a323fc2ddff94c0dd6",
+          "translation": "于是立即得到 (1) 和 (2) 相等。(2) 和 (3) 相等也是 P1 的直接推论，尽管乍看之下可能并不明显（必须让 $b+c$ 在 P1 中充当 $b$，让 $d$ 充当 $c$）。等式 $(3)=(4)=(5)$ 也很容易证明。"
+        },
+        {
+          "id": "p4-b4",
+          "source": "It is probably obvious that an appeal to P1 will also suffice to prove the equality of the 14 possible ways of summing five numbers, but it may not be so clear how we can reasonably arrange a proof that this is so without actually listing these 14 sums. Such a procedure is feasible, but would soon cease to be if we considered collections of six, seven, or more numbers; it would be totally inadequate to prove the equality of all possible sums of an arbitrary finite collection of numbers $a_1,\\ldots,a_n$. This fact may be taken for granted, but for those who would like to worry about the proof (and it is worth worrying about once) a reasonable approach is outlined in Problem 24. Henceforth, we shall usually make a tacit appeal to the results of this problem and write sums $a_1+\\cdots+a_n$ with a blithe disregard for the arrangement of parentheses.",
+          "sourceSha256": "c3c3f81b8f26aee66f519db2f1e12d6fd91873ffe532d2bbbcd8ec6e3cf2ba7f",
+          "translation": "借助 P1 同样足以证明五个数的十四种可能求和方式都相等，这大概是显然的；不过，怎样不实际列出这十四个和，就合理地组织一个证明，可能不那么清楚。这种逐一列举的办法还算可行，但若考虑六个、七个或更多的数，很快就行不通了；若要证明任意有限多个数 $a_1,\\ldots,a_n$ 的所有可能求和方式都相等，它就完全不够用了。这个事实可以直接接受；不过，对于想认真考虑其证明的人（这确实值得认真考虑一次），习题 24 概述了一种合理的方法。今后，我们通常会默认使用这道题的结论，写出和 $a_1+\\cdots+a_n$，而不再费心安排括号。"
+        },
+        {
+          "id": "p4-b5",
+          "source": "The number 0 has one property so important that we list it next:",
+          "sourceSha256": "f3743fea335200e7954ffd7ad82085a5079d8f7ca551adefd83ca9d97329bb01",
+          "translation": "数 0 有一条十分重要的性质，我们接着把它列出："
+        },
+        {
+          "id": "p4-b6",
+          "source": "(P2) If $a$ is any number, then",
+          "sourceSha256": "ffd68d33a6189f32359c5ba3b8c88e478923d8e192eaaf2cd8d319e85b220797",
+          "translation": "(P2) 若 $a$ 是任意的数，则"
+        },
+        {
+          "id": "p4-b7",
+          "source": "$$a+0=0+a=a.$$",
+          "sourceSha256": "60933f7b5976eb6a1c591a59078a01b11e05650a3d067293c247ddcd2f048518"
+        },
+        {
+          "id": "p4-b8",
+          "source": "An important role is also played by 0 in the third property of our list:",
+          "sourceSha256": "93407c8fb1a86aa1e673206c991952e944df40d300f96a22f995e26b284b1a47",
+          "translation": "在我们列出的第三条性质中，0 也起着重要作用："
+        },
+        {
+          "id": "p4-b9",
+          "source": "(P3) For every number $a$, there is a number $-a$ such that",
+          "sourceSha256": "75884aa938f688a11c18eb9b00000c54b53396431f9e4291902c662410d002a3",
+          "translation": "(P3) 对每一个数 $a$，都存在一个数 $-a$，使得"
+        },
+        {
+          "id": "p4-b10",
+          "source": "$$a+(-a)=(-a)+a=0.$$",
+          "sourceSha256": "9a54b39de81d707414d4ebc2a672f62c0852371d73fadb73c7e3dade7cd44707"
+        },
+        {
+          "id": "p4-b11",
+          "source": "Property P2 ought to represent a distinguishing characteristic of the number 0, and it is comforting to note that we are already in a position to prove this. Indeed, if a number $x$ satisfies",
+          "sourceSha256": "804feb52f779a0c89f597f8cd262ae02349d2116433c804b561fab743d4d0c4d",
+          "translation": "性质 P2 应当能够把数 0 与其他数区别开来；令人欣慰的是，我们已经能够证明这一点。事实上，如果一个数 $x$ 满足"
+        },
+        {
+          "id": "p4-b12",
+          "source": "$$a+x=a$$",
+          "sourceSha256": "d42ddcf7decf2b8aac77aacd9ffcc0c20ddb61917e9ef0c8c3d525fe93bec1ae"
+        },
+        {
+          "id": "p4-b13",
+          "source": "for any one number $a$, then $x=0$ (and consequently this equation also holds for all numbers $a$). The proof of this assertion involves nothing more than subtracting $a$ from both sides of the equation, in other words, adding $-a$ to both sides; as the following detailed proof shows, all three properties P1–P3 must be used to justify this operation.",
+          "sourceSha256": "188a1d68331a87bbb427a781f71de296ecbba79bfc0dabc62bcfe479f121153f",
+          "translation": "其中 $a$ 是任意一个数，那么 $x=0$（因而这个等式也对所有数 $a$ 成立）。证明这一断言只需要在等式两边减去 $a$，换句话说，就是在两边加上 $-a$；下面的详细证明表明，为了说明这个操作的合理性，必须用到 P1—P3 全部三条性质。"
+        },
+        {
+          "id": "p4-b14",
+          "source": "$$\\begin{array}{ll}\n\\text{If}&a+x=a,\\\\\n\\text{then}&(-a)+(a+x)=(-a)+a=0;\\\\\n\\text{hence}&((-a)+a)+x=0;\\\\\n\\text{hence}&0+x=0;\\\\\n\\text{hence}&x=0.\n\\end{array}$$",
+          "sourceSha256": "3d32507a566eb43991832b03b111356daac37be4176017a945eefe2d76d13b46"
+        }
+      ]
+    },
+    {
+      "printed": 5,
+      "sourceSha256": "12c550bbe8c5e8c9a2d64e405e3d49e298334d040733ec62d131049db3408ffd",
+      "blocks": [
+        {
+          "id": "p5-b1",
+          "source": "As we have just hinted, it is convenient to regard subtraction as an operation derived from addition: we consider $a-b$ to be an abbreviation for $a+(-b)$. It is then possible to find the solution of certain simple equations by a series of steps (each justified by P1, P2, or P3) similar to the ones just presented for the equation $a+x=a$. For example:",
+          "sourceSha256": "f75d92f9c9cb21a4a75f9f9a73a437a199b0c0fa5c38200750e488f0f54c124a",
+          "translation": "正如刚才所暗示的，把减法看作由加法导出的运算很方便：我们把 $a-b$ 看作 $a+(-b)$ 的简写。这样，就可以用一连串步骤来求某些简单方程的解，每一步都由 P1、P2 或 P3 说明其合理性，正如刚才对方程 $a+x=a$ 所做的那样。例如："
+        },
+        {
+          "id": "p5-b2",
+          "source": "$$\\begin{array}{ll}\n\\text{If}&x+3=5,\\\\\n\\text{then}&(x+3)+(-3)=5+(-3);\\\\\n\\text{hence}&x+(3+(-3))=5-3=2;\\\\\n\\text{hence}&x+0=2;\\\\\n\\text{hence}&x=2.\n\\end{array}$$",
+          "sourceSha256": "dbeaf506a39919ef0b7d06cead667ebb170a3d5ca670041d178994579d47517d"
+        },
+        {
+          "id": "p5-b3",
+          "source": "Naturally, such elaborate solutions are of interest only until you become convinced that they can always be supplied. In practice, it is usually just a waste of time to solve an equation by indicating so explicitly the reliance on properties P1, P2, and P3 (or any of the further properties we shall list).",
+          "sourceSha256": "2f4a5fd505503941293d3ee7a4ad4a7308a961adfe5df70c69bc9f816e52acd3",
+          "translation": "当然，这样详尽的解法只有在你尚未确信它们总能被补写出来时才有意义。在实际操作中，解方程时如此明确地指出每一步对性质 P1、P2、P3（或我们还将列出的其他性质）的依赖，通常只是浪费时间。"
+        },
+        {
+          "id": "p5-b4",
+          "source": "Only one other property of addition remains to be listed. When considering the sums of three numbers $a$, $b$, and $c$, only two sums were mentioned: $(a+b)+c$ and $a+(b+c)$. Actually, several other arrangements are obtained if the order of $a$, $b$, and $c$ is changed. That these sums are all equal depends on",
+          "sourceSha256": "abdc7edd2113c077d3e34b3eceb76dedc44e8c9b76d46df0422f3e0413959c21",
+          "translation": "加法只剩下一条性质有待列出。考虑三个数 $a$、$b$、$c$ 的和时，我们只提到了 $(a+b)+c$ 和 $a+(b+c)$ 这两个和。实际上，改变 $a$、$b$、$c$ 的次序，还会得到其他几种排列。这些和全都相等，依靠的是"
+        },
+        {
+          "id": "p5-b5",
+          "source": "(P4) If $a$ and $b$ are any numbers, then",
+          "sourceSha256": "a16d68437e67d5124f68dc52f6f83c346c9a77428c9198731241abb763dd7089",
+          "translation": "(P4) 若 $a$ 和 $b$ 是任意的数，则"
+        },
+        {
+          "id": "p5-b6",
+          "source": "$$a+b=b+a.$$",
+          "sourceSha256": "b014fa6b018f8247a6ecef81976b24a726bc3e84c882e4954a2cb34a976303c2"
+        },
+        {
+          "id": "p5-b7",
+          "source": "The statement of P4 is meant to emphasize that although the operation of addition of pairs of numbers might conceivably depend on the order of the two numbers, in fact it does not. It is helpful to remember that not all operations are so well behaved. For example, subtraction does not have this property: usually $a-b\\ne b-a$. In passing we might ask just when $a-b$ does equal $b-a$, and it is amusing to discover how powerless we are if we rely only on properties P1–P4 to justify our manipulations. Algebra of the most elementary variety shows that $a-b=b-a$ only when $a=b$. Nevertheless, it is impossible to derive this fact from properties P1–P4; it is instructive to examine the elementary algebra carefully and determine which step(s) cannot be justified by P1–P4. We will indeed be able to justify all steps in detail when a few more properties are listed. Oddly enough, however, the crucial property involves multiplication.",
+          "sourceSha256": "d0c6393dd555b565e8d8ccda5db7b17093b44123f9a73b811db875d2111b4d34",
+          "translation": "列出 P4，是为了强调：虽然两个数的加法运算在设想中可能依赖这两个数的先后次序，但实际上并不依赖。记住并非所有运算都有这样的好性质，是很有帮助的。例如，减法就没有这条性质：通常 $a-b\\ne b-a$。顺便可以问，究竟什么时候 $a-b$ 等于 $b-a$？有趣的是，如果只靠 P1—P4 来说明运算的合理性，我们竟会如此无能为力。最初等的代数表明，只有当 $a=b$ 时才有 $a-b=b-a$。然而，这个事实不可能从 P1—P4 推出；仔细检查这段初等代数推理，找出哪些步骤无法由 P1—P4 说明，是很有教益的。再列出几条性质后，我们确实能够逐步给出详细依据。不过，有些出人意料的是，关键性质涉及乘法。"
+        },
+        {
+          "id": "p5-b8",
+          "source": "The basic properties of multiplication are fortunately so similar to those for addition that little comment will be needed; both the meaning and the consequences should be clear. (As in elementary algebra, the product of $a$ and $b$ will be denoted by $a\\cdot b$, or simply $ab$.)",
+          "sourceSha256": "2f165a04f342194913cccf8a8bf70102ea6e0c4a7a2a23fd0cb07de74b2029d1",
+          "translation": "幸运的是，乘法的基本性质与加法的基本性质十分相似，几乎不需要说明；它们的含义和推论都应当很清楚。（同初等代数一样，$a$ 与 $b$ 的积记作 $a\\cdot b$，或简记为 $ab$。）"
+        },
+        {
+          "id": "p5-b9",
+          "source": "(P5) If $a$, $b$, and $c$ are any numbers, then",
+          "sourceSha256": "7ff8ca4794be1a7a6283275063dfb97c35f52197169b022b9ef50c7784053341",
+          "translation": "(P5) 若 $a$、$b$、$c$ 是任意的数，则"
+        },
+        {
+          "id": "p5-b10",
+          "source": "$$a\\cdot(b\\cdot c)=(a\\cdot b)\\cdot c.$$",
+          "sourceSha256": "d41521ada6bb6560c477d1770c6225cb8683cfb21270ffceba5b07da70bfd522"
+        },
+        {
+          "id": "p5-b11",
+          "source": "(P6) If $a$ is any number, then",
+          "sourceSha256": "ead379fd23ec50032096e269ea7a2b0feb88412719aec039c005190c24b27179",
+          "translation": "(P6) 若 $a$ 是任意的数，则"
+        },
+        {
+          "id": "p5-b12",
+          "source": "$$a\\cdot1=1\\cdot a=a.$$",
+          "sourceSha256": "d45894b68c959084a36b28d6c668def1d28d6618bed4c56a259103b582e6684b"
+        }
+      ]
+    },
+    {
+      "printed": 6,
+      "sourceSha256": "17f3ce069a8a90bbeba295066a3e095d9955ef0a9f8a912f5953e56d14c0bc09",
+      "blocks": [
+        {
+          "id": "p6-b1",
+          "source": "Moreover, $1\\ne0$.",
+          "sourceSha256": "0a9e05d76e8814130754e9eadb531ace6ded7246ea4c9921ee646047b0a1be47",
+          "translation": "此外，$1\\ne0$。"
+        },
+        {
+          "id": "p6-b2",
+          "source": "(The assertion that $1\\ne0$ may seem a strange fact to list, but we have to list it, because there is no way it could possibly be proved on the basis of the other properties listed—these properties would all hold if there were only one number, namely, 0.)",
+          "sourceSha256": "66bcadf5eb68ede92e8f92dfb3ab42ccc741d574f6898acbeb0d202be98316e4",
+          "translation": "（把 $1\\ne0$ 这个断言列出来，或许显得奇怪，但我们必须列出它，因为凭其他已经列出的性质，根本不可能证明它——假如只有一个数，即 0，那些性质仍会全部成立。）"
+        },
+        {
+          "id": "p6-b3",
+          "source": "(P7) For every number $a\\ne0$, there is a number $a^{-1}$ such that",
+          "sourceSha256": "978f0e404397ab559b6167e6848025dc7b5a275cc427ba69689c728183170a26",
+          "translation": "(P7) 对每一个数 $a\\ne0$，都存在一个数 $a^{-1}$，使得"
+        },
+        {
+          "id": "p6-b4",
+          "source": "$$a\\cdot a^{-1}=a^{-1}\\cdot a=1.$$",
+          "sourceSha256": "9d211cbf91537097d2d78ca7f1c27ec61e36f6f8faae6260a277b1edecf02ff6"
+        },
+        {
+          "id": "p6-b5",
+          "source": "(P8) If $a$ and $b$ are any numbers, then",
+          "sourceSha256": "0a994eba5127e06a197b905f2a7c8897d10da8ea30f5ea264183ad3a8cbfebb7",
+          "translation": "(P8) 若 $a$ 和 $b$ 是任意的数，则"
+        },
+        {
+          "id": "p6-b6",
+          "source": "$$a\\cdot b=b\\cdot a.$$",
+          "sourceSha256": "5cccba1419a265199850a20d211cf3519f28798855314b7d9ccfdaf8cfed3523"
+        },
+        {
+          "id": "p6-b7",
+          "source": "One detail which deserves emphasis is the appearance of the condition $a\\ne0$ in P7. This condition is quite necessary; since $0\\cdot b=0$ for all numbers $b$, there is *no* number $0^{-1}$ satisfying $0\\cdot0^{-1}=1$. This restriction has an important consequence for division. Just as subtraction was defined in terms of addition, so division is defined in terms of multiplication: The symbol $a/b$ means $a\\cdot b^{-1}$. Since $0^{-1}$ is meaningless, $a/0$ is also meaningless—division by 0 is *always* undefined.",
+          "sourceSha256": "b29d39d84d394f1b96d431122eaa3d82a7e16fd391267f0478a146623eee541f",
+          "translation": "一个值得强调的细节是 P7 中出现了条件 $a\\ne0$。这个条件完全必要；因为对所有数 $b$ 都有 $0\\cdot b=0$，所以*不存在*满足 $0\\cdot0^{-1}=1$ 的数 $0^{-1}$。这个限制对除法有重要影响。正如减法通过加法来定义，除法也通过乘法来定义：符号 $a/b$ 的意思是 $a\\cdot b^{-1}$。既然 $0^{-1}$ 没有意义，$a/0$ 也就没有意义——除以 0 *始终*是没有定义的。"
+        },
+        {
+          "id": "p6-b8",
+          "source": "Property P7 has two important consequences. If $a\\cdot b=a\\cdot c$, it does not necessarily follow that $b=c$; for if $a=0$, then both $a\\cdot b$ and $a\\cdot c$ are 0, no matter what $b$ and $c$ are. However, if $a\\ne0$, then $b=c$; this can be deduced from P7 as follows:",
+          "sourceSha256": "71de5935434a9259332295d2a8b78e5587f0eb555a00246060ad589f01503cbf",
+          "translation": "性质 P7 有两个重要推论。若 $a\\cdot b=a\\cdot c$，并不一定能推出 $b=c$；因为若 $a=0$，则无论 $b$ 和 $c$ 是什么，$a\\cdot b$ 与 $a\\cdot c$ 都是 0。不过，若 $a\\ne0$，那么 $b=c$；可以从 P7 如下推出这一点："
+        },
+        {
+          "id": "p6-b9",
+          "source": "$$\\begin{array}{ll}\n\\text{If}&a\\cdot b=a\\cdot c\\text{ and }a\\ne0,\\\\\n\\text{then}&a^{-1}\\cdot(a\\cdot b)=a^{-1}\\cdot(a\\cdot c);\\\\\n\\text{hence}&(a^{-1}\\cdot a)\\cdot b=(a^{-1}\\cdot a)\\cdot c;\\\\\n\\text{hence}&1\\cdot b=1\\cdot c;\\\\\n\\text{hence}&b=c.\n\\end{array}$$",
+          "sourceSha256": "52259748e21215058cfcc4a9acb739491fa4b1252039c968c62d2c5ea2a6356b"
+        },
+        {
+          "id": "p6-b10",
+          "source": "It is also a consequence of P7 that if $a\\cdot b=0$, then either $a=0$ or $b=0$. In fact,",
+          "sourceSha256": "7c09ee5b718eaa2473f105ff60b55aae2ab41323e638aa7b14870e3ab42e3752",
+          "translation": "P7 还推出：若 $a\\cdot b=0$，则 $a=0$ 或 $b=0$。事实上，"
+        },
+        {
+          "id": "p6-b11",
+          "source": "$$\\begin{array}{ll}\n\\text{if}&a\\cdot b=0\\text{ and }a\\ne0,\\\\\n\\text{then}&a^{-1}\\cdot(a\\cdot b)=0;\\\\\n\\text{hence}&(a^{-1}\\cdot a)\\cdot b=0;\\\\\n\\text{hence}&1\\cdot b=0;\\\\\n\\text{hence}&b=0.\n\\end{array}$$",
+          "sourceSha256": "fab179180b70b1cfabca4f884ed98b99839394f812c576abca72eacd7d4813ea"
+        },
+        {
+          "id": "p6-b12",
+          "source": "(It may happen that $a=0$ and $b=0$ are both true; this possibility is not excluded when we say “either $a=0$ or $b=0$”; in mathematics “or” is always used in the sense of “one or the other, or both.”)",
+          "sourceSha256": "087536f71a4a2bb40cc228c891b4c5e6ea0ebd9391d2ad514d433f6c67e1ad5d",
+          "translation": "（$a=0$ 与 $b=0$ 也可能同时成立；说“$a=0$ 或 $b=0$”时并不排除这种可能；数学中的“或”始终表示“二者之一成立，或者二者都成立”。）"
+        },
+        {
+          "id": "p6-b13",
+          "source": "This latter consequence of P7 is constantly used in the solution of equations. Suppose, for example, that a number $x$ is known to satisfy",
+          "sourceSha256": "847486e4a8a4db16425283fd69d573a1d684b674b3f2cfe03bb32ee95977011f",
+          "translation": "P7 的后一个推论经常用于解方程。例如，假设已知数 $x$ 满足"
+        },
+        {
+          "id": "p6-b14",
+          "source": "$$(x-1)(x-2)=0.$$",
+          "sourceSha256": "a0b08b4256e75884490fcf71f3db3026d3f4804e0297097bd735814b94dbb8c0"
+        },
+        {
+          "id": "p6-b15",
+          "source": "Then it follows that either $x-1=0$ or $x-2=0$; hence $x=1$ or $x=2$.",
+          "sourceSha256": "9588cce679b159706f2c97268b14142afe28d3f6a01d663344ca36ae12ce793c",
+          "translation": "那么可以推出 $x-1=0$ 或 $x-2=0$；所以 $x=1$ 或 $x=2$。"
+        }
+      ]
+    },
+    {
+      "printed": 7,
+      "sourceSha256": "8d9b2488f0b6f7000a066cad8865af5354620cb883ef47a994e95e5252a4f03d",
+      "blocks": [
+        {
+          "id": "p7-b1",
+          "source": "On the basis of the eight properties listed so far it is still possible to prove very little. Listing the next property, which combines the operations of addition and multiplication, will alter this situation drastically.",
+          "sourceSha256": "3877b64089634ad49c8436cf44a93a76836f3984bb675ee1c54f66f7c1fba747",
+          "translation": "仅凭到目前为止列出的八条性质，我们能证明的事情仍然很少。接下来这条性质把加法与乘法联系起来，一旦列出，情况就会大为改观。"
+        },
+        {
+          "id": "p7-b2",
+          "source": "(P9) If $a$, $b$, and $c$ are any numbers, then",
+          "sourceSha256": "d16a750b10767a878fbef163c4ab7fca4792987861f881383ee2a197d3fde3fc",
+          "translation": "(P9) 若 $a$、$b$、$c$ 是任意的数，则"
+        },
+        {
+          "id": "p7-b3",
+          "source": "$$a\\cdot(b+c)=a\\cdot b+a\\cdot c.$$",
+          "sourceSha256": "09bb6b6501e8248cc213efdd32872ec986198bd8633f28aa554f712fde672e01"
+        },
+        {
+          "id": "p7-b4",
+          "source": "(Notice that the equation $(b+c)\\cdot a=b\\cdot a+c\\cdot a$ is also true, by P8.)",
+          "sourceSha256": "4a52ee71b5e242da7885c10e3a2841c5cf963f0c86ed087607af57cd4bfe38c6",
+          "translation": "（注意，由 P8 可知，等式 $(b+c)\\cdot a=b\\cdot a+c\\cdot a$ 也成立。）"
+        },
+        {
+          "id": "p7-b5",
+          "source": "As an example of the usefulness of P9 we will now determine just when $a-b=b-a$:",
+          "sourceSha256": "e3104e40cc7bd6aad199cf3ad548df2530c3a9fde7e53e94981df7b3e17a2fc0",
+          "translation": "作为 P9 用处的一个例子，我们现在来确定究竟什么时候 $a-b=b-a$："
+        },
+        {
+          "id": "p7-b6",
+          "source": "$$\\begin{array}{ll}\n\\text{If}&a-b=b-a,\\\\\n\\text{then}&(a-b)+b=(b-a)+b=b+(b-a);\\\\\n\\text{hence}&a=b+b-a;\\\\\n\\text{hence}&a+a=(b+b-a)+a=b+b.\\\\\n\\text{Consequently}&a\\cdot(1+1)=b\\cdot(1+1),\\\\\n\\text{and therefore}&a=b.\n\\end{array}$$",
+          "sourceSha256": "baec3f5f1a5b14e8c024204be8f87cd3e826044ade6f7bf956e3ed04bc254e43"
+        },
+        {
+          "id": "p7-b7",
+          "source": "A second use of P9 is the justification of the assertion $a\\cdot0=0$ which we have already made, and even used in a proof on page 6 (can you find where?). This fact was not listed as one of the basic properties, even though no proof was offered when it was first mentioned. With P1–P8 alone a proof was not possible, since the number 0 appears only in P2 and P3, which concern addition, while the assertion in question involves multiplication. With P9 the proof is simple, though perhaps not obvious: We have",
+          "sourceSha256": "a62a412eaa281365965059b37487321f8f3288f9217b1fa19a4687dc441da6bb",
+          "translation": "P9 的第二个用途，是为我们已经提出、甚至已经在第 6 页的一个证明中使用过的断言 $a\\cdot0=0$ 提供依据（你能找出用在哪里了吗？）。这个事实没有列为基本性质之一，尽管第一次提到它时并未给出证明。只凭 P1—P8 无法证明它，因为数 0 只出现在涉及加法的 P2 和 P3 中，而这里的断言却涉及乘法。有了 P9，证明就很简单，虽然未必一眼就能看出：我们有"
+        },
+        {
+          "id": "p7-b8",
+          "source": "$$\\begin{aligned}\na\\cdot0+a\\cdot0&=a\\cdot(0+0)\\\\\n&=a\\cdot0;\n\\end{aligned}$$",
+          "sourceSha256": "ac11477ecce3ab53b7b9dbd22ddb22e4241e30787c3b00a36c10d85b07244e1a"
+        },
+        {
+          "id": "p7-b9",
+          "source": "as we have already noted, this immediately implies (by adding $-(a\\cdot0)$ to both sides) that $a\\cdot0=0$.",
+          "sourceSha256": "3a5440f26d33ddb15a0a5d9ffd8bef59ba540d2b87b836ac9372f8e9a2be066a",
+          "translation": "正如我们已经指出的，这立即推出（在两边加上 $-(a\\cdot0)$ 即可）$a\\cdot0=0$。"
+        },
+        {
+          "id": "p7-b10",
+          "source": "A series of further consequences of P9 may help explain the somewhat mysterious rule that the product of two negative numbers is positive. To begin with, we will establish the more easily acceptable assertion that $(-a)\\cdot b=-(a\\cdot b)$. To prove this, note that",
+          "sourceSha256": "dc37647116b83c7e93f5acf1eed6f0c75db7c00b663468f49a6fdb2fcb88a7a6",
+          "translation": "P9 的一系列进一步推论，可以帮助解释“两负数相乘得正数”这条有些神秘的规则。首先，我们将证明比较容易接受的断言 $(-a)\\cdot b=-(a\\cdot b)$。为此，注意到"
+        },
+        {
+          "id": "p7-b11",
+          "source": "$$\\begin{aligned}\n(-a)\\cdot b+a\\cdot b&=[(-a)+a]\\cdot b\\\\\n&=0\\cdot b\\\\\n&=0.\n\\end{aligned}$$",
+          "sourceSha256": "011cce08a182fe9c0a54916cb9c7b8d4138448858413a4c2d1aa35a619f63b30"
+        },
+        {
+          "id": "p7-b12",
+          "source": "It follows immediately (by adding $-(a\\cdot b)$ to both sides) that $(-a)\\cdot b=-(a\\cdot b)$. Now note that",
+          "sourceSha256": "a491f6eacecdfcd2825cf69d81402f835bc5cccba8b9e6289b35f303b976fa09",
+          "translation": "于是立即得到（在两边加上 $-(a\\cdot b)$）$(-a)\\cdot b=-(a\\cdot b)$。现在注意到"
+        },
+        {
+          "id": "p7-b13",
+          "source": "$$\\begin{aligned}\n(-a)\\cdot(-b)+[-(a\\cdot b)]&=(-a)\\cdot(-b)+(-a)\\cdot b\\\\\n&=(-a)\\cdot[(-b)+b]\\\\\n&=(-a)\\cdot0\\\\\n&=0.\n\\end{aligned}$$",
+          "sourceSha256": "1036b5563a6f189032ce64f9eff6d7895198a2de6a590baf2427cb07b1c321c4"
+        }
+      ]
+    },
+    {
+      "printed": 8,
+      "sourceSha256": "f5a283b94ead69bda2774d6dc5a9874fa07ddbdee2e81567c2c6010e7ecd92fb",
+      "blocks": [
+        {
+          "id": "p8-b1",
+          "source": "Consequently, adding $(a\\cdot b)$ to both sides, we obtain",
+          "sourceSha256": "292cf507a25873c4050c7bb4a669f02011defc6657e2fc4bfa7aaade8ff0ec20",
+          "translation": "因此，在两边加上 $(a\\cdot b)$，得到"
+        },
+        {
+          "id": "p8-b2",
+          "source": "$$(-a)\\cdot(-b)=a\\cdot b.$$",
+          "sourceSha256": "412c6895bc88ec42e9cc2e1c779142ab964898298c9eb726a681ce5d7ccb0712"
+        },
+        {
+          "id": "p8-b3",
+          "source": "The fact that the product of two negative numbers is positive is thus a consequence of P1–P9. In other words, *if we want P1 to P9 to be true, the rule for the product of two negative numbers is forced upon us.*",
+          "sourceSha256": "47eac43d5c1c03bf39e24bff3526d46d5da4ee1dd216246457ea4ef1466a447a",
+          "translation": "这样，两负数相乘得正数就是 P1—P9 的推论。换句话说，*如果我们希望 P1 至 P9 成立，那么两负数相乘的规则就只能如此。*"
+        },
+        {
+          "id": "p8-b4",
+          "source": "The various consequences of P9 examined so far, although interesting and important, do not really indicate the significance of P9; after all, we could have listed each of these properties separately. Actually, P9 is the justification for almost all algebraic manipulations. For example, although we have shown how to solve the equation",
+          "sourceSha256": "60ac9a2ced3ee851cfaaccbecb1d9eda382d2151ee10790f3cd6c303ef547ab1",
+          "translation": "到目前为止考察的 P9 的各种推论，虽然有趣而且重要，却还没有真正显示出 P9 的意义；毕竟，我们本来也可以把这些性质逐条列出。实际上，几乎所有代数运算都以 P9 为依据。例如，虽然我们已经说明怎样解方程"
+        },
+        {
+          "id": "p8-b5",
+          "source": "$$(x-1)(x-2)=0,$$",
+          "sourceSha256": "035aacdfec77f3907e96839a1bc2110afed46abc996ec714ef12ad072a016b2d"
+        },
+        {
+          "id": "p8-b6",
+          "source": "we can hardly expect to be presented with an equation in this form. We are more likely to be confronted with the equation",
+          "sourceSha256": "7a3991b05f0f30db5c8eaf082ea8a276b8a865e9314eef640d4dc4ffcd9e020d",
+          "translation": "但几乎不能指望别人直接把方程写成这种形式交给我们。我们更可能遇到的方程是"
+        },
+        {
+          "id": "p8-b7",
+          "source": "$$x^2-3x+2=0.$$",
+          "sourceSha256": "dfbdd66d140bee4ede8f98e3de601cf9970742caa9edd96c00a974ab26c0c682"
+        },
+        {
+          "id": "p8-b8",
+          "source": "The “factorization” $x^2-3x+2=(x-1)(x-2)$ is really a triple use of P9:",
+          "sourceSha256": "7af55bc111507cbeaf8b29561fd9413e02ab099f0e01d33a320f0b2bd9ee9126",
+          "translation": "“因式分解”$x^2-3x+2=(x-1)(x-2)$，实际上是三次运用 P9："
+        },
+        {
+          "id": "p8-b9",
+          "source": "$$\\begin{aligned}\n(x-1)\\cdot(x-2)&=x\\cdot(x-2)+(-1)\\cdot(x-2)\\\\\n&=x\\cdot x+x\\cdot(-2)+(-1)\\cdot x+(-1)\\cdot(-2)\\\\\n&=x^2+x[(-2)+(-1)]+2\\\\\n&=x^2-3x+2.\n\\end{aligned}$$",
+          "sourceSha256": "c6e7cba203a41d734a642257c2cc2bbf5404189b898ee6eeed1d9ad866434cfb"
+        },
+        {
+          "id": "p8-b10",
+          "source": "A final illustration of the importance of P9 is the fact that this property is actually used every time one multiplies arabic numerals. For example, the calculation",
+          "sourceSha256": "b928af99416475d72109c3dac1e6ab4017a0623b6fa890f283bae87e8eab7b2f",
+          "translation": "最后再举一个例子说明 P9 的重要性：每次把用阿拉伯数字写出的数相乘时，实际上都用到了这条性质。例如，计算"
+        },
+        {
+          "id": "p8-b11",
+          "source": "$$\\begin{array}{r}\n13\\\\\n\\times24\\\\ \\hline\n52\\\\\n26\\phantom{0}\\\\ \\hline\n312\n\\end{array}$$",
+          "sourceSha256": "9c1feed2bd693b20b3f626c9d56319dadbbfc125203ff3ea66f422c082e119ad"
+        },
+        {
+          "id": "p8-b12",
+          "source": "is a concise arrangement for the following equations:",
+          "sourceSha256": "114fc6c67a2750aba42ff4f9584be2a0d776ffd9cfa0b089b3ea17f3bab084c9",
+          "translation": "是把下列等式作了简洁的排列："
+        },
+        {
+          "id": "p8-b13",
+          "source": "$$\\begin{aligned}\n13\\cdot24&=13\\cdot(2\\cdot10+4)\\\\\n&=13\\cdot2\\cdot10+13\\cdot4\\\\\n&=26\\cdot10+52.\n\\end{aligned}$$",
+          "sourceSha256": "c05749a567d220ec462ccadc1d47aa60cfc35dd4b662d6e52897b5cbb5503108"
+        },
+        {
+          "id": "p8-b14",
+          "source": "(Note that moving 26 to the left in the above calculation is the same as writing $26\\cdot10$.) The multiplication $13\\cdot4=52$ uses P9 also:",
+          "sourceSha256": "4cfa2a780fd1b520f86b5f891f08fee40d65091247e15333c1f2cd1ccb7376cb",
+          "translation": "（注意，在上面的计算中把 26 向左移一位，等同于写下 $26\\cdot10$。）乘法 $13\\cdot4=52$ 也用到了 P9："
+        },
+        {
+          "id": "p8-b15",
+          "source": "$$\\begin{aligned}\n13\\cdot4&=(1\\cdot10+3)\\cdot4\\\\\n&=1\\cdot10\\cdot4+3\\cdot4\\\\\n&=4\\cdot10+12\\\\\n&=4\\cdot10+1\\cdot10+2\\\\\n&=(4+1)\\cdot10+2\\\\\n&=5\\cdot10+2\\\\\n&=52.\n\\end{aligned}$$",
+          "sourceSha256": "59867857fd32cad046c63d04af7c3e1aea3216a0641a7b499cc75e8ad947d2fc"
+        }
+      ]
+    },
+    {
+      "printed": 9,
+      "sourceSha256": "dcb5d6f011f7921c95fb6ca92eae4fd0cfa731f762d00f382417456e28eccff9",
+      "blocks": [
+        {
+          "id": "p9-b1",
+          "source": "The properties P1–P9 have descriptive names which are not essential to remember, but which are often convenient for reference. We will take this opportunity to list properties P1–P9 together and indicate the names by which they are commonly designated.",
+          "sourceSha256": "030ad5f983dac2b0502e04837afff88b70fbd81e9b8c7b326f82f13e88eeb87d",
+          "translation": "性质 P1—P9 都有描述性的名称，不必非要记住，但提及时往往很方便。我们借这个机会把 P1—P9 列在一起，并注明它们通常的名称。"
+        },
+        {
+          "id": "p9-b2",
+          "source": "<div class=\"original-laws\">",
+          "sourceSha256": "9f36f979265c74a679aa319c155635a1a03f1d743a538c0781ea8ba04723a0a5"
+        },
+        {
+          "id": "p9-b3",
+          "source": "(P1) (Associative law for addition)",
+          "sourceSha256": "a14b8ee86b6bf8858c4d04d43c5c6295e88ca67298855b2a8ef56b6f6f093625",
+          "translation": "(P1) （加法结合律）"
+        },
+        {
+          "id": "p9-b4",
+          "source": "$$a+(b+c)=(a+b)+c.$$",
+          "sourceSha256": "381c6c16bd70e94858dfcde7d5146548e0949c2628a995aa89bfebeb3b35f46f"
+        },
+        {
+          "id": "p9-b5",
+          "source": "(P2) (Existence of an additive identity)",
+          "sourceSha256": "4f95fb70c63f8de01c59226a0538ba5b7bd165bc76aacc0860dd4dc3bbc61903",
+          "translation": "(P2) （加法单位元的存在性）"
+        },
+        {
+          "id": "p9-b6",
+          "source": "$$a+0=0+a=a.$$",
+          "sourceSha256": "60933f7b5976eb6a1c591a59078a01b11e05650a3d067293c247ddcd2f048518"
+        },
+        {
+          "id": "p9-b7",
+          "source": "(P3) (Existence of additive inverses)",
+          "sourceSha256": "7511b7f0947441e4fa9a13e24decda62458b4cac69e2bb4447b6333d956dacc4",
+          "translation": "(P3) （加法逆元的存在性）"
+        },
+        {
+          "id": "p9-b8",
+          "source": "$$a+(-a)=(-a)+a=0.$$",
+          "sourceSha256": "9a54b39de81d707414d4ebc2a672f62c0852371d73fadb73c7e3dade7cd44707"
+        },
+        {
+          "id": "p9-b9",
+          "source": "(P4) (Commutative law for addition)",
+          "sourceSha256": "04b7bb41648c22d685dbedc0e890207abd822cdac9f17cc44b4cdbd697c1761f",
+          "translation": "(P4) （加法交换律）"
+        },
+        {
+          "id": "p9-b10",
+          "source": "$$a+b=b+a.$$",
+          "sourceSha256": "b014fa6b018f8247a6ecef81976b24a726bc3e84c882e4954a2cb34a976303c2"
+        },
+        {
+          "id": "p9-b11",
+          "source": "(P5) (Associative law for multiplication)",
+          "sourceSha256": "46cd06332f3d63ea36f5d79475eab9defb0643d0d2365de32f9c2d955f49344a",
+          "translation": "(P5) （乘法结合律）"
+        },
+        {
+          "id": "p9-b12",
+          "source": "$$a\\cdot(b\\cdot c)=(a\\cdot b)\\cdot c.$$",
+          "sourceSha256": "d41521ada6bb6560c477d1770c6225cb8683cfb21270ffceba5b07da70bfd522"
+        },
+        {
+          "id": "p9-b13",
+          "source": "(P6) (Existence of a multiplicative identity)",
+          "sourceSha256": "6d45d63f0d57770358020ac7b3f8e49e1974be331b41bbd436d566c4cf6e232e",
+          "translation": "(P6) （乘法单位元的存在性）"
+        },
+        {
+          "id": "p9-b14",
+          "source": "$$a\\cdot1=1\\cdot a=a;\\quad1\\ne0.$$",
+          "sourceSha256": "46e5a2969b07410709d8eb68f7d889ddd22e17ac44686e9bf6d07b6e43ed6045"
+        },
+        {
+          "id": "p9-b15",
+          "source": "(P7) (Existence of multiplicative inverses)",
+          "sourceSha256": "c55dd1658cdd95061146a04632dd17db9cdd69812426c48380bd646ced73b877",
+          "translation": "(P7) （乘法逆元的存在性）"
+        },
+        {
+          "id": "p9-b16",
+          "source": "$$a\\cdot a^{-1}=a^{-1}\\cdot a=1,\\text{ for }a\\ne0.$$",
+          "sourceSha256": "9547df76d4995205e06b5cda263d1ddead16ff2dd929e219291cca744a6c3a48"
+        },
+        {
+          "id": "p9-b17",
+          "source": "(P8) (Commutative law for multiplication)",
+          "sourceSha256": "aa0cb7ec58037cc6969087c665a152c0ae1f7e37ba04bebf7032268491047395",
+          "translation": "(P8) （乘法交换律）"
+        },
+        {
+          "id": "p9-b18",
+          "source": "$$a\\cdot b=b\\cdot a.$$",
+          "sourceSha256": "5cccba1419a265199850a20d211cf3519f28798855314b7d9ccfdaf8cfed3523"
+        },
+        {
+          "id": "p9-b19",
+          "source": "(P9) (Distributive law)",
+          "sourceSha256": "b83b7205b6fac89469c0770240460893a5bbba934c0d000358a1a81aec427680",
+          "translation": "(P9) （分配律）"
+        },
+        {
+          "id": "p9-b20",
+          "source": "$$a\\cdot(b+c)=a\\cdot b+a\\cdot c.$$",
+          "sourceSha256": "09bb6b6501e8248cc213efdd32872ec986198bd8633f28aa554f712fde672e01"
+        },
+        {
+          "id": "p9-b21",
+          "source": "</div>",
+          "sourceSha256": "aac32651b10f567c461b9b4f255d6fb1fa6859b5368d8bd9a51af920ab21cf23"
+        },
+        {
+          "id": "p9-b22",
+          "source": "The three basic properties of numbers which remain to be listed are concerned with inequalities. Although inequalities occur rarely in elementary mathematics, they play a prominent role in calculus. The two notions of inequality, $a<b$ ($a$ is less than $b$) and $a>b$ ($a$ is greater than $b$), are intimately related: $a<b$ means the same as $b>a$ (thus $1<3$ and $3>1$ are merely two ways of writing the same assertion). The numbers $a$ satisfying $a>0$ are called **positive**, while those numbers $a$ satisfying $a<0$ are called **negative**. While positivity can thus be defined in terms of $<$, it is possible to reverse the procedure: $a<b$ can be defined to mean that $b-a$ is positive. In fact, it is convenient to consider the collection of all positive numbers, denoted by $P$, as the basic concept, and state all properties in terms of $P$:",
+          "sourceSha256": "f33d914918719663c1ea69c8e36b927c4bc17e2a6707cce80215969b97373ee8",
+          "translation": "尚待列出的三条数的基本性质都与不等式有关。虽然不等式在初等数学中较少出现，却在微积分中占有重要地位。两种不等关系 $a<b$（$a$ 小于 $b$）和 $a>b$（$a$ 大于 $b$）紧密相关：$a<b$ 与 $b>a$ 的含义相同（因此，$1<3$ 和 $3>1$ 只是同一断言的两种写法）。满足 $a>0$ 的数 $a$ 称为**正数**，满足 $a<0$ 的数 $a$ 称为**负数**。虽然这样可以用 $<$ 定义正性，也可以把这个过程反过来：把 $a<b$ 定义为 $b-a$ 是正数。实际上，把全体正数构成的集合记为 $P$，以它为基本概念，并用 $P$ 来陈述所有性质，是很方便的："
+        },
+        {
+          "id": "p9-b23",
+          "source": "(P10) (Trichotomy law) For every number $a$, one and only one of the following holds:",
+          "sourceSha256": "298deee55824beadc41d120b8d78c29d0d5939d6f1f3ec64d4fe907548839753",
+          "translation": "(P10) （三歧律）对每一个数 $a$，下列情况有且仅有一种成立："
+        },
+        {
+          "id": "p9-b24",
+          "source": "$$\\begin{array}{ll}\n\\text{(i)}&a=0,\\\\\n\\text{(ii)}&a\\text{ is in the collection }P,\\\\\n\\text{(iii)}&-a\\text{ is in the collection }P.\n\\end{array}$$",
+          "sourceSha256": "85cc0f545092fe5af9e9e85ea3d5b8d49f1ad657a95e7c77d43c463d212fe19e"
+        },
+        {
+          "id": "p9-b25",
+          "source": "(P11) (Closure under addition) If $a$ and $b$ are in $P$, then $a+b$ is in $P$.",
+          "sourceSha256": "1e1742eadc71098b1c62a79f7351ea7ca6edee0b5bd60423d6fafb802a57733a",
+          "translation": "(P11) （对加法封闭）若 $a$ 和 $b$ 属于 $P$，则 $a+b$ 属于 $P$。"
+        },
+        {
+          "id": "p9-b26",
+          "source": "(P12) (Closure under multiplication) If $a$ and $b$ are in $P$, then $a\\cdot b$ is in $P$.",
+          "sourceSha256": "b9741ab89a4d4a4c2749fa736c1179df3ae747cddcd8f0b470a8a6e9cd34f5f3",
+          "translation": "(P12) （对乘法封闭）若 $a$ 和 $b$ 属于 $P$，则 $a\\cdot b$ 属于 $P$。"
+        }
+      ]
+    },
+    {
+      "printed": 10,
+      "sourceSha256": "b994fe01503eb0f5efa145643c1c9cd85fafa8dac950dcc4a48deaebd091d444",
+      "blocks": [
+        {
+          "id": "p10-b1",
+          "source": "These three properties should be complemented with the following definitions:",
+          "sourceSha256": "69e5d6c583730c302cf0a2ff4b61c98ab79981a0d06eca0e66f57a388815d91e",
+          "translation": "这三条性质还应配以下列定义："
+        },
+        {
+          "id": "p10-b2",
+          "source": "$$\\begin{array}{lll}\na>b&\\text{if}&a-b\\text{ is in }P;\\\\\na<b&\\text{if}&b>a;\\\\\na\\ge b&\\text{if}&a>b\\text{ or }a=b;\\\\\na\\le b&\\text{if}&a<b\\text{ or }a=b.\\!{}^{*}\n\\end{array}$$",
+          "sourceSha256": "9ae2d46ef846c756ee65301fa6437d12e7739bcb0249edfef9f9a15bc8f6a4d4"
+        },
+        {
+          "id": "p10-b3",
+          "source": "Note, in particular, that $a>0$ if and only if $a$ is in $P$.",
+          "sourceSha256": "152562a1aaa9865edd79d6b41a10ee688d496b3f9aa8484b2cd67ae700003dbb",
+          "translation": "特别注意，$a>0$ 当且仅当 $a$ 属于 $P$。"
+        },
+        {
+          "id": "p10-b4",
+          "source": "All the familiar facts about inequalities, however elementary they may seem, are consequences of P10–P12. For example, if $a$ and $b$ are any two numbers, then precisely one of the following holds:",
+          "sourceSha256": "fd98bcd04c651df4a8433effb47d16dd2319deebeeb9fbf97631fc7ee6bbbd93",
+          "translation": "关于不等式的一切熟悉事实，无论看起来多么初等，都是 P10—P12 的推论。例如，若 $a$ 和 $b$ 是任意两个数，则下列情况恰好有一种成立："
+        },
+        {
+          "id": "p10-b5",
+          "source": "$$\\begin{array}{ll}\n\\text{(i)}&a-b=0,\\\\\n\\text{(ii)}&a-b\\text{ is in the collection }P,\\\\\n\\text{(iii)}&-(a-b)=b-a\\text{ is in the collection }P.\n\\end{array}$$",
+          "sourceSha256": "ffed27d9110990cbcd5d9be7987443c7e746c29ada4f08f70345101232b96aa1"
+        },
+        {
+          "id": "p10-b6",
+          "source": "Using the definitions just made, it follows that precisely one of the following holds:",
+          "sourceSha256": "5a6d2190b103b54764ad48b9f22c262460d38783d8f2249737430fb1227667d1",
+          "translation": "根据刚才给出的定义，可以推出下列情况恰好有一种成立："
+        },
+        {
+          "id": "p10-b7",
+          "source": "$$\\begin{array}{ll}\n\\text{(i)}&a=b,\\\\\n\\text{(ii)}&a>b,\\\\\n\\text{(iii)}&b>a.\n\\end{array}$$",
+          "sourceSha256": "3b099f182be67456973f1acca1c8bbe90e62b5b8dbf46e09a712807edcc9fad0"
+        },
+        {
+          "id": "p10-b8",
+          "source": "A slightly more interesting fact results from the following manipulations. If $a<b$, so that $b-a$ is in $P$, then surely $(b+c)-(a+c)$ is in $P$; thus, if $a<b$, then $a+c<b+c$. Similarly, suppose $a<b$ and $b<c$. Then",
+          "sourceSha256": "058350b76c324afed0391d93f60775b1fdb933e008485550b6dee6ff2e153d5e",
+          "translation": "下面的运算会得出一个稍有趣味的事实。若 $a<b$，即 $b-a$ 属于 $P$，那么 $(b+c)-(a+c)$ 当然也属于 $P$；因此，若 $a<b$，则 $a+c<b+c$。类似地，假设 $a<b$ 且 $b<c$。那么"
+        },
+        {
+          "id": "p10-b9",
+          "source": "$$\\begin{array}{ll}\n&b-a\\text{ is in }P,\\\\\n\\text{and}&c-b\\text{ is in }P,\\\\\n\\text{so}&c-a=(c-b)+(b-a)\\text{ is in }P.\n\\end{array}$$",
+          "sourceSha256": "48cfb2904dfec9abaeed785cefe05f6bc39f509371dc30a12fc42a23e749ff23"
+        },
+        {
+          "id": "p10-b10",
+          "source": "This shows that if $a<b$ and $b<c$, then $a<c$. (The two inequalities $a<b$ and $b<c$ are usually written in the abbreviated form $a<b<c$, which has the third inequality $a<c$ almost built in.)",
+          "sourceSha256": "01a8284fa76faec33a6474c01ea0a7e2a1718e0caa00a472fa53a95909906b3d",
+          "translation": "这说明，若 $a<b$ 且 $b<c$，则 $a<c$。（两个不等式 $a<b$ 和 $b<c$ 通常简写为 $a<b<c$，这种写法几乎已经把第三个不等式 $a<c$ 包含在内。）"
+        },
+        {
+          "id": "p10-b11",
+          "source": "The following assertion is somewhat less obvious: If $a<0$ and $b<0$, then $ab>0$. The only difficulty presented by the proof is the unraveling of definitions. The symbol $a<0$ means, by definition, $0>a$, which means $0-a=-a$ is in $P$. Similarly $-b$ is in $P$, and consequently, by P12, $(-a)(-b)=ab$ is in $P$. Thus $ab>0$.",
+          "sourceSha256": "188eeb7a340c2d0d599d4d99cd6e8e90df0d7dc61c6703fb5d0d22d3640ab66e",
+          "translation": "下面的断言稍微不那么显然：若 $a<0$ 且 $b<0$，则 $ab>0$。证明唯一的困难在于把定义逐层展开。根据定义，符号 $a<0$ 的意思是 $0>a$，而这又表示 $0-a=-a$ 属于 $P$。同样，$-b$ 属于 $P$，所以根据 P12，$(-a)(-b)=ab$ 属于 $P$。因此 $ab>0$。"
+        },
+        {
+          "id": "p10-b12",
+          "source": "The fact that $ab>0$ if $a>0$, $b>0$ and also if $a<0$, $b<0$ has one special consequence: $a^2>0$ if $a\\ne0$. Thus squares of nonzero numbers are always positive, and in particular we have proved a result which might have seemed sufficiently elementary to be included in our list of properties: $1>0$ (since $1=1^2$).",
+          "sourceSha256": "7257ef6676b7bd080077a869799ebc82313c04c2f94371015b69466580e314fd",
+          "translation": "当 $a>0$、$b>0$ 时，以及当 $a<0$、$b<0$ 时，都有 $ab>0$；这个事实有一个特别的推论：若 $a\\ne0$，则 $a^2>0$。因此，非零数的平方总为正；尤其是，我们已经证明了一个看起来足够初等、似乎本该列入基本性质的结论：$1>0$（因为 $1=1^2$）。"
+        },
+        {
+          "id": "p10-b13",
+          "source": "<aside class=\"original-footnote\">",
+          "sourceSha256": "a988ce88c87a15fb3986b485f02072e557038b84df66813596e575c7dd6a397f"
+        },
+        {
+          "id": "p10-b14",
+          "source": "\\* There is one slightly perplexing feature of the symbols $\\ge$ and $\\le$. The statements",
+          "sourceSha256": "1f95bf4d81f64f1b37c1b39b68618eb7186c8ab689d645b6f8c5b00683b3aa60",
+          "translation": "\\* 符号 $\\ge$ 和 $\\le$ 有一点稍令人困惑。下面的陈述"
+        },
+        {
+          "id": "p10-b15",
+          "source": "$$\\begin{gathered}\n1+1\\le3\\\\\n1+1\\le2\n\\end{gathered}$$",
+          "sourceSha256": "9758f74534967e82178444f22ae85966827baad9d524bd3a2303aa47ce93db6c"
+        },
+        {
+          "id": "p10-b16",
+          "source": "are both true, even though we know that $\\le$ could be replaced by $<$ in the first, and by $=$ in the second. This sort of thing is bound to occur when $\\le$ is used with specific numbers; the usefulness of the symbol is revealed by a statement like Theorem 1—here equality holds for some values of $a$ and $b$, while inequality holds for other values.",
+          "sourceSha256": "f864b39ec86954d5f863f7e7ec41452c021b8b48fa01f3d6d80b10277b3468c5",
+          "translation": "都是真的，尽管我们知道，第一个陈述中的 $\\le$ 可以换成 $<$，第二个可以换成 $=$。对具体的数使用 $\\le$ 时，这种情况不可避免；像定理 1 这样的陈述才显出这个符号的用处——对 $a$ 和 $b$ 的某些值，等式成立，而对另一些值，严格不等式成立。"
+        },
+        {
+          "id": "p10-b17",
+          "source": "</aside>",
+          "sourceSha256": "0ba5ea9cb632c899daab77879064f3273ebba6af8945f2dfeff764c05af0602a"
+        }
+      ]
+    },
+    {
+      "printed": 11,
+      "sourceSha256": "26411694f3cb644cc029ffd1588dbe3bc7fbac0f3b6a6a293ce448563457dbca",
+      "blocks": [
+        {
+          "id": "p11-b1",
+          "source": "The fact that $-a>0$ if $a<0$ is the basis of a concept which will play an extremely important role in this book. For any number $a$, we define the **absolute value** $|a|$ of $a$ as follows:",
+          "sourceSha256": "077ce727ac35eb4eaab9603bd48ae0fb9a479fcb9be5471133887a6dfe146dde",
+          "translation": "若 $a<0$，则 $-a>0$；这一事实是一个将在本书中起极其重要作用的概念的基础。对任意数 $a$，我们如下定义 $a$ 的**绝对值** $|a|$："
+        },
+        {
+          "id": "p11-b2",
+          "source": "$$|a|=\\begin{cases}a,&a\\ge0\\\\-a,&a\\le0.\\end{cases}$$",
+          "sourceSha256": "3cb2be60eaabddff8bd609aba1f78e5f3d4fe3aaff7258df33c3467b75b60a58"
+        },
+        {
+          "id": "p11-b3",
+          "source": "Note that $|a|$ is always positive, except when $a=0$. For example, we have $|-3|=3$, $|7|=7$, $|1+\\sqrt2-\\sqrt3|=1+\\sqrt2-\\sqrt3$, and $|1+\\sqrt2-\\sqrt{10}|=\\sqrt{10}-\\sqrt2-1$. In general, the most straightforward approach to any problem involving absolute values requires treating several cases separately, since absolute values are defined by cases to begin with. This approach may be used to prove the following very important fact about absolute values.",
+          "sourceSha256": "5821f97f10e3b8252985144d87db28e028af1610cb37dc7dcf40fb608c908276",
+          "translation": "注意，除 $a=0$ 以外，$|a|$ 总为正。例如，$|-3|=3$、$|7|=7$、$|1+\\sqrt2-\\sqrt3|=1+\\sqrt2-\\sqrt3$，以及 $|1+\\sqrt2-\\sqrt{10}|=\\sqrt{10}-\\sqrt2-1$。一般说来，处理任何涉及绝对值的问题，最直接的方法都需要分几种情况讨论，因为绝对值本来就是分情况定义的。用这种方法，可以证明下面这个关于绝对值的非常重要的事实。"
+        },
+        {
+          "id": "p11-b4",
+          "source": "**THEOREM 1** For all numbers $a$ and $b$, we have",
+          "sourceSha256": "f470d9e39a260fb192a93b87e3e33b665a5cf065ac9d087f0660286491186a22",
+          "translation": "**定理 1** 对所有数 $a$ 和 $b$，都有"
+        },
+        {
+          "id": "p11-b5",
+          "source": "$$|a+b|\\le|a|+|b|.$$",
+          "sourceSha256": "c1c0c43eb52fae0e496add666c876ba37d5790965b6f77a36f2761f9071d9092"
+        },
+        {
+          "id": "p11-b6",
+          "source": "**PROOF** We will consider 4 cases:",
+          "sourceSha256": "4bd85dff77a144818b1e5a3ac6ef62ab1abbb6fd89bee29f098f2bbe376fcb3f",
+          "translation": "**证明** 我们分四种情况讨论："
+        },
+        {
+          "id": "p11-b7",
+          "source": "$$\\begin{array}{lll}\n(1)&a\\ge0,&b\\ge0;\\\\\n(2)&a\\ge0,&b\\le0;\\\\\n(3)&a\\le0,&b\\ge0;\\\\\n(4)&a\\le0,&b\\le0.\n\\end{array}$$",
+          "sourceSha256": "45208dbfcfce2ca353a3bbb5a9699765e666b09ea0455c230ae8f47ac566e320"
+        },
+        {
+          "id": "p11-b8",
+          "source": "In case (1) we also have $a+b\\ge0$, and the theorem is obvious; in fact,",
+          "sourceSha256": "196e21de2876ca95d345e3f4c1872586cf84e85db6ed62d1a357b98e066f8b23",
+          "translation": "在情况 (1) 中，还有 $a+b\\ge0$，所以定理显然成立；事实上，"
+        },
+        {
+          "id": "p11-b9",
+          "source": "$$|a+b|=a+b=|a|+|b|,$$",
+          "sourceSha256": "4a963ed44f8a63dccb074ec256c8f7ebfe07e8dea0b46eadc616fb9cd3c7a97b"
+        },
+        {
+          "id": "p11-b10",
+          "source": "so that in this case equality holds.",
+          "sourceSha256": "e6f1d83eb5d37f4f9c94054747d705a87f7439100548486d6a8f589b08bb433a",
+          "translation": "因此，在这种情况下等号成立。"
+        },
+        {
+          "id": "p11-b11",
+          "source": "In case (4) we have $a+b\\le0$, and again equality holds:",
+          "sourceSha256": "ee5dc553dd914ea88c722d324c671d9b0d3bab4f094e12449fdbc71de8405a16",
+          "translation": "在情况 (4) 中，有 $a+b\\le0$，等号也成立："
+        },
+        {
+          "id": "p11-b12",
+          "source": "$$|a+b|=-(a+b)=-a+(-b)=|a|+|b|.$$",
+          "sourceSha256": "6db60910a41ff63a252fabcaaff17c02077c9134f9fa26aee55991aa14778661"
+        },
+        {
+          "id": "p11-b13",
+          "source": "In case (2), when $a\\ge0$ and $b\\le0$, we must prove that",
+          "sourceSha256": "0144db953c0e4ffd7a8c82456f51d0a7925ba8aa7555defb5dcf35515ca39db7",
+          "translation": "在情况 (2) 中，即 $a\\ge0$ 且 $b\\le0$ 时，我们必须证明"
+        },
+        {
+          "id": "p11-b14",
+          "source": "$$|a+b|\\le a-b.$$",
+          "sourceSha256": "7a521de30c9ef2e57efd729ab0d6f670a9167d7f7ec247af22ea0c12e32b31ee"
+        },
+        {
+          "id": "p11-b15",
+          "source": "This case may therefore be divided into two subcases. If $a+b\\ge0$, then we must prove that",
+          "sourceSha256": "d898dc7c7130370f54aaf7bc6030e052fe5a697fd8f71fcc32c419cf5566128f",
+          "translation": "因此，这种情况还可以分为两种子情况。若 $a+b\\ge0$，则必须证明"
+        },
+        {
+          "id": "p11-b16",
+          "source": "$$\\begin{array}{rl}\n&a+b\\le a-b,\\\\\n\\text{i.e.,}&b\\le-b,\n\\end{array}$$",
+          "sourceSha256": "8fe0c1f8d5de23dc9308000ae1f2fc2e9c0e57525bf2e34474c49af77c4f5d4d"
+        },
+        {
+          "id": "p11-b17",
+          "source": "which is certainly true since $b\\le0$ and hence $-b\\ge0$. On the other hand, if $a+b\\le0$, we must prove that",
+          "sourceSha256": "16f804c09b380cb8249d08b7a94e0898f06a40a0d466eabe8f13e4908279c2e4",
+          "translation": "这当然成立，因为 $b\\le0$，从而 $-b\\ge0$。另一方面，若 $a+b\\le0$，则必须证明"
+        },
+        {
+          "id": "p11-b18",
+          "source": "$$\\begin{array}{rl}\n&-a-b\\le a-b,\\\\\n\\text{i.e.,}&-a\\le a,\n\\end{array}$$",
+          "sourceSha256": "e3d55f09326a5898226b31966f95aaa7329a48285593807c15415010638a70d0"
+        },
+        {
+          "id": "p11-b19",
+          "source": "which is certainly true since $a\\ge0$ and hence $-a\\le0$.",
+          "sourceSha256": "c06534d0cd959ae64b33c32b4d20a1b9304d31a8f54949dc457400cb48796cb8",
+          "translation": "这当然成立，因为 $a\\ge0$，从而 $-a\\le0$。"
+        },
+        {
+          "id": "p11-b20",
+          "source": "Finally, note that case (3) may be disposed of with no additional work, by applying case (2) with $a$ and $b$ interchanged. $\\blacksquare$",
+          "sourceSha256": "fe7d3972385b64ea98cfbcc7efab987644567582d30497cf5cc1c5fee7bcc4a3",
+          "translation": "最后，注意到只需交换 $a$ 与 $b$，运用情况 (2)，就可以处理情况 (3)，而不必再作其他工作。$\\blacksquare$"
+        }
+      ]
+    },
+    {
+      "printed": 12,
+      "sourceSha256": "9bf7face3c30c6fc5cdbf91108b3e3f6ea612671378a480cdc60f20fec998609",
+      "blocks": [
+        {
+          "id": "p12-b1",
+          "source": "Although this method of treating absolute values (separate consideration of various cases) is sometimes the only approach available, there are often simpler methods which may be used. In fact, it is possible to give a much shorter proof of Theorem 1; this proof is motivated by the observation that",
+          "sourceSha256": "f7c3a2cd77d20fd2774bed8c5fa97e664752f67cad6d919dba6e74873167a3f6",
+          "translation": "虽然这种处理绝对值的方法（分别讨论各种情况）有时是唯一可用的办法，但往往还有更简单的方法。事实上，定理 1 可以有一个短得多的证明；这个证明的出发点是下面的观察："
+        },
+        {
+          "id": "p12-b2",
+          "source": "$$|a|=\\sqrt{a^2}.$$",
+          "sourceSha256": "d517f65bf3979592048ac80c358cf10ce196d83de7f763aab63bdae57b875018"
+        },
+        {
+          "id": "p12-b3",
+          "source": "(Here, and throughout the book, $\\sqrt{x}$ denotes the *positive* square root of $x$; this symbol is defined only when $x\\ge0$.) We may now observe that",
+          "sourceSha256": "7c031804a9c818568bb59935a51fa71ae9a98a611edd2e169548cbab0b96efc2",
+          "translation": "（这里以及本书各处，$\\sqrt{x}$ 都表示 $x$ 的*正*平方根；这个符号只在 $x\\ge0$ 时有定义。）现在可以注意到"
+        },
+        {
+          "id": "p12-b4",
+          "source": "$$\\begin{aligned}\n(|a+b|)^2=(a+b)^2&=a^2+2ab+b^2\\\\\n&\\le a^2+2|a|\\cdot|b|+b^2\\\\\n&=|a|^2+2|a|\\cdot|b|+|b|^2\\\\\n&=(|a|+|b|)^2.\n\\end{aligned}$$",
+          "sourceSha256": "01d89b8f68829cc14f4133c680111e2d0962aea384ec4a6e54b6e00b5b4cf8bf"
+        },
+        {
+          "id": "p12-b5",
+          "source": "From this we can conclude that $|a+b|\\le|a|+|b|$ because $x^2<y^2$ implies $x<y$, provided that $x$ and $y$ are both nonnegative; a proof of *this* fact is left to the reader (Problem 5).",
+          "sourceSha256": "c54654dff2a5b3bb585f2ec6e087602f39b8773d8e17c35228b459329334697d",
+          "translation": "由此可以得出 $|a+b|\\le|a|+|b|$，因为只要 $x$ 和 $y$ 都非负，$x^2<y^2$ 就能推出 $x<y$；*这个*事实的证明留给读者（习题 5）。"
+        },
+        {
+          "id": "p12-b6",
+          "source": "One final observation may be made about the theorem we have just proved: a close examination of either proof offered shows that",
+          "sourceSha256": "8e3546ca5bb4dac822b828184396c096521c892272d879fb654c1920e6487704",
+          "translation": "对于刚刚证明的定理，还可以作最后一个观察：仔细检查上面的任意一种证明，都可以看出"
+        },
+        {
+          "id": "p12-b7",
+          "source": "$$|a+b|=|a|+|b|$$",
+          "sourceSha256": "2630e3e7f71424b07b16eaf9dc2319d39aa09e5f0888a7abd5db42406cdd1de7"
+        },
+        {
+          "id": "p12-b8",
+          "source": "if $a$ and $b$ have the same sign (i.e., are both positive or both negative), or if one of the two is 0, while",
+          "sourceSha256": "03459a7b8f7818cbe171df82a748014d56073ddbc6c32f26c018bfb68f2eb9d4",
+          "translation": "当 $a$ 与 $b$ 同号（即同为正数或同为负数），或者二者之一为 0 时成立；而"
+        },
+        {
+          "id": "p12-b9",
+          "source": "$$|a+b|<|a|+|b|$$",
+          "sourceSha256": "69f90152ff6d7d328550b2443e5d188fd18f4bc69af7b0038ea783d7150f1d9b"
+        },
+        {
+          "id": "p12-b10",
+          "source": "if $a$ and $b$ are of opposite signs.",
+          "sourceSha256": "16ae7fcd245bf428e9eb9e477a92481150c3f5716c48840d118614734aeff287",
+          "translation": "当 $a$ 与 $b$ 异号时成立。"
+        },
+        {
+          "id": "p12-b11",
+          "source": "We will conclude this chapter with a subtle point, neglected until now, whose inclusion is required in a conscientious survey of the properties of numbers. After stating property P9, we proved that $a-b=b-a$ implies $a=b$. The proof began by establishing that",
+          "sourceSha256": "2eef2f61cd629ddb0d968b4856ce1cc91b84623db068b3c53f8bd492295948c7",
+          "translation": "本章最后要讨论一个迄今被忽略的微妙之处；对数的性质作认真考察时，必须把它包括进来。陈述性质 P9 后，我们证明了 $a-b=b-a$ 能推出 $a=b$。证明先得到"
+        },
+        {
+          "id": "p12-b12",
+          "source": "$$a\\cdot(1+1)=b\\cdot(1+1),$$",
+          "sourceSha256": "76dfcf1959e70231883cae90f7f4b5cc786a14cf08ca5ade002129f1ff023f0b"
+        },
+        {
+          "id": "p12-b13",
+          "source": "from which we concluded that $a=b$. This result is obtained from the equation $a\\cdot(1+1)=b\\cdot(1+1)$ by dividing both sides by $1+1$. Division by 0 should be avoided scrupulously, and it must therefore be admitted that the validity of the argument depends on knowing that $1+1\\ne0$. Problem 25 is designed to convince you that this fact cannot possibly be proved from properties P1–P9 alone! Once P10, P11, and P12 are available, however, the proof is very simple: We have already seen that $1>0$; it follows that $1+1>0$, and in particular $1+1\\ne0$.",
+          "sourceSha256": "d5c3c5e6fa7eea721cf85c3a80479350d070ace775bdedbf1be21157f9d73dc7",
+          "translation": "然后由此得出 $a=b$。这个结论是把等式 $a\\cdot(1+1)=b\\cdot(1+1)$ 的两边除以 $1+1$ 得到的。除以 0 必须严格避免，因此必须承认，这段论证是否有效，取决于我们是否知道 $1+1\\ne0$。习题 25 会使你确信，只凭 P1—P9 根本不可能证明这个事实！然而，一旦有了 P10、P11 和 P12，证明就非常简单：我们已经知道 $1>0$；由此得到 $1+1>0$，特别地，$1+1\\ne0$。"
+        },
+        {
+          "id": "p12-b14",
+          "source": "This last demonstration has perhaps only strengthened your feeling that it is absurd to bother proving such obvious facts, but an honest assessment of our present situation will help justify serious consideration of such details. In this chapter we have assumed that numbers are familiar objects, and that P1–P12 are merely explicit statements of obvious, well-known properties of numbers. It would be difficult, however, to justify this assumption. Although one learns how to “work with” numbers in school, just what numbers *are*, remains rather vague. A great deal of this book is devoted to elucidating the concept of numbers, and by the end",
+          "sourceSha256": "53a00b245dacb86336aa521f30e2dc94d01bd42bd816459e1f02daf4ac9dfb4d",
+          "translation": "最后这段证明或许只是加强了你的感觉：费心证明这些显然的事实实在荒唐。不过，如实审视我们目前的处境，有助于说明认真考虑这些细节是有道理的。本章一直假定数是熟悉的对象，而 P1—P12 只是把数的那些显然且众所周知的性质明确陈述出来。然而，要说明这一假定的合理性并不容易。虽然人们在学校学会了怎样“运用”数，但数究竟*是什么*，仍然相当模糊。本书很大一部分内容就是为了阐明数的概念；到本书结束"
+        }
+      ]
+    },
+    {
+      "printed": 13,
+      "sourceSha256": "ef30730897c4d098cc65e57e97d19ac4f79eea034a8638d25833ba28bbe38702",
+      "blocks": [
+        {
+          "id": "p13-b1",
+          "source": "of the book we will have become quite well acquainted with them. But it will be necessary to work with numbers throughout the book. It is therefore reasonable to admit frankly that we do not yet thoroughly understand numbers; we may still say that, in whatever way numbers are finally defined, they should certainly have properties P1–P12.",
+          "sourceSha256": "3faddf9ce736de8b115c76c3b79e803ecd655a1e5822b408f3ea5a9059174b22",
+          "translation": "时，我们将对数有相当深入的了解。但在全书中，我们一直都需要运用数。因此，坦率承认我们还没有彻底理解数，是合理的；我们仍然可以说，无论最终怎样定义数，它们当然应当具有性质 P1—P12。"
+        },
+        {
+          "id": "p13-b2",
+          "source": "Most of this chapter has been an attempt to present convincing evidence that P1–P12 are indeed basic properties which we should assume in order to deduce other familiar properties of numbers. Some of the problems (which indicate the derivation of other facts about numbers from P1–P12) are offered as further evidence. It is still a crucial question whether P1–P12 actually account for *all* properties of numbers. As a matter of fact, we shall soon see that they do *not*. In the next chapter the deficiencies of properties P1–P12 will become quite clear, but the proper means for correcting these deficiencies is not so easily discovered. The crucial additional basic property of numbers which we are seeking is profound and subtle, quite unlike P1–P12. The discovery of this crucial property will require all the work of Part II of this book. In the remainder of Part I we will begin to see why some additional property is required; in order to investigate this we will have to consider a little more carefully what we mean by “numbers.”",
+          "sourceSha256": "6eb9faac26273db3378d529af3950946b1582c788e0eb981149aa8ec26b3eb82",
+          "translation": "本章大部分内容都在尝试提供令人信服的证据，说明 P1—P12 确实是我们应当假定的基本性质，以便从中推出数的其他熟悉性质。有些习题指出如何从 P1—P12 推出关于数的其他事实，也是作为进一步的证据。不过，一个关键问题仍然存在：P1—P12 是否真的足以说明数的*全部*性质？事实上，我们很快就会看到，它们*并不足够*。下一章会清楚地显出 P1—P12 的不足，但怎样恰当地补足这些不足，却不那么容易发现。我们所寻找的那条额外的、关键的数的基本性质既深刻又微妙，与 P1—P12 很不相同。发现这条关键性质，需要本书第二部分的全部工作。在第一部分的余下内容中，我们将开始认识到为什么需要额外的性质；为了研究这一点，我们必须更仔细地考虑“数”究竟是什么意思。"
+        },
+        {
+          "id": "p13-b3",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p13-b4",
+          "source": "### 1. Prove the following:",
+          "sourceSha256": "775a4ff0d79bd4f0b5ee8bd950a7a1a1f77143df96a5241cc22e6df7c31ebee9",
+          "translation": "### 1. 证明下列各项："
+        },
+        {
+          "id": "p13-b5",
+          "source": "(i) If $ax=a$ for some number $a\\ne0$, then $x=1$.",
+          "sourceSha256": "600ba61c57071bc56694d9db3cf5289e3ce374f5aae5211e0230898ed6eeaf8d",
+          "translation": "(i) 若对某个数 $a\\ne0$ 有 $ax=a$，则 $x=1$。"
+        },
+        {
+          "id": "p13-b6",
+          "source": "(ii) $x^2-y^2=(x-y)(x+y)$.",
+          "sourceSha256": "aad714275c69a3dd889d8b1c70726b30b4e967d5a9d7a243c24c0da9589b9858"
+        },
+        {
+          "id": "p13-b7",
+          "source": "(iii) If $x^2=y^2$, then $x=y$ or $x=-y$.",
+          "sourceSha256": "4b978852e06c8a16281599b1263b7b0470418f7fca0c350429f5542828034007",
+          "translation": "(iii) 若 $x^2=y^2$，则 $x=y$ 或 $x=-y$。"
+        },
+        {
+          "id": "p13-b8",
+          "source": "(iv) $x^3-y^3=(x-y)(x^2+xy+y^2)$.",
+          "sourceSha256": "0860d7521f0f237757cdd58c41c7aad7116ac5c63802a45eb5ac35eed9bb588c"
+        },
+        {
+          "id": "p13-b9",
+          "source": "(v) $x^n-y^n=(x-y)(x^{n-1}+x^{n-2}y+\\cdots+xy^{n-2}+y^{n-1})$.",
+          "sourceSha256": "581350239809e9cef9f98276bf823e30e24ff8824cae17826f84606895bc16ec"
+        },
+        {
+          "id": "p13-b10",
+          "source": "(vi) $x^3+y^3=(x+y)(x^2-xy+y^2)$. (There is a particularly easy way to do this, using (iv), and it will show you how to find a factorization for $x^n+y^n$ whenever $n$ is odd.)",
+          "sourceSha256": "330b5c89943ee183aea875cd31ff3c6c25f55f16b5da9be75cf16572cdf35cfb",
+          "translation": "(vi) $x^3+y^3=(x+y)(x^2-xy+y^2)$。（利用 (iv) 有一种特别简单的做法，而且它会说明当 $n$ 为奇数时，如何对 $x^n+y^n$ 作因式分解。）"
+        },
+        {
+          "id": "p13-b11",
+          "source": "### 2. What is wrong with the following “proof”? Let $x=y$. Then",
+          "sourceSha256": "7476ed103fd8a9a1328e17e82244c2f06508031e1af843a6edc21b8ba7a88fc5",
+          "translation": "### 2. 下面的“证明”错在哪里？设 $x=y$。那么"
+        },
+        {
+          "id": "p13-b12",
+          "source": "$$\\begin{aligned}\nx^2&=xy,\\\\\nx^2-y^2&=xy-y^2,\\\\\n(x+y)(x-y)&=y(x-y),\\\\\nx+y&=y,\\\\\n2y&=y,\\\\\n2&=1.\n\\end{aligned}$$",
+          "sourceSha256": "c211385b96ac0bfd13bd886b1522ece00d7308e85e7247b1571bdecbd1cb0a6e"
+        },
+        {
+          "id": "p13-b13",
+          "source": "### 3. Prove the following:",
+          "sourceSha256": "de6dcb32666a8de476fdd2fa3ebd31f525a467e3f25921c96582d3f633f2d92f",
+          "translation": "### 3. 证明下列各项："
+        },
+        {
+          "id": "p13-b14",
+          "source": "(i) $\\displaystyle\\frac{a}{b}=\\frac{ac}{bc}$, if $b,c\\ne0$.",
+          "sourceSha256": "0efb81e8836f86d1afda5704f0963cd22f32d9a0351bdc3bb83093443838f64f",
+          "translation": "(i) 若 $b,c\\ne0$，则 $\\displaystyle\\frac{a}{b}=\\frac{ac}{bc}$。"
+        },
+        {
+          "id": "p13-b15",
+          "source": "(ii) $\\displaystyle\\frac{a}{b}+\\frac{c}{d}=\\frac{ad+bc}{bd}$, if $b,d\\ne0$.",
+          "sourceSha256": "bc13e948c5dbbc60cd619352a1a3dd968a75c925bfb5aff4ca97e830e38ed3e5",
+          "translation": "(ii) 若 $b,d\\ne0$，则 $\\displaystyle\\frac{a}{b}+\\frac{c}{d}=\\frac{ad+bc}{bd}$。"
+        }
+      ]
+    },
+    {
+      "printed": 14,
+      "sourceSha256": "8436eabc661be137838fc28ab58137b4dede00d5a9c5aa9b8ffd16f848b289ca",
+      "blocks": [
+        {
+          "id": "p14-b1",
+          "source": "(iii) $(ab)^{-1}=a^{-1}b^{-1}$, if $a,b\\ne0$. (To do this you must remember the defining property of $(ab)^{-1}$.)",
+          "sourceSha256": "bfad60f345799b1c76e8c4719253f78941b242e3950a422338bb1c200534f857",
+          "translation": "(iii) 若 $a,b\\ne0$，则 $(ab)^{-1}=a^{-1}b^{-1}$。（为此，必须记住定义 $(ab)^{-1}$ 的性质。）"
+        },
+        {
+          "id": "p14-b2",
+          "source": "(iv) $\\displaystyle\\frac{a}{b}\\cdot\\frac{c}{d}=\\frac{ac}{db}$, if $b,d\\ne0$.",
+          "sourceSha256": "b1253bd76800ba83209983429bd427c511694451a8948a68200791af40e69834",
+          "translation": "(iv) 若 $b,d\\ne0$，则 $\\displaystyle\\frac{a}{b}\\cdot\\frac{c}{d}=\\frac{ac}{db}$。"
+        },
+        {
+          "id": "p14-b3",
+          "source": "(v) $\\displaystyle\\frac{a}{b}\\bigg/\\frac{c}{d}=\\frac{ad}{bc}$, if $b,c,d\\ne0$.",
+          "sourceSha256": "5471aa6f7d3ebcd3c27bbc2d0512016f9bc31e72baa52feab6241cbf9dc6f9dc",
+          "translation": "(v) 若 $b,c,d\\ne0$，则 $\\displaystyle\\frac{a}{b}\\bigg/\\frac{c}{d}=\\frac{ad}{bc}$。"
+        },
+        {
+          "id": "p14-b4",
+          "source": "(vi) If $b,d\\ne0$, then $\\displaystyle\\frac{a}{b}=\\frac{c}{d}$ if and only if $ad=bc$. Also determine when",
+          "sourceSha256": "9287eb304a748bdc6c4164736eb38dcf13df73e2dac23452d21f898e4d9ab9db",
+          "translation": "(vi) 若 $b,d\\ne0$，则 $\\displaystyle\\frac{a}{b}=\\frac{c}{d}$ 当且仅当 $ad=bc$。还要确定在什么情况下"
+        },
+        {
+          "id": "p14-b5",
+          "source": "$$\\frac{a}{b}=\\frac{b}{a}.$$",
+          "sourceSha256": "0dc00a7194ec35037ecefb9441a80a343c591118701be41266ef5511ecb46499"
+        },
+        {
+          "id": "p14-b6",
+          "source": "### 4. Find all numbers $x$ for which",
+          "sourceSha256": "5c4741e62740c5cc33506508a6fb4e1c6db3053cc5316cc74329fa528f674134",
+          "translation": "### 4. 求满足下列条件的所有数 $x$："
+        },
+        {
+          "id": "p14-b7",
+          "source": "(i) $4-x<3-2x$.",
+          "sourceSha256": "5b07bc69d75674710cfa71830333286112d8b3438edfa633b7c0505697169064"
+        },
+        {
+          "id": "p14-b8",
+          "source": "(ii) $5-x^2<8$.",
+          "sourceSha256": "f7554d3d6b95b81c0414089c3ca101d63cdb5e13eee2c070473e11c111c2c705"
+        },
+        {
+          "id": "p14-b9",
+          "source": "(iii) $5-x^2<-2$.",
+          "sourceSha256": "bda596f4c0a34700674c905140e8e23b2e6d233d08448399469fba2500122b36"
+        },
+        {
+          "id": "p14-b10",
+          "source": "(iv) $(x-1)(x-3)>0$. (When is a product of two numbers positive?)",
+          "sourceSha256": "174f3e2cd0b4eae4b9a9b6c8fab5187cfd61e534857210968036a26570c95afd",
+          "translation": "(iv) $(x-1)(x-3)>0$。（两个数的乘积什么时候为正？）"
+        },
+        {
+          "id": "p14-b11",
+          "source": "(v) $x^2-2x+2>0$.",
+          "sourceSha256": "6f1df25223e48cdcb262c60597ffd132b2d9df8ae8d918077f30b789b50fa83f"
+        },
+        {
+          "id": "p14-b12",
+          "source": "(vi) $x^2+x+1>2$.",
+          "sourceSha256": "dea61054fce756370767067b86603b417ebc2054ebae4f99d5b037d291f4a24e"
+        },
+        {
+          "id": "p14-b13",
+          "source": "(vii) $x^2-x+10>16$.",
+          "sourceSha256": "c156f014d0050ff41ee6f7cbcd51b71e2bc1e7e4164c294bac33a175ec53d5ca"
+        },
+        {
+          "id": "p14-b14",
+          "source": "(viii) $x^2+x+1>0$.",
+          "sourceSha256": "beae9b01fbfc872dd28b3565781b67d3a4891cd6fc7169ba4098ad17042d43e3"
+        },
+        {
+          "id": "p14-b15",
+          "source": "(ix) $(x-\\pi)(x+5)(x-3)>0$.",
+          "sourceSha256": "ea952756d106128fa8273af0029f0cf8c973ee5a5ea39025f7544f08a0d409f8"
+        },
+        {
+          "id": "p14-b16",
+          "source": "(x) $(x-\\sqrt[3]{2})(x-\\sqrt2)>0$.",
+          "sourceSha256": "022209ef08b7749804d431d968b81ea52d712349e8ffcd3668d733964d8b25ba"
+        },
+        {
+          "id": "p14-b17",
+          "source": "(xi) $2^x<8$.",
+          "sourceSha256": "3b44bf128cb1d230888e6b977ab93e6add61bc584a6b043299f581f0104098af"
+        },
+        {
+          "id": "p14-b18",
+          "source": "(xii) $x+3^x<4$.",
+          "sourceSha256": "ea34d0e9f0c126e71c836db50593b92979b5bf657ecdbee9f12ea81f63edb49e"
+        },
+        {
+          "id": "p14-b19",
+          "source": "(xiii) $\\displaystyle\\frac1x+\\frac1{1-x}>0$.",
+          "sourceSha256": "170c02728ee642bfd20e7283aed7f09ae12502885ba0149a4900a3ad4888d97a"
+        },
+        {
+          "id": "p14-b20",
+          "source": "(xiv) $\\displaystyle\\frac{x-1}{x+1}>0$.",
+          "sourceSha256": "ddd1e6d84b42cfff6e08d284448084b089daf519e4d9e08e268d6cd83234d8ad"
+        },
+        {
+          "id": "p14-b21",
+          "source": "### 5. Prove the following:",
+          "sourceSha256": "e8f9a83cd7be1a9f1474cb4c6a5e3b71329a5d6d38989a5e1f1eabbae9894e9a",
+          "translation": "### 5. 证明下列各项："
+        },
+        {
+          "id": "p14-b22",
+          "source": "(i) If $a<b$ and $c<d$, then $a+c<b+d$.",
+          "sourceSha256": "f1fa187c802aeb7a92623accef36530276b9819bd50a94b41b3e5f9251abf86a",
+          "translation": "(i) 若 $a<b$ 且 $c<d$，则 $a+c<b+d$。"
+        },
+        {
+          "id": "p14-b23",
+          "source": "(ii) If $a<b$, then $-b<-a$.",
+          "sourceSha256": "7b498e202ab37da34b3045da0e79760e1d07a664eef7636ce46c997334d07394",
+          "translation": "(ii) 若 $a<b$，则 $-b<-a$。"
+        },
+        {
+          "id": "p14-b24",
+          "source": "(iii) If $a<b$ and $c>d$, then $a-c<b-d$.",
+          "sourceSha256": "0cde7e6b85a3627d4bd28d45a5e12e7d8550c403bd96f0eaeb86db1f9a8bfee2",
+          "translation": "(iii) 若 $a<b$ 且 $c>d$，则 $a-c<b-d$。"
+        },
+        {
+          "id": "p14-b25",
+          "source": "(iv) If $a<b$ and $c>0$, then $ac<bc$.",
+          "sourceSha256": "9828dcc43776c252011a5322992c88b9d7bf4df64ce7afb86a412e9509c00499",
+          "translation": "(iv) 若 $a<b$ 且 $c>0$，则 $ac<bc$。"
+        },
+        {
+          "id": "p14-b26",
+          "source": "(v) If $a<b$ and $c<0$, then $ac>bc$.",
+          "sourceSha256": "578bd00a197b4b1cdcad1e8f08d6925acd7b2a1be0a43b37273845e377c5fe78",
+          "translation": "(v) 若 $a<b$ 且 $c<0$，则 $ac>bc$。"
+        },
+        {
+          "id": "p14-b27",
+          "source": "(vi) If $a>1$, then $a^2>a$.",
+          "sourceSha256": "752fc3ab07cf7391e72527168affb5e5331f3be5443bc499e4f0dd74f774d904",
+          "translation": "(vi) 若 $a>1$，则 $a^2>a$。"
+        },
+        {
+          "id": "p14-b28",
+          "source": "(vii) If $0<a<1$, then $a^2<a$.",
+          "sourceSha256": "619d9f0f9100bfa730e87c70786746f4b317494aa68448c19fc13e9b7f907820",
+          "translation": "(vii) 若 $0<a<1$，则 $a^2<a$。"
+        },
+        {
+          "id": "p14-b29",
+          "source": "(viii) If $0\\le a<b$ and $0\\le c<d$, then $ac<bd$.",
+          "sourceSha256": "74d20a6b600a5e2f3a47f75eba0c8a46c4aae0522d033aee9e9de70c76afc760",
+          "translation": "(viii) 若 $0\\le a<b$ 且 $0\\le c<d$，则 $ac<bd$。"
+        },
+        {
+          "id": "p14-b30",
+          "source": "(ix) If $0\\le a<b$, then $a^2<b^2$. (Use (viii).)",
+          "sourceSha256": "ad4e66010b724b6ea867cd0810cfde77fedc8fbaf4234177f2bdc6abadaa9b1a",
+          "translation": "(ix) 若 $0\\le a<b$，则 $a^2<b^2$。（使用 (viii)。）"
+        },
+        {
+          "id": "p14-b31",
+          "source": "(x) If $a,b\\ge0$ and $a^2<b^2$, then $a<b$. (Use (ix), backwards.)",
+          "sourceSha256": "f0f863d1ead8b0ee2fd2b267f71047c6d9d60ab80a38795aa3ed24574d7650a7",
+          "translation": "(x) 若 $a,b\\ge0$ 且 $a^2<b^2$，则 $a<b$。（反向使用 (ix)。）"
+        },
+        {
+          "id": "p14-b32",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p14-b33",
+          "source": "(a) Prove that if $0\\le x<y$, then $x^n<y^n$, $n=1,2,3,\\ldots$.",
+          "sourceSha256": "de5dfbb1c5a1357f04369f313808a39084d72322c64f402191e27b67c7eb0d49",
+          "translation": "(a) 证明：若 $0\\le x<y$，则 $x^n<y^n$，$n=1,2,3,\\ldots$。"
+        },
+        {
+          "id": "p14-b34",
+          "source": "(b) Prove that if $x<y$ and $n$ is odd, then $x^n<y^n$.",
+          "sourceSha256": "f50f2794b54f03b64a2c32f8d7cc3cac40f1c6d94db308d1eb9ad2e6fd3d76aa",
+          "translation": "(b) 证明：若 $x<y$ 且 $n$ 为奇数，则 $x^n<y^n$。"
+        },
+        {
+          "id": "p14-b35",
+          "source": "(c) Prove that if $x^n=y^n$ and $n$ is odd, then $x=y$.",
+          "sourceSha256": "23586603b1711b0119fd12a8afbb9195f6db67afdecea20a87451c6919d078e4",
+          "translation": "(c) 证明：若 $x^n=y^n$ 且 $n$ 为奇数，则 $x=y$。"
+        },
+        {
+          "id": "p14-b36",
+          "source": "(d) Prove that if $x^n=y^n$ and $n$ is even, then $x=y$ or $x=-y$.",
+          "sourceSha256": "5a5f47ffe488d3a1a08fca5c63fc96c758534a2e9d6fa00cee28e92c559cc750",
+          "translation": "(d) 证明：若 $x^n=y^n$ 且 $n$ 为偶数，则 $x=y$ 或 $x=-y$。"
+        }
+      ]
+    },
+    {
+      "printed": 15,
+      "sourceSha256": "03dbaf73e713858eaa18a8ae80b8a55991b443e89e633aca119c5c373a2c06c7",
+      "blocks": [
+        {
+          "id": "p15-b1",
+          "source": "### 7. Prove that if $0<a<b$, then",
+          "sourceSha256": "65856e709a2779e2717b9f7292de7958959d05114f2543ac12ec27a2216313b9",
+          "translation": "### 7. 证明：若 $0<a<b$，则"
+        },
+        {
+          "id": "p15-b2",
+          "source": "$$a<\\sqrt{ab}<\\frac{a+b}{2}<b.$$",
+          "sourceSha256": "5146bd7b7ab48e95ecb8313c9e93322b7ac5a17e937fc761837638b67c441201"
+        },
+        {
+          "id": "p15-b3",
+          "source": "Notice that the inequality $\\sqrt{ab}\\le(a+b)/2$ holds for all $a,b\\ge0$. A generalization of this fact occurs in Problem 2-22.",
+          "sourceSha256": "3372e236931cb0f8e10221ca9b958dcb7a44b8564a3ceaa31360f1f7eea270a6",
+          "translation": "注意，不等式 $\\sqrt{ab}\\le(a+b)/2$ 对所有 $a,b\\ge0$ 都成立。习题 2-22 给出了这个事实的一个推广。"
+        },
+        {
+          "id": "p15-b4",
+          "source": "### \\*8. Although the basic properties of inequalities were stated in terms of the collection $P$ of all positive numbers, and $<$ was defined in terms of $P$, this procedure can be reversed. Suppose that P10–P12 are replaced by",
+          "sourceSha256": "c48bf244be1ec4843e8f08677da5e3a45846d969620a1d1a642cc2af27779128",
+          "translation": "### \\*8. 虽然不等式的基本性质是用全体正数的集合 $P$ 陈述的，而 $<$ 也是用 $P$ 定义的，但这一过程可以反过来。假设把 P10—P12 换成"
+        },
+        {
+          "id": "p15-b5",
+          "source": "(P′10) For any numbers $a$ and $b$ one, and only one, of the following holds:",
+          "sourceSha256": "fe29db96527f00184e2d7840bf7131359065727b71f875b8dc1675b0624284d1",
+          "translation": "(P′10) 对任意数 $a$ 和 $b$，下列情况有且仅有一种成立："
+        },
+        {
+          "id": "p15-b6",
+          "source": "$$\\begin{array}{ll}\n\\text{(i)}&a=b,\\\\\n\\text{(ii)}&a<b,\\\\\n\\text{(iii)}&b<a.\n\\end{array}$$",
+          "sourceSha256": "31408004054da1164053d037d1cbd04b34fcf848b152cf6531a8c81cab649d82"
+        },
+        {
+          "id": "p15-b7",
+          "source": "(P′11) For any numbers $a$, $b$, and $c$, if $a<b$ and $b<c$, then $a<c$.",
+          "sourceSha256": "910967c90318582b4c976ef15bf12b043520d0903d893693af078aa7ef5bfdb5",
+          "translation": "(P′11) 对任意数 $a$、$b$、$c$，若 $a<b$ 且 $b<c$，则 $a<c$。"
+        },
+        {
+          "id": "p15-b8",
+          "source": "(P′12) For any numbers $a$, $b$, and $c$, if $a<b$, then $a+c<b+c$.",
+          "sourceSha256": "cf446a5284466faea3f16bb90fbcffe6c372f35bcf613ce2fb981e6060b53da2",
+          "translation": "(P′12) 对任意数 $a$、$b$、$c$，若 $a<b$，则 $a+c<b+c$。"
+        },
+        {
+          "id": "p15-b9",
+          "source": "(P′13) For any numbers $a$, $b$, and $c$, if $a<b$ and $0<c$, then $ac<bc$.",
+          "sourceSha256": "4accc26cc25f65833f3d46bc43ff210fb019ca773587bde58d228984b6e448a2",
+          "translation": "(P′13) 对任意数 $a$、$b$、$c$，若 $a<b$ 且 $0<c$，则 $ac<bc$。"
+        },
+        {
+          "id": "p15-b10",
+          "source": "Show that P10–P12 can then be deduced as theorems.",
+          "sourceSha256": "0788da815586692d92f42a210e40e2284603b16765a31b8c08c4b811b726bb40",
+          "translation": "证明：此时 P10—P12 可以作为定理推导出来。"
+        },
+        {
+          "id": "p15-b11",
+          "source": "### 9. Express each of the following with at least one less pair of absolute value signs.",
+          "sourceSha256": "1cafa380c54499d0a170e859c917888e95e91b6be0317604bcc5e4482936fef4",
+          "translation": "### 9. 将下列各式改写为至少少一对绝对值符号的形式。"
+        },
+        {
+          "id": "p15-b12",
+          "source": "(i) $|\\sqrt2+\\sqrt3-\\sqrt5+\\sqrt7|$.",
+          "sourceSha256": "d552c0d6a9edf7b8ae55c7c9d27bd10b5fe2863fe896756261087841e437211c"
+        },
+        {
+          "id": "p15-b13",
+          "source": "(ii) $|(|a+b|-|a|-|b|)|$.",
+          "sourceSha256": "0e2a7250e48164806f211822faee95fa495d453f62826aefd1c1b4e2c6cbaa87"
+        },
+        {
+          "id": "p15-b14",
+          "source": "(iii) $|(|a+b|+|c|-|a+b+c|)|$.",
+          "sourceSha256": "4a8ddf73d467df71e55277dbd567be730eec82e74ac5975aebb730abad6c83c7"
+        },
+        {
+          "id": "p15-b15",
+          "source": "(iv) $|x^2-2xy+y^2|$.",
+          "sourceSha256": "1c9bd4b1126b7f4815948bad344d8a5f27e22f82b38610d00a26d13ccc64cefe"
+        },
+        {
+          "id": "p15-b16",
+          "source": "(v) $|(|\\sqrt2+\\sqrt3|-|\\sqrt5-\\sqrt7|)|$.",
+          "sourceSha256": "92f628e4a43354c99fb90cf92472fa19425cc01364b145962fbaea6f796987bd"
+        },
+        {
+          "id": "p15-b17",
+          "source": "### 10. Express each of the following without absolute value signs, treating various cases separately when necessary.",
+          "sourceSha256": "b6d337f15f02b42a6f3fcabb6a70cccb4dec6fc7a478a188269d77fa1ac272ac",
+          "translation": "### 10. 将下列各式写成不含绝对值符号的形式，必要时分情况讨论。"
+        },
+        {
+          "id": "p15-b18",
+          "source": "(i) $|a+b|-|b|$.",
+          "sourceSha256": "6011a5fb6c2d2ebc2cc8f71b041315165cfc995054cbd91c53768a10c44e30ee"
+        },
+        {
+          "id": "p15-b19",
+          "source": "(ii) $|(|x|-1)|$.",
+          "sourceSha256": "b12fed67f2d2e984f70ce7154ccacc35eea9e55c0ea21c6f2f6b504505cf946c"
+        },
+        {
+          "id": "p15-b20",
+          "source": "(iii) $|x|-|x^2|$.",
+          "sourceSha256": "b95aeb898c939e7351468f825f9d2871eb10f3740a9aa7ef8130b807a8c92b01"
+        },
+        {
+          "id": "p15-b21",
+          "source": "(iv) $a-|(a-|a|)|$.",
+          "sourceSha256": "a929d245917541a2a3fc86684975decf37c38e67adf38b01c13639fadc82987c"
+        },
+        {
+          "id": "p15-b22",
+          "source": "### 11. Find all numbers $x$ for which",
+          "sourceSha256": "dd7b47219d566838dd00828a953d7baeb6b5a58fc3da1bd606bbc6f07b7b2cdb",
+          "translation": "### 11. 求满足下列条件的所有数 $x$："
+        },
+        {
+          "id": "p15-b23",
+          "source": "(i) $|x-3|=8$.",
+          "sourceSha256": "40b0506d2968f495c0e0780b250a8e33d84166e4b41a277b7e59c157812ce833"
+        },
+        {
+          "id": "p15-b24",
+          "source": "(ii) $|x-3|<8$.",
+          "sourceSha256": "805438e47cc4747caae686bdfcb4bc6ef2a1fd80429334f2e1c9dd971012c42a"
+        },
+        {
+          "id": "p15-b25",
+          "source": "(iii) $|x+4|<2$.",
+          "sourceSha256": "8358b177861d05482943d42c66ddff4becc1d85fc505782b074a5cfbe939d04f"
+        },
+        {
+          "id": "p15-b26",
+          "source": "(iv) $|x-1|+|x-2|>1$.",
+          "sourceSha256": "3c93720d8d0b6b3bdaafad1ad5cf40db7c26d225bd8905d2d345313db36a5050"
+        },
+        {
+          "id": "p15-b27",
+          "source": "(v) $|x-1|+|x+1|<2$.",
+          "sourceSha256": "90701e30b61fbfbcd340c6894087f68526083f0ece2016d4a6022660f5a89930"
+        }
+      ]
+    },
+    {
+      "printed": 16,
+      "sourceSha256": "7a785c19a52e905f91c4d02336927fcc692decf023deb991dfe40d1d9f3dbc26",
+      "blocks": [
+        {
+          "id": "p16-b1",
+          "source": "(vi) $|x-1|+|x+1|<1$.",
+          "sourceSha256": "f6c2afb5976c022be1d9eef4306565ec4a67b066423f5a6de2cb40447878701e"
+        },
+        {
+          "id": "p16-b2",
+          "source": "(vii) $|x-1|\\cdot|x+1|=0$.",
+          "sourceSha256": "78fae87a418776b45287f69337a8641701c648c583c17c302d11c2312e1da021"
+        },
+        {
+          "id": "p16-b3",
+          "source": "(viii) $|x-1|\\cdot|x+2|=3$.",
+          "sourceSha256": "89c3b6db05231247698b6561c1652fe3af6fdf26edb2aa56ec026a28ea6e0747"
+        },
+        {
+          "id": "p16-b4",
+          "source": "### 12. Prove the following:",
+          "sourceSha256": "d7b48e031a1f9d762405e2ca8e05e99ac0d312f74863505f650b6dde1f2b94da",
+          "translation": "### 12. 证明下列各项："
+        },
+        {
+          "id": "p16-b5",
+          "source": "(i) $|xy|=|x|\\cdot|y|$.",
+          "sourceSha256": "0022f880d9dbf9c3f36c74e15c5780da493081e1bab00c60566ced8b63800aa3"
+        },
+        {
+          "id": "p16-b6",
+          "source": "(ii) $\\displaystyle\\left|\\frac1x\\right|=\\frac1{|x|}$, if $x\\ne0$. (The best way to do this is to remember what $|x|^{-1}$ is.)",
+          "sourceSha256": "2d26b3117d52eec4cdaddb885b2cbbeae3c53fdc714112d08cc27f08ee97ff6e",
+          "translation": "(ii) 若 $x\\ne0$，则 $\\displaystyle\\left|\\frac1x\\right|=\\frac1{|x|}$。（最好的做法是回想 $|x|^{-1}$ 是什么。）"
+        },
+        {
+          "id": "p16-b7",
+          "source": "(iii) $\\displaystyle\\frac{|x|}{|y|}=\\left|\\frac{x}{y}\\right|$, if $y\\ne0$.",
+          "sourceSha256": "1407b0bcdc8df66a17a61744c17a48f51607d0817eca86be769d5bf9e7876288",
+          "translation": "(iii) 若 $y\\ne0$，则 $\\displaystyle\\frac{|x|}{|y|}=\\left|\\frac{x}{y}\\right|$。"
+        },
+        {
+          "id": "p16-b8",
+          "source": "(iv) $|x-y|\\le|x|+|y|$. (Give a very short proof.)",
+          "sourceSha256": "231f717603c0e77f67fa82f1cb408dd0ffa297785896077f9aee9c70ae1336c4",
+          "translation": "(iv) $|x-y|\\le|x|+|y|$。（给出一个非常简短的证明。）"
+        },
+        {
+          "id": "p16-b9",
+          "source": "(v) $|x|-|y|\\le|x-y|$. (A very short proof is possible, if you write things in the right way.)",
+          "sourceSha256": "b7e9174e999f738efd13de10db677f7c97a0dfb8ef87703ca28c5416cf305eee",
+          "translation": "(v) $|x|-|y|\\le|x-y|$。（如果采用恰当的写法，就能给出一个非常简短的证明。）"
+        },
+        {
+          "id": "p16-b10",
+          "source": "(vi) $|(|x|-|y|)|\\le|x-y|$. (Why does this follow immediately from (v)?)",
+          "sourceSha256": "9acef807328ff31f00100fc375356f4ba8f6cb60425cbaeccf57be9e06a08436",
+          "translation": "(vi) $|(|x|-|y|)|\\le|x-y|$。（为什么这可以立即由 (v) 推出？）"
+        },
+        {
+          "id": "p16-b11",
+          "source": "(vii) $|x+y+z|\\le|x|+|y|+|z|$. Indicate when equality holds, and prove your statement.",
+          "sourceSha256": "4f588c33156674c20adbe26cdd4e4000c3df83f488abd31e2bd2f5e062e054e1",
+          "translation": "(vii) $|x+y+z|\\le|x|+|y|+|z|$。指出何时等号成立，并证明你的断言。"
+        },
+        {
+          "id": "p16-b12",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p16-b13",
+          "source": "The maximum of two numbers $x$ and $y$ is denoted by $\\max(x,y)$. Thus $\\max(-1,3)=\\max(3,3)=3$ and $\\max(-1,-4)=\\max(-4,-1)=-1$. The minimum of $x$ and $y$ is denoted by $\\min(x,y)$. Prove that",
+          "sourceSha256": "46367d50bbd1c588d293acd724618d029bfeb4aff485f4f6617102acee4326cf",
+          "translation": "两个数 $x$ 与 $y$ 的最大值记为 $\\max(x,y)$。因此 $\\max(-1,3)=\\max(3,3)=3$，且 $\\max(-1,-4)=\\max(-4,-1)=-1$。$x$ 与 $y$ 的最小值记为 $\\min(x,y)$。证明"
+        },
+        {
+          "id": "p16-b14",
+          "source": "$$\\begin{aligned}\n\\max(x,y)&=\\frac{x+y+|y-x|}{2},\\\\\n\\min(x,y)&=\\frac{x+y-|y-x|}{2}.\n\\end{aligned}$$",
+          "sourceSha256": "003ec38cb74a2ce6718679a288c184c823326e9e43493bb7c9914b67295f6ebc"
+        },
+        {
+          "id": "p16-b15",
+          "source": "Derive a formula for $\\max(x,y,z)$ and $\\min(x,y,z)$, using, for example",
+          "sourceSha256": "909928ec05263fb0ecf02a93466f58d22aa89fc2b3db0b8b704af5588512142a",
+          "translation": "推导 $\\max(x,y,z)$ 和 $\\min(x,y,z)$ 的公式，例如利用"
+        },
+        {
+          "id": "p16-b16",
+          "source": "$$\\max(x,y,z)=\\max(x,\\max(y,z)).$$",
+          "sourceSha256": "d40efd9ca7e07a012e83e2aacd8a24006ef395ce3273548969ce8fc3feb15579"
+        },
+        {
+          "id": "p16-b17",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p16-b18",
+          "source": "(a) Prove that $|a|=|-a|$. (The trick is not to become confused by too many cases. First prove the statement for $a\\ge0$. Why is it then obvious for $a\\le0$?)",
+          "sourceSha256": "8fb2fd627cac8adf6985d7e7908dc86ebd6b031b26ef34adb4a1d8c11559431c",
+          "translation": "(a) 证明 $|a|=|-a|$。（诀窍是不要被太多情况弄糊涂。先对 $a\\ge0$ 证明这个命题。为什么对 $a\\le0$，它随即也显然成立？）"
+        },
+        {
+          "id": "p16-b19",
+          "source": "(b) Prove that $-b\\le a\\le b$ if and only if $|a|\\le b$. In particular, it follows that $-|a|\\le a\\le|a|$.",
+          "sourceSha256": "811206255baa3e49cf9b74f0b6933ae1ab47a31fdbf588a65ee1933a09c712c0",
+          "translation": "(b) 证明 $-b\\le a\\le b$ 当且仅当 $|a|\\le b$。特别地，由此得到 $-|a|\\le a\\le|a|$。"
+        },
+        {
+          "id": "p16-b20",
+          "source": "(c) Use this fact to give a new proof that $|a+b|\\le|a|+|b|$.",
+          "sourceSha256": "0ee45ff294f29c8cb80f39246f98eedc6e03ac78928b8794d02352b2499739e0",
+          "translation": "(c) 利用这个事实，给出 $|a+b|\\le|a|+|b|$ 的一个新证明。"
+        },
+        {
+          "id": "p16-b21",
+          "source": "### \\*15. Prove that if $x$ and $y$ are not both 0, then",
+          "sourceSha256": "23801c9fd0a91a50d357567220d2ee70061926c371db3c14e82c451bf43f30c6",
+          "translation": "### \\*15. 证明：若 $x$ 和 $y$ 不同时为 0，则"
+        },
+        {
+          "id": "p16-b22",
+          "source": "$$\\begin{gathered}\nx^2+xy+y^2>0,\\\\\nx^4+x^3y+x^2y^2+xy^3+y^4>0.\n\\end{gathered}$$",
+          "sourceSha256": "0f40636729fc5a29caf7fbd5e3feb5890d11263b99d2fba1385659289f980499"
+        },
+        {
+          "id": "p16-b23",
+          "source": "Hint: Use Problem 1.",
+          "sourceSha256": "635c8e5fcc77750542a9a6eff2006f835df921ef38202e711d470cf66b2207e8",
+          "translation": "提示：使用习题 1。"
+        },
+        {
+          "id": "p16-b24",
+          "source": "### \\*16.",
+          "sourceSha256": "f63edeb4dbccfdc649f956ca6c68709a605b569f278ea9d361bd034f417fda87"
+        },
+        {
+          "id": "p16-b25",
+          "source": "(a) Show that",
+          "sourceSha256": "109a77a00a2500c61b680da4498bb81fe08b0c64628b598c495b502e4d87bb24",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p16-b26",
+          "source": "$$\\begin{array}{ll}\n(x+y)^2=x^2+y^2&\\text{only when }x=0\\text{ or }y=0,\\\\\n(x+y)^3=x^3+y^3&\\text{only when }x=0\\text{ or }y=0\\text{ or }x=-y.\n\\end{array}$$",
+          "sourceSha256": "285769e3912e1218a876a6a91df18e93c74cc64210f59096a911ecbe9700b00d"
+        }
+      ]
+    },
+    {
+      "printed": 17,
+      "sourceSha256": "25ef9aa18fbe005690f134b2b3dddf94dac2299d221c9717e6132b961322c100",
+      "blocks": [
+        {
+          "id": "p17-b1",
+          "source": "(b) Using the fact that",
+          "sourceSha256": "45389523d3302f10e994a62c518faaedd2d3cff046e30057ae77c93348512781",
+          "translation": "(b) 利用下列事实："
+        },
+        {
+          "id": "p17-b2",
+          "source": "$$x^2+2xy+y^2=(x+y)^2\\ge0,$$",
+          "sourceSha256": "36bb2f862cb5ae52ec0ff099b77e1e17489979cd1c468eb26c7208c73d502d9d"
+        },
+        {
+          "id": "p17-b3",
+          "source": "show that $4x^2+6xy+4y^2>0$ unless $x$ and $y$ are both 0.",
+          "sourceSha256": "6d44e3674ddb16ee68773286edc1565ac02738c12bea4f4f1c80929275947394",
+          "translation": "证明：除非 $x$ 和 $y$ 同时为 0，否则 $4x^2+6xy+4y^2>0$。"
+        },
+        {
+          "id": "p17-b4",
+          "source": "(c) Use part (b) to find out when $(x+y)^4=x^4+y^4$.",
+          "sourceSha256": "da4188b50b5e80103c17f3ecff24784c723bc43644bdfcd2715316a6e340718f",
+          "translation": "(c) 利用 (b)，确定何时 $(x+y)^4=x^4+y^4$。"
+        },
+        {
+          "id": "p17-b5",
+          "source": "(d) Find out when $(x+y)^5=x^5+y^5$. Hint: From the assumption $(x+y)^5=x^5+y^5$ you should be able to derive the equation $x^3+2x^2y+2xy^2+y^3=0$, if $xy\\ne0$. This implies that $(x+y)^3=x^2y+xy^2=xy(x+y)$.",
+          "sourceSha256": "b8703324af0562411c5180fede52cb1c43a742387185f85b37880ea4bb8c6c70",
+          "translation": "(d) 确定何时 $(x+y)^5=x^5+y^5$。提示：由假设 $(x+y)^5=x^5+y^5$，在 $xy\\ne0$ 时，你应当能够推出等式 $x^3+2x^2y+2xy^2+y^3=0$。这又意味着 $(x+y)^3=x^2y+xy^2=xy(x+y)$。"
+        },
+        {
+          "id": "p17-b6",
+          "source": "You should now be able to make a good guess as to when $(x+y)^n=x^n+y^n$; the proof is contained in Problem 11-63.",
+          "sourceSha256": "fe36c09e445efcd22d564b9c48577687a6eba6864dd25f2f2bc81f915fa8cb4f",
+          "translation": "现在，对于 $(x+y)^n=x^n+y^n$ 在什么情况下成立，你应当能够作出一个不错的猜测；证明见习题 11-63。"
+        },
+        {
+          "id": "p17-b7",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p17-b8",
+          "source": "(a) Find the smallest possible value of $2x^2-3x+4$. Hint: “Complete the square,” i.e., write $2x^2-3x+4=2(x-3/4)^2+{}$?",
+          "sourceSha256": "582b157d2d0780791b41df305428dde6092ddda08d4903335580ffccc226d104",
+          "translation": "(a) 求 $2x^2-3x+4$ 可能取得的最小值。提示：“配方”，即写成 $2x^2-3x+4=2(x-3/4)^2+{}$？"
+        },
+        {
+          "id": "p17-b9",
+          "source": "(b) Find the smallest possible value of $x^2-3x+2y^2+4y+2$.",
+          "sourceSha256": "8848c53f833943d49582c40f927ea18c779ab93e35dea355fbf7190354c1f5e3",
+          "translation": "(b) 求 $x^2-3x+2y^2+4y+2$ 可能取得的最小值。"
+        },
+        {
+          "id": "p17-b10",
+          "source": "(c) Find the smallest possible value of $x^2+4xy+5y^2-4x-6y+7$.",
+          "sourceSha256": "462493ccd7402614454577c950b780f4a7fce232e96d5a721d1944faf3daec39",
+          "translation": "(c) 求 $x^2+4xy+5y^2-4x-6y+7$ 可能取得的最小值。"
+        },
+        {
+          "id": "p17-b11",
+          "source": "### 18.",
+          "sourceSha256": "ea685e12aa5506177e8354425cc5ef641b0955faf096533840903cb00fca83d4"
+        },
+        {
+          "id": "p17-b12",
+          "source": "(a) Suppose that $b^2-4c\\ge0$. Show that the numbers",
+          "sourceSha256": "9e8907bf8327edb89b99b381a9051a2e0edd0354799ac33e27315c6b72409fe5",
+          "translation": "(a) 假设 $b^2-4c\\ge0$。证明下列两个数"
+        },
+        {
+          "id": "p17-b13",
+          "source": "$$\\frac{-b+\\sqrt{b^2-4c}}{2},\\qquad\\frac{-b-\\sqrt{b^2-4c}}{2}$$",
+          "sourceSha256": "91058e81ff66e39d5a4e338605de5f7c8f587c97a701ac7eae71ccd09fb8b3d3"
+        },
+        {
+          "id": "p17-b14",
+          "source": "both satisfy the equation $x^2+bx+c=0$.",
+          "sourceSha256": "075f6c605e6e36e8541b72b2c7dbdcd84870c0c41a282f5904f361eaddf79cec",
+          "translation": "都满足方程 $x^2+bx+c=0$。"
+        },
+        {
+          "id": "p17-b15",
+          "source": "(b) Suppose that $b^2-4c<0$. Show that there are no numbers $x$ satisfying $x^2+bx+c=0$; in fact, $x^2+bx+c>0$ for all $x$. Hint: Complete the square.",
+          "sourceSha256": "e27636972ecd1b97d3873b052cb89930f22e74c23327e0bda22282a9bdb578a7",
+          "translation": "(b) 假设 $b^2-4c<0$。证明：不存在满足 $x^2+bx+c=0$ 的数 $x$；事实上，对所有 $x$ 都有 $x^2+bx+c>0$。提示：配方。"
+        },
+        {
+          "id": "p17-b16",
+          "source": "(c) Use this fact to give another proof that if $x$ and $y$ are not both 0, then $x^2+xy+y^2>0$.",
+          "sourceSha256": "e32ef3f96235db394bb276cf386e88cf5a9c7ab0f72861fc91a7505cd51c7bd5",
+          "translation": "(c) 利用这个事实，给出下面命题的另一证明：若 $x$ 和 $y$ 不同时为 0，则 $x^2+xy+y^2>0$。"
+        },
+        {
+          "id": "p17-b17",
+          "source": "(d) For which numbers $\\alpha$ is it true that $x^2+\\alpha xy+y^2>0$ whenever $x$ and $y$ are not both 0?",
+          "sourceSha256": "1ddfd392f2237619bdef4b7e86798eb3423af5f2b406112f592c57458fccf9b4",
+          "translation": "(d) 对哪些数 $\\alpha$，只要 $x$ 和 $y$ 不同时为 0，就有 $x^2+\\alpha xy+y^2>0$？"
+        },
+        {
+          "id": "p17-b18",
+          "source": "(e) Find the smallest possible value of $x^2+bx+c$ and of $ax^2+bx+c$, for $a>0$.",
+          "sourceSha256": "be6fc6017ab580a73b481d9622e9e2699259aa8743714aab064a3d1335f6f952",
+          "translation": "(e) 求 $x^2+bx+c$ 可能取得的最小值，以及在 $a>0$ 时 $ax^2+bx+c$ 可能取得的最小值。"
+        },
+        {
+          "id": "p17-b19",
+          "source": "### 19.",
+          "sourceSha256": "8b09a7bace93d37dfe88ea4c6c08a187efc4b2a287262ba51ada7accf660adbf"
+        },
+        {
+          "id": "p17-b20",
+          "source": "The fact that $a^2\\ge0$ for all numbers $a$, elementary as it may seem, is nevertheless the fundamental idea upon which most important inequalities are ultimately based. The great-granddaddy of all inequalities is the *Schwarz inequality*:",
+          "sourceSha256": "5d3f90e50bbb1b14e7e58592ce34440ae6f7f542b8ddba4c8fca41a42a0fd73d",
+          "translation": "对所有数 $a$ 都有 $a^2\\ge0$ 这一事实，尽管看起来初等，却是大多数重要不等式最终所依据的基本思想。所有不等式中的老祖宗是 *Schwarz 不等式*："
+        },
+        {
+          "id": "p17-b21",
+          "source": "$$x_1y_1+x_2y_2\\le\\sqrt{x_1^2+x_2^2}\\sqrt{y_1^2+y_2^2}.$$",
+          "sourceSha256": "954e589e95347dad9456f37572cb54834164953eb8827d4f0fd6e87f3a0fc7f9"
+        },
+        {
+          "id": "p17-b22",
+          "source": "(A more general form occurs in Problem 2-21.) The three proofs of the Schwarz inequality outlined below have only one thing in common—their reliance on the fact that $a^2\\ge0$ for all $a$.",
+          "sourceSha256": "2e1a265d09fa48e64e4c52f5bcd483ce83c2d3ea9aea727d27133f6401018cb8",
+          "translation": "（更一般的形式见习题 2-21。）下面概述了 Schwarz 不等式的三种证明；它们只有一点相同——都依赖于对所有 $a$ 都有 $a^2\\ge0$ 这一事实。"
+        },
+        {
+          "id": "p17-b23",
+          "source": "(a) Prove that if $x_1=\\lambda y_1$ and $x_2=\\lambda y_2$ for some number $\\lambda\\ge0$, then equality holds in the Schwarz inequality. Prove the same thing if $y_1=y_2=0$. Now suppose that $y_1$ and $y_2$ are not both 0, and that there is no",
+          "sourceSha256": "94fa5a69b40af4349bff8211bb15020822c504de4958bf5a11067482dba00b51",
+          "translation": "(a) 证明：若存在数 $\\lambda\\ge0$，使 $x_1=\\lambda y_1$ 且 $x_2=\\lambda y_2$，则 Schwarz 不等式中等号成立。对 $y_1=y_2=0$ 的情况也证明同一结论。现在假设 $y_1$ 和 $y_2$ 不同时为 0，并且不存在"
+        }
+      ]
+    },
+    {
+      "printed": 18,
+      "sourceSha256": "f47bf0139bc6815847e1b491d0593d983b7eb5675514f2a2fa3d9f79c146dd98",
+      "blocks": [
+        {
+          "id": "p18-b1",
+          "source": "number $\\lambda$ such that $x_1=\\lambda y_1$ and $x_2=\\lambda y_2$. Then",
+          "sourceSha256": "3233949d3715bd169c26750970f586a2c2e458368a5b5bd38f4af05382a5fafc",
+          "translation": "满足 $x_1=\\lambda y_1$ 且 $x_2=\\lambda y_2$ 的数 $\\lambda$。那么"
+        },
+        {
+          "id": "p18-b2",
+          "source": "$$\\begin{aligned}\n0&<(\\lambda y_1-x_1)^2+(\\lambda y_2-x_2)^2\\\\\n&=\\lambda^2(y_1^2+y_2^2)-2\\lambda(x_1y_1+x_2y_2)+(x_1^2+x_2^2).\n\\end{aligned}$$",
+          "sourceSha256": "1997b566a79ff36090beb3138f1060d4a7bf5593a18edaf59e7768f97f5c3c19"
+        },
+        {
+          "id": "p18-b3",
+          "source": "Using Problem 18, complete the proof of the Schwarz inequality.",
+          "sourceSha256": "2d1bffcf8871c9b570dbed582cdd3145c5fd4d55c7cae8df0b859046414c6e66",
+          "translation": "利用习题 18，完成 Schwarz 不等式的证明。"
+        },
+        {
+          "id": "p18-b4",
+          "source": "(b) Prove the Schwarz inequality by using $2xy\\le x^2+y^2$ (how is this derived?) with",
+          "sourceSha256": "2b6a73e45bb3fc7dbabba4c3a493d2102e5534459d6afadfa04720e505c592d7",
+          "translation": "(b) 利用 $2xy\\le x^2+y^2$（它是怎样推导出来的？）证明 Schwarz 不等式，其中取"
+        },
+        {
+          "id": "p18-b5",
+          "source": "$$x=\\frac{x_i}{\\sqrt{x_1^2+x_2^2}},\\qquad y=\\frac{y_i}{\\sqrt{y_1^2+y_2^2}},$$",
+          "sourceSha256": "3853aa3b439b62aca3aeadac442784d14369386cebcb2fa942a4e6503ccb25b5"
+        },
+        {
+          "id": "p18-b6",
+          "source": "first for $i=1$ and then for $i=2$.",
+          "sourceSha256": "2c374e7fb2bfa283a390558c39fc92807419f45de7f886a7d4ff1d3f9ae43e89",
+          "translation": "先令 $i=1$，再令 $i=2$。"
+        },
+        {
+          "id": "p18-b7",
+          "source": "(c) Prove the Schwarz inequality by first proving that",
+          "sourceSha256": "10671af78c27f657fe0101f2dd63facb0e272426e4777bc21701a4ed8cad2295",
+          "translation": "(c) 先证明下式，再由此证明 Schwarz 不等式："
+        },
+        {
+          "id": "p18-b8",
+          "source": "$$(x_1^2+x_2^2)(y_1^2+y_2^2)=(x_1y_1+x_2y_2)^2+(x_1y_2-x_2y_1)^2.$$",
+          "sourceSha256": "569315cee898dc4f9b213f5ca40997f5631b7fad7f8a6d4daa1fc5252d60ed5b"
+        },
+        {
+          "id": "p18-b9",
+          "source": "(d) Deduce, from each of these three proofs, that equality holds only when $y_1=y_2=0$ or when there is a number $\\lambda\\ge0$ such that $x_1=\\lambda y_1$ and $x_2=\\lambda y_2$.",
+          "sourceSha256": "04f7ca75705c1e7b52fefb5c821ae80da51ee0d37691204d280c64b8524883b5",
+          "translation": "(d) 分别从这三种证明推出：只有当 $y_1=y_2=0$，或者存在数 $\\lambda\\ge0$ 使 $x_1=\\lambda y_1$ 且 $x_2=\\lambda y_2$ 时，等号才成立。"
+        },
+        {
+          "id": "p18-b10",
+          "source": "In our later work, three facts about inequalities will be crucial. Although proofs will be supplied at the appropriate point in the text, a personal assault on these problems is infinitely more enlightening than a perusal of a completely worked-out proof. The statements of these propositions involve some weird numbers, but their basic message is very simple: if $x$ is close enough to $x_0$, and $y$ is close enough to $y_0$, then $x+y$ will be close to $x_0+y_0$, and $xy$ will be close to $x_0y_0$, and $1/y$ will be close to $1/y_0$. The symbol “$\\varepsilon$” which appears in these propositions is the fifth letter of the Greek alphabet (“epsilon”), and could just as well be replaced by a less intimidating Roman letter; however, tradition has made the use of $\\varepsilon$ almost sacrosanct in the contexts to which these theorems apply.",
+          "sourceSha256": "fee9bbc10c25e669d23375713c7cfda52b637936c471aab208367a653a35ad61",
+          "translation": "在后面的讨论中，关于不等式的三个事实至关重要。尽管正文会在适当的地方给出证明，亲自尝试攻克这些问题，远比阅读一个已经完整写出的证明更有启发。这些命题的陈述包含一些模样古怪的数，但基本意思很简单：如果 $x$ 与 $x_0$ 足够接近，$y$ 与 $y_0$ 足够接近，那么 $x+y$ 就会接近 $x_0+y_0$，$xy$ 就会接近 $x_0y_0$，$1/y$ 就会接近 $1/y_0$。这些命题中出现的符号“$\\varepsilon$”是希腊字母表中的第五个字母（“epsilon”），完全可以换成一个不那么令人畏惧的拉丁字母；不过，在这些定理所应用的场合，传统已使 $\\varepsilon$ 的使用几乎成为不可更改的惯例。"
+        },
+        {
+          "id": "p18-b11",
+          "source": "### 20. Prove that if",
+          "sourceSha256": "8613a3b7fd84ae6f27c8ead399665ff9b7ec5c4934cea7f803143d43907e106d",
+          "translation": "### 20. 证明：若"
+        },
+        {
+          "id": "p18-b12",
+          "source": "$$|x-x_0|<\\frac{\\varepsilon}{2}\\quad\\text{and}\\quad|y-y_0|<\\frac{\\varepsilon}{2},$$",
+          "sourceSha256": "cd0a1b33a64dc6d6fb0701bb2cddb7256d0a1fdd0f054987c444c4581e8b322d"
+        },
+        {
+          "id": "p18-b13",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "则"
+        },
+        {
+          "id": "p18-b14",
+          "source": "$$\\begin{gathered}\n|(x+y)-(x_0+y_0)|<\\varepsilon,\\\\\n|(x-y)-(x_0-y_0)|<\\varepsilon.\n\\end{gathered}$$",
+          "sourceSha256": "a1e0cb33aa348f93dd64f1f17dfa73c32c2da9d694bf8bb0d44fc83158324f06"
+        },
+        {
+          "id": "p18-b15",
+          "source": "### \\*21. Prove that if",
+          "sourceSha256": "ad8757cc91820f8409a68e93bb855287da860d56baf4297c10e2a06e68b99ee5",
+          "translation": "### \\*21. 证明：若"
+        },
+        {
+          "id": "p18-b16",
+          "source": "$$|x-x_0|<\\min\\left(\\frac{\\varepsilon}{2(|y_0|+1)},1\\right)\\quad\\text{and}\\quad|y-y_0|<\\frac{\\varepsilon}{2(|x_0|+1)},$$",
+          "sourceSha256": "235bb05ef48d2ab3f030adbe548ac9e580bd63d59828406bb938b6b99da0b0f7"
+        },
+        {
+          "id": "p18-b17",
+          "source": "then $|xy-x_0y_0|<\\varepsilon$.",
+          "sourceSha256": "bcf311c53da3d261fe9d0a15c0f5060be6073078d6b3d328bd11cbc9ae3e56a8",
+          "translation": "则 $|xy-x_0y_0|<\\varepsilon$。"
+        },
+        {
+          "id": "p18-b18",
+          "source": "(The notation “min” was defined in Problem 13, but the formula provided by that problem is irrelevant at the moment; the first inequality in the hypothesis just means that",
+          "sourceSha256": "cd82381d70d9e7295037453ebbca1cef4e78da874365743f70b6d7d5b184ff49",
+          "translation": "（记号“min”已在习题 13 中定义，但该题给出的公式目前无关紧要；假设中的第一个不等式只是表示"
+        },
+        {
+          "id": "p18-b19",
+          "source": "$$|x-x_0|<\\frac{\\varepsilon}{2(|y_0|+1)}\\quad\\text{and}\\quad|x-x_0|<1;$$",
+          "sourceSha256": "0c7474a1fafb4b2a1950f226608bc4991c645df7c34d2e42bba5c9ce49a7f310"
+        }
+      ]
+    },
+    {
+      "printed": 19,
+      "sourceSha256": "1caa5c528ec0bf46851042335abbc68f680e68852a1789bc891271240d6922c1",
+      "blocks": [
+        {
+          "id": "p19-b1",
+          "source": "at one point in the argument you will need the first inequality, and at another point you will need the second. One more word of advice: since the hypotheses only provide information about $x-x_0$ and $y-y_0$, it is almost a foregone conclusion that the proof will depend upon writing $xy-x_0y_0$ in a way that involves $x-x_0$ and $y-y_0$.)",
+          "sourceSha256": "a40836fd2df41ff3c38981293f3d98402e3c1e264640e1a81bfcd76513cb91d0",
+          "translation": "在论证的一处，你会需要第一个不等式，在另一处则会需要第二个。再给一个建议：既然假设只提供了关于 $x-x_0$ 和 $y-y_0$ 的信息，那么几乎可以预料，证明将依靠把 $xy-x_0y_0$ 写成包含 $x-x_0$ 和 $y-y_0$ 的形式。）"
+        },
+        {
+          "id": "p19-b2",
+          "source": "### \\*22. Prove that if $y_0\\ne0$ and",
+          "sourceSha256": "0ca6301bb5135e47e0163f685d41566aa23aaf1310ebb3c8e996758719d13b67",
+          "translation": "### \\*22. 证明：若 $y_0\\ne0$ 且"
+        },
+        {
+          "id": "p19-b3",
+          "source": "$$|y-y_0|<\\min\\left(\\frac{|y_0|}{2},\\frac{\\varepsilon|y_0|^2}{2}\\right),$$",
+          "sourceSha256": "7416834493fbdc7f691e13b640380739296e8a9a7fd38d1fec0f38d9b0407a79"
+        },
+        {
+          "id": "p19-b4",
+          "source": "then $y\\ne0$ and",
+          "sourceSha256": "a5fe324ba0643c78c058f4a73da4653e56888f55b80aa792a75b6fc3ac55cab3",
+          "translation": "则 $y\\ne0$，并且"
+        },
+        {
+          "id": "p19-b5",
+          "source": "$$\\left|\\frac1y-\\frac1{y_0}\\right|<\\varepsilon.$$",
+          "sourceSha256": "09a6d57af0a6b2fe5cbe52112d14a25c608db6ed0a5fc33150a94c0443c129a4"
+        },
+        {
+          "id": "p19-b6",
+          "source": "### \\*23. Replace the question marks in the following statement by expressions involving $\\varepsilon$, $x_0$, and $y_0$ so that the conclusion will be true:",
+          "sourceSha256": "5ada469b64b46b5e844bdcf8ae5009d11155e372a23b20da7a4e374b7e4432aa",
+          "translation": "### \\*23. 用包含 $\\varepsilon$、$x_0$ 和 $y_0$ 的表达式替换下面陈述中的问号，使结论成立："
+        },
+        {
+          "id": "p19-b7",
+          "source": "If $y_0\\ne0$ and",
+          "sourceSha256": "0f1fdba14285477bba6a6af2f246795fc3cce52e8e765f923fa593fce805b598",
+          "translation": "若 $y_0\\ne0$ 且"
+        },
+        {
+          "id": "p19-b8",
+          "source": "$$|y-y_0|<\\,?\\quad\\text{and}\\quad|x-x_0|<\\,?$$",
+          "sourceSha256": "9cbeaf72701322d364b98290e58fda1abad32182e9b9d014c5ea0f57f9405d2c"
+        },
+        {
+          "id": "p19-b9",
+          "source": "then $y\\ne0$ and",
+          "sourceSha256": "a5fe324ba0643c78c058f4a73da4653e56888f55b80aa792a75b6fc3ac55cab3",
+          "translation": "则 $y\\ne0$，并且"
+        },
+        {
+          "id": "p19-b10",
+          "source": "$$\\left|\\frac{x}{y}-\\frac{x_0}{y_0}\\right|<\\varepsilon.$$",
+          "sourceSha256": "665b94b52fe179f6e960e8a4839b4c534ccfaef4df11f7d0c492b23200bfb22b"
+        },
+        {
+          "id": "p19-b11",
+          "source": "This problem is trivial in the sense that its solution follows from Problems 21 and 22 with almost no work at all (notice that $x/y=x\\cdot1/y$). The crucial point is not to become confused; decide which of the two problems should be used first, and don’t panic if your answer looks unlikely.",
+          "sourceSha256": "18c1355dd387c0ed03914063d0dce3f584957bb7e65f42a7a7e58db30b5b6fed",
+          "translation": "这道题可以说是平凡的，因为几乎不用再做任何工作，就可以从习题 21 和 22 得到解答（注意 $x/y=x\\cdot1/y$）。关键在于不要弄糊涂；确定这两道题应当先用哪一道，如果答案看起来不太像样，也不要慌。"
+        },
+        {
+          "id": "p19-b12",
+          "source": "### \\*24.",
+          "sourceSha256": "f798979970ec1033ba5cf3589df2a8d645141a228b89e4b7b95827882426bad3"
+        },
+        {
+          "id": "p19-b13",
+          "source": "This problem shows that the actual placement of parentheses in a sum is irrelevant. The proofs involve “mathematical induction”; if you are not familiar with such proofs, but still want to tackle this problem, it can be saved until after Chapter 2, where proofs by induction are explained.",
+          "sourceSha256": "d6716c2a24f12101e30f04b47b32637d083edffaccd6bc1933c1293853ce2387",
+          "translation": "这道题说明，和式中括号的实际位置无关紧要。证明涉及“数学归纳法”；如果你不熟悉这种证明，但仍想解决这道题，可以留到第二章之后再做，那里会解释归纳法证明。"
+        },
+        {
+          "id": "p19-b14",
+          "source": "Let us agree, for definiteness, that $a_1+\\cdots+a_n$ will denote",
+          "sourceSha256": "304306420ef7bad33a7e46cdc410607a8f81c9ef5f9ad8d3eaca8d89ea09f7c4",
+          "translation": "为明确起见，约定 $a_1+\\cdots+a_n$ 表示"
+        },
+        {
+          "id": "p19-b15",
+          "source": "$$a_1+(a_2+(a_3+\\cdots+(a_{n-2}+(a_{n-1}+a_n)))\\cdots).$$",
+          "sourceSha256": "007a761a45b67cd6fc98a78e9363be35665d7ff1e896072cbc9ae722b472715e"
+        },
+        {
+          "id": "p19-b16",
+          "source": "Thus $a_1+a_2+a_3$ denotes $a_1+(a_2+a_3)$, and $a_1+a_2+a_3+a_4$ denotes $a_1+(a_2+(a_3+a_4))$, etc.",
+          "sourceSha256": "9d7ce333e8eca57a5c9c69c25e0d6c67870ea84378c6139b6f26b444d558e089",
+          "translation": "因此，$a_1+a_2+a_3$ 表示 $a_1+(a_2+a_3)$，$a_1+a_2+a_3+a_4$ 表示 $a_1+(a_2+(a_3+a_4))$，依此类推。"
+        },
+        {
+          "id": "p19-b17",
+          "source": "(a) Prove that",
+          "sourceSha256": "5fd957c03a4a5c36f0dc505bfedc633c34bfb7dc8fb6d6e0639736d4fcc5d37c",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p19-b18",
+          "source": "$$(a_1+\\cdots+a_k)+a_{k+1}=a_1+\\cdots+a_{k+1}.$$",
+          "sourceSha256": "f1a6c6f15c5a8b2af3a70149ce160b2f626fda30b858dca3e684b1f6f859d51f"
+        },
+        {
+          "id": "p19-b19",
+          "source": "Hint: Use induction on $k$.",
+          "sourceSha256": "b1f067d5f483b201295354218daeef1a9ec92211e241c730d7926b99b56d3804",
+          "translation": "提示：对 $k$ 使用归纳法。"
+        },
+        {
+          "id": "p19-b20",
+          "source": "(b) Prove that if $n\\ge k$, then",
+          "sourceSha256": "3e8eac278f543a29f7b2339a17c3a776dd0a43513b5124ffcc5153080c2a904b",
+          "translation": "(b) 证明：若 $n\\ge k$，则"
+        },
+        {
+          "id": "p19-b21",
+          "source": "$$(a_1+\\cdots+a_k)+(a_{k+1}+\\cdots+a_n)=a_1+\\cdots+a_n.$$",
+          "sourceSha256": "5851f307a3274c26d4bd7e0f2ce804f935ad33a75861b8defb8133adff81b0e2"
+        },
+        {
+          "id": "p19-b22",
+          "source": "Hint: Use part (a) to give a proof by induction on $k$.",
+          "sourceSha256": "c20a8ea7c919b192a2516326787a42801a579784dd78d78531500625ac8af926",
+          "translation": "提示：利用 (a)，对 $k$ 作归纳证明。"
+        }
+      ]
+    },
+    {
+      "printed": 20,
+      "sourceSha256": "719b5651a7e2b575d8db306ecf99c8c672a2bf1f2301b0964d2b5c53719c6fc5",
+      "blocks": [
+        {
+          "id": "p20-b1",
+          "source": "(c) Let $s(a_1,\\ldots,a_k)$ be some sum formed from $a_1,\\ldots,a_k$. Show that",
+          "sourceSha256": "8ea8fafcbccd3cedf776bbd9dae8c39ef89ccd477874a80e7d726027da4d17d3",
+          "translation": "(c) 设 $s(a_1,\\ldots,a_k)$ 是由 $a_1,\\ldots,a_k$ 按某种方式组成的和。证明"
+        },
+        {
+          "id": "p20-b2",
+          "source": "$$s(a_1,\\ldots,a_k)=a_1+\\cdots+a_k.$$",
+          "sourceSha256": "38212d59a2ff6c9ae0dd94128497138749caabd6a1adb4aac70efc46fe234ab5"
+        },
+        {
+          "id": "p20-b3",
+          "source": "Hint: There must be two sums $s'(a_1,\\ldots,a_l)$ and $s''(a_{l+1},\\ldots,a_k)$ such that",
+          "sourceSha256": "12b90978b18a469cf28517d6234979794610ab544df12115f3ad126b8b64ad0f",
+          "translation": "提示：必定存在两个和 $s'(a_1,\\ldots,a_l)$ 和 $s''(a_{l+1},\\ldots,a_k)$，使得"
+        },
+        {
+          "id": "p20-b4",
+          "source": "$$s(a_1,\\ldots,a_k)=s'(a_1,\\ldots,a_l)+s''(a_{l+1},\\ldots,a_k).$$",
+          "sourceSha256": "84641d0494b83ac23d334a25bf79d4284c929c357538bcee43f84f854cf55a80"
+        },
+        {
+          "id": "p20-b5",
+          "source": "### 25.",
+          "sourceSha256": "e243042975caa2efce0a7385b48b4be10d7c1f2cfeac6357090078c2f5eb5e34"
+        },
+        {
+          "id": "p20-b6",
+          "source": "Suppose that we interpret “number” to mean either 0 or 1, and $+$ and $\\cdot$ to be the operations defined by the following two tables.",
+          "sourceSha256": "c6b371a07dd34674c4fc2327632069b053ba339def349feba05cde61547bd144",
+          "translation": "假设我们把“数”解释为 0 或 1，把 $+$ 和 $\\cdot$ 解释为下列两个表定义的运算。"
+        },
+        {
+          "id": "p20-b7",
+          "source": "<div class=\"original-operation-tables\">\n<table aria-label=\"Addition\"><thead><tr><th scope=\"col\">+</th><th scope=\"col\">0</th><th scope=\"col\">1</th></tr></thead><tbody><tr><th scope=\"row\">0</th><td>0</td><td>1</td></tr><tr><th scope=\"row\">1</th><td>1</td><td>0</td></tr></tbody></table>\n<table aria-label=\"Multiplication\"><thead><tr><th scope=\"col\">·</th><th scope=\"col\">0</th><th scope=\"col\">1</th></tr></thead><tbody><tr><th scope=\"row\">0</th><td>0</td><td>0</td></tr><tr><th scope=\"row\">1</th><td>0</td><td>1</td></tr></tbody></table>\n</div>",
+          "sourceSha256": "1f8748940a4796c2ce6718c1afe175bf6cfff7484552e18e1dd8fce5972d2cfe"
+        },
+        {
+          "id": "p20-b8",
+          "source": "Check that properties P1–P9 all hold, even though $1+1=0$.",
+          "sourceSha256": "b0f7a30a9013136815452734f8e33447340887a1b9f9f935f3c971bdd76e540e",
+          "translation": "验证：尽管 $1+1=0$，性质 P1—P9 仍然全部成立。"
+        }
+      ]
+    }
+  ]
+}

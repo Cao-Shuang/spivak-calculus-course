@@ -1,0 +1,2719 @@
+{
+  "chapter": 23,
+  "language": "zh-CN",
+  "sourceSha256": "25a10f235530562051f1e5113164b30042381331c20b78f1874edb7d885bd2f9",
+  "paragraphCount": 273,
+  "pages": [
+    {
+      "printed": 471,
+      "sourceSha256": "7618b999ed441bb9a2be7a5e22f5912519a402afb0b2a667d786c22abf0aed53",
+      "blocks": [
+        {
+          "id": "p471-b1",
+          "source": "# CHAPTER 23",
+          "sourceSha256": "e1218d284e1ed213c9a4b916f2f122c0427f8a4e1ffd7b6c56d8d944e52e8970",
+          "translation": "# 第 23 章"
+        },
+        {
+          "id": "p471-b2",
+          "source": "# INFINITE SERIES",
+          "sourceSha256": "6801fc67f17cf970cbca0be02fa26026d82384ffb1ed452e29218e71a569d49c",
+          "translation": "# 无穷级数"
+        },
+        {
+          "id": "p471-b3",
+          "source": "Infinite sequences were introduced in the previous chapter with the specific intention of considering their “sums”",
+          "sourceSha256": "c0c6071b532d69a7a68acfe5ba7ec6b8f9d17a9653e5323e58b4ab8afb0ba11b",
+          "translation": "上一章引入无穷数列，具体目的正是在本章考虑它们的“和”"
+        },
+        {
+          "id": "p471-b4",
+          "source": "$$a_1+a_2+a_3+\\cdots$$",
+          "sourceSha256": "ea37b8520cf7dc144cfa2ad0286d23f585906144dd5af925cfabb11f63990ea2"
+        },
+        {
+          "id": "p471-b5",
+          "source": "in this chapter. This is not an entirely straightforward matter, for the sum of infinitely many numbers is as yet completely undefined. What can be defined are the “partial sums”",
+          "sourceSha256": "ba5a4a5ede14ae5cc96155f8bc4790891d0136c13278b8b0c3705eea3ded392c",
+          "translation": "这并不是一件完全顺理成章的事，因为无穷多个数的和迄今根本没有定义。可以定义的是“部分和”"
+        },
+        {
+          "id": "p471-b6",
+          "source": "$$s_n=a_1+\\cdots+a_n,$$",
+          "sourceSha256": "e14aeff0b414e1ce96ff64c6b9b527fd5d0e5e12d4c28f0567c77a6779a176ed"
+        },
+        {
+          "id": "p471-b7",
+          "source": "and the infinite sum must presumably be defined in terms of these partial sums. Fortunately, the mechanism for formulating this definition has already been developed in the previous chapter. If there is to be any hope of computing the infinite sum $a_1+a_2+a_3+\\cdots$, the partial sums $s_n$ should represent closer and closer approximations as $n$ is chosen larger and larger. This last assertion amounts to little more than a sloppy definition of limits: the “infinite sum” $a_1+a_2+a_3+\\cdots$ ought to be $\\lim\\limits_{n\\to\\infty}s_n$. This approach will necessarily leave the “sum” of many sequences undefined, since the sequence $\\{s_n\\}$ may easily fail to have a limit. For example, the sequence",
+          "sourceSha256": "0cb984f3b05e9a76d870b08c1ece7f6e1df21de916f69514bef8aed9298e3621",
+          "translation": "而无穷和想必必须通过这些部分和来定义。幸运的是，表述这个定义所需的工具，在上一章已经建立。如果计算无穷和 $a_1+a_2+a_3+\\cdots$ 还有任何希望，那么随着 $n$ 取得越来越大，部分和 $s_n$ 就应当给出越来越精确的近似。这最后一句话几乎就是一个不够严谨的极限定义：“无穷和”$a_1+a_2+a_3+\\cdots$ 应当就是 $\\lim\\limits_{n\\to\\infty}s_n$。这种做法必然会使许多数列的“和”没有定义，因为数列 $\\{s_n\\}$ 很容易就没有极限。例如，数列"
+        },
+        {
+          "id": "p471-b8",
+          "source": "$$1,\\ -1,\\ 1,\\ -1,\\ldots$$",
+          "sourceSha256": "906c64059730d290f1cbf37b1d44ca6046fdc9316210c607f940df92ff904f10"
+        },
+        {
+          "id": "p471-b9",
+          "source": "with $a_n=(-1)^{n+1}$ yields the new sequence",
+          "sourceSha256": "d0179009f28f7371ebc64e85ab6c6bef3be3c93b2e16fa8de93dcfcae35b8d53",
+          "translation": "满足 $a_n=(-1)^{n+1}$，它产生的新数列为"
+        },
+        {
+          "id": "p471-b10",
+          "source": "$$\\begin{aligned}\ns_1&=a_1=1,\\\\\ns_2&=a_1+a_2=0,\\\\\ns_3&=a_1+a_2+a_3=1,\\\\\ns_4&=a_1+a_2+a_3+a_4=0,\\\\\n&\\ldots,\n\\end{aligned}$$",
+          "sourceSha256": "abbc8f4b74ba57d832006431205ab122306b2c644f2d23fd0cd957627fac430e"
+        },
+        {
+          "id": "p471-b11",
+          "source": "for which $\\lim\\limits_{n\\to\\infty}s_n$ does not exist. Although there happen to be some clever extensions of the definition suggested here (see Problems 12 and 24-20) it seems unavoidable that some sequences will have no sum. For this reason, an acceptable definition of the sum of a sequence should contain, as an essential component, terminology which distinguishes sequences for which sums can be defined from less fortunate sequences.",
+          "sourceSha256": "e91b784024f317f7dd9ca22fcdbca5ed8889c76fd23ac3c0f13797efe4e19f1c",
+          "translation": "而对这个数列，$\\lim\\limits_{n\\to\\infty}s_n$ 不存在。虽然这里提出的定义确实有一些巧妙的推广（见习题 12 和 24-20），但某些数列没有和，看来是不可避免的。因此，一个可以接受的数列求和定义，必须把区分“能够定义和的数列”和那些不那么幸运的数列的术语，作为不可或缺的一部分。"
+        }
+      ]
+    },
+    {
+      "printed": 472,
+      "sourceSha256": "f82761e76615e6d215a4ebbd7cf2e4f454d17e37db498c73562b9d8a7c97ed37",
+      "blocks": [
+        {
+          "id": "p472-b1",
+          "source": "## DEFINITION",
+          "sourceSha256": "676bc8347a70e5e93cbff5e0571ad9eecf86b072557f09f8796edced86dfc6e2",
+          "translation": "## 定义"
+        },
+        {
+          "id": "p472-b2",
+          "source": "The sequence $\\{a_n\\}$ is **summable** if the sequence $\\{s_n\\}$ converges, where",
+          "sourceSha256": "2c9cfaef933f8efe3f3f7b9cc2e348248626ab5bba600a2dc79eeb4caacf0d37",
+          "translation": "如果数列 $\\{s_n\\}$ 收敛，就称数列 $\\{a_n\\}$ **可求和**，其中"
+        },
+        {
+          "id": "p472-b3",
+          "source": "$$s_n=a_1+\\cdots+a_n.$$",
+          "sourceSha256": "ce37078b34f084520f81d4ae51aa663c362f96e7fe448fa45b2fe3ded0c33e59"
+        },
+        {
+          "id": "p472-b4",
+          "source": "In this case, $\\lim\\limits_{n\\to\\infty}s_n$ is denoted by",
+          "sourceSha256": "9b4ed16815285d2541a1ad112535fddfbbd31b39f21f83c74d98bdcc6ee3f3ea",
+          "translation": "在这种情况下，$\\lim\\limits_{n\\to\\infty}s_n$ 记为"
+        },
+        {
+          "id": "p472-b5",
+          "source": "$$\\sum_{n=1}^\\infty a_n\\qquad\\text{(or, less formally, }a_1+a_2+a_3+\\cdots\\text{)}$$",
+          "sourceSha256": "2890675cd6ff5212b94236473dcebd7d5fe8c91e72036bb41d0e7503f85eaee7"
+        },
+        {
+          "id": "p472-b6",
+          "source": "and is called the **sum** of the sequence $\\{a_n\\}$.",
+          "sourceSha256": "acd4d859e93e4c4c175edafc6d3a1ef5a9ab870db0d52e8832f43aa909e53383",
+          "translation": "并称为数列 $\\{a_n\\}$ 的**和**。"
+        },
+        {
+          "id": "p472-b7",
+          "source": "The terminology introduced in this definition is usually replaced by less precise expressions; indeed the title of this chapter is derived from such everyday language. An infinite sum $\\sum\\limits_{n=1}^\\infty a_n$ is usually called an *infinite series*, the word “series” emphasizing the connection with the infinite sequence $\\{a_n\\}$. The statement that $\\{a_n\\}$ is, or is not, summable is conventionally replaced by the statement that the series $\\sum\\limits_{n=1}^\\infty a_n$ does, or does not, converge. This terminology is somewhat peculiar, because at best the symbol $\\sum\\limits_{n=1}^\\infty a_n$ denotes a number (so it can’t “converge”), and it doesn’t denote anything at all unless $\\{a_n\\}$ is summable. Nevertheless, this informal language is convenient, standard, and unlikely to yield to attacks on logical grounds.",
+          "sourceSha256": "953cabc174df271bbc835ba33b11092c032d5197455b5946855378bc9f2cd0fb",
+          "translation": "这个定义中引入的术语，通常被不那么精确的说法替代；实际上，本章的标题就来自这种日常用语。无穷和 $\\sum\\limits_{n=1}^\\infty a_n$ 通常称为*无穷级数*，“级数”一词强调它与无穷数列 $\\{a_n\\}$ 的联系。人们习惯于把“$\\{a_n\\}$ 可求和或不可求和”，说成“级数 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛或不收敛”。这个术语有些奇怪，因为符号 $\\sum\\limits_{n=1}^\\infty a_n$ 充其量表示一个数（因此它不能“收敛”），而且除非 $\\{a_n\\}$ 可求和，否则它根本不表示任何东西。尽管如此，这种非正式语言方便、通行，也不大可能因为逻辑上的批评而被取代。"
+        },
+        {
+          "id": "p472-b8",
+          "source": "Certain elementary arithmetical operations on infinite series are direct consequences of the definition. It is a simple exercise to show that if $\\{a_n\\}$ and $\\{b_n\\}$ are summable, then",
+          "sourceSha256": "c22dda453345fda59363e054dcae217f6539d2aa19e912379afedd963466b252",
+          "translation": "无穷级数的一些初等算术运算，是定义的直接推论。一个简单的练习是证明：如果 $\\{a_n\\}$ 和 $\\{b_n\\}$ 都可求和，那么"
+        },
+        {
+          "id": "p472-b9",
+          "source": "$$\\begin{aligned}\n\\sum_{n=1}^\\infty(a_n+b_n)&=\\sum_{n=1}^\\infty a_n+\\sum_{n=1}^\\infty b_n,\\\\\n\\sum_{n=1}^\\infty c\\cdot a_n&=c\\cdot\\sum_{n=1}^\\infty a_n.\n\\end{aligned}$$",
+          "sourceSha256": "5fdc93a116c7c5573861e755dd0b78660ea748b6dfde2cbd2aba9067e7a9eea0"
+        },
+        {
+          "id": "p472-b10",
+          "source": "As yet these equations are not very interesting, since we have no examples of summable sequences (except for the trivial examples in which the terms are eventually all 0). Before we actually exhibit a summable sequence, some general conditions for summability will be recorded.",
+          "sourceSha256": "fe51714970c085608304d6b9ff6f35b90c57037b8a5384e9b1d64dd2b52b6dea",
+          "translation": "这些等式目前还不太有趣，因为我们还没有可求和数列的例子（除了各项最终全为 0 的平凡例子）。在真正给出一个可求和数列之前，我们先记下几个关于可求和性的一般条件。"
+        },
+        {
+          "id": "p472-b11",
+          "source": "There is one necessary and sufficient condition for summability which can be stated immediately. The sequence $\\{a_n\\}$ is summable if and only if the sequence $\\{s_n\\}$ converges, which happens, according to Theorem 22-3, if and only if $\\lim\\limits_{m,n\\to\\infty}s_m-s_n=0$; this condition can be rephrased in terms of the original sequence as follows.",
+          "sourceSha256": "ca5fa7a5689a69dcb9f5dde9c6c6f0bc69d7fb983d5ebe15f199a5d8f00dc694",
+          "translation": "有一个可求和的充分必要条件，可以立即陈述出来。数列 $\\{a_n\\}$ 可求和，当且仅当数列 $\\{s_n\\}$ 收敛；根据定理 22-3，这又当且仅当 $\\lim\\limits_{m,n\\to\\infty}s_m-s_n=0$。用原数列来重新表述这个条件，就得到下面的结果。"
+        }
+      ]
+    },
+    {
+      "printed": 473,
+      "sourceSha256": "8df1ec6d66229f4b9b3458b94c99882e6f991eb13637afcb383ebaa061e3a610",
+      "blocks": [
+        {
+          "id": "p473-b1",
+          "source": "## THE CAUCHY CRITERION",
+          "sourceSha256": "6149e973de0df797d8a1fc8589f7e35799e8394a9f789d1900ba962edc113725",
+          "translation": "## 柯西准则"
+        },
+        {
+          "id": "p473-b2",
+          "source": "The sequence $\\{a_n\\}$ is summable if and only if",
+          "sourceSha256": "c844ba94ebc5464721ea866368be73c2bf2225107a0442237d64816b95be0a63",
+          "translation": "数列 $\\{a_n\\}$ 可求和，当且仅当"
+        },
+        {
+          "id": "p473-b3",
+          "source": "$$\\lim_{m,n\\to\\infty}a_{n+1}+\\cdots+a_m=0.$$",
+          "sourceSha256": "af6dd79176f75d9e90e20a6b17d60daba4bc32d8198f08234489e47da869f968"
+        },
+        {
+          "id": "p473-b4",
+          "source": "Although the Cauchy criterion is of theoretical importance, it is not very useful for deciding the summability of any particular sequence. However, one simple consequence of the Cauchy criterion provides a *necessary* condition for summability which is too important not to be mentioned explicitly.",
+          "sourceSha256": "de350bfe0f18db78948784ac8344453a223bd95ae13698aaaa0414c5c0885534",
+          "translation": "虽然柯西准则在理论上很重要，但要用它判断某个具体数列是否可求和，却不太方便。不过，柯西准则的一个简单推论提供了可求和的一个*必要*条件，它太重要了，不能不明确指出。"
+        },
+        {
+          "id": "p473-b5",
+          "source": "## THE VANISHING CONDITION",
+          "sourceSha256": "2be808b0b5d1cecb47ac00af197a989297073003852fa2e18c1f7de721cdccf4",
+          "translation": "## 趋零条件"
+        },
+        {
+          "id": "p473-b6",
+          "source": "If $\\{a_n\\}$ is summable, then",
+          "sourceSha256": "b48939a19ed17cf625b40160eb27af3a2723d0405b6c3c3ca1b5aa09c83f6221",
+          "translation": "如果 $\\{a_n\\}$ 可求和，那么"
+        },
+        {
+          "id": "p473-b7",
+          "source": "$$\\lim_{n\\to\\infty}a_n=0.$$",
+          "sourceSha256": "5bf4903af622e9887580c2e5970d89936c11d2504ba282253ee597e215cdc816"
+        },
+        {
+          "id": "p473-b8",
+          "source": "This condition follows from the Cauchy criterion by taking $m=n+1$; it can also be proved directly as follows. If $\\lim\\limits_{n\\to\\infty}s_n=l$, then",
+          "sourceSha256": "543299c4f3671e566741ab8ceb83b3852627bfd731e0da677a470caf445c9a85",
+          "translation": "在柯西准则中取 $m=n+1$，便可得到这个条件；也可以如下直接证明。如果 $\\lim\\limits_{n\\to\\infty}s_n=l$，那么"
+        },
+        {
+          "id": "p473-b9",
+          "source": "$$\\begin{aligned}\n\\lim_{n\\to\\infty}a_n&=\\lim_{n\\to\\infty}(s_n-s_{n-1})=\\lim_{n\\to\\infty}s_n-\\lim_{n\\to\\infty}s_{n-1}\\\\\n&=l-l=0.\n\\end{aligned}$$",
+          "sourceSha256": "90ee8279c9b7dc1a316adcf5b871d888be66c409c6b2bf59a73f12ed60556f34"
+        },
+        {
+          "id": "p473-b10",
+          "source": "Unfortunately, this condition is far from sufficient. For example, $\\lim\\limits_{n\\to\\infty}1/n=0$, but the sequence $\\{1/n\\}$ is not summable; in fact, the following grouping of the numbers $1/n$ shows that the sequence $\\{s_n\\}$ is not bounded:",
+          "sourceSha256": "f175e008bdcfb0d9a61150846be9fdb07c586ab3e8330b6434bb48e2094f98ef",
+          "translation": "不幸的是，这个条件远远不够充分。例如，$\\lim\\limits_{n\\to\\infty}1/n=0$，但数列 $\\{1/n\\}$ 不可求和；事实上，把数 $1/n$ 按下面的方式分组，就能看出数列 $\\{s_n\\}$ 无界："
+        },
+        {
+          "id": "p473-b11",
+          "source": "$$1+\\tfrac12+\\underbrace{\\tfrac13+\\tfrac14}_{\\substack{\\ge\\frac12\\\\\\text{(2 terms,}\\\\\\text{each }\\ge\\frac14\\text{)}}}+\\underbrace{\\tfrac15+\\tfrac16+\\tfrac17+\\tfrac18}_{\\substack{\\ge\\frac12\\\\\\text{(4 terms,}\\\\\\text{each }\\ge\\frac18\\text{)}}}+\\underbrace{\\tfrac19+\\cdots+\\tfrac1{16}}_{\\substack{\\ge\\frac12\\\\\\text{(8 terms,}\\\\\\text{each }\\ge\\frac1{16}\\text{)}}}+\\cdots.$$",
+          "sourceSha256": "a84fb2dd4dd49b476c6478b78f2abf5af9bec9211a3aedfbd634a08346c58329"
+        },
+        {
+          "id": "p473-b12",
+          "source": "The method of proof used in this example, a clever trick which one might never see, reveals the need for some more standard methods for attacking these problems. These methods shall be developed soon (one of them will give an alternate proof that $\\sum\\limits_{n=1}^\\infty1/n$ does not converge) but it will be necessary to first procure a few examples of convergent series.",
+          "sourceSha256": "155d2164aa927686573a5b972228200c252fdea9a2a9afe9ee8dae0a2e51aa3c",
+          "translation": "这个例子使用了一种巧妙的证明技巧，而人可能永远也想不到它；这说明，我们需要一些更标准的方法来处理这类问题。这些方法很快就会建立（其中一种将给出 $\\sum\\limits_{n=1}^\\infty1/n$ 不收敛的另一证明），但首先需要获得几个收敛级数的例子。"
+        },
+        {
+          "id": "p473-b13",
+          "source": "The most important of all infinite series are the “geometric series”",
+          "sourceSha256": "08efeaf54dcc8cd596a7f9e1691e625091abdf3049041111ae9ae4496775ec78",
+          "translation": "所有无穷级数中，最重要的是“几何级数”"
+        },
+        {
+          "id": "p473-b14",
+          "source": "$$\\sum_{n=0}^\\infty r^n=1+r+r^2+r^3+\\cdots.$$",
+          "sourceSha256": "8ebb1bb5be6500d0c8ec7eb6b3687ca2a08592eaea114a1d4ff886ef704c047f"
+        },
+        {
+          "id": "p473-b15",
+          "source": "Only the cases $|r|<1$ are interesting, since the individual terms do not approach 0 if $|r|\\ge1$. These series can be managed because the partial sums",
+          "sourceSha256": "4550de2b29e1bc628f9c281d773a37c99427d0c8642300b240531cc1ad206f64",
+          "translation": "只有 $|r|<1$ 的情形值得研究，因为当 $|r|\\ge1$ 时，各项并不趋于 0。这些级数之所以能处理，是因为部分和"
+        },
+        {
+          "id": "p473-b16",
+          "source": "$$s_n=1+r+\\cdots+r^n$$",
+          "sourceSha256": "fe21923e9ddfd20de26176a5fbb1d3a46fb2a7935296b2e3bb27ef34064f0c4e"
+        },
+        {
+          "id": "p473-b17",
+          "source": "can be evaluated in simple terms. The two equations",
+          "sourceSha256": "6af3dfcb63cea960c0fd242ad2c1cc8b3a48e19f3cfcf4065397570e91854285",
+          "translation": "可以用简单的式子求出。两个等式"
+        },
+        {
+          "id": "p473-b18",
+          "source": "$$\\begin{aligned}\ns_n&=1+r+r^2+\\cdots+r^n\\\\\nrs_n&=\\phantom{1+{}}r+r^2+\\cdots+r^n+r^{n+1}\n\\end{aligned}$$",
+          "sourceSha256": "b73f87d0c1ad90cb67a54eafb7660fb785c0f2ffd072c9cf7751ec3b6ea6e32d"
+        }
+      ]
+    },
+    {
+      "printed": 474,
+      "sourceSha256": "6c19347960afcd91da9b8d546c42a85b894e16a3200e02e58595b0c5d771d7b3",
+      "blocks": [
+        {
+          "id": "p474-b1",
+          "source": "lead to",
+          "sourceSha256": "6a9733481118f8f05054201fc71e091bd48027a9895fc9cbe2d6c8d1f93e5f15",
+          "translation": "给出"
+        },
+        {
+          "id": "p474-b2",
+          "source": "$$s_n(1-r)=1-r^{n+1}$$",
+          "sourceSha256": "77b8b807e45b47e87c45ec02c3eacf199415d865a4a3e823f8a72fd687c0e2a8"
+        },
+        {
+          "id": "p474-b3",
+          "source": "or",
+          "sourceSha256": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+          "translation": "或者"
+        },
+        {
+          "id": "p474-b4",
+          "source": "$$s_n=\\frac{1-r^{n+1}}{1-r}$$",
+          "sourceSha256": "f954153947f8f0e379fcb90542f10af4b9899781e55ee678781d16bd9bd5726e"
+        },
+        {
+          "id": "p474-b5",
+          "source": "(division by $1-r$ is valid since we are not considering the case $r=1$). Now $\\lim\\limits_{n\\to\\infty}r^n=0$, since $|r|<1$. It follows that",
+          "sourceSha256": "ea258eed9970c1d5be9d3043c916587b67f0365c2141baaa34b478b885cb9d52",
+          "translation": "（除以 $1-r$ 是合法的，因为我们不考虑 $r=1$ 的情形）。现在，由于 $|r|<1$，有 $\\lim\\limits_{n\\to\\infty}r^n=0$。由此得到"
+        },
+        {
+          "id": "p474-b6",
+          "source": "$$\\sum_{n=0}^\\infty r^n=\\lim_{n\\to\\infty}\\frac{1-r^{n+1}}{1-r}=\\frac1{1-r},\\qquad |r|<1.$$",
+          "sourceSha256": "c54cfcd5295d3b34303551cbed1f36b9ba3356ae201e16ec847a6bbc8dc558bd"
+        },
+        {
+          "id": "p474-b7",
+          "source": "In particular,",
+          "sourceSha256": "68d166b7bef6c9ba2e0f4f11914f00a8227a3ee28343df99cb6bc8fe6d84747e",
+          "translation": "特别地，"
+        },
+        {
+          "id": "p474-b8",
+          "source": "$$\\sum_{n=1}^\\infty\\left(\\frac12\\right)^n=\\sum_{n=0}^\\infty\\left(\\frac12\\right)^n-1=\\frac1{1-\\frac12}-1=1,$$",
+          "sourceSha256": "2d5530f56f2feab9c12aab3f0ce2bb2a98a868efce1efeddde45a1462cd5645b"
+        },
+        {
+          "id": "p474-b9",
+          "source": "that is,",
+          "sourceSha256": "5647e274eb21c46ac72b17e43eb17c3f42c4cee66202d6dce25ecdaefba31d95",
+          "translation": "也就是说，"
+        },
+        {
+          "id": "p474-b10",
+          "source": "$$\\tfrac12+\\tfrac14+\\tfrac18+\\tfrac1{16}+\\cdots=1,$$",
+          "sourceSha256": "de6bbf63e07db0609f465bb487f9a5b1b1e675df08dd9c12cd31709ff4f7e8f4"
+        },
+        {
+          "id": "p474-b11",
+          "source": "an infinite sum which can always be remembered from the picture in Figure 1.",
+          "sourceSha256": "a1bf9deebb8b65c613414b465418d0c6db1ab001f1d07e076a403d04d84ae92d",
+          "translation": "这个无穷和总可以借助图 1 中的图像记住。"
+        },
+        {
+          "id": "p474-b12",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"477 790 710 119\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0494.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "08d5693259d94a157525fd368e91152fc01cf14c777deb0eace5ed9635c83ee2"
+        },
+        {
+          "id": "p474-b13",
+          "source": "Special as they are, geometric series are standard examples from which important tests for summability will be derived.",
+          "sourceSha256": "b9cbd20c65ed5d265d9d4f4520cbf904365cccfcc461f41bc1cde24f4e9b967f",
+          "translation": "虽然几何级数很特殊，但它们是标准例子，我们将从它们出发推导出重要的可求和性判别法。"
+        },
+        {
+          "id": "p474-b14",
+          "source": "For a while we shall consider only sequences $\\{a_n\\}$ with each $a_n\\ge0$; such sequences are called **nonnegative**. If $\\{a_n\\}$ is a nonnegative sequence, then the sequence $\\{s_n\\}$ is clearly nondecreasing. This remark, combined with Theorem 22-2, provides a simple-minded test for summability:",
+          "sourceSha256": "39a09d23cd999d60b73ffc7aac3eacac3acbb6b972e82d610fb5732d9189b242",
+          "translation": "接下来一段时间，我们只考虑每个 $a_n\\ge0$ 都成立的数列 $\\{a_n\\}$；这样的数列称为**非负数列**。如果 $\\{a_n\\}$ 是非负数列，那么数列 $\\{s_n\\}$ 显然非减。把这一观察与定理 22-2 结合起来，就得到一个非常朴素的可求和性判别准则："
+        },
+        {
+          "id": "p474-b15",
+          "source": "## THE BOUNDEDNESS CRITERION",
+          "sourceSha256": "9d39d18a22f266bbd14b9911c7136a9e54b905bfdf0df7279b5eb575ea589347",
+          "translation": "## 有界性准则"
+        },
+        {
+          "id": "p474-b16",
+          "source": "A nonnegative sequence $\\{a_n\\}$ is summable if and only if the set of partial sums $s_n$ is bounded.",
+          "sourceSha256": "718066fee793bcc5de49ed68826d75d583d85210062b161fc93ed996ed891fb4",
+          "translation": "非负数列 $\\{a_n\\}$ 可求和，当且仅当部分和 $s_n$ 构成的集合有界。"
+        },
+        {
+          "id": "p474-b17",
+          "source": "By itself, this criterion is not very helpful—deciding whether or not the set of all $s_n$ is bounded is just what we are unable to do. On the other hand, if some convergent series are already available for comparison, this criterion can be used to obtain a result whose simplicity belies its importance (it is the basis for almost all other tests).",
+          "sourceSha256": "262bae47446aa7d47250dd7b6ffba34ea9533688215edddcceca78e8fdfeb455",
+          "translation": "这个准则本身帮助不大——判断所有 $s_n$ 构成的集合是否有界，恰好正是我们不会做的事。另一方面，如果已经有一些收敛级数可以用来比较，就能利用这个准则得到一个结果；它如此简单，以至于掩盖了自身的重要性（几乎所有其他判别法都以它为基础）。"
+        },
+        {
+          "id": "p474-b18",
+          "source": "## THEOREM 1 (THE COMPARISON TEST)",
+          "sourceSha256": "ea83719fe3c1b94cf7618bb5f5fd8074b27beaad0dbc735c44aaabc6237e7886",
+          "translation": "## 定理 1（比较判别法）"
+        },
+        {
+          "id": "p474-b19",
+          "source": "Suppose that",
+          "sourceSha256": "fec9870e474474d9697ae5c4f9c7b38353d7c2bda8ba0abfc0249ff8b846c6c1",
+          "translation": "假设"
+        },
+        {
+          "id": "p474-b20",
+          "source": "$$0\\le a_n\\le b_n\\qquad\\text{for all }n.$$",
+          "sourceSha256": "0ba845175f263c3466c109570ef32b49a0a6284e7afcf3e42f4025b6d7352335"
+        }
+      ]
+    },
+    {
+      "printed": 475,
+      "sourceSha256": "9dd556499c256667068a83a6d0af36f2add0b4ff1cbe6b28d264a91daa54e9bc",
+      "blocks": [
+        {
+          "id": "p475-b1",
+          "source": "Then if $\\sum\\limits_{n=1}^\\infty b_n$ converges, so does $\\sum\\limits_{n=1}^\\infty a_n$.",
+          "sourceSha256": "875e45c46b5351aed407938159022c4bb5b3e24301d1c17331d54ba1e03ebe0f",
+          "translation": "那么，如果 $\\sum\\limits_{n=1}^\\infty b_n$ 收敛，$\\sum\\limits_{n=1}^\\infty a_n$ 也收敛。"
+        },
+        {
+          "id": "p475-b2",
+          "source": "**PROOF** If",
+          "sourceSha256": "00f07707bfac7f59a9a31ae6b559d4cf820a8abc6540dbd740e2e5db72c57f12",
+          "translation": "**证明** 如果"
+        },
+        {
+          "id": "p475-b3",
+          "source": "$$\\begin{aligned}s_n&=a_1+\\cdots+a_n,\\\\t_n&=b_1+\\cdots+b_n,\\end{aligned}$$",
+          "sourceSha256": "0554c3a1fec57862b4d49516fb443619c147f0cf5665441b8aa4318af488295a"
+        },
+        {
+          "id": "p475-b4",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p475-b5",
+          "source": "$$0\\le s_n\\le t_n\\quad\\text{for all }n.$$",
+          "sourceSha256": "e2b07e0dd0fc6b9d1076769f7a89e89bab74c963e301169fe18be6d2bac2c23f"
+        },
+        {
+          "id": "p475-b6",
+          "source": "Now $\\{t_n\\}$ is bounded, since $\\sum\\limits_{n=1}^\\infty b_n$ converges. Therefore $\\{s_n\\}$ is bounded; consequently, by the boundedness criterion $\\sum\\limits_{n=1}^\\infty a_n$ converges. ■",
+          "sourceSha256": "10aa0a1f9b5fb7336023895fd2f8772dfe60585726092e00b661b64525ce292b",
+          "translation": "由于 $\\sum\\limits_{n=1}^\\infty b_n$ 收敛，$\\{t_n\\}$ 有界。因此 $\\{s_n\\}$ 有界；从而根据有界性准则，$\\sum\\limits_{n=1}^\\infty a_n$ 收敛。■"
+        },
+        {
+          "id": "p475-b7",
+          "source": "Quite frequently the comparison test can be used to analyze very complicated looking series in which most of the complication is irrelevant. For example,",
+          "sourceSha256": "bffd2a3dc5e2bfb00e6bfce2a78666dd5e45b73a03e330a3f5a85578362bf60d",
+          "translation": "比较判别法常常可以用来分析看上去非常复杂的级数，而其中大部分复杂之处其实无关紧要。例如，"
+        },
+        {
+          "id": "p475-b8",
+          "source": "$$\\sum_{n=1}^\\infty\\frac{2+\\sin^3(n+1)}{2^n+n^2}$$",
+          "sourceSha256": "d7996cfffa1900072a6ca9150d10b77d40e8915a8cd77581c05a856be0656b17"
+        },
+        {
+          "id": "p475-b9",
+          "source": "converges because",
+          "sourceSha256": "f733a1957752ec9adf3efb4fcde8bac9d18c085e359dae3f827dd839bc52cad6",
+          "translation": "收敛，因为"
+        },
+        {
+          "id": "p475-b10",
+          "source": "$$0\\le\\frac{2+\\sin^3(n+1)}{2^n+n^2}<\\frac3{2^n},$$",
+          "sourceSha256": "2f44e618517be83819109926a5fc62828f48abdeac0bde41e20d156905abe6da"
+        },
+        {
+          "id": "p475-b11",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "而且"
+        },
+        {
+          "id": "p475-b12",
+          "source": "$$\\sum_{n=1}^\\infty\\frac3{2^n}=3\\sum_{n=1}^\\infty\\frac1{2^n}$$",
+          "sourceSha256": "7b4dd134ab02e1654858eb1118e090f9c020d44c8f9e19e57f96b51163658c8c"
+        },
+        {
+          "id": "p475-b13",
+          "source": "is a convergent (geometric) series.",
+          "sourceSha256": "3781818c340037566a3a78e6b8d636deaddd54259dcd494fe93e4c2fb248e02a",
+          "translation": "是一个收敛的（几何）级数。"
+        },
+        {
+          "id": "p475-b14",
+          "source": "Similarly, we would expect the series",
+          "sourceSha256": "d8e0bcceb16e0d49cd5ac6590f54f8102a6866188c05edb0b63f724772c34cd6",
+          "translation": "类似地，我们预期级数"
+        },
+        {
+          "id": "p475-b15",
+          "source": "$$\\sum_{n=1}^\\infty\\frac1{2^n-1+\\sin^2n^3}$$",
+          "sourceSha256": "e10dec30a15a0d53e1f49b21c3493723af2c7958b9aa084b7cc225fb91ddc252"
+        },
+        {
+          "id": "p475-b16",
+          "source": "to converge, since the $n$th term of the series is practically $1/2^n$ for large $n$, and we would expect the series",
+          "sourceSha256": "e72cb2df6837f1a0f0efa93959ac89ac6558f28746bfe6ed58142a5e6af7c874",
+          "translation": "收敛，因为当 $n$ 很大时，这个级数的第 $n$ 项几乎就是 $1/2^n$；而我们预期级数"
+        },
+        {
+          "id": "p475-b17",
+          "source": "$$\\sum_{n=1}^\\infty\\frac{n+1}{n^2+1}$$",
+          "sourceSha256": "37a972f26f52e082f3c7f5d70353bcd695f8ee9fd9e530b022f4d63df416d4bd"
+        },
+        {
+          "id": "p475-b18",
+          "source": "to diverge, since $(n+1)/(n^2+1)$ is practically $1/n$ for large $n$. These facts can be derived immediately from the following theorem, another kind of “comparison test.”",
+          "sourceSha256": "24d57e7169b5f2d37f552dd43e5e640ec11d37942ddcb42114622e09dc8eda0b",
+          "translation": "发散，因为当 $n$ 很大时，$(n+1)/(n^2+1)$ 几乎就是 $1/n$。这些事实可以立即从下面的定理推出，它是另一种“比较判别法”。"
+        },
+        {
+          "id": "p475-b19",
+          "source": "## THEOREM 2 (THE LIMIT COMPARISON TEST)",
+          "sourceSha256": "b004db5a866dc589835577ff32e49e2b3718ad302971206290099463f03b7c28",
+          "translation": "## 定理 2（极限比较判别法）"
+        },
+        {
+          "id": "p475-b20",
+          "source": "If $a_n,b_n>0$ and $\\lim\\limits_{n\\to\\infty}a_n/b_n=c\\ne0$, then $\\sum\\limits_{n=1}^\\infty a_n$ converges if and only if $\\sum\\limits_{n=1}^\\infty b_n$ converges.",
+          "sourceSha256": "6e106d74c6bf69f42b9bafcbdd6b3eeec53f7bc87b75b96fd0914908b21b233f",
+          "translation": "如果 $a_n,b_n>0$ 且 $\\lim\\limits_{n\\to\\infty}a_n/b_n=c\\ne0$，那么 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，当且仅当 $\\sum\\limits_{n=1}^\\infty b_n$ 收敛。"
+        }
+      ]
+    },
+    {
+      "printed": 476,
+      "sourceSha256": "63286d929bd502c894531a97a5f559701ec298ddf1665e25f18e70172a31f1c2",
+      "blocks": [
+        {
+          "id": "p476-b1",
+          "source": "**PROOF** Suppose $\\sum\\limits_{n=1}^\\infty b_n$ converges. Since $\\lim\\limits_{n\\to\\infty}a_n/b_n=c$, there is some $N$ such that",
+          "sourceSha256": "cb4d0c1314181ffbe39ef8f023382d348d7547c6336c8dbc7bb63aea3f68ff40",
+          "translation": "**证明** 假设 $\\sum\\limits_{n=1}^\\infty b_n$ 收敛。由于 $\\lim\\limits_{n\\to\\infty}a_n/b_n=c$，存在某个 $N$，使得"
+        },
+        {
+          "id": "p476-b2",
+          "source": "$$a_n\\le2cb_n\\qquad\\text{for }n\\ge N.$$",
+          "sourceSha256": "635f8d0de4f9edd8c9b0cdab350688f1673b3b0dee200a2c0c4798c525b91d3d"
+        },
+        {
+          "id": "p476-b3",
+          "source": "But the sequence $2c\\sum\\limits_{n=N}^\\infty b_n$ certainly converges. Then Theorem 1 shows that $\\sum\\limits_{n=N}^\\infty a_n$ converges, and this implies convergence of the whole series $\\sum\\limits_{n=1}^\\infty a_n$, which has only finitely many additional terms.",
+          "sourceSha256": "69cfb928a3cec3b86a421941484d02893457ac2cf910fbd55e6f35305a54278f",
+          "translation": "但是 $2c\\sum\\limits_{n=N}^\\infty b_n$ 当然收敛。于是定理 1 表明 $\\sum\\limits_{n=N}^\\infty a_n$ 收敛，而这意味着整个级数 $\\sum\\limits_{n=1}^\\infty a_n$ 也收敛，因为它只多了有限项。"
+        },
+        {
+          "id": "p476-b4",
+          "source": "The converse follows immediately, since we also have $\\lim\\limits_{n\\to\\infty}b_n/a_n=1/c\\ne0$. ■",
+          "sourceSha256": "e042ededb97988280ce6f4867777cb033513bbf393f66e323bc036b05c02c3c9",
+          "translation": "逆命题立即成立，因为我们也有 $\\lim\\limits_{n\\to\\infty}b_n/a_n=1/c\\ne0$。■"
+        },
+        {
+          "id": "p476-b5",
+          "source": "The comparison test yields other important tests when we use previously analyzed series as catalysts. Choosing the geometric series $\\sum\\limits_{n=0}^\\infty r^n$, the convergent series *par excellence*, we obtain the most important of all tests for summability.",
+          "sourceSha256": "663cae3db0c9ca0817683d04f59d08edc0749f12e69bb89d539eee185d3d797c",
+          "translation": "当我们用先前分析过的级数作为媒介时，比较判别法便能产生其他重要的判别法。选择几何级数 $\\sum\\limits_{n=0}^\\infty r^n$——收敛级数中*最典型*的例子——就得到所有可求和性判别法中最重要的一个。"
+        },
+        {
+          "id": "p476-b6",
+          "source": "## THEOREM 3 (THE RATIO TEST)",
+          "sourceSha256": "129cb18df0baa39cdccad7f3ac549911b3b0ae273dc43ded764d79b152177ab0",
+          "translation": "## 定理 3（比值判别法）"
+        },
+        {
+          "id": "p476-b7",
+          "source": "Let $a_n>0$ for all $n$, and suppose that",
+          "sourceSha256": "b4811e96a831a5252f9d7f46822be5c667667870f58c217b1d5fc336fa3b9e99",
+          "translation": "设对于所有 $n$ 都有 $a_n>0$，并假设"
+        },
+        {
+          "id": "p476-b8",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{a_{n+1}}{a_n}=r.$$",
+          "sourceSha256": "53bc9418fe1dffcd2528356cdbdc65ecdf65867081ef0bbdf329d6826648ee2d"
+        },
+        {
+          "id": "p476-b9",
+          "source": "Then $\\sum\\limits_{n=1}^\\infty a_n$ converges if $r<1$. On the other hand, if $r>1$, then the terms $a_n$ are unbounded, so $\\sum\\limits_{n=1}^\\infty a_n$ diverges. (Notice that it is therefore essential to compute $\\lim\\limits_{n\\to\\infty}a_{n+1}/a_n$ and not $\\lim\\limits_{n\\to\\infty}a_n/a_{n+1}$!)",
+          "sourceSha256": "d6a3924f5e9fe01fd6e186efc1da0528a3c327fb5dde30742fb371f68c875c52",
+          "translation": "那么，如果 $r<1$，$\\sum\\limits_{n=1}^\\infty a_n$ 就收敛。另一方面，如果 $r>1$，那么各项 $a_n$ 无界，因此 $\\sum\\limits_{n=1}^\\infty a_n$ 发散。（所以请注意，必须计算 $\\lim\\limits_{n\\to\\infty}a_{n+1}/a_n$，而不能计算 $\\lim\\limits_{n\\to\\infty}a_n/a_{n+1}$！）"
+        },
+        {
+          "id": "p476-b10",
+          "source": "**PROOF** Suppose first that $r<1$. Choose any number $s$ with $r<s<1$. The hypothesis",
+          "sourceSha256": "ee6007ea2c3747a46f5aa9aec12f215952d27ade40732b544e4781316d44670d",
+          "translation": "**证明** 先假设 $r<1$。任取一个满足 $r<s<1$ 的数 $s$。假设"
+        },
+        {
+          "id": "p476-b11",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{a_{n+1}}{a_n}=r<1$$",
+          "sourceSha256": "29ab3dc550321271f1cc87753a57f105fe04f190f38645aa8775ddace1e62179"
+        },
+        {
+          "id": "p476-b12",
+          "source": "implies that there is some $N$ such that",
+          "sourceSha256": "4367257df01dd79dbe755ae9754d4e1bcf2b147954b22961a6e43eb9073c19b9",
+          "translation": "意味着存在某个 $N$，使得"
+        },
+        {
+          "id": "p476-b13",
+          "source": "$$\\frac{a_{n+1}}{a_n}\\le s\\qquad\\text{for }n\\ge N.$$",
+          "sourceSha256": "fe29db29588c7c51394d698afba7a5aa7dafcda36bf71b969a5d9ba29994720b"
+        },
+        {
+          "id": "p476-b14",
+          "source": "This can be written",
+          "sourceSha256": "d5231adf4019f4946f8d5ca55baab4f6536a1ade72959b52f022c90e14404c35",
+          "translation": "这可以写成"
+        },
+        {
+          "id": "p476-b15",
+          "source": "$$a_{n+1}\\le sa_n\\qquad\\text{for }n\\ge N.$$",
+          "sourceSha256": "d90f06c6b0bf3252a32ef663038f95536f155fd0d75a1443318f5febde108693"
+        },
+        {
+          "id": "p476-b16",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "因此"
+        },
+        {
+          "id": "p476-b17",
+          "source": "$$\\begin{aligned}\na_{N+1}&\\le sa_N,\\\\\na_{N+2}&\\le sa_{N+1}\\le s^2a_N,\\\\\n&\\vdots\\\\\na_{N+k}&\\le s^ka_N.\n\\end{aligned}$$",
+          "sourceSha256": "c44031b5e742be7d5bb929da7ee69ae55846407a1a70eea476382e2f3fc0b4fb"
+        }
+      ]
+    },
+    {
+      "printed": 477,
+      "sourceSha256": "c0d529b8ca6043888efc2a77cbecded76d8c36013ecb4b93ca523ae6742516b7",
+      "blocks": [
+        {
+          "id": "p477-b1",
+          "source": "Since $\\sum\\limits_{k=0}^\\infty a_Ns^k=a_N\\sum\\limits_{k=0}^\\infty s^k$ converges, the comparison test shows that",
+          "sourceSha256": "12fc245c1f06404d1d58ca055ad26a69f18d4052f5d232e2ca427aa40caade9c",
+          "translation": "由于 $\\sum\\limits_{k=0}^\\infty a_Ns^k=a_N\\sum\\limits_{k=0}^\\infty s^k$ 收敛，比较判别法表明"
+        },
+        {
+          "id": "p477-b2",
+          "source": "$$\\sum_{n=N}^\\infty a_n=\\sum_{k=0}^\\infty a_{N+k}$$",
+          "sourceSha256": "d27a06b4f54e5a61c7855859b1c63f43ac801d1248cff43aac44361ae90da69f"
+        },
+        {
+          "id": "p477-b3",
+          "source": "converges. This implies the convergence of the whole series $\\sum\\limits_{n=1}^\\infty a_n$.",
+          "sourceSha256": "31b95e36428d39c4ce2be666085ba47d168198ac7ee64d8cfa553442b9dd2a58",
+          "translation": "收敛。这就意味着整个级数 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛。"
+        },
+        {
+          "id": "p477-b4",
+          "source": "The case $r>1$ is even easier. If $1<s<r$, then there is a number $N$ such that",
+          "sourceSha256": "86793564972ede3bd7e9eb93a300796b268e8706422572642382557244d8d978",
+          "translation": "$r>1$ 的情形更容易。如果 $1<s<r$，那么存在一个数 $N$，使得"
+        },
+        {
+          "id": "p477-b5",
+          "source": "$$\\frac{a_{n+1}}{a_n}\\ge s\\qquad\\text{for }n\\ge N,$$",
+          "sourceSha256": "bf7df485787698adbd127c92292d8fbfe29eaf3023e63e89cc839478d4185e93"
+        },
+        {
+          "id": "p477-b6",
+          "source": "which means that",
+          "sourceSha256": "87decff850f8bc82e278778d0ca9a3f29f6ca603c8a83b2f511fc409a05b089c",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p477-b7",
+          "source": "$$a_{N+k}\\ge a_Ns^k\\qquad k=0,1,\\ldots,$$",
+          "sourceSha256": "68e6481292efa3ee6e5bd5a0a3e216d53c4544c2f4e533153a28c24e910ba1b5"
+        },
+        {
+          "id": "p477-b8",
+          "source": "so that the terms are unbounded. ■",
+          "sourceSha256": "fb2fa91c666fd947210edb1289f030af516b97c71bf1f09fbaa854a0e929f959",
+          "translation": "所以各项无界。■"
+        },
+        {
+          "id": "p477-b9",
+          "source": "As a simple application of the ratio test, consider the series $\\sum\\limits_{n=1}^\\infty1/n!$. Letting $a_n=1/n!$ we obtain",
+          "sourceSha256": "b0341187656bd6a119d42f3eba4c8321e6f172a7fb3fff394559868735cefbcf",
+          "translation": "作为比值判别法的一个简单应用，考虑级数 $\\sum\\limits_{n=1}^\\infty1/n!$。令 $a_n=1/n!$，得到"
+        },
+        {
+          "id": "p477-b10",
+          "source": "$$\\frac{a_{n+1}}{a_n}=\\frac{\\dfrac1{(n+1)!}}{\\dfrac1{n!}}=\\frac{n!}{(n+1)!}=\\frac1{n+1}.$$",
+          "sourceSha256": "9e18d0a47604217e16f48868624090db413fd6d170fd4dd5afc901cc2707ba35"
+        },
+        {
+          "id": "p477-b11",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "因此"
+        },
+        {
+          "id": "p477-b12",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{a_{n+1}}{a_n}=0,$$",
+          "sourceSha256": "05bcb4345b302898877e955aeb9a3fb8c568026a9299eac5ff5ed9d0a167d3de"
+        },
+        {
+          "id": "p477-b13",
+          "source": "which shows that the series $\\sum\\limits_{n=1}^\\infty1/n!$ converges. If we consider instead the series $\\sum\\limits_{n=1}^\\infty r^n/n!$, where $r$ is some fixed positive number, then",
+          "sourceSha256": "16cc7ffe8391616db5d78d1eef0c9f009e25955f87fad01efa99f063faeb71af",
+          "translation": "这说明级数 $\\sum\\limits_{n=1}^\\infty1/n!$ 收敛。如果改为考虑级数 $\\sum\\limits_{n=1}^\\infty r^n/n!$，其中 $r$ 是某个固定的正数，那么"
+        },
+        {
+          "id": "p477-b14",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{\\dfrac{r^{n+1}}{(n+1)!}}{\\dfrac{r^n}{n!}}=\\lim_{n\\to\\infty}\\frac r{n+1}=0,$$",
+          "sourceSha256": "4d02c60b0bbafdde186faae0512da9a3a70e70178e9b392b4b0f8a19ca50f085"
+        },
+        {
+          "id": "p477-b15",
+          "source": "so $\\sum\\limits_{n=1}^\\infty r^n/n!$ converges. It follows that",
+          "sourceSha256": "d7f998a54cc476e465c5952694d63bcd1f5aa0c6b3ef18e34acc595c3bb566e5",
+          "translation": "所以 $\\sum\\limits_{n=1}^\\infty r^n/n!$ 收敛。由此得到"
+        },
+        {
+          "id": "p477-b16",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{r^n}{n!}=0,$$",
+          "sourceSha256": "6384e5ce4eee59e6cb5ddf21f9c9f1f500e183a64778874e07d4a74be5bf7b7d"
+        }
+      ]
+    },
+    {
+      "printed": 478,
+      "sourceSha256": "ad620999e662cfddcefff513cbcb2336eaa548c6cc896f8d4d07068d9602e249",
+      "blocks": [
+        {
+          "id": "p478-b1",
+          "source": "a result already proved in Chapter 16 (the proof given there was based on the same ideas as those used in the ratio test). Finally, if we consider the series $\\sum\\limits_{n=1}^\\infty nr^n$ we have",
+          "sourceSha256": "53df38307c4696840208e34c792d295bdde72a4a073c46df3c83d182bdacb9e0",
+          "translation": "这个结果在第 16 章已经证明（那里给出的证明与比值判别法使用了相同的思想）。最后，如果考虑级数 $\\sum\\limits_{n=1}^\\infty nr^n$，我们有"
+        },
+        {
+          "id": "p478-b2",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{(n+1)r^{n+1}}{nr^n}=\\lim_{n\\to\\infty}r\\cdot\\frac{n+1}n=r,$$",
+          "sourceSha256": "cc413d2710b38aa5464dbd044ae25e4a42c57ba921734bc8264acdb7c83fc522"
+        },
+        {
+          "id": "p478-b3",
+          "source": "since $\\lim\\limits_{n\\to\\infty}(n+1)/n=1$. This proves that if $0\\le r<1$, then $\\sum\\limits_{n=1}^\\infty nr^n$ converges, and consequently",
+          "sourceSha256": "4e3f56074f897f7f15bac1aa4e2994c9ba61a792abe86480422bdffc7e0d84a9",
+          "translation": "因为 $\\lim\\limits_{n\\to\\infty}(n+1)/n=1$。这就证明了：如果 $0\\le r<1$，那么 $\\sum\\limits_{n=1}^\\infty nr^n$ 收敛，从而"
+        },
+        {
+          "id": "p478-b4",
+          "source": "$$\\lim_{n\\to\\infty}nr^n=0.$$",
+          "sourceSha256": "e1f01054ee5f067b1601da07070566fdbebe9200142f534b6f7c8f3b42cec00c"
+        },
+        {
+          "id": "p478-b5",
+          "source": "(This result clearly holds for $-1<r\\le0$, also.) It is a useful exercise to provide a direct proof of this limit, without using the ratio test as an intermediary.",
+          "sourceSha256": "931df91ba64a8db83759218f18366b21a80bbd44b727ed03e531f2b153192c2e",
+          "translation": "（这个结果对于 $-1<r\\le0$ 显然也成立。）不借助比值判别法这个中间工具，直接证明这一极限，是一道有用的练习。"
+        },
+        {
+          "id": "p478-b6",
+          "source": "Although the ratio test will be of the utmost theoretical importance, as a practical tool it will frequently be found disappointing. One drawback of the ratio test is the fact that $\\lim\\limits_{n\\to\\infty}a_{n+1}/a_n$ may be quite difficult to determine, and may not even exist. A more serious deficiency, which appears with maddening regularity, is the fact that the limit might equal 1. The case $\\lim\\limits_{n\\to\\infty}a_{n+1}/a_n=1$ is precisely the one which is inconclusive: $\\{a_n\\}$ might not be summable (for example, if $a_n=1/n$), but then again it might be. In fact, our very next test will show that $\\sum\\limits_{n=1}^\\infty(1/n)^2$ converges, even though",
+          "sourceSha256": "1f3ea76baeed70ffded37e72079d32630623d7f374771336776b0ca072bf75d9",
+          "translation": "虽然比值判别法在理论上极其重要，但作为实际工具，它常常令人失望。它的一个缺点是：$\\lim\\limits_{n\\to\\infty}a_{n+1}/a_n$ 可能相当难以确定，甚至可能不存在。还有一个更加严重、而且频繁得令人恼火的缺陷：这个极限可能等于 1。恰恰在 $\\lim\\limits_{n\\to\\infty}a_{n+1}/a_n=1$ 的情形，判别法无法得出结论：$\\{a_n\\}$ 可能不可求和（例如 $a_n=1/n$ 时），但也可能可求和。事实上，紧接着的判别法将说明 $\\sum\\limits_{n=1}^\\infty(1/n)^2$ 收敛，尽管"
+        },
+        {
+          "id": "p478-b7",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{\\left(\\dfrac1{n+1}\\right)^2}{\\left(\\dfrac1n\\right)^2}=1.$$",
+          "sourceSha256": "2b0fdc19ac2bdba31c0283bdf9b86571738a4e6c4e546808e696cf1bb0d5d93c"
+        },
+        {
+          "id": "p478-b8",
+          "source": "This test provides a quite different method for determining convergence or divergence of infinite series—like the ratio test, it is an immediate consequence of the comparison test, but the series chosen for comparison is quite novel.",
+          "sourceSha256": "0df26f21b21d90915828234cb15ab9eb6599d287facaa4a62f0b28be32e49ddf",
+          "translation": "这个判别法提供了一种很不相同的方法，用于判断无穷级数收敛还是发散——与比值判别法一样，它是比较判别法的直接推论，但选来作比较的级数颇为新颖。"
+        },
+        {
+          "id": "p478-b9",
+          "source": "## THEOREM 4 (THE INTEGRAL TEST)",
+          "sourceSha256": "5a7e62942c2d7dd0c2a261d6f686de5f2b38134f707bbe0fab4719c613a94f4f",
+          "translation": "## 定理 4（积分判别法）"
+        },
+        {
+          "id": "p478-b10",
+          "source": "Suppose that $f$ is positive and decreasing on $[1,\\infty)$, and that $f(n)=a_n$ for all $n$. Then $\\sum\\limits_{n=1}^\\infty a_n$ converges if and only if the limit",
+          "sourceSha256": "2a9263b7508d54551b020cdc5c188047e78451edff0c470f775ede433a040aa2",
+          "translation": "假设 $f$ 在 $[1,\\infty)$ 上为正且递减，并且对于所有 $n$ 都有 $f(n)=a_n$。那么 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，当且仅当极限"
+        },
+        {
+          "id": "p478-b11",
+          "source": "$$\\int_1^\\infty f=\\lim_{A\\to\\infty}\\int_1^Af$$",
+          "sourceSha256": "67ddafb02df7edd9e57a0d88f6956b9ce991afe354d48f9b8eab04c27552afef"
+        },
+        {
+          "id": "p478-b12",
+          "source": "exists.",
+          "sourceSha256": "47d3bf947d8ac45f797d9fd9ec5118e31ca05943ab486012a4804ab81478d0fe",
+          "translation": "存在。"
+        },
+        {
+          "id": "p478-b13",
+          "source": "**PROOF** The existence of $\\lim\\limits_{A\\to\\infty}\\int_1^Af$ is equivalent to convergence of the series",
+          "sourceSha256": "036e89e0694d983b62f7ce491cc2d611c62b6ddee9520f07dfa4be1d317c1c45",
+          "translation": "**证明** $\\lim\\limits_{A\\to\\infty}\\int_1^Af$ 存在，等价于下列级数收敛："
+        },
+        {
+          "id": "p478-b14",
+          "source": "$$\\int_1^2f+\\int_2^3f+\\int_3^4f+\\cdots.$$",
+          "sourceSha256": "87263543e863c7bb821dcfff7a19c72fb236fdabb7f3aa3afcd1eabd2744aacc"
+        }
+      ]
+    },
+    {
+      "printed": 479,
+      "sourceSha256": "1f9a96c45cc1f5ee6249566e81094399b76a78698e809526ed5f17cf67bca744",
+      "blocks": [
+        {
+          "id": "p479-b1",
+          "source": "Now, since $f$ is decreasing we have (Figure 2)",
+          "sourceSha256": "8a5409d6e29ef12beb873a35a9c4f0372227fd3906025fde9a1c5ad21e45abc7",
+          "translation": "现在，由于 $f$ 递减，有（图 2）"
+        },
+        {
+          "id": "p479-b2",
+          "source": "$$f(n+1)<\\int_n^{n+1}f<f(n).$$",
+          "sourceSha256": "298096d3262aa7c58997fa8f7bf3ccafe5d24c300f07c051a424354fe3a94e97"
+        },
+        {
+          "id": "p479-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:420px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"29 282 423 318\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0498.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "b74cd2dce88661ca3e01e5accd7dc4f78ac0c132599bf8cb0808038329f4f9c2"
+        },
+        {
+          "id": "p479-b4",
+          "source": "The first half of this double inequality shows that the series $\\sum\\limits_{n=1}^\\infty a_{n+1}$ may be compared to the series $\\sum\\limits_{n=1}^\\infty\\int_n^{n+1}f$, proving that $\\sum\\limits_{n=1}^\\infty a_{n+1}$ (and hence $\\sum\\limits_{n=1}^\\infty a_n$) converges if $\\lim\\limits_{A\\to\\infty}\\int_1^A$ exists.",
+          "sourceSha256": "72cc12a31fc5009687f2f0afd06eb52a26418e1dc559295fba694f4c0f59aba7",
+          "translation": "这个双重不等式的前一半表明，可以将级数 $\\sum\\limits_{n=1}^\\infty a_{n+1}$ 与级数 $\\sum\\limits_{n=1}^\\infty\\int_n^{n+1}f$ 比较，从而证明：如果 $\\lim\\limits_{A\\to\\infty}\\int_1^A$ 存在，那么 $\\sum\\limits_{n=1}^\\infty a_{n+1}$（因而 $\\sum\\limits_{n=1}^\\infty a_n$）收敛。"
+        },
+        {
+          "id": "p479-b5",
+          "source": "The second half of the inequality shows that the series $\\sum\\limits_{n=1}^\\infty\\int_n^{n+1}f$ may be compared to the series $\\sum\\limits_{n=1}^\\infty a_n$, proving that $\\lim\\limits_{A\\to\\infty}\\int_1^Af$ must exist if $\\sum\\limits_{n=1}^\\infty a_n$ converges. ■",
+          "sourceSha256": "66e68935ef169e02954dc4d2733da6187f9ab05ab0e4d8ae17ba10a80309942a",
+          "translation": "不等式的后一半表明，可以将级数 $\\sum\\limits_{n=1}^\\infty\\int_n^{n+1}f$ 与级数 $\\sum\\limits_{n=1}^\\infty a_n$ 比较，从而证明：如果 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，那么 $\\lim\\limits_{A\\to\\infty}\\int_1^Af$ 必须存在。■"
+        },
+        {
+          "id": "p479-b6",
+          "source": "Only one example using the integral test will be given here, but it settles the question of convergence for infinitely many series at once. If $p>0$, the convergence of $\\sum\\limits_{n=1}^\\infty1/n^p$ is equivalent, by the integral test, to the existence of",
+          "sourceSha256": "e4a16efff4d2517c66e9f5c0107dd18e1bb8bbc4abc46c07519f9ddc3a7c845b",
+          "translation": "这里仅给出一个使用积分判别法的例子，但它会同时解决无穷多个级数的收敛问题。如果 $p>0$，那么根据积分判别法，$\\sum\\limits_{n=1}^\\infty1/n^p$ 收敛等价于下面的极限存在："
+        },
+        {
+          "id": "p479-b7",
+          "source": "$$\\int_1^\\infty\\frac1{x^p}\\,dx.$$",
+          "sourceSha256": "973b0f538c0535186b0a80855e8b6419d8ab3be62a556748cc122d2f893bb354"
+        },
+        {
+          "id": "p479-b8",
+          "source": "Now",
+          "sourceSha256": "fe18013d93d22f4f2a70344d30c00fe62d2ef29189ae5d25ccbda81fbd9c92b0",
+          "translation": "现在"
+        },
+        {
+          "id": "p479-b9",
+          "source": "$$\\int_1^A\\frac1{x^p}\\,dx=\\begin{cases}-\\dfrac1{(p-1)}\\cdot\\dfrac1{A^{p-1}}+\\dfrac1{p-1},&p\\ne1\\\\\\log A,&p=1.\\end{cases}$$",
+          "sourceSha256": "92229b5e382f13699d45c71be2800ae8460ec036dbd6bc31311db2c9a5f458d6"
+        },
+        {
+          "id": "p479-b10",
+          "source": "This shows that $\\lim\\limits_{A\\to\\infty}\\int_1^A1/x^p\\,dx$ exists if $p>1$, but not if $p\\le1$. Thus $\\sum\\limits_{n=1}^\\infty1/n^p$ converges precisely for $p>1$. In particular, $\\sum\\limits_{n=1}^\\infty1/n$ diverges.",
+          "sourceSha256": "3eb672573d571f7dff2ae9d42593f22bda7214fa17ea146a438f5af7f2b08226",
+          "translation": "这表明 $\\lim\\limits_{A\\to\\infty}\\int_1^A1/x^p\\,dx$ 在 $p>1$ 时存在，而在 $p\\le1$ 时不存在。因此，$\\sum\\limits_{n=1}^\\infty1/n^p$ 恰好在 $p>1$ 时收敛。特别地，$\\sum\\limits_{n=1}^\\infty1/n$ 发散。"
+        },
+        {
+          "id": "p479-b11",
+          "source": "The tests considered so far apply only to nonnegative sequences, but nonpositive sequences may be handled in precisely the same way. In fact, since",
+          "sourceSha256": "a1dc25d5437577d8fa41464a77c1e9d79c2ed898444bfd0a18f4607faf6d81e8",
+          "translation": "迄今考虑的判别法只适用于非负数列，但非正数列可以完全同样地处理。事实上，由于"
+        },
+        {
+          "id": "p479-b12",
+          "source": "$$\\sum_{n=1}^\\infty a_n=-\\left(\\sum_{n=1}^\\infty-a_n\\right),$$",
+          "sourceSha256": "7521b55b17047aea213d7338d6ec46b20e195da667b47aa39fd79ab7a7c9e654"
+        },
+        {
+          "id": "p479-b13",
+          "source": "all considerations about nonpositive sequences can be reduced to questions involving nonnegative sequences. Sequences which contain both positive and negative terms are quite another story.",
+          "sourceSha256": "227aa8ad61984723b27d65e17e4e2075511d2bba1f8932b05918f0d120258690",
+          "translation": "所有关于非正数列的考虑，都可以化为涉及非负数列的问题。既有正项又有负项的数列，则完全是另一回事。"
+        },
+        {
+          "id": "p479-b14",
+          "source": "If $\\sum\\limits_{n=1}^\\infty a_n$ is a sequence with both positive and negative terms, one can consider instead the sequence $\\sum\\limits_{n=1}^\\infty|a_n|$, all of whose terms are nonnegative. Cheerfully",
+          "sourceSha256": "b312d0f72121d959f1b5064f695648ab58afa1b2245ac498eef2f9ab69c2320c",
+          "translation": "如果 $\\sum\\limits_{n=1}^\\infty a_n$ 既有正项又有负项，我们可以改为考虑 $\\sum\\limits_{n=1}^\\infty|a_n|$，它的所有项都非负。乐观地"
+        }
+      ]
+    },
+    {
+      "printed": 480,
+      "sourceSha256": "75aaa132b02a20ca6bb6f58253dae5a4394281c1dd3b8d1c58b62dd0e83fba1c",
+      "blocks": [
+        {
+          "id": "p480-b1",
+          "source": "ignoring the possibility that we may have thrown away all the interesting information about the original sequence, we proceed to eulogize those sequences which are converted by this procedure into convergent sequences.",
+          "sourceSha256": "f03bfafc331433b7aba01bacb9c0ce74b1bea55d15427d39025a89fa08840f4e",
+          "translation": "忽略我们可能已经丢掉原数列中所有有趣信息这一事实之后，我们继续赞美那些经过这种处理便得到收敛级数的数列。"
+        },
+        {
+          "id": "p480-b2",
+          "source": "## DEFINITION",
+          "sourceSha256": "676bc8347a70e5e93cbff5e0571ad9eecf86b072557f09f8796edced86dfc6e2",
+          "translation": "## 定义"
+        },
+        {
+          "id": "p480-b3",
+          "source": "The series $\\sum\\limits_{n=1}^\\infty a_n$ is **absolutely convergent** if the series $\\sum\\limits_{n=1}^\\infty|a_n|$ is convergent.",
+          "sourceSha256": "a45c1b92e7384063b3ff4aa4e31e784154a7d6e96e3e454ab4a03cf37a7b71e7",
+          "translation": "如果级数 $\\sum\\limits_{n=1}^\\infty|a_n|$ 收敛，就称级数 $\\sum\\limits_{n=1}^\\infty a_n$ **绝对收敛**。"
+        },
+        {
+          "id": "p480-b4",
+          "source": "(In more formal language, the sequence $\\{a_n\\}$ is **absolutely summable** if the sequence $\\{|a_n|\\}$ is summable.)",
+          "sourceSha256": "8a0b36b9970191e1d48a80a984e61b6bdc385f49888912f569168d3b7bfd2922",
+          "translation": "（用更正式的语言说，如果数列 $\\{|a_n|\\}$ 可求和，就称数列 $\\{a_n\\}$ **绝对可求和**。）"
+        },
+        {
+          "id": "p480-b5",
+          "source": "Although we have no right to expect this definition to be of any interest, it turns out to be exceedingly important. The following theorem shows that the definition is at least not entirely useless.",
+          "sourceSha256": "ac765c9d714d4855615fd32b7458348e9f5c0bfa4a491971ad029d75bd80dbe9",
+          "translation": "虽然我们没有理由预期这个定义会有什么意义，但事实证明它极其重要。下面的定理至少说明，这个定义并非全无用处。"
+        },
+        {
+          "id": "p480-b6",
+          "source": "## THEOREM 5",
+          "sourceSha256": "c94f9199fe34be84f23f58e99462e4d11daa375dd377566a2e16a173494ca323",
+          "translation": "## 定理 5"
+        },
+        {
+          "id": "p480-b7",
+          "source": "Every absolutely convergent series is convergent. Moreover, a series is absolutely convergent if and only if the series formed from its positive terms and the series formed from its negative terms both converge.",
+          "sourceSha256": "3ecd26f2c7b8cba0ece4260c41d71d914c780c695e2016d40b6fa665f503c007",
+          "translation": "每个绝对收敛的级数都收敛。此外，一个级数绝对收敛，当且仅当由其正项构成的级数和由其负项构成的级数都收敛。"
+        },
+        {
+          "id": "p480-b8",
+          "source": "**PROOF** If $\\sum\\limits_{n=1}^\\infty|a_n|$ converges, then, by the Cauchy criterion,",
+          "sourceSha256": "ffd79c1002e101ad9f8fc1eb15a0c95540868f549270ecc77d00f953bb78c9d9",
+          "translation": "**证明** 如果 $\\sum\\limits_{n=1}^\\infty|a_n|$ 收敛，那么根据柯西准则，"
+        },
+        {
+          "id": "p480-b9",
+          "source": "$$\\lim_{m,n\\to\\infty}|a_{n+1}|+\\cdots+|a_m|=0.$$",
+          "sourceSha256": "122a1782a418d3310e62db369d5d715d5f6b079b6b364cf7cf2c2ea905b099a0"
+        },
+        {
+          "id": "p480-b10",
+          "source": "Since",
+          "sourceSha256": "98af1ed61831e6ab92bbb2a4d429344c8d0581c77d5c85311c5ed8a3207d2eea",
+          "translation": "由于"
+        },
+        {
+          "id": "p480-b11",
+          "source": "$$|a_{n+1}+\\cdots+a_m|\\le|a_{n+1}|+\\cdots+|a_m|,$$",
+          "sourceSha256": "12429dba975e10ef97d81e8a97ffbd03b3ec8de38861dc7bdee9276f45689b02"
+        },
+        {
+          "id": "p480-b12",
+          "source": "it follows that",
+          "sourceSha256": "d65e00e35bf8747723cc3719e603f3217426b49946d42d0ac5cc5c3ad2d04dbb",
+          "translation": "由此得到"
+        },
+        {
+          "id": "p480-b13",
+          "source": "$$\\lim_{m,n\\to\\infty}a_{n+1}+\\cdots+a_m=0,$$",
+          "sourceSha256": "ae6e0b874350e48d13ab74eee5130ef8afd33bf33336e92592a6b91db1858b04"
+        },
+        {
+          "id": "p480-b14",
+          "source": "which shows that $\\sum\\limits_{n=1}^\\infty a_n$ converges.",
+          "sourceSha256": "d6067578bd562b17ea2804f24e84a5744f0d756dbeca629c5764fc76b65931c5",
+          "translation": "这说明 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛。"
+        },
+        {
+          "id": "p480-b15",
+          "source": "To prove the second part of the theorem, let",
+          "sourceSha256": "6474059de16017e6e7454e293b77f4243883d9ba5c6362511a430ba30d8d8df2",
+          "translation": "为了证明定理的第二部分，令"
+        },
+        {
+          "id": "p480-b16",
+          "source": "$$\\begin{aligned}\na_n^+&=\\begin{cases}a_n,&\\text{if }a_n\\ge0\\\\0,&\\text{if }a_n\\le0,\\end{cases}\\\\\na_n^-&=\\begin{cases}a_n,&\\text{if }a_n\\le0\\\\0,&\\text{if }a_n\\ge0,\\end{cases}\n\\end{aligned}$$",
+          "sourceSha256": "7e9f006f83ef1875e635b113050287fe55589537936c9a682876081e89ffc0bd"
+        },
+        {
+          "id": "p480-b17",
+          "source": "so that $\\sum\\limits_{n=1}^\\infty a_n^+$ is the series formed from the positive terms of $\\sum\\limits_{n=1}^\\infty a_n$, and $\\sum\\limits_{n=1}^\\infty a_n^-$ is the series formed from the negative terms.",
+          "sourceSha256": "d94c08a60e37e513f0ad5d807f12a6c3fc0b9350460db09b8b0b0e35fca3eab7",
+          "translation": "于是 $\\sum\\limits_{n=1}^\\infty a_n^+$ 是由 $\\sum\\limits_{n=1}^\\infty a_n$ 的正项构成的级数，而 $\\sum\\limits_{n=1}^\\infty a_n^-$ 是由其负项构成的级数。"
+        },
+        {
+          "id": "p480-b18",
+          "source": "If $\\sum\\limits_{n=1}^\\infty a_n^+$ and $\\sum\\limits_{n=1}^\\infty a_n^-$ both converge, then",
+          "sourceSha256": "77df4e918ac2dc9bf92d83ad2ccaa7cecb6f1ed75e0d6a04eaa6bf5ca8f34bc5",
+          "translation": "如果 $\\sum\\limits_{n=1}^\\infty a_n^+$ 和 $\\sum\\limits_{n=1}^\\infty a_n^-$ 都收敛，那么"
+        },
+        {
+          "id": "p480-b19",
+          "source": "$$\\sum_{n=1}^\\infty|a_n|=\\sum_{n=1}^\\infty[a_n^+-(a_n^-)]=\\sum_{n=1}^\\infty a_n^+-\\sum_{n=1}^\\infty a_n^-$$",
+          "sourceSha256": "b2bd27da29499cea7c45687ebc2b7269d71703580dc5a58ec7c52469c12fbb1e"
+        }
+      ]
+    },
+    {
+      "printed": 481,
+      "sourceSha256": "c837840c280c4d06f9fd268dd26783ad3dd96e3d74c9a324b9c2dd7a2e1bdafe",
+      "blocks": [
+        {
+          "id": "p481-b1",
+          "source": "also converges, so $\\sum\\limits_{n=1}^\\infty a_n$ converges absolutely.",
+          "sourceSha256": "6074166dfbe9f998fa33f4af2b7995b51baa968bd457119f689d2b81ff0fa58f",
+          "translation": "也收敛，所以 $\\sum\\limits_{n=1}^\\infty a_n$ 绝对收敛。"
+        },
+        {
+          "id": "p481-b2",
+          "source": "On the other hand, if $\\sum\\limits_{n=1}^\\infty|a_n|$ converges, then, as we have just shown, $\\sum\\limits_{n=1}^\\infty a_n$ also converges. Therefore",
+          "sourceSha256": "6a25c06b4d1aa504a5b45b623a2c07cc1a37647871bcc9de84c21244d1bea715",
+          "translation": "另一方面，如果 $\\sum\\limits_{n=1}^\\infty|a_n|$ 收敛，那么正如刚刚证明的，$\\sum\\limits_{n=1}^\\infty a_n$ 也收敛。因此"
+        },
+        {
+          "id": "p481-b3",
+          "source": "$$\\sum_{n=1}^\\infty a_n^+=\\frac12\\left(\\sum_{n=1}^\\infty a_n+\\sum_{n=1}^\\infty|a_n|\\right)$$",
+          "sourceSha256": "a44f61b41bca8aad118fa95a779a89720c3b0d1f33900655621fc0148e2a2f8b"
+        },
+        {
+          "id": "p481-b4",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "以及"
+        },
+        {
+          "id": "p481-b5",
+          "source": "$$\\sum_{n=1}^\\infty a_n^-=\\frac12\\left(\\sum_{n=1}^\\infty a_n-\\sum_{n=1}^\\infty|a_n|\\right)$$",
+          "sourceSha256": "7134de90b77ffc7cee88551a78a5703f91fa7d48475767529e75e34e006a0f06"
+        },
+        {
+          "id": "p481-b6",
+          "source": "both converge. ■",
+          "sourceSha256": "531f91468d43e99e2f20afc19da9e62f604a17ad628100c9bec610019254ea29",
+          "translation": "都收敛。■"
+        },
+        {
+          "id": "p481-b7",
+          "source": "It follows from Theorem 5 that every convergent series with positive terms can be used to obtain infinitely many other convergent series, simply by putting in minus signs at random. Not every convergent series can be obtained in this way, however—there are series which are convergent but not absolutely convergent (such series are called **conditionally convergent**). In order to prove this statement we need a test for convergence which applies specifically to series with positive and negative terms.",
+          "sourceSha256": "e88cd15dc41464cfcf34173cd838004aca7370b06ad7e0bda7433a5a9fe8a1a6",
+          "translation": "由定理 5 可知，从每个收敛的正项级数出发，只要任意加上一些负号，就能得到无穷多个其他收敛级数。然而，并非所有收敛级数都能这样得到——存在收敛但不绝对收敛的级数（这样的级数称为**条件收敛**）。为了证明这一陈述，我们需要一个专门适用于同时有正项和负项的级数的收敛判别法。"
+        },
+        {
+          "id": "p481-b8",
+          "source": "## THEOREM 6 (LEIBNIZ’S THEOREM)",
+          "sourceSha256": "91dca85e869d048b288e697c6261130200353f532cab4400a8f1078de6fcaa88",
+          "translation": "## 定理 6（莱布尼茨定理）"
+        },
+        {
+          "id": "p481-b9",
+          "source": "Suppose that",
+          "sourceSha256": "fec9870e474474d9697ae5c4f9c7b38353d7c2bda8ba0abfc0249ff8b846c6c1",
+          "translation": "假设"
+        },
+        {
+          "id": "p481-b10",
+          "source": "$$a_1\\ge a_2\\ge a_3\\ge\\cdots\\ge0,$$",
+          "sourceSha256": "acf14808d1e4c1f1a8c665d09a7efa5c5a9ebd1770eebd9d644f59f0a8557923"
+        },
+        {
+          "id": "p481-b11",
+          "source": "and that",
+          "sourceSha256": "877bd491f913f8ee03c06926b2cf3cb891d14934e11c910c76ecee0e80a7106e",
+          "translation": "并且"
+        },
+        {
+          "id": "p481-b12",
+          "source": "$$\\lim_{n\\to\\infty}a_n=0.$$",
+          "sourceSha256": "5bf4903af622e9887580c2e5970d89936c11d2504ba282253ee597e215cdc816"
+        },
+        {
+          "id": "p481-b13",
+          "source": "Then the series",
+          "sourceSha256": "a79214e71b015dd9a9b8d2bab074266319c9d55b7648a70713fc0515de839418",
+          "translation": "那么级数"
+        },
+        {
+          "id": "p481-b14",
+          "source": "$$\\sum_{n=1}^\\infty(-1)^{n+1}a_n=a_1-a_2+a_3-a_4+a_5-\\cdots$$",
+          "sourceSha256": "edb4b82c500e213237b0bef185b3271d120d06a5e5987bc68b85e06ccdcfe058"
+        },
+        {
+          "id": "p481-b15",
+          "source": "converges.",
+          "sourceSha256": "53993f1f77a638d8c492ef7c2e993904790612692d494347d0a35fc3a9e6d9bd",
+          "translation": "收敛。"
+        },
+        {
+          "id": "p481-b16",
+          "source": "**PROOF** Figure 3 illustrates relationships between the partial sums which we will establish:",
+          "sourceSha256": "4b0ec44f6658afea49bb3f1b37cf726275a40a2416bdc8fb27348829e696b678",
+          "translation": "**证明** 图 3 展示了我们将要建立的部分和之间的关系："
+        },
+        {
+          "id": "p481-b17",
+          "source": "$$\\begin{aligned}\n&(1)\\quad s_2\\le s_4\\le s_6\\le\\cdots,\\\\\n&(2)\\quad s_1\\ge s_3\\ge s_5\\ge\\cdots,\\\\\n&(3)\\quad s_k\\le s_l\\qquad\\text{if }k\\text{ is even and }l\\text{ is odd.}\n\\end{aligned}$$",
+          "sourceSha256": "7f3822c96460064ea2ed98ddd9ce17051b9a52567782b0264f168554fddb7fe2"
+        },
+        {
+          "id": "p481-b18",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:525px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"449 1421 525 51\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0500.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "3d48ff52af1b2adfea6f51f8d83bc861c366abd5657400adfaab4823b39cc23f"
+        }
+      ]
+    },
+    {
+      "printed": 482,
+      "sourceSha256": "8830944a8025b8ab9dfd9cef96400296534d9b14246464db5539fec89d6f945b",
+      "blocks": [
+        {
+          "id": "p482-b1",
+          "source": "To prove the first two inequalities, observe that",
+          "sourceSha256": "0908451967d3c8248209baba669b1045dc1e147e71ecc0bd84f1e39b2545bf10",
+          "translation": "为了证明前两个不等式，注意到"
+        },
+        {
+          "id": "p482-b2",
+          "source": "$$\\begin{aligned}\n(1)\\quad s_{2n+2}&=s_{2n}+a_{2n+1}-a_{2n+2}\\\\\n&\\ge s_{2n},\\qquad\\text{since }a_{2n+1}\\ge a_{2n+2}\\\\\n(2)\\quad s_{2n+3}&=s_{2n+1}-a_{2n+2}+a_{2n+3}\\\\\n&\\le s_{2n+1},\\qquad\\text{since }a_{2n+2}\\ge a_{2n+3}.\n\\end{aligned}$$",
+          "sourceSha256": "bff67f9e5c6b6f7e5fa2198ff61c7de2c30245664b05bc937c58bc555fe23d03"
+        },
+        {
+          "id": "p482-b3",
+          "source": "To prove the third inequality, notice first that",
+          "sourceSha256": "823813b9db733181059219fd9d3f739a737f68c335ee4d65d518cd235b30a5f4",
+          "translation": "为了证明第三个不等式，先注意到"
+        },
+        {
+          "id": "p482-b4",
+          "source": "$$\\begin{aligned}s_{2n}&=s_{2n-1}-a_{2n}\\\\&\\le s_{2n-1}\\qquad\\text{since }a_{2n}\\ge0.\\end{aligned}$$",
+          "sourceSha256": "418cea92cd21f96ef4eb998d02e05ddd6a30e69fae01a3e7accbe629f73b4f4e"
+        },
+        {
+          "id": "p482-b5",
+          "source": "This proves only a special case of (3), but in conjunction with (1) and (2) the general case is easy: if $k$ is even and $l$ is odd, choose $n$ such that",
+          "sourceSha256": "4f502c590bf03ad5a9ea534678213244aea7684ad018b2cbdcdfb140ca0528e6",
+          "translation": "这只证明了 (3) 的一个特殊情形，但结合 (1) 和 (2)，一般情形也很容易：如果 $k$ 是偶数，$l$ 是奇数，选取 $n$，使得"
+        },
+        {
+          "id": "p482-b6",
+          "source": "$$2n\\ge k\\quad\\text{and }2n-1\\ge l;$$",
+          "sourceSha256": "21d88c657869ed0da3b2c437a57699fa32a3bc4aceadbb0df3a6d9720716687b"
+        },
+        {
+          "id": "p482-b7",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p482-b8",
+          "source": "$$s_k\\le s_{2n}\\le s_{2n-1}\\le s_l,$$",
+          "sourceSha256": "de58c78f326a8f1131ba62c719b04a7b595caf66389bf869575d37af7f5549c0"
+        },
+        {
+          "id": "p482-b9",
+          "source": "which proves (3).",
+          "sourceSha256": "3cfa9e64d665b98e50d85d8a025a3aec5c6add2a18102a60258ec5b2ffe5ca94",
+          "translation": "这就证明了 (3)。"
+        },
+        {
+          "id": "p482-b10",
+          "source": "Now, the sequence $\\{s_{2n}\\}$ converges, because it is nondecreasing and is bounded above (by $s_l$ for any odd $l$). Let",
+          "sourceSha256": "02e9d0cd230564b4112ab62ea4ef73cfc7773bfade48cae73d3a63faba898283",
+          "translation": "现在，数列 $\\{s_{2n}\\}$ 收敛，因为它非减且有上界（对于任意奇数 $l$，$s_l$ 都是上界）。令"
+        },
+        {
+          "id": "p482-b11",
+          "source": "$$\\alpha=\\sup\\{s_{2n}\\}=\\lim_{n\\to\\infty}s_{2n}.$$",
+          "sourceSha256": "49f37f4ca83b53445697f40bfa18270acf838956f4a6174f29892770ae2cde08"
+        },
+        {
+          "id": "p482-b12",
+          "source": "Similarly, let",
+          "sourceSha256": "e607997ff0905816cd21c2d1850f42f05420f0912f673d731eb354ad3b98260a",
+          "translation": "类似地，令"
+        },
+        {
+          "id": "p482-b13",
+          "source": "$$\\beta=\\inf\\{s_{2n+1}\\}=\\lim_{n\\to\\infty}s_{2n+1}.$$",
+          "sourceSha256": "3432cb108302166b3359a2981d73d3357c21accc6f2fbf327c9d39bc3756f96b"
+        },
+        {
+          "id": "p482-b14",
+          "source": "It follows from (3) that $\\alpha\\le\\beta$; since",
+          "sourceSha256": "0c13b86fd1debb46459f583783c4a48acbd02dbc72e86b3528936d7173746748",
+          "translation": "由 (3) 可知 $\\alpha\\le\\beta$；由于"
+        },
+        {
+          "id": "p482-b15",
+          "source": "$$s_{2n+1}-s_{2n}=a_{2n+1}\\quad\\text{and}\\quad\\lim_{n\\to\\infty}a_n=0$$",
+          "sourceSha256": "4bc0b3bd0c1bc2b4e05a0af4de26c5e7204a4fd406552496392929822e7e5ce9"
+        },
+        {
+          "id": "p482-b16",
+          "source": "it is actually the case that $\\alpha=\\beta$. This proves that $\\alpha=\\beta=\\lim\\limits_{n\\to\\infty}s_n$. ■",
+          "sourceSha256": "84552ef4875524f4c0312439423e874ed108122eef374d85a6991b2b340e5d53",
+          "translation": "实际上有 $\\alpha=\\beta$。这就证明了 $\\alpha=\\beta=\\lim\\limits_{n\\to\\infty}s_n$。■"
+        },
+        {
+          "id": "p482-b17",
+          "source": "The standard example derived from Theorem 6 is the series",
+          "sourceSha256": "8af1d0781c05b06fb0afb7edd3a7a8e4735a142d09d7b40139c4e7199191e44d",
+          "translation": "从定理 6 得到的标准例子是级数"
+        },
+        {
+          "id": "p482-b18",
+          "source": "$$1-\\tfrac12+\\tfrac13-\\tfrac14+\\tfrac15-\\cdots,$$",
+          "sourceSha256": "a1a415fde0c657fe855c00dd7ca8fca2a40f16f5dbeec27a761107ceae694a78"
+        },
+        {
+          "id": "p482-b19",
+          "source": "which is convergent, but *not* absolutely convergent (since $\\sum\\limits_{n=1}^\\infty1/n$ does not converge). If the sum of this series is denoted by $x$, the following manipulations lead to quite a paradoxical result:",
+          "sourceSha256": "cf6ebe4bdd985551c2941a410da2fcc770a646de08ea7c7bc76d555a615af1ae",
+          "translation": "它收敛，但*不*绝对收敛（因为 $\\sum\\limits_{n=1}^\\infty1/n$ 不收敛）。如果把这个级数的和记作 $x$，那么下面的运算会得到一个颇具矛盾意味的结果："
+        },
+        {
+          "id": "p482-b20",
+          "source": "$$\\begin{aligned}\nx&=1-\\tfrac12+\\tfrac13-\\tfrac14+\\tfrac15-\\tfrac16+\\cdots\\\\\n&=1-\\tfrac12-\\tfrac14+\\tfrac13-\\tfrac16-\\tfrac18+\\tfrac15-\\tfrac1{10}-\\tfrac1{12}+\\tfrac17-\\tfrac1{14}-\\tfrac1{16}+\\cdots\\\\\n&\\qquad\\text{(the pattern here is one positive term followed by two negative ones)}\\\\\n&=(1-\\tfrac12)-\\tfrac14+(\\tfrac13-\\tfrac16)-\\tfrac18+(\\tfrac15-\\tfrac1{10})-\\tfrac1{12}+(\\tfrac17-\\tfrac1{14})-\\tfrac1{16}+\\cdots\\\\\n&=\\tfrac12-\\tfrac14+\\tfrac16-\\tfrac18+\\tfrac1{10}-\\tfrac1{12}+\\tfrac1{14}-\\tfrac1{16}+\\cdots\\\\\n&=\\tfrac12(1-\\tfrac12+\\tfrac13-\\tfrac14+\\tfrac15-\\tfrac16+\\tfrac17-\\tfrac18+\\cdots)\\\\\n&=\\tfrac12x,\n\\end{aligned}$$",
+          "sourceSha256": "816066e7b1829db654ef87b63f5fd523bde17efd84cc3b3d9557d74903b88789"
+        }
+      ]
+    },
+    {
+      "printed": 483,
+      "sourceSha256": "9b9d334a49ae206a81f8c80fe658b071894ca3fb0c14598f2bf7f420486f96c1",
+      "blocks": [
+        {
+          "id": "p483-b1",
+          "source": "so $x=x/2$, implying that $x=0$. On the other hand, it is easy to see that $x\\ne0$: the partial sum $s_2$ equals $\\frac12$, and the proof of Leibniz’s Theorem shows that $x\\ge s_2$.",
+          "sourceSha256": "d7e03f4babaca053a2889a0e468b71fb78e85b76b31ee6002fcfac09abdaf6f7",
+          "translation": "所以 $x=x/2$，这意味着 $x=0$。另一方面，很容易看出 $x\\ne0$：部分和 $s_2$ 等于 $\\frac12$，而莱布尼茨定理的证明表明 $x\\ge s_2$。"
+        },
+        {
+          "id": "p483-b2",
+          "source": "This contradiction depends on a step which takes for granted that operations valid for finite sums necessarily have analogues for infinite sums. It is true that the sequence",
+          "sourceSha256": "0cf190ca395ee9f82b89c5e58e5fa4b09b923594345ea96e1bedc7f9ce547cc3",
+          "translation": "这个矛盾依赖于其中的一个步骤：它想当然地认为，对有限和有效的运算，必然对无穷和也有对应的形式。确实，数列"
+        },
+        {
+          "id": "p483-b3",
+          "source": "$$\\{b_n\\}=1,\\ -\\tfrac12,\\ -\\tfrac14,\\ \\tfrac13,\\ -\\tfrac16,\\ -\\tfrac18,\\ \\tfrac15,\\ -\\tfrac1{10},\\ -\\tfrac1{12},\\ldots$$",
+          "sourceSha256": "0b32746ee43427f4121762445fce63b2b648174a1963a265b772919bfccecfa1"
+        },
+        {
+          "id": "p483-b4",
+          "source": "contains all the numbers in the sequence",
+          "sourceSha256": "8dc294fbd6ea418ea306f8b6697e9c1c65120ebcb3af24275d99ed8e8c376058",
+          "translation": "包含数列"
+        },
+        {
+          "id": "p483-b5",
+          "source": "$$\\{a_n\\}=1,\\ -\\tfrac12,\\ \\tfrac13,\\ -\\tfrac14,\\ \\tfrac15,\\ -\\tfrac16,\\ \\tfrac17,\\ -\\tfrac18,\\ \\tfrac19,\\ -\\tfrac1{10},\\ \\tfrac1{11},\\ -\\tfrac1{12},\\ldots.$$",
+          "sourceSha256": "3c3a60d8cbac6d5932af760bf3a7ee8ccc1f0394dcf0a4721eb87ce756e841a5"
+        },
+        {
+          "id": "p483-b6",
+          "source": "In fact, $\\{b_n\\}$ is a **rearrangement** of $\\{a_n\\}$ in the following precise sense: each $b_n=a_{f(n)}$ where $f$ is a certain function which “permutes” the natural numbers, that is, every natural number $m$ is $f(n)$ for precisely one $n$. In our example",
+          "sourceSha256": "fe1d6fbf39e7e1bfd2f7c48a05559ab8efc987a0e5bfd2f5e77cc530d1dae592",
+          "translation": "中的所有数。事实上，$\\{b_n\\}$ 在以下精确意义上是 $\\{a_n\\}$ 的一个**重排**：每个 $b_n=a_{f(n)}$，其中 $f$ 是一个“置换”自然数的函数，也就是说，每个自然数 $m$ 都恰好对一个 $n$ 等于 $f(n)$。在我们的例子中，"
+        },
+        {
+          "id": "p483-b7",
+          "source": "$$f(2m+1)=3m+1$$",
+          "sourceSha256": "acb7db457d730de09431109c02b3f48216a89ee65d777c6508d0dd62461a4ba5"
+        },
+        {
+          "id": "p483-b8",
+          "source": "(the terms $1,\\frac13,\\frac15,\\ldots$ go into the 1st, 4th, 7th, $\\ldots$ places),",
+          "sourceSha256": "932e33507c59fb76c811eaf1ccc2a8f65239d73457db9c281b2fbc6b6846cc1b",
+          "translation": "（各项 $1,\\frac13,\\frac15,\\ldots$ 被放在第 1、4、7、$\\ldots$ 个位置），"
+        },
+        {
+          "id": "p483-b9",
+          "source": "$$f(4m)=3m$$",
+          "sourceSha256": "fb64d4fc29b765a6d8d1353a9472e3c4aefd993072b5e77d642b57202cdcf6a3"
+        },
+        {
+          "id": "p483-b10",
+          "source": "(the terms $-\\frac14,-\\frac18,-\\frac1{12},\\ldots$ go into the 3rd, 6th, 9th, $\\ldots$ places),",
+          "sourceSha256": "715d4ef740ef0876b144934b2d64fa78d536383e1419c8af3660cea4593ac699",
+          "translation": "（各项 $-\\frac14,-\\frac18,-\\frac1{12},\\ldots$ 被放在第 3、6、9、$\\ldots$ 个位置），"
+        },
+        {
+          "id": "p483-b11",
+          "source": "$$f(4m+2)=3m+2$$",
+          "sourceSha256": "f53d7202bc5b8a98dd023e6f5d21b919afa47897287a105b715503e12725e117"
+        },
+        {
+          "id": "p483-b12",
+          "source": "(the terms $-\\frac12,-\\frac16,-\\frac1{10},\\ldots$ go into the 2nd, 5th, 8th, $\\ldots$ places).",
+          "sourceSha256": "5e24eee382531de7695c8504f46457365d2731bcb6105ca63535233cfa57afca",
+          "translation": "（各项 $-\\frac12,-\\frac16,-\\frac1{10},\\ldots$ 被放在第 2、5、8、$\\ldots$ 个位置）。"
+        },
+        {
+          "id": "p483-b13",
+          "source": "Nevertheless, there is no reason to assume that $\\sum\\limits_{n=1}^\\infty b_n$ should equal $\\sum\\limits_{n=1}^\\infty a_n$: these sums are, by definition, $\\lim\\limits_{n\\to\\infty}b_1+\\cdots+b_n$ and $\\lim\\limits_{n\\to\\infty}a_1+\\cdots+a_n$, so the particular order of the terms can quite conceivably matter. The series $\\sum\\limits_{n=1}^\\infty(-1)^{n+1}/n$ is not special in this regard; indeed, its behavior is typical of series which are not absolutely convergent—the following result (really more of a grand counterexample than a theorem) shows how bad conditionally convergent series are.",
+          "sourceSha256": "4ad6861da231106a47c1536a5c2bb8c1d797cf987e667f99cd58e2b727c6f635",
+          "translation": "然而，没有理由认为 $\\sum\\limits_{n=1}^\\infty b_n$ 应当等于 $\\sum\\limits_{n=1}^\\infty a_n$：根据定义，这两个和分别是 $\\lim\\limits_{n\\to\\infty}b_1+\\cdots+b_n$ 和 $\\lim\\limits_{n\\to\\infty}a_1+\\cdots+a_n$，因此，各项的具体顺序完全可能产生影响。级数 $\\sum\\limits_{n=1}^\\infty(-1)^{n+1}/n$ 在这方面并不特殊；事实上，它的行为是不绝对收敛级数的典型表现——下面的结果（实际上，与其说是定理，不如说是一个宏大的反例）表明，条件收敛的级数可以糟糕到什么程度。"
+        },
+        {
+          "id": "p483-b14",
+          "source": "## THEOREM 7",
+          "sourceSha256": "3022a2572aadb6010fb19f90dfb34ceea022bcc8bfcad87c457007c697d70173",
+          "translation": "## 定理 7"
+        },
+        {
+          "id": "p483-b15",
+          "source": "If $\\sum\\limits_{n=1}^\\infty a_n$ converges, but does not converge absolutely, then for any number $\\alpha$ there is a rearrangement $\\{b_n\\}$ of $\\{a_n\\}$ such that $\\sum\\limits_{n=1}^\\infty b_n=\\alpha$.",
+          "sourceSha256": "817909c4e6480f011c9907fe7daafe8c74256e565f2f9bdf1408062f3b4f38f2",
+          "translation": "如果 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，但不绝对收敛，那么对于任意数 $\\alpha$，都存在 $\\{a_n\\}$ 的一个重排 $\\{b_n\\}$，使得 $\\sum\\limits_{n=1}^\\infty b_n=\\alpha$。"
+        },
+        {
+          "id": "p483-b16",
+          "source": "**PROOF** Let $\\sum\\limits_{n=1}^\\infty p_n$ denote the series formed from the positive terms of $\\{a_n\\}$ and let $\\sum\\limits_{n=1}^\\infty q_n$ denote the series of negative terms. It follows from Theorem 5 that at least one of these series does not converge. As a matter of fact, both must fail to converge, for if one had bounded partial sums, and the other had unbounded partial sums, then",
+          "sourceSha256": "3e6769399c9b897dc954019c2a5e662a57ff0c23ff030dbdb3e756b2ed7e2021",
+          "translation": "**证明** 用 $\\sum\\limits_{n=1}^\\infty p_n$ 表示由 $\\{a_n\\}$ 的正项构成的级数，用 $\\sum\\limits_{n=1}^\\infty q_n$ 表示其负项构成的级数。由定理 5 可知，这两个级数中至少有一个不收敛。事实上，它们必定都不收敛，因为如果一个的部分和有界，另一个的部分和无界，那么"
+        }
+      ]
+    },
+    {
+      "printed": 484,
+      "sourceSha256": "6564f938423a0ca56e0b9e7f925fc9b01e3530c181ce3d86bc4d3b5e84675482",
+      "blocks": [
+        {
+          "id": "p484-b1",
+          "source": "the original series $\\sum\\limits_{n=1}^\\infty a_n$ would also have unbounded partial sums, contradicting the assumption that it converges.",
+          "sourceSha256": "748562eff204c174b69fa8904265b149cb68aa52e3007050ba10f253a5dd567d",
+          "translation": "原级数 $\\sum\\limits_{n=1}^\\infty a_n$ 的部分和也会无界，这与它收敛的假设矛盾。"
+        },
+        {
+          "id": "p484-b2",
+          "source": "Now let $\\alpha$ be any number. Assume, for simplicity, that $\\alpha>0$ (the proof for $\\alpha<0$ will be a simple modification). Since the series $\\sum\\limits_{n=1}^\\infty p_n$ is not convergent, there is a number $N$ such that",
+          "sourceSha256": "51278a5afdc5d9d38a3f472890238386d9713e98f3056f31221b8a0e09855b87",
+          "translation": "现在任取一个数 $\\alpha$。为简单起见，假设 $\\alpha>0$（$\\alpha<0$ 时只需对证明稍作修改）。由于级数 $\\sum\\limits_{n=1}^\\infty p_n$ 不收敛，存在一个数 $N$，使得"
+        },
+        {
+          "id": "p484-b3",
+          "source": "$$\\sum_{n=1}^Np_n>\\alpha.$$",
+          "sourceSha256": "5f7480ff0e903146267367f124e024cb4b60ec17f4b076b89daf51a3e702f7fa"
+        },
+        {
+          "id": "p484-b4",
+          "source": "We will choose $N_1$ to be the *smallest* $N$ with this property. This means that",
+          "sourceSha256": "474a8d394921cf8f6089bc3444db953f092920f6e72d9fec4536851577be9be1",
+          "translation": "我们选择 $N_1$ 为具有这一性质的*最小*的 $N$。这意味着"
+        },
+        {
+          "id": "p484-b5",
+          "source": "$$\\begin{aligned}\n&(1)\\quad\\sum_{n=1}^{N_1-1}p_n\\le\\alpha,\\\\\n\\text{but}\\quad&(2)\\quad\\sum_{n=1}^{N_1}p_n>\\alpha.\n\\end{aligned}$$",
+          "sourceSha256": "dbce42bb3b7a6eb98112e1b2c10fc25166ca6f9dc4b11b0052e519f7f8a7d76b"
+        },
+        {
+          "id": "p484-b6",
+          "source": "Then if",
+          "sourceSha256": "97d840a4a532e006d25527a16151ae44363a48e32a274cfa6d2f17108a2e0048",
+          "translation": "于是，如果"
+        },
+        {
+          "id": "p484-b7",
+          "source": "$$S_1=\\sum_{n=1}^{N_1}p_n,$$",
+          "sourceSha256": "e3a6fe3039fad07bc5600943f84278bed205a2c30998c921e7d6817309753aa1"
+        },
+        {
+          "id": "p484-b8",
+          "source": "we have",
+          "sourceSha256": "311eecafbfec5e428b3e652becbcd18bf9c9670e490734d5811c85e6a7623ab4",
+          "translation": "我们就有"
+        },
+        {
+          "id": "p484-b9",
+          "source": "$$S_1-\\alpha\\le p_{N_1}.$$",
+          "sourceSha256": "857f1663bdc59fc0e0d7dda61744281a26471cabdc67d29f7fb4e28f09d0aca2"
+        },
+        {
+          "id": "p484-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:558px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"480 938 558 98\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0503.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "73b4f64b7636a5613697e2f3e9f7a902427df658699e7441295792f9eeebad54"
+        },
+        {
+          "id": "p484-b11",
+          "source": "This relation, which is clear from Figure 4, follows immediately from equation (1):",
+          "sourceSha256": "9c333323db6b14cfc0b98a6f53fad7b37cd83c17c17bd908499864ed2d8a8bc3",
+          "translation": "这个关系从图 4 中一目了然，也可以由等式 (1) 立即得到："
+        },
+        {
+          "id": "p484-b12",
+          "source": "$$S_1-\\alpha\\le S_1-\\sum_{n=1}^{N_1-1}p_n=p_{N_1}.$$",
+          "sourceSha256": "873a158b3d96eccc544096e5b5c63f78fc941dbb23961e84a04c7a5cd103a9f8"
+        },
+        {
+          "id": "p484-b13",
+          "source": "To the sum $S_1$ we now add on just enough negative terms to obtain a new sum $T_1$ which is less than $\\alpha$. In other words, we choose the smallest integer $M_1$ for which",
+          "sourceSha256": "41995386d94e51c215d06ec9e34539c8abaa0a2b07f8285588d977522e368309",
+          "translation": "现在，在和 $S_1$ 后面添加刚好足够多的负项，得到小于 $\\alpha$ 的新和 $T_1$。换句话说，选取满足下式的最小整数 $M_1$："
+        },
+        {
+          "id": "p484-b14",
+          "source": "$$T_1=S_1+\\sum_{n=1}^{M_1}q_n<\\alpha.$$",
+          "sourceSha256": "3425b7901627b2cd80e9858dd4b746c2eb7f3006a41f4fef308f917c09e2f630"
+        },
+        {
+          "id": "p484-b15",
+          "source": "As before, we have",
+          "sourceSha256": "c6d3fa61bfba44e76b0bf79e93a6ca632473c9a911fa3f8e3c75a5e2ebdfc581",
+          "translation": "与前面一样，我们有"
+        },
+        {
+          "id": "p484-b16",
+          "source": "$$\\alpha-T_1\\le-q_{M_1}.$$",
+          "sourceSha256": "1cc7d2ccc8c7ab920a291369fb05acffe6aecb56cf79b31f1baee9314a649e77"
+        },
+        {
+          "id": "p484-b17",
+          "source": "We now continue this procedure indefinitely, obtaining sums alternately larger and smaller than $\\alpha$, each time choosing the smallest $N_k$ or $M_k$ possible. The",
+          "sourceSha256": "534ffd6bd319a2dfc2cd03a81316a4b65ddf53101954cbd14648e82719b2e1ed",
+          "translation": "现在，无限地继续这一过程，得到交替大于和小于 $\\alpha$ 的和，每次都选择尽可能小的 $N_k$ 或 $M_k$。于是，"
+        }
+      ]
+    },
+    {
+      "printed": 485,
+      "sourceSha256": "0d9e10c5237b29b056c03a2406722c7319be243766440678020f7bbc54c3e6fc",
+      "blocks": [
+        {
+          "id": "p485-b1",
+          "source": "sequence",
+          "sourceSha256": "bf37c7c208717d6de100ce851b48273f8d5d945c8dc64fc64372087ffcf88ba9",
+          "translation": "数列"
+        },
+        {
+          "id": "p485-b2",
+          "source": "$$p_1,\\ldots,p_{N_1},q_1,\\ldots,q_{M_1},p_{N_1+1},\\ldots,p_{N_2},\\ldots$$",
+          "sourceSha256": "5bf1e8f9712bd13ff3388b7da82f120d00fa47eeed41b6ad2e4d78e45bb731c7"
+        },
+        {
+          "id": "p485-b3",
+          "source": "is a rearrangement of $\\{a_n\\}$. The partial sums of this rearrangement increase to $S_1$, then decrease to $T_1$, then increase to $S_2$, then decrease to $T_2$, etc. To complete the proof we simply note that $|S_k-\\alpha|$ and $|T_k-\\alpha|$ are less than or equal to $p_{N_k}$ or $-q_{M_k}$, respectively, and that these terms, being members of the original sequence $\\{a_n\\}$, must decrease to 0, since $\\sum\\limits_{n=1}^\\infty a_n$ converges. ■",
+          "sourceSha256": "5ad5e9e0c45206c1a10e362cf90eadc00e9e6f559ef659550af893aecf2a5ce2",
+          "translation": "是 $\\{a_n\\}$ 的一个重排。这个重排的部分和先增至 $S_1$，然后减至 $T_1$，再增至 $S_2$，再减至 $T_2$，如此等等。为了完成证明，只需注意到，$|S_k-\\alpha|$ 和 $|T_k-\\alpha|$ 分别小于或等于 $p_{N_k}$ 和 $-q_{M_k}$；而这些项来自原数列 $\\{a_n\\}$，由于 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，它们必定趋于 0。■"
+        },
+        {
+          "id": "p485-b4",
+          "source": "Together with Theorem 7, the next theorem establishes conclusively the distinction between conditionally convergent and absolutely convergent series.",
+          "sourceSha256": "8ed8d48e87b1a73cbfa3c09f536c9f76f44326a92293e94a20edec4c2d0444ec",
+          "translation": "下一个定理与定理 7 一起，彻底确立了条件收敛级数与绝对收敛级数之间的区别。"
+        },
+        {
+          "id": "p485-b5",
+          "source": "## THEOREM 8",
+          "sourceSha256": "1b71b7218282406fb07c3f11d039600800c32a64ddb50b3230cbae8cfae465f1",
+          "translation": "## 定理 8"
+        },
+        {
+          "id": "p485-b6",
+          "source": "If $\\sum\\limits_{n=1}^\\infty a_n$ converges absolutely, and $\\{b_n\\}$ is any rearrangement of $\\{a_n\\}$, then $\\sum\\limits_{n=1}^\\infty b_n$ also converges (absolutely), and",
+          "sourceSha256": "e12b0585af4af1683a04825830a135a9d573b8e92326a6c24f0e7574acc1e535",
+          "translation": "如果 $\\sum\\limits_{n=1}^\\infty a_n$ 绝对收敛，而 $\\{b_n\\}$ 是 $\\{a_n\\}$ 的任意重排，那么 $\\sum\\limits_{n=1}^\\infty b_n$ 也（绝对）收敛，并且"
+        },
+        {
+          "id": "p485-b7",
+          "source": "$$\\sum_{n=1}^\\infty a_n=\\sum_{n=1}^\\infty b_n.$$",
+          "sourceSha256": "04ba682c6526715c1041c6682d066c0fc0d59f621c602f566183b3a0aa9e0814"
+        },
+        {
+          "id": "p485-b8",
+          "source": "**PROOF** Let us denote the partial sums of $\\{a_n\\}$ by $s_n$, and the partial sums of $\\{b_n\\}$ by $t_n$.",
+          "sourceSha256": "46d3df2cdeac9362bc98bef50453d7e7e36a4f7ee40f6e391d16998fe3e3798b",
+          "translation": "**证明** 用 $s_n$ 表示 $\\{a_n\\}$ 的部分和，用 $t_n$ 表示 $\\{b_n\\}$ 的部分和。"
+        },
+        {
+          "id": "p485-b9",
+          "source": "Suppose that $\\varepsilon>0$. Since $\\sum\\limits_{n=1}^\\infty a_n$ converges, there is some $N$ such that",
+          "sourceSha256": "7e1a084ed805ee1986cef71ec48f1d3990d8384ddc6e2613fada96cd849326fe",
+          "translation": "假设 $\\varepsilon>0$。由于 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，存在某个 $N$，使得"
+        },
+        {
+          "id": "p485-b10",
+          "source": "$$\\left|\\sum_{n=1}^\\infty a_n-s_N\\right|<\\varepsilon.$$",
+          "sourceSha256": "2da90495d84a8741097190fd6521806a830583fe7c03618dadbf8290d0503c1b"
+        },
+        {
+          "id": "p485-b11",
+          "source": "Moreover, since $\\sum\\limits_{n=1}^\\infty|a_n|$ converges, we can also choose $N$ so that",
+          "sourceSha256": "992f421099714186b8827dabf2718d8104fe6f9e3c9e32b42e9fe8fc0716dca1",
+          "translation": "此外，由于 $\\sum\\limits_{n=1}^\\infty|a_n|$ 收敛，我们还可以选择 $N$，使得"
+        },
+        {
+          "id": "p485-b12",
+          "source": "$$\\sum_{n=1}^\\infty|a_n|-(|a_1|+\\cdots+|a_N|)<\\varepsilon,$$",
+          "sourceSha256": "65813e87aa4971d94a1c535bb77b63624c10b9ea82cafea5c76cb29fbf563f5b"
+        },
+        {
+          "id": "p485-b13",
+          "source": "i.e., so that",
+          "sourceSha256": "fe6eaf4f352fa89110d5dec437dbebbc8a65b46166133170ead09d25f96b354c",
+          "translation": "也就是说，使得"
+        },
+        {
+          "id": "p485-b14",
+          "source": "$$|a_{N+1}|+|a_{N+2}|+|a_{N+3}|+\\cdots<\\varepsilon.$$",
+          "sourceSha256": "520e012c23931b9da47bf18fa4bb7670ad130b8a899b13d02b3bd74c54361a85"
+        },
+        {
+          "id": "p485-b15",
+          "source": "Now choose $M$ so large that each of $a_1,\\ldots,a_N$ appear among $b_1,\\ldots,b_M$. Then whenever $m>M$, the difference $t_m-s_N$ is the sum of certain $a_i$, *where $a_1,\\ldots,a_N$ are definitely excluded*. Consequently,",
+          "sourceSha256": "f1f2b22c7b2062cc3fab866bc560aa0792a2dfee263e24a542518a652d868b0c",
+          "translation": "现在选取足够大的 $M$，使 $a_1,\\ldots,a_N$ 中的每一项都出现在 $b_1,\\ldots,b_M$ 中。于是，只要 $m>M$，差 $t_m-s_N$ 就是某些 $a_i$ 的和，*其中必定不含 $a_1,\\ldots,a_N$*。因此，"
+        },
+        {
+          "id": "p485-b16",
+          "source": "$$|t_m-s_N|\\le|a_{N+1}|+|a_{N+2}|+|a_{N+3}|+\\cdots.$$",
+          "sourceSha256": "3f914da4e24cae9f89d30efde8a4f1c32cfd81f3a924b0315294ae84784724fa"
+        }
+      ]
+    },
+    {
+      "printed": 486,
+      "sourceSha256": "614c9ae0fc7415e93b435a9e3f06a8aa2fc3816ffaff18bef76417f6bf92a5f5",
+      "blocks": [
+        {
+          "id": "p486-b1",
+          "source": "Thus, if $m>M$, then",
+          "sourceSha256": "9c98d8e495c9dd906e37dd63ad5b2e22980cdacda12a9409965f1b895415a33b",
+          "translation": "所以，如果 $m>M$，那么"
+        },
+        {
+          "id": "p486-b2",
+          "source": "$$\\begin{aligned}\n\\left|\\sum_{n=1}^\\infty a_n-t_m\\right|&=\\left|\\sum_{n=1}^\\infty a_n-s_N-(t_m-s_N)\\right|\\\\\n&\\le\\left|\\sum_{n=1}^\\infty a_n-s_N\\right|+|t_m-s_N|\\\\\n&<\\varepsilon+\\varepsilon.\n\\end{aligned}$$",
+          "sourceSha256": "16fd67f8ab61f5738ecdd764909f80d11655f1f808d5c6ef998bf86f9779aad0"
+        },
+        {
+          "id": "p486-b3",
+          "source": "Since this is true for every $\\varepsilon>0$, the series $\\sum\\limits_{n=1}^\\infty b_n$ converges to $\\sum\\limits_{n=1}^\\infty a_n$.",
+          "sourceSha256": "3624db05d85f387e49dc919e44506008761a3223c9c811b7e0985bf579aded66",
+          "translation": "由于这对每个 $\\varepsilon>0$ 都成立，级数 $\\sum\\limits_{n=1}^\\infty b_n$ 收敛于 $\\sum\\limits_{n=1}^\\infty a_n$。"
+        },
+        {
+          "id": "p486-b4",
+          "source": "To show that $\\sum\\limits_{n=1}^\\infty b_n$ converges absolutely, note that $\\{|b_n|\\}$ is a rearrangement of $\\{|a_n|\\}$; since $\\sum\\limits_{n=1}^\\infty|a_n|$ converges absolutely, $\\sum\\limits_{n=1}^\\infty|b_n|$ converges by the first part of the theorem. ■",
+          "sourceSha256": "d27ac74ef8ee56ff1ae93be95dac3616368beeaf35d602ff71d36b5a42f91bc0",
+          "translation": "为了说明 $\\sum\\limits_{n=1}^\\infty b_n$ 绝对收敛，注意 $\\{|b_n|\\}$ 是 $\\{|a_n|\\}$ 的重排；由于 $\\sum\\limits_{n=1}^\\infty|a_n|$ 绝对收敛，根据定理的第一部分，$\\sum\\limits_{n=1}^\\infty|b_n|$ 收敛。■"
+        },
+        {
+          "id": "p486-b5",
+          "source": "Absolute convergence is also important when we want to multiply two infinite series. Unlike the situation for addition, where we have the simple formula",
+          "sourceSha256": "c70b8342b5e83883bb944f6e239a590073e48e5923295e10a058ecacfac2399c",
+          "translation": "当我们想把两个无穷级数相乘时，绝对收敛也很重要。加法有一个简单公式"
+        },
+        {
+          "id": "p486-b6",
+          "source": "$$\\sum_{n=1}^\\infty a_n+\\sum_{n=1}^\\infty b_n=\\sum_{n=1}^\\infty(a_n+b_n),$$",
+          "sourceSha256": "7b5e82fabf7e1b34c0c4327458a2aae8a8cab0337a76c827dea4191afdc0fea7"
+        },
+        {
+          "id": "p486-b7",
+          "source": "there isn’t quite so obvious a candidate for the product",
+          "sourceSha256": "d7d2237b402f9cb26065cd4d3394c163522e366383fdbfd77b93e0f5c7f296ca",
+          "translation": "而对于乘积"
+        },
+        {
+          "id": "p486-b8",
+          "source": "$$\\left(\\sum_{n=1}^\\infty a_n\\right)\\cdot\\left(\\sum_{n=1}^\\infty b_n\\right)=(a_1+a_2+\\cdots)\\cdot(b_1+b_2+\\cdots).$$",
+          "sourceSha256": "5729f6ae3ff3d4d42327a21c43b3a1c73c22e58500a80f724b8e779ec31bcffb"
+        },
+        {
+          "id": "p486-b9",
+          "source": "It would seem that we ought to sum all the products $a_ib_j$. The trouble is that these form a two-dimensional array, rather than a sequence:",
+          "sourceSha256": "6a53fa1548a4828821df4de3e6c06367a277c4607f2dd2b984dd7cc865757896",
+          "translation": "却没有同样显而易见的候选表达式。看起来，我们应当把所有乘积 $a_ib_j$ 加起来。问题在于，这些乘积构成的是一个二维数组，而不是一个数列："
+        },
+        {
+          "id": "p486-b10",
+          "source": "$$\\begin{array}{ccc}\na_1b_1&a_1b_2&a_1b_3\\\\\na_2b_1&a_2b_2&a_2b_3\\\\\na_3b_1&a_3b_2&a_3b_3\\\\\n\\vdots&\\vdots&\\vdots\n\\end{array}$$",
+          "sourceSha256": "dcaa4d24cf84f9598d55753757ea1437f5a5f84901db1b61b7438c0be2a6fe40"
+        },
+        {
+          "id": "p486-b11",
+          "source": "Nevertheless, all the elements of this array can be arranged in a sequence. The picture below shows one way of doing this, and of course, there are (infinitely) many other ways.",
+          "sourceSha256": "34df2e1e2ea9f72e292c916de57d9615f807c5fd1deb8d1122d02a2044fe8031",
+          "translation": "不过，这个数组中的所有元素都可以排成一个数列。下图显示了其中一种排法；当然，还有（无穷）多种其他排法。"
+        },
+        {
+          "id": "p486-b12",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:291px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"714 1297 291 234\" role=\"img\" aria-label=\"Diagonal enumeration of products\"><image href=\"pages/book/0506.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n</figure>",
+          "sourceSha256": "4a312f59221fb35329c434a113b0671d14ae9465e34adfaded125de25274c327"
+        }
+      ]
+    },
+    {
+      "printed": 487,
+      "sourceSha256": "e1e591609fc71fba98952bf9c79a5109bb3ed3bcff9b676b721904241647e0e6",
+      "blocks": [
+        {
+          "id": "p487-b1",
+          "source": "Suppose that $\\{c_n\\}$ is some sequence of this sort, containing each product $a_ib_j$ just once. Then we might naively expect to have",
+          "sourceSha256": "f129b653f1a31dc16241c75f25aede636deb29b8c95fff7cf156536abe15a5e1",
+          "translation": "假设 $\\{c_n\\}$ 是这样的一个数列，每个乘积 $a_ib_j$ 恰好出现一次。那么，我们可能会天真地期待"
+        },
+        {
+          "id": "p487-b2",
+          "source": "$$\\sum_{n=1}^\\infty c_n=\\sum_{n=1}^\\infty a_n\\cdot\\sum_{n=1}^\\infty b_n.$$",
+          "sourceSha256": "0e92d75a5c7fe49140cc92c2cf02d4554c9ba38e8e77641b36a5c07f941c6e02"
+        },
+        {
+          "id": "p487-b3",
+          "source": "But this *isn’t* true (see Problem 10), nor is this really so surprising, since we’ve said nothing about the specific arrangement of the terms. The next theorem shows that the result does hold when the arrangement of terms is irrelevant.",
+          "sourceSha256": "ec4bd8288ef8a48a184db0f21a3f7310ae89d4b49d1422085fa1c2f7fc707f35",
+          "translation": "但这*并不*成立（见习题 10）；其实，这也并不太令人惊讶，因为我们对各项的具体排列方式什么也没有说。下一个定理表明，当各项的排列方式无关紧要时，这个结果确实成立。"
+        },
+        {
+          "id": "p487-b4",
+          "source": "## THEOREM 9",
+          "sourceSha256": "4ae42a180c1c812d718bed441e803e52f042e899b4fbc73e2c6d9410d0e01728",
+          "translation": "## 定理 9"
+        },
+        {
+          "id": "p487-b5",
+          "source": "If $\\sum\\limits_{n=1}^\\infty a_n$ and $\\sum\\limits_{n=1}^\\infty b_n$ converge absolutely, and $\\{c_n\\}$ is any sequence containing the products $a_ib_j$ for each pair $(i,j)$, then",
+          "sourceSha256": "4ad0ab3cf2a3a2725d7b0bf91d090a829ec7adf4ad0ae262a0e71a67538fd802",
+          "translation": "如果 $\\sum\\limits_{n=1}^\\infty a_n$ 和 $\\sum\\limits_{n=1}^\\infty b_n$ 绝对收敛，而 $\\{c_n\\}$ 是任意一个包含每对 $(i,j)$ 所对应的乘积 $a_ib_j$ 的数列，那么"
+        },
+        {
+          "id": "p487-b6",
+          "source": "$$\\sum_{n=1}^\\infty c_n=\\sum_{n=1}^\\infty a_n\\cdot\\sum_{n=1}^\\infty b_n.$$",
+          "sourceSha256": "0e92d75a5c7fe49140cc92c2cf02d4554c9ba38e8e77641b36a5c07f941c6e02"
+        },
+        {
+          "id": "p487-b7",
+          "source": "**PROOF** Notice first that the sequence",
+          "sourceSha256": "bf00c96900e1e18e9ccd014d5b0e053758dc50c6b5ae74b61173f1d10c526cf1",
+          "translation": "**证明** 首先注意到，数列"
+        },
+        {
+          "id": "p487-b8",
+          "source": "$$p_L=\\sum_{i=1}^L|a_i|\\cdot\\sum_{j=1}^L|b_j|$$",
+          "sourceSha256": "f84b3421a8ba7db8eab6e46df127cbeb69e798236fb0b69275c04a78ef3cc974"
+        },
+        {
+          "id": "p487-b9",
+          "source": "converges, since $\\{a_n\\}$ and $\\{b_n\\}$ are absolutely convergent, and since the limit of a product is the product of the limits. So $\\{p_L\\}$ is a Cauchy sequence, which means that for any $\\varepsilon>0$, if $L$ and $L'$ are large enough, then",
+          "sourceSha256": "cc07d4025126a1374b0f73244223899d81cdec48533431cb0c9ac1bb489b15f3",
+          "translation": "收敛，因为 $\\{a_n\\}$ 和 $\\{b_n\\}$ 绝对可求和，而且乘积的极限等于极限的乘积。因此 $\\{p_L\\}$ 是柯西数列，这意味着对于任意 $\\varepsilon>0$，只要 $L$ 和 $L'$ 足够大，就有"
+        },
+        {
+          "id": "p487-b10",
+          "source": "$$\\left|\\sum_{i=1}^{L'}|a_i|\\cdot\\sum_{j=1}^{L'}|b_j|-\\sum_{i=1}^L|a_i|\\cdot\\sum_{j=1}^L|b_j|\\right|<\\frac\\varepsilon2.$$",
+          "sourceSha256": "6d1a6c91106851285e123806b0120ca0afde3415e090bee0b0ea7df9565746de"
+        },
+        {
+          "id": "p487-b11",
+          "source": "It follows that",
+          "sourceSha256": "6204539c6a801ce3ed340a5b52e72f42d1f21000d35fdcc77e1e34c6d2a854ab",
+          "translation": "由此得到"
+        },
+        {
+          "id": "p487-b12",
+          "source": "$$\\sum_{i\\text{ or }j>L}|a_i|\\cdot|b_j|\\le\\frac\\varepsilon2<\\varepsilon.\\tag{1}$$",
+          "sourceSha256": "06ac9d8829348d63ed911e5f2325de4864b05f6d52005cf00e72830d5bf40f04"
+        },
+        {
+          "id": "p487-b13",
+          "source": "Now suppose that $N$ is any number so large that the terms $c_n$ for $n\\le N$ include every term $a_ib_j$ for $i,j\\le L$. Then the difference",
+          "sourceSha256": "024f0412247d4397088d13b91830d62405223572a72181fa70f4b83579b38d97",
+          "translation": "现在，设 $N$ 足够大，使得 $n\\le N$ 的各项 $c_n$ 包含了 $i,j\\le L$ 的每一项 $a_ib_j$。那么差"
+        },
+        {
+          "id": "p487-b14",
+          "source": "$$\\sum_{n=1}^Nc_n-\\sum_{i=1}^La_i\\cdot\\sum_{j=1}^Lb_j$$",
+          "sourceSha256": "68def3aedbd1db877c9c7250cada7bab8b54c0d8805105773f9173a012c651d4"
+        },
+        {
+          "id": "p487-b15",
+          "source": "consists of terms $a_ib_j$ with $i>L$ or $j>L$, so",
+          "sourceSha256": "c87397022b3c0373d488bafa6dd2d8565c5542f73c9fdecfa2eb88e7a9987f10",
+          "translation": "由满足 $i>L$ 或 $j>L$ 的项 $a_ib_j$ 构成，所以"
+        },
+        {
+          "id": "p487-b16",
+          "source": "$$\\begin{aligned}\n\\left|\\sum_{n=1}^Nc_n-\\sum_{i=1}^La_i\\cdot\\sum_{j=1}^Lb_j\\right|&\\le\\sum_{i\\text{ or }j>L}|a_i|\\cdot|b_j|\\\\\n&<\\varepsilon\\quad\\text{by (1).}\n\\end{aligned}\\tag{2}$$",
+          "sourceSha256": "d71bb8ccdaa6d2fa0427c5a9e084ea54bcf0e4c1149ec14ca3321ab01bc83797"
+        },
+        {
+          "id": "p487-b17",
+          "source": "But since the limit of a product is the product of the limits, we also have",
+          "sourceSha256": "7a60b44f0d2116ae3587dbeeeb70eac53fd40eaf90b60722734396f74bf96c94",
+          "translation": "但是，由于乘积的极限等于极限的乘积，我们也有"
+        },
+        {
+          "id": "p487-b18",
+          "source": "$$\\left|\\sum_{i=1}^\\infty a_i\\cdot\\sum_{j=1}^\\infty b_j-\\sum_{i=1}^La_i\\cdot\\sum_{j=1}^Lb_j\\right|<\\varepsilon\\tag{3}$$",
+          "sourceSha256": "38386741f18609a77dafb8dc1244694a1a0df1798a7c41d553200d248a3087cf"
+        }
+      ]
+    },
+    {
+      "printed": 488,
+      "sourceSha256": "a06ce386ab3b9ac2b7b127dc5a6f92226e8aba6d88c99377751379d845684cfa",
+      "blocks": [
+        {
+          "id": "p488-b1",
+          "source": "for large enough $L$. Consequently, if we choose $L$, and then $N$, large enough, we will have",
+          "sourceSha256": "aa9fdf1df944ea8bdad73403057175bc3f95bcb516c39d9e56e1869ae00726bd",
+          "translation": "只要 $L$ 足够大。因此，如果先选取充分大的 $L$，再选取充分大的 $N$，就有"
+        },
+        {
+          "id": "p488-b2",
+          "source": "$$\\begin{aligned}\n\\left|\\sum_{i=1}^\\infty a_i\\cdot\\sum_{j=1}^\\infty b_j-\\sum_{i=1}^Nc_n\\right|&\\le\\left|\\sum_{i=1}^\\infty a_i\\cdot\\sum_{j=1}^\\infty b_j-\\sum_{i=1}^La_i\\cdot\\sum_{j=1}^Lb_j\\right|\\\\\n&\\quad+\\left|\\sum_{i=1}^La_i\\cdot\\sum_{j=1}^Lb_j-\\sum_{n=1}^Nc_n\\right|\\\\\n&<2\\varepsilon\\qquad\\text{by (2) and (3),}\n\\end{aligned}$$",
+          "sourceSha256": "ae142689db7ca8dc04fa4ac2de7211dce853071d38a28f298e111e0a1a31f7e3"
+        },
+        {
+          "id": "p488-b3",
+          "source": "which proves the theorem. ■",
+          "sourceSha256": "8b75a1cdf618b88670bc58acf87972e9dba2b660d528e5d183533eb044268561",
+          "translation": "这就证明了定理。■"
+        },
+        {
+          "id": "p488-b4",
+          "source": "Unlike our previous theorems, which were merely concerned with summability, this result says something about the actual sums. Generally speaking, there is no reason to presume that a given infinite sum can be “evaluated” in any simpler terms. However, many simple expressions can be equated to infinite sums by using Taylor’s Theorem. Chapter 20 provides many examples of functions for which",
+          "sourceSha256": "845d575b454ced116faebf1d39182d0019937a7b0bfbcd1e670c631a5174077b",
+          "translation": "与前面那些仅仅讨论可求和性的定理不同，这个结果给出了关于实际的和的信息。一般来说，没有理由预期一个给定的无穷和能够用更简单的表达式“求出来”。不过，通过使用泰勒定理，许多简单表达式都可以与无穷和相等。第 20 章提供了许多函数的例子，对它们有"
+        },
+        {
+          "id": "p488-b5",
+          "source": "$$f(x)=\\sum_{i=0}^n\\frac{f^{(i)}(a)}{i!}(x-a)^i+R_{n,a}(x),$$",
+          "sourceSha256": "7e8c17e98275b743a7fef3a734666377388130e16f0abdd109167ef62740a031"
+        },
+        {
+          "id": "p488-b6",
+          "source": "where $\\lim\\limits_{n\\to\\infty}R_{n,a}(x)=0$. This is precisely equivalent to",
+          "sourceSha256": "14d157d82ff00dccf828fa1335ff6784ee25194aaee25da1f591145a4a50ef08",
+          "translation": "其中 $\\lim\\limits_{n\\to\\infty}R_{n,a}(x)=0$。这恰好等价于"
+        },
+        {
+          "id": "p488-b7",
+          "source": "$$f(x)=\\lim_{n\\to\\infty}\\sum_{i=0}^n\\frac{f^{(i)}(a)}{i!}(x-a)^i,$$",
+          "sourceSha256": "e9ff79426c238e9f63f96bc9286c5b34684a019911986847d7942f6f7f865c61"
+        },
+        {
+          "id": "p488-b8",
+          "source": "which means, in turn, that",
+          "sourceSha256": "11102bef08ecaae6a8ee097e64c2dbddb498ee5a08dd2199895b0aa036bf66eb",
+          "translation": "而这又意味着"
+        },
+        {
+          "id": "p488-b9",
+          "source": "$$f(x)=\\sum_{i=0}^\\infty\\frac{f^{(i)}(a)}{i!}(x-a)^i.$$",
+          "sourceSha256": "8925d1772d8242e5e9cf79782ec97514cfc77f2bae76d47f4755825eb1ca4bf6"
+        },
+        {
+          "id": "p488-b10",
+          "source": "As particular examples we have",
+          "sourceSha256": "70320ae7707c3dc67cdd9c7b9ccb8681aa0753c2675cd5e445ced49576655f17",
+          "translation": "作为具体例子，我们有"
+        },
+        {
+          "id": "p488-b11",
+          "source": "$$\\begin{aligned}\n\\sin x&=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\frac{x^7}{7!}+\\cdots,\\\\\n\\cos x&=1-\\frac{x^2}{2!}+\\frac{x^4}{4!}-\\frac{x^6}{6!}+\\cdots,\\\\\ne^x&=1+\\frac{x}{1!}+\\frac{x^2}{2!}+\\frac{x^3}{3!}+\\frac{x^4}{4!}+\\cdots,\\\\\n\\arctan x&=x-\\frac{x^3}{3}+\\frac{x^5}{5}-\\frac{x^7}{7}+\\cdots,\\qquad |x|\\le1,\\\\\n\\log(1+x)&=x-\\frac{x^2}{2}+\\frac{x^3}{3}-\\frac{x^4}{4}+\\frac{x^5}{5}-\\cdots,\\quad -1<x\\le1.\n\\end{aligned}$$",
+          "sourceSha256": "f0b335b022a8708604e44467173c6147330725ab742619edc16c48b8616c320d"
+        }
+      ]
+    },
+    {
+      "printed": 489,
+      "sourceSha256": "5c1e9c6de3b33d4da73141ffbf20722538dbe974ecc44b664fa9ec3f7f36e9d3",
+      "blocks": [
+        {
+          "id": "p489-b1",
+          "source": "(Notice that the series for $\\arctan x$ and $\\log(1+x)$ do not even converge for $|x|>1$; in addition, when $x=-1$, the series for $\\log(1+x)$ becomes",
+          "sourceSha256": "2df7557a252283a5776dcc1a4cf585a0cf12bf7b1831b8de4824398ab4c8cc7e",
+          "translation": "（注意，$\\arctan x$ 和 $\\log(1+x)$ 的级数在 $|x|>1$ 时甚至不收敛；此外，当 $x=-1$ 时，$\\log(1+x)$ 的级数变成"
+        },
+        {
+          "id": "p489-b2",
+          "source": "$$-1-\\tfrac12-\\tfrac13-\\tfrac14-\\cdots$$",
+          "sourceSha256": "4da1d08375bff63b9fab9d8406f1c9867967e87df88c02b286e4795ce7423fb6"
+        },
+        {
+          "id": "p489-b3",
+          "source": "which does not converge.)",
+          "sourceSha256": "306fa64cbbf9d654db9d20dad274f0b498bd8d57d0f6f5819efec159c86a53ee",
+          "translation": "它并不收敛。）"
+        },
+        {
+          "id": "p489-b4",
+          "source": "Some pretty impressive results are obtained with particular values of $x$:",
+          "sourceSha256": "48c915b3dfcfc7d09ad26e379893d84661f18582a2b3873d3b2f0aab263dc652",
+          "translation": "选取某些特殊的 $x$ 值，就能得到相当令人印象深刻的结果："
+        },
+        {
+          "id": "p489-b5",
+          "source": "$$\\begin{aligned}\n0&=\\pi-\\frac{\\pi^3}{3!}+\\frac{\\pi^5}{5!}-\\frac{\\pi^7}{7!}+\\cdots,\\\\\ne&=1+\\frac1{1!}+\\frac1{2!}+\\frac1{3!}+\\cdots,\\\\\n\\frac\\pi4&=1-\\frac13+\\frac15-\\frac17+\\cdots,\\\\\n\\log2&=1-\\frac12+\\frac13-\\frac14+\\cdots.\n\\end{aligned}$$",
+          "sourceSha256": "743bbebaef9d614efc8aab1cd19e8e6dfb7bc07f2333cdedbd4c29887a5779cb"
+        },
+        {
+          "id": "p489-b6",
+          "source": "More significant developments may be anticipated if we compare the series for $\\sin x$ and $\\cos x$ a little more carefully. The series for $\\cos x$ is just the one we would have obtained if we had enthusiastically differentiated both sides of the equation",
+          "sourceSha256": "334e0b318730440ae4082a14d2ce488ce759dba96f849f6c9c08f77c702c01cb",
+          "translation": "如果更仔细地比较 $\\sin x$ 和 $\\cos x$ 的级数，还可以预见更有意义的进展。$\\cos x$ 的级数，恰好就是在下面的等式两边兴致勃勃地逐项求导所得到的结果："
+        },
+        {
+          "id": "p489-b7",
+          "source": "$$\\sin x=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\cdots$$",
+          "sourceSha256": "13488c54129ef8da025b0bcb44f713f9256a76432a0415accd38beea5ffaa4be"
+        },
+        {
+          "id": "p489-b8",
+          "source": "term-by-term, ignoring the fact that we have never proved anything about the derivatives of infinite sums. Likewise, if we differentiate both sides of the formula for $\\cos x$ formally (i.e., without justification) we obtain the formula $\\cos'(x)=-\\sin x$, and if we differentiate the formula for $e^x$ we obtain $\\exp'(x)=\\exp(x)$. In the next chapter we shall see that such term-by-term differentiation of infinite sums is indeed valid in certain important cases.",
+          "sourceSha256": "021ba7a8dc375a8a8880c2bfe2c90c026fe6b76771044d5db1c97fdec02091bb",
+          "translation": "这种做法忽略了一个事实：我们从未证明过有关无穷和的导数的任何结论。同样，如果对 $\\cos x$ 的公式两边作形式求导（即没有依据地求导），就得到公式 $\\cos'(x)=-\\sin x$；如果对 $e^x$ 的公式求导，就得到 $\\exp'(x)=\\exp(x)$。下一章将说明，在某些重要情形中，对无穷和逐项求导确实是合法的。"
+        },
+        {
+          "id": "p489-b9",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p489-b10",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p489-b11",
+          "source": "Decide whether each of the following infinite series is convergent or divergent. The tools which you will need are Leibniz’s Theorem and the comparison, ratio, and integral tests. A few examples have been picked with malice aforethought; two series which look quite similar may require different tests (and then again, they may not). The hint below indicates which tests may be used.",
+          "sourceSha256": "32065fc2ce486d1b66a2538bbe08c204cadc9e9e53475e7a7caee2e10842b426",
+          "translation": "判断下列各个无穷级数是收敛还是发散。你将需要的工具是莱布尼茨定理，以及比较、比值和积分判别法。有几个例子是故意刁难你而选的；两个看起来很相似的级数，可能需要不同的判别法（当然，也可能不需要）。下面的提示指出了可以使用哪些判别法。"
+        },
+        {
+          "id": "p489-b12",
+          "source": "(i) $\\displaystyle\\sum_{n=1}^\\infty\\frac{\\sin n\\theta}{n^2}$.",
+          "sourceSha256": "5c49b37dac42fca027869290fbadec846ec314ae13ebe63e9fdb01715f438cc6"
+        },
+        {
+          "id": "p489-b13",
+          "source": "(ii) $1-\\frac13+\\frac15-\\frac17+\\cdots$.",
+          "sourceSha256": "26947d3abe171079a108fe0079382fd5948da2dbb4747de25796dd0f70881409"
+        },
+        {
+          "id": "p489-b14",
+          "source": "(iii) $1-\\frac12+\\frac23-\\frac13+\\frac24-\\frac14+\\frac25-\\frac15+\\cdots$.",
+          "sourceSha256": "b9496b2f933e3f3cd708ba8329ab83bcea54e73a3375ea0d6610cc9e14d141cf"
+        },
+        {
+          "id": "p489-b15",
+          "source": "(iv) $\\displaystyle\\sum_{n=1}^\\infty(-1)^n\\frac{\\log n}n$.",
+          "sourceSha256": "067311182082e7b3e90206fe3cffdfa7a7f7192dbb3574b8ad241eacbf96e4f9"
+        }
+      ]
+    },
+    {
+      "printed": 490,
+      "sourceSha256": "9d2609fa3d2174cfe7ea8722a73002c87274c2578442bb299ead4764c9ba6743",
+      "blocks": [
+        {
+          "id": "p490-b1",
+          "source": "(v) $\\displaystyle\\sum_{n=2}^\\infty\\frac1{\\sqrt[3]{n^2-1}}$. (The summation begins with $n=2$ simply to avoid the meaningless term obtained for $n=1$).",
+          "sourceSha256": "da4aadb1d638c7a26cc248d731e89ee4df561459e8a28f5413b554ed45ada699",
+          "translation": "(v) $\\displaystyle\\sum_{n=2}^\\infty\\frac1{\\sqrt[3]{n^2-1}}$。（求和从 $n=2$ 开始，仅仅是为了避开 $n=1$ 时那个没有意义的项。）"
+        },
+        {
+          "id": "p490-b2",
+          "source": "(vi) $\\displaystyle\\sum_{n=1}^\\infty\\frac1{\\sqrt[3]{n^2+1}}$.",
+          "sourceSha256": "d097224e3b3a50fabf2da9fe15123af3719c4d18bf23f94a2d4ed55c101f5183"
+        },
+        {
+          "id": "p490-b3",
+          "source": "(vii) $\\displaystyle\\sum_{n=1}^\\infty\\frac{n^2}{n!}$.",
+          "sourceSha256": "2dae6e9964cba90067a42e2cd59e3fae4436ff01a98927511ce326d83568f8d7"
+        },
+        {
+          "id": "p490-b4",
+          "source": "(viii) $\\displaystyle\\sum_{n=1}^\\infty\\frac{\\log n}n$.",
+          "sourceSha256": "5a508849a19090bc3fb612b6859b3b9bf9b72adb62ced02c0d33eb03f7ec1ccd"
+        },
+        {
+          "id": "p490-b5",
+          "source": "(ix) $\\displaystyle\\sum_{n=2}^\\infty\\frac1{\\log n}$.",
+          "sourceSha256": "016d6e25aa802119c6eceec39a7c81f64f70063277f2bae4fe762e18dc19f662"
+        },
+        {
+          "id": "p490-b6",
+          "source": "(x) $\\displaystyle\\sum_{n=2}^\\infty\\frac1{(\\log n)^k}$.",
+          "sourceSha256": "989a1683401bf718d4030a5affb15246dc7cababec71a08095ee0c5fb8f89170"
+        },
+        {
+          "id": "p490-b7",
+          "source": "(xi) $\\displaystyle\\sum_{n=2}^\\infty\\frac1{(\\log n)^n}$.",
+          "sourceSha256": "c6a4d649257281a11e70ddaa836a914ec1077459fe1bc29f558b69ff4049ec27"
+        },
+        {
+          "id": "p490-b8",
+          "source": "(xii) $\\displaystyle\\sum_{n=2}^\\infty(-1)^n\\frac1{(\\log n)^n}$.",
+          "sourceSha256": "ebeb052a6696f1471abf2431bc95a84da192a3466dc84cbcb1268afc39cda2d3"
+        },
+        {
+          "id": "p490-b9",
+          "source": "(xiii) $\\displaystyle\\sum_{n=1}^\\infty\\frac{n^2}{n^3+1}$.",
+          "sourceSha256": "9c8bbfa430695b06f219095ba1c91649be3804222e8c4f93c3fcb523a747dc46"
+        },
+        {
+          "id": "p490-b10",
+          "source": "(xiv) $\\displaystyle\\sum_{n=1}^\\infty\\sin\\frac1n$.",
+          "sourceSha256": "f95bf536d7b0a84d407a0946df9d39b724b52f0474702f296b82c4caeb50182c"
+        },
+        {
+          "id": "p490-b11",
+          "source": "(xv) $\\displaystyle\\sum_{n=2}^\\infty\\frac1{n\\log n}$.",
+          "sourceSha256": "792dd934e91b01addec1204667964229f32387b8aa0df2800e36d8d3fed2f505"
+        },
+        {
+          "id": "p490-b12",
+          "source": "(xvi) $\\displaystyle\\sum_{n=2}^\\infty\\frac1{n(\\log n)^2}$.",
+          "sourceSha256": "fdf52e773408995d9e767b81df978ba9c91956fae38d9627f96530a84b8a46b0"
+        },
+        {
+          "id": "p490-b13",
+          "source": "(xvii) $\\displaystyle\\sum_{n=2}^\\infty\\frac1{n^2(\\log n)}$.",
+          "sourceSha256": "8a208b70c086b813449ce7deade6307a1c5f68ff6dab9f4912068e02bcee5bcf"
+        },
+        {
+          "id": "p490-b14",
+          "source": "(xviii) $\\displaystyle\\sum_{n=1}^\\infty\\frac{n!}{n^n}$.",
+          "sourceSha256": "29355630294ac49b9f42a88b885b6642bfa0676480de42119a258a6867522fdf"
+        },
+        {
+          "id": "p490-b15",
+          "source": "(xix) $\\displaystyle\\sum_{n=1}^\\infty\\frac{2^nn!}{n^n}$.",
+          "sourceSha256": "5bedac4ebe86bd9ffada95df97708fa3f201a1a32424d7b0631424caacb30b15"
+        }
+      ]
+    },
+    {
+      "printed": 491,
+      "sourceSha256": "ee75181f51346538de2eeee7f0fd53c4b0a2a1f95f3d0a11d98789627b979259",
+      "blocks": [
+        {
+          "id": "p491-b1",
+          "source": "(xx) $\\displaystyle\\sum_{n=1}^\\infty\\frac{3^nn!}{n^n}$.",
+          "sourceSha256": "35a1ca9ff5e34b239f0aca1d31c27c4a3e7422957970c7e2a1965090672cba11"
+        },
+        {
+          "id": "p491-b2",
+          "source": "Hint: Use the comparison test for (i), (v), (vi), (ix), (x), (xi), (xiii), (xiv), (xvii); the ratio test for (vii), (xviii), (xix), (xx); the integral test for (viii), (xv), (xvi).",
+          "sourceSha256": "bffc6969ebb830108147f4df1bab2aab3c3f5f65734c26831bb1a8cebc97d2f0",
+          "translation": "提示：对 (i)、(v)、(vi)、(ix)、(x)、(xi)、(xiii)、(xiv)、(xvii) 使用比较判别法；对 (vii)、(xviii)、(xix)、(xx) 使用比值判别法；对 (viii)、(xv)、(xvi) 使用积分判别法。"
+        },
+        {
+          "id": "p491-b3",
+          "source": "The next two problems examine, with hints, some infinite series that require more delicate analysis than those in Problem 1.",
+          "sourceSha256": "4e7d9c1be774ea1536594b0989333943274e44a6d2f1ddbff40afc57e222b99c",
+          "translation": "接下来两道题附有提示，将考察一些比习题 1 中的级数需要更细致分析的无穷级数。"
+        },
+        {
+          "id": "p491-b4",
+          "source": "### \\*2.",
+          "sourceSha256": "ef6171fbfed2ec2a781618a79d8d1feba8fb362e8626da0eb9eb226eeb971445"
+        },
+        {
+          "id": "p491-b5",
+          "source": "(a) If you have successfully solved examples (xix) and (xx) from Problem 1, it should be clear that $\\sum\\limits_{n=1}^\\infty a^nn!/n^n$ converges for $a<e$ and diverges for $a>e$. For $a=e$ the ratio test fails; show that $\\sum\\limits_{n=1}^\\infty e^nn!/n^n$ actually diverges, by using Problem 22-13.",
+          "sourceSha256": "40c6078650cd7b0d4a8125b74b77715e6e27ab62d831f0c160edd872691fd32c",
+          "translation": "(a) 如果你成功解决了习题 1 中的 (xix) 和 (xx)，那么应当很清楚：$\\sum\\limits_{n=1}^\\infty a^nn!/n^n$ 在 $a<e$ 时收敛，在 $a>e$ 时发散。对于 $a=e$，比值判别法失效；利用习题 22-13 说明，$\\sum\\limits_{n=1}^\\infty e^nn!/n^n$ 实际上发散。"
+        },
+        {
+          "id": "p491-b6",
+          "source": "(b) Decide when $\\sum\\limits_{n=1}^\\infty n^n/a^nn!$ converges, again resorting to Problem 22-13 when the ratio test fails.",
+          "sourceSha256": "59af8bf9613db1941f92c94bd72524c53bb8cdb060411f5343bbb70e05fe61b2",
+          "translation": "(b) 判断 $\\sum\\limits_{n=1}^\\infty n^n/a^nn!$ 何时收敛；当比值判别法失效时，再次求助于习题 22-13。"
+        },
+        {
+          "id": "p491-b7",
+          "source": "### \\*3.",
+          "sourceSha256": "fd626844e7912de9afe30dfc8a7f361ceaa6cab4555f5e7d3535390c74d22964"
+        },
+        {
+          "id": "p491-b8",
+          "source": "Problem 1 presented the two series $\\sum\\limits_{n=2}^\\infty(\\log n)^{-k}$ and $\\sum\\limits_{n=2}^\\infty(\\log n)^{-n}$, of which the first diverges while the second converges. The series",
+          "sourceSha256": "38fcfca1e9a6ea3deac76dd29b271b4d46d9f7077e9a3d12c5f215b4677942ad",
+          "translation": "习题 1 给出了两个级数 $\\sum\\limits_{n=2}^\\infty(\\log n)^{-k}$ 和 $\\sum\\limits_{n=2}^\\infty(\\log n)^{-n}$，前者发散，后者收敛。级数"
+        },
+        {
+          "id": "p491-b9",
+          "source": "$$\\sum_{n=2}^\\infty\\frac1{(\\log n)^{\\log n}},$$",
+          "sourceSha256": "6ad2dd77d08aa700710b44e0f183e8f62fa898dab1484f7e86adbe174224e6c9"
+        },
+        {
+          "id": "p491-b10",
+          "source": "which lies between these two, is analyzed in parts (a) and (b).",
+          "sourceSha256": "71623fabb167ee7726112a3d40bf100dd4527df841276d1b7c9b8a61c3cde5e3",
+          "translation": "介于两者之间，(a) 和 (b) 将对它进行分析。"
+        },
+        {
+          "id": "p491-b11",
+          "source": "(a) Show that $\\int_1^\\infty e^y/y^y\\,dy$ exists, by considering the series $\\sum\\limits_{n=1}^\\infty(e/n)^n$.",
+          "sourceSha256": "6c9ab284e6202bc76bc2c679532ba347422dffe0b72bc09cca44fe1da0758c43",
+          "translation": "(a) 通过考虑级数 $\\sum\\limits_{n=1}^\\infty(e/n)^n$，证明 $\\int_1^\\infty e^y/y^y\\,dy$ 存在。"
+        },
+        {
+          "id": "p491-b12",
+          "source": "(b) Show that",
+          "sourceSha256": "87fa4c209da94246118a4450a4cef5838b3ce8b8d46033b776afbac9b6f404e0",
+          "translation": "(b) 利用积分判别法，证明"
+        },
+        {
+          "id": "p491-b13",
+          "source": "$$\\sum_{n=2}^\\infty\\frac1{(\\log n)^{\\log n}}$$",
+          "sourceSha256": "558fd03270e6e3a111ad0c9628c773d5a3fd48a2ed1f4cea1229c459978db7a6"
+        },
+        {
+          "id": "p491-b14",
+          "source": "converges, by using the integral test. Hint: Use an appropriate substitution and part (a).",
+          "sourceSha256": "8216682eb4103e0351d8ca0d90f1f2c1edfddebe7c42e7b9cf9571b290cb20c4",
+          "translation": "收敛。提示：使用适当的代换以及 (a) 的结果。"
+        },
+        {
+          "id": "p491-b15",
+          "source": "(c) Show that",
+          "sourceSha256": "eaea71d018bca345d67c822b5a28490616a92dc02594eaeac5bf2003a5309ae8",
+          "translation": "(c) 利用积分判别法，证明"
+        },
+        {
+          "id": "p491-b16",
+          "source": "$$\\sum_{n=2}^\\infty\\frac1{(\\log n)^{\\log(\\log n)}}$$",
+          "sourceSha256": "b491c50f7f5a02569e17ec4bf07dee3fefcfe27bcd63b68e6f422d950fb4c977"
+        },
+        {
+          "id": "p491-b17",
+          "source": "diverges, by using the integral test. Hint: Use the same substitution as in part (b), and show directly that the resulting integral diverges.",
+          "sourceSha256": "461cebde797f00be3e98fa5138093a997884f04ff29ba5c765d21b0e9252db50",
+          "translation": "发散。提示：使用与 (b) 中相同的代换，并直接证明得到的积分发散。"
+        }
+      ]
+    },
+    {
+      "printed": 492,
+      "sourceSha256": "d81e05012d580220c9ea499364449137fb190d13ae72526457e2b67964d4662d",
+      "blocks": [
+        {
+          "id": "p492-b1",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p492-b2",
+          "source": "Decide whether or not $\\sum\\limits_{n=1}^\\infty\\dfrac1{n^{1+1/n}}$ converges.",
+          "sourceSha256": "c66abd6ed41c1046b64beb9e5b2c223159b79b0086af75efd6b3590537417b14",
+          "translation": "判断 $\\sum\\limits_{n=1}^\\infty\\dfrac1{n^{1+1/n}}$ 是否收敛。"
+        },
+        {
+          "id": "p492-b3",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p492-b4",
+          "source": "(a) Prove that if $\\sum\\limits_{n=1}^\\infty a_n$ converges absolutely, then so does $\\sum\\limits_{n=1}^\\infty a_n^3$.",
+          "sourceSha256": "f9d901063e936ba9fb45091326098eafe54f2d71758076568457a8e40aa7b4c6",
+          "translation": "(a) 证明：如果 $\\sum\\limits_{n=1}^\\infty a_n$ 绝对收敛，那么 $\\sum\\limits_{n=1}^\\infty a_n^3$ 也绝对收敛。"
+        },
+        {
+          "id": "p492-b5",
+          "source": "\\*(b) Show that this does not hold for conditional convergence.",
+          "sourceSha256": "174d3a8b0da33de41737e670dd7a3d2c96bbe32d013d0cc3fff4bf7d19bff940",
+          "translation": "\\*(b) 说明对于条件收敛，这个结论不成立。"
+        },
+        {
+          "id": "p492-b6",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p492-b7",
+          "source": "Let $f$ be a continuous function on an interval around 0, and let $a_n=f(1/n)$ (for large enough $n$).",
+          "sourceSha256": "78c3e0fc5acaf37e200c0401c4b022c141daa033628e2c651f94e1e7f98da497",
+          "translation": "设 $f$ 是 0 附近某个区间上的连续函数，并令 $a_n=f(1/n)$（对于充分大的 $n$）。"
+        },
+        {
+          "id": "p492-b8",
+          "source": "(a) Prove that if $\\sum\\limits_{n=1}^\\infty a_n$ converges, then $f(0)=0$.",
+          "sourceSha256": "9336040af63f42edbee4fbf093bcd4501ba088ff0f1de668b27c8b1d5b82efdb",
+          "translation": "(a) 证明：如果 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，那么 $f(0)=0$。"
+        },
+        {
+          "id": "p492-b9",
+          "source": "(b) Prove that if $f'(0)$ exists and $\\sum\\limits_{n=1}^\\infty a_n$ converges, then $f'(0)=0$.",
+          "sourceSha256": "a2b099beee955d2a723a68f4da8e7b49a9178d9808c3e3e7247c9da7aad11f26",
+          "translation": "(b) 证明：如果 $f'(0)$ 存在，而且 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，那么 $f'(0)=0$。"
+        },
+        {
+          "id": "p492-b10",
+          "source": "(c) Prove that if $f''(0)$ exists and $f(0)=f'(0)=0$, then $\\sum\\limits_{n=1}^\\infty a_n$ converges.",
+          "sourceSha256": "2a6cd6640edbfbade2f332406ae6ef8beb220b4c394f77c9f5c17098e800dc2f",
+          "translation": "(c) 证明：如果 $f''(0)$ 存在，而且 $f(0)=f'(0)=0$，那么 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛。"
+        },
+        {
+          "id": "p492-b11",
+          "source": "(d) Suppose $\\sum\\limits_{n=1}^\\infty a_n$ converges. Must $f'(0)$ exist?",
+          "sourceSha256": "92bea3896bf8c2bdcb3fb83b547cd21760a7532760789d7c72b66d301ffdecab",
+          "translation": "(d) 假设 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛。$f'(0)$ 必定存在吗？"
+        },
+        {
+          "id": "p492-b12",
+          "source": "(e) Suppose $f(0)=f'(0)=0$. Must $\\sum\\limits_{n=1}^\\infty a_n$ converge?",
+          "sourceSha256": "dca4bf0445db8ade18f1e9e65044f40005925da636002a24d3b18bf7a1fbd097",
+          "translation": "(e) 假设 $f(0)=f'(0)=0$。$\\sum\\limits_{n=1}^\\infty a_n$ 必定收敛吗？"
+        },
+        {
+          "id": "p492-b13",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p492-b14",
+          "source": "(a) Let $\\{a_n\\}$ be a sequence of integers with $0\\le a_n\\le9$. Prove that $\\sum\\limits_{n=1}^\\infty a_n10^{-n}$ exists (and lies between 0 and 1). (This, of course, is the number which we usually denote by $0.a_1a_2a_3a_4\\ldots$.)",
+          "sourceSha256": "1e2c0681ae2b01c6d1355aa6c16f0e33bfd470f427c5359f2da44acd1bf77f37",
+          "translation": "(a) 设 $\\{a_n\\}$ 是满足 $0\\le a_n\\le9$ 的整数数列。证明 $\\sum\\limits_{n=1}^\\infty a_n10^{-n}$ 存在（而且在 0 与 1 之间）。（当然，这就是我们通常记为 $0.a_1a_2a_3a_4\\ldots$ 的那个数。）"
+        },
+        {
+          "id": "p492-b15",
+          "source": "(b) Suppose that $0\\le x\\le1$. Prove that there is a sequence of integers $\\{a_n\\}$ with $0\\le a_n\\le9$ and $\\sum\\limits_{n=1}^\\infty a_n10^{-n}=x$. Hint: For example, $a_1=[10x]$ (where $[y]$ denotes the greatest integer which is $\\le y$).",
+          "sourceSha256": "ade93ec86ce0800bd7de625072893f094038cec60e30d06594cc2515c39077a2",
+          "translation": "(b) 假设 $0\\le x\\le1$。证明存在一个整数数列 $\\{a_n\\}$，满足 $0\\le a_n\\le9$ 和 $\\sum\\limits_{n=1}^\\infty a_n10^{-n}=x$。提示：例如，$a_1=[10x]$（其中 $[y]$ 表示满足 $\\le y$ 的最大整数）。"
+        },
+        {
+          "id": "p492-b16",
+          "source": "(c) Show that if $\\{a_n\\}$ is repeating, i.e., is of the form $a_1,a_2,\\ldots,a_k,a_1,a_2,\\ldots,a_k,a_1,a_2,\\ldots$, then $\\sum\\limits_{n=1}^\\infty a_n10^{-n}$ is a rational number (and find it). The same result naturally holds if $\\{a_n\\}$ is eventually repeating, i.e., if the sequence $\\{a_{N+k}\\}$ is repeating for some $N$.",
+          "sourceSha256": "be98ed6b7fcf31f2d175fbb4cb53854967d7c7481318ab1a3403597f78690d31",
+          "translation": "(c) 证明：如果 $\\{a_n\\}$ 是循环的，即具有 $a_1,a_2,\\ldots,a_k,a_1,a_2,\\ldots,a_k,a_1,a_2,\\ldots$ 的形式，那么 $\\sum\\limits_{n=1}^\\infty a_n10^{-n}$ 是有理数（并求出它）。如果 $\\{a_n\\}$ 最终循环，即对于某个 $N$，数列 $\\{a_{N+k}\\}$ 循环，同样的结论自然也成立。"
+        },
+        {
+          "id": "p492-b17",
+          "source": "(d) Prove that if $x=\\sum\\limits_{n=1}^\\infty a_n10^{-n}$ is rational, then $\\{a_n\\}$ is eventually repeating. (Just look at the process of finding the decimal expansion of $p/q$—dividing $q$ into $p$ by long division.)",
+          "sourceSha256": "4d7e2c8d759e5c84d516e26c8344b0e5594410a46a023341e9d1e6037ec57c94",
+          "translation": "(d) 证明：如果 $x=\\sum\\limits_{n=1}^\\infty a_n10^{-n}$ 是有理数，那么 $\\{a_n\\}$ 最终循环。（只需考察求 $p/q$ 的十进制展开的过程——用长除法以 $q$ 除 $p$。）"
+        },
+        {
+          "id": "p492-b18",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p492-b19",
+          "source": "Suppose that $\\{a_n\\}$ satisfies the hypothesis of Leibniz’s Theorem. Use the proof of Leibniz’s Theorem to obtain the following estimate:",
+          "sourceSha256": "c6600e52ee922396087f34bc3fccaa4f9d35a3b684ccb70c9b4edbf969de70c0",
+          "translation": "假设 $\\{a_n\\}$ 满足莱布尼茨定理的假设。利用莱布尼茨定理的证明，得到以下估计："
+        },
+        {
+          "id": "p492-b20",
+          "source": "$$\\left|\\sum_{n=1}^\\infty(-1)^{n+1}a_n-[a_1-a_2+\\cdots\\pm a_N]\\right|<a_{N+1}.$$",
+          "sourceSha256": "17bf54fdb16709aab9b5781082da6d94d5d48d3387bbc6aede891e2d5a403b45"
+        }
+      ]
+    },
+    {
+      "printed": 493,
+      "sourceSha256": "63b4a88197019b79e094fedbe4c0c89becef5a677292f0c1ef95034c43f8fc6d",
+      "blocks": [
+        {
+          "id": "p493-b1",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p493-b2",
+          "source": "(a) Prove that if $a_n\\ge0$ and $\\lim\\limits_{n\\to\\infty}\\sqrt[n]{a_n}=r$, then $\\sum\\limits_{n=1}^\\infty a_n$ converges if $r<1$, and diverges if $r>1$. (The proof is very similar to that of the ratio test.) This result is known as the “root test.” More generally, $\\sum\\limits_{n=1}^\\infty a_n$ converges if there is some $s<1$ such that all but finitely many $\\sqrt[n]{a_n}$ are $\\le s$, and $\\sum\\limits_{n=1}^\\infty a_n$ diverges if infinitely many $\\sqrt[n]{a_n}$ are $\\ge1$. This result is known as the “delicate root test” (there is a similar delicate ratio test). It follows, using the notation of Problem 22-27, that $\\sum\\limits_{n=1}^\\infty a_n$ converges if $\\overline{\\lim}\\limits_{n\\to\\infty}\\sqrt[n]{a_n}<1$ and diverges if $\\overline{\\lim}\\limits_{n\\to\\infty}\\sqrt[n]{a_n}>1$; no conclusion is possible if $\\overline{\\lim}\\limits_{n\\to\\infty}\\sqrt[n]{a_n}=1$.",
+          "sourceSha256": "b1079033178f54e8adf43d1b283ab73833eff6883e5b051801bf09c567eddcac",
+          "translation": "(a) 证明：如果 $a_n\\ge0$ 且 $\\lim\\limits_{n\\to\\infty}\\sqrt[n]{a_n}=r$，那么 $\\sum\\limits_{n=1}^\\infty a_n$ 在 $r<1$ 时收敛，在 $r>1$ 时发散。（证明与比值判别法的证明非常相似。）这个结果称为“根值判别法”。更一般地，如果存在某个 $s<1$，使得除了有限项以外，所有 $\\sqrt[n]{a_n}$ 都 $\\le s$，那么 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛；如果有无穷多个 $\\sqrt[n]{a_n}$ 都 $\\ge1$，那么 $\\sum\\limits_{n=1}^\\infty a_n$ 发散。这个结果称为“精细根值判别法”（也有一个类似的精细比值判别法）。使用习题 22-27 的记号，由此可知，$\\sum\\limits_{n=1}^\\infty a_n$ 在 $\\overline{\\lim}\\limits_{n\\to\\infty}\\sqrt[n]{a_n}<1$ 时收敛，在 $\\overline{\\lim}\\limits_{n\\to\\infty}\\sqrt[n]{a_n}>1$ 时发散；如果 $\\overline{\\lim}\\limits_{n\\to\\infty}\\sqrt[n]{a_n}=1$，则无法得出结论。"
+        },
+        {
+          "id": "p493-b3",
+          "source": "(b) Prove that if the ratio test works, the root test will also. Hint: Use a problem from the previous chapter.",
+          "sourceSha256": "4941615b2b34d0786c7f63f0541a8325093a2c4faf2a790d161502dbed8dd7db",
+          "translation": "(b) 证明：如果比值判别法奏效，那么根值判别法也奏效。提示：使用上一章的一道习题。"
+        },
+        {
+          "id": "p493-b4",
+          "source": "It is easy to construct series for which the ratio test fails, while the root test works. For example, the root test shows that the series",
+          "sourceSha256": "839af3f000b5c803372d86b28280ce7657cfd34f3960cd4c946c4ae22a080936",
+          "translation": "很容易构造出一些级数，使比值判别法失效，而根值判别法奏效。例如，根值判别法表明级数"
+        },
+        {
+          "id": "p493-b5",
+          "source": "$$\\tfrac12+\\tfrac13+(\\tfrac12)^2+(\\tfrac13)^2+(\\tfrac12)^3+(\\tfrac13)^3+\\cdots$$",
+          "sourceSha256": "3c9aea9782f1d5b6ca28a9c6cdb0ecf252d9b5a976b595b010a577017047ea27"
+        },
+        {
+          "id": "p493-b6",
+          "source": "converges, even though the ratios of successive terms do not approach a limit. Most examples are of this rather artificial nature, but the root test is nevertheless quite an important theoretical tool.",
+          "sourceSha256": "88ad22023ea3091c41faeb0ee76cf2740a3ed3d2417a450f2de373cf487e23a8",
+          "translation": "收敛，尽管相邻两项的比值并不趋于某个极限。大多数例子都具有这种颇为人为的性质，不过根值判别法仍然是一个相当重要的理论工具。"
+        },
+        {
+          "id": "p493-b7",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p493-b8",
+          "source": "For two sequences $\\{a_n\\}$ and $\\{b_n\\}$, let $c_n=\\sum\\limits_{k=1}^na_kb_{n+1-k}$. (Then $c_n$ is the sum of the terms on the $n$th diagonal in the picture on page 486.) The series $\\sum\\limits_{n=1}^\\infty c_n$ is called the *Cauchy product* of $\\sum\\limits_{n=1}^\\infty a_n$ and $\\sum\\limits_{n=1}^\\infty b_n$. If $a_n=b_n=(-1)^n/\\sqrt n$, show that $|c_n|\\ge1$, so that the Cauchy product does not converge.",
+          "sourceSha256": "3af8d48d4009006777a710245d4473d5122f7922b8ba1cde7ddcd4b91920c4f0",
+          "translation": "对于两个数列 $\\{a_n\\}$ 和 $\\{b_n\\}$，令 $c_n=\\sum\\limits_{k=1}^na_kb_{n+1-k}$。（于是 $c_n$ 是第 486 页图中第 $n$ 条对角线上各项的和。）级数 $\\sum\\limits_{n=1}^\\infty c_n$ 称为 $\\sum\\limits_{n=1}^\\infty a_n$ 和 $\\sum\\limits_{n=1}^\\infty b_n$ 的*柯西乘积*。如果 $a_n=b_n=(-1)^n/\\sqrt n$，证明 $|c_n|\\ge1$，从而柯西乘积不收敛。"
+        },
+        {
+          "id": "p493-b9",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p493-b10",
+          "source": "(a) Consider the collection $A$ of natural numbers that do *not* contain a 9 in their usual (base 10) representation. Show that the sum of the reciprocals of the numbers in $A$ converges. Hint: How many numbers between 1 and 9 are in $A$?; how many between 10 and 99?; etc.",
+          "sourceSha256": "5696aa3cde05a96fdf55753b631f24dffcbd57f21f53b48275274904585a0694",
+          "translation": "(a) 考虑通常的（十进制）表示中*不*含数字 9 的自然数所成的集合 $A$。证明 $A$ 中所有数的倒数之和收敛。提示：从 1 到 9 有多少个数属于 $A$？从 10 到 99 又有多少个？如此等等。"
+        },
+        {
+          "id": "p493-b11",
+          "source": "(b) If $B$ is the collection of natural numbers that do *not have all 10 digits* $0,\\ldots,9$ in their usual representation, then the sum of the reciprocals of the numbers in $B$ converges. (So “most” integers must have all ten digits in their representation.)",
+          "sourceSha256": "e0050ffc48de171120c15e7fd70cfae386ec478673b20ef62e57e87c4e7c9105",
+          "translation": "(b) 如果 $B$ 是通常表示中*没有包含全部 10 个数字* $0,\\ldots,9$ 的自然数所成的集合，那么 $B$ 中所有数的倒数之和收敛。（所以，“大多数”整数的表示中必定包含全部十个数字。）"
+        },
+        {
+          "id": "p493-b12",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p493-b13",
+          "source": "A sequence $\\{a_n\\}$ is called **Cesaro summable**, with Cesaro sum $l$, if",
+          "sourceSha256": "0c204bf4f8c0dde84ff12e347bfe80f13950b57417e74ffae5f9b837e47d9d9a",
+          "translation": "如果满足下式，就称数列 $\\{a_n\\}$ **切萨罗可求和**，并称 $l$ 为其切萨罗和："
+        },
+        {
+          "id": "p493-b14",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{s_1+\\cdots+s_n}n=l$$",
+          "sourceSha256": "cb2eb51f82227e60bb9928ae8d5a0c63a93a2bf64eb63802402ef837a0ba2589"
+        },
+        {
+          "id": "p493-b15",
+          "source": "(where $s_k=a_1+\\cdots+a_k$). Problem 22-16 shows that a summable sequence",
+          "sourceSha256": "b526ccf81c51bb1d49f9719b8e4b5522364503232da7b5bb79ec0a3834d9a9fb",
+          "translation": "（其中 $s_k=a_1+\\cdots+a_k$）。习题 22-16 表明，可求和数列"
+        }
+      ]
+    },
+    {
+      "printed": 494,
+      "sourceSha256": "968baec650c0a2854e434e439a7ff7795217c7d7bb8d5107fd8bdf6e5be14ba0",
+      "blocks": [
+        {
+          "id": "p494-b1",
+          "source": "is automatically Cesaro summable, with sum equal to its Cesaro sum. Find a sequence which is *not* summable, but which *is* Cesaro summable.",
+          "sourceSha256": "ee544a52b791b5ff28f3aac8e7e07362a99fe245aec1a6ea1638026e897fb59b",
+          "translation": "必然切萨罗可求和，而且它的和等于它的切萨罗和。找一个*不可求和*，但*切萨罗可求和*的数列。"
+        },
+        {
+          "id": "p494-b2",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p494-b3",
+          "source": "Suppose that $a_n>0$ and $\\{a_n\\}$ is Cesaro summable. Suppose also that the sequence $\\{na_n\\}$ is bounded. Prove that the series $\\sum\\limits_{n=1}^\\infty a_n$ converges. Hint: If $s_n=\\sum\\limits_{i=1}^na_i$ and $\\sigma_n=\\frac1n\\sum\\limits_{i=1}^ns_i$, prove that $s_n-\\frac n{n+1}\\sigma_n$ is bounded.",
+          "sourceSha256": "f02f1e4d568e3def08f60c15c2e39bdd7c5911eee0070a167ee00a5ed6c59167",
+          "translation": "假设 $a_n>0$，且 $\\{a_n\\}$ 切萨罗可求和。再假设数列 $\\{na_n\\}$ 有界。证明级数 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛。提示：如果 $s_n=\\sum\\limits_{i=1}^na_i$ 且 $\\sigma_n=\\frac1n\\sum\\limits_{i=1}^ns_i$，证明 $s_n-\\frac n{n+1}\\sigma_n$ 有界。"
+        },
+        {
+          "id": "p494-b4",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p494-b5",
+          "source": "This problem outlines an alternative proof of Theorem 8 which does not rely on the Cauchy criterion.",
+          "sourceSha256": "3ecf22bb8718a26228cafcb4f4740b7d4ce71cbb93bae54d9f777422383218d3",
+          "translation": "本题概述定理 8 的另一种证明，它不依赖柯西准则。"
+        },
+        {
+          "id": "p494-b6",
+          "source": "(a) Suppose that $a_n\\ge0$ for each $n$. Let $\\{b_n\\}$ be a rearrangement of $\\{a_n\\}$, and let $s_n=a_1+\\cdots+a_n$ and $t_n=b_1+\\cdots+b_n$. Show that for each $n$ there is some $m$ with $s_n\\le t_m$.",
+          "sourceSha256": "7b37e7b6f783aac59303d714c81b9f0937bfdbfefc07002eea0e2b07ac2278d6",
+          "translation": "(a) 假设对于每个 $n$ 都有 $a_n\\ge0$。设 $\\{b_n\\}$ 是 $\\{a_n\\}$ 的一个重排，并令 $s_n=a_1+\\cdots+a_n$、$t_n=b_1+\\cdots+b_n$。证明：对于每个 $n$，都存在某个 $m$，使得 $s_n\\le t_m$。"
+        },
+        {
+          "id": "p494-b7",
+          "source": "(b) Show that $\\sum\\limits_{n=1}^\\infty a_n\\le\\sum\\limits_{n=1}^\\infty b_n$ if $\\sum\\limits_{n=1}^\\infty b_n$ exists.",
+          "sourceSha256": "f15603f1bae7ac685388866874740845348508c83229f93eaf6cec3e5719b2c5",
+          "translation": "(b) 证明：如果 $\\sum\\limits_{n=1}^\\infty b_n$ 存在，那么 $\\sum\\limits_{n=1}^\\infty a_n\\le\\sum\\limits_{n=1}^\\infty b_n$。"
+        },
+        {
+          "id": "p494-b8",
+          "source": "(c) Show that $\\sum\\limits_{n=1}^\\infty a_n=\\sum\\limits_{n=1}^\\infty b_n$.",
+          "sourceSha256": "3bf8fdeae8095b71196261fd8f87ec30ae831d28989fb729d3162aa6891ecf3d",
+          "translation": "(c) 证明 $\\sum\\limits_{n=1}^\\infty a_n=\\sum\\limits_{n=1}^\\infty b_n$。"
+        },
+        {
+          "id": "p494-b9",
+          "source": "(d) Now replace the condition $a_n\\ge0$ by the hypothesis that $\\sum\\limits_{n=1}^\\infty a_n$ converges absolutely, using the second part of Theorem 5.",
+          "sourceSha256": "a37d3028dd523793bb9e3989b1e24504f37c06653d4d62c27bfa50594cfed677",
+          "translation": "(d) 现在利用定理 5 的第二部分，把条件 $a_n\\ge0$ 替换为假设 $\\sum\\limits_{n=1}^\\infty a_n$ 绝对收敛。"
+        },
+        {
+          "id": "p494-b10",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p494-b11",
+          "source": "(a) Prove that if $\\sum\\limits_{n=1}^\\infty a_n$ converges absolutely, and $\\{b_n\\}$ is any subsequence of $\\{a_n\\}$, then $\\sum\\limits_{n=1}^\\infty b_n$ converges (absolutely).",
+          "sourceSha256": "24f89e7d9500dc5eef21fc146801ae913e94ab8dcfa75aebc9c258217658be0b",
+          "translation": "(a) 证明：如果 $\\sum\\limits_{n=1}^\\infty a_n$ 绝对收敛，而 $\\{b_n\\}$ 是 $\\{a_n\\}$ 的任意子列，那么 $\\sum\\limits_{n=1}^\\infty b_n$（绝对）收敛。"
+        },
+        {
+          "id": "p494-b12",
+          "source": "(b) Show that this is false if $\\sum\\limits_{n=1}^\\infty a_n$ does not converge absolutely.",
+          "sourceSha256": "0b4b0017b619855f13276934ff3394c9a11480e53a9ffa0278c57747b82157c0",
+          "translation": "(b) 说明：如果 $\\sum\\limits_{n=1}^\\infty a_n$ 不绝对收敛，这个结论就不成立。"
+        },
+        {
+          "id": "p494-b13",
+          "source": "\\*(c) Prove that if $\\sum\\limits_{n=1}^\\infty a_n$ converges absolutely, then",
+          "sourceSha256": "ffca769a2f2bf7761d95eb5451ab594e5a824ab37166709a78d9e50beadfd032",
+          "translation": "\\*(c) 证明：如果 $\\sum\\limits_{n=1}^\\infty a_n$ 绝对收敛，那么"
+        },
+        {
+          "id": "p494-b14",
+          "source": "$$\\sum_{n=1}^\\infty a_n=(a_1+a_3+a_5+\\cdots)+(a_2+a_4+a_6+\\cdots).$$",
+          "sourceSha256": "46a543047e5e7391d23d4ccf4ff5649c8285f2db695a4d91e920b1ca40db3515"
+        },
+        {
+          "id": "p494-b15",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p494-b16",
+          "source": "Prove that if $\\sum\\limits_{n=1}^\\infty a_n$ is absolutely convergent, then $\\left|\\sum\\limits_{n=1}^\\infty a_n\\right|\\le\\sum\\limits_{n=1}^\\infty|a_n|$.",
+          "sourceSha256": "1ec6a1c74753aecbd506efd261b5c392809ebf94666efe8845c4eb85a52e4c74",
+          "translation": "证明：如果 $\\sum\\limits_{n=1}^\\infty a_n$ 绝对收敛，那么 $\\left|\\sum\\limits_{n=1}^\\infty a_n\\right|\\le\\sum\\limits_{n=1}^\\infty|a_n|$。"
+        },
+        {
+          "id": "p494-b17",
+          "source": "### \\*17.",
+          "sourceSha256": "73a87ca782297c86bcc31aae8078c33ff3d47b9a248bb5a447ed5cbbf5874320"
+        },
+        {
+          "id": "p494-b18",
+          "source": "Problem 19-43 shows that the improper integral $\\int_0^\\infty(\\sin x)/x\\,dx$ converges. Prove that $\\int_0^\\infty|(\\sin x)/x|\\,dx$ diverges.",
+          "sourceSha256": "3347cf2efad02747d20b7393a845cf8e8abf69b63a81912a79cfab3c00ba147c",
+          "translation": "习题 19-43 说明广义积分 $\\int_0^\\infty(\\sin x)/x\\,dx$ 收敛。证明 $\\int_0^\\infty|(\\sin x)/x|\\,dx$ 发散。"
+        },
+        {
+          "id": "p494-b19",
+          "source": "### \\*18.",
+          "sourceSha256": "dc9f11a962e705d50490c24f8b3e71f51b22675236704438ef4ec0936298a65c"
+        },
+        {
+          "id": "p494-b20",
+          "source": "Find a continuous function $f$ with $f(x)\\ge0$ for all $x$ such that $\\int_0^\\infty f(x)\\,dx$ exists, but $\\lim\\limits_{x\\to\\infty}f(x)$ does not exist.",
+          "sourceSha256": "6f8f336fab9c845a007033cfb5d19ac99b4b7a9f48f3f10ee08d5975daf03104",
+          "translation": "找一个连续函数 $f$，使得对所有 $x$ 都有 $f(x)\\ge0$，且 $\\int_0^\\infty f(x)\\,dx$ 存在，但 $\\lim\\limits_{x\\to\\infty}f(x)$ 不存在。"
+        }
+      ]
+    },
+    {
+      "printed": 495,
+      "sourceSha256": "e1311c9bc7e64d87b0b51605b4d1b5089ca78160c3c85169cbbebaf71c3d738b",
+      "blocks": [
+        {
+          "id": "p495-b1",
+          "source": "### \\*19.",
+          "sourceSha256": "7e4f2b11b162b6abc626b910cd4565b2247b0ee93dbac4aad15418c46a98a3e3"
+        },
+        {
+          "id": "p495-b2",
+          "source": "Let $f(x)=x\\sin1/x$ for $0<x\\le1$, and let $f(0)=0$. Recall the definition of $\\ell(f,P)$ from Problem 13-25. Show that the set of all $\\ell(f,P)$ for $P$ a partition of $[0,1]$ is not bounded (thus $f$ has “infinite length”). Hint: Try partitions of the form",
+          "sourceSha256": "6b003f8e4f6cfbfeeab3eacd58364221828f189df8a28e75a14ca620d0f94e5d",
+          "translation": "当 $0<x\\le1$ 时令 $f(x)=x\\sin1/x$，并令 $f(0)=0$。回忆习题 13-25 中 $\\ell(f,P)$ 的定义。证明：当 $P$ 遍历 $[0,1]$ 的所有分割时，所有 $\\ell(f,P)$ 构成的集合无界（因此 $f$ 具有“无穷长度”）。提示：尝试形如下面的分割："
+        },
+        {
+          "id": "p495-b3",
+          "source": "$$P=\\left\\{0,\\frac2{(2n+1)\\pi},\\ldots,\\frac2{7\\pi},\\frac2{5\\pi},\\frac2{3\\pi},\\frac2\\pi,1\\right\\}.$$",
+          "sourceSha256": "5fd4f1ea1a1d53dc0b3a2c32e405b06236c859ff35a28d5e497d2bd70cfa8161"
+        },
+        {
+          "id": "p495-b4",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p495-b5",
+          "source": "Let $f$ be the function shown in Figure 5. Find $\\int_0^1f$, and also the area of the shaded region in Figure 5.",
+          "sourceSha256": "2597f66defab033f4bc9c993fa240307881c62bc8f70ca46320484a43820b56f",
+          "translation": "设 $f$ 为图 5 中所示的函数。求 $\\int_0^1f$，并求图 5 中阴影部分的面积。"
+        },
+        {
+          "id": "p495-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:412px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 179 412 640\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0514.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "7b31fabf75cde31d1416cbb8b095c25b23c3b865d50efab27eec4c63a2c087c7"
+        },
+        {
+          "id": "p495-b7",
+          "source": "### \\*21.",
+          "sourceSha256": "33b92f9ad51d9ceb97efb59b74bce1f2db2ba7244762802e8119a4e23a206b4c"
+        },
+        {
+          "id": "p495-b8",
+          "source": "In this problem we will establish the “binomial series”",
+          "sourceSha256": "1089648cc2d03eafcd0396a3d1ab50f71735fb67b5cd7be2e296734fabd02e2c",
+          "translation": "本题将建立“二项级数”"
+        },
+        {
+          "id": "p495-b9",
+          "source": "$$ (1+x)^\\alpha=\\sum_{k=0}^\\infty\\binom\\alpha kx^k,\\qquad |x|<1,$$",
+          "sourceSha256": "308a4e5b1d74effb2824749cf13c527cf346a4d6be558d6ee5e4bc6ace41fdd3"
+        },
+        {
+          "id": "p495-b10",
+          "source": "for any $\\alpha$, by showing that $\\lim\\limits_{n\\to\\infty}R_{n,0}(x)=0$. The proof is in several steps, and uses the Cauchy and Lagrange forms as found in Problem 20-21.",
+          "sourceSha256": "b0c9340eb6b56ee03695719b84dc063fad2235067c013174a1374c1c322bda04",
+          "translation": "对任意 $\\alpha$ 成立，方法是证明 $\\lim\\limits_{n\\to\\infty}R_{n,0}(x)=0$。证明分为几步，使用习题 20-21 中得到的余项的柯西形式和拉格朗日形式。"
+        },
+        {
+          "id": "p495-b11",
+          "source": "(a) Use the ratio test to show that the series $\\sum\\limits_{k=0}^\\infty\\binom\\alpha kr^k$ does indeed converge for $|r|<1$ (this is not to say that it necessarily converges to $(1+r)^\\alpha$). It follows in particular that $\\lim\\limits_{n\\to\\infty}\\binom\\alpha nr^n=0$ for $|r|<1$.",
+          "sourceSha256": "e15d19df81056a99186cc7e6fe4947771781ae9493416143141a8a98ae8b3d1f",
+          "translation": "(a) 利用比值判别法说明，级数 $\\sum\\limits_{k=0}^\\infty\\binom\\alpha kr^k$ 在 $|r|<1$ 时确实收敛（这并不是说它必然收敛于 $(1+r)^\\alpha$）。特别地，由此可知，对于 $|r|<1$，有 $\\lim\\limits_{n\\to\\infty}\\binom\\alpha nr^n=0$。"
+        },
+        {
+          "id": "p495-b12",
+          "source": "(b) Suppose first that $0\\le x<1$. Show that $\\lim\\limits_{n\\to\\infty}R_{n,0}(x)=0$, by using Lagrange’s form of the remainder, noticing that $(1+t)^{\\alpha-n-1}\\le1$ for $n+1>\\alpha$.",
+          "sourceSha256": "7ed86f773b71037d109fc3688e6f75faf43987bdbf4fcbde7965ece989c6d3f0",
+          "translation": "(b) 先假设 $0\\le x<1$。使用拉格朗日形式的余项，证明 $\\lim\\limits_{n\\to\\infty}R_{n,0}(x)=0$；注意到，当 $n+1>\\alpha$ 时有 $(1+t)^{\\alpha-n-1}\\le1$。"
+        },
+        {
+          "id": "p495-b13",
+          "source": "(c) Now suppose that $-1<x<0$; the number $t$ in Cauchy’s form of the remainder satisfies $-1<x<t\\le0$. Show that",
+          "sourceSha256": "6049ed31a3cbff65d7d3ac575573d20f1fc32138656bbeec933716c7e4251546",
+          "translation": "(c) 现在假设 $-1<x<0$；柯西形式余项中的数 $t$ 满足 $-1<x<t\\le0$。证明"
+        },
+        {
+          "id": "p495-b14",
+          "source": "$$|x(1+t)^{\\alpha-1}|\\le|x|M,\\qquad\\text{where }M=\\max(1,(1+x)^{\\alpha-1}),$$",
+          "sourceSha256": "bd37b9c25896a4d21487264259b519972cd42e8117c006b122631c4a94a2025d"
+        },
+        {
+          "id": "p495-b15",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "以及"
+        },
+        {
+          "id": "p495-b16",
+          "source": "$$\\left|\\frac{x-t}{1+t}\\right|=|x|\\left(\\frac{1-t/x}{1+t}\\right)\\le|x|.$$",
+          "sourceSha256": "98932348cfe69d7235fcc9826962f800522226a9220c9035eecc4b8b703eb270"
+        },
+        {
+          "id": "p495-b17",
+          "source": "Using Cauchy’s form of the remainder, and the fact that",
+          "sourceSha256": "df016a6ac269791e3c8b3b63c839c5088a83f9fd4de2fe56bbf2bf1dd39c7d5a",
+          "translation": "使用柯西形式的余项，以及下面的事实"
+        },
+        {
+          "id": "p495-b18",
+          "source": "$$ (n+1)\\binom\\alpha{n+1}=\\alpha\\binom{\\alpha-1}n,$$",
+          "sourceSha256": "44a9eef4209fe4d1b3827a23ebc3ccf99b60c37845679740e89245e986943b4c"
+        },
+        {
+          "id": "p495-b19",
+          "source": "show that $\\lim\\limits_{n\\to\\infty}R_{n,0}(x)=0$.",
+          "sourceSha256": "bd6d8752d6d4341ffcf2f2f9b405ea782b34579748681c0c69c9b9ce989ff413",
+          "translation": "证明 $\\lim\\limits_{n\\to\\infty}R_{n,0}(x)=0$。"
+        },
+        {
+          "id": "p495-b20",
+          "source": "### 22.",
+          "sourceSha256": "ce146eae8f2fb4609bfd66abfe5008807912c8203d51e87d6ba4e238e91e9395"
+        },
+        {
+          "id": "p495-b21",
+          "source": "(a) Suppose that the partial sums of the sequence $\\{a_n\\}$ are bounded and that $\\{b_n\\}$ is a sequence with $b_n\\ge b_{n+1}$ and $\\lim\\limits_{n\\to\\infty}b_n=0$. Prove that $\\sum\\limits_{n=1}^\\infty a_nb_n$ converges. This is known as *Dirichlet’s test*. Hint: Use Abel’s Lemma (Problem 19-36) to check the Cauchy criterion.",
+          "sourceSha256": "10b8e6b8ca8d8a5bff64b7ee3829442a684524d38e1ac043e89ea3df41039a53",
+          "translation": "(a) 假设数列 $\\{a_n\\}$ 的部分和有界，而 $\\{b_n\\}$ 是满足 $b_n\\ge b_{n+1}$ 和 $\\lim\\limits_{n\\to\\infty}b_n=0$ 的数列。证明 $\\sum\\limits_{n=1}^\\infty a_nb_n$ 收敛。这称为*狄利克雷判别法*。提示：使用阿贝尔引理（习题 19-36）验证柯西准则。"
+        },
+        {
+          "id": "p495-b22",
+          "source": "(b) Derive Leibniz’s Theorem from this result.",
+          "sourceSha256": "85b725fa7ed23834b5ed41766c7c64efbacec85576fac3d9a0305137a87a9496",
+          "translation": "(b) 从这一结果推导出莱布尼茨定理。"
+        }
+      ]
+    },
+    {
+      "printed": 496,
+      "sourceSha256": "e2348eb6151e80869d0f13b4f133a58abefb30714dd8a09e980d76b5b70dfae9",
+      "blocks": [
+        {
+          "id": "p496-b1",
+          "source": "(c) Prove, using Problem 15-33, that the series $\\sum\\limits_{n=1}^\\infty(\\cos nx)/n$ converges if $x$ is not of the form $2k\\pi$ for any integer $k$ (in which case it clearly diverges).",
+          "sourceSha256": "7d1f539b9b4ebd7c57b835600abc62b94af1f3a4ff3ea55d5baa1e43de2737b2",
+          "translation": "(c) 利用习题 15-33 证明：如果 $x$ 对任何整数 $k$ 都不能写成 $2k\\pi$ 的形式，那么级数 $\\sum\\limits_{n=1}^\\infty(\\cos nx)/n$ 收敛（而如果能够写成这种形式，它显然发散）。"
+        },
+        {
+          "id": "p496-b2",
+          "source": "(d) Prove *Abel’s test*: If $\\sum\\limits_{n=1}^\\infty a_n$ converges and $\\{b_n\\}$ is a sequence which is either nondecreasing or nonincreasing and which is bounded, then $\\sum\\limits_{n=1}^\\infty a_nb_n$ converges. Hint: Consider $b_n-b$, where $b=\\lim\\limits_{n\\to\\infty}b_n$.",
+          "sourceSha256": "310dbdffd01203cce607e0fdf36627b48336c946d9d869891d3b49fd76491ff5",
+          "translation": "(d) 证明*阿贝尔判别法*：如果 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，而 $\\{b_n\\}$ 是一个非减或非增的有界数列，那么 $\\sum\\limits_{n=1}^\\infty a_nb_n$ 收敛。提示：考虑 $b_n-b$，其中 $b=\\lim\\limits_{n\\to\\infty}b_n$。"
+        },
+        {
+          "id": "p496-b3",
+          "source": "### \\*23.",
+          "sourceSha256": "a5c6091323655ca553a8dde45bd564526982494528031cee516a5785f8c48021"
+        },
+        {
+          "id": "p496-b4",
+          "source": "Suppose $\\{a_n\\}$ is decreasing and $\\lim\\limits_{n\\to\\infty}a_n=0$. Prove that if $\\sum\\limits_{n=1}^\\infty a_n$ converges, then $\\sum\\limits_{n=1}^\\infty2^na_{2^n}$ also converges (the “Cauchy Condensation Theorem”). Notice that the divergence of $\\sum\\limits_{n=1}^\\infty1/n$ is a special case, for if $\\sum\\limits_{n=1}^\\infty1/n$ converged, then $\\sum\\limits_{n=1}^\\infty2^n(1/2^n)$ would also converge; this remark may serve as a hint.",
+          "sourceSha256": "73f20645e4897602491b720cdfc7ddec26a99b5e8593106dc84e1d93b6f7addc",
+          "translation": "假设 $\\{a_n\\}$ 递减，且 $\\lim\\limits_{n\\to\\infty}a_n=0$。证明：如果 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，那么 $\\sum\\limits_{n=1}^\\infty2^na_{2^n}$ 也收敛（“柯西凝聚定理”）。注意，$\\sum\\limits_{n=1}^\\infty1/n$ 的发散性是它的一个特殊情形，因为如果 $\\sum\\limits_{n=1}^\\infty1/n$ 收敛，那么 $\\sum\\limits_{n=1}^\\infty2^n(1/2^n)$ 也会收敛；这句话可以作为提示。"
+        },
+        {
+          "id": "p496-b5",
+          "source": "### \\*24.",
+          "sourceSha256": "f798979970ec1033ba5cf3589df2a8d645141a228b89e4b7b95827882426bad3"
+        },
+        {
+          "id": "p496-b6",
+          "source": "(a) Prove that if $\\sum\\limits_{n=1}^\\infty a_n^2$ and $\\sum\\limits_{n=1}^\\infty b_n^2$ converge, then $\\sum\\limits_{n=1}^\\infty a_nb_n$ converges.",
+          "sourceSha256": "de6fbfc803f88263b3b3f7f63d6d964a27bb34217a599be3c1c4fba19cb1d97d",
+          "translation": "(a) 证明：如果 $\\sum\\limits_{n=1}^\\infty a_n^2$ 和 $\\sum\\limits_{n=1}^\\infty b_n^2$ 收敛，那么 $\\sum\\limits_{n=1}^\\infty a_nb_n$ 收敛。"
+        },
+        {
+          "id": "p496-b7",
+          "source": "(b) Prove that if $\\sum\\limits_{n=1}^\\infty a_n^2$ converges, then $\\sum\\limits_{n=1}^\\infty a_n/n^\\alpha$ converges for any $\\alpha>\\frac12$.",
+          "sourceSha256": "8d63709b4f2b42deb29a566561da38eb454ac20d74177fb8a2112daab58ed0dd",
+          "translation": "(b) 证明：如果 $\\sum\\limits_{n=1}^\\infty a_n^2$ 收敛，那么对于任意 $\\alpha>\\frac12$，$\\sum\\limits_{n=1}^\\infty a_n/n^\\alpha$ 都收敛。"
+        },
+        {
+          "id": "p496-b8",
+          "source": "### \\*25.",
+          "sourceSha256": "969c41a169f709c47ceb17d5f16e689e573277d9f86816baa730264f8820a0b5"
+        },
+        {
+          "id": "p496-b9",
+          "source": "Suppose $\\{a_n\\}$ is decreasing and each $a_n>0$. Prove that if $\\sum\\limits_{n=1}^\\infty a_n$ converges, then $\\lim\\limits_{n\\to\\infty}na_n=0$. Hint: Write down the Cauchy criterion and be sure to use the fact that $\\{a_n\\}$ is decreasing.",
+          "sourceSha256": "89321cb791715c23026885177174a0c894d498dd69aaf8b30f717f2688829eb4",
+          "translation": "假设 $\\{a_n\\}$ 递减，而且每个 $a_n>0$。证明：如果 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，那么 $\\lim\\limits_{n\\to\\infty}na_n=0$。提示：写出柯西准则，并且务必使用 $\\{a_n\\}$ 递减这一事实。"
+        },
+        {
+          "id": "p496-b10",
+          "source": "### \\*26.",
+          "sourceSha256": "fa04b9562895195d9e378e798dabcc9ed3bb411bf9015aed98cb0bb6241e3311"
+        },
+        {
+          "id": "p496-b11",
+          "source": "If $\\sum\\limits_{n=1}^\\infty a_n$ converges, then the partial sums $s_n$ are bounded, and $\\lim\\limits_{n\\to\\infty}a_n=0$. It is tempting to conjecture that boundedness of the partial sums, together with the condition $\\lim\\limits_{n\\to\\infty}a_n=0$, implies convergence of the series $\\sum\\limits_{n=1}^\\infty a_n$. Find a counterexample to show that this is *not* true. Hint: Notice that some *subsequence* of the partial sums will have to converge; you must somehow allow this to happen, without letting the sequence of partial sums itself converge.",
+          "sourceSha256": "e18aac939ee21ecb5a9a159b554a0922f801e586286592342fab63ad3e344a52",
+          "translation": "如果 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，那么部分和 $s_n$ 有界，并且 $\\lim\\limits_{n\\to\\infty}a_n=0$。人们很容易猜想，部分和有界，再加上条件 $\\lim\\limits_{n\\to\\infty}a_n=0$，就能推出级数 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛。找一个反例，说明这*不*成立。提示：注意，部分和的某个*子列*必定收敛；你必须设法允许这种情况发生，同时又不让部分和数列本身收敛。"
+        },
+        {
+          "id": "p496-b12",
+          "source": "### 27.",
+          "sourceSha256": "01de3c63fd790d0deac18299d79a16ecfff7727c478f7c8964568f07245d3eec"
+        },
+        {
+          "id": "p496-b13",
+          "source": "Prove that if $a_n\\ge0$ and $\\sum\\limits_{n=1}^\\infty a_n$ diverges, then $\\sum\\limits_{n=1}^\\infty\\dfrac{a_n}{1+a_n}$ also diverges. Hint: Compare the partial sums. Does the converse hold?",
+          "sourceSha256": "f0fd06ff4366f6bb0f867b1fba33f4b865c39d591893b6522bc73c7b2b90c74f",
+          "translation": "证明：如果 $a_n\\ge0$，而且 $\\sum\\limits_{n=1}^\\infty a_n$ 发散，那么 $\\sum\\limits_{n=1}^\\infty\\dfrac{a_n}{1+a_n}$ 也发散。提示：比较部分和。逆命题成立吗？"
+        }
+      ]
+    },
+    {
+      "printed": 497,
+      "sourceSha256": "8f17d300b6eeb1010ed58b0863393082959e1a7be364e5db4575f976246df987",
+      "blocks": [
+        {
+          "id": "p497-b1",
+          "source": "### 28.",
+          "sourceSha256": "99710235075939b06c843e9bd945573c4f9f13f6f1481388af7da8a53884193f"
+        },
+        {
+          "id": "p497-b2",
+          "source": "For $b_n>0$ we say that the infinite product $\\prod\\limits_{n=1}^\\infty b_n$ *converges* if the sequence $p_n=\\prod\\limits_{i=1}^nb_i$ converges, and also $\\lim\\limits_{n\\to\\infty}p_n\\ne0$.",
+          "sourceSha256": "79b3da6cdcc364f7d2cf51db07f7d434da602d5e8773260037862d01b9da9691",
+          "translation": "对于 $b_n>0$，如果数列 $p_n=\\prod\\limits_{i=1}^nb_i$ 收敛，而且 $\\lim\\limits_{n\\to\\infty}p_n\\ne0$，就称无穷乘积 $\\prod\\limits_{n=1}^\\infty b_n$ *收敛*。"
+        },
+        {
+          "id": "p497-b3",
+          "source": "(a) Prove that if $\\prod\\limits_{n=1}^\\infty b_n$ converges, then $b_n$ approaches 1.",
+          "sourceSha256": "a3b0893f0d575c27f6c0eefc0970ef22b1f02bf2df198ba8e569455263a2e98a",
+          "translation": "(a) 证明：如果 $\\prod\\limits_{n=1}^\\infty b_n$ 收敛，那么 $b_n$ 趋于 1。"
+        },
+        {
+          "id": "p497-b4",
+          "source": "(b) Prove that $\\prod\\limits_{n=1}^\\infty b_n$ converges if and only if $\\sum\\limits_{n=1}^\\infty\\log b_n$ converges.",
+          "sourceSha256": "cbb8fe3a9b1be6df1558557e541daa47da09aa7934db49370eab37c4f94bf7b2",
+          "translation": "(b) 证明：$\\prod\\limits_{n=1}^\\infty b_n$ 收敛，当且仅当 $\\sum\\limits_{n=1}^\\infty\\log b_n$ 收敛。"
+        },
+        {
+          "id": "p497-b5",
+          "source": "(c) For $a_n\\ge0$, prove that $\\prod\\limits_{n=1}^\\infty(1+a_n)$ converges if and only if $\\sum\\limits_{n=1}^\\infty a_n$ converges. Hint: Use Problem 27 for one implication, and a simple estimate for $\\log(1+a)$ for the reverse implication.",
+          "sourceSha256": "ca719e56b1257fe4b3dbe406c771783017ef894c12cd828aefa00bc5143fbe9f",
+          "translation": "(c) 对于 $a_n\\ge0$，证明 $\\prod\\limits_{n=1}^\\infty(1+a_n)$ 收敛，当且仅当 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛。提示：一个方向使用习题 27，另一个方向使用对 $\\log(1+a)$ 的简单估计。"
+        },
+        {
+          "id": "p497-b6",
+          "source": "The remaining parts of this Problem show that the hypothesis $a_n\\ge0$ is needed.",
+          "sourceSha256": "e992fc34ca64f9aa062b8270cd38a57d911a51f99c1f4f6a8accba676d455d69",
+          "translation": "本题剩余各问表明，假设 $a_n\\ge0$ 是必要的。"
+        },
+        {
+          "id": "p497-b7",
+          "source": "(d) Use the Taylor series for $\\log(1+x)$ to show that for sufficiently small $x$ we have",
+          "sourceSha256": "093f86e073e9a4652617927141b552439712c957ba691c1465b625fa024efca0",
+          "translation": "(d) 使用 $\\log(1+x)$ 的泰勒级数，证明对于充分小的 $x$，有"
+        },
+        {
+          "id": "p497-b8",
+          "source": "$$\\tfrac14x^2\\le x-\\log(1+x)\\le\\tfrac34x^2.$$",
+          "sourceSha256": "9d1f847b216ebd06fd2c1fd14e7c311fbf7dee947d267d32aa3e61dcb70bf90a"
+        },
+        {
+          "id": "p497-b9",
+          "source": "Conclude that if all $a_n>-1$ and $\\sum\\limits_{n=1}^\\infty a_n$ converges, then the series $\\sum\\limits_{n=1}^\\infty\\log(1+a_n)$ converges if and only if $\\sum\\limits_{n=1}^\\infty a_n^2$ converges. Similarly, if all $a_n>-1$ and $\\sum\\limits_{n=1}^\\infty a_n^2$ converges, then $\\sum\\limits_{n=1}^\\infty\\log(1+a_n)$ converges if and only if $\\sum\\limits_{n=1}^\\infty a_n$ converges. Hint: Use the Cauchy criterion.",
+          "sourceSha256": "a2ac8094ca71886eba7dab4606821f18d1a0ee1fcb9e70700249af04362341b6",
+          "translation": "由此得出：如果所有 $a_n>-1$，且 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛，那么级数 $\\sum\\limits_{n=1}^\\infty\\log(1+a_n)$ 收敛，当且仅当 $\\sum\\limits_{n=1}^\\infty a_n^2$ 收敛。类似地，如果所有 $a_n>-1$，且 $\\sum\\limits_{n=1}^\\infty a_n^2$ 收敛，那么 $\\sum\\limits_{n=1}^\\infty\\log(1+a_n)$ 收敛，当且仅当 $\\sum\\limits_{n=1}^\\infty a_n$ 收敛。提示：使用柯西准则。"
+        },
+        {
+          "id": "p497-b10",
+          "source": "(e) Show that",
+          "sourceSha256": "b5f532a865d6f5a9031c3aec2d3e693290affb366d64d25b4350fb7e00fe94bd",
+          "translation": "(e) 证明"
+        },
+        {
+          "id": "p497-b11",
+          "source": "$$\\sum_{n=2}^\\infty\\frac{(-1)^n}{\\sqrt n}$$",
+          "sourceSha256": "5f543cbe34b29366ce3ffe0deb560ae002b63d6e2c59580371972e7bafc0e845"
+        },
+        {
+          "id": "p497-b12",
+          "source": "converges, but",
+          "sourceSha256": "993bfbe82e8a5bb167c536556a19a87d2e479369c0c1579a809cacebf906f58e",
+          "translation": "收敛，但是"
+        },
+        {
+          "id": "p497-b13",
+          "source": "$$\\prod_{n=2}^\\infty\\left(1+\\frac{(-1)^n}{\\sqrt n}\\right)$$",
+          "sourceSha256": "07dcc3c8c925926f31e828e20a4b8e2ee927d9f7384c98838f7e1cac675b29ca"
+        },
+        {
+          "id": "p497-b14",
+          "source": "diverges.",
+          "sourceSha256": "130613094791543724b3927b264ab6d6d171cbf7510fb1e6a551e33653f48d0a",
+          "translation": "发散。"
+        },
+        {
+          "id": "p497-b15",
+          "source": "(f) Consider the sequence",
+          "sourceSha256": "dcdd068f4c7c34ffe1e54ba6af80c9b79eb3103c0481ed0d4d74cbbb91b58fa9",
+          "translation": "(f) 考虑数列"
+        },
+        {
+          "id": "p497-b16",
+          "source": "$$\\{a_n\\}=\\underbrace{1,-\\tfrac12}_{\\text{1 pair}},\\underbrace{\\tfrac13,-\\tfrac14,\\tfrac13,-\\tfrac14,\\tfrac13,-\\tfrac14}_{\\text{3 pairs}},\\underbrace{\\tfrac15,-\\tfrac16,\\tfrac15,-\\tfrac16,\\tfrac15,-\\tfrac16,\\ldots}_{\\text{5 pairs}}$$",
+          "sourceSha256": "9d11a18374eddba08867ad5b2a46aca2597f80834a016c72853b2d6016610f4e"
+        }
+      ]
+    },
+    {
+      "printed": 498,
+      "sourceSha256": "4ebb0c0def8c9b609953cc06391c926f273a395d1c7054ab2da9f048eb7db5aa",
+      "blocks": [
+        {
+          "id": "p498-b1",
+          "source": "(compare Problem 26). Show that $\\sum\\limits_{n=1}^\\infty a_n$ diverges, but",
+          "sourceSha256": "e72cd9548d9c0fb6ef35f7e90b26db2d27ecfd79e70707bb5e8add00478c4edb",
+          "translation": "（与习题 26 比较）。证明 $\\sum\\limits_{n=1}^\\infty a_n$ 发散，但是"
+        },
+        {
+          "id": "p498-b2",
+          "source": "$$\\prod_{n=1}^\\infty(1+a_n)=1.$$",
+          "sourceSha256": "7bb7af01500439a9fb8c3fb0f2091dc67f8017285b5ce8c8da1a2d6765a2600f"
+        },
+        {
+          "id": "p498-b3",
+          "source": "### 29.",
+          "sourceSha256": "2b03e98fafcd40e8fdba5086d1753ea10425470a6703dc5959a8d997b5c69ba4"
+        },
+        {
+          "id": "p498-b4",
+          "source": "(a) Compute $\\prod\\limits_{n=2}^\\infty\\left(1-\\dfrac1{n^2}\\right)$.",
+          "sourceSha256": "d47c641568f429ab5ce28a6a6c80f9ef67b8d0841cf1049c715cada447bb422e",
+          "translation": "(a) 计算 $\\prod\\limits_{n=2}^\\infty\\left(1-\\dfrac1{n^2}\\right)$。"
+        },
+        {
+          "id": "p498-b5",
+          "source": "(b) Compute $\\prod\\limits_{n=1}^\\infty(1+x^{2^n})$ for $|x|<1$.",
+          "sourceSha256": "155bab600dbd73c1ff92abdbe71c6c480a8d998341130a5fdc2250e9adba4b6f",
+          "translation": "(b) 对于 $|x|<1$，计算 $\\prod\\limits_{n=1}^\\infty(1+x^{2^n})$。"
+        },
+        {
+          "id": "p498-b6",
+          "source": "### 30.",
+          "sourceSha256": "3af8d9cda2244caa10c3e85da41840dc8c8c907907fa1a17e47f6da23b5d7ba1"
+        },
+        {
+          "id": "p498-b7",
+          "source": "The divergence of $\\sum\\limits_{n=1}^\\infty1/n$ is related to the following remarkable fact: Any positive rational number $x$ can be written as a *finite* sum of *distinct* numbers of the form $1/n$. The idea of the proof is shown by the following calculation for $\\frac{27}{31}$: Since",
+          "sourceSha256": "9ec29025a775806ce8db50ac65115a63078f241def45e17442b8793e5102b14e",
+          "translation": "$\\sum\\limits_{n=1}^\\infty1/n$ 的发散性与下面这个非凡的事实有关：任意正有理数 $x$ 都可以写成*有限*个形如 $1/n$ 的*不同*的数之和。下面对 $\\frac{27}{31}$ 的计算展示了证明的思路：由于"
+        },
+        {
+          "id": "p498-b8",
+          "source": "$$\\begin{aligned}\n\\tfrac{27}{31}-\\tfrac12&=\\tfrac{23}{62}\\\\\n\\tfrac{23}{62}-\\tfrac13&=\\tfrac7{186}\\\\\n\\tfrac7{186}&<\\tfrac14,\\ldots,\\tfrac1{26}\\\\\n\\tfrac7{186}-\\tfrac1{27}&=\\tfrac1{1674}\n\\end{aligned}$$",
+          "sourceSha256": "4b2c94d0d8fa49867d2c3bc1d81f849e8f4f4827e157cb504e983127cdfe2f50"
+        },
+        {
+          "id": "p498-b9",
+          "source": "we have",
+          "sourceSha256": "311eecafbfec5e428b3e652becbcd18bf9c9670e490734d5811c85e6a7623ab4",
+          "translation": "我们有"
+        },
+        {
+          "id": "p498-b10",
+          "source": "$$\\tfrac{27}{31}=\\tfrac12+\\tfrac13+\\tfrac1{27}+\\tfrac1{1674}.$$",
+          "sourceSha256": "d45588b866f733c054bb60c1029e228f93e3597f97eacc40c482e21a6cfe48d9"
+        },
+        {
+          "id": "p498-b11",
+          "source": "Notice that the numerators 23, 7, 1 of the differences are decreasing.",
+          "sourceSha256": "48adbab72f470015bd051183dfe409443a996f8a94fec84c7cb99e2d637f6e74",
+          "translation": "注意，各个差的分子 23、7、1 在递减。"
+        },
+        {
+          "id": "p498-b12",
+          "source": "(a) Prove that if $1/(n+1)<x<1/n$ for some $n$, then the numerator in this sort of calculation must always decrease; conclude that $x$ can be written as a finite sum of distinct numbers $1/k$.",
+          "sourceSha256": "eda0352d5c509ac10d04c8505359a4902adb72fa98ed5062a3c1c55d597aa8f4",
+          "translation": "(a) 证明：如果对某个 $n$ 有 $1/(n+1)<x<1/n$，那么在这种计算中，分子一定始终减小；由此得出，$x$ 可以写成有限个不同的数 $1/k$ 之和。"
+        },
+        {
+          "id": "p498-b13",
+          "source": "(b) Now prove the result for all $x$ by using the divergence of $\\sum\\limits_{n=1}^\\infty1/n$.",
+          "sourceSha256": "2257c884a4b619ba0a9e798d6ea9453d7e0b11d1703334fc51783a9c21bd2dc8",
+          "translation": "(b) 现在利用 $\\sum\\limits_{n=1}^\\infty1/n$ 的发散性，对所有 $x$ 证明这个结果。"
+        }
+      ]
+    }
+  ]
+}

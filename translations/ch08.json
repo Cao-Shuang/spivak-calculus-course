@@ -1,0 +1,1510 @@
+{
+  "chapter": 8,
+  "language": "zh-CN",
+  "sourceSha256": "ed689797588ca33367e7dbe9c4a3ab94168f95309f1abc5d211dce0b26bbfe96",
+  "paragraphCount": 173,
+  "pages": [
+    {
+      "printed": 133,
+      "sourceSha256": "b3c43c48c4cabf87bf5cd64e4a8f779cb51c0c8541725a78b569032ed0e0c9c0",
+      "blocks": [
+        {
+          "id": "p133-b1",
+          "source": "# CHAPTER 8  LEAST UPPER BOUNDS",
+          "sourceSha256": "6ff3aafc124e5270f7c4fd98ae96a964523a79eac35121c987d18c3961c73f11",
+          "translation": "# 第 8 章　最小上界"
+        },
+        {
+          "id": "p133-b2",
+          "source": "This chapter reveals the most important property of the real numbers. Nevertheless, it is merely a sequel to Chapter 7; the path which must be followed has already been indicated, and further discussion would be useless delay.",
+          "sourceSha256": "560db1419b0b7659185bca87df927194eaaddabb5c5fe12e9ecc746d6c262371",
+          "translation": "本章揭示实数最重要的性质。不过，它只是第 7 章的续篇：应当沿着什么道路前进，已经指出了，进一步讨论只会徒然拖延。"
+        },
+        {
+          "id": "p133-b3",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p133-b4",
+          "source": "A set $A$ of real numbers is **bounded above** if there is a number $x$ such that",
+          "sourceSha256": "20afbb9a33f2243336ebfc25582c8337078f27a6c5ced0e94fa6e60028d3bd43",
+          "translation": "如果存在一个数 $x$ 使下式成立，就称实数集 $A$ **有上界**："
+        },
+        {
+          "id": "p133-b5",
+          "source": "$$x\\ge a\\quad\\text{for every }a\\text{ in }A.$$",
+          "sourceSha256": "395fe829487720cad467ff37222e4a7ffb6c53ba9bc7f48fdefec95c0d3f75a0"
+        },
+        {
+          "id": "p133-b6",
+          "source": "Such a number $x$ is called an **upper bound** for $A$.",
+          "sourceSha256": "bece2d8e7bb3471deb28e239ef7043a05e57d1cbe2d1514099e65fcc199f57db",
+          "translation": "这样的数 $x$ 称为 $A$ 的一个**上界**。"
+        },
+        {
+          "id": "p133-b7",
+          "source": "Obviously $A$ is bounded above if and only if there is a number $x$ which is an upper bound for $A$ (and in this case there will be lots of upper bounds for $A$); we often say, as a concession to idiomatic English, that “$A$ has an upper bound” when we mean that there is a number which is an upper bound for $A$.",
+          "sourceSha256": "19cd8365629e36cbd594ee59fa333a4a01b09406294173a932dfced38dcb5210",
+          "translation": "显然，$A$ 有上界，当且仅当存在一个数 $x$ 是 $A$ 的上界（此时 $A$ 会有许多个上界）。为顺应日常语言的习惯，我们常说“$A$ 有一个上界”，意思是存在一个数，它是 $A$ 的上界。"
+        },
+        {
+          "id": "p133-b8",
+          "source": "Notice that the term “bounded above” has now been used in two ways—first, in Chapter 7, in reference to functions, and now in reference to sets. This dual usage should cause no confusion, since it will always be clear whether we are talking about a set of numbers or a function. Moreover, the two definitions are closely connected: if $A$ is the set $\\{f(x):a\\le x\\le b\\}$, then the function $f$ is bounded above on $[a,b]$ if and only if the set $A$ is bounded above.",
+          "sourceSha256": "8603a64501a0437135715953df6372b4eb39ef2c632abccde8303015b3f579ea",
+          "translation": "注意，“有上界”这一术语现在有了两种用法：先是在第 7 章中用于函数，现在又用于集合。这种双重用法不应造成混淆，因为我们总能清楚地区分谈的是数集还是函数。而且，这两个定义密切相关：如果 $A$ 是集合 $\\{f(x):a\\le x\\le b\\}$，那么函数 $f$ 在 $[a,b]$ 上有上界，当且仅当集合 $A$ 有上界。"
+        },
+        {
+          "id": "p133-b9",
+          "source": "The entire collection $\\mathbf R$ of real numbers, and the natural numbers $\\mathbf N$, are both examples of sets which are *not* bounded above. An example of a set which *is* bounded above is",
+          "sourceSha256": "2ed5a30c5e4e75f67dfcac79a5025e0544af5a4bc2478df39901b9b04de9a85e",
+          "translation": "全体实数 $\\mathbf R$ 和自然数集 $\\mathbf N$ 都是*没有*上界的集合的例子。一个*有*上界的集合的例子是"
+        },
+        {
+          "id": "p133-b10",
+          "source": "$$A=\\{x:0\\le x<1\\}.$$",
+          "sourceSha256": "bbadff68c329cf920da5c8b835803ea9896e5cfa5f7873d080ee0088bb328768"
+        },
+        {
+          "id": "p133-b11",
+          "source": "To show that $A$ is bounded above we need only name some upper bound for $A$, which is easy enough; for example, $138$ is an upper bound for $A$, and so are $2$, $1\\frac12$, $1\\frac14$, and $1$. Clearly, $1$ is the least upper bound of $A$; although the phrase just introduced is self-explanatory, in order to avoid any possible confusion (in particular, to ensure that we all know what the superlative of “less” means), we define this explicitly.",
+          "sourceSha256": "22d871f5e7fcdf4626ac30e061783a96f87bc2858dc74b6c976eaf5951be0f54",
+          "translation": "要说明 $A$ 有上界，只需指出 $A$ 的某个上界，这很容易；例如，$138$ 是 $A$ 的上界，$2$、$1\\frac12$、$1\\frac14$ 和 $1$ 也都是。显然，$1$ 是 $A$ 的最小上界；虽然刚引入的这个说法不言自明，但为避免任何可能的混淆（特别是确保大家都知道“小”的最高级是什么意思），我们仍明确给出定义。"
+        },
+        {
+          "id": "p133-b12",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p133-b13",
+          "source": "A number $x$ is a **least upper bound** of $A$ if",
+          "sourceSha256": "8cd108687dfb8b7962809cf1b2693e8fc6a8f0c9be6aa5bc5d8619c7931350a2",
+          "translation": "如果满足以下条件，数 $x$ 就称为 $A$ 的一个**最小上界**："
+        },
+        {
+          "id": "p133-b14",
+          "source": "(1) $x$ is an upper bound of $A$,",
+          "sourceSha256": "b7cc6b8f613fb2be3b2c9ebad8ada412901976056b3f602cdac267b7d125760d",
+          "translation": "(1) $x$ 是 $A$ 的上界，"
+        },
+        {
+          "id": "p133-b15",
+          "source": "and (2) if $y$ is an upper bound of $A$, then $x\\le y$.",
+          "sourceSha256": "d906674570b5ac3fa583545d699adaf1519a864ed62e2b3ca4996553396ff102",
+          "translation": "并且 (2) 如果 $y$ 是 $A$ 的上界，那么 $x\\le y$。"
+        }
+      ]
+    },
+    {
+      "printed": 134,
+      "sourceSha256": "485bf8ed897b7c4622e904a4f624e16536b580d1be33b7d2190b79f05b1d3e9e",
+      "blocks": [
+        {
+          "id": "p134-b1",
+          "source": "The use of the indefinite article “a” in this definition was merely a concession to temporary ignorance. Now that we have made a precise definition, it is easily seen that if $x$ and $y$ are both least upper bounds of $A$, then $x=y$. Indeed, in this case",
+          "sourceSha256": "694e7bb4a52e14ba280a9cc67c0ca4121d2e77ce9fabb8177ad51c4e815b17e6",
+          "translation": "定义中使用“一个”这个不定说法，只是对暂时无知的让步。既然已经给出了精确定义，就很容易看出：如果 $x$ 和 $y$ 都是 $A$ 的最小上界，那么 $x=y$。确实，此时"
+        },
+        {
+          "id": "p134-b2",
+          "source": "$$\\begin{aligned}\nx&\\le y,\\quad\\text{since }y\\text{ is an upper bound, and }x\\text{ is a least upper bound,}\\\\\n\\text{and}\\quad y&\\le x,\\quad\\text{since }x\\text{ is an upper bound, and }y\\text{ is a least upper bound;}\n\\end{aligned}$$",
+          "sourceSha256": "9509abec62f03cd1ed9a4904a739976c66ee226ece1e9d12f656a2b81b712010"
+        },
+        {
+          "id": "p134-b3",
+          "source": "it follows that $x=y$. For this reason we speak of *the* least upper bound of $A$. The term **supremum** of $A$ is synonymous and has one advantage. It abbreviates quite nicely to",
+          "sourceSha256": "4d0dcdd7135bb6e1ba7d2bed0b3ac4f757fcd723bed0dbaab245d97c87c3bd45",
+          "translation": "由此得到 $x=y$。因此，我们说 $A$ 的*那个*最小上界。$A$ 的 **supremum（上确界）**与最小上界同义，而且有一个优点：它可以很方便地简写为"
+        },
+        {
+          "id": "p134-b4",
+          "source": "$$\\sup A\\qquad\\text{(pronounced “soup }A\\text{”)}$$",
+          "sourceSha256": "f108e6d387e87de27e578807d874a51c7571a40663ce005d81631f3ba6a7dc06"
+        },
+        {
+          "id": "p134-b5",
+          "source": "and saves us from the abbreviation",
+          "sourceSha256": "cbd6ae4b211b505d692102cb725af87e2cc2ce47062187a24e25b2e3603acbcb",
+          "translation": "从而免去下面这种缩写："
+        },
+        {
+          "id": "p134-b6",
+          "source": "$$\\operatorname{lub} A$$",
+          "sourceSha256": "8beb2f2d8aa182fe41de10f5d9fd4c3c481e727c71bec673fa4303f082ff2741"
+        },
+        {
+          "id": "p134-b7",
+          "source": "(which is nevertheless used by some authors).",
+          "sourceSha256": "dcf8ddad729c366701df999ec302db51ed48e1a92c57156dc281c8fa31fabc73",
+          "translation": "（不过，一些作者仍在使用它）。"
+        },
+        {
+          "id": "p134-b8",
+          "source": "There is a series of important definitions, analogous to those just given, which can now be treated more briefly. A set $A$ of real numbers is **bounded below** if there is a number $x$ such that",
+          "sourceSha256": "747dd58888306fd447275c4618f55e7997bfc6f67d7601a564ebfa2134951f57",
+          "translation": "与刚才的定义类似，还有一系列重要定义，现在可以更简洁地处理。如果存在一个数 $x$ 使下式成立，就称实数集 $A$ **有下界**："
+        },
+        {
+          "id": "p134-b9",
+          "source": "$$x\\le a\\quad\\text{for every }a\\text{ in }A.$$",
+          "sourceSha256": "b559ea6c1c64220ac837f46b72c35252222c97e940fb86ebbd05c19a1f1c41a2"
+        },
+        {
+          "id": "p134-b10",
+          "source": "Such a number $x$ is called a **lower bound** for $A$. A number $x$ is the **greatest lower bound** of $A$ if",
+          "sourceSha256": "1b9707e4a276c02fff854228a62f2063031f5182adf557f26e5172cdb9739de3",
+          "translation": "这样的数 $x$ 称为 $A$ 的一个**下界**。数 $x$ 是 $A$ 的**最大下界**，是指"
+        },
+        {
+          "id": "p134-b11",
+          "source": "(1) $x$ is a lower bound of $A$,",
+          "sourceSha256": "f2e85ee2f383b42bf344d13ac375fbac0125e57a57d75c424bac511717486c38",
+          "translation": "(1) $x$ 是 $A$ 的下界，"
+        },
+        {
+          "id": "p134-b12",
+          "source": "and (2) if $y$ is a lower bound of $A$, then $x\\ge y$.",
+          "sourceSha256": "aff4c1cee8440d6f383061dd26ffbc3d3f68a9d67fe8ab406e27750aef2d2d52",
+          "translation": "并且 (2) 如果 $y$ 是 $A$ 的下界，那么 $x\\ge y$。"
+        },
+        {
+          "id": "p134-b13",
+          "source": "The greatest lower bound of $A$ is also called the **infimum** of $A$, abbreviated",
+          "sourceSha256": "0c160a55fefb11ba5f03d47dde8317614ee27c4f2c7971d24c0475680917437c",
+          "translation": "$A$ 的最大下界也称为 $A$ 的 **infimum（下确界）**，缩写为"
+        },
+        {
+          "id": "p134-b14",
+          "source": "$$\\inf A;$$",
+          "sourceSha256": "8bab9c2a36bfbb35ee4b083de7051ba0b2936485f60c9345209c5a77232b8477"
+        },
+        {
+          "id": "p134-b15",
+          "source": "some authors use the abbreviation",
+          "sourceSha256": "b15aff06723d739a79630555e428e2945176b81dcf1c645abd1fa4151ffba297",
+          "translation": "一些作者使用缩写"
+        },
+        {
+          "id": "p134-b16",
+          "source": "$$\\operatorname{glb} A.$$",
+          "sourceSha256": "2d6d4989083ddd8376ca07595b56fee8ef84021f13f4457bd5d3708955b2c22a"
+        },
+        {
+          "id": "p134-b17",
+          "source": "One detail has been omitted from our discussion so far—the question of which sets have at least one, and hence exactly one, least upper bound or greatest lower bound. We will consider only least upper bounds, since the question for greatest lower bounds can then be answered easily (Problem 2).",
+          "sourceSha256": "2903e763de447a6a3d79968caefecd264ff00d9bdaf7ad037319d0412e68bbe4",
+          "translation": "到目前为止，讨论中还遗漏了一个细节：哪些集合至少存在一个——从而恰好存在一个——最小上界或最大下界？我们只考虑最小上界，因为之后很容易回答关于最大下界的问题（习题 2）。"
+        },
+        {
+          "id": "p134-b18",
+          "source": "If $A$ is not bounded above, then $A$ has no upper bound at all, so $A$ certainly cannot be expected to have a least upper bound. It is tempting to say that $A$ does have a least upper bound if it has *some* upper bound, but, like the principle of mathematical induction, this assertion can fail to be true in a rather special way. If $A=\\varnothing$, then $A$ is bounded above. Indeed, any number $x$ is an upper bound for $\\varnothing$:",
+          "sourceSha256": "1a77cf46a7a1cda2c3d6df76f9f74d34f20d73c6b5d2be7ec190fa8c710a3adb",
+          "translation": "如果 $A$ 没有上界，那么 $A$ 根本不存在任何上界，自然不能指望 $A$ 有最小上界。我们很想说：只要 $A$ 有*某个*上界，就有最小上界；但和数学归纳法原理一样，这一断言可能在一个相当特殊的情形中失效。如果 $A=\\varnothing$，那么 $A$ 有上界。确实，任意数 $x$ 都是 $\\varnothing$ 的上界："
+        },
+        {
+          "id": "p134-b19",
+          "source": "$$x\\ge y\\quad\\text{for every }y\\text{ in }\\varnothing$$",
+          "sourceSha256": "8f9bed4ed89c40c6e330e053f8e86a0e08687cbcfb6230015d1661fb1432ebf7"
+        },
+        {
+          "id": "p134-b20",
+          "source": "simply because there is no $y$ in $\\varnothing$. Since *every* number is an upper bound for $\\varnothing$, there is surely no least upper bound for $\\varnothing$. With this trivial exception however,",
+          "sourceSha256": "e5dedad8b24f6e5a44fa34cca8c2fd814b65e97e37213e1032c2938ea39d550d",
+          "translation": "这仅仅是因为 $\\varnothing$ 中没有任何 $y$。由于*每个*数都是 $\\varnothing$ 的上界，$\\varnothing$ 当然没有最小上界。不过，除去这个微不足道的例外，"
+        }
+      ]
+    },
+    {
+      "printed": 135,
+      "sourceSha256": "60cf886966d55c89d88d68d09b4a70673dee3ac43abf301a8998be0c78065ced",
+      "blocks": [
+        {
+          "id": "p135-b1",
+          "source": "our assertion is true—and very important, definitely important enough to warrant consideration of details. We are finally ready to state the last property of the real numbers which we need.",
+          "sourceSha256": "8ecb2fa7481b8eca2b45c854388db9771920472f90b4749a165faee399f28fff",
+          "translation": "我们的断言成立，而且非常重要，重要到足以值得如此仔细地考察细节。终于，我们可以陈述所需要的实数的最后一条性质了。"
+        },
+        {
+          "id": "p135-b2",
+          "source": "(P13) (The least upper bound property) If $A$ is a set of real numbers, $A\\ne\\varnothing$, and $A$ is bounded above, then $A$ has a least upper bound.",
+          "sourceSha256": "d68a9dfcaa55c3e0204d768922ecabb93a1fdc050ed3f3f22d3f2a96cdd05ea7",
+          "translation": "(P13)（最小上界性质）如果 $A$ 是实数集，$A\\ne\\varnothing$，并且 $A$ 有上界，那么 $A$ 有最小上界。"
+        },
+        {
+          "id": "p135-b3",
+          "source": "Property P13 may strike you as anticlimactic, but that is actually one of its virtues. To complete our list of basic properties for the real numbers we require no particularly abstruse proposition, but only a property so simple that we might feel foolish for having overlooked it. Of course, the least upper bound property is not really so innocent as all that; after all, it does *not* hold for the rational numbers $\\mathbf Q$. For example, if $A$ is the set of all rational numbers $x$ satisfying $x^2<2$, then there is no *rational* number $y$ which is an upper bound for $A$ and which is less than or equal to every other rational number which is an upper bound for $A$. It will become clear only gradually how significant P13 is, but we are already in a position to demonstrate its power, by supplying the proofs which were omitted in Chapter 7.",
+          "sourceSha256": "b46c21654862ea78c1d2888964af129d6fb66388623ff3a716172983a0b0f285",
+          "translation": "性质 P13 也许让你觉得有些虎头蛇尾，但这实际上正是它的一个优点。为了补全实数的基本性质清单，我们不需要任何特别深奥的命题，只需要一个简单到可能让人因先前忽略它而感到惭愧的性质。当然，最小上界性质其实没有那么天真无邪：毕竟，它对于有理数集 $\\mathbf Q$ *并不*成立。例如，若 $A$ 是所有满足 $x^2<2$ 的有理数 $x$ 的集合，就不存在一个*有理数* $y$，既是 $A$ 的上界，又小于或等于其他每一个作为 $A$ 上界的有理数。P13 的意义将逐渐显现，不过，现在我们已经可以通过补全第 7 章省略的证明，展示它的力量。"
+        },
+        {
+          "id": "p135-b4",
+          "source": "**THEOREM 7-1**",
+          "sourceSha256": "be2c94cc7e13fc4ca22ebf98592b565fd34b0ce665ffea67f9b4ab5c4f8dc798",
+          "translation": "**定理 7-1**"
+        },
+        {
+          "id": "p135-b5",
+          "source": "If $f$ is continuous on $[a,b]$ and $f(a)<0<f(b)$, then there is some number $x$ in $[a,b]$ such that $f(x)=0$.",
+          "sourceSha256": "52c32629dd3db096e036f5eba14e264591c3f570bb49fcaa8fb9618e2ae3cb55",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，且 $f(a)<0<f(b)$，那么存在 $[a,b]$ 中的某个数 $x$，使 $f(x)=0$。"
+        },
+        {
+          "id": "p135-b6",
+          "source": "**PROOF** Our proof is merely a rigorous version of the outline developed at the end of Chapter 7—we will locate the smallest number $x$ in $[a,b]$ with $f(x)=0$.",
+          "sourceSha256": "a7e1d042dc57725c6cb52fa7d5b7bb667b48aeb1b1ab7635fb38b665a2107dee",
+          "translation": "**证明** 这个证明只是把第 7 章末尾形成的思路严格化：我们将找到 $[a,b]$ 中满足 $f(x)=0$ 的最小数 $x$。"
+        },
+        {
+          "id": "p135-b7",
+          "source": "Define the set $A$, shown in Figure 1, as follows:",
+          "sourceSha256": "a97b695c1f5568a03dac410fbf652f990431ad495058ea28e2a8697a52d6f7d5",
+          "translation": "如下定义图 1 所示的集合 $A$："
+        },
+        {
+          "id": "p135-b8",
+          "source": "$$A=\\{x:a\\le x\\le b,\\text{ and }f\\text{ is negative on the interval }[a,x]\\}.$$",
+          "sourceSha256": "cc0a60dd6df4259319876bccaa2b031db87f2ba6c87a3506e2529d46fa37f0c2"
+        },
+        {
+          "id": "p135-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:348px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"45 256 348 278\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0153.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "12727271c97e82b5a8ca14c8b4d2f909011a9e1f513339b3a4da2a593948334c"
+        },
+        {
+          "id": "p135-b10",
+          "source": "Clearly $A\\ne\\varnothing$, since $a$ is in $A$; in fact, there is some $\\delta>0$ such that $A$ contains all points $x$ satisfying $a\\le x<a+\\delta$; this follows from Problem 6-16, since $f$ is continuous on $[a,b]$ and $f(a)<0$. Similarly, $b$ is an upper bound for $A$ and, in fact, there is a $\\delta>0$ such that all points $x$ satisfying $b-\\delta<x\\le b$ are upper bounds for $A$; this also follows from Problem 6-16, since $f(b)>0$.",
+          "sourceSha256": "d7bdb5cc906427730ad0edc5651adc71a388990c75cda5aae51365b47c8b6470",
+          "translation": "显然 $A\\ne\\varnothing$，因为 $a$ 属于 $A$；事实上，存在某个 $\\delta>0$，使 $A$ 包含满足 $a\\le x<a+\\delta$ 的所有点 $x$。这是习题 6-16 的推论，因为 $f$ 在 $[a,b]$ 上连续，且 $f(a)<0$。类似地，$b$ 是 $A$ 的上界；事实上，存在 $\\delta>0$，使所有满足 $b-\\delta<x\\le b$ 的点 $x$ 都是 $A$ 的上界。这也由习题 6-16 得到，因为 $f(b)>0$。"
+        },
+        {
+          "id": "p135-b11",
+          "source": "From these remarks it follows that $A$ has a least upper bound $\\alpha$ and that $a<\\alpha<b$. We now wish to show that $f(\\alpha)=0$, by eliminating the possibilities $f(\\alpha)<0$ and $f(\\alpha)>0$.",
+          "sourceSha256": "c7c328274968b708a608734b3bcf2ce42089983888a4cb336c280da4cd4c0bfa",
+          "translation": "由此可知，$A$ 有最小上界 $\\alpha$，并且 $a<\\alpha<b$。现在要通过排除 $f(\\alpha)<0$ 和 $f(\\alpha)>0$ 两种可能，证明 $f(\\alpha)=0$。"
+        },
+        {
+          "id": "p135-b12",
+          "source": "Suppose first that $f(\\alpha)<0$. By Theorem 6-3, there is a $\\delta>0$ such that $f(x)<0$ for $\\alpha-\\delta<x<\\alpha+\\delta$ (Figure 2). Now there is some number $x_0$ in $A$ which satisfies $\\alpha-\\delta<x_0<\\alpha$ (because otherwise $\\alpha$ would not be the least upper bound of $A$). This means that $f$ is negative on the whole interval $[a,x_0]$. But if $x_1$ is a number between $\\alpha$ and $\\alpha+\\delta$, then $f$ is also negative on the whole interval $[x_0,x_1]$. Therefore $f$ is negative on the interval $[a,x_1]$, so $x_1$ is in $A$. But this contradicts the fact that $\\alpha$ is an upper bound for $A$; our original assumption that $f(\\alpha)<0$ must be false.",
+          "sourceSha256": "6e51d782a605bd43244a00e8abf523981bd19d427a604e41d8a808b39e5527f3",
+          "translation": "先假设 $f(\\alpha)<0$。由定理 6-3，存在 $\\delta>0$，使得当 $\\alpha-\\delta<x<\\alpha+\\delta$ 时有 $f(x)<0$（图 2）。现在，$A$ 中存在某个数 $x_0$ 满足 $\\alpha-\\delta<x_0<\\alpha$（否则 $\\alpha$ 就不是 $A$ 的最小上界）。这意味着 $f$ 在整个区间 $[a,x_0]$ 上为负。不过，如果 $x_1$ 是 $\\alpha$ 与 $\\alpha+\\delta$ 之间的一个数，那么 $f$ 在整个区间 $[x_0,x_1]$ 上也为负。因此 $f$ 在区间 $[a,x_1]$ 上为负，所以 $x_1$ 属于 $A$。但这与 $\\alpha$ 是 $A$ 的上界矛盾；原先的假设 $f(\\alpha)<0$ 必定不成立。"
+        },
+        {
+          "id": "p135-b13",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:393px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"47 857 393 278\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0153.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "23425a45f6620a95ece2e3cf5b5919c66d434f2235c351876a9b57c884327045"
+        },
+        {
+          "id": "p135-b14",
+          "source": "Suppose, on the other hand, that $f(\\alpha)>0$. Then there is a number $\\delta>0$ such that $f(x)>0$ for $\\alpha-\\delta<x<\\alpha+\\delta$ (Figure 3). Once again we know that there is an $x_0$ in $A$ satisfying $\\alpha-\\delta<x_0<\\alpha$; but this means that $f$ is negative on $[a,x_0]$,",
+          "sourceSha256": "1d2faa5d44848dba6772f101dc58c4086b4e2dd11368282fec950a475249bb67",
+          "translation": "另一方面，假设 $f(\\alpha)>0$。那么存在数 $\\delta>0$，使得当 $\\alpha-\\delta<x<\\alpha+\\delta$ 时有 $f(x)>0$（图 3）。我们仍知道，$A$ 中存在 $x_0$ 满足 $\\alpha-\\delta<x_0<\\alpha$；但这意味着 $f$ 在 $[a,x_0]$ 上为负，"
+        },
+        {
+          "id": "p135-b15",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:398px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"47 1225 398 268\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0153.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "a2ab1cc64f3435a3712f110530a34f3fe6a1a03d519d9fd1b368e58559e8d516"
+        }
+      ]
+    },
+    {
+      "printed": 136,
+      "sourceSha256": "d4b792fcee5701763968dffa1169d9cbea34f2c3f71207035d426c18225098fb",
+      "blocks": [
+        {
+          "id": "p136-b1",
+          "source": "which is impossible, since $f(x_0)>0$. Thus the assumption $f(\\alpha)>0$ also leads to a contradiction, leaving $f(\\alpha)=0$ as the only possible alternative. $\\blacksquare$",
+          "sourceSha256": "bdcd2cb18c8fae17e213386303e59ad5cb6e278f695cf89808c3dfb22635fda4",
+          "translation": "这是不可能的，因为 $f(x_0)>0$。因此，假设 $f(\\alpha)>0$ 也导致矛盾，唯一剩下的可能便是 $f(\\alpha)=0$。$\\blacksquare$"
+        },
+        {
+          "id": "p136-b2",
+          "source": "The proofs of Theorems 2 and 3 of Chapter 7 require a simple preliminary result, which will play much the same role as Theorem 6-3 played in the previous proof.",
+          "sourceSha256": "03308ade373f1142f0840b23ef325af52d67db67a65219f32af05c8b73912c90",
+          "translation": "第 7 章定理 2 和 3 的证明，需要一个简单的预备结果；它所起的作用，与定理 6-3 在刚才的证明中的作用大致相同。"
+        },
+        {
+          "id": "p136-b3",
+          "source": "**THEOREM 1**",
+          "sourceSha256": "2b6c6f1cd8500f04785734eb53e38fae29cf7651dd2ba301e21cef75e224df22",
+          "translation": "**定理 1**"
+        },
+        {
+          "id": "p136-b4",
+          "source": "If $f$ is continuous at $a$, then there is a number $\\delta>0$ such that $f$ is bounded above on the interval $(a-\\delta,a+\\delta)$ (see Figure 4).",
+          "sourceSha256": "5e8122104c32bec3fbc89fe3d2d250efc048d03e6dd948c90c503eb987e2e80d",
+          "translation": "如果 $f$ 在 $a$ 处连续，那么存在数 $\\delta>0$，使 $f$ 在区间 $(a-\\delta,a+\\delta)$ 上有上界（见图 4）。"
+        },
+        {
+          "id": "p136-b5",
+          "source": "**PROOF** Since $\\lim_{x\\to a}f(x)=f(a)$, there is, for every $\\varepsilon>0$, a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "3c4de316359cdb9706352eccc5c6c52f795f623323645e378a5f1765aba09094",
+          "translation": "**证明** 由于 $\\lim_{x\\to a}f(x)=f(a)$，对于每个 $\\varepsilon>0$，存在 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p136-b6",
+          "source": "$$\\text{if }|x-a|<\\delta,\\text{ then }|f(x)-f(a)|<\\varepsilon.$$",
+          "sourceSha256": "b055ed3d27ede0417a75a39cea19e98cb02c149796b838c8c4e1bd959d0db6ff"
+        },
+        {
+          "id": "p136-b7",
+          "source": "It is only necessary to apply this statement to some particular $\\varepsilon$ (any one will do), for example, $\\varepsilon=1$. We conclude that there is a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "2886a5c64a830bf7e632f0190ccab2ff62d555d2d5a41c3fc29a072f9511f4a2",
+          "translation": "只需把这一陈述应用于某个特定的 $\\varepsilon$（任何一个都可以），例如 $\\varepsilon=1$。于是可知存在 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p136-b8",
+          "source": "$$\\text{if }|x-a|<\\delta,\\text{ then }|f(x)-f(a)|<1.$$",
+          "sourceSha256": "1ae6e389e313827f6b48d1f836a1712be0cb7f4d6113d86090e119ee3d85251b"
+        },
+        {
+          "id": "p136-b9",
+          "source": "It follows, in particular, that if $|x-a|<\\delta$, then $f(x)-f(a)<1$. This completes the proof: on the interval $(a-\\delta,a+\\delta)$ the function $f$ is bounded above by $f(a)+1$. $\\blacksquare$",
+          "sourceSha256": "861c5e5d80547359d66f737a21aa0952f891d931d01a11c077c105e9dd8cfbf2",
+          "translation": "特别地，如果 $|x-a|<\\delta$，就有 $f(x)-f(a)<1$。证明完毕：在区间 $(a-\\delta,a+\\delta)$ 上，函数 $f$ 以 $f(a)+1$ 为上界。$\\blacksquare$"
+        },
+        {
+          "id": "p136-b10",
+          "source": "It should hardly be necessary to add that we can now also prove that $f$ is bounded below on some interval $(a-\\delta,a+\\delta)$, and, finally, that $f$ is bounded on some open interval containing $a$.",
+          "sourceSha256": "f89286b461749107effd6c2d538672e0f175f4d26157ffcfaa4faebb84d68dca",
+          "translation": "几乎无须补充：现在也能证明 $f$ 在某个区间 $(a-\\delta,a+\\delta)$ 上有下界，并最终证明 $f$ 在包含 $a$ 的某个开区间上有界。"
+        },
+        {
+          "id": "p136-b11",
+          "source": "A more significant point is the observation that if $\\lim_{x\\to a^+}f(x)=f(a)$, then there",
+          "sourceSha256": "5cdebd60e232b196fc469cc0281b77bc70beba036d8ca2ca86e0ca72cbfbb5ad",
+          "translation": "更值得注意的是：如果 $\\lim_{x\\to a^+}f(x)=f(a)$，那么存在"
+        },
+        {
+          "id": "p136-b12",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:470px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"481 958 470 548\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0154.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "615b0adb09fe6d005b31174dcbd71701f3dcaacfdef0a56b9d13e6033cd20b7a"
+        }
+      ]
+    },
+    {
+      "printed": 137,
+      "sourceSha256": "b746d1e364f500789130fc3a0bb04f2181cdbad746ad47565ede7c94b92f1bb0",
+      "blocks": [
+        {
+          "id": "p137-b1",
+          "source": "is a $\\delta>0$ such that $f$ is bounded on the set $\\{x:a\\le x<a+\\delta\\}$, and a similar observation holds if $\\lim_{x\\to b^-}f(x)=f(b)$. Having made these observations (and assuming that you will supply the proofs), we tackle our second major theorem.",
+          "sourceSha256": "5458ec9d619cece88bf9d5bf273a64a253228726d9de88383149fd701ca4d4b2",
+          "translation": "一个 $\\delta>0$，使得 $f$ 在集合 $\\{x:a\\le x<a+\\delta\\}$ 上有界；如果 $\\lim_{x\\to b^-}f(x)=f(b)$，也有类似结论。作出这些观察后（假定你会补出证明），我们开始处理第二个主要定理。"
+        },
+        {
+          "id": "p137-b2",
+          "source": "**THEOREM 7-2**",
+          "sourceSha256": "1333c6706242b34deae630bf22453b70558f8145e09160d5621bbae02d0784dd",
+          "translation": "**定理 7-2**"
+        },
+        {
+          "id": "p137-b3",
+          "source": "If $f$ is continuous on $[a,b]$, then $f$ is bounded above on $[a,b]$.",
+          "sourceSha256": "01c11d4805caab06f96e4d8322f3bb8bdc6f19f0d81769c8934584889429dc1d",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，那么 $f$ 在 $[a,b]$ 上有上界。"
+        },
+        {
+          "id": "p137-b4",
+          "source": "**PROOF** Let",
+          "sourceSha256": "00975257967be9e73b079cf34e8ea88998a3fbfca30bf96d383c8c36bc439a20",
+          "translation": "**证明** 令"
+        },
+        {
+          "id": "p137-b5",
+          "source": "$$A=\\{x:a\\le x\\le b\\text{ and }f\\text{ is bounded above on }[a,x]\\}.$$",
+          "sourceSha256": "0cd85e0d771f136fbab4ab475753c744fa0fa9c3435d2beda7ff5e95533b9d05"
+        },
+        {
+          "id": "p137-b6",
+          "source": "Clearly $A\\ne\\varnothing$ (since $a$ is in $A$), and $A$ is bounded above (by $b$), so $A$ has a least upper bound $\\alpha$. Notice that we are here applying the term “bounded above” both to the set $A$, which can be visualized as lying on the horizontal axis, and to $f$, i.e., to the sets $\\{f(y):a\\le y\\le x\\}$, which can be visualized as lying on the vertical axis (Figure 5).",
+          "sourceSha256": "61ea2ecd645be6cab7c8339c5b8c825d992b70aad04cd64136a31dc65381ced5",
+          "translation": "显然 $A\\ne\\varnothing$（因为 $a$ 属于 $A$），而且 $A$ 有上界（$b$ 就是），所以 $A$ 有最小上界 $\\alpha$。注意，这里既把“有上界”用于集合 $A$——可以把它想象成位于水平轴上——也用于 $f$，即集合 $\\{f(y):a\\le y\\le x\\}$——可以把它们想象成位于竖直轴上（图 5）。"
+        },
+        {
+          "id": "p137-b7",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:413px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"45 573 413 379\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0156.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "a32304f4b0f0e8d3a3a4f8deff86262bcde0465e4d01239e3d75a593be5ab125"
+        },
+        {
+          "id": "p137-b8",
+          "source": "Our first step is to prove that we actually have $\\alpha=b$. Suppose, instead, that $\\alpha<b$. By Theorem 1 there is $\\delta>0$ such that $f$ is bounded on $(\\alpha-\\delta,\\alpha+\\delta)$. Since $\\alpha$ is the least upper bound of $A$ there is some $x_0$ in $A$ satisfying $\\alpha-\\delta<x_0<\\alpha$. This means that $f$ is bounded on $[a,x_0]$. But if $x_1$ is any number with $\\alpha<x_1<\\alpha+\\delta$, then $f$ is also bounded on $[x_0,x_1]$. Therefore $f$ is bounded on $[a,x_1]$, so $x_1$ is in $A$, contradicting the fact that $\\alpha$ is an upper bound for $A$. This contradiction shows that $\\alpha=b$. One detail should be mentioned: this demonstration implicitly assumed that $a<\\alpha$ [so that $f$ would be defined on some interval $(\\alpha-\\delta,\\alpha+\\delta)$]; the possibility $a=\\alpha$ can be ruled out similarly, using the existence of a $\\delta>0$ such that $f$ is bounded on $\\{x:a\\le x<a+\\delta\\}$.",
+          "sourceSha256": "5fa5f66dfdf1feecc27d8ffc5d201d13e4392d884c97befbdd81ff1ee3a386d1",
+          "translation": "第一步是证明实际上有 $\\alpha=b$。反设 $\\alpha<b$。由定理 1，存在 $\\delta>0$，使 $f$ 在 $(\\alpha-\\delta,\\alpha+\\delta)$ 上有界。由于 $\\alpha$ 是 $A$ 的最小上界，存在 $A$ 中某个 $x_0$ 满足 $\\alpha-\\delta<x_0<\\alpha$。这意味着 $f$ 在 $[a,x_0]$ 上有界。但如果 $x_1$ 是任意满足 $\\alpha<x_1<\\alpha+\\delta$ 的数，那么 $f$ 在 $[x_0,x_1]$ 上也有界。因此 $f$ 在 $[a,x_1]$ 上有界，所以 $x_1$ 属于 $A$，这与 $\\alpha$ 是 $A$ 的上界矛盾。这一矛盾说明 $\\alpha=b$。有一个细节需要说明：上述论证默认了 $a<\\alpha$〔从而 $f$ 在某个区间 $(\\alpha-\\delta,\\alpha+\\delta)$ 上有定义〕；对于 $a=\\alpha$ 的可能性，可以类似地排除，只需利用存在 $\\delta>0$ 使 $f$ 在 $\\{x:a\\le x<a+\\delta\\}$ 上有界这一事实。"
+        },
+        {
+          "id": "p137-b9",
+          "source": "The proof is not quite complete—we only know that $f$ is bounded on $[a,x]$ for every $x<b$, not necessarily that $f$ is bounded on $[a,b]$. However, only one small argument needs to be added.",
+          "sourceSha256": "2787f9cc80e6a04fdfc2af856b7ead07bf113edbd58ce468ccf25a1ae5f7b644",
+          "translation": "证明还没有完全结束：我们只知道对每个 $x<b$，$f$ 在 $[a,x]$ 上有界，却未必知道 $f$ 在 $[a,b]$ 上有界。不过，只需再补充一小段论证。"
+        },
+        {
+          "id": "p137-b10",
+          "source": "There is a $\\delta>0$ such that $f$ is bounded on $\\{x:b-\\delta<x\\le b\\}$. There is $x_0$ in $A$ such that $b-\\delta<x_0<b$. Thus $f$ is bounded on $[a,x_0]$ and also on $[x_0,b]$, so $f$ is bounded on $[a,b]$. $\\blacksquare$",
+          "sourceSha256": "d53f9da5c00905d02cc7aeb5ac1a40740582d658b518192895921ef221476209",
+          "translation": "存在 $\\delta>0$，使 $f$ 在 $\\{x:b-\\delta<x\\le b\\}$ 上有界。存在 $A$ 中的 $x_0$，使 $b-\\delta<x_0<b$。因此 $f$ 在 $[a,x_0]$ 和 $[x_0,b]$ 上都有界，所以 $f$ 在 $[a,b]$ 上有界。$\\blacksquare$"
+        },
+        {
+          "id": "p137-b11",
+          "source": "To prove the third important theorem we resort to a trick.",
+          "sourceSha256": "f96624d2d92ca585732bf88ebb38a91f2a7bd29a48ffec4ac2cfac787f976aef",
+          "translation": "为证明第三个重要定理，我们要用一个技巧。"
+        },
+        {
+          "id": "p137-b12",
+          "source": "**THEOREM 7-3**",
+          "sourceSha256": "51e59a6b6c910fa2f233d7eb52fcb735bd4b2a37515e066ad51e19a38b1daa44",
+          "translation": "**定理 7-3**"
+        },
+        {
+          "id": "p137-b13",
+          "source": "If $f$ is continuous on $[a,b]$, then there is a number $y$ in $[a,b]$ such that $f(y)\\ge f(x)$ for all $x$ in $[a,b]$.",
+          "sourceSha256": "93115c1e330adb8f37a5e6777385f79b12d58d3bc80a54ff197188078cbc791d",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，那么存在 $[a,b]$ 中的一个数 $y$，使得对 $[a,b]$ 中所有 $x$ 都有 $f(y)\\ge f(x)$。"
+        },
+        {
+          "id": "p137-b14",
+          "source": "**PROOF** We already know that $f$ is bounded on $[a,b]$, which means that the set",
+          "sourceSha256": "3a42879c636457df844236b991d651c8ce55f4733de9d36559e20509ad399d93",
+          "translation": "**证明** 已经知道 $f$ 在 $[a,b]$ 上有界，这意味着集合"
+        },
+        {
+          "id": "p137-b15",
+          "source": "$$\\{f(x):x\\text{ in }[a,b]\\}$$",
+          "sourceSha256": "07b3169df1f18eeaf5454a2cf96b4523cc9460dcf74e76704127d7510b31ba5d"
+        },
+        {
+          "id": "p137-b16",
+          "source": "is bounded. This set is obviously not $\\varnothing$, so it has a least upper bound $\\alpha$. Since $\\alpha\\ge f(x)$ for $x$ in $[a,b]$ it suffices to show that $\\alpha=f(y)$ for some $y$ in $[a,b]$.",
+          "sourceSha256": "d462601b041c60d339b0f2efe0f5dc4fd21d80848ad51d6ca68802bbcf827205",
+          "translation": "有界。这个集合显然不是 $\\varnothing$，因此有最小上界 $\\alpha$。由于对 $[a,b]$ 中的 $x$ 有 $\\alpha\\ge f(x)$，只需证明：存在 $[a,b]$ 中的某个 $y$，使 $\\alpha=f(y)$。"
+        },
+        {
+          "id": "p137-b17",
+          "source": "Suppose instead that $\\alpha\\ne f(y)$ for all $y$ in $[a,b]$. Then the function $g$ defined by",
+          "sourceSha256": "5a86491cc1ba9de0d05275263631a1e8e6bc2856738562b2cd328bd6a3ed9a49",
+          "translation": "反设对 $[a,b]$ 中所有 $y$ 都有 $\\alpha\\ne f(y)$。那么由下式定义的函数 $g$"
+        },
+        {
+          "id": "p137-b18",
+          "source": "$$g(x)=\\frac1{\\alpha-f(x)},\\qquad x\\text{ in }[a,b]$$",
+          "sourceSha256": "45ee1f9a18c77ec667ebd9f62b540e63c56a9ab6c347688f681f8fd9bf58d086"
+        }
+      ]
+    },
+    {
+      "printed": 138,
+      "sourceSha256": "e28496ad6d7969ccc6b2568d8163c21ea09fdaa535f72f927c7be6e4e0fb22c9",
+      "blocks": [
+        {
+          "id": "p138-b1",
+          "source": "is continuous on $[a,b]$, since the denominator of the right side is never $0$. On the other hand, $\\alpha$ is the least upper bound of $\\{f(x):x\\text{ in }[a,b]\\}$; this means that",
+          "sourceSha256": "8a264281ae8dc5143aaf99b916608d93e4e2fcdec4542aa3af9cbd08585a987c",
+          "translation": "在 $[a,b]$ 上连续，因为右边的分母从不为 $0$。另一方面，$\\alpha$ 是 $\\{f(x):x\\text{ in }[a,b]\\}$ 的最小上界，这意味着"
+        },
+        {
+          "id": "p138-b2",
+          "source": "$$\\text{for every }\\varepsilon>0\\text{ there is }x\\text{ in }[a,b]\\text{ with }\\alpha-f(x)<\\varepsilon.$$",
+          "sourceSha256": "41ba5a703bfe2d411aa46c7a7897a8a7e8d1b269529f9a928edee8ea631a571f"
+        },
+        {
+          "id": "p138-b3",
+          "source": "This, in turn, means that",
+          "sourceSha256": "db8786abf1f8d147918e70202437ed09f74f0d95f89e0146a1d636945d08f995",
+          "translation": "这又意味着"
+        },
+        {
+          "id": "p138-b4",
+          "source": "$$\\text{for every }\\varepsilon>0\\text{ there is }x\\text{ in }[a,b]\\text{ with }g(x)>1/\\varepsilon.$$",
+          "sourceSha256": "4b296e95c3e471c43a9199baac52d3922d7d325dcc679c7bf7176c742f35db6e"
+        },
+        {
+          "id": "p138-b5",
+          "source": "But *this* means that $g$ is not bounded on $[a,b]$, contradicting the previous theorem. $\\blacksquare$",
+          "sourceSha256": "0e01e2b1cbb642d180d06c076922b646c226728dc00791e644209b1b7a926c57",
+          "translation": "但*这*意味着 $g$ 在 $[a,b]$ 上无界，与前一个定理矛盾。$\\blacksquare$"
+        },
+        {
+          "id": "p138-b6",
+          "source": "At the beginning of this chapter the set of natural numbers $\\mathbf N$ was given as an example of an unbounded set. We are now going to *prove* that $\\mathbf N$ is unbounded. After the difficult theorems proved in this chapter you may be startled to find such an “obvious” theorem winding up our proceedings. If so, you are, perhaps, allowing the geometrical picture of $\\mathbf R$ to influence you too strongly. “Look,” you may say, “the real numbers look like",
+          "sourceSha256": "b2fceef20f39bd90fbde3046113cf2f6709ae0a1095567f01a5db4ce77a75cbc",
+          "translation": "本章开头曾把自然数集 $\\mathbf N$ 作为一个无界集的例子。现在要*证明* $\\mathbf N$ 无界。在证明了本章这些困难定理之后，却以这样一个“显然”的定理收尾，也许会让你惊讶。如果如此，你或许受 $\\mathbf R$ 的几何图景影响太深了。你也许会说：“瞧，实数是这个样子的："
+        },
+        {
+          "id": "p138-b7",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"480 691 770 57\" role=\"img\" aria-label=\"Number line\"><image href=\"pages/book/0157.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n</figure>",
+          "sourceSha256": "5db90596b2510dbd693a0d57aed76cad41a9bdefa03694686deccc1e27a9307f"
+        },
+        {
+          "id": "p138-b8",
+          "source": "so every number $x$ is between two integers $n$, $n+1$ (unless $x$ is itself an integer).” Basing the argument on a geometric picture is not a proof, however, and even the geometric picture contains an assumption: that if you place unit segments end-to-end you will eventually get a segment larger than any given segment. This axiom, often omitted from a first introduction to geometry, is usually attributed (not quite justly) to Archimedes, and the corresponding property for numbers, that $\\mathbf N$ is not bounded, is called the *Archimedean property* of the real numbers. This property is *not* a consequence of P1–P12 (see reference [14] of the Suggested Reading), although it does hold for $\\mathbf Q$, of course. Once we have P13 however, there are no longer any problems.",
+          "sourceSha256": "4dc00793bc8f15627b7a63f61c94b3599ec72daf0582687e927f12edd7aa7d72",
+          "translation": "所以每个数 $x$ 都位于两个整数 $n$、$n+1$ 之间（除非 $x$ 本身是整数）。”然而，基于几何图景的论证并不是证明，甚至几何图景本身也含有一个假设：把单位线段首尾相接，最终会得到比任何给定线段都长的线段。这个公理常在初学几何时被略去，人们通常把它归于阿基米德（并不完全公允）；与它对应的数的性质，即 $\\mathbf N$ 无界，称为实数的*阿基米德性质*。这个性质*不是* P1–P12 的推论（见推荐阅读书目 [14]），虽然它当然对 $\\mathbf Q$ 成立。不过，一旦有了 P13，就不再有问题。"
+        },
+        {
+          "id": "p138-b9",
+          "source": "**THEOREM 2**",
+          "sourceSha256": "59bd15153c31a53f3eec003199c59649639a3b3a6b854407f90576e04346c1a4",
+          "translation": "**定理 2**"
+        },
+        {
+          "id": "p138-b10",
+          "source": "$\\mathbf N$ is not bounded above.",
+          "sourceSha256": "0182af86bace82a281940a11fac6cd72b2775241c0535721f9df3e4a7a1bc59e",
+          "translation": "$\\mathbf N$ 没有上界。"
+        },
+        {
+          "id": "p138-b11",
+          "source": "**PROOF** Suppose $\\mathbf N$ were bounded above. Since $\\mathbf N\\ne\\varnothing$, there would be a least upper bound $\\alpha$ for $\\mathbf N$. Then",
+          "sourceSha256": "a9860109ada3ad7cfc0757178433fa6b631093fc671acd91f2f0fc787ad662dc",
+          "translation": "**证明** 假设 $\\mathbf N$ 有上界。由于 $\\mathbf N\\ne\\varnothing$，$\\mathbf N$ 就有最小上界 $\\alpha$。于是"
+        },
+        {
+          "id": "p138-b12",
+          "source": "$$\\alpha\\ge n\\qquad\\text{for all }n\\text{ in }\\mathbf N.$$",
+          "sourceSha256": "c6ffb7d55d2406aa4c8c53dc4b8895824e7b0e7e38df0d300a10372c705831da"
+        },
+        {
+          "id": "p138-b13",
+          "source": "Consequently,",
+          "sourceSha256": "25837488c62c9eb55760f3ec62697b2c46f8988775e0626d641e0c728d8a4558",
+          "translation": "因此，"
+        },
+        {
+          "id": "p138-b14",
+          "source": "$$\\alpha\\ge n+1\\qquad\\text{for all }n\\text{ in }\\mathbf N,$$",
+          "sourceSha256": "84e36f2b19a27134b208d95c16d6c8f2c90328dfb1011ea03f7214d1f96b70cc"
+        },
+        {
+          "id": "p138-b15",
+          "source": "since $n+1$ is in $\\mathbf N$ if $n$ is in $\\mathbf N$. But this means that",
+          "sourceSha256": "a63f8d3ab95cae3fbef66ac9b029f36162dc9b950dfefbf985fae5f75a783f5f",
+          "translation": "因为只要 $n$ 属于 $\\mathbf N$，$n+1$ 就属于 $\\mathbf N$。但这意味着"
+        },
+        {
+          "id": "p138-b16",
+          "source": "$$\\alpha-1\\ge n\\qquad\\text{for all }n\\text{ in }\\mathbf N,$$",
+          "sourceSha256": "9ff1a85569b95c8cd724fcf9fa8745abbfef80101513bfd7e9fa6ff7d7e61339"
+        },
+        {
+          "id": "p138-b17",
+          "source": "and *this* means that $\\alpha-1$ is also an upper bound for $\\mathbf N$, contradicting the fact that $\\alpha$ is the least upper bound. $\\blacksquare$",
+          "sourceSha256": "47a3ba744d5e0c67cb0b91964e9cf563ff2476ba0ac409ee5c18dd41c3f40370",
+          "translation": "而*这*意味着 $\\alpha-1$ 也是 $\\mathbf N$ 的上界，与 $\\alpha$ 是最小上界矛盾。$\\blacksquare$"
+        }
+      ]
+    },
+    {
+      "printed": 139,
+      "sourceSha256": "3ad97807efcc134bb60d8bbe91749e3d6adcd706f7957a8c911c845f4fd369a3",
+      "blocks": [
+        {
+          "id": "p139-b1",
+          "source": "There is a consequence of Theorem 2 (actually an equivalent formulation) which we have very often assumed implicitly.",
+          "sourceSha256": "1de1a9066e4b5749fbffa1869f20f261487d29f8fcbf73b0d3426ea7e6a78fe3",
+          "translation": "定理 2 有一个推论（实际上是一种等价表述），我们曾经多次默认使用它。"
+        },
+        {
+          "id": "p139-b2",
+          "source": "**THEOREM 3**",
+          "sourceSha256": "144f2b1c919e3eccfd2f2d3b52b3a51686b023b4bc55f5d83f53928650fda205",
+          "translation": "**定理 3**"
+        },
+        {
+          "id": "p139-b3",
+          "source": "For any $\\varepsilon>0$ there is a natural number $n$ with $1/n<\\varepsilon$.",
+          "sourceSha256": "c334e440408a458ca5160e94e735580ea6fe5ee86ed2ce90eb16b63db6969261",
+          "translation": "对于任意 $\\varepsilon>0$，都存在自然数 $n$，使 $1/n<\\varepsilon$。"
+        },
+        {
+          "id": "p139-b4",
+          "source": "**PROOF** Suppose not; then $1/n\\ge\\varepsilon$ for all $n$ in $\\mathbf N$. Thus $n\\le1/\\varepsilon$ for all $n$ in $\\mathbf N$. But this means that $1/\\varepsilon$ is an upper bound for $\\mathbf N$, contradicting Theorem 2. $\\blacksquare$",
+          "sourceSha256": "a37c8b5aeb06e14c5f5ead4f167ed3fc100c6c20a12a414f32c6e2d8680e7602",
+          "translation": "**证明** 反设不成立，则对 $\\mathbf N$ 中所有 $n$ 都有 $1/n\\ge\\varepsilon$。于是对 $\\mathbf N$ 中所有 $n$ 都有 $n\\le1/\\varepsilon$。但这意味着 $1/\\varepsilon$ 是 $\\mathbf N$ 的上界，与定理 2 矛盾。$\\blacksquare$"
+        },
+        {
+          "id": "p139-b5",
+          "source": "A brief glance through Chapter 6 will show you that the result of Theorem 3 was used in the discussion of many examples. Of course, Theorem 3 was not available at the time, but the examples were so important that in order to give them some cheating was tolerated. As partial justification for this dishonesty we can claim that this result was never used in the proof of a *theorem*, but if your faith has been shaken, a review of all the proofs given so far is in order. Fortunately, such deception will not be necessary again. We have now stated every property of the real numbers that we will ever need. Henceforth, no more lies.",
+          "sourceSha256": "a48a745361ca018510f0df8a9f62c7a54c8e86cee17d31777e0ef6749a10b2ee",
+          "translation": "粗略翻看第 6 章，你就会发现，在讨论许多例子时都用到了定理 3 的结论。当然，当时还不能使用定理 3；但那些例子太重要了，因此为了给出它们，我们容忍了一点作弊。作为这种不诚实行为的部分辩解，可以说：我们从未在一个*定理*的证明中使用这个结果。不过，如果你的信心已经动摇，那么回顾此前的全部证明是合适的。幸好，今后再也不必进行这种欺骗了。我们已经陈述了以后所需的实数的每一条性质。从此，不再说谎。"
+        },
+        {
+          "id": "p139-b6",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p139-b7",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p139-b8",
+          "source": "Find the least upper bound and the greatest lower bound (if they exist) of the following sets. Also decide which sets have greatest and least elements (i.e., decide when the least upper bound and greatest lower bound happens to belong to the set).",
+          "sourceSha256": "43a3403f3018b2028fa45fa06c2f0dcf3fec12ccbc20c557dbd1bb076a69c340",
+          "translation": "求下列集合的最小上界和最大下界（如果存在）。还要判断哪些集合有最大元素和最小元素（即判断最小上界和最大下界是否恰好属于集合本身）。"
+        },
+        {
+          "id": "p139-b9",
+          "source": "(i) $\\left\\{\\dfrac1n:n\\text{ in }\\mathbf N\\right\\}.$",
+          "sourceSha256": "c3252c2a1fea56ec1d415534cd6aec1e4aa488750cea3b0dc7b301ece732f42e"
+        },
+        {
+          "id": "p139-b10",
+          "source": "(ii) $\\left\\{\\dfrac1n:n\\text{ in }\\mathbf Z\\text{ and }n\\ne0\\right\\}.$",
+          "sourceSha256": "26d9ab55719e2679acc221f6b8ef9d9ce686d9a511d2f2b7e74ba723fd2760dd"
+        },
+        {
+          "id": "p139-b11",
+          "source": "(iii) $\\{x:x=0\\text{ or }x=1/n\\text{ for some }n\\text{ in }\\mathbf N\\}.$",
+          "sourceSha256": "4ab578ac34ffc6a95fe442a38e2f9ee6287aeb0a5dfdc275d03d70a8da8b22f2"
+        },
+        {
+          "id": "p139-b12",
+          "source": "(iv) $\\{x:0\\le x\\le\\sqrt2\\text{ and }x\\text{ is rational}\\}.$",
+          "sourceSha256": "361c5f35dd4f1fa77d92dfee98fadf8054463152a9837de5a2d4233df78b3545"
+        },
+        {
+          "id": "p139-b13",
+          "source": "(v) $\\{x:x^2+x+1\\ge0\\}.$",
+          "sourceSha256": "c0165a3095eb2701c5eeaa579690f9fc2159c44aee0d9afa32c4ed09a49aeaf5"
+        },
+        {
+          "id": "p139-b14",
+          "source": "(vi) $\\{x:x^2+x-1<0\\}.$",
+          "sourceSha256": "5428bd06c90822698c141930311ec383b30e91ee1dcdb111a66a114e36e25e55"
+        },
+        {
+          "id": "p139-b15",
+          "source": "(vii) $\\{x:x<0\\text{ and }x^2+x-1<0\\}.$",
+          "sourceSha256": "268cdceda3859da92efc96d078f622b871b8b95b82b44e4a83f3f4dbca65cb0e"
+        },
+        {
+          "id": "p139-b16",
+          "source": "(viii) $\\left\\{\\dfrac1n+(-1)^n:n\\text{ in }\\mathbf N\\right\\}.$",
+          "sourceSha256": "7f16be81171ff34814a1c2380917607559facc411567e4ddbd92160c69847745"
+        },
+        {
+          "id": "p139-b17",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p139-b18",
+          "source": "(a) Suppose $A\\ne\\varnothing$ is bounded below. Let $-A$ denote the set of all $-x$ for $x$ in $A$. Prove that $-A\\ne\\varnothing$, that $-A$ is bounded above, and that $-\\sup(-A)$ is the greatest lower bound of $A$.",
+          "sourceSha256": "ef36a990a4c4198fef15f43f4317a7fe483136e1d28bd75aa6766be77841b97a",
+          "translation": "(a) 假设 $A\\ne\\varnothing$ 有下界。用 $-A$ 表示当 $x$ 遍取 $A$ 时所有 $-x$ 的集合。证明 $-A\\ne\\varnothing$，$-A$ 有上界，且 $-\\sup(-A)$ 是 $A$ 的最大下界。"
+        },
+        {
+          "id": "p139-b19",
+          "source": "(b) If $A\\ne\\varnothing$ is bounded below, let $B$ be the set of all lower bounds of $A$. Show that $B\\ne\\varnothing$, that $B$ is bounded above, and that $\\sup B$ is the greatest lower bound of $A$.",
+          "sourceSha256": "7b4183ffd9ed5598903cdc162b4475c3a983ce11bb9576fd6e94b3e1e064a97a",
+          "translation": "(b) 如果 $A\\ne\\varnothing$ 有下界，令 $B$ 为 $A$ 的所有下界构成的集合。证明 $B\\ne\\varnothing$，$B$ 有上界，且 $\\sup B$ 是 $A$ 的最大下界。"
+        },
+        {
+          "id": "p139-b20",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p139-b21",
+          "source": "Let $f$ be a continuous function on $[a,b]$ with $f(a)<0<f(b)$.",
+          "sourceSha256": "3f9bc9eae59598dac950aa68ed170c2a94c8462473c9957b4554c7bfff52c6d9",
+          "translation": "设 $f$ 为 $[a,b]$ 上满足 $f(a)<0<f(b)$ 的连续函数。"
+        },
+        {
+          "id": "p139-b22",
+          "source": "(a) The proof of Theorem 7-1 showed that there is a smallest $x$ in $[a,b]$ with $f(x)=0$. If there is more than one $x$ in $[a,b]$ with $f(x)=0$, is there necessarily a second smallest? Show that there is a largest $x$ in",
+          "sourceSha256": "39354ace08c8c91c820eabdd02e42af597381c4bf28efa7028722bb3bbc5cb4f",
+          "translation": "(a) 定理 7-1 的证明表明，存在 $[a,b]$ 中满足 $f(x)=0$ 的最小 $x$。如果 $[a,b]$ 中不止一个 $x$ 满足 $f(x)=0$，是否一定有第二小的？证明存在最大的 $x$ 属于"
+        }
+      ]
+    },
+    {
+      "printed": 140,
+      "sourceSha256": "67c989d39e8fa94b7f008013b87742ff7f4ce96b2f3352d6ee67201d4a7ff3ef",
+      "blocks": [
+        {
+          "id": "p140-b1",
+          "source": "$[a,b]$ with $f(x)=0$. (Try to give an easy proof by considering a new function closely related to $f$.)",
+          "sourceSha256": "65ea4f6ba1269a651687299d332a529b760c21e3004ed9b7bc5a2923a24a541d",
+          "translation": "$[a,b]$，且满足 $f(x)=0$。（尝试考虑一个与 $f$ 密切相关的新函数，给出简单证明。）"
+        },
+        {
+          "id": "p140-b2",
+          "source": "(b) The proof of Theorem 7-1 depended upon considering $A=\\{x:a\\le x\\le b\\text{ and }f\\text{ is negative on }[a,x]\\}$. Give another proof of Theorem 7-1, which depends upon consideration of $B=\\{x:a\\le x\\le b\\text{ and }f(x)<0\\}$. Which point $x$ in $[a,b]$ with $f(x)=0$ will this proof locate? Give an example where the sets $A$ and $B$ are not the same.",
+          "sourceSha256": "99e7b315ad6dff97b3c0d297b776634980298d4b0958ac3255f221bdd8b937d2",
+          "translation": "(b) 定理 7-1 的证明通过考察 $A=\\{x:a\\le x\\le b\\text{ and }f\\text{ is negative on }[a,x]\\}$ 而得到。通过考察 $B=\\{x:a\\le x\\le b\\text{ and }f(x)<0\\}$，给出定理 7-1 的另一个证明。这个证明找到的是 $[a,b]$ 中满足 $f(x)=0$ 的哪个点 $x$？举一个集合 $A$ 和 $B$ 不相同的例子。"
+        },
+        {
+          "id": "p140-b3",
+          "source": "### \\*4.",
+          "sourceSha256": "a3712dafdc31ab29cac3b70126b5e8ef50ff5fde77ff1963c3d7c8263afac800"
+        },
+        {
+          "id": "p140-b4",
+          "source": "(a) Suppose that $f$ is continuous on $[a,b]$ and that $f(a)=f(b)=0$. Suppose also that $f(x_0)>0$ for some $x_0$ in $[a,b]$. Prove that there are numbers $c$ and $d$ with $a\\le c<x_0<d\\le b$ such that $f(c)=f(d)=0$, but $f(x)>0$ for all $x$ in $(c,d)$. Hint: The previous problem can be used to good advantage.",
+          "sourceSha256": "f079c55bacb23ae48ab02f98c548721e946f7a3feccffea55ef05a52e46d262e",
+          "translation": "(a) 假设 $f$ 在 $[a,b]$ 上连续，且 $f(a)=f(b)=0$。还假设 $[a,b]$ 中某个 $x_0$ 满足 $f(x_0)>0$。证明：存在数 $c$ 和 $d$，满足 $a\\le c<x_0<d\\le b$，使得 $f(c)=f(d)=0$，但对 $(c,d)$ 中所有 $x$ 都有 $f(x)>0$。提示：上一题在这里可以大显身手。"
+        },
+        {
+          "id": "p140-b5",
+          "source": "(b) Suppose that $f$ is continuous on $[a,b]$ and that $f(a)<f(b)$. Prove that there are numbers $c$ and $d$ with $a\\le c<d\\le b$ such that $f(c)=f(a)$ and $f(d)=f(b)$ and $f(a)<f(x)<f(d)$ for all $x$ in $(c,d)$.",
+          "sourceSha256": "628d23af278fe9dec14226fca58d95fd813e7dcaf3e00fed692db1f631438dd9",
+          "translation": "(b) 假设 $f$ 在 $[a,b]$ 上连续，且 $f(a)<f(b)$。证明：存在数 $c$ 和 $d$，满足 $a\\le c<d\\le b$，使 $f(c)=f(a)$、$f(d)=f(b)$，且对 $(c,d)$ 中所有 $x$ 都有 $f(a)<f(x)<f(d)$。"
+        },
+        {
+          "id": "p140-b6",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p140-b7",
+          "source": "(a) Suppose that $y-x>1$. Prove that there is an integer $k$ such that $x<k<y$. Hint: Let $l$ be the largest integer satisfying $l\\le x$, and consider $l+1$.",
+          "sourceSha256": "191bfc24086de8dfd12911ced1d691b09d46bbe7191cacdae01c94b39ac54c6d",
+          "translation": "(a) 假设 $y-x>1$。证明存在整数 $k$，使 $x<k<y$。提示：令 $l$ 是满足 $l\\le x$ 的最大整数，并考虑 $l+1$。"
+        },
+        {
+          "id": "p140-b8",
+          "source": "(b) Suppose $x<y$. Prove that there is a rational number $r$ such that $x<r<y$. Hint: If $1/n<y-x$, then $ny-nx>1$. (Query: Why have parts (a) and (b) been postponed until this problem set?)",
+          "sourceSha256": "62b10654fcdaa39500bb5c176472a8974845a98c9a3a9896bbf02520274ff912",
+          "translation": "(b) 假设 $x<y$。证明存在有理数 $r$，使 $x<r<y$。提示：若 $1/n<y-x$，则 $ny-nx>1$。（问题：(a) 和 (b) 为什么一直推迟到这组习题才出现？）"
+        },
+        {
+          "id": "p140-b9",
+          "source": "(c) Suppose that $r<s$ are rational numbers. Prove that there is an irrational number between $r$ and $s$. Hint: As a start, you know that there is an irrational number between $0$ and $1$.",
+          "sourceSha256": "d65f0675cc8bc3fc184c9308ed5b088709f19cc51d1d6475c7a56753ce1242a0",
+          "translation": "(c) 假设 $r<s$ 是有理数。证明 $r$ 与 $s$ 之间存在无理数。提示：首先，你知道 $0$ 与 $1$ 之间存在无理数。"
+        },
+        {
+          "id": "p140-b10",
+          "source": "(d) Suppose that $x<y$. Prove that there is an irrational number between $x$ and $y$. Hint: It is unnecessary to do any more work; this follows from (b) and (c).",
+          "sourceSha256": "e3f7a2c0f4b5d7d56489e67ca5231bf6e723dac92c3eb718b528049ddeca1622",
+          "translation": "(d) 假设 $x<y$。证明 $x$ 与 $y$ 之间存在无理数。提示：无需再多做工作，它由 (b) 和 (c) 推出。"
+        },
+        {
+          "id": "p140-b11",
+          "source": "### \\*6.",
+          "sourceSha256": "16dbb09f3ea3b891672f7582e4080489688794641f917b2e318807321f1b62cd"
+        },
+        {
+          "id": "p140-b12",
+          "source": "A set $A$ of real numbers is said to be **dense** if every open interval contains a point of $A$. For example, Problem 5 shows that the set of rational numbers and the set of irrational numbers are each dense.",
+          "sourceSha256": "8f98036a5f589b99a2fe6e7df979eb8d6576e9b42f6b8c89e5e9d7e4dddd90de",
+          "translation": "如果每个开区间都包含实数集 $A$ 中的一个点，就称 $A$ 是**稠密的**。例如，习题 5 表明，有理数集和无理数集都是稠密的。"
+        },
+        {
+          "id": "p140-b13",
+          "source": "(a) Prove that if $f$ is continuous and $f(x)=0$ for all numbers $x$ in a dense set $A$, then $f(x)=0$ for all $x$.",
+          "sourceSha256": "9fe620aa93548840a6c6c1c120c15d1e807ab1ce85132ce2c6a9f14dedabea52",
+          "translation": "(a) 证明：如果 $f$ 连续，而且对稠密集 $A$ 中所有数 $x$ 都有 $f(x)=0$，那么对所有 $x$ 都有 $f(x)=0$。"
+        },
+        {
+          "id": "p140-b14",
+          "source": "(b) Prove that if $f$ and $g$ are continuous and $f(x)=g(x)$ for all $x$ in a dense set $A$, then $f(x)=g(x)$ for all $x$.",
+          "sourceSha256": "2a978b06d483d6f7e34bd53f3dcfc3a7f1ac43b7c0657827efa22af37d2c4655",
+          "translation": "(b) 证明：如果 $f$ 和 $g$ 连续，而且对稠密集 $A$ 中所有 $x$ 都有 $f(x)=g(x)$，那么对所有 $x$ 都有 $f(x)=g(x)$。"
+        },
+        {
+          "id": "p140-b15",
+          "source": "(c) If we assume instead that $f(x)\\ge g(x)$ for all $x$ in $A$, show that $f(x)\\ge g(x)$ for all $x$. Can $\\ge$ be replaced by $>$ throughout?",
+          "sourceSha256": "5b2dbdaa04055fee7891219e811d6954e6b2413836e23378525fbc59fc7618a7",
+          "translation": "(c) 如果改为假设对 $A$ 中所有 $x$ 都有 $f(x)\\ge g(x)$，证明对所有 $x$ 都有 $f(x)\\ge g(x)$。能否把各处的 $\\ge$ 都换成 $>$？"
+        },
+        {
+          "id": "p140-b16",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p140-b17",
+          "source": "Prove that if $f$ is continuous and $f(x+y)=f(x)+f(y)$ for all $x$ and $y$, then there is a number $c$ such that $f(x)=cx$ for all $x$. (This conclusion can be demonstrated simply by combining the results of two previous problems.) Point of information: There *do exist noncontinuous* functions $f$ satisfying $f(x+y)=f(x)+f(y)$ for all $x$ and $y$, but we cannot prove this now; in fact, this simple question involves ideas that are usually never mentioned in undergraduate courses (see reference [7] in the Suggested Reading).",
+          "sourceSha256": "87b0eb460946531d5ad9daf8c0e2474977b4d0f59424d2a270546cff78db14d1",
+          "translation": "证明：如果 $f$ 连续，且对所有 $x$ 和 $y$ 都有 $f(x+y)=f(x)+f(y)$，那么存在数 $c$，使对所有 $x$ 都有 $f(x)=cx$。（只需结合前面两道习题的结果，就能得到这个结论。）补充信息：确实*存在不连续*的函数 $f$，对所有 $x$ 和 $y$ 都满足 $f(x+y)=f(x)+f(y)$，但我们现在无法证明这一点；事实上，这个简单问题涉及本科课程通常从不提及的思想（见推荐阅读书目 [7]）。"
+        }
+      ]
+    },
+    {
+      "printed": 141,
+      "sourceSha256": "82b58b4d98d37fa3acf4167704a80c55c93d396bf88203bab1546e5ffdcdd600",
+      "blocks": [
+        {
+          "id": "p141-b1",
+          "source": "### \\*8.",
+          "sourceSha256": "d046b6272046f9db72fedfb9f8db16ad72fddcddd800a82b94978c5025a77c5d"
+        },
+        {
+          "id": "p141-b2",
+          "source": "Suppose that $f$ is a function such that $f(a)\\le f(b)$ whenever $a<b$ (Figure 6).",
+          "sourceSha256": "3bd6923dedae3ebb13f9443608c161eb4dc5033f80d01f29983e97e1d9d63ad3",
+          "translation": "假设函数 $f$ 满足：只要 $a<b$，就有 $f(a)\\le f(b)$（图 6）。"
+        },
+        {
+          "id": "p141-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:434px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 233 434 385\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0160.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 6</figcaption>\n</figure>",
+          "sourceSha256": "36b0317c7cf8f8bc7506c778f5f10e69539eca50d5b069271c5bdadbfec74967"
+        },
+        {
+          "id": "p141-b4",
+          "source": "(a) Prove that $\\lim_{x\\to a^-}f(x)$ and $\\lim_{x\\to a^+}f(x)$ both exist. Hint: Why is this problem in this chapter?",
+          "sourceSha256": "4522740de80e8d8e8310e4c117ce4d05c283249893efb75d7d6afd4935039a1d",
+          "translation": "(a) 证明 $\\lim_{x\\to a^-}f(x)$ 和 $\\lim_{x\\to a^+}f(x)$ 都存在。提示：为什么这道题放在本章？"
+        },
+        {
+          "id": "p141-b5",
+          "source": "(b) Prove that $f$ never has a removable discontinuity (this terminology comes from Problem 6-17).",
+          "sourceSha256": "46c7a3bcdf7178160e68b6cd94588ecf898d97bad248acd924221cbf4bc6b2f7",
+          "translation": "(b) 证明 $f$ 不会有可去间断点（这一术语来自习题 6-17）。"
+        },
+        {
+          "id": "p141-b6",
+          "source": "(c) Prove that if $f$ satisfies the conclusions of the Intermediate Value Theorem, then $f$ is continuous.",
+          "sourceSha256": "32e43bb120d12bdf139d00a66cd712e1658714250768dd0e01fdfb9e2e75df75",
+          "translation": "(c) 证明：如果 $f$ 满足介值定理的结论，那么 $f$ 连续。"
+        },
+        {
+          "id": "p141-b7",
+          "source": "### \\*9.",
+          "sourceSha256": "bf3173b380cbf1bab4e4d448d2721becc344282eae7b7eeb038dcaa18ba93954"
+        },
+        {
+          "id": "p141-b8",
+          "source": "If $f$ is a bounded function on $[0,1]$, let $\\lVert\\!\\lvert f\\rvert\\!\\rVert=\\sup\\{|f(x)|:x\\text{ in }[0,1]\\}$. Prove analogues of the properties of $\\lVert\\ \\rVert$ in Problem 7-14.",
+          "sourceSha256": "6e0eedda728907e81e9752b665b9193a558513d5b6d0ed941aa25acb95e899f7",
+          "translation": "如果 $f$ 是 $[0,1]$ 上的有界函数，令 $\\lVert\\!\\lvert f\\rvert\\!\\rVert=\\sup\\{|f(x)|:x\\text{ in }[0,1]\\}$。证明与习题 7-14 中 $\\lVert\\ \\rVert$ 的性质相对应的结论。"
+        },
+        {
+          "id": "p141-b9",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p141-b10",
+          "source": "Suppose $\\alpha>0$. Prove that every number $x$ can be written uniquely in the form $x=k\\alpha+x'$, where $k$ is an integer, and $0\\le x'<\\alpha$.",
+          "sourceSha256": "9bb7eaf6ea6727b4f7b8ec5be76d397b1cdd92667749800c5a4308cf37ae8d84",
+          "translation": "假设 $\\alpha>0$。证明每个数 $x$ 都能唯一地写成 $x=k\\alpha+x'$，其中 $k$ 为整数，且 $0\\le x'<\\alpha$。"
+        },
+        {
+          "id": "p141-b11",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p141-b12",
+          "source": "(a) Suppose that $a_1,a_2,a_3,\\ldots$ is a sequence of positive numbers with $a_{n+1}\\le a_n/2$. Prove that for any $\\varepsilon>0$ there is some $n$ with $a_n<\\varepsilon$.",
+          "sourceSha256": "e37095ca78e9a79cbc8b7f5420012818f10a7fa4eff85165c4ad518c0a2a615b",
+          "translation": "(a) 假设 $a_1,a_2,a_3,\\ldots$ 是一个满足 $a_{n+1}\\le a_n/2$ 的正数序列。证明：对于任意 $\\varepsilon>0$，都存在某个 $n$，使 $a_n<\\varepsilon$。"
+        },
+        {
+          "id": "p141-b13",
+          "source": "(b) Suppose $P$ is a regular polygon inscribed inside a circle. If $P'$ is the inscribed regular polygon with twice as many sides, show that the difference between the area of the circle and the area of $P'$ is less than half the difference between the area of the circle and the area of $P$ (use Figure 7).",
+          "sourceSha256": "44705b18571dbf496989d80654adb727dd17bbdd59c7577b16e06935ce89b292",
+          "translation": "(b) 假设 $P$ 是圆的一个内接正多边形。如果 $P'$ 是边数加倍后的内接正多边形，证明：圆面积与 $P'$ 面积之差，小于圆面积与 $P$ 面积之差的一半（利用图 7）。"
+        },
+        {
+          "id": "p141-b14",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:271px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 637 271 445\" role=\"img\" aria-label=\"Figure 7\"><defs><clipPath id=\"ch8-fig7-crop\"><path d=\"M44 655H169V637H315V1082H44Z\"/></clipPath></defs><image href=\"pages/book/0160.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\" clip-path=\"url(#ch8-fig7-crop)\"/></svg>\n<figcaption>FIGURE 7</figcaption>\n</figure>",
+          "sourceSha256": "b8af101ef8be58de2d0500ee6a1beed5289af879c1120bdc9685d362840be32f"
+        },
+        {
+          "id": "p141-b15",
+          "source": "(c) Prove that there is a regular polygon $P$ inscribed in a circle with area as close as desired to the area of the circle. In order to do part (c) you will need part (a). This was clear to the Greeks, who used part (a) as the basis for their entire treatment of proportion and area. By calculating the areas of polygons, this method (“the method of exhaustion”) allows computations of $\\pi$ to any desired accuracy; Archimedes used it to show that $\\frac{223}{71}<\\pi<\\frac{22}{7}$. But it has far greater theoretical importance:",
+          "sourceSha256": "f5ecee040daab545272888298a0ffb39dfbe2ab562f790138b87b0946abf69bd",
+          "translation": "(c) 证明：存在圆的内接正多边形 $P$，使其面积任意接近圆面积。完成 (c) 需要用到 (a)。希腊人对此很清楚，他们把 (a) 作为整个比例与面积理论的基础。通过计算多边形面积，这种方法（“穷竭法”）可以把 $\\pi$ 算到任意所需精度；阿基米德用它证明了 $\\frac{223}{71}<\\pi<\\frac{22}{7}$。不过，它还有大得多的理论意义："
+        },
+        {
+          "id": "p141-b16",
+          "source": "\\*(d) Using the fact that the areas of two regular polygons with the same number of sides have the same ratio as the square of their sides, prove that the areas of two circles have the same ratios as the square of their radii. Hint: Deduce a contradiction from the assumption that the ratio of the areas is greater, or less, than the ratio of the square of the radii by inscribing appropriate polygons.",
+          "sourceSha256": "501206720686cbe7ac30df2d5de1b1f4fc09c95e6cfdce428f9a8af377e5759b",
+          "translation": "\\*(d) 利用边数相同的两个正多边形的面积比等于边长平方比这一事实，证明两个圆的面积比等于半径平方比。提示：假设面积比大于或小于半径平方比，通过作合适的内接多边形，推出矛盾。"
+        },
+        {
+          "id": "p141-b17",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p141-b18",
+          "source": "Suppose that $A$ and $B$ are two nonempty sets of numbers such that $x\\le y$ for all $x$ in $A$ and all $y$ in $B$.",
+          "sourceSha256": "bafc5b022de1171cae3b757118637c46a50dd0c21104572229c2c171d910783d",
+          "translation": "假设 $A$ 和 $B$ 是两个非空数集，满足对于 $A$ 中所有 $x$ 以及 $B$ 中所有 $y$，都有 $x\\le y$。"
+        },
+        {
+          "id": "p141-b19",
+          "source": "(a) Prove that $\\sup A\\le y$ for all $y$ in $B$.",
+          "sourceSha256": "e096f1f074aad14befbfea385f2341e299136721e2a481d9ac426364bccca10a",
+          "translation": "(a) 证明：对 $B$ 中所有 $y$，都有 $\\sup A\\le y$。"
+        },
+        {
+          "id": "p141-b20",
+          "source": "(b) Prove that $\\sup A\\le\\inf B$.",
+          "sourceSha256": "3b1133558404deb29c4b706bb67cd2179201d8f926068b43257ca1f46ec2304d",
+          "translation": "(b) 证明 $\\sup A\\le\\inf B$。"
+        },
+        {
+          "id": "p141-b21",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p141-b22",
+          "source": "Let $A$ and $B$ be two nonempty sets of numbers which are bounded above, and let $A+B$ denote the set of all numbers $x+y$ with $x$ in $A$ and $y$ in $B$. Prove that $\\sup(A+B)=\\sup A+\\sup B$. Hint: The inequality $\\sup(A+B)\\le\\sup A+\\sup B$ is easy. Why? To prove that $\\sup A+\\sup B\\le\\sup(A+B)$ it suffices to prove that $\\sup A+\\sup B\\le\\sup(A+B)+\\varepsilon$ for all $\\varepsilon>0$; begin by choosing $x$ in $A$",
+          "sourceSha256": "7f9369df9b294a09f2a70f0f596140ed54c133fe9d5f9a439ba399d0e425e67c",
+          "translation": "设 $A$ 和 $B$ 是两个非空且有上界的数集，用 $A+B$ 表示所有数 $x+y$ 的集合，其中 $x$ 属于 $A$、$y$ 属于 $B$。证明 $\\sup(A+B)=\\sup A+\\sup B$。提示：不等式 $\\sup(A+B)\\le\\sup A+\\sup B$ 很容易。为什么？要证明 $\\sup A+\\sup B\\le\\sup(A+B)$，只需证明对所有 $\\varepsilon>0$ 都有 $\\sup A+\\sup B\\le\\sup(A+B)+\\varepsilon$；先在 $A$ 中选择 $x$"
+        }
+      ]
+    },
+    {
+      "printed": 142,
+      "sourceSha256": "fe189cad74fa58ad4ee7852c5a44fca90123c431cb7baf149207d0c67d096c3d",
+      "blocks": [
+        {
+          "id": "p142-b1",
+          "source": "and $y$ in $B$ with $\\sup A-x<\\varepsilon/2$ and $\\sup B-y<\\varepsilon/2$.",
+          "sourceSha256": "98b03e5d7596352a9236bfb8f67a75be6ab1cc7efb15369d36129f6c1e5eb305",
+          "translation": "并在 $B$ 中选择 $y$，使 $\\sup A-x<\\varepsilon/2$ 且 $\\sup B-y<\\varepsilon/2$。"
+        },
+        {
+          "id": "p142-b2",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:479px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"662 219 479 58\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0161.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 8</figcaption>\n</figure>",
+          "sourceSha256": "62e6b1cf6c188d12c30c004b81a35dab7b5df538d5c05c9d9bbda7cd798c2830"
+        },
+        {
+          "id": "p142-b3",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p142-b4",
+          "source": "(a) Consider a sequence of closed intervals $I_1=[a_1,b_1]$, $I_2=[a_2,b_2],\\ldots$. Suppose that $a_n\\le a_{n+1}$ and $b_{n+1}\\le b_n$ for all $n$ (Figure 8). Prove that there is a point $x$ which is in every $I_n$.",
+          "sourceSha256": "e88837de000c5066c46d52f6fc6204d1678f107a2d39b3c46fbdd757ee88742f",
+          "translation": "(a) 考虑闭区间序列 $I_1=[a_1,b_1]$、$I_2=[a_2,b_2],\\ldots$。假设对所有 $n$ 都有 $a_n\\le a_{n+1}$ 且 $b_{n+1}\\le b_n$（图 8）。证明：存在一个点 $x$，它属于每一个 $I_n$。"
+        },
+        {
+          "id": "p142-b5",
+          "source": "(b) Show that this conclusion is false if we consider open intervals instead of closed intervals.",
+          "sourceSha256": "aa0e71b62a6cd347a560a478eeb721b7608e720105879a5c0a046d913563b471",
+          "translation": "(b) 说明：如果考虑开区间而不是闭区间，这个结论就不成立。"
+        },
+        {
+          "id": "p142-b6",
+          "source": "The simple result of Problem 14(a) is called the “Nested Interval Theorem.” It may be used to give alternative proofs of Theorems 1 and 2. The appropriate reasoning, outlined in the next two problems, illustrates a general method, called a “bisection argument.”",
+          "sourceSha256": "b24a703c603676aa3f69c261eda29b7b8d23ee27961919a6364465fea6ed2c2b",
+          "translation": "习题 14(a) 的简单结论称为“闭区间套定理”。它可以用来给出定理 1、2 的其他证明。下面两道习题概述了相应推理，展示一种称为“二分论证”的一般方法。"
+        },
+        {
+          "id": "p142-b7",
+          "source": "### \\*15.",
+          "sourceSha256": "cd353e85483e37db9d25f065f1219e5a0d4626c718bb5e6c15f1bcef5ff38a16"
+        },
+        {
+          "id": "p142-b8",
+          "source": "Suppose $f$ is continuous on $[a,b]$ and $f(a)<0<f(b)$. Then either $f((a+b)/2)=0$, or $f$ has different signs at the end points of the interval $[a,(a+b)/2]$, or $f$ has different signs at the end points of $[(a+b)/2,b]$. Why? If $f((a+b)/2)\\ne0$, let $I_1$ be the interval on which $f$ changes sign.",
+          "sourceSha256": "edbd9069c6550a20e60fbcb105cb3fc3a1d85f7febcc238ea3955b5faddefece",
+          "translation": "假设 $f$ 在 $[a,b]$ 上连续，且 $f(a)<0<f(b)$。那么，要么 $f((a+b)/2)=0$，要么 $f$ 在区间 $[a,(a+b)/2]$ 的两个端点异号，要么 $f$ 在 $[(a+b)/2,b]$ 的两个端点异号。为什么？如果 $f((a+b)/2)\\ne0$，就把 $f$ 在端点变号的那个区间记作 $I_1$。"
+        },
+        {
+          "id": "p142-b9",
+          "source": "Now bisect $I_1$. Either $f$ is $0$ at the midpoint, or $f$ changes sign on one of the two intervals. Let $I_2$ be that interval. Continue in this way, to define $I_n$ for each $n$ (unless $f$ is $0$ at some midpoint). Use the Nested Interval Theorem to find a point $x$ where $f(x)=0$.",
+          "sourceSha256": "341770bfffe7cc1f0ee691f8416749596f15c4d8e4421165c57172d27704e970",
+          "translation": "现在把 $I_1$ 二等分。或者 $f$ 在中点为 $0$，或者 $f$ 在两个半区间之一的端点变号。把该区间记为 $I_2$。照此继续，对每个 $n$ 定义 $I_n$（除非 $f$ 在某个中点为 $0$）。利用闭区间套定理，找到满足 $f(x)=0$ 的点 $x$。"
+        },
+        {
+          "id": "p142-b10",
+          "source": "### \\*16.",
+          "sourceSha256": "f63edeb4dbccfdc649f956ca6c68709a605b569f278ea9d361bd034f417fda87"
+        },
+        {
+          "id": "p142-b11",
+          "source": "Suppose $f$ were continuous on $[a,b]$, but not bounded on $[a,b]$. Then $f$ would be unbounded on either $[a,(a+b)/2]$ or $[(a+b)/2,b]$. Why? Let $I_1$ be one of these intervals on which $f$ is unbounded. Proceed as in Problem 15 to obtain a contradiction.",
+          "sourceSha256": "9833fdb56aa18b775e2f25138013261d94648062da104943df5dc32e43658b94",
+          "translation": "假设 $f$ 在 $[a,b]$ 上连续，但在 $[a,b]$ 上无界。那么 $f$ 在 $[a,(a+b)/2]$ 或 $[(a+b)/2,b]$ 上必定无界。为什么？令 $I_1$ 为其中一个使 $f$ 无界的区间。像习题 15 那样继续下去，导出矛盾。"
+        },
+        {
+          "id": "p142-b12",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p142-b13",
+          "source": "(a) Let $A=\\{x:x<\\alpha\\}$. Prove the following (they are all easy):",
+          "sourceSha256": "3be997db5ab3d4973e56c720b5a0b610ca34b97a077fa787a238bdf28b81a84f",
+          "translation": "(a) 令 $A=\\{x:x<\\alpha\\}$。证明以下结论（它们都很容易）："
+        },
+        {
+          "id": "p142-b14",
+          "source": "(i) If $x$ is in $A$ and $y<x$, then $y$ is in $A$.",
+          "sourceSha256": "d9e99fd422b80495526ba673b543de13c5654baed197b7d54102af814f951e5f",
+          "translation": "(i) 如果 $x$ 属于 $A$，且 $y<x$，那么 $y$ 属于 $A$。"
+        },
+        {
+          "id": "p142-b15",
+          "source": "(ii) $A\\ne\\varnothing$.",
+          "sourceSha256": "c61c94244cb4c14a7550ec1fd1455148235e94bd172224dea092206d1779bd86"
+        },
+        {
+          "id": "p142-b16",
+          "source": "(iii) $A\\ne\\mathbf R$.",
+          "sourceSha256": "cc3c7051dd970f4a94492c737a6aeda5e86119da45268ac0bfa8e156f3b79a44"
+        },
+        {
+          "id": "p142-b17",
+          "source": "(iv) If $x$ is in $A$, then there is some number $x'$ in $A$ such that $x<x'$.",
+          "sourceSha256": "4d758c34fad78e79eabb0c065cd0918b1f830e3998bb64166fc13aac1420743d",
+          "translation": "(iv) 如果 $x$ 属于 $A$，那么 $A$ 中存在某个数 $x'$，使 $x<x'$。"
+        },
+        {
+          "id": "p142-b18",
+          "source": "(b) Suppose, conversely, that $A$ satisfies (i)–(iv). Prove that $A=\\{x:x<\\sup A\\}$.",
+          "sourceSha256": "2e2ad9b77da2a39d6e50cb973fcc0250d4c746ac979dfe953ef6b71ebc3e32d7",
+          "translation": "(b) 反过来，假设 $A$ 满足 (i)–(iv)。证明 $A=\\{x:x<\\sup A\\}$。"
+        },
+        {
+          "id": "p142-b19",
+          "source": "### \\*18.",
+          "sourceSha256": "dc9f11a962e705d50490c24f8b3e71f51b22675236704438ef4ec0936298a65c"
+        },
+        {
+          "id": "p142-b20",
+          "source": "A number $x$ is called an **almost upper bound** for $A$ if there are only finitely many numbers $y$ in $A$ with $y\\ge x$. An **almost lower bound** is defined similarly.",
+          "sourceSha256": "392f08799987e7181c1df3422b353e7a03e5a954f38a22de4ff451f6d7ab8cd0",
+          "translation": "如果 $A$ 中只有有限多个数 $y$ 满足 $y\\ge x$，就称数 $x$ 为 $A$ 的一个**几乎上界**。**几乎下界**的定义类似。"
+        },
+        {
+          "id": "p142-b21",
+          "source": "(a) Find all almost upper bounds and almost lower bounds of the sets in Problem 1.",
+          "sourceSha256": "50650397a2ef7ce4a20dcf7d20628e5dbc3368e9f3a2dff98cd4aef775462b91",
+          "translation": "(a) 求习题 1 中各集合的全部几乎上界和几乎下界。"
+        },
+        {
+          "id": "p142-b22",
+          "source": "(b) Suppose that $A$ is a bounded infinite set. Prove that the set $B$ of all almost upper bounds of $A$ is nonempty, and bounded below.",
+          "sourceSha256": "4dc06fcf94f36f873cf74ec133c985b2081d2e4de3245035280f46b099cb02bc",
+          "translation": "(b) 假设 $A$ 是有界无限集。证明 $A$ 的所有几乎上界组成的集合 $B$ 非空，且有下界。"
+        }
+      ]
+    },
+    {
+      "printed": 143,
+      "sourceSha256": "0ed0953d30e2bdbcd6e94097855041c263873b4056c17e208a537b3882d2cc87",
+      "blocks": [
+        {
+          "id": "p143-b1",
+          "source": "(c) It follows from part (b) that $\\inf B$ exists; this number is called the **limit superior** of $A$, and denoted by $\\overline{\\lim} A$ or $\\lim\\sup A$. Find $\\overline{\\lim} A$ for each set $A$ in Problem 1.",
+          "sourceSha256": "e7689731468eda20f9829ddb77b7292b529531b377bca782d223d302fff188a8",
+          "translation": "(c) 由 (b) 可知 $\\inf B$ 存在；这个数称为 $A$ 的**上极限**，记作 $\\overline{\\lim} A$ 或 $\\lim\\sup A$。求习题 1 中每个集合 $A$ 的 $\\overline{\\lim} A$。"
+        },
+        {
+          "id": "p143-b2",
+          "source": "(d) Define $\\underline{\\lim} A$, and find it for all $A$ in Problem 1.",
+          "sourceSha256": "c81566e19108a841a4bbba5623ac12466340d2bcb59b8c890a3b4ff97127b0ca",
+          "translation": "(d) 定义 $\\underline{\\lim} A$，并求习题 1 中所有 $A$ 的这一数值。"
+        },
+        {
+          "id": "p143-b3",
+          "source": "### \\*19.",
+          "sourceSha256": "7e4f2b11b162b6abc626b910cd4565b2247b0ee93dbac4aad15418c46a98a3e3"
+        },
+        {
+          "id": "p143-b4",
+          "source": "If $A$ is a bounded infinite set prove",
+          "sourceSha256": "4bf53934748069445c651f7ee4506bc50a1f9d720f818e048adff0047c7d36fb",
+          "translation": "如果 $A$ 是有界无限集，证明"
+        },
+        {
+          "id": "p143-b5",
+          "source": "(a) $\\underline{\\lim} A\\le\\overline{\\lim} A$.",
+          "sourceSha256": "08366fa7b55e46d16abcadfd94d4eef3f6d4548ec1779c0ff84a948fe42dc1a2"
+        },
+        {
+          "id": "p143-b6",
+          "source": "(b) $\\overline{\\lim} A\\le\\sup A$.",
+          "sourceSha256": "959520d1e7c0baf9cbcbb48efe70f7738924d52537aeabcc36138df47d42f60f"
+        },
+        {
+          "id": "p143-b7",
+          "source": "(c) If $\\overline{\\lim} A<\\sup A$, then $A$ contains a largest element.",
+          "sourceSha256": "3f9409e7277bc6e4c364cfb5d27133db56840b92073e4c6e5804642b15e8386f",
+          "translation": "(c) 如果 $\\overline{\\lim} A<\\sup A$，那么 $A$ 包含最大元素。"
+        },
+        {
+          "id": "p143-b8",
+          "source": "(d) The analogues of parts (b) and (c) for $\\underline{\\lim}$.",
+          "sourceSha256": "f4c570ddbf58e545f806d2202bef766216c9bc7a01924b55b93bacf1dbca0e01",
+          "translation": "(d) 对 $\\underline{\\lim}$，证明与 (b)、(c) 相对应的结论。"
+        },
+        {
+          "id": "p143-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"430 528 856 350\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0162.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 9</figcaption>\n</figure>",
+          "sourceSha256": "5f22a82454bb4404c4339b252d638a45da138b79d0d66326c704863ca990b485"
+        },
+        {
+          "id": "p143-b10",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p143-b11",
+          "source": "Let $f$ be a continuous function on $\\mathbf R$. A point $x$ is called a **shadow point** of $f$ if there is a number $y>x$ with $f(y)>f(x)$. The rationale for this terminology is indicated in Figure 9; the parallel lines are the rays of the sun rising in the east (you are facing north). Suppose that all points of $(a,b)$ are shadow points, but that $a$ and $b$ are not shadow points. Clearly, $f(a)\\ge f(b)$.",
+          "sourceSha256": "4feea553b811fc5cddf903ed82c23a0d1e90a631258d811105b9ad07c40d512d",
+          "translation": "设 $f$ 是 $\\mathbf R$ 上的连续函数。如果存在数 $y>x$ 使 $f(y)>f(x)$，则称点 $x$ 为 $f$ 的一个**阴影点**。图 9 说明了这个名称的由来：平行线是从东方升起的太阳的光线（你面朝北方）。假设 $(a,b)$ 中所有点都是阴影点，而 $a$ 和 $b$ 不是阴影点。显然 $f(a)\\ge f(b)$。"
+        },
+        {
+          "id": "p143-b12",
+          "source": "(a) Suppose that $f(a)>f(b)$. Show that the point where $f$ takes on its maximum value on $[a,b]$ must be $a$.",
+          "sourceSha256": "a4cc39de431b12d772e29bd502882ed3db7a2632f2b622f25bfd829ce288c17f",
+          "translation": "(a) 假设 $f(a)>f(b)$。证明 $f$ 在 $[a,b]$ 上取到最大值的点必须是 $a$。"
+        },
+        {
+          "id": "p143-b13",
+          "source": "(b) Then show that this leads to a contradiction, so that in fact we must have $f(a)=f(b)$.",
+          "sourceSha256": "33c16298d8f71a51d79536352e59a7287790febaac6ff497495aea6e1fe524c3",
+          "translation": "(b) 然后说明这会导致矛盾，因此实际上必须有 $f(a)=f(b)$。"
+        },
+        {
+          "id": "p143-b14",
+          "source": "This little result, known as the Rising Sun Lemma, is instrumental in proving several beautiful theorems that do not appear in this book; see page 450.",
+          "sourceSha256": "fcec6f85bce7fa773a3c9948fcf20d821d0c79ddaed0fa93c0d33ade7a170420",
+          "translation": "这个小结果称为旭日引理，对于证明本书未收录的几个美妙定理很有作用；见第 450 页。"
+        }
+      ]
+    },
+    {
+      "printed": 144,
+      "sourceSha256": "d906fb0130f5f0f4b14bda1b86f488be1aed0ed242d702d020b525ca138acac3",
+      "blocks": [
+        {
+          "id": "p144-b1",
+          "source": "## APPENDIX. UNIFORM CONTINUITY",
+          "sourceSha256": "81cfedfd76f2e2a637cadc53fec4be8806b4300bbd6ca9589ed1c295dfdd93f1",
+          "translation": "## 附录：一致连续"
+        },
+        {
+          "id": "p144-b2",
+          "source": "Now that we’ve come to the end of the “foundations,” it might be appropriate to slip in one further fundamental concept. This notion is not used crucially in the rest of the book, but it can help clarify many points later on.",
+          "sourceSha256": "2c373571ce0a9dbe750a74abd79fa73e1e83b056e7d1fad1026585efab73a2b7",
+          "translation": "现在，“基础”部分已经走到尽头，也许适合再顺便引入一个基本概念。这一概念在本书其余部分并非关键工具，但有助于澄清后面的许多问题。"
+        },
+        {
+          "id": "p144-b3",
+          "source": "We know that the function $f(x)=x^2$ is continuous at $a$, for all $a$. In other words,",
+          "sourceSha256": "62c3d5ea6df704dfc6a4f608e3abc8e5983681f18eca2261b54af70312751108",
+          "translation": "我们知道，对于所有 $a$，函数 $f(x)=x^2$ 都在 $a$ 处连续。换句话说，"
+        },
+        {
+          "id": "p144-b4",
+          "source": "$$\\begin{gathered}\n\\text{if }a\\text{ is any number, then for every }\\varepsilon>0\\text{ there is some }\\delta>0\\\\\n\\text{such that, for all }x,\\text{ if }|x-a|<\\delta,\\text{ then }|x^2-a^2|<\\varepsilon.\n\\end{gathered}$$",
+          "sourceSha256": "c1307148987991a469278cc4f61f39f1b6597df80f5a0eb756c47fe6915dc7d3"
+        },
+        {
+          "id": "p144-b5",
+          "source": "Of course, $\\delta$ depends on $\\varepsilon$. But $\\delta$ *also depends* on $a$—the $\\delta$ that works at $a$ might not work at $b$ (Figure 1). Indeed, it’s clear that given $\\varepsilon>0$ there is no one $\\delta>0$ that works for all $a$, or even for all positive $a$. In fact, the number $a+\\delta/2$ will certainly satisfy $|x-a|<\\delta$, but if $a>0$, then",
+          "sourceSha256": "034e31c96cecc04905668fabb3b301d4f92be206e47c094260e975f290599dea",
+          "translation": "当然，$\\delta$ 依赖于 $\\varepsilon$。但 $\\delta$ *也依赖于* $a$：在 $a$ 处适用的 $\\delta$，在 $b$ 处未必适用（图 1）。确实，给定 $\\varepsilon>0$，显然不存在一个对所有 $a$，甚至对所有正的 $a$ 都适用的 $\\delta>0$。事实上，数 $a+\\delta/2$ 肯定满足 $|x-a|<\\delta$，但如果 $a>0$，那么"
+        },
+        {
+          "id": "p144-b6",
+          "source": "$$\\left|\\left(a+\\frac{\\delta}{2}\\right)^2-a^2\\right|=\\left|a\\delta+\\frac{\\delta^2}{4}\\right|\\ge a\\delta,$$",
+          "sourceSha256": "49f80a51851c33d3e4eaec808f03db182fc6803a50fcaa5012a5b5db22dba00d"
+        },
+        {
+          "id": "p144-b7",
+          "source": "and this won’t be $<\\varepsilon$ once $a>\\varepsilon/\\delta$. (This is just an admittedly confusing computational way of saying that $f$ is growing faster and faster!)",
+          "sourceSha256": "c3965f288a7a9c99d08f834d98d76320a59348ab22ba81b43ee9c1ec7b90f4f0",
+          "translation": "一旦 $a>\\varepsilon/\\delta$，它就不会 $<\\varepsilon$。（说白了，这只是以一种确实令人费解的计算方式，说明 $f$ 增长得越来越快！）"
+        },
+        {
+          "id": "p144-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:386px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"45 259 386 510\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0163.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "0cffbe6c4a6fae3f06794612a09863cd643570e5206de56a13f940aaee98a915"
+        },
+        {
+          "id": "p144-b9",
+          "source": "On the other hand, for any $\\varepsilon>0$ there *will* be one $\\delta>0$ that works for all $a$ in any interval $[-N,N]$. In fact, the $\\delta$ which works at $N$ or $-N$ will also work everywhere else in the interval.",
+          "sourceSha256": "0e32fc7c24260818968a83268e703bcdc512eb4ffe3386e1b4b91d6bd75b6be1",
+          "translation": "另一方面，对于任意 $\\varepsilon>0$，*确实存在*一个 $\\delta>0$，使它对任意区间 $[-N,N]$ 中所有 $a$ 都适用。事实上，在 $N$ 或 $-N$ 处适用的 $\\delta$，也适用于区间中的其他每一点。"
+        },
+        {
+          "id": "p144-b10",
+          "source": "As a final example, consider the function $f(x)=\\sin1/x$, or the function whose graph appears in Figure 18 on page 62. It is easy to see that, so long as $\\varepsilon<1$, there will not be one $\\delta>0$ that works for these functions at all points $a$ in the open interval $(0,1)$.",
+          "sourceSha256": "20a6b56f814e595618e6fe6b1272df5128680d928b42ae8e5cd6181e850bb29a",
+          "translation": "最后一个例子，考虑函数 $f(x)=\\sin1/x$，或第 62 页图 18 所示的函数。容易看出，只要 $\\varepsilon<1$，对于这些函数，就不存在一个对开区间 $(0,1)$ 中所有点 $a$ 都适用的 $\\delta>0$。"
+        },
+        {
+          "id": "p144-b11",
+          "source": "These examples illustrate important distinctions between the behavior of various continuous functions on certain intervals, and there is a special term to signal this distinction.",
+          "sourceSha256": "42a2c3d0bff815868bce32711a883533bb57d5388371110375154c2f6e9b127d",
+          "translation": "这些例子说明了不同连续函数在某些区间上的行为之间的重要区别；有一个专门的术语用来标明这一区别。"
+        },
+        {
+          "id": "p144-b12",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p144-b13",
+          "source": "The function $f$ is **uniformly continuous on an interval** $A$ if for every $\\varepsilon>0$ there is some $\\delta>0$ such that, for all $x$ and $y$ in $A$,",
+          "sourceSha256": "bc988158d1d9a8f7080ea5c72f49bb19bd83fb035df63eeceb2e8f1aa88df59b",
+          "translation": "如果对于每个 $\\varepsilon>0$，都存在某个 $\\delta>0$，使得对于 $A$ 中所有 $x$ 和 $y$ 都有下述性质，就称函数 $f$ **在区间 $A$ 上一致连续**："
+        },
+        {
+          "id": "p144-b14",
+          "source": "$$\\text{if }|x-y|<\\delta,\\text{ then }|f(x)-f(y)|<\\varepsilon.$$",
+          "sourceSha256": "8558ff937f946620b3813a36a07b954d39d2fce612cfb1416a7caeadac45a711"
+        },
+        {
+          "id": "p144-b15",
+          "source": "We’ve seen that a function can be continuous on the whole line, or on an open interval, without being uniformly continuous there. On the other hand, the function $f(x)=x^2$ did turn out to be uniformly continuous on any closed interval. This shouldn’t be too surprising—it’s the same sort of thing that occurs when we ask whether a function is bounded on an interval—and we would be led to suspect that any continuous function on a closed interval is also uniformly continuous on that interval. In order to prove this, we’ll need to deal first with one subtle point.",
+          "sourceSha256": "f48b20af7d8bfd18bd689bf4350939201b2f2f7144230e374be2ee2e79d32eed",
+          "translation": "我们已经看到，一个函数可以在整条直线或某个开区间上连续，却不在那里一致连续。另一方面，函数 $f(x)=x^2$ 的确在任何闭区间上都一致连续。这不应太令人惊讶：询问函数在某个区间上是否有界时，也出现过类似情形。因此，我们自然会猜测：闭区间上的任何连续函数，也在该区间上一致连续。为了证明这一点，首先需要处理一个微妙之处。"
+        },
+        {
+          "id": "p144-b16",
+          "source": "Suppose that we have two intervals $[a,b]$ and $[b,c]$ with the common end-point $b$, and a function $f$ that is defined on $[a,c]$. Suppose that for a particular",
+          "sourceSha256": "ed20ed11e79cc3841f3cde643bebfb09374d4810ebb280540d5d92a9448e311b",
+          "translation": "假设有两个具有公共端点 $b$ 的区间 $[a,b]$ 和 $[b,c]$，以及定义在 $[a,c]$ 上的函数 $f$。假设对于某个特定的"
+        }
+      ]
+    },
+    {
+      "printed": 145,
+      "sourceSha256": "87975ec5e8d26ae12dae3a28874dfb75ddc0d7a1a187bb43e1502948243b16e8",
+      "blocks": [
+        {
+          "id": "p145-b1",
+          "source": "the following two statements hold:",
+          "sourceSha256": "7c9f30ca1afcbee7774b2dcbdc253a6eb4451a22757ce98bf7ffea3d135b3703",
+          "translation": "下列两个陈述成立："
+        },
+        {
+          "id": "p145-b2",
+          "source": "(i) if $x$ and $y$ are in $[a,b]$ and $|x-y|<\\delta_1$, then $|f(x)-f(y)|<\\varepsilon$,",
+          "sourceSha256": "9d67b2c3e49077320bba13336f4d15f50454cda6f8893f3d6ed7c2ccddf39387",
+          "translation": "(i) 如果 $x$ 和 $y$ 属于 $[a,b]$，且 $|x-y|<\\delta_1$，那么 $|f(x)-f(y)|<\\varepsilon$，"
+        },
+        {
+          "id": "p145-b3",
+          "source": "(ii) if $x$ and $y$ are in $[b,c]$ and $|x-y|<\\delta_2$, then $|f(x)-f(y)|<\\varepsilon$.",
+          "sourceSha256": "337a29f9d8e0dca1becca69614351e1eef3e52ed637aa5cc9057f517be2d3d11",
+          "translation": "(ii) 如果 $x$ 和 $y$ 属于 $[b,c]$，且 $|x-y|<\\delta_2$，那么 $|f(x)-f(y)|<\\varepsilon$。"
+        },
+        {
+          "id": "p145-b4",
+          "source": "We’d like to know if there is some $\\delta>0$ such that $|f(x)-f(y)|<\\varepsilon$ whenever $x$ and $y$ are points in $[a,c]$ with $|x-y|<\\delta$. Our first inclination might be to choose $\\delta$ as the minimum of $\\delta_1$ and $\\delta_2$. But it is easy to see what goes wrong (Figure 2): we might have $x$ in $[a,b]$ and $y$ in $[b,c]$, and then neither (i) nor (ii) tells us anything about $|f(x)-f(y)|$. So we have to be a little more cagey, and also use continuity of $f$ at $b$.",
+          "sourceSha256": "f942d17b7fab35a8129fa078493c817a861c51d06bea3e6b46b21a448adf0396",
+          "translation": "我们想知道：是否存在某个 $\\delta>0$，使得只要 $x$ 和 $y$ 是 $[a,c]$ 中满足 $|x-y|<\\delta$ 的点，就有 $|f(x)-f(y)|<\\varepsilon$。最初也许会想，把 $\\delta$ 取为 $\\delta_1$ 和 $\\delta_2$ 中较小的一个。但很容易看出哪里会出问题（图 2）：可能 $x$ 属于 $[a,b]$，而 $y$ 属于 $[b,c]$；这样，(i) 和 (ii) 都不能告诉我们关于 $|f(x)-f(y)|$ 的任何信息。因此，必须更谨慎一些，还要利用 $f$ 在 $b$ 处的连续性。"
+        },
+        {
+          "id": "p145-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:402px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 347 402 93\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0164.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "8ef81d81beb0c9bb609facef62e01ca4e58af3e75030082fd3fcaeafbf02db32"
+        },
+        {
+          "id": "p145-b6",
+          "source": "**LEMMA**",
+          "sourceSha256": "44f358400cb73f1e27f99455755141a3f33fd3e42a33a3b22e88b040e733449d",
+          "translation": "**引理**"
+        },
+        {
+          "id": "p145-b7",
+          "source": "Let $a<b<c$ and let $f$ be continuous on the interval $[a,c]$. Let $\\varepsilon>0$, and suppose that statements (i) and (ii) hold. Then there is a $\\delta>0$ such that,",
+          "sourceSha256": "2258e1a3541ef26060fd9af0e1a45887686820ac7ca30b945144bf792e4f78c0",
+          "translation": "设 $a<b<c$，且 $f$ 在区间 $[a,c]$ 上连续。取 $\\varepsilon>0$，并假设陈述 (i) 和 (ii) 成立。那么存在 $\\delta>0$，使得"
+        },
+        {
+          "id": "p145-b8",
+          "source": "$$\\text{if }x\\text{ and }y\\text{ are in }[a,c]\\text{ and }|x-y|<\\delta,\\text{ then }|f(x)-f(y)|<\\varepsilon.$$",
+          "sourceSha256": "efdcc292bb1a35b2a13893379b0de8d42175efdfd138ef4f488814a3a848835e"
+        },
+        {
+          "id": "p145-b9",
+          "source": "**PROOF** Since $f$ is continuous at $b$, there is a $\\delta_3>0$ such that,",
+          "sourceSha256": "79e819dec87d0e6b119d5854bd9505a7c7a743023b56920d7711c2cb6ec14301",
+          "translation": "**证明** 由于 $f$ 在 $b$ 处连续，存在 $\\delta_3>0$，使得"
+        },
+        {
+          "id": "p145-b10",
+          "source": "$$\\text{if }|x-b|<\\delta_3,\\text{ then }|f(x)-f(b)|<\\frac{\\varepsilon}{2}.$$",
+          "sourceSha256": "b5e215bb42d2d025c9b7c8d0e96f58b0d1bea9391b639375b723c7ffcf300026"
+        },
+        {
+          "id": "p145-b11",
+          "source": "It follows that",
+          "sourceSha256": "6204539c6a801ce3ed340a5b52e72f42d1f21000d35fdcc77e1e34c6d2a854ab",
+          "translation": "由此可知"
+        },
+        {
+          "id": "p145-b12",
+          "source": "(iii) if $|x-b|<\\delta_3$ and $|y-b|<\\delta_3$, then $|f(x)-f(y)|<\\varepsilon$.",
+          "sourceSha256": "8bbc6fec727904f90399e568fe6857d1adb14c0e4a4c75d78ddc03c6bf7f3019",
+          "translation": "(iii) 如果 $|x-b|<\\delta_3$ 且 $|y-b|<\\delta_3$，那么 $|f(x)-f(y)|<\\varepsilon$。"
+        },
+        {
+          "id": "p145-b13",
+          "source": "Choose $\\delta$ to be the minimum of $\\delta_1$, $\\delta_2$, and $\\delta_3$. We claim that this $\\delta$ works. In fact, suppose that $x$ and $y$ are any two points in $[a,c]$ with $|x-y|<\\delta$. If $x$ and $y$ are both in $[a,b]$, then $|f(x)-f(y)|<\\varepsilon$ by (i); and if $x$ and $y$ are both in $[b,c]$, then $|f(x)-f(y)|<\\varepsilon$ by (ii). The only other possibility is that",
+          "sourceSha256": "394918f862954ae8a38f9ecae5a9ee4430256688dda4181dca12b7629b94056b",
+          "translation": "把 $\\delta$ 取为 $\\delta_1$、$\\delta_2$、$\\delta_3$ 中最小的一个。我们断言这个 $\\delta$ 可行。事实上，假设 $x$ 和 $y$ 是 $[a,c]$ 中任意两个满足 $|x-y|<\\delta$ 的点。如果 $x$ 和 $y$ 都属于 $[a,b]$，由 (i) 得到 $|f(x)-f(y)|<\\varepsilon$；如果 $x$ 和 $y$ 都属于 $[b,c]$，由 (ii) 得到 $|f(x)-f(y)|<\\varepsilon$。唯一剩下的可能是"
+        },
+        {
+          "id": "p145-b14",
+          "source": "$$x<b<y\\qquad\\text{or}\\qquad y<b<x.$$",
+          "sourceSha256": "24ae13eac669d837fa2c2ae39bc7e87e94faa7a604ed3013ad403d5fc33c9fe4"
+        },
+        {
+          "id": "p145-b15",
+          "source": "In either case, since $|x-y|<\\delta$, we also have $|x-b|<\\delta$ and $|y-b|<\\delta$. So $|f(x)-f(y)|<\\varepsilon$ by (iii). $\\blacksquare$",
+          "sourceSha256": "8daee563e416fff26d07ce7476371bda118417067c37f1e183fe1c505d449eff",
+          "translation": "无论哪种情况，由于 $|x-y|<\\delta$，还会有 $|x-b|<\\delta$ 和 $|y-b|<\\delta$。所以由 (iii) 得到 $|f(x)-f(y)|<\\varepsilon$。$\\blacksquare$"
+        },
+        {
+          "id": "p145-b16",
+          "source": "**THEOREM 1**",
+          "sourceSha256": "2b6c6f1cd8500f04785734eb53e38fae29cf7651dd2ba301e21cef75e224df22",
+          "translation": "**定理 1**"
+        },
+        {
+          "id": "p145-b17",
+          "source": "If $f$ is continuous on $[a,b]$, then $f$ is uniformly continuous on $[a,b]$.",
+          "sourceSha256": "b9fa80cb290025d8254e48c3b3c23bd90ef931bd3b5bea9d1489d9558c205db7",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，那么 $f$ 在 $[a,b]$ 上一致连续。"
+        },
+        {
+          "id": "p145-b18",
+          "source": "**PROOF** It’s the usual trick, but we’ve got to be a little bit careful about the mechanism of the proof. For $\\varepsilon>0$ let’s say that $f$ is $\\varepsilon$-*good* on $[a,b]$ if there is some $\\delta>0$ such that, for all $y$ and $z$ in $[a,b]$,",
+          "sourceSha256": "e7fde30002d0f2ab300a34909bc14abafcae14c6c3f23e3972b15111d650a2ca",
+          "translation": "**证明** 仍是惯用的技巧，不过必须稍加注意证明的运作方式。对于 $\\varepsilon>0$，如果存在某个 $\\delta>0$，使得对 $[a,b]$ 中所有 $y$ 和 $z$ 都满足下式，就称 $f$ 在 $[a,b]$ 上是 *$\\varepsilon$-良好的*："
+        },
+        {
+          "id": "p145-b19",
+          "source": "$$\\text{if }|y-z|<\\delta,\\text{ then }|f(y)-f(z)|<\\varepsilon.$$",
+          "sourceSha256": "d501d0919f8c9ce264b2345033fd51fca45252fc5a9f2caeb9f84b7123edf825"
+        },
+        {
+          "id": "p145-b20",
+          "source": "Then we’re trying to prove that $f$ is $\\varepsilon$-good on $[a,b]$ for all $\\varepsilon>0$.",
+          "sourceSha256": "ec3fc8feb33262b458eab27d41b3142c8fa0a199364db92a75b2f4dda1594a86",
+          "translation": "这样，我们要证明的就是：对于所有 $\\varepsilon>0$，$f$ 在 $[a,b]$ 上都是 $\\varepsilon$-良好的。"
+        },
+        {
+          "id": "p145-b21",
+          "source": "Consider any particular $\\varepsilon>0$. Let",
+          "sourceSha256": "16f2ab23b266dafa7a6583a51b5b0e333e3b88b4892c2ba168ba0aef1cf0b89f",
+          "translation": "任取一个特定的 $\\varepsilon>0$。令"
+        },
+        {
+          "id": "p145-b22",
+          "source": "$$A=\\{x:a\\le x\\le b\\text{ and }f\\text{ is }\\varepsilon\\text{-good on }[a,x]\\}.$$",
+          "sourceSha256": "b7040d2d3da56971d3093cfa4cd6a5e67ee825cb32295982990551584d4b3338"
+        },
+        {
+          "id": "p145-b23",
+          "source": "Then $A\\ne\\varnothing$ (since $a$ is in $A$), and $A$ is bounded above (by $b$), so $A$ has a least upper bound $\\alpha$. We really should write $\\alpha_\\varepsilon$, since $A$ and $\\alpha$ might depend on $\\varepsilon$. But we won’t since we intend to prove that $\\alpha=b$, no matter what $\\varepsilon$ is.",
+          "sourceSha256": "df891291e12a602f14fae4d9098e2d7c43fc6e75916aea3f2abe5a95c0b72f18",
+          "translation": "那么 $A\\ne\\varnothing$（因为 $a$ 属于 $A$），而且 $A$ 有上界（$b$ 就是），所以 $A$ 有最小上界 $\\alpha$。严格说来，应写成 $\\alpha_\\varepsilon$，因为 $A$ 和 $\\alpha$ 可能依赖于 $\\varepsilon$。但我们不这样写，因为打算证明：无论 $\\varepsilon$ 是什么，都有 $\\alpha=b$。"
+        }
+      ]
+    },
+    {
+      "printed": 146,
+      "sourceSha256": "30aeb9351586e6c88c5a97d753efd339484bc3f5f21499523de5759ef0f0af4c",
+      "blocks": [
+        {
+          "id": "p146-b1",
+          "source": "Suppose that we had $\\alpha<b$. Since $f$ is continuous at $\\alpha$, there is some $\\delta_0>0$ such that, if $|y-\\alpha|<\\delta_0$, then $|f(y)-f(\\alpha)|<\\varepsilon/2$. Consequently, if $|y-\\alpha|<\\delta_0$ and $|z-\\alpha|<\\delta_0$, then $|f(y)-f(z)|<\\varepsilon$. So $f$ is surely $\\varepsilon$-good on the interval $[\\alpha-\\delta_0,\\alpha+\\delta_0]$. On the other hand, since $\\alpha$ is the least upper bound of $A$, it is also clear that $f$ is $\\varepsilon$-good on $[a,\\alpha-\\delta_0]$. Then the Lemma implies that $f$ is $\\varepsilon$-good on $[a,\\alpha+\\delta_0]$, so $\\alpha+\\delta_0$ is in $A$, contradicting the fact that $\\alpha$ is an upper bound.",
+          "sourceSha256": "9c2a50d1d97fb1ef853dfe231b2216678e6abbcf455be64011dd5e599ef6465c",
+          "translation": "假设 $\\alpha<b$。由于 $f$ 在 $\\alpha$ 处连续，存在某个 $\\delta_0>0$，使得若 $|y-\\alpha|<\\delta_0$，则 $|f(y)-f(\\alpha)|<\\varepsilon/2$。因此，若 $|y-\\alpha|<\\delta_0$ 且 $|z-\\alpha|<\\delta_0$，就有 $|f(y)-f(z)|<\\varepsilon$。所以 $f$ 在区间 $[\\alpha-\\delta_0,\\alpha+\\delta_0]$ 上肯定是 $\\varepsilon$-良好的。另一方面，由于 $\\alpha$ 是 $A$ 的最小上界，显然 $f$ 在 $[a,\\alpha-\\delta_0]$ 上也是 $\\varepsilon$-良好的。于是由引理，$f$ 在 $[a,\\alpha+\\delta_0]$ 上是 $\\varepsilon$-良好的，所以 $\\alpha+\\delta_0$ 属于 $A$，与 $\\alpha$ 是上界矛盾。"
+        },
+        {
+          "id": "p146-b2",
+          "source": "To complete the proof we just have to show that $\\alpha=b$ is actually in $A$. The argument for this is practically the same: Since $f$ is continuous at $b$, there is some $\\delta_0>0$ such that, if $b-\\delta_0<y<b$, then $|f(y)-f(b)|<\\varepsilon/2$. So $f$ is $\\varepsilon$-good on $[b-\\delta_0,b]$. But $f$ is also $\\varepsilon$-good on $[a,b-\\delta_0]$, so the Lemma implies that $f$ is $\\varepsilon$-good on $[a,b]$. $\\blacksquare$",
+          "sourceSha256": "573577a6eed57ffcccef64bf8da2633ba426dfd7a870ba5beffcc8dbddf0c219",
+          "translation": "要完成证明，只需说明 $\\alpha=b$ 实际上属于 $A$。论证几乎相同：由于 $f$ 在 $b$ 处连续，存在某个 $\\delta_0>0$，使得若 $b-\\delta_0<y<b$，则 $|f(y)-f(b)|<\\varepsilon/2$。所以 $f$ 在 $[b-\\delta_0,b]$ 上是 $\\varepsilon$-良好的。但 $f$ 在 $[a,b-\\delta_0]$ 上也 $\\varepsilon$-良好，因此由引理，$f$ 在 $[a,b]$ 上 $\\varepsilon$-良好。$\\blacksquare$"
+        },
+        {
+          "id": "p146-b3",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p146-b4",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p146-b5",
+          "source": "(a) For which of the following values of $\\alpha$ is the function $f(x)=x^\\alpha$ uniformly continuous on $[0,\\infty)$: $\\alpha=1/3,1/2,2,3$?",
+          "sourceSha256": "3b8d31f712ca108d474424034124888dac372aed41583e29794acaad0da5b88f",
+          "translation": "(a) 对下列哪些 $\\alpha$ 的值，函数 $f(x)=x^\\alpha$ 在 $[0,\\infty)$ 上一致连续：$\\alpha=1/3,1/2,2,3$？"
+        },
+        {
+          "id": "p146-b6",
+          "source": "(b) Find a function $f$ that is continuous and bounded on $(0,1]$, but not uniformly continuous on $(0,1]$.",
+          "sourceSha256": "d20a74a9a92cfc486bec5466243506519513d6f59a9d65c449426266287d72a7",
+          "translation": "(b) 找一个在 $(0,1]$ 上连续且有界，但在 $(0,1]$ 上不一致连续的函数 $f$。"
+        },
+        {
+          "id": "p146-b7",
+          "source": "(c) Find a function $f$ that is continuous and bounded on $[0,\\infty)$ but which is not uniformly continuous on $[0,\\infty)$.",
+          "sourceSha256": "ab405d5c3fbca3bead15ce22b3584135cc866d3fabd6166464145d928ec4f6f4",
+          "translation": "(c) 找一个在 $[0,\\infty)$ 上连续且有界，但在 $[0,\\infty)$ 上不一致连续的函数 $f$。"
+        },
+        {
+          "id": "p146-b8",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p146-b9",
+          "source": "(a) Prove that if $f$ and $g$ are uniformly continuous on $A$, then so is $f+g$.",
+          "sourceSha256": "00c67d267c6f71e7e8a6cb3a46f425d94971ff94aa4f8b756379754788b1cecc",
+          "translation": "(a) 证明：如果 $f$ 和 $g$ 在 $A$ 上一致连续，那么 $f+g$ 也如此。"
+        },
+        {
+          "id": "p146-b10",
+          "source": "(b) Prove that if $f$ and $g$ are uniformly continuous and bounded on $A$, then $fg$ is uniformly continuous on $A$.",
+          "sourceSha256": "3fcb570da3e96b3af1c077203fed8a4391edd362d9986e46ad5970166a2b2ca9",
+          "translation": "(b) 证明：如果 $f$ 和 $g$ 在 $A$ 上一致连续且有界，那么 $fg$ 在 $A$ 上一致连续。"
+        },
+        {
+          "id": "p146-b11",
+          "source": "(c) Show that this conclusion does not hold if one of them isn’t bounded.",
+          "sourceSha256": "de4f42e15caea11e260cc5e1750f22dc0605a023947bda79a252073f0ea48486",
+          "translation": "(c) 说明：如果其中一个函数无界，上述结论就不成立。"
+        },
+        {
+          "id": "p146-b12",
+          "source": "(d) Suppose that $f$ is uniformly continuous on $A$, that $g$ is uniformly continuous on $B$, and that $f(x)$ is in $B$ for all $x$ in $A$. Prove that $g\\circ f$ is uniformly continuous on $A$.",
+          "sourceSha256": "11fc8cc7522ea91d1e5728cf24441ea822b83b7bf2b67aaa569945230190b6b6",
+          "translation": "(d) 假设 $f$ 在 $A$ 上一致连续，$g$ 在 $B$ 上一致连续，而且对 $A$ 中所有 $x$，$f(x)$ 都属于 $B$。证明 $g\\circ f$ 在 $A$ 上一致连续。"
+        },
+        {
+          "id": "p146-b13",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p146-b14",
+          "source": "Use a “bisection argument” (page 142) to give another proof of Theorem 1.",
+          "sourceSha256": "5225498ce17c4f79f3cb8e9146d745bec2e7f0e9989794b01d29f2ac70957833",
+          "translation": "用“二分论证”（第 142 页）给出定理 1 的另一个证明。"
+        },
+        {
+          "id": "p146-b15",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p146-b16",
+          "source": "Derive Theorem 7-2 as a consequence of Theorem 1.",
+          "sourceSha256": "51b7f9cf3702c6d73f4a821c921a501aedecc2d7a6d23e86a0ab6ea115ff639b",
+          "translation": "从定理 1 推出定理 7-2。"
+        }
+      ]
+    }
+  ]
+}

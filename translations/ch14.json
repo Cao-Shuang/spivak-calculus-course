@@ -1,0 +1,2120 @@
+{
+  "chapter": 14,
+  "language": "zh-CN",
+  "sourceSha256": "fd9fa928574efa63680464bccada14a0145a4fdfcb62ffa426bdfa231fd92fac",
+  "paragraphCount": 199,
+  "pages": [
+    {
+      "printed": 285,
+      "sourceSha256": "e46ca676553fa11eefcb2a35e40ef108d5207ca8e7f79b3ff45d9e27a3fbaec8",
+      "blocks": [
+        {
+          "id": "p285-b1",
+          "source": "# CHAPTER 14  THE FUNDAMENTAL THEOREM OF CALCULUS",
+          "sourceSha256": "9a4a9244dc2a3b2d0df460aded5be5816a522ded8afb8ad8bcee2492960d3b85",
+          "translation": "# 第 14 章　微积分基本定理"
+        },
+        {
+          "id": "p285-b2",
+          "source": "From the hints given in the previous chapter you may have already guessed the first theorem of this chapter. We know that if $f$ is integrable, then $F(x)=\\int_a^x f$ is continuous; it is only fitting that we ask what happens when the original function $f$ is continuous. It turns out that $F$ is differentiable (and its derivative is especially simple).",
+          "sourceSha256": "cc39b4ebc933238b6be4866a6099439ad2875e3af82f1d233083b273c95961ff",
+          "translation": "根据上一章的暗示，你也许已经猜到了本章的第一个定理。我们知道，如果 $f$ 可积，那么 $F(x)=\\int_a^x f$ 连续；自然应该追问，原来的函数 $f$ 连续时会怎样。结果是，$F$ 可微（而且它的导数格外简单）。"
+        },
+        {
+          "id": "p285-b3",
+          "source": "**THEOREM 1 (THE FIRST FUNDAMENTAL THEOREM OF CALCULUS)** Let $f$ be integrable on $[a,b]$, and define $F$ on $[a,b]$ by",
+          "sourceSha256": "653dc64e2825fa0f5503651efa0766137061c00ec6a5cbd00a3e588562e5a080",
+          "translation": "**定理 1（微积分第一基本定理）** 设 $f$ 在 $[a,b]$ 上可积，在 $[a,b]$ 上定义 $F$ 为"
+        },
+        {
+          "id": "p285-b4",
+          "source": "$$F(x)=\\int_a^x f.$$",
+          "sourceSha256": "d54e74e1d40c962e73ea7d156c240b369d1fd490cd3e4e3ead41e111f74de4f0"
+        },
+        {
+          "id": "p285-b5",
+          "source": "If $f$ is continuous at $c$ in $[a,b]$, then $F$ is differentiable at $c$, and",
+          "sourceSha256": "bd27e67d828738c24f20002de23642c65599c11d5b168238c1d96287df57c0a2",
+          "translation": "如果 $f$ 在 $[a,b]$ 中的点 $c$ 处连续，那么 $F$ 在 $c$ 处可微，并且"
+        },
+        {
+          "id": "p285-b6",
+          "source": "$$F'(c)=f(c).$$",
+          "sourceSha256": "ff8d1d2521a3265ef23f68d70bb2d5b38febc676e641290924ffb287f441686b"
+        },
+        {
+          "id": "p285-b7",
+          "source": "(If $c=a$ or $b$, then $F'(c)$ is understood to mean the right- or left-hand derivative of $F$.)",
+          "sourceSha256": "0e5180cbcf098c6e9890759be33c3c8aaf6065f490a550243f33aed5f5640a92",
+          "translation": "（如果 $c=a$ 或 $b$，则 $F'(c)$ 理解为 $F$ 的右导数或左导数。）"
+        },
+        {
+          "id": "p285-b8",
+          "source": "**PROOF** We will assume that $c$ is in $(a,b)$; the easy modifications for $c=a$ or $b$ may be supplied by the reader. By definition,",
+          "sourceSha256": "0f8d2a747fe98890e433e5d166a12e6df74db66c50c13c0505c7a258f65c5829",
+          "translation": "**证明** 我们假设 $c$ 位于 $(a,b)$ 中；$c=a$ 或 $b$ 时所需的简单修改，可由读者补充。根据定义，"
+        },
+        {
+          "id": "p285-b9",
+          "source": "$$F'(c)=\\lim_{h\\to0}\\frac{F(c+h)-F(c)}h.$$",
+          "sourceSha256": "5cc8017cacbcea2a6c3d61d15e9c32bbe1a31590996e9b75bcd168fdc5846e2a"
+        },
+        {
+          "id": "p285-b10",
+          "source": "Suppose first that $h>0$. Then",
+          "sourceSha256": "a1d8a889fd205eb05c21daa4373078e46e128b6d8358abb40e2ae4785a3c5900",
+          "translation": "先假设 $h>0$。那么"
+        },
+        {
+          "id": "p285-b11",
+          "source": "$$F(c+h)-F(c)=\\int_c^{c+h}f.$$",
+          "sourceSha256": "739944462d506b63693d422d77756638f685727612084f4a056430f018c94870"
+        },
+        {
+          "id": "p285-b12",
+          "source": "Define $m_h$ and $M_h$ as follows (Figure 1):",
+          "sourceSha256": "76e50f66e216a565ddbdc468e840c5f770fafbd8a2adea213045174562773a34",
+          "translation": "如下定义 $m_h$ 和 $M_h$（图 1）："
+        },
+        {
+          "id": "p285-b13",
+          "source": "$$\\begin{aligned}m_h&=\\inf\\{f(x):c\\le x\\le c+h\\},\\\\M_h&=\\sup\\{f(x):c\\le x\\le c+h\\}.\\end{aligned}$$",
+          "sourceSha256": "28ed53dc10f83ad7c8bcf1de26f660a113fd86aa64754bdf01aeae710e4d69b9"
+        },
+        {
+          "id": "p285-b14",
+          "source": "It follows from Theorem 13-7 that",
+          "sourceSha256": "ba13ba19024c521212f0caf2c61290e3a3b5338cbd76acc51aed04b580bba942",
+          "translation": "由定理 13-7 得到"
+        },
+        {
+          "id": "p285-b15",
+          "source": "$$m_h\\cdot h\\le\\int_c^{c+h}f\\le M_h\\cdot h.$$",
+          "sourceSha256": "834faa8ba9920de4458fd4655ef1ddc4ac175dddee061e62175656f69ca1e3ad"
+        },
+        {
+          "id": "p285-b16",
+          "source": "Therefore",
+          "sourceSha256": "690a67b3656547be132361b4faa96f8b180c31ff6811a01ec18354016f842796",
+          "translation": "因此"
+        },
+        {
+          "id": "p285-b17",
+          "source": "$$m_h\\le\\frac{F(c+h)-F(c)}h\\le M_h.$$",
+          "sourceSha256": "1c0e6ec5537795b5494ca1b0decb7a89256792727e212355029fed8fbc135488"
+        },
+        {
+          "id": "p285-b18",
+          "source": "If $h<0$, only a few details of the argument have to be changed. Let",
+          "sourceSha256": "880fabe0958dcf1783f2031ff0f1edd262aa6580d26fed008ffae879dc0d892c",
+          "translation": "如果 $h<0$，只需改动论证中的几个细节。令"
+        },
+        {
+          "id": "p285-b19",
+          "source": "$$\\begin{aligned}m_h&=\\inf\\{f(x):c+h\\le x\\le c\\},\\\\M_h&=\\sup\\{f(x):c+h\\le x\\le c\\}.\\end{aligned}$$",
+          "sourceSha256": "9c450e62dd2549fad4692acf5a623288b16f9af5b82d06f52c5a2d527e785923"
+        }
+      ]
+    },
+    {
+      "printed": 286,
+      "sourceSha256": "4d6db19f6d4e76b6d6b65b529acaf922f75a889eee7894fe83881f618e346dde",
+      "blocks": [
+        {
+          "id": "p286-b1",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:558px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"479 156 558 460\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0305.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "4acd0d1533579071d5e01c35951393c6b299d1800f1af75f3c3a9ce1986e1d8f"
+        },
+        {
+          "id": "p286-b2",
+          "source": "Then",
+          "sourceSha256": "0597f441dcca7c9bb0a79da4d94d03c523c031a3384009afff47ac1fd1a72b95",
+          "translation": "那么"
+        },
+        {
+          "id": "p286-b3",
+          "source": "$$m_h\\cdot(-h)\\le\\int_{c+h}^c f\\le M_h\\cdot(-h).$$",
+          "sourceSha256": "3c567b8442a5ad176b1d51451788b4e7db7451acc3c9aeb18e9c22f4c6ed8c8b"
+        },
+        {
+          "id": "p286-b4",
+          "source": "Since",
+          "sourceSha256": "98af1ed61831e6ab92bbb2a4d429344c8d0581c77d5c85311c5ed8a3207d2eea",
+          "translation": "由于"
+        },
+        {
+          "id": "p286-b5",
+          "source": "$$F(c+h)-F(c)=\\int_c^{c+h}f=-\\int_{c+h}^c f$$",
+          "sourceSha256": "294242b81867243047ef9f502a802c28b09800893af2f01da74fc7983aa8b5aa"
+        },
+        {
+          "id": "p286-b6",
+          "source": "this yields",
+          "sourceSha256": "7ca0867ec3674c109416518096b61acda96844a4ab653de848311b2013d6aa18",
+          "translation": "便得到"
+        },
+        {
+          "id": "p286-b7",
+          "source": "$$m_h\\cdot h\\ge F(c+h)-F(c)\\ge M_h\\cdot h.$$",
+          "sourceSha256": "2e89b4403cbd4db937543f25884eb568b504fe811bf69f54956cfa5576676de9"
+        },
+        {
+          "id": "p286-b8",
+          "source": "Since $h<0$, dividing by $h$ reverses the inequality again, yielding the same result as before:",
+          "sourceSha256": "d15a8889b2f299165c38169fabac12e419dd84bb64b048f604d97cafa45ffdb8",
+          "translation": "由于 $h<0$，除以 $h$ 会再次反转不等号方向，得到与前面相同的结果："
+        },
+        {
+          "id": "p286-b9",
+          "source": "$$m_h\\le\\frac{F(c+h)-F(c)}h\\le M_h.$$",
+          "sourceSha256": "1c0e6ec5537795b5494ca1b0decb7a89256792727e212355029fed8fbc135488"
+        },
+        {
+          "id": "p286-b10",
+          "source": "This inequality is true for any integrable function, continuous or not. Since $f$ is continuous at $c$, however,",
+          "sourceSha256": "0bf3e0c23d4d4a2d0818718364c7bc7a105a36d1da60359e27c9f9b7733b42fc",
+          "translation": "无论是否连续，这个不等式对任意可积函数都成立。不过，由于 $f$ 在 $c$ 处连续，"
+        },
+        {
+          "id": "p286-b11",
+          "source": "$$\\lim_{h\\to0}m_h=\\lim_{h\\to0}M_h=f(c),$$",
+          "sourceSha256": "49a7ee442751ec711b324da0b5073b2da88c686df5816ee39636b80e63f0fc85"
+        },
+        {
+          "id": "p286-b12",
+          "source": "and this proves that",
+          "sourceSha256": "269ae463ec4f3e14efe908259627b4a8a978a7ae7692dadd75bf43532d03ba92",
+          "translation": "这就证明了"
+        },
+        {
+          "id": "p286-b13",
+          "source": "$$F'(c)=\\lim_{h\\to0}\\frac{F(c+h)-F(c)}h=f(c).\\quad\\blacksquare$$",
+          "sourceSha256": "e1a16856a39fffe88bf63762fdf445109dce8c6c3c946d39615204f16ba4f21f"
+        },
+        {
+          "id": "p286-b14",
+          "source": "Although Theorem 1 deals only with the function obtained by varying the upper limit of integration, a simple trick shows what happens when the lower limit is varied. If $G$ is defined by",
+          "sourceSha256": "3e0b015ae94d06a16900c2f23344bc03930a123005680f3f52f44e5539c2c687",
+          "translation": "虽然定理 1 只讨论了改变积分上限所得到的函数，但一个简单的技巧就能说明，改变下限时会怎样。如果 $G$ 定义为"
+        },
+        {
+          "id": "p286-b15",
+          "source": "$$G(x)=\\int_x^b f,$$",
+          "sourceSha256": "522071d6a0cd34b0d3fcb69c79f420eb37493c44b9fff897da4461fbc55b26ae"
+        }
+      ]
+    },
+    {
+      "printed": 287,
+      "sourceSha256": "77ebb1821382125d67ad69a1d87b31807e8e6b1c50d5c163f1015cb158546cc4",
+      "blocks": [
+        {
+          "id": "p287-b1",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p287-b2",
+          "source": "$$G(x)=\\int_a^b f-\\int_a^x f.$$",
+          "sourceSha256": "a4280ae9e062d783bd93e93cde3b88164a659ce2b8b1d7fe7189fecb21fd3606"
+        },
+        {
+          "id": "p287-b3",
+          "source": "Consequently, if $f$ is continuous at $c$, then",
+          "sourceSha256": "22ede10c6539868eb4443a9cae22400052de9f1943413c18d317677bd90f21bb",
+          "translation": "因此，若 $f$ 在 $c$ 处连续，那么"
+        },
+        {
+          "id": "p287-b4",
+          "source": "$$G'(c)=-f(c).$$",
+          "sourceSha256": "0dc8f725e984aaff40e5c69ecf050dd1c9e2d8bc239502f21156376aaa774a8e"
+        },
+        {
+          "id": "p287-b5",
+          "source": "The minus sign appearing here is very fortunate, and allows us to extend Theorem 1 to the situation where the function",
+          "sourceSha256": "f323de2f731b3bfe1a7ef0f642ed5d24712354feb2778df33b96375d583a02d0",
+          "translation": "这里出现的负号十分幸运，它让我们能够将定理 1 推广到如下情形：函数"
+        },
+        {
+          "id": "p287-b6",
+          "source": "$$F(x)=\\int_a^x f$$",
+          "sourceSha256": "dfc1e05d2e9750e81595f9dc4739d8bdacd2fd86d035e331fa800b8b2f9514e8"
+        },
+        {
+          "id": "p287-b7",
+          "source": "is defined even for $x<a$. In this case we can write",
+          "sourceSha256": "6cfd1596789c1765ca36ae573efb1f023cbfb1fc1e14322caa218765f3c68e1d",
+          "translation": "即使在 $x<a$ 时也有定义。这时可以写成"
+        },
+        {
+          "id": "p287-b8",
+          "source": "$$F(x)=-\\int_x^a f,$$",
+          "sourceSha256": "562301fc51e4a54c5161334b6ee734bea3f4d695423ae302b2da96c8fce12c90"
+        },
+        {
+          "id": "p287-b9",
+          "source": "so if $c<a$ we have",
+          "sourceSha256": "a3054193785fc2f4257ef748d1702e50948490fd3853a661dce7810d99e5f0f3",
+          "translation": "所以，若 $c<a$，便有"
+        },
+        {
+          "id": "p287-b10",
+          "source": "$$F'(c)=-(-f(c))=f(c),$$",
+          "sourceSha256": "a0bfaad6c506bb373e88d7e366755e1a6c74772d7cdd39a31a512976fa061697"
+        },
+        {
+          "id": "p287-b11",
+          "source": "exactly as before.",
+          "sourceSha256": "36e01aa4e4e21e175d2dcc31be4ba0e5a30c4e438602f2a8eabdc07b5b57063d",
+          "translation": "与前面完全一样。"
+        },
+        {
+          "id": "p287-b12",
+          "source": "Notice that in either case, differentiability of $F$ at $c$ is ensured by continuity of $f$ at $c$ alone. Nevertheless, Theorem 1 is most interesting when $f$ is continuous at all points in $[a,b]$. In this case $F$ is differentiable at all points in $[a,b]$ and",
+          "sourceSha256": "da16b7e69974df67620c459c90cb6127ddfe079709469e5c3d04674e50a968a9",
+          "translation": "注意，在两种情形中，$F$ 在 $c$ 处的可微性，都只需 $f$ 在 $c$ 处连续就能保证。不过，当 $f$ 在 $[a,b]$ 的所有点都连续时，定理 1 最有意思。这时，$F$ 在 $[a,b]$ 的所有点都可微，而且"
+        },
+        {
+          "id": "p287-b13",
+          "source": "$$F'=f.$$",
+          "sourceSha256": "4b52b400aab1e7e6654226ec23cc22c1f916953fc4d1fb7315ec72b0fd085f94"
+        },
+        {
+          "id": "p287-b14",
+          "source": "In general, it is extremely difficult to decide whether a given function $f$ is the derivative of some other function; for this reason Theorem 11-7 and Problems 11-60 and 11-61 are particularly interesting, since they reveal certain properties which $f$ must have. If $f$ is continuous, however, there is no problem at all—according to Theorem 1, $f$ *is* the derivative of some function, namely the function",
+          "sourceSha256": "45368175007ec8c5cbb2a9a96268e57dbbee29dd53c4314610436721229def9b",
+          "translation": "一般来说，判断一个给定函数 $f$ 是否是另一个函数的导数，极其困难；正因如此，定理 11-7 以及习题 11-60 和 11-61 格外有趣，因为它们揭示了 $f$ 必须具有的某些性质。不过，若 $f$ 连续，就完全没有问题——根据定理 1，$f$ *确实*是某个函数的导数，即函数"
+        },
+        {
+          "id": "p287-b15",
+          "source": "$$F(x)=\\int_a^x f.$$",
+          "sourceSha256": "d54e74e1d40c962e73ea7d156c240b369d1fd490cd3e4e3ead41e111f74de4f0"
+        },
+        {
+          "id": "p287-b16",
+          "source": "Theorem 1 has a simple corollary which frequently reduces computations of integrals to a triviality.",
+          "sourceSha256": "b355f00ce907968099dcb4d581465f5c8770ca8e41f8ef8e1488ec1dc9b7e267",
+          "translation": "定理 1 有一个简单的推论，它常常把积分计算变成轻而易举的事。"
+        },
+        {
+          "id": "p287-b17",
+          "source": "**COROLLARY** If $f$ is continuous on $[a,b]$ and $f=g'$ for some function $g$, then",
+          "sourceSha256": "4dbbe3e156d2628154f6597c9c62451c7857012bab784f0832e5efbfe684c828",
+          "translation": "**推论** 如果 $f$ 在 $[a,b]$ 上连续，而且对某个函数 $g$ 有 $f=g'$，那么"
+        },
+        {
+          "id": "p287-b18",
+          "source": "$$\\int_a^b f=g(b)-g(a).$$",
+          "sourceSha256": "40df518ed9fb2c33dd8884c30dd3855affb7c3c4eadc911b290827b01dba490b"
+        },
+        {
+          "id": "p287-b19",
+          "source": "**PROOF** Let",
+          "sourceSha256": "00975257967be9e73b079cf34e8ea88998a3fbfca30bf96d383c8c36bc439a20",
+          "translation": "**证明** 令"
+        },
+        {
+          "id": "p287-b20",
+          "source": "$$F(x)=\\int_a^x f.$$",
+          "sourceSha256": "d54e74e1d40c962e73ea7d156c240b369d1fd490cd3e4e3ead41e111f74de4f0"
+        },
+        {
+          "id": "p287-b21",
+          "source": "Then $F'=f=g'$ on $[a,b]$. Consequently, there is a number $c$ such that",
+          "sourceSha256": "42ce8bc4c1a37a8b96b8a55159c96272362a78319ee8bbf453144654370ad837",
+          "translation": "那么在 $[a,b]$ 上有 $F'=f=g'$。因此，存在一个数 $c$，使得"
+        },
+        {
+          "id": "p287-b22",
+          "source": "$$F=g+c.$$",
+          "sourceSha256": "b6786fbbadbaab30f94acdb44c8ec34eb9956d63200736b723be55009d04ab06"
+        }
+      ]
+    },
+    {
+      "printed": 288,
+      "sourceSha256": "e08f6f65211161da807ee03d1f7132f8ea352e696952ff0013b42c6c4cc5291b",
+      "blocks": [
+        {
+          "id": "p288-b1",
+          "source": "The number $c$ can be evaluated easily: note that",
+          "sourceSha256": "afd4b46ea3d7e6de8ab3b3f07824f75c2bc027e9bf89d27d10e920a09c1380f6",
+          "translation": "数 $c$ 很容易求出：注意"
+        },
+        {
+          "id": "p288-b2",
+          "source": "$$0=F(a)=g(a)+c,$$",
+          "sourceSha256": "9830ba7f62c2f14eb5662d23b2df4f5ad27ce87d9d94168088be9e7c95ee2b9e"
+        },
+        {
+          "id": "p288-b3",
+          "source": "so $c=-g(a)$; thus",
+          "sourceSha256": "6d42212019281744522c48f4f60b33fe4c22429c6b778a75ceed811f2363f436",
+          "translation": "所以 $c=-g(a)$；于是"
+        },
+        {
+          "id": "p288-b4",
+          "source": "$$F(x)=g(x)-g(a).$$",
+          "sourceSha256": "a91ff7c435ba2157de2927c1d25a0e05217d3c3a61dccd18c2c915374ab10b6c"
+        },
+        {
+          "id": "p288-b5",
+          "source": "This is true, in particular, for $x=b$. Thus",
+          "sourceSha256": "893dfe9eff9d4a7e01a2beae98625256cce684da5106ea843ba90b922e8f5f2f",
+          "translation": "特别地，这对 $x=b$ 成立。因此"
+        },
+        {
+          "id": "p288-b6",
+          "source": "$$\\int_a^b f=F(b)=g(b)-g(a).\\quad\\blacksquare$$",
+          "sourceSha256": "dc15ae78a20307a12007a7ff1f3b107b97d48af2ce66a54cd86437e5bfd45f21"
+        },
+        {
+          "id": "p288-b7",
+          "source": "The proof of this corollary tends, at first sight, to make the corollary seem useless: after all, what good is it to know that",
+          "sourceSha256": "5639efdb3beb3090a3e4c32809d5cca29214c8f57ddd5f3ec88944b17f30bf21",
+          "translation": "乍看之下，这个推论的证明倒似乎让推论变得毫无用处：毕竟，知道"
+        },
+        {
+          "id": "p288-b8",
+          "source": "$$\\int_a^b f=g(b)-g(a)$$",
+          "sourceSha256": "b60a544bbeefeb7f5b656795709f90b11384fa941fdcd7d703dee93a927f5702"
+        },
+        {
+          "id": "p288-b9",
+          "source": "if $g$ is, for example, $g(x)=\\int_a^x f$? The point, of course, is that one might happen to know a quite different function $g$ with this property. For example, if",
+          "sourceSha256": "066de5649508161ef773720950d71aa0001906168029fcc70d6d739d996a3d86",
+          "translation": "有什么用呢？如果 $g$ 例如就是 $g(x)=\\int_a^x f$ 的话。关键当然在于，我们也许碰巧知道一个完全不同的函数 $g$，它也具有这个性质。例如，如果"
+        },
+        {
+          "id": "p288-b10",
+          "source": "$$g(x)=\\frac{x^3}3\\quad\\text{and}\\quad f(x)=x^2,$$",
+          "sourceSha256": "ab1e7fea00dd20fc287e2fb7b55f19cd9f7497b29e9cf8bcd32e907dad4bef78"
+        },
+        {
+          "id": "p288-b11",
+          "source": "then $g'(x)=f(x)$ so we obtain, without ever computing lower and upper sums:",
+          "sourceSha256": "4229f319df73eacf15d61b597987d8a20de38ce6700ba9b3b43b3c22e11fa1c7",
+          "translation": "那么 $g'(x)=f(x)$，于是完全不必计算下和与上和，就得到："
+        },
+        {
+          "id": "p288-b12",
+          "source": "$$\\int_a^b x^2dx=\\frac{b^3}3-\\frac{a^3}3.$$",
+          "sourceSha256": "949ccb74e216f57dc4e99f9e8f08a8bcb5184f9fca9ce802a3f7a91325472d8b"
+        },
+        {
+          "id": "p288-b13",
+          "source": "One can treat other powers similarly; if $n$ is a natural number and $g(x)=x^{n+1}/(n+1)$, then $g'(x)=x^n$, so",
+          "sourceSha256": "483ad9d582534215ce287093328251fb88bdce1efbef59ed5c03577b99f537cd",
+          "translation": "其他幂函数也可以类似处理；如果 $n$ 是自然数，且 $g(x)=x^{n+1}/(n+1)$，那么 $g'(x)=x^n$，所以"
+        },
+        {
+          "id": "p288-b14",
+          "source": "$$\\int_a^b x^n dx=\\frac{b^{n+1}}{n+1}-\\frac{a^{n+1}}{n+1}.$$",
+          "sourceSha256": "d15fffc8eb4c533f054b84d89dd37a71e411eda6d9891398537d9fa8b7c09fd7"
+        },
+        {
+          "id": "p288-b15",
+          "source": "For any natural number $n$, the function $f(x)=x^{-n}$ is not bounded on any interval containing $0$, but if $a$ and $b$ are both positive or both negative, then",
+          "sourceSha256": "c2a6f0a0dcd7a0d6f0c5b76d52c04801ecbe78bbaa647c278aaa72176639aae6",
+          "translation": "对于任意自然数 $n$，函数 $f(x)=x^{-n}$ 在任何包含 $0$ 的区间上都无界；但如果 $a$ 和 $b$ 同为正数或同为负数，那么"
+        },
+        {
+          "id": "p288-b16",
+          "source": "$$\\int_a^b x^{-n}dx=\\frac{b^{-n+1}}{-n+1}-\\frac{a^{-n+1}}{-n+1}.$$",
+          "sourceSha256": "ad9c8c9d1a0cd76ce24e7b0a6036fae872a428073c0f973749880ae884b2a0eb"
+        },
+        {
+          "id": "p288-b17",
+          "source": "Naturally this formula is only true for $n\\ne-1$. *We do not know a simple expression for*",
+          "sourceSha256": "f380d8299f54d3764fa16977493b434a32efb9efc8b66a7968e207c621e8e294",
+          "translation": "当然，这个公式只在 $n\\ne-1$ 时成立。*对于下面的积分，我们还不知道一个简单的表达式：*"
+        },
+        {
+          "id": "p288-b18",
+          "source": "$$\\int_a^b\\frac1x\\,dx.$$",
+          "sourceSha256": "9ce1927dcab11eb76b6bd9c6108ced4412a4598ee6e13691d91c8b72ce1a48c5"
+        },
+        {
+          "id": "p288-b19",
+          "source": "The problem of computing this integral is discussed later, but it provides a good opportunity to warn against a serious error. The conclusion of Corollary 1 is often confused with the definition of integrals—many students think that $\\int_a^b f$ is defined as: “$g(b)-g(a)$, where $g$ is a function whose derivative is $f$.” This “definition” is not only wrong—it is useless. One reason is that a function $f$ may be integrable without being the derivative of another function. For example, if $f(x)=0$ for $x\\ne1$ and $f(1)=1$, then $f$ is integrable, but $f$ cannot be a derivative (why not?). There is also another reason that is much more important: If $f$ is continuous,",
+          "sourceSha256": "e23a95da582a6206b74bbfca454c7bf4c7702b1bbba82118ce95c05de9fe5c71",
+          "translation": "这个积分的计算问题将在后面讨论，不过它提供了一个好机会，让我们提醒你警惕一种严重错误。推论 1 的结论常被误认为是积分的定义——许多学生以为，$\\int_a^b f$ 被定义为：“$g(b)-g(a)$，其中 $g$ 是一个导数为 $f$ 的函数。”这种“定义”不仅错误，而且毫无用处。一个原因是，函数 $f$ 可能可积，却不是另一个函数的导数。例如，若在 $x\\ne1$ 时有 $f(x)=0$，且 $f(1)=1$，那么 $f$ 可积，但 $f$ 不可能是导数（为什么？）。还有另一个重要得多的原因：如果 $f$ 连续，"
+        }
+      ]
+    },
+    {
+      "printed": 289,
+      "sourceSha256": "30d3539b24e09d921c8c03131f5fa3dd3e13c00664533b23642160e7517688b7",
+      "blocks": [
+        {
+          "id": "p289-b1",
+          "source": "then we know that $f=g'$ for some function $g$; but we know this *only because of Theorem 1*. The function $f(x)=1/x$ provides an excellent illustration: if $x>0$, then $f(x)=g'(x)$, where",
+          "sourceSha256": "f7a1a942df9df593edd8ddc9e507c66d155f850a60bdc65ab79dd926d99a5960",
+          "translation": "那么我们知道，对某个函数 $g$ 有 $f=g'$；但我们*仅仅因为定理 1* 才知道这一点。函数 $f(x)=1/x$ 提供了一个极好的说明：如果 $x>0$，那么 $f(x)=g'(x)$，其中"
+        },
+        {
+          "id": "p289-b2",
+          "source": "$$g(x)=\\int_1^x\\frac1t\\,dt,$$",
+          "sourceSha256": "b808ec147043a3e8f39c7c6e526d9f6273380756a4dbc544fdc5dc3f36fe39cb"
+        },
+        {
+          "id": "p289-b3",
+          "source": "and we know of no simpler function $g$ with this property.",
+          "sourceSha256": "d7d52352601644e532b8eb848437b8db05423842cfcd904ea142735a2e2df347",
+          "translation": "而我们并不知道具有这一性质的更简单的函数 $g$。"
+        },
+        {
+          "id": "p289-b4",
+          "source": "The corollary to Theorem 1 is so useful that it is frequently called the Second Fundamental Theorem of Calculus. In this book, that name is reserved for a somewhat stronger result (which in practice, however, is not much more useful). As we have just mentioned, a function $f$ might be of the form $g'$ even if $f$ is not continuous. If $f$ is integrable, then it is still true that",
+          "sourceSha256": "18dd9a70385033a72d7ed3d238594bc39150980dfe1f90119594d7b4b1b4a734",
+          "translation": "定理 1 的推论非常有用，因此常被称为微积分第二基本定理。不过，本书把这个名称留给一个稍强的结果（实际上，它的用途却没有多出多少）。正如刚才提到的，即使 $f$ 不连续，函数 $f$ 也可能具有 $g'$ 的形式。如果 $f$ 可积，那么仍然有"
+        },
+        {
+          "id": "p289-b5",
+          "source": "$$\\int_a^b f=g(b)-g(a).$$",
+          "sourceSha256": "40df518ed9fb2c33dd8884c30dd3855affb7c3c4eadc911b290827b01dba490b"
+        },
+        {
+          "id": "p289-b6",
+          "source": "The proof, however, must be entirely different—we cannot use Theorem 1, so we must return to the definition of integrals.",
+          "sourceSha256": "fe1abf28c1a503ee10ac22e91babd3914923f73a0fc85fc15ad62c9f28b6bc3d",
+          "translation": "但证明必须完全不同——不能使用定理 1，因此必须回到积分的定义。"
+        },
+        {
+          "id": "p289-b7",
+          "source": "**THEOREM 2 (THE SECOND FUNDAMENTAL THEOREM OF CALCULUS)** If $f$ is integrable on $[a,b]$ and $f=g'$ for some function $g$, then",
+          "sourceSha256": "5693e4f1a0c96fa1f8be329b718cce55f6c051b0d84a76af0f70ed37afd28ef4",
+          "translation": "**定理 2（微积分第二基本定理）** 如果 $f$ 在 $[a,b]$ 上可积，而且对某个函数 $g$ 有 $f=g'$，那么"
+        },
+        {
+          "id": "p289-b8",
+          "source": "$$\\int_a^b f=g(b)-g(a).$$",
+          "sourceSha256": "40df518ed9fb2c33dd8884c30dd3855affb7c3c4eadc911b290827b01dba490b"
+        },
+        {
+          "id": "p289-b9",
+          "source": "**PROOF** Let $P=\\{t_0,\\ldots,t_n\\}$ be any partition of $[a,b]$. By the Mean Value Theorem there is a point $x_i$ in $[t_{i-1},t_i]$ such that",
+          "sourceSha256": "f222acb7046a11593e249f51250af06d57935bddbe6177b3b5a0b7c841722a94",
+          "translation": "**证明** 设 $P=\\{t_0,\\ldots,t_n\\}$ 是 $[a,b]$ 的任意分割。根据中值定理，$[t_{i-1},t_i]$ 中存在一点 $x_i$，使得"
+        },
+        {
+          "id": "p289-b10",
+          "source": "$$\\begin{aligned}g(t_i)-g(t_{i-1})&=g'(x_i)(t_i-t_{i-1})\\\\&=f(x_i)(t_i-t_{i-1}).\\end{aligned}$$",
+          "sourceSha256": "55aa681355475f811489e050cb0268c42b8a2b31166dd905e2a5d4ba9a4862e7"
+        },
+        {
+          "id": "p289-b11",
+          "source": "If",
+          "sourceSha256": "1e3abf61a37e3cad36b11b459b1cc39e76feb6a0c369fe5270957468288dcc5c",
+          "translation": "如果"
+        },
+        {
+          "id": "p289-b12",
+          "source": "$$\\begin{aligned}m_i&=\\inf\\{f(x):t_{i-1}\\le x\\le t_i\\},\\\\M_i&=\\sup\\{f(x):t_{i-1}\\le x\\le t_i\\},\\end{aligned}$$",
+          "sourceSha256": "efa52248ff0c13f56fbacf9f0b76e5647729b722292e1d62217f10c28f106e36"
+        },
+        {
+          "id": "p289-b13",
+          "source": "then clearly",
+          "sourceSha256": "a3f82d859b74b27d89396797ee505507ddbb1db424214e0b73d70d63ba106637",
+          "translation": "那么显然有"
+        },
+        {
+          "id": "p289-b14",
+          "source": "$$m_i(t_i-t_{i-1})\\le f(x_i)(t_i-t_{i-1})\\le M_i(t_i-t_{i-1}),$$",
+          "sourceSha256": "1c0439df0ff73026991df70aab8ef1002aecb8574a469b0caecd2154f0350dd8"
+        },
+        {
+          "id": "p289-b15",
+          "source": "that is,",
+          "sourceSha256": "5647e274eb21c46ac72b17e43eb17c3f42c4cee66202d6dce25ecdaefba31d95",
+          "translation": "即"
+        },
+        {
+          "id": "p289-b16",
+          "source": "$$m_i(t_i-t_{i-1})\\le g(t_i)-g(t_{i-1})\\le M_i(t_i-t_{i-1}).$$",
+          "sourceSha256": "e4ffa67a2185282c13738458da3ba4310f6c4655d7843145ad88a3457e554adf"
+        },
+        {
+          "id": "p289-b17",
+          "source": "Adding these equations for $i=1,\\ldots,n$ we obtain",
+          "sourceSha256": "898f4f11b4d83bc12193972ca3ababc1f263e648f97d7b39c542728b84a8ddcf",
+          "translation": "将这些等式对 $i=1,\\ldots,n$ 相加，得到"
+        },
+        {
+          "id": "p289-b18",
+          "source": "$$\\sum_{i=1}^n m_i(t_i-t_{i-1})\\le g(b)-g(a)\\le\\sum_{i=1}^n M_i(t_i-t_{i-1})$$",
+          "sourceSha256": "59d859e563b77903880b974156b5c80c50970203b04f0a033ded28615d61f212"
+        },
+        {
+          "id": "p289-b19",
+          "source": "so that",
+          "sourceSha256": "ab6b7abe5e492f9b6d750de7961c627380f376d321fccbb8be082915be4cdf03",
+          "translation": "所以"
+        },
+        {
+          "id": "p289-b20",
+          "source": "$$L(f,P)\\le g(b)-g(a)\\le U(f,P)$$",
+          "sourceSha256": "94a530b95a0baf9f1ac5dd6bd2c4871c18de83ee100619e2d2088fd88d0d73af"
+        },
+        {
+          "id": "p289-b21",
+          "source": "*for every partition $P$*. But this means that",
+          "sourceSha256": "74bee5dbed214b620df8e25b8183303a39f68a2d638fd027a0f078eeb71b05c8",
+          "translation": "*对每个分割 $P$ 都成立*。但这就意味着"
+        },
+        {
+          "id": "p289-b22",
+          "source": "$$g(b)-g(a)=\\int_a^b f.\\quad\\blacksquare$$",
+          "sourceSha256": "91a61553b5e7b05daab30a127a4baed983b386215131cd5289b8efdcc3db94ec"
+        }
+      ]
+    },
+    {
+      "printed": 290,
+      "sourceSha256": "4eab3aeac36c478813dc2f3caa227d7a42bea1d5f186fd584f7df424aa0e5744",
+      "blocks": [
+        {
+          "id": "p290-b1",
+          "source": "We have already used the corollary to Theorem 1 (or, equivalently, Theorem 2) to find the integrals of a few elementary functions:",
+          "sourceSha256": "4a19b27d6bcc33cb6dbcbb02bb4c5dd479b7a21ff3574f514228a398a214ade1",
+          "translation": "我们已经利用定理 1 的推论（或者等价地，定理 2），求出了几个初等函数的积分："
+        },
+        {
+          "id": "p290-b2",
+          "source": "$$\\int_a^b x^n dx=\\frac{b^{n+1}}{n+1}-\\frac{a^{n+1}}{n+1},\\ n\\ne-1.\\qquad\\begin{gathered}(a\\text{ and }b\\text{ both positive or}\\\\\\text{both negative if }n>0).\\end{gathered}$$",
+          "sourceSha256": "0f4fe3fa000759503c9c0bd379129710308e55b7b87fe933d04e92c7b6846bf3"
+        },
+        {
+          "id": "p290-b3",
+          "source": "As we pointed out in Chapter 13, this integral does not always represent the area bounded by the graph of the function, the horizontal axis, and the vertical lines through $(a,0)$ and $(b,0)$. For example, if $a<0<b$, then",
+          "sourceSha256": "367e3950c49e7dc036597a14139307ca9b7ed35395cac739045dad6f33669df6",
+          "translation": "正如第 13 章指出的，这个积分并不总是表示函数图像、水平轴，以及经过 $(a,0)$ 和 $(b,0)$ 的竖直直线所围成的面积。例如，若 $a<0<b$，那么"
+        },
+        {
+          "id": "p290-b4",
+          "source": "$$\\int_a^b x^3dx$$",
+          "sourceSha256": "3fbf0a328e0b91ff418c2b825cf50dd95e8880ebe062cdf9609f1b51d8143749"
+        },
+        {
+          "id": "p290-b5",
+          "source": "does not represent the area of the region shown in Figure 2, which is given instead by",
+          "sourceSha256": "07446459636544a39d2c48fd1bc15b85916b8c77cdeb4f50e1146b7646da88f5",
+          "translation": "并不表示图 2 中区域的面积；该面积应由下式给出："
+        },
+        {
+          "id": "p290-b6",
+          "source": "$$\\begin{aligned}-\\left(\\int_a^0 x^3dx\\right)+\\int_0^b x^3dx&=-\\left(\\frac{0^4}4-\\frac{a^4}4\\right)+\\left(\\frac{b^4}4-\\frac{0^4}4\\right)\\\\&=\\frac{a^4}4+\\frac{b^4}4.\\end{aligned}$$",
+          "sourceSha256": "0f55f0e9d574080bb41b867403c49c34ebb6bda7d028133167e45219768f2a55"
+        },
+        {
+          "id": "p290-b7",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:344px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 304 344 477\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0309.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "9dfc63bb4a0db9b135f90ca7ebffcd8eb1f1a03df9e5ea1fd87b4442ad36baad"
+        },
+        {
+          "id": "p290-b8",
+          "source": "Similar care must be exercised in finding the areas of regions which are bounded by the graphs of more than one function—a problem which may frequently involve considerable ingenuity in any case. Suppose, to take a simple example first, that we wish to find the area of the region, shown in Figure 3, between the graphs of the functions",
+          "sourceSha256": "398764453ad3055546b4b5232558d92fbd200ea790928d631431bc77c936fa94",
+          "translation": "求由不止一个函数的图像围成的区域的面积时，也必须同样小心——而这类问题本身往往就需要相当的巧思。先举一个简单例子：假设我们要找出图 3 中，在区间上由下面两个函数的图像夹成的区域的面积，函数为"
+        },
+        {
+          "id": "p290-b9",
+          "source": "$$f(x)=x^2\\quad\\text{and}\\quad g(x)=x^3$$",
+          "sourceSha256": "3efa1836ebe72ab86f353c3c7a6c00ebf79a1c0696dbe0bfae4afca4efe37b7f"
+        },
+        {
+          "id": "p290-b10",
+          "source": "on the interval $[0,1]$. If $0\\le x\\le1$, then $0\\le x^3\\le x^2$, so that the graph of $g$ lies below that of $f$. The area of the region of interest to us is therefore",
+          "sourceSha256": "aa113d52b83d3a2a54fd8f005a03e19df717e53b97755419bec37aceb36c94f3",
+          "translation": "区间为 $[0,1]$。如果 $0\\le x\\le1$，那么 $0\\le x^3\\le x^2$，所以 $g$ 的图像位于 $f$ 的图像下方。因此，我们关心的区域的面积为"
+        },
+        {
+          "id": "p290-b11",
+          "source": "$$\\text{area }R(f,0,1)-\\text{area }R(g,0,1),$$",
+          "sourceSha256": "657f58d6b013497c4a3ede312b508f2ab6a696d6c8e3c682eff6e7fbe257fdb3"
+        },
+        {
+          "id": "p290-b12",
+          "source": "which is",
+          "sourceSha256": "51ae40d78eef4cafaf370dd037dc6925c44c41950bb8f77966f2c8409b6585b3",
+          "translation": "即"
+        },
+        {
+          "id": "p290-b13",
+          "source": "$$\\int_0^1 x^2dx-\\int_0^1 x^3dx=\\tfrac13-\\tfrac14=\\tfrac1{12}.$$",
+          "sourceSha256": "279ac22fd0441897aaeb79f0179a89ad8e59823b4c5f4160246a81dd90eb8496"
+        },
+        {
+          "id": "p290-b14",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:341px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 1080 341 421\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0309.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "15b0302e64ab43d8d1799865bc145cdcfa7f812ee25b4aecd4f7c6c2a9a9a667"
+        },
+        {
+          "id": "p290-b15",
+          "source": "This area could have been expressed as",
+          "sourceSha256": "1481c4598ba758e8d58e126137298149445ed0665e933fb135be962f5d43a41c",
+          "translation": "这个面积也可以表示为"
+        },
+        {
+          "id": "p290-b16",
+          "source": "$$\\int_a^b(f-g).$$",
+          "sourceSha256": "6e3538300c643b19aae113a4205a928e9e026035cd27aa137cf3c94b5a053d2d"
+        },
+        {
+          "id": "p290-b17",
+          "source": "If $g(x)\\le f(x)$ for all $x$ in $[a,b]$, then this integral always gives the area bounded by $f$ and $g$, *even if $f$ and $g$ are sometimes negative*. The easiest way to see this is shown in Figure 4. If $c$ is a number such that $f+c$ and $g+c$ are nonnegative on $[a,b]$, then the region $R_1$, bounded by $f$ and $g$, has the same area as the region $R_2$,",
+          "sourceSha256": "f03cf78e671cff5ec833482c6a37fd620cf9d521a307fbc14785a8198302f4b4",
+          "translation": "如果对 $[a,b]$ 中所有 $x$ 都有 $g(x)\\le f(x)$，那么这个积分总是给出 $f$ 与 $g$ 之间所夹的面积，*即使 $f$ 和 $g$ 有时为负，也仍然如此*。理解这一点最简单的方法如图 4 所示。如果数 $c$ 使得 $f+c$ 和 $g+c$ 在 $[a,b]$ 上非负，那么由 $f$ 和 $g$ 围成的区域 $R_1$，与区域 $R_2$ 的面积相同，后者"
+        }
+      ]
+    },
+    {
+      "printed": 291,
+      "sourceSha256": "47564eb833701bdcf9137ea7f2fad7b73a6c0fae40feb0972f28addaa71a5a68",
+      "blocks": [
+        {
+          "id": "p291-b1",
+          "source": "bounded by $f+c$ and $g+c$. Consequently,",
+          "sourceSha256": "890a23433eadcbd33090e7efa12efc85aef90cf5658ffeb5010c6a9a6989c157",
+          "translation": "由 $f+c$ 和 $g+c$ 围成。因此，"
+        },
+        {
+          "id": "p291-b2",
+          "source": "$$\\begin{aligned}\\text{area }R_1=\\text{area }R_2&=\\int_a^b(f+c)-\\int_a^b(g+c)\\\\\n&=\\int_a^b[(f+c)-(g+c)]\\\\&=\\int_a^b(f-g).\\end{aligned}$$",
+          "sourceSha256": "e504cdd1f1a3f4d83164c58290b18fe8306f57056b124c8f65d8eb644a8cd54c"
+        },
+        {
+          "id": "p291-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:352px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 375 352 558\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0310.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "cfe94f4f23cf143ec3b8aafd7505228bb69ef38ceda58a4029059aeada553785"
+        },
+        {
+          "id": "p291-b4",
+          "source": "This observation is useful in the following problem: Find the area of the region bounded by the graphs of",
+          "sourceSha256": "c537e52ca258a9aff7d7b2e17cc158cdc8b39673ce6a03c3be65588ca961cd86",
+          "translation": "这一观察在下面的问题中很有用：求由下列函数图像围成的区域的面积："
+        },
+        {
+          "id": "p291-b5",
+          "source": "$$f(x)=x^3-x\\quad\\text{and}\\quad g(x)=x^2.$$",
+          "sourceSha256": "fc9420dfb5690cbb437bdd219c6b5c98806072abb55503a686faea69c65f63e3"
+        },
+        {
+          "id": "p291-b6",
+          "source": "The first necessity is to determine this region more precisely. The graphs of $f$ and $g$ intersect when",
+          "sourceSha256": "b163d1031ead697543ab4b73a0fdfbd3927edcd50b0aea9958d75d42f1d8d30d",
+          "translation": "首先必须更精确地确定这个区域。$f$ 与 $g$ 的图像相交，当"
+        },
+        {
+          "id": "p291-b7",
+          "source": "$$\\begin{aligned}x^3-x&=x^2,\\\\\\text{or}\\quad x^3-x^2-x&=0,\\\\\n\\text{or}\\quad x(x^2-x-1)&=0,\\\\\n\\text{or}\\quad x&=0,\\frac{1+\\sqrt5}2,\\frac{1-\\sqrt5}2.\\end{aligned}$$",
+          "sourceSha256": "44ce41b51b50587fd019c79246e090ce34de62b9abee3fa513f9991df97128bb"
+        },
+        {
+          "id": "p291-b8",
+          "source": "On the interval $([1-\\sqrt5]/2,0)$ we have $x^3-x\\ge x^2$ and on the interval $(0,[1+\\sqrt5]/2)$ we have $x^2\\ge x^3-x$. These assertions are apparent from the graphs (Figure 5), but they can also be checked easily, as follows. Since $f(x)=g(x)$ only if $x=0$, $[1+\\sqrt5]/2$, or $[1-\\sqrt5]/2$, the function $f-g$ does not change sign on the intervals $([1-\\sqrt5]/2,0)$ and $(0,[1+\\sqrt5]/2)$; it is therefore only necessary to observe, for example, that",
+          "sourceSha256": "fd999f1a51ce7a07686b740113ec3fe7a84bf5b241dc992e90794cc8866426b3",
+          "translation": "在区间 $([1-\\sqrt5]/2,0)$ 上，有 $x^3-x\\ge x^2$；在区间 $(0,[1+\\sqrt5]/2)$ 上，有 $x^2\\ge x^3-x$。这些结论从图像（图 5）中一目了然，也可以如下轻松验证。由于只有当 $x=0$、$[1+\\sqrt5]/2$ 或 $[1-\\sqrt5]/2$ 时才有 $f(x)=g(x)$，函数 $f-g$ 在区间 $([1-\\sqrt5]/2,0)$ 和 $(0,[1+\\sqrt5]/2)$ 上不改变符号；因此，只需观察到，例如，"
+        },
+        {
+          "id": "p291-b9",
+          "source": "$$(-\\tfrac12)^3-(-\\tfrac12)-(-\\tfrac12)^2=\\tfrac18>0,$$",
+          "sourceSha256": "03f7fa68636cd9130307235186b1878176c255609d450f6a84ecf49e1de72eac"
+        },
+        {
+          "id": "p291-b10",
+          "source": "$$1^3-1-1^2=-1<0,$$",
+          "sourceSha256": "46ff28c9fc72ed3693eb7653bc10aa0ee4ef2ddcc2fcade53643def6b50fc421"
+        },
+        {
+          "id": "p291-b11",
+          "source": "to conclude that",
+          "sourceSha256": "1c38107ce4ae058bb391e250ac897357fdb4a3d4a79c13d97a7077b1e6c1eb73",
+          "translation": "便能得出"
+        },
+        {
+          "id": "p291-b12",
+          "source": "$$f-g\\ge0\\quad\\text{on }([1-\\sqrt5]/2,0),$$",
+          "sourceSha256": "691340433b4f238f4dbb2a36ca99c5d18578bc41839026b2322834d7ed5a9028"
+        },
+        {
+          "id": "p291-b13",
+          "source": "$$f-g\\le0\\quad\\text{on }(0,[1+\\sqrt5]/2).$$",
+          "sourceSha256": "b61ca5f05a71c9498833fc96fd0604910e9fb907cdeb42d447ef6f0df1599188"
+        },
+        {
+          "id": "p291-b14",
+          "source": "The area of the region in question is thus",
+          "sourceSha256": "5988e801c35d90bdfac5ca24a9c7372db40b94a43a94f4e262700cf175081778",
+          "translation": "所以，所求区域的面积为"
+        },
+        {
+          "id": "p291-b15",
+          "source": "$$\\int_{\\frac{1-\\sqrt5}2}^0(x^3-x-x^2)dx+\\int_0^{\\frac{1+\\sqrt5}2}[x^2-(x^3-x)]dx.$$",
+          "sourceSha256": "77862a85101463b6db48fd21ffc6a90f720cb78a35f983595a0b388084f08d18"
+        },
+        {
+          "id": "p291-b16",
+          "source": "As this example reveals, one of the major problems involved in finding the areas of a region may be the exact determination of the region. There are, however, more substantial problems of a logical nature—we have thus far defined the areas of some very special regions only, which do not even include some of the regions whose areas have just been computed! We have simply assumed that area made",
+          "sourceSha256": "6a86b44435f6f1ceeb818355ead40e7d4cc58ef7341e34f91de44f67546ca84f",
+          "translation": "这个例子表明，求一个区域面积时，一个主要问题可能是精确确定该区域。不过，还有更实质性的逻辑问题——至今我们只对一些非常特殊的区域定义了面积，其中甚至不包括刚刚计算过面积的某些区域！我们只是直接假定，这些区域的面积"
+        }
+      ]
+    },
+    {
+      "printed": 292,
+      "sourceSha256": "be4e0838cb899d4ee1689a52860b68f881dea1831cfc9605a7a73f525e073488",
+      "blocks": [
+        {
+          "id": "p292-b1",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:545px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"477 157 545 392\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0311.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "066f7a9962d23a05bb753699b4ae3abc0bf13c6ccdb613f50c23fc7bc677df25"
+        },
+        {
+          "id": "p292-b2",
+          "source": "sense for these regions, and that certain reasonable properties of “area” do hold. These remarks are not meant to suggest that you should regard exercising ingenuity to compute areas as beneath you, but are meant to indicate that a better approach to the definition of area is available, although its proper place is somewhere in advanced calculus. The desire to define area was the motivation, both in this book and historically, for the definition of the integral, but the integral does not really provide the best method of *defining* areas, although it is frequently the proper tool for *computing* them.",
+          "sourceSha256": "00edeb505d6668fa5ec15e19c27ad8ef15fa6f32fa8677dba65dd161daee0608",
+          "translation": "有意义，而且“面积”的某些合理性质确实成立。这番话不是说，你应当觉得动脑筋计算面积有失身份，而是为了指出：存在一种更好的面积定义方法，只是它恰当的位置应在高等微积分中。无论在本书中还是在历史上，定义面积的愿望都是积分定义的动机；但积分实际上并不是*定义*面积的最佳方法，尽管它常常是*计算*面积的恰当工具。"
+        },
+        {
+          "id": "p292-b3",
+          "source": "It may be discouraging to learn that integrals are not suitable for the very purpose for which they were invented, but we will soon see how essential they are for other purposes. The most important use of integrals has already been emphasized: if $f$ is continuous, the integral provides a function $y$ such that",
+          "sourceSha256": "4358badd736a1b817e6bb7ae9f5157d9a44809ff901a5d878263c484827e8077",
+          "translation": "得知积分并不适合它最初被发明时所针对的目的，也许令人沮丧；但我们很快就会看到，它对其他目的有多么不可或缺。积分最重要的用途已经强调过：如果 $f$ 连续，积分就提供了一个函数 $y$，使得"
+        },
+        {
+          "id": "p292-b4",
+          "source": "$$y'(x)=f(x).$$",
+          "sourceSha256": "447eb095003d10bb8b83141549a7efc8e2c37809d68b51b6baf0d6416244364a"
+        },
+        {
+          "id": "p292-b5",
+          "source": "This equation is the simplest example of a “differential equation” (an equation for a function $y$ which involves derivatives of $y$). The Fundamental Theorem of Calculus says that this differential equation has a solution, if $f$ is continuous. In succeeding chapters, and in various problems, we will solve more complicated equations, but the solution almost always depends somehow on the integral; in order to solve a differential equation it is necessary to construct a new function, and the integral is one of the best ways of doing this.",
+          "sourceSha256": "b350e19b43ae18e18a65fcc47dce129ac2f213df7a470d870ed5c02ca23b1efa",
+          "translation": "这个等式是“微分方程”的最简单例子（微分方程是关于函数 $y$ 的方程，其中涉及 $y$ 的导数）。微积分基本定理断言，只要 $f$ 连续，这个微分方程就有解。后续章节和各个习题中，我们将求解更复杂的方程，但解法几乎总会以某种方式依赖于积分；为了求解微分方程，必须构造一个新函数，而积分是实现这一目的的最佳方法之一。"
+        },
+        {
+          "id": "p292-b6",
+          "source": "Since the differentiable functions provided by the Fundamental Theorem of Calculus will play such a prominent role in later work, it is very important to realize that these functions may be combined, like less esoteric functions, to yield still more functions, whose derivatives can be found by the Chain Rule.",
+          "sourceSha256": "bf8af1af52439e3659f091783596e81be839bb78686e6b7c0f1a3540d79f7810",
+          "translation": "微积分基本定理提供的可微函数，将在后续工作中发挥如此重要的作用，因此必须清楚：与那些不那么神秘的函数一样，这些函数也可以相互组合，产生更多函数，而它们的导数可以通过链式法则求出。"
+        },
+        {
+          "id": "p292-b7",
+          "source": "Suppose, for example, that",
+          "sourceSha256": "e56c3cbdd6dc5abff3037efb64adc1ba5210bf19ed124041db14cfd7a83e26f6",
+          "translation": "例如，假设"
+        },
+        {
+          "id": "p292-b8",
+          "source": "$$f(x)=\\int_a^{x^3}\\frac1{1+\\sin^2t}dt.$$",
+          "sourceSha256": "3be24dd812440f68c3af9398304ce44ee382e4339b787fb3a9cae7ae0ded1f7d"
+        }
+      ]
+    },
+    {
+      "printed": 293,
+      "sourceSha256": "38fdd0c2b2661ea73b7f1df9daf327d561ae15d0e494d780a8ad52a23570bfc0",
+      "blocks": [
+        {
+          "id": "p293-b1",
+          "source": "Although the notation tends to disguise the fact somewhat, $f$ is the composition of the functions",
+          "sourceSha256": "b2de897c1390f53a9fb37249d2e5abaa0a01c17fffd43af670163a2f59b30f91",
+          "translation": "虽然记号多少掩盖了这个事实，$f$ 实际上是下列函数的复合："
+        },
+        {
+          "id": "p293-b2",
+          "source": "$$C(x)=x^3\\quad\\text{and}\\quad F(x)=\\int_a^x\\frac1{1+\\sin^2t}dt.$$",
+          "sourceSha256": "bf1641812aea8a2bfa7c5cfdf881ec48fd9f6669f42c2c730ebcc3ec1b401217"
+        },
+        {
+          "id": "p293-b3",
+          "source": "In fact, $f(x)=F(C(x))$; in other words, $f=F\\circ C$. Therefore, by the Chain Rule,",
+          "sourceSha256": "62b7bb187a3be8a8431be83621463ada775abf216bcc41037b0fc183cc763879",
+          "translation": "事实上，$f(x)=F(C(x))$；换句话说，$f=F\\circ C$。因此，由链式法则，"
+        },
+        {
+          "id": "p293-b4",
+          "source": "$$\\begin{aligned}f'(x)&=F'(C(x))\\cdot C'(x)\\\\&=F'(x^3)\\cdot3x^2\\\\&=\\frac1{1+\\sin^2x^3}\\cdot3x^2.\\end{aligned}$$",
+          "sourceSha256": "a78d2337ae1f5bfbfb6a6d4b663bbf5c7f400f42faf16745855df54d4a42945c"
+        },
+        {
+          "id": "p293-b5",
+          "source": "If $f$ is defined, instead, as",
+          "sourceSha256": "a3372d8bbf3bd6fa57de9239df15d90fbb4390e96157178958eedabf65fdff23",
+          "translation": "如果改将 $f$ 定义为"
+        },
+        {
+          "id": "p293-b6",
+          "source": "$$f(x)=\\int_{x^3}^a\\frac1{1+\\sin^2t}dt,$$",
+          "sourceSha256": "057edfc53669fa4bde45a3c200cdedb293798c986915e4b1abd75eebd4225ede"
+        },
+        {
+          "id": "p293-b7",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p293-b8",
+          "source": "$$f'(x)=-\\frac1{1+\\sin^2x^3}\\cdot3x^2.$$",
+          "sourceSha256": "513c3b04462ab13d22a86a9cdd42cd80e0bddc4952f8cd9d2da8c87461e5cb7c"
+        },
+        {
+          "id": "p293-b9",
+          "source": "If $f$ is defined as the *reverse* composition,",
+          "sourceSha256": "0f15e7173e639809257b19c7c58ed8c2126aaf58efd5afd57cfbcaec775165fe",
+          "translation": "如果把 $f$ 定义为*反过来*的复合，"
+        },
+        {
+          "id": "p293-b10",
+          "source": "$$f(x)=\\left(\\int_a^x\\frac1{1+\\sin^2t}dt\\right)^3,$$",
+          "sourceSha256": "192736fbc94945d79e6b3b3b6aa2d0bccf438c53b3b6e4cc9b288b0a05a7da7d"
+        },
+        {
+          "id": "p293-b11",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p293-b12",
+          "source": "$$\\begin{aligned}f'(x)&=C'(F(x))\\cdot F'(x)\\\\&=3\\left(\\int_a^x\\frac1{1+\\sin^2t}dt\\right)^2\\cdot\\frac1{1+\\sin^2x}.\\end{aligned}$$",
+          "sourceSha256": "6e19ca5e46e4897a4dce465124eb69f33220a45402570e8c255ab3d3e028b7a7"
+        },
+        {
+          "id": "p293-b13",
+          "source": "Similarly, if",
+          "sourceSha256": "5c2d233a05a4953108d8d9d131a8c35e7656937cf604c6a808d1240dcfeb3576",
+          "translation": "类似地，如果"
+        },
+        {
+          "id": "p293-b14",
+          "source": "$$\\begin{aligned}f(x)&=\\int_a^{\\sin x}\\frac1{1+\\sin^2t}dt,\\\\\ng(x)&=\\int_{\\sin x}^a\\frac1{1+\\sin^2t}dt,\\\\\nh(x)&=\\sin\\left(\\int_a^x\\frac1{1+\\sin^2t}dt\\right),\\end{aligned}$$",
+          "sourceSha256": "4ab8aa835474283771882121c0d9985564b913d585ebf2ce21040247aca35ccf"
+        },
+        {
+          "id": "p293-b15",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p293-b16",
+          "source": "$$\\begin{aligned}f'(x)&=\\frac1{1+\\sin^2(\\sin x)}\\cdot\\cos x,\\\\\ng'(x)&=\\frac{-1}{1+\\sin^2(\\sin x)}\\cdot\\cos x,\\\\\nh'(x)&=\\cos\\left(\\int_a^x\\frac1{1+\\sin^2t}dt\\right)\\cdot\\frac1{1+\\sin^2x}.\\end{aligned}$$",
+          "sourceSha256": "fcda292c85841642eea149f5e4ecfc5466b615c722160e1b83b647f29efe9208"
+        }
+      ]
+    },
+    {
+      "printed": 294,
+      "sourceSha256": "2f92c59b0ceb576343659ffdef3d807210afa943720a75ad97753913e0a044b6",
+      "blocks": [
+        {
+          "id": "p294-b1",
+          "source": "The formidable appearing function",
+          "sourceSha256": "975ab4aa48e01003e0015871c2edc9897185eb35da8e7d65661133e22b6e1f59",
+          "translation": "这个看起来令人生畏的函数"
+        },
+        {
+          "id": "p294-b2",
+          "source": "$$f(x)=\\int_a^{\\left(\\int_a^x\\frac1{1+\\sin^2t}dt\\right)}\\frac1{1+\\sin^2t}dt$$",
+          "sourceSha256": "187982fc105e288edb3cdf1d1036e7142b90dad300469fd432dba559de8ed8d8"
+        },
+        {
+          "id": "p294-b3",
+          "source": "is also a composition; in fact, $f=F\\circ F$. Therefore",
+          "sourceSha256": "3b55477e961e20be99d5be304a266bc9af24136376f2119c2894848cebfeabda",
+          "translation": "也是一个复合；事实上，$f=F\\circ F$。因此"
+        },
+        {
+          "id": "p294-b4",
+          "source": "$$\\begin{aligned}f'(x)&=F'(F(x))\\cdot F'(x)\\\\&=\\frac1{1+\\sin^2\\left(\\int_a^x\\frac1{1+\\sin^2t}dt\\right)}\\cdot\\frac1{1+\\sin^2x}.\\end{aligned}$$",
+          "sourceSha256": "5ed5057ef418fd09f609f43869e71f5741403749b9ad21c24d04a5390923a03c"
+        },
+        {
+          "id": "p294-b5",
+          "source": "As these examples reveal, the expression occurring above (or below) the integral sign indicates the function which will appear on the right when $f$ is written as a composition. As a final example, consider the triple compositions",
+          "sourceSha256": "51ec4901b2db88b56a53ab5b0ab3451389fed80a973e95a9c7bc7e628fd7b787",
+          "translation": "这些例子表明，把 $f$ 写成复合函数时，积分号上方（或下方）的表达式，就指出了复合中右边的那个函数。作为最后一个例子，考虑三重复合"
+        },
+        {
+          "id": "p294-b6",
+          "source": "$$f(x)=\\int_a^{\\left(\\int_a^{x^3}\\frac1{1+\\sin^2t}dt\\right)}\\frac1{1+\\sin^2t}dt,\\qquad\ng(x)=\\int_a^{\\left[\\int_a^{\\left(\\int_a^x\\frac1{1+\\sin^2t}dt\\right)}\\frac1{1+\\sin^2t}dt\\right]}\\frac1{1+\\sin^2t}dt,$$",
+          "sourceSha256": "9fabca09e0d26a6cf10c079a48b3408784e808e33151fb8c05baa501af3e5762"
+        },
+        {
+          "id": "p294-b7",
+          "source": "which can be written",
+          "sourceSha256": "36f44baa311827656ea5a9f76d9ec9145e62e29e55b8828e9a0f3af3ec15e337",
+          "translation": "它们可以写成"
+        },
+        {
+          "id": "p294-b8",
+          "source": "$$f=F\\circ F\\circ C\\quad\\text{and}\\quad g=F\\circ F\\circ F.$$",
+          "sourceSha256": "ff92b74c1cef73e3a0ad6958e525899a2e6edeb6f87629c88e7aab47471f9fcd"
+        },
+        {
+          "id": "p294-b9",
+          "source": "Omitting the intermediate steps (which you may supply, if you still feel insecure), we obtain",
+          "sourceSha256": "476d61401979070abaf4fcf3cef2b6d5351e14a6d4d426eaf1ba0aa1d5884dc6",
+          "translation": "略去中间步骤（如果你仍然觉得不踏实，可以自行补上），得到"
+        },
+        {
+          "id": "p294-b10",
+          "source": "$$f'(x)=\\frac1{1+\\sin^2\\left(\\int_a^{x^3}\\frac1{1+\\sin^2t}dt\\right)}\\cdot\\frac1{1+\\sin^2x^3}\\cdot3x^2,$$",
+          "sourceSha256": "3c574d75c43036cab17989ba8d8baa3cffb6235c454869f2c69f3a85d6218d49"
+        },
+        {
+          "id": "p294-b11",
+          "source": "$$\\begin{aligned}g'(x)={}&\\frac1{1+\\sin^2\\left[\\int_a^{\\left(\\int_a^x\\frac1{1+\\sin^2t}dt\\right)}\\frac1{1+\\sin^2t}dt\\right]}\\cdot\\frac1{1+\\sin^2\\left(\\int_a^x\\frac1{1+\\sin^2t}dt\\right)}\\\\\n&\\cdot\\frac1{1+\\sin^2x}.\\end{aligned}$$",
+          "sourceSha256": "c1586522b3ce1f3dd3dfeaf6a6d78ac8758c534c48b9e4b6454cbd3470f3863b"
+        },
+        {
+          "id": "p294-b12",
+          "source": "Like the simpler differentiations of Chapter 10, these manipulations should become much easier after the practice provided by some of the problems, and, like the problems of Chapter 10, these differentiations are simply a test of your understanding of the Chain Rule, in the somewhat unfamiliar context provided by the Fundamental Theorem of Calculus.",
+          "sourceSha256": "95802b11636fba1ec4be2e78231b3aecaac9b044dc0433027d803d3b3840e94b",
+          "translation": "与第 10 章那些较简单的求导一样，做过一些习题后，这些运算应当会容易得多；同第 10 章的习题一样，这些求导题只是对你理解链式法则程度的检验，只不过这里的背景，是微积分基本定理提供的、稍显陌生的情境。"
+        },
+        {
+          "id": "p294-b13",
+          "source": "The powerful uses to which the integral will be put in the following chapters all depend on the Fundamental Theorem of Calculus, yet the proof of that theorem was quite easy—it seems that all the real work went into the definition of the integral. Actually, this is not quite true. In order to apply Theorem 1 to a continuous function we need to know that if $f$ is continuous on $[a,b]$, then $f$ is integrable on $[a,b]$. Although we’ve already offered one proof of this result, there",
+          "sourceSha256": "a2bd1a59dc7c5da8d2dc700a6fa3edab76dbe327f2bcd5c7f92b8e7d202d8982",
+          "translation": "后续章节中，积分的强大用途都依赖于微积分基本定理，然而这个定理的证明却相当容易——似乎所有真正的工作都花在了积分的定义上。实际上，也不完全如此。要将定理 1 应用于连续函数，必须知道：如果 $f$ 在 $[a,b]$ 上连续，那么 $f$ 在 $[a,b]$ 上可积。虽然我们已经给出了这个结果的一种证明，但还有"
+        }
+      ]
+    },
+    {
+      "printed": 295,
+      "sourceSha256": "4688c8ca9dd778059d63d9967c61bdf7ebe1357bf8a6ec0e7edd5b25e143186e",
+      "blocks": [
+        {
+          "id": "p295-b1",
+          "source": "is a more elementary argument that you might prefer. Like most “elementary” arguments, it’s quite tricky, but it has the virtue that it will force a review of the proof of Theorem 1.",
+          "sourceSha256": "09edaf5c6aec15217c53ff80bdddd3a3fc47d8db7d1c2cc88a2979e8f97f4dfe",
+          "translation": "一种更初等的论证，也许更合你的口味。与多数“初等”论证一样，它颇为巧妙，但有一个优点：它会迫使你重新审视定理 1 的证明。"
+        },
+        {
+          "id": "p295-b2",
+          "source": "If $f$ is any bounded function on $[a,b]$, then",
+          "sourceSha256": "0605103d3f6708e89da6b602b7029119bc03f9bd68e861bde2cca4f17a5b2757",
+          "translation": "如果 $f$ 是 $[a,b]$ 上的任意有界函数，那么"
+        },
+        {
+          "id": "p295-b3",
+          "source": "$$\\sup\\{L(f,P)\\}\\quad\\text{and}\\quad\\inf\\{U(f,P)\\}$$",
+          "sourceSha256": "6e98ddbd0253ee4fdd89315f82f7e28b499c9d36b1e298d1aaab5eee163608c4"
+        },
+        {
+          "id": "p295-b4",
+          "source": "will both exist, even if $f$ is not integrable. These numbers are called the **lower integral** of $f$ on $[a,b]$ and the **upper integral** of $f$ on $[a,b]$, respectively, and will be denoted by",
+          "sourceSha256": "0c37f7ada9d3598b899f305aec6b97f6c27a16c8ab8c5f3d9f0f28d094ddb8f3",
+          "translation": "即使 $f$ 不可积，这两个数也都存在。它们分别称为 $f$ 在 $[a,b]$ 上的**下积分**与 $f$ 在 $[a,b]$ 上的**上积分**，记为"
+        },
+        {
+          "id": "p295-b5",
+          "source": "$$\\mathbf L\\int_a^b f\\quad\\text{and}\\quad\\mathbf U\\int_a^b f.$$",
+          "sourceSha256": "e99b2120159c7e91e7b1777957f5f644977d625c84dd899c587439d70db0bb19"
+        },
+        {
+          "id": "p295-b6",
+          "source": "The lower and upper integrals both have several properties which the integral possesses. In particular, if $a<c<b$, then",
+          "sourceSha256": "77d814c3b71cff7e9cb2a963d8bcf700360341dd07135f578d398ede92b7f48f",
+          "translation": "下积分与上积分都具有积分的若干性质。特别地，如果 $a<c<b$，那么"
+        },
+        {
+          "id": "p295-b7",
+          "source": "$$\\mathbf L\\int_a^b f=\\mathbf L\\int_a^c f+\\mathbf L\\int_c^b f\\quad\\text{and}\\quad\\mathbf U\\int_a^b f=\\mathbf U\\int_a^c f+\\mathbf U\\int_c^b f,$$",
+          "sourceSha256": "30e270ece4215c36d551daf9a43e28e674317bc89fc5664988cd0341437c324d"
+        },
+        {
+          "id": "p295-b8",
+          "source": "and if $m\\le f(x)\\le M$ for all $x$ in $[a,b]$, then",
+          "sourceSha256": "f22dc252a8b98c013dd23e7365ed06d7b22218684bf5e6efcce7e864756c712c",
+          "translation": "而如果对 $[a,b]$ 中所有 $x$ 都有 $m\\le f(x)\\le M$，那么"
+        },
+        {
+          "id": "p295-b9",
+          "source": "$$m(b-a)\\le\\mathbf L\\int_a^b f\\le\\mathbf U\\int_a^b f\\le M(b-a).$$",
+          "sourceSha256": "6199f0cfb01bbf7f759088cafdf109cd9466d5f131e38c81c7af8d3548e251a3"
+        },
+        {
+          "id": "p295-b10",
+          "source": "The proofs of these facts are left as an exercise, since they are quite similar to the corresponding proofs for integrals. The results for integrals are actually a corollary of the results for upper and lower integrals, because $f$ is integrable precisely when",
+          "sourceSha256": "63836d30b2c20bd7872f66a664d95dc531cb257c74914fbcfeea399f9df56410",
+          "translation": "这些事实的证明留作练习，因为它们与积分相应性质的证明十分相似。关于积分的结果，实际上是关于上积分和下积分的结果的推论，因为 $f$ 可积当且仅当"
+        },
+        {
+          "id": "p295-b11",
+          "source": "$$\\mathbf L\\int_a^b f=\\mathbf U\\int_a^b f.$$",
+          "sourceSha256": "0688a6ebdb508a9b7d95f5c05be10f8188bad5ae67d6dc51ef91cbb015ad9bea"
+        },
+        {
+          "id": "p295-b12",
+          "source": "We will prove that a continuous function $f$ is integrable by showing that this equality always holds for continuous functions. It is actually easier to show that",
+          "sourceSha256": "9dd3325bc411f0d18218b9b61127f705eccc97463f45418d032a11fd89537724",
+          "translation": "我们将证明，对于连续函数，这个等式总是成立，从而证明连续函数 $f$ 可积。事实上，证明下式更容易："
+        },
+        {
+          "id": "p295-b13",
+          "source": "$$\\mathbf L\\int_a^x f=\\mathbf U\\int_a^x f$$",
+          "sourceSha256": "21e8b7b7830ab023f087b6c52a1313948195cac39442a13b31ce630c45336e66"
+        },
+        {
+          "id": "p295-b14",
+          "source": "for all $x$ in $[a,b]$; the trick is to note that most of the proof of Theorem 1 didn’t even depend on the fact that $f$ was integrable!",
+          "sourceSha256": "2aaccd6851738fa115bd394cbf3f76566a3748785ec2cb019b21d3c881174db0",
+          "translation": "对 $[a,b]$ 中所有 $x$ 都成立；技巧在于注意到，定理 1 的证明的大部分，根本不依赖于 $f$ 可积这一事实！"
+        },
+        {
+          "id": "p295-b15",
+          "source": "**THEOREM 13-3** If $f$ is continuous on $[a,b]$, then $f$ is integrable on $[a,b]$.",
+          "sourceSha256": "1d6f2aa8ec7fd79dd9f4a06e5c96d5550d601e349fa13131da3fc66ac95b1d10",
+          "translation": "**定理 13-3** 如果 $f$ 在 $[a,b]$ 上连续，那么 $f$ 在 $[a,b]$ 上可积。"
+        },
+        {
+          "id": "p295-b16",
+          "source": "**PROOF** Define functions $L$ and $U$ on $[a,b]$ by",
+          "sourceSha256": "d0803cb3df56ea07c41bf4103e55a0ce39517fe7867b02415bb3c182fbb708a2",
+          "translation": "**证明** 在 $[a,b]$ 上定义函数 $L$ 和 $U$ 为"
+        },
+        {
+          "id": "p295-b17",
+          "source": "$$L(x)=\\mathbf L\\int_a^x f\\quad\\text{and}\\quad U(x)=\\mathbf U\\int_a^x f.$$",
+          "sourceSha256": "9d731626e2e7e9b24971848344138d132f045d0dc123cf089941d7f9ee233fee"
+        },
+        {
+          "id": "p295-b18",
+          "source": "Let $x$ be in $(a,b)$. If $h>0$ and",
+          "sourceSha256": "360f0f50df0ef3aae1d1fce4c629bb1ef1a56998dfe8e34a7612c9bb0f21aa39",
+          "translation": "设 $x$ 位于 $(a,b)$ 中。如果 $h>0$，并且"
+        },
+        {
+          "id": "p295-b19",
+          "source": "$$\\begin{aligned}m_h&=\\inf\\{f(t):x\\le t\\le x+h\\},\\\\M_h&=\\sup\\{f(t):x\\le t\\le x+h\\},\\end{aligned}$$",
+          "sourceSha256": "aed93705761274bcfe21cc03b116dca04abe916d4d82384f57d311360da90f0b"
+        }
+      ]
+    },
+    {
+      "printed": 296,
+      "sourceSha256": "f2a9505942be050a59d2556be3e74c5de530019072cd1f464a51b730348115a5",
+      "blocks": [
+        {
+          "id": "p296-b1",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p296-b2",
+          "source": "$$m_h\\cdot h\\le\\mathbf L\\int_x^{x+h}f\\le\\mathbf U\\int_x^{x+h}f\\le M_h\\cdot h,$$",
+          "sourceSha256": "606dba9338e7da5c00486df776ba426747d5e02f40ef7f42b89673246685ec05"
+        },
+        {
+          "id": "p296-b3",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p296-b4",
+          "source": "$$m_h\\cdot h\\le L(x+h)-L(x)\\le U(x+h)-U(x)\\le M_h\\cdot h$$",
+          "sourceSha256": "211527dca188c6d8db14984ef97c82fb44e938b0f83bb571c4fe33f5d6f42824"
+        },
+        {
+          "id": "p296-b5",
+          "source": "or",
+          "sourceSha256": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+          "translation": "或者"
+        },
+        {
+          "id": "p296-b6",
+          "source": "$$m_h\\le\\frac{L(x+h)-L(x)}h\\le\\frac{U(x+h)-U(x)}h\\le M_h.$$",
+          "sourceSha256": "a8d6ec545f4a0a9d439ec15885e7918e3e1806c792a5dec51a908532bd8d0c64"
+        },
+        {
+          "id": "p296-b7",
+          "source": "If $h<0$ and",
+          "sourceSha256": "db35023bbc4d3787c0df28a8730ca27a2b2a0250f5415498ff0b33b066cc2854",
+          "translation": "如果 $h<0$，并且"
+        },
+        {
+          "id": "p296-b8",
+          "source": "$$\\begin{aligned}m_h&=\\inf\\{f(t):x+h\\le t\\le x\\},\\\\M_h&=\\sup\\{f(t):x+h\\le t\\le x\\},\\end{aligned}$$",
+          "sourceSha256": "08c307ac2cc546faa5583f5f5de9fea7f9bce93520aea3d1af3cce12197154b8"
+        },
+        {
+          "id": "p296-b9",
+          "source": "one obtains the same inequality, precisely as in the proof of Theorem 1.",
+          "sourceSha256": "1f44e7ff35d0e513917c0513cf3fd1977aa92c1ac3703bb12c84134f018b5728",
+          "translation": "完全仿照定理 1 的证明，就会得到同一个不等式。"
+        },
+        {
+          "id": "p296-b10",
+          "source": "Since $f$ is continuous at $x$, we have",
+          "sourceSha256": "0e8ccbb71155b1b23a558730f17ab5004b5345706e442dcfa1fc419d951fa181",
+          "translation": "由于 $f$ 在 $x$ 处连续，有"
+        },
+        {
+          "id": "p296-b11",
+          "source": "$$\\lim_{h\\to0}m_h=\\lim_{h\\to0}M_h=f(x),$$",
+          "sourceSha256": "b3187e2a06a67d04f7d8e92b55dc0be36507554921563b566e547d77c1c2a30e"
+        },
+        {
+          "id": "p296-b12",
+          "source": "and this proves that",
+          "sourceSha256": "269ae463ec4f3e14efe908259627b4a8a978a7ae7692dadd75bf43532d03ba92",
+          "translation": "这就证明了"
+        },
+        {
+          "id": "p296-b13",
+          "source": "$$L'(x)=U'(x)=f(x)\\quad\\text{for }x\\text{ in }(a,b).$$",
+          "sourceSha256": "70e7cb3cf31eb5aa3dce6cc2f3e8a6b973fe4f0ee68bcbfdd8660ef5704832e6"
+        },
+        {
+          "id": "p296-b14",
+          "source": "This means that there is a number $c$ such that",
+          "sourceSha256": "38339af3cec3d4e67d3397ae42f3a9bc956522148f119c8c1f7392b70b752289",
+          "translation": "这意味着存在一个数 $c$，使得"
+        },
+        {
+          "id": "p296-b15",
+          "source": "$$U(x)=L(x)+c\\quad\\text{for all }x\\text{ in }[a,b].$$",
+          "sourceSha256": "84ddc1d0cd286aaf4106646462c8792e12ad9d9431b6a41561cc9070b498c622"
+        },
+        {
+          "id": "p296-b16",
+          "source": "Since",
+          "sourceSha256": "98af1ed61831e6ab92bbb2a4d429344c8d0581c77d5c85311c5ed8a3207d2eea",
+          "translation": "由于"
+        },
+        {
+          "id": "p296-b17",
+          "source": "$$U(a)=L(a)=0,$$",
+          "sourceSha256": "7d6ec5e74f6e36978ed3d970aec4b2b2a46742a5f02a27df6f87041e61d8e37a"
+        },
+        {
+          "id": "p296-b18",
+          "source": "the number $c$ must equal $0$, so",
+          "sourceSha256": "06cc34c997e6f009128bf13741dacfd83642364a5e753c7eea72b6095c0f400f",
+          "translation": "数 $c$ 必须等于 $0$，所以"
+        },
+        {
+          "id": "p296-b19",
+          "source": "$$U(x)=L(x)\\quad\\text{for all }x\\text{ in }[a,b].$$",
+          "sourceSha256": "79de4a8028391d316c22b1fb244ce1a59834ffb7043654ac06d032e5fd354a7d"
+        },
+        {
+          "id": "p296-b20",
+          "source": "In particular,",
+          "sourceSha256": "68d166b7bef6c9ba2e0f4f11914f00a8227a3ee28343df99cb6bc8fe6d84747e",
+          "translation": "特别地，"
+        },
+        {
+          "id": "p296-b21",
+          "source": "$$\\mathbf U\\int_a^b f=U(b)=L(b)=\\mathbf L\\int_a^b f,$$",
+          "sourceSha256": "22e265ec256481f27c247e874ef6cef47683a54313611c81a8d28c15feb249c4"
+        },
+        {
+          "id": "p296-b22",
+          "source": "and this means that $f$ is integrable on $[a,b]$. ▮",
+          "sourceSha256": "7ef5a329e1bf82506a278829f75b1765600a9a130622547f4ca056232b736658",
+          "translation": "这意味着 $f$ 在 $[a,b]$ 上可积。▮"
+        },
+        {
+          "id": "p296-b23",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p296-b24",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p296-b25",
+          "source": "Find the derivatives of each of the following functions.",
+          "sourceSha256": "602abc97ecb3766d30d7aa04c096fd173c2d103a0354bd1bc3e2a0cedff98a62",
+          "translation": "求下面每个函数的导数。"
+        },
+        {
+          "id": "p296-b26",
+          "source": "(i) $\\displaystyle F(x)=\\int_a^{x^3}\\sin^3t\\,dt.$",
+          "sourceSha256": "945eca86dc4ef32844499d7a54e567cf75847b456eb352ca76817e324370844f"
+        },
+        {
+          "id": "p296-b27",
+          "source": "(ii) $\\displaystyle F(x)=\\int_3^{\\left(\\int_1^x\\sin^3t\\,dt\\right)}\\frac1{1+\\sin^6t+t^2}dt$",
+          "sourceSha256": "8db55e638f61fc253adf145e70b0e601f45f57dce3dae249c8c73550351e887a"
+        },
+        {
+          "id": "p296-b28",
+          "source": "(iii) $\\displaystyle F(x)=\\int_{15}^x\\left(\\int_8^y\\frac1{1+t^2+\\sin^2t}dt\\right)dy.$",
+          "sourceSha256": "2247387c5de45e96308fefcaedae6434e098d838ac636d00083153469ae75280"
+        },
+        {
+          "id": "p296-b29",
+          "source": "(iv) $\\displaystyle F(x)=\\int_x^b\\frac1{1+t^2+\\sin^2t}dt.$",
+          "sourceSha256": "cabc7c9fd3aefa652fc0ee53524e9b60e65cec71f933e537f113507bf1b0d625"
+        }
+      ]
+    },
+    {
+      "printed": 297,
+      "sourceSha256": "7449a8879e760bea04d1898f8d0ca82ea3154e0f4e7b3e43d6c9ae4d717e5b68",
+      "blocks": [
+        {
+          "id": "p297-b1",
+          "source": "(v) $\\displaystyle F(x)=\\int_a^b\\frac{x}{1+t^2+\\sin^2t}dt.$",
+          "sourceSha256": "7fbfff1fa2578b11ced061254a15728f3c00b88c7415cd636e4f6e3da6f218cd"
+        },
+        {
+          "id": "p297-b2",
+          "source": "(vi) $\\displaystyle F(x)=\\sin\\left(\\int_0^x\\sin\\left(\\int_0^y\\sin^3t\\,dt\\right)dy\\right).$",
+          "sourceSha256": "f672c24d84678b4d37550e9514d80a3fa5e6dc5e396583d262230dbd080f1469"
+        },
+        {
+          "id": "p297-b3",
+          "source": "(vii) $F^{-1}$, where $\\displaystyle F(x)=\\int_1^x\\frac1t\\,dt.$",
+          "sourceSha256": "ec00c0a9f758e39f0daba8a5256a6dac9ebc664094fd7f17317b2a5610559083",
+          "translation": "(vii) $F^{-1}$，其中 $\\displaystyle F(x)=\\int_1^x\\frac1t\\,dt.$"
+        },
+        {
+          "id": "p297-b4",
+          "source": "(viii) $F^{-1}$, where $\\displaystyle F(x)=\\int_0^x\\frac1{\\sqrt{1-t^2}}dt.$",
+          "sourceSha256": "adf81cd6c25b259f0a6eaaeb821d9453ef78c3ca38592050b3ea127e23a98047",
+          "translation": "(viii) $F^{-1}$，其中 $\\displaystyle F(x)=\\int_0^x\\frac1{\\sqrt{1-t^2}}dt.$"
+        },
+        {
+          "id": "p297-b5",
+          "source": "(Find $(F^{-1})'(x)$ in terms of $F^{-1}(x)$.)",
+          "sourceSha256": "b035307e5455fdbe03bc9e40da44c78930b2aa51cf3951e1c7edee419e2785c8",
+          "translation": "（用 $F^{-1}(x)$ 表示 $(F^{-1})'(x)$。）"
+        },
+        {
+          "id": "p297-b6",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p297-b7",
+          "source": "For each of the following $f$, if $F(x)=\\int_0^x f$, at which points $x$ is $F'(x)=f(x)$? (Caution: it might happen that $F'(x)=f(x)$, even if $f$ is not continuous at $x$.)",
+          "sourceSha256": "b7906add80f0234a8cf0b95b801f6aa636dc88df9d46bd3cf1d146829e4c4acf",
+          "translation": "对于下面每个 $f$，若 $F(x)=\\int_0^x f$，在哪些点 $x$ 有 $F'(x)=f(x)$？（注意：即使 $f$ 在 $x$ 处不连续，也可能有 $F'(x)=f(x)$。）"
+        },
+        {
+          "id": "p297-b8",
+          "source": "(i) $f(x)=0$ if $x\\le1$, $f(x)=1$ if $x>1$.",
+          "sourceSha256": "aec188dc27911445a375e764ff75bce2a6e0821fbe9ba640f1d22c8008e10ca6",
+          "translation": "(i) 当 $x\\le1$ 时，$f(x)=0$；当 $x>1$ 时，$f(x)=1$。"
+        },
+        {
+          "id": "p297-b9",
+          "source": "(ii) $f(x)=0$ if $x<1$, $f(x)=1$ if $x\\ge1$.",
+          "sourceSha256": "4f3f7f8319d04aa84746aca88824f26cf4574b68cbaf8071f1705d5ba200b53b",
+          "translation": "(ii) 当 $x<1$ 时，$f(x)=0$；当 $x\\ge1$ 时，$f(x)=1$。"
+        },
+        {
+          "id": "p297-b10",
+          "source": "(iii) $f(x)=0$ if $x\\ne1$, $f(x)=1$ if $x=1$.",
+          "sourceSha256": "5b3e1529438109f99b9319320cd0f2ea11b903d21f965e6c0798e93b8047fbb2",
+          "translation": "(iii) 当 $x\\ne1$ 时，$f(x)=0$；当 $x=1$ 时，$f(x)=1$。"
+        },
+        {
+          "id": "p297-b11",
+          "source": "(iv) $f(x)=0$ if $x$ is irrational, $f(x)=1/q$ if $x=p/q$ in lowest terms.",
+          "sourceSha256": "e0f705030266f909d0f0efefa85423d30a9744e8ef133138de49905f7e45bfa4",
+          "translation": "(iv) 当 $x$ 为无理数时，$f(x)=0$；当 $x=p/q$ 为最简分数时，$f(x)=1/q$。"
+        },
+        {
+          "id": "p297-b12",
+          "source": "(v) $f(x)=0$ if $x\\le0$, $f(x)=x$ if $x\\ge0$.",
+          "sourceSha256": "e5198d0e90ac13ce88e28af59ebae68f69cdac4eebf4ccb2a48b48482e36dc87",
+          "translation": "(v) 当 $x\\le0$ 时，$f(x)=0$；当 $x\\ge0$ 时，$f(x)=x$。"
+        },
+        {
+          "id": "p297-b13",
+          "source": "(vi) $f(x)=0$ if $x\\le0$ or $x>1$, $f(x)=1/[1/x]$ if $0<x\\le1$.",
+          "sourceSha256": "88f98e80cb713c2d1ad2bf344b1c9617e215b1d4c5d1a853676585a91a1cf4d5",
+          "translation": "(vi) 当 $x\\le0$ 或 $x>1$ 时，$f(x)=0$；当 $0<x\\le1$ 时，$f(x)=1/[1/x]$。"
+        },
+        {
+          "id": "p297-b14",
+          "source": "(vii) $f$ is the function shown in Figure 6.",
+          "sourceSha256": "2401e998a3720b063c5af476fc7941cb1cce984cd799a7317071b663909e5ee5",
+          "translation": "(vii) $f$ 是图 6 所示的函数。"
+        },
+        {
+          "id": "p297-b15",
+          "source": "(viii) $f(x)=1$ if $x=1/n$ for some $n$ in $\\mathbf N$, $f(x)=0$ otherwise.",
+          "sourceSha256": "1c4ea1f6d1d1bbbdfd4095899962ba5b91432a00d8c97f030d565346754e4b63",
+          "translation": "(viii) 如果对于 $\\mathbf N$ 中某个 $n$ 有 $x=1/n$，则 $f(x)=1$；否则 $f(x)=0$。"
+        },
+        {
+          "id": "p297-b16",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"565 864 711 439\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0316.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n</figure>",
+          "sourceSha256": "2b232b6bfcfdce03bc9b6c61abb63d1304eac2820ec6e27b752d9280c0fca6dd"
+        },
+        {
+          "id": "p297-b17",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p297-b18",
+          "source": "Show that the values of the following expressions do not depend on $x$:",
+          "sourceSha256": "924acb41e3812d64b3e0c9d249cce23295aeb8b06b8a19d98802823d3a123f6a",
+          "translation": "证明，下面这些表达式的值不依赖于 $x$："
+        },
+        {
+          "id": "p297-b19",
+          "source": "(i) $\\displaystyle\\int_0^x\\frac1{1+t^2}dt+\\int_0^{1/x}\\frac1{1+t^2}dt.$",
+          "sourceSha256": "f59fa7ad2a591737bcb285db3bc8049726a00dafe5892b36937101acb2e22002"
+        },
+        {
+          "id": "p297-b20",
+          "source": "(ii) $\\displaystyle\\int_{-\\cos x}^{\\sin x}\\frac1{\\sqrt{1-t^2}}dt,\\qquad x\\text{ in }(0,\\pi/2).$",
+          "sourceSha256": "b06378cd72d0938a85fd3c1e46ac55c1658090077f0a43a5539a3a653cf74a1a"
+        }
+      ]
+    },
+    {
+      "printed": 298,
+      "sourceSha256": "67eb8a8c01b4950fbbfb2cf3ca50008eda07b3ae344ea6bb292a10869d5d68d0",
+      "blocks": [
+        {
+          "id": "p298-b1",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p298-b2",
+          "source": "Find $(f^{-1})'(0)$ if",
+          "sourceSha256": "19dc8a105d0eb32528ad3e1f2b1b21869d6d37fe54d838474f024919060c6805",
+          "translation": "求 $(f^{-1})'(0)$，如果"
+        },
+        {
+          "id": "p298-b3",
+          "source": "(i) $\\displaystyle f(x)=\\int_0^x1+\\sin(\\sin t)dt.$",
+          "sourceSha256": "e8ae03453b8ed551adcaa1632babb1b821b16572cdf73a76bec4c3ff43ab4ff1"
+        },
+        {
+          "id": "p298-b4",
+          "source": "(ii) $\\displaystyle f(x)=\\int_1^x\\cos(\\cos t)dt.$",
+          "sourceSha256": "a0fcfa8437966d82f32858c56367b70e92faf13bae1d8be052a8b7356cb0eff5"
+        },
+        {
+          "id": "p298-b5",
+          "source": "(Don’t try to evaluate $f$ explicitly.)",
+          "sourceSha256": "fe462cf78713f480228a6abd8733f5387558abfd0072d29a6c012736654a265f",
+          "translation": "（不要尝试显式求出 $f$。）"
+        },
+        {
+          "id": "p298-b6",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p298-b7",
+          "source": "Find a function $g$ such that",
+          "sourceSha256": "276ab60a60971b951af2e7f0de722a374ad804eb8647f2e73037953519de3184",
+          "translation": "找出一个函数 $g$，使得"
+        },
+        {
+          "id": "p298-b8",
+          "source": "(i) $\\displaystyle\\int_0^x tg(t)dt=x+x^2.$",
+          "sourceSha256": "af994772e722f80e49486ecbe119d7c00c8fb3a705b5ab9e9bd94b60b1923d18"
+        },
+        {
+          "id": "p298-b9",
+          "source": "(ii) $\\displaystyle\\int_0^{x^2}tg(t)dt=x+x^2.$",
+          "sourceSha256": "431b4086837e5a01c2daebce967764ff3a9f5826bd252bde4fc18b0e76fcb6f6"
+        },
+        {
+          "id": "p298-b10",
+          "source": "(Notice that $g$ is not assumed continuous at $0$.)",
+          "sourceSha256": "34376333bfa394e013b8016337ba8f21872eba981d633d955d1a42494e65ba3d",
+          "translation": "（注意，并未假设 $g$ 在 $0$ 处连续。）"
+        },
+        {
+          "id": "p298-b11",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p298-b12",
+          "source": "(a) Find all continuous functions $f$ satisfying",
+          "sourceSha256": "b1cc517a0914c5c36e6715a8f48537818cd0f103ed9cf5b5e0465266217b8a4c",
+          "translation": "(a) 找出满足下式的所有连续函数 $f$："
+        },
+        {
+          "id": "p298-b13",
+          "source": "$$\\int_0^x f=(f(x))^2+C\\quad\\text{for some constant }C\\ne0$$",
+          "sourceSha256": "2beeb8858e6225567fbad142e50b60e683d30944e876b0f69e9d31cd0af530b1"
+        },
+        {
+          "id": "p298-b14",
+          "source": "assuming that $f$ has at most one $0$.",
+          "sourceSha256": "c63338f44813a79f6da8b907223514ee7a2a0e8d7bf632460b9dab347d3c1c2d",
+          "translation": "假设 $f$ 至多有一个 $0$。"
+        },
+        {
+          "id": "p298-b15",
+          "source": "(b) Also find a solution that is $0$ on an interval $(-\\infty,b]$ with $0<b$, but non-zero for $x>b$.",
+          "sourceSha256": "c7cc895df02435a5aad63e17351d0cb0a1d5b1e90eb5b09ac1411d624fd57db6",
+          "translation": "(b) 再找出一个解，使它在某个满足 $0<b$ 的区间 $(-\\infty,b]$ 上为 $0$，而在 $x>b$ 时非零。"
+        },
+        {
+          "id": "p298-b16",
+          "source": "(c) Finally, for $C=0$ and any interval $[a,b]$ with $a<0<b$, find a solution that is $0$ on $[a,b]$, but non-zero elsewhere.",
+          "sourceSha256": "2da1f7463dca474c25c3c2c49f76a851415d0f0269e1bce2c34aa08cba3718a8",
+          "translation": "(c) 最后，对于 $C=0$ 及任意满足 $a<0<b$ 的区间 $[a,b]$，找出一个解，使它在 $[a,b]$ 上为 $0$，而在其他地方非零。"
+        },
+        {
+          "id": "p298-b17",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p298-b18",
+          "source": "Use Problem 13-23 to prove that",
+          "sourceSha256": "fbf324f624405d7fb63d26495b6f5c98fc45e3325e01a203c49752fae7d9a546",
+          "translation": "利用习题 13-23 证明"
+        },
+        {
+          "id": "p298-b19",
+          "source": "(i) $\\displaystyle\\frac1{7\\sqrt2}\\le\\int_0^1\\frac{x^6}{\\sqrt{1+x^2}}dx\\le\\frac17.$",
+          "sourceSha256": "78762f2a83aca4db8927fb65b89fa4ef3cab132a0155d60307238b3e9567bf94"
+        },
+        {
+          "id": "p298-b20",
+          "source": "(ii) $\\displaystyle\\frac38\\le\\int_0^{1/2}\\sqrt{\\frac{1-x}{1+x}}dx\\le\\frac{\\sqrt3}4.$",
+          "sourceSha256": "dc976bea6f4787ca61622f2821c31a7be988b872610659002e9962ce52546759"
+        },
+        {
+          "id": "p298-b21",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p298-b22",
+          "source": "Find $F'(x)$ if $F(x)=\\int_0^x xf(t)dt$. (The answer is *not* $xf(x)$; you should perform an obvious manipulation on the integral before trying to find $F'$.)",
+          "sourceSha256": "57805b96bf097d28a07971b46892224c88e753408b11d6fe7ec77ff386de087c",
+          "translation": "若 $F(x)=\\int_0^x xf(t)dt$，求 $F'(x)$。（答案*不是* $xf(x)$；在尝试求 $F'$ 之前，你应当先对积分作一个显而易见的变形。）"
+        },
+        {
+          "id": "p298-b23",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p298-b24",
+          "source": "Prove that if $f$ is continuous, then",
+          "sourceSha256": "3a2072227f0283cb464d33348300d40a769ff75830a63eefeecedfd86197d8a7",
+          "translation": "证明：如果 $f$ 连续，那么"
+        },
+        {
+          "id": "p298-b25",
+          "source": "$$\\int_0^x f(u)(x-u)du=\\int_0^x\\left(\\int_0^u f(t)dt\\right)du.$$",
+          "sourceSha256": "d6f8fe91f7d3a63429bb1cd099c549bbd53efcd2d81322af15ade893877a9a23"
+        },
+        {
+          "id": "p298-b26",
+          "source": "Hint: Differentiate both sides, making use of Problem 8.",
+          "sourceSha256": "83e0186ade68541e02f0db7c51bf19aef2832a04af15869a92e0aa89ba20a8fa",
+          "translation": "提示：对两边求导，并利用习题 8。"
+        },
+        {
+          "id": "p298-b27",
+          "source": "### \\*10.",
+          "sourceSha256": "cc9e9741165bfee5bcdee015a051748869190f63742175f7fed445a1c4ba0050"
+        },
+        {
+          "id": "p298-b28",
+          "source": "Use Problem 9 to prove that",
+          "sourceSha256": "a77aa95a2959826daba162c08789fec3030c95f2813ff85ac2974381a52a0f47",
+          "translation": "利用习题 9 证明"
+        },
+        {
+          "id": "p298-b29",
+          "source": "$$\\int_0^x f(u)(x-u)^2du=2\\int_0^x\\left(\\int_0^{u_2}\\left(\\int_0^{u_1}f(t)dt\\right)du_1\\right)du_2.$$",
+          "sourceSha256": "a280b5c1a2046b39d2a3b0ee551e1173eb4afa16687074f4d60e5e41b51b87a3"
+        },
+        {
+          "id": "p298-b30",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p298-b31",
+          "source": "Find a function $f$ such that $f'''(x)=1/\\sqrt{1+\\sin^2x}$. (This problem is supposed to be easy; don’t misinterpret the word “find.”)",
+          "sourceSha256": "8e96e6c5f4bdb6c83516b8ac9e9668101846887d8ecc3aba28783b0234a79213",
+          "translation": "找出一个函数 $f$，使得 $f'''(x)=1/\\sqrt{1+\\sin^2x}$。（这道题本来应当很容易；不要误解“找出”这个词。）"
+        }
+      ]
+    },
+    {
+      "printed": 299,
+      "sourceSha256": "4fe0ea7aa3ea12f8e8561da61c0fad2fb3c8bfebabb1212e3f8d531693ddfadc",
+      "blocks": [
+        {
+          "id": "p299-b1",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p299-b2",
+          "source": "A function $f$ is **periodic**, with **period** $a$, if $f(x+a)=f(x)$ for all $x$.",
+          "sourceSha256": "1c55b974df7c2f1167012c78db5381d02620e5c5ffa13650e2238be1347edf8e",
+          "translation": "如果对所有 $x$ 都有 $f(x+a)=f(x)$，则称函数 $f$ 是**周期函数**，$a$ 是它的**周期**。"
+        },
+        {
+          "id": "p299-b3",
+          "source": "(a) If $f$ is periodic with period $a$ and integrable on $[0,a]$, show that",
+          "sourceSha256": "38aa32b97daff50d8d9e16ef061ba0fd41cd7ee58d95737268b11eb8682f6739",
+          "translation": "(a) 若 $f$ 以 $a$ 为周期，且在 $[0,a]$ 上可积，证明"
+        },
+        {
+          "id": "p299-b4",
+          "source": "$$\\int_0^a f=\\int_b^{b+a}f\\quad\\text{for all }b.$$",
+          "sourceSha256": "88471a251c14d46a4c31d1fb265129b7a01e56c3f8d4b8dd7362ce43b417326f"
+        },
+        {
+          "id": "p299-b5",
+          "source": "(b) Find a function $f$ such that $f$ is not periodic, but $f'$ is. Hint: Choose a periodic $g$ for which it can be guaranteed that $f(x)=\\int_0^x g$ is not periodic.",
+          "sourceSha256": "f22101493b650e2995947f06f838c1c2a4b563b183520d3293708e9542bf0c61",
+          "translation": "(b) 找出一个函数 $f$，使得 $f$ 不是周期函数，但 $f'$ 是。提示：选取一个周期函数 $g$，使得能够保证 $f(x)=\\int_0^x g$ 不是周期函数。"
+        },
+        {
+          "id": "p299-b6",
+          "source": "(c) If $f'$ is periodic with period $a$ and $f(a)=f(0)$, then $f$ is also periodic with period $a$.",
+          "sourceSha256": "5f1658b33d1604e946ac90b720b184c9204f4488779f000519ceb89f39309274",
+          "translation": "(c) 如果 $f'$ 以 $a$ 为周期，而且 $f(a)=f(0)$，那么 $f$ 也以 $a$ 为周期。"
+        },
+        {
+          "id": "p299-b7",
+          "source": "\\*(d) Conversely, if $f'$ is periodic with period $a$ and $f$ is periodic (with some period not necessarily $=a$), then $f(a)=f(0)$.",
+          "sourceSha256": "c01e0cbbd8f5f9fa84674bf46c559bdaa24561ec591288cd06f9ba34b4578136",
+          "translation": "\\*(d) 反过来，如果 $f'$ 以 $a$ 为周期，而且 $f$ 是周期函数（周期不一定 $=a$），那么 $f(a)=f(0)$。"
+        },
+        {
+          "id": "p299-b8",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p299-b9",
+          "source": "Find $\\int_0^b\\sqrt[n]x\\,dx$, by simply guessing a function $f$ with $f'(x)=\\sqrt[n]x$, and using the Second Fundamental Theorem of Calculus. Then check with Problem 13-21.",
+          "sourceSha256": "fb70852b88cdf4a6d9c0159c0cc59432aefcee2d961731e7d4fe156117876795",
+          "translation": "直接猜出一个满足 $f'(x)=\\sqrt[n]x$ 的函数 $f$，再利用微积分第二基本定理，求 $\\int_0^b\\sqrt[n]x\\,dx$。然后与习题 13-21 核对。"
+        },
+        {
+          "id": "p299-b10",
+          "source": "### \\*14.",
+          "sourceSha256": "463c766427059d789ab0ea2e8f3a0bc18c139e0a5a9c7fba25a813764d30e5a0"
+        },
+        {
+          "id": "p299-b11",
+          "source": "Use the Fundamental Theorem of Calculus and Problem 13-21 to derive the result stated in Problem 12-21.",
+          "sourceSha256": "87033a591c95454428171fc1664a84fab3064c30298c02296fb9e4e979b622b1",
+          "translation": "利用微积分基本定理和习题 13-21，推导习题 12-21 中陈述的结果。"
+        },
+        {
+          "id": "p299-b12",
+          "source": "### \\*15.",
+          "sourceSha256": "cd353e85483e37db9d25f065f1219e5a0d4626c718bb5e6c15f1bcef5ff38a16"
+        },
+        {
+          "id": "p299-b13",
+          "source": "Let $C_1$, $C$, and $C_2$ be curves passing through the origin, as shown in Figure 7. Each point on $C$ can be joined to a point of $C_1$ with a vertical line segment and to a point of $C_2$ with a horizontal line segment. We will say that $C$ *bisects* $C_1$ and $C_2$ if the regions $A$ and $B$ have equal areas for every point on $C$.",
+          "sourceSha256": "11c0fefa964bbf17900b070d738c955ab60bafbcff062364e83ed34fcb49164c",
+          "translation": "设 $C_1$、$C$ 和 $C_2$ 是经过原点的曲线，如图 7 所示。$C$ 上的每一点，都可以通过一条竖直线段连接到 $C_1$ 上的一点，也可以通过一条水平线段连接到 $C_2$ 上的一点。如果对于 $C$ 上的每个点，区域 $A$ 和 $B$ 的面积都相等，我们就称 $C$ *平分* $C_1$ 和 $C_2$。"
+        },
+        {
+          "id": "p299-b14",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:307px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 629 307 296\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0318.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 7</figcaption>\n</figure>",
+          "sourceSha256": "b0db94847f8b62a34fdbd1e4ac3369b33ea6d89f8fb6dc75d1c7cd9cc0b24306"
+        },
+        {
+          "id": "p299-b15",
+          "source": "(a) If $C_1$ is the graph of $f(x)=x^2$, $x\\ge0$ and $C$ is the graph of $f(x)=2x^2$, $x\\ge0$, find $C_2$ so that $C$ bisects $C_1$ and $C_2$.",
+          "sourceSha256": "cd93c412483d35573a4f5e1b61a93172c3272e445754dbb69a0c469432df0584",
+          "translation": "(a) 如果 $C_1$ 是 $f(x)=x^2$、$x\\ge0$ 的图像，而 $C$ 是 $f(x)=2x^2$、$x\\ge0$ 的图像，求 $C_2$，使 $C$ 平分 $C_1$ 和 $C_2$。"
+        },
+        {
+          "id": "p299-b16",
+          "source": "(b) More generally, find $C_2$ if $C_1$ is the graph of $f(x)=x^m$, and $C$ is the graph of $f(x)=cx^m$ for some $c>1$.",
+          "sourceSha256": "7d4149e8fdd021644b901ff7f37c8605f163b7d7a3cb16c6c5715429160f7e61",
+          "translation": "(b) 更一般地，如果 $C_1$ 是 $f(x)=x^m$ 的图像，而 $C$ 是 $f(x)=cx^m$ 的图像，其中 $c>1$，求 $C_2$。"
+        },
+        {
+          "id": "p299-b17",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p299-b18",
+          "source": "(a) Find the derivatives of $F(x)=\\int_1^x1/t\\,dt$ and $G(x)=\\int_b^{bx}1/t\\,dt$.",
+          "sourceSha256": "7992f81eba985bd348f58047b2139653e1d1f2c99596d1890ade30d9a1685c5d",
+          "translation": "(a) 求 $F(x)=\\int_1^x1/t\\,dt$ 和 $G(x)=\\int_b^{bx}1/t\\,dt$ 的导数。"
+        },
+        {
+          "id": "p299-b19",
+          "source": "(b) Now give a new proof for Problem 13-15.",
+          "sourceSha256": "cb53c6fc9da5111f95066f775d3a4239958d2325e84951389f7ecb40077122df",
+          "translation": "(b) 现在给出习题 13-15 的一个新证明。"
+        },
+        {
+          "id": "p299-b20",
+          "source": "### \\*17.",
+          "sourceSha256": "73a87ca782297c86bcc31aae8078c33ff3d47b9a248bb5a447ed5cbbf5874320"
+        },
+        {
+          "id": "p299-b21",
+          "source": "Use the Fundamental Theorem of Calculus and Darboux’s Theorem (Problem 11-60) to give another proof of the Intermediate Value Theorem.",
+          "sourceSha256": "0a6ea22758ef48bb0d9b0114a0ebc7372d533beb2550bbbe7291ebc60948cab7",
+          "translation": "利用微积分基本定理和达布定理（习题 11-60），给出介值定理的另一种证明。"
+        },
+        {
+          "id": "p299-b22",
+          "source": "### 18.",
+          "sourceSha256": "ea685e12aa5506177e8354425cc5ef641b0955faf096533840903cb00fca83d4"
+        },
+        {
+          "id": "p299-b23",
+          "source": "Prove that if $h$ is continuous, $f$ and $g$ are differentiable, and",
+          "sourceSha256": "859d793667413c7405985070815a602d4a9b9427364a5c1c6307aa8e525f4d65",
+          "translation": "证明：如果 $h$ 连续，$f$ 和 $g$ 可微，并且"
+        },
+        {
+          "id": "p299-b24",
+          "source": "$$F(x)=\\int_{f(x)}^{g(x)}h(t)dt,$$",
+          "sourceSha256": "29e3f0cf22dff3d136165c7a9a8548da59aca4f04ee59d36240872c1ab929c2c"
+        },
+        {
+          "id": "p299-b25",
+          "source": "then $F'(x)=h(g(x))\\cdot g'(x)-h(f(x))\\cdot f'(x)$. Hint: Try to reduce this to the two cases you can already handle, with a constant either as the lower or the upper limit of integration.",
+          "sourceSha256": "f063e67f34c8cf1fc8ee7acf2ad57324f759a25722c3fd1878c5e505d095af09",
+          "translation": "那么 $F'(x)=h(g(x))\\cdot g'(x)-h(f(x))\\cdot f'(x)$。提示：尝试把它化为你已经能够处理的两种情形，即积分下限或上限为常数的情形。"
+        },
+        {
+          "id": "p299-b26",
+          "source": "### 19.",
+          "sourceSha256": "8b09a7bace93d37dfe88ea4c6c08a187efc4b2a287262ba51ada7accf660adbf"
+        },
+        {
+          "id": "p299-b27",
+          "source": "Let $f$ be integrable on $[a,b]$, let $c$ be in $(a,b)$, and let",
+          "sourceSha256": "f3bf39db0e187372aef5c446e1825c91a633c02de351605ba16ec73bd2ce53c4",
+          "translation": "设 $f$ 在 $[a,b]$ 上可积，$c$ 位于 $(a,b)$ 中，并且令"
+        },
+        {
+          "id": "p299-b28",
+          "source": "$$F(x)=\\int_a^x f,\\quad a\\le x\\le b.$$",
+          "sourceSha256": "6ff90c9f3b9287c5c0846735b936debc76081dac8f1f3c56b03190817ce75f06"
+        },
+        {
+          "id": "p299-b29",
+          "source": "For each of the following statements, give either a proof or a counterexample.",
+          "sourceSha256": "64976f7c35cb231557cb13448cbc382c0c2f53972e15fa8bc064a61dcce20bf5",
+          "translation": "对于以下每个陈述，给出证明或反例。"
+        },
+        {
+          "id": "p299-b30",
+          "source": "(a) If $f$ is differentiable at $c$, then $F$ is differentiable at $c$.",
+          "sourceSha256": "0f1da9ee1d065c48dd3e1973733b582824795dfba4f2c3332d19753bf41d5973",
+          "translation": "(a) 如果 $f$ 在 $c$ 处可微，那么 $F$ 在 $c$ 处可微。"
+        },
+        {
+          "id": "p299-b31",
+          "source": "(b) If $f$ is differentiable at $c$, then $F'$ is continuous at $c$.",
+          "sourceSha256": "a524fbbd069b4d6a301c8b3b84a30b8c27b9bf7c37c1129e00092495e3642191",
+          "translation": "(b) 如果 $f$ 在 $c$ 处可微，那么 $F'$ 在 $c$ 处连续。"
+        },
+        {
+          "id": "p299-b32",
+          "source": "(c) If $f'$ is continuous at $c$, then $F'$ is continuous at $c$.",
+          "sourceSha256": "ea5b1b4be52fff6fc551a6bf6379d0618462a6a60c680d812a9ed90eb64024c5",
+          "translation": "(c) 如果 $f'$ 在 $c$ 处连续，那么 $F'$ 在 $c$ 处连续。"
+        }
+      ]
+    },
+    {
+      "printed": 300,
+      "sourceSha256": "873a74b5e9bd1e29380070429d5608ad475b1b3ccb3a5002ba572a5c6b44557c",
+      "blocks": [
+        {
+          "id": "p300-b1",
+          "source": "### \\*20.",
+          "sourceSha256": "7c0ac0e7a57d06fc4d95e8be6366ac94d249a5dd8169ddd5029639fcb574bd8b"
+        },
+        {
+          "id": "p300-b2",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "令"
+        },
+        {
+          "id": "p300-b3",
+          "source": "$$f(x)=\\begin{cases}\\cos\\dfrac1x,&x\\ne0\\\\0,&x=0.\\end{cases}$$",
+          "sourceSha256": "bf96e57f3538649df9f1abd5a63dd0375e10286f3bba394973c5e350a6de217d"
+        },
+        {
+          "id": "p300-b4",
+          "source": "Is the function $F(x)=\\int_0^x f$ differentiable at $0$? Hint: Stare at page 179.",
+          "sourceSha256": "b1887476e6be74a294ad7a73f5c8a10bc38712c2b7703d14c597e710e5118ac3",
+          "translation": "函数 $F(x)=\\int_0^x f$ 在 $0$ 处可微吗？提示：仔细盯着第 179 页看看。"
+        },
+        {
+          "id": "p300-b5",
+          "source": "### 21.",
+          "sourceSha256": "d908d228d4604b1dd2f9729637ede6c5eb59c7f91a5ba1fe1a64623fe814b30d"
+        },
+        {
+          "id": "p300-b6",
+          "source": "Suppose that $f'$ is integrable on $[0,1]$ and $f(0)=0$. Prove that for all $x$ in $[0,1]$ we have",
+          "sourceSha256": "d9a7f9d4a37c7971dbf33df13a79448f4ff475dbd0d2b32f603b25c4f84d4600",
+          "translation": "设 $f'$ 在 $[0,1]$ 上可积，且 $f(0)=0$。证明，对于 $[0,1]$ 中所有 $x$，都有"
+        },
+        {
+          "id": "p300-b7",
+          "source": "$$|f(x)|\\le\\sqrt{\\int_0^1|f'|^2}.$$",
+          "sourceSha256": "26de69cd071dd86f49f5c281f83632d61808be60c89f135ca3121025bfce4c2d"
+        },
+        {
+          "id": "p300-b8",
+          "source": "Show also that the hypothesis $f(0)=0$ is needed. Hint: Problem 13-39.",
+          "sourceSha256": "853a53af3a6cb25e68313b7f936f40ae3e6cd5a72ccb8b2a305600853b04a4f9",
+          "translation": "还要说明，假设 $f(0)=0$ 不可缺少。提示：习题 13-39。"
+        },
+        {
+          "id": "p300-b9",
+          "source": "### \\*22.",
+          "sourceSha256": "5b0fbafc55bffb1f688d40528bb1f58cb092188c393e832eb794584c9d9d1fc4"
+        },
+        {
+          "id": "p300-b10",
+          "source": "Suppose that $f$ is a differentiable function with $f(0)=0$ and $0<f'\\le1$. Prove that for all $x\\ge0$ we have",
+          "sourceSha256": "c1d57027a810fa4ad6dab26bc8562a9ccd1bf44bdb07cb008c29d40a879f534c",
+          "translation": "设 $f$ 是可微函数，满足 $f(0)=0$ 且 $0<f'\\le1$。证明，对于所有 $x\\ge0$，都有"
+        },
+        {
+          "id": "p300-b11",
+          "source": "$$\\int_0^x f^3\\le\\left(\\int_0^x f\\right)^2.$$",
+          "sourceSha256": "f4bc77db6488684fefb289a83467f5341caae72e1b07ca3202f31737f5434ddc"
+        },
+        {
+          "id": "p300-b12",
+          "source": "### \\*23.",
+          "sourceSha256": "a5c6091323655ca553a8dde45bd564526982494528031cee516a5785f8c48021"
+        },
+        {
+          "id": "p300-b13",
+          "source": "(a) Suppose $G'=g$ and $F'=f$. Prove that if the function $y$ satisfies the differential equation",
+          "sourceSha256": "f8069557e5eb7790f23b382ba525e0f67d8551e061f592db805330735a47639a",
+          "translation": "(a) 假设 $G'=g$ 且 $F'=f$。证明：如果函数 $y$ 满足微分方程"
+        },
+        {
+          "id": "p300-b14",
+          "source": "$$(*)\\qquad g(y(x))\\cdot y'(x)=f(x)\\quad\\text{for all }x\\text{ in some interval},$$",
+          "sourceSha256": "26b08fad30129527b4cf80c31940a24c57a24c66ce84c55dba34b17b0d54142f"
+        },
+        {
+          "id": "p300-b15",
+          "source": "then there is a number $c$ such that",
+          "sourceSha256": "4aeaaf8a394239650f6fbf9ede742702e62d50b14bf46e3af3445a34385afecc",
+          "translation": "那么存在一个数 $c$，使得"
+        },
+        {
+          "id": "p300-b16",
+          "source": "$$(**)\\qquad G(y(x))=F(x)+c\\quad\\text{for all }x\\text{ in this interval}.$$",
+          "sourceSha256": "0d994460d660cf268e5317fc55c70b33ed352acd7fbc91c0c85b25bb77f60db6"
+        },
+        {
+          "id": "p300-b17",
+          "source": "(b) Show, conversely, that if $y$ satisfies $(**)$, then $y$ is a solution of $(*)$.",
+          "sourceSha256": "04bc71bde804b8312d74e4cdf346340a84cb42a3b94bb3e9259767682615ee31",
+          "translation": "(b) 反过来，证明：如果 $y$ 满足 $(**)$，那么 $y$ 就是 $(*)$ 的一个解。"
+        },
+        {
+          "id": "p300-b18",
+          "source": "(c) Find what condition $y$ must satisfy if",
+          "sourceSha256": "144982e5a5d6371fbb01de903a29cd6cb3ecac3d338377d82358b14ffe7ab9be",
+          "translation": "(c) 求 $y$ 必须满足的条件，如果"
+        },
+        {
+          "id": "p300-b19",
+          "source": "$$y'(x)=\\frac{1+x^2}{1+y(x)}.$$",
+          "sourceSha256": "199b608284770fecd817f05b89dfc039e9b5b5b04922f5a399d38291d9f884d6"
+        },
+        {
+          "id": "p300-b20",
+          "source": "(In this case $g(t)=1+t$ and $f(t)=1+t^2$.) Then “solve” the resulting equations to find all possible solutions $y$ (no solution will have $\\mathbf R$ as its domain).",
+          "sourceSha256": "6824f8eb5841e11edd54f241aa85e1b272eba3f7c6d9f65a873cc186a2043bae",
+          "translation": "（此时 $g(t)=1+t$，$f(t)=1+t^2$。）然后“解出”所得方程，找出所有可能的解 $y$（任何解都不会以 $\\mathbf R$ 为定义域）。"
+        },
+        {
+          "id": "p300-b21",
+          "source": "(d) Find what condition $y$ must satisfy if",
+          "sourceSha256": "11de4c88a000e3504c45e886c2b4063a83879c6a024d786179df78813ae9f09a",
+          "translation": "(d) 求 $y$ 必须满足的条件，如果"
+        },
+        {
+          "id": "p300-b22",
+          "source": "$$y'(x)=\\frac{-1}{1+5[y(x)]^4}.$$",
+          "sourceSha256": "8bd4a4480f97b787281a232d0e9fdc2e1c4adf42e3d3b6270402efa34884d3ac"
+        },
+        {
+          "id": "p300-b23",
+          "source": "(An appeal to Problem 12-14 will show that there are functions satisfying the resulting equation.)",
+          "sourceSha256": "8ded19fa4f0449fc66667c5eca5b9cf14030ad033e4ef85e63e27f67db29ebdd",
+          "translation": "（借助习题 12-14，可以说明存在满足所得方程的函数。）"
+        },
+        {
+          "id": "p300-b24",
+          "source": "(e) Find all functions $y$ satisfying",
+          "sourceSha256": "19c6e9138c8ef3162138d1f3c95c9be86303d2a5cabb78fd809a92e0d6c0cf7b",
+          "translation": "(e) 找出满足下式的所有函数 $y$："
+        },
+        {
+          "id": "p300-b25",
+          "source": "$$y(x)y'(x)=-x.$$",
+          "sourceSha256": "83576808c43fb0be490b0a3e2555fed08e96456294300b203e4b0e0000e4c3de"
+        },
+        {
+          "id": "p300-b26",
+          "source": "Find the solution $y$ satisfying $y(0)=-1$.",
+          "sourceSha256": "8df68510f8932ac7fbb584853311261236cfdec3d5e754a69d3b3585618e6990",
+          "translation": "找出满足 $y(0)=-1$ 的解 $y$。"
+        }
+      ]
+    },
+    {
+      "printed": 301,
+      "sourceSha256": "584e698b5ff1e55b7d6eba49cd764777cd6b159ca3badebebe8a513d5690c33f",
+      "blocks": [
+        {
+          "id": "p301-b1",
+          "source": "### 24.",
+          "sourceSha256": "1fb8b304cd861a73c12374de97d67ebaec8b5558d02cf56f4db6adadfe75d8aa"
+        },
+        {
+          "id": "p301-b2",
+          "source": "In Problem 10-19 we found that the Schwarzian derivative",
+          "sourceSha256": "4f3fd59d545efcaba57fefa9d7c429fbff36d070a276c152a66bcf27b6678057",
+          "translation": "在习题 10-19 中，我们发现施瓦茨导数"
+        },
+        {
+          "id": "p301-b3",
+          "source": "$$\\frac{f'''(x)}{f'(x)}-\\frac32\\left(\\frac{f''(x)}{f'(x)}\\right)^2$$",
+          "sourceSha256": "0cacafe0a727e0cf4d97ac1b9540ac7dda27960727be79d5db954ceb788aecfc"
+        },
+        {
+          "id": "p301-b4",
+          "source": "was $0$ for $f(x)=(ax+b)/(cx+d)$. Now suppose that $f$ is any function whose Schwarzian derivative is $0$.",
+          "sourceSha256": "a4aa9172dc7558380190fa74231fe2aa38dcaa1174a6483a911039b85fb8bf0b",
+          "translation": "对于 $f(x)=(ax+b)/(cx+d)$ 等于 $0$。现在设 $f$ 是任意一个施瓦茨导数为 $0$ 的函数。"
+        },
+        {
+          "id": "p301-b5",
+          "source": "(a) $f''^2/f'^3$ is a constant function.",
+          "sourceSha256": "3e8b55dce607de3c34f4ba861149b1889459911358427c5bcc7651d077516c73",
+          "translation": "(a) $f''^2/f'^3$ 是常数函数。"
+        },
+        {
+          "id": "p301-b6",
+          "source": "(b) $f$ is the form $f(x)=(ax+b)/(cx+d)$. Hint: Consider $u=f'$ and apply the previous problem.",
+          "sourceSha256": "485f67db1b6d52712bafce33ab4fc72fc82995ce73698ac2c83485f40e8ba47a",
+          "translation": "(b) $f$ 具有形式 $f(x)=(ax+b)/(cx+d)$。提示：考虑 $u=f'$，并应用上一题。"
+        },
+        {
+          "id": "p301-b7",
+          "source": "### 25.",
+          "sourceSha256": "e243042975caa2efce0a7385b48b4be10d7c1f2cfeac6357090078c2f5eb5e34"
+        },
+        {
+          "id": "p301-b8",
+          "source": "The limit $\\lim_{N\\to\\infty}\\int_a^N f$, if it exists, is denoted by $\\int_a^\\infty f$ (or $\\int_a^\\infty f(x)dx$), and called an “improper integral.”",
+          "sourceSha256": "75550b4845d8c380a232024fdedc1024a69db5a000564867bf40c30b0664299d",
+          "translation": "极限 $\\lim_{N\\to\\infty}\\int_a^N f$，如果存在，就记为 $\\int_a^\\infty f$（或 $\\int_a^\\infty f(x)dx$），并称为“反常积分”。"
+        },
+        {
+          "id": "p301-b9",
+          "source": "(a) Determine $\\int_1^\\infty x^r dx$, if $r<-1$.",
+          "sourceSha256": "d25cb2d2caff598220e5526e05f453006be46ea3e31d7360c320390630767e5c",
+          "translation": "(a) 当 $r<-1$ 时，求 $\\int_1^\\infty x^r dx$。"
+        },
+        {
+          "id": "p301-b10",
+          "source": "(b) Use Problem 13-15 to show that $\\int_1^\\infty1/x\\,dx$ does not exist. Hint: What can you say about $\\int_1^{2^n}1/x\\,dx$?",
+          "sourceSha256": "517f6336edd592ce8ed477fb42577c7db93035cc0249d140dfc2afe8b7047d00",
+          "translation": "(b) 利用习题 13-15，证明 $\\int_1^\\infty1/x\\,dx$ 不存在。提示：对于 $\\int_1^{2^n}1/x\\,dx$，你能说出什么？"
+        },
+        {
+          "id": "p301-b11",
+          "source": "(c) Suppose that $f(x)\\ge0$ for $x\\ge0$ and that $\\int_0^\\infty f$ exists. Prove that if $0\\le g(x)\\le f(x)$ for all $x\\ge0$, and $g$ is integrable on each interval $[0,N]$, then $\\int_0^\\infty g$ also exists.",
+          "sourceSha256": "1b7b374b6de90efa96e0d4b85137dc56d418ed8f582e1f513db99bc15cfec03d",
+          "translation": "(c) 假设当 $x\\ge0$ 时有 $f(x)\\ge0$，且 $\\int_0^\\infty f$ 存在。证明：如果对所有 $x\\ge0$ 都有 $0\\le g(x)\\le f(x)$，并且 $g$ 在每个区间 $[0,N]$ 上可积，那么 $\\int_0^\\infty g$ 也存在。"
+        },
+        {
+          "id": "p301-b12",
+          "source": "(d) Explain why $\\int_0^\\infty1/(1+x^2)dx$ exists. Hint: Split this integral up at $1$.",
+          "sourceSha256": "ea2623fad36b896a4096247c209cf9c77ed7642f4728cdf6dc4bf876992ab035",
+          "translation": "(d) 解释为什么 $\\int_0^\\infty1/(1+x^2)dx$ 存在。提示：在 $1$ 处分开这个积分。"
+        },
+        {
+          "id": "p301-b13",
+          "source": "### 26.",
+          "sourceSha256": "e0a0eda9f4171fbdc2f78618f10a33fea6c704a744eb8323db3535cb65310a23"
+        },
+        {
+          "id": "p301-b14",
+          "source": "Decide whether or not the following improper integrals exist.",
+          "sourceSha256": "f6d6ff8691125b864f389abf9cab84ea04206bb291a9edd8dab8f77587204779",
+          "translation": "判断下面的反常积分是否存在。"
+        },
+        {
+          "id": "p301-b15",
+          "source": "(i) $\\displaystyle\\int_0^\\infty\\frac1{\\sqrt{1+x^3}}dx.$",
+          "sourceSha256": "e1a88bf601a21be79950a18b4ecc11b18a9ba66277cf48d019d5580b9bf2f2b2"
+        },
+        {
+          "id": "p301-b16",
+          "source": "(ii) $\\displaystyle\\int_0^\\infty\\frac{x}{1+x^{3/2}}dx.$",
+          "sourceSha256": "2a3db59dd6174e1f158a88a8ff12f10cf6c68023eac1bd9c9d0c59f7359f3a3d"
+        },
+        {
+          "id": "p301-b17",
+          "source": "(iii) $\\displaystyle\\int_0^\\infty\\frac1{x\\sqrt{1+x}}dx$ (this is really a type considered in Problem 28).",
+          "sourceSha256": "7ce99f0ec1c6b32304c823e1541a3fc07f806b65f04eea19e69ff0742696977c",
+          "translation": "(iii) $\\displaystyle\\int_0^\\infty\\frac1{x\\sqrt{1+x}}dx$（这实际上属于习题 28 中考虑的类型）。"
+        },
+        {
+          "id": "p301-b18",
+          "source": "### 27.",
+          "sourceSha256": "01de3c63fd790d0deac18299d79a16ecfff7727c478f7c8964568f07245d3eec"
+        },
+        {
+          "id": "p301-b19",
+          "source": "The improper integral $\\int_{-\\infty}^a f$ is defined in the obvious way, as $\\lim_{N\\to-\\infty}\\int_N^a f$. But another kind of improper integral $\\int_{-\\infty}^\\infty f$ is defined in a nonobvious way: it is $\\int_0^\\infty f+\\int_{-\\infty}^0 f$, provided these improper integrals both exist.",
+          "sourceSha256": "476757875c67a784519c9eafe3ec5f601aaaaa3ba047cc110e86ad3119e8967a",
+          "translation": "反常积分 $\\int_{-\\infty}^a f$ 的定义很自然，即 $\\lim_{N\\to-\\infty}\\int_N^a f$。但另一类反常积分 $\\int_{-\\infty}^\\infty f$ 的定义却不那么显然：它是 $\\int_0^\\infty f+\\int_{-\\infty}^0 f$，前提是这两个反常积分都存在。"
+        },
+        {
+          "id": "p301-b20",
+          "source": "(a) Explain why $\\int_{-\\infty}^\\infty1/(1+x^2)dx$ exists.",
+          "sourceSha256": "b1aa20f86543e2ae3b1bc395bb2acc7ff046d235e0b486c908bbce6fb4abe417",
+          "translation": "(a) 解释为什么 $\\int_{-\\infty}^\\infty1/(1+x^2)dx$ 存在。"
+        },
+        {
+          "id": "p301-b21",
+          "source": "(b) Explain why $\\int_{-\\infty}^\\infty x\\,dx$ does not exist. (But notice that $\\lim_{N\\to\\infty}\\int_{-N}^N x\\,dx$ *does* exist.)",
+          "sourceSha256": "61bcf20413e6ad9d3d8b58b9d2b8b5e92683a2a12d66bfc7086ec5539fc396c2",
+          "translation": "(b) 解释为什么 $\\int_{-\\infty}^\\infty x\\,dx$ 不存在。（但注意，$\\lim_{N\\to\\infty}\\int_{-N}^N x\\,dx$ *确实*存在。）"
+        },
+        {
+          "id": "p301-b22",
+          "source": "(c) Prove that if $\\int_{-\\infty}^\\infty f$ exists, then $\\lim_{N\\to\\infty}\\int_{-N}^N f$ exists and equals $\\int_{-\\infty}^\\infty f$. Show moreover, that $\\lim_{N\\to\\infty}\\int_{-N}^{N+1}f$ and $\\lim_{N\\to\\infty}\\int_{-N^2}^N f$ both exist and equal $\\int_{-\\infty}^\\infty f$. Can you state a reasonable generalization of these facts? (If you can’t, you will have a miserable time trying to do these special cases!)",
+          "sourceSha256": "6d2b4100f1896d24197ba95b8247a3dfe9428252a2fceb4c7bf79ae8ed2eb63a",
+          "translation": "(c) 证明：如果 $\\int_{-\\infty}^\\infty f$ 存在，那么 $\\lim_{N\\to\\infty}\\int_{-N}^N f$ 存在，且等于 $\\int_{-\\infty}^\\infty f$。进一步证明，$\\lim_{N\\to\\infty}\\int_{-N}^{N+1}f$ 和 $\\lim_{N\\to\\infty}\\int_{-N^2}^N f$ 也都存在，且等于 $\\int_{-\\infty}^\\infty f$。你能对这些事实给出一个合理的推广吗？（如果不能，你在处理这些特殊情形时就会十分痛苦！）"
+        }
+      ]
+    },
+    {
+      "printed": 302,
+      "sourceSha256": "53a5195aaa5e9b490d3ec7b2ca19dc4bace31a4edd52f64448e22527abaca478",
+      "blocks": [
+        {
+          "id": "p302-b1",
+          "source": "### 28.",
+          "sourceSha256": "99710235075939b06c843e9bd945573c4f9f13f6f1481388af7da8a53884193f"
+        },
+        {
+          "id": "p302-b2",
+          "source": "There is another kind of “improper integral” in which the interval is bounded, but the *function* is unbounded:",
+          "sourceSha256": "5a16924f3b489ef2d1e4f39075f932e3758efc34d68f5059640a42b19616e765",
+          "translation": "还有另一类“反常积分”，其中区间有界，但*函数*无界："
+        },
+        {
+          "id": "p302-b3",
+          "source": "(a) If $a>0$, find $\\lim_{\\varepsilon\\to0^+}\\int_\\varepsilon^a1/\\sqrt x\\,dx$. This limit is denoted by $\\int_0^a1/\\sqrt x\\,dx$, even though the function $f(x)=1/\\sqrt x$ is not bounded on $[0,a]$, no matter how we define $f(0)$.",
+          "sourceSha256": "7b5fb0a302c3d5ab98a3a613bf6c6514ba4a1beebe2a1c2787e38f38ff39c852",
+          "translation": "(a) 如果 $a>0$，求 $\\lim_{\\varepsilon\\to0^+}\\int_\\varepsilon^a1/\\sqrt x\\,dx$。这个极限记为 $\\int_0^a1/\\sqrt x\\,dx$，尽管无论怎样定义 $f(0)$，函数 $f(x)=1/\\sqrt x$ 在 $[0,a]$ 上都无界。"
+        },
+        {
+          "id": "p302-b4",
+          "source": "(b) Find $\\int_0^a x^r dx$ if $-1<r<0$.",
+          "sourceSha256": "4eaebbc25125fdf6f5cf3f7afe342cdcb268764949d2f9af5bea3704c12062c3",
+          "translation": "(b) 当 $-1<r<0$ 时，求 $\\int_0^a x^r dx$。"
+        },
+        {
+          "id": "p302-b5",
+          "source": "(c) Use Problem 13-15 to show that $\\int_0^a x^{-1}dx$ does not make sense, even as a limit.",
+          "sourceSha256": "a33ea257654610cb7542dce6bc75f48a982461758aabcd2757cc091085e4a953",
+          "translation": "(c) 利用习题 13-15，证明 $\\int_0^a x^{-1}dx$ 即使作为极限也没有意义。"
+        },
+        {
+          "id": "p302-b6",
+          "source": "(d) Invent a reasonable definition of $\\int_a^0|x|^r dx$ for $a<0$ and compute it for $-1<r<0$.",
+          "sourceSha256": "2aaf644e96fb55dfc5b0e9c8469ed7e9a074f45e13da85138ca332c9acc98f48",
+          "translation": "(d) 对于 $a<0$，为 $\\int_a^0|x|^r dx$ 提出一个合理的定义，并在 $-1<r<0$ 时计算它。"
+        },
+        {
+          "id": "p302-b7",
+          "source": "(e) Invent a reasonable definition of $\\int_{-1}^1(1-x^2)^{-1/2}dx$, as a sum of two limits, and show that the limits exist. Hint: Why does $\\int_{-1}^0(1+x)^{-1/2}dx$ exist? How does $(1+x)^{-1/2}$ compare with $(1-x^2)^{-1/2}$ for $-1<x<0$?",
+          "sourceSha256": "f569c5554024349be322756a1fde3646dd666e84475b77e242f9234fbaed6f38",
+          "translation": "(e) 将 $\\int_{-1}^1(1-x^2)^{-1/2}dx$ 定义为两个极限之和，提出一个合理的定义，并证明这些极限存在。提示：为什么 $\\int_{-1}^0(1+x)^{-1/2}dx$ 存在？当 $-1<x<0$ 时，$(1+x)^{-1/2}$ 与 $(1-x^2)^{-1/2}$ 相比如何？"
+        },
+        {
+          "id": "p302-b8",
+          "source": "### 29.",
+          "sourceSha256": "2b03e98fafcd40e8fdba5086d1753ea10425470a6703dc5959a8d997b5c69ba4"
+        },
+        {
+          "id": "p302-b9",
+          "source": "(a) If $f$ is continuous on $[0,1]$, compute $\\lim_{x\\to0^+}x\\int_x^1\\frac{f(t)}t\\,dt$.",
+          "sourceSha256": "af8157d3c4023f0080ef4e78873dc0d6333e394ef3d70d6f923ed4a579f6253c",
+          "translation": "(a) 如果 $f$ 在 $[0,1]$ 上连续，计算 $\\lim_{x\\to0^+}x\\int_x^1\\frac{f(t)}t\\,dt$。"
+        },
+        {
+          "id": "p302-b10",
+          "source": "\\*(b) If $f$ is integrable on $[0,1]$ and continuous at $0$, compute",
+          "sourceSha256": "c94d9009cbe571a9f0e1f8aa2ec869ba8a19affeeb659095477480eae2417117",
+          "translation": "\\*(b) 如果 $f$ 在 $[0,1]$ 上可积，且在 $0$ 处连续，计算"
+        },
+        {
+          "id": "p302-b11",
+          "source": "$$\\lim_{x\\to0^+}x\\int_x^1\\frac{f(t)}{t^2}dt.$$",
+          "sourceSha256": "0de1b197b39f3698f64838b64a94ebb6c4cb6d6dc82564d9aed57dfdbab3531d"
+        },
+        {
+          "id": "p302-b12",
+          "source": "### 30.",
+          "sourceSha256": "3af8d9cda2244caa10c3e85da41840dc8c8c907907fa1a17e47f6da23b5d7ba1"
+        },
+        {
+          "id": "p302-b13",
+          "source": "It is possible, finally, to combine the two possible extensions of the notion of the integral.",
+          "sourceSha256": "f99ce2f839640e93cb98e9fe5ff5e4afb742f3dccb36ce1cbce0dd5ab1cfddb2",
+          "translation": "最后，还可以把积分概念的这两种可能的推广结合起来。"
+        },
+        {
+          "id": "p302-b14",
+          "source": "(a) If $f(x)=1/\\sqrt x$ for $0\\le x\\le1$ and $f(x)=1/x^2$ for $x\\ge1$, find $\\int_0^\\infty f(x)dx$ (after deciding what this should mean).",
+          "sourceSha256": "e9cc1e878cfa0d17526cae1bf7693f0ab8e51d13885ca693849c12668f0ccf34",
+          "translation": "(a) 如果当 $0\\le x\\le1$ 时有 $f(x)=1/\\sqrt x$，当 $x\\ge1$ 时有 $f(x)=1/x^2$，求 $\\int_0^\\infty f(x)dx$（先决定它应当是什么意思）。"
+        },
+        {
+          "id": "p302-b15",
+          "source": "(b) Show that $\\int_0^\\infty x^r dx$ never makes sense. (Distinguish the cases $-1<r<0$ and $r<-1$. In one case things go wrong at $0$, in the other case at $\\infty$; for $r=-1$ things go wrong at both places.)",
+          "sourceSha256": "acf96bc8cf7d6442fdd16df317e7cbea27359308e5e65d4c655dc1c2cbe819b4",
+          "translation": "(b) 证明 $\\int_0^\\infty x^r dx$ 始终没有意义。（区分 $-1<r<0$ 和 $r<-1$ 两种情形。一种情形在 $0$ 处出问题，另一种在 $\\infty$ 处出问题；当 $r=-1$ 时，两处都出问题。）"
+        }
+      ]
+    }
+  ]
+}

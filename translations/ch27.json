@@ -1,0 +1,2396 @@
+{
+  "chapter": 27,
+  "language": "zh-CN",
+  "sourceSha256": "0e2442f06b161149ee254cd0b706ddf86f6c156b9713a3ef87fc90da3c2531c6",
+  "paragraphCount": 234,
+  "pages": [
+    {
+      "printed": 555,
+      "sourceSha256": "d6f5c8d6bb32c96f9a526dec925800546ded04578dee56094f8a75c9a0478e1d",
+      "blocks": [
+        {
+          "id": "p555-b1",
+          "source": "# CHAPTER 27\n# COMPLEX POWER SERIES",
+          "sourceSha256": "a0dcbfba7b0d261d8b2b7732eb9dfbccb95cdd9e337617592d0e7bd9cf85ec41",
+          "translation": "# 第 27 章\n# 复幂级数"
+        },
+        {
+          "id": "p555-b2",
+          "source": "If you have not already guessed where differentiable complex functions are going to come from, the title of this chapter should give the secret away: we intend to define functions by means of infinite series. This will necessitate a discussion of infinite sequences of complex numbers, and sums of such sequences, but (as was the case with limits and continuity) the basic definitions are almost exactly the same as for real sequences and series.",
+          "sourceSha256": "57d3074d19f5a3f4e3614cce93caf4ec6809f4eb2ded97d8922911b3fe63c0f8",
+          "translation": "如果你还没有猜出可导的复函数将从哪里来，本章标题应该已经泄露了秘密：我们打算用无穷级数来定义函数。这就需要讨论复数的无穷数列以及这些数列的和；不过（与极限和连续性的情形一样），基本定义与实数数列及级数几乎完全相同。"
+        },
+        {
+          "id": "p555-b3",
+          "source": "An **infinite sequence** of complex numbers is, formally, a complex-valued function whose domain is $\\mathbf N$; the convenient subscript notation for sequences of real numbers will also be used for sequences of complex numbers. A sequence $\\{a_n\\}$ of complex numbers is most conveniently pictured by labeling the points $a_n$ in the plane (Figure 1).",
+          "sourceSha256": "c285611431d89791cf89a3efde35ea3177206df7da2bc3e27596e1af6f594e7e",
+          "translation": "形式地说，复数的一个**无穷数列**就是定义域为 $\\mathbf N$ 的复值函数；实数数列中方便的下标记法，也将用于复数数列。复数数列 $\\{a_n\\}$ 最方便的图示，是把各点 $a_n$ 标在平面上（图 1）。"
+        },
+        {
+          "id": "p555-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:287px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 349 289 272\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0574.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 1</figcaption></figure>",
+          "sourceSha256": "dab0073a8692bd3653d2ddb7cbdebb1d67e06a1e2775c6c09df70b610fa34e0d"
+        },
+        {
+          "id": "p555-b5",
+          "source": "The sequence shown in Figure 1 converges to $0$, “convergence” of complex sequences being defined precisely as for real sequences: the sequence $\\{a_n\\}$ **converges to $l$**, in symbols",
+          "sourceSha256": "5d879184d2a5f240ee13aae64728afd2272166d4077bedf36ba3041be6679d34",
+          "translation": "图 1 中的数列收敛于 $0$；复数数列的“收敛”定义与实数数列完全相同：数列 $\\{a_n\\}$ **收敛于 $l$**，符号表示为"
+        },
+        {
+          "id": "p555-b6",
+          "source": "$$\\lim_{n\\to\\infty}a_n=l,$$",
+          "sourceSha256": "3881edde576233bdc2a2c8d82078888a0ee4030bc3bb0e7801f47b58f90698de"
+        },
+        {
+          "id": "p555-b7",
+          "source": "if for every $\\varepsilon>0$ there is a natural number $N$ such that, for all $n$,",
+          "sourceSha256": "8fa58ad40b671cd1e94e929df85bcdf10975132eb922780089be625a0921ecd0",
+          "translation": "是指：对于每个 $\\varepsilon>0$，都存在一个自然数 $N$，使得对于所有 $n$，有"
+        },
+        {
+          "id": "p555-b8",
+          "source": "$$\\text{if }n>N,\\text{ then }|a_n-l|<\\varepsilon.$$",
+          "sourceSha256": "943d61ba6ca4ccd1e6f6b28e4a68a19e3bcf7b2fdad2ee39fd0149a99b8d64a4"
+        },
+        {
+          "id": "p555-b9",
+          "source": "This condition means that any circle drawn around $l$ will contain $a_n$ for all sufficiently large $n$ (Figure 2); expressed more colloquially, the sequence is eventually inside any circle drawn around $l$.",
+          "sourceSha256": "825c5f0ec9875e3de1a543223be88cb602565fd55b941e75e8970c03cc05abed",
+          "translation": "这个条件意味着，在 $l$ 周围画出的任何一个圆，都将包含所有充分大的 $n$ 对应的 $a_n$（图 2）；说得更通俗些，数列最终会进入 $l$ 周围的任意一个圆内。"
+        },
+        {
+          "id": "p555-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:330px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 735 333 263\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0574.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 2</figcaption></figure>",
+          "sourceSha256": "3c28f44ce762a7850c1e0ab9fa583af0f72845731164ee9ffd754708a45cb254"
+        },
+        {
+          "id": "p555-b11",
+          "source": "Convergence of complex sequences is not only defined precisely as for real sequences, but can even be reduced to this familiar case.",
+          "sourceSha256": "36807f434969b2f980864f78c9f6f1e82c06c7df8d4e870c1a5619234dc39632",
+          "translation": "复数数列的收敛，不仅定义与实数数列完全相同，甚至还能化归到这个熟悉的情形。"
+        },
+        {
+          "id": "p555-b12",
+          "source": "## THEOREM 1",
+          "sourceSha256": "53fac1876c9bcfd6bbc4adffba3ffd8cf1b717338f29618152217c60c4746f5f",
+          "translation": "## 定理 1"
+        },
+        {
+          "id": "p555-b13",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "设"
+        },
+        {
+          "id": "p555-b14",
+          "source": "$$a_n=b_n+ic_n\\qquad\\text{for real }b_n\\text{ and }c_n,$$",
+          "sourceSha256": "012ad160367b906d01a7ac2816a06e3c567b96f1d1e3abcc71cf49faaa3bc1c9"
+        },
+        {
+          "id": "p555-b15",
+          "source": "and let",
+          "sourceSha256": "be54b46342d289270aa575ec709e6fb53c345609399fc2ad090e18511f4d139a",
+          "translation": "并设"
+        },
+        {
+          "id": "p555-b16",
+          "source": "$$l=\\beta+i\\gamma\\qquad\\text{for real }\\beta\\text{ and }\\gamma.$$",
+          "sourceSha256": "aacd79314a257c4133c8fd69ddc56bd447920663fde7efc6f7c6fe79a8475234"
+        },
+        {
+          "id": "p555-b17",
+          "source": "Then $\\lim_{n\\to\\infty}a_n=l$ if and only if",
+          "sourceSha256": "8915650141f81fba29cd13084a5a053c07353b7a6297f26a0b10366cde6aaeef",
+          "translation": "那么 $\\lim_{n\\to\\infty}a_n=l$ 当且仅当"
+        },
+        {
+          "id": "p555-b18",
+          "source": "$$\\lim_{n\\to\\infty}b_n=\\beta\\quad\\text{and}\\quad\\lim_{n\\to\\infty}c_n=\\gamma.$$",
+          "sourceSha256": "1022d514dfc655310bf013287d65ac2934ed92996a68e2d91ad6d18180cecfd6"
+        },
+        {
+          "id": "p555-b19",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p555-b20",
+          "source": "The proof is left as an easy exercise. If there is any doubt as to how to proceed, consult the similar Theorem 1 of Chapter 26. ■",
+          "sourceSha256": "c9ea1402ec747bf106a9578c0f07a144b37aeaf36c53cb6385f71e2af96f491e",
+          "translation": "证明留作一个简单练习。如果对如何着手有任何疑问，可以参考第 26 章中类似的定理 1。■"
+        },
+        {
+          "id": "p555-b21",
+          "source": "The **sum** of a sequence $\\{a_n\\}$ is defined, once again, as $\\lim_{n\\to\\infty}s_n$, where",
+          "sourceSha256": "2d0cbad30538986a8a7faf168c90650eabac4382460e26e403856b7e72d508c8",
+          "translation": "数列 $\\{a_n\\}$ 的**和**，仍然定义为 $\\lim_{n\\to\\infty}s_n$，其中"
+        },
+        {
+          "id": "p555-b22",
+          "source": "$$s_n=a_1+\\cdots+a_n.$$",
+          "sourceSha256": "ce37078b34f084520f81d4ae51aa663c362f96e7fe448fa45b2fe3ded0c33e59"
+        }
+      ]
+    },
+    {
+      "printed": 556,
+      "sourceSha256": "003988af1875edc2a17d7e6619c0e6e29127aa674e4c2e511da0e84f0ee242de",
+      "blocks": [
+        {
+          "id": "p556-b1",
+          "source": "Sequences for which this limit exists are **summable**; alternatively, we may say that the infinite series $\\displaystyle\\sum_{n=1}^\\infty a_n$ **converges** if this limit exists, and **diverges** otherwise. It is unnecessary to develop any new tests for convergence of infinite series, because of the following theorem.",
+          "sourceSha256": "da4366724e238246677732e2878fd8d7fae06c48cdb551a854b3ae41a1f07e30",
+          "translation": "这个极限存在的数列称为**可求和**；另一种说法是，如果这个极限存在，就称无穷级数 $\\displaystyle\\sum_{n=1}^\\infty a_n$ **收敛**，否则称它**发散**。由于下面的定理，无须为无穷级数的收敛建立任何新的判别法。"
+        },
+        {
+          "id": "p556-b2",
+          "source": "## THEOREM 2",
+          "sourceSha256": "9fc963cfb0602ba9c0088ef4562d4aa1212f85de78653a5fb5bf14e8009ff8a7",
+          "translation": "## 定理 2"
+        },
+        {
+          "id": "p556-b3",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "设"
+        },
+        {
+          "id": "p556-b4",
+          "source": "$$a_n=b_n+ic_n\\qquad\\text{for real }b_n\\text{ and }c_n.$$",
+          "sourceSha256": "271effaab66267c42f0b0219545d31f77b603c90e2632662ece5a499a597be70"
+        },
+        {
+          "id": "p556-b5",
+          "source": "Then $\\displaystyle\\sum_{n=1}^\\infty a_n$ converges if and only if $\\displaystyle\\sum_{n=1}^\\infty b_n$ and $\\displaystyle\\sum_{n=1}^\\infty c_n$ both converge, and in this case",
+          "sourceSha256": "319e2e48805d87ffaefca77947cf200d1f79930df3591541b9a5bf68ba6ff268",
+          "translation": "那么 $\\displaystyle\\sum_{n=1}^\\infty a_n$ 收敛，当且仅当 $\\displaystyle\\sum_{n=1}^\\infty b_n$ 和 $\\displaystyle\\sum_{n=1}^\\infty c_n$ 都收敛；在这种情况下，"
+        },
+        {
+          "id": "p556-b6",
+          "source": "$$\\sum_{n=1}^\\infty a_n=\\sum_{n=1}^\\infty b_n+i\\left(\\sum_{n=1}^\\infty c_n\\right).$$",
+          "sourceSha256": "11a0391057dbb45c586f9f2a28e6b90e17c095c49c853f2522c435bb1aab1857"
+        },
+        {
+          "id": "p556-b7",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p556-b8",
+          "source": "This is an immediate consequence of Theorem 1 applied to the sequence of partial sums of $\\{a_n\\}$. ■",
+          "sourceSha256": "220a6cb5cc593f22a439b1d680404a3a30133da74b3a14a8e1893f42423a774e",
+          "translation": "把定理 1 应用于 $\\{a_n\\}$ 的部分和数列，立即得到这一结论。■"
+        },
+        {
+          "id": "p556-b9",
+          "source": "There is also a notion of absolute convergence for complex series: the series $\\displaystyle\\sum_{n=1}^\\infty a_n$ **converges absolutely** if the series $\\displaystyle\\sum_{n=1}^\\infty|a_n|$ converges (this is a series of real numbers, and consequently one to which our earlier tests may be applied). The following theorem is not quite so easy as the preceding two.",
+          "sourceSha256": "a4d278687ce25563593f55aa2aab1446ad43526a591bd07eaba2da564bb7989f",
+          "translation": "复数级数也有绝对收敛的概念：如果级数 $\\displaystyle\\sum_{n=1}^\\infty|a_n|$ 收敛，就称级数 $\\displaystyle\\sum_{n=1}^\\infty a_n$ **绝对收敛**（前者是一个实数级数，因此可以应用先前的判别法）。下面的定理不像前两个那样容易。"
+        },
+        {
+          "id": "p556-b10",
+          "source": "## THEOREM 3",
+          "sourceSha256": "b8edca4ea9f8b240e9615c405ac5fd2537d8c2c927895fdef57abda9f71f2199",
+          "translation": "## 定理 3"
+        },
+        {
+          "id": "p556-b11",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "设"
+        },
+        {
+          "id": "p556-b12",
+          "source": "$$a_n=b_n+ic_n\\qquad\\text{for real }b_n\\text{ and }c_n.$$",
+          "sourceSha256": "271effaab66267c42f0b0219545d31f77b603c90e2632662ece5a499a597be70"
+        },
+        {
+          "id": "p556-b13",
+          "source": "Then $\\displaystyle\\sum_{n=1}^\\infty a_n$ converges absolutely if and only if $\\displaystyle\\sum_{n=1}^\\infty b_n$ and $\\displaystyle\\sum_{n=1}^\\infty c_n$ both converge absolutely.",
+          "sourceSha256": "5d0e6b43e3988e59c1d3187125de8f40486e37128d79f6767c1df301948d7b6b",
+          "translation": "那么 $\\displaystyle\\sum_{n=1}^\\infty a_n$ 绝对收敛，当且仅当 $\\displaystyle\\sum_{n=1}^\\infty b_n$ 和 $\\displaystyle\\sum_{n=1}^\\infty c_n$ 都绝对收敛。"
+        },
+        {
+          "id": "p556-b14",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p556-b15",
+          "source": "Suppose first that $\\displaystyle\\sum_{n=1}^\\infty b_n$ and $\\displaystyle\\sum_{n=1}^\\infty c_n$ both converge absolutely, i.e., that $\\displaystyle\\sum_{n=1}^\\infty|b_n|$ and $\\displaystyle\\sum_{n=1}^\\infty|c_n|$ both converge. It follows that $\\displaystyle\\sum_{n=1}^\\infty|b_n|+|c_n|$ converges. Now,",
+          "sourceSha256": "c4d9a59dab726406de8ae06e2cbb8ac3e70037d04eea4ee80d16682b2be2f255",
+          "translation": "先假设 $\\displaystyle\\sum_{n=1}^\\infty b_n$ 和 $\\displaystyle\\sum_{n=1}^\\infty c_n$ 都绝对收敛，即 $\\displaystyle\\sum_{n=1}^\\infty|b_n|$ 和 $\\displaystyle\\sum_{n=1}^\\infty|c_n|$ 都收敛。由此可知 $\\displaystyle\\sum_{n=1}^\\infty|b_n|+|c_n|$ 收敛。现在，"
+        },
+        {
+          "id": "p556-b16",
+          "source": "$$|a_n|=|b_n+ic_n|\\le|b_n|+|c_n|.$$",
+          "sourceSha256": "d3abe6c96890f66373e06913caf24c05220ee2537378d66c184ddd68765b4655"
+        },
+        {
+          "id": "p556-b17",
+          "source": "It follows from the comparison test that $\\displaystyle\\sum_{n=1}^\\infty|a_n|$ converges (the numbers $|a_n|$ and $|b_n|+|c_n|$ are real and nonnegative). Thus $\\displaystyle\\sum_{n=1}^\\infty a_n$ converges absolutely.",
+          "sourceSha256": "de6e2347ce32c60d176a8e7f16823e3cb5ffb2804853c2e0562be3d6ab94b122",
+          "translation": "根据比较判别法，$\\displaystyle\\sum_{n=1}^\\infty|a_n|$ 收敛（数 $|a_n|$ 和 $|b_n|+|c_n|$ 都是非负实数）。因此 $\\displaystyle\\sum_{n=1}^\\infty a_n$ 绝对收敛。"
+        }
+      ]
+    },
+    {
+      "printed": 557,
+      "sourceSha256": "4db57fc07a8f4d8f016f3cb142c5df3bda0d2bae2f99368065ace90282884879",
+      "blocks": [
+        {
+          "id": "p557-b1",
+          "source": "Now suppose that $\\displaystyle\\sum_{n=1}^\\infty|a_n|$ converges. Since",
+          "sourceSha256": "34c7709f018d568abd2ca63fcd29ce0b871608688efff2785317734264d6d8a0",
+          "translation": "现在假设 $\\displaystyle\\sum_{n=1}^\\infty|a_n|$ 收敛。由于"
+        },
+        {
+          "id": "p557-b2",
+          "source": "$$|a_n|=\\sqrt{b_n^2+c_n^2},$$",
+          "sourceSha256": "d439617031aaa2e33bac8a7f60c8a47f4745c23398181cee92503e8c38fcf9ae"
+        },
+        {
+          "id": "p557-b3",
+          "source": "it is clear that",
+          "sourceSha256": "691365ab14e075f8326dafd0b5471c02cfcf9ff76e455abf40765597a60e1224",
+          "translation": "显然有"
+        },
+        {
+          "id": "p557-b4",
+          "source": "$$|b_n|\\le|a_n|\\quad\\text{and}\\quad|c_n|\\le|a_n|.$$",
+          "sourceSha256": "43f3d234a2be1f1c460255fed2203de11e5ca940595bf0ff8e1e54670763bfae"
+        },
+        {
+          "id": "p557-b5",
+          "source": "Once again, the comparison test shows that $\\displaystyle\\sum_{n=1}^\\infty|b_n|$ and $\\displaystyle\\sum_{n=1}^\\infty|c_n|$ converge. ■",
+          "sourceSha256": "c222ae7c142d0e2606fe1901d903d3e6dc190ed7dacd592f0844fa518fc3b434",
+          "translation": "再次使用比较判别法，可知 $\\displaystyle\\sum_{n=1}^\\infty|b_n|$ 和 $\\displaystyle\\sum_{n=1}^\\infty|c_n|$ 收敛。■"
+        },
+        {
+          "id": "p557-b6",
+          "source": "Two consequences of Theorem 3 are particularly noteworthy. If $\\displaystyle\\sum_{n=1}^\\infty a_n$ converges absolutely, then $\\displaystyle\\sum_{n=1}^\\infty b_n$ and $\\displaystyle\\sum_{n=1}^\\infty c_n$ also converge absolutely; consequently $\\displaystyle\\sum_{n=1}^\\infty b_n$ and $\\displaystyle\\sum_{n=1}^\\infty c_n$ converge, by Theorem 23-5, so $\\displaystyle\\sum_{n=1}^\\infty a_n$ converges by Theorem 2. In other words, absolute convergence implies convergence. Similar reasoning shows that any rearrangement of an absolutely convergent series has the same sum. These facts can also be proved directly, without using the corresponding theorems for real numbers, by first establishing an analogue of the Cauchy criterion (see Problem 13).",
+          "sourceSha256": "ceeeeb82bc5d5bdc1bb1185947c98ceb78a6948a569b81a42cd1657b7823cfac",
+          "translation": "定理 3 的两个推论特别值得注意。如果 $\\displaystyle\\sum_{n=1}^\\infty a_n$ 绝对收敛，那么 $\\displaystyle\\sum_{n=1}^\\infty b_n$ 和 $\\displaystyle\\sum_{n=1}^\\infty c_n$ 也绝对收敛；因此，根据定理 23-5，$\\displaystyle\\sum_{n=1}^\\infty b_n$ 和 $\\displaystyle\\sum_{n=1}^\\infty c_n$ 收敛，再由定理 2，$\\displaystyle\\sum_{n=1}^\\infty a_n$ 收敛。换句话说，绝对收敛蕴含收敛。类似的推理表明，绝对收敛级数的任意重排都有相同的和。这些事实也可以直接证明，而不使用实数的相应定理，方法是先建立柯西准则的对应形式（见习题 13）。"
+        },
+        {
+          "id": "p557-b7",
+          "source": "With these preliminaries safely disposed of, we can now consider **complex power series**, that is, functions of the form",
+          "sourceSha256": "027abbb16324a20a1929daa0061f445d697783a5a2e400610e8309fa7ecde2b0",
+          "translation": "稳妥地完成这些准备之后，现在可以考虑**复幂级数**，也就是形如下式的函数："
+        },
+        {
+          "id": "p557-b8",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty a_n(z-a)^n=a_0+a_1(z-a)+a_2(z-a)^2+\\cdots.$$",
+          "sourceSha256": "455f9c62ffe24dd26b25202fbfc9541444a468acb6eea8909b24c1ffc05766d6"
+        },
+        {
+          "id": "p557-b9",
+          "source": "Here the numbers $a$ and $a_n$ are allowed to be complex, and we are naturally interested in the behavior of $f$ for complex $z$. As in the real case, we shall usually consider power series centered at $0$,",
+          "sourceSha256": "54ef03005129aa1e174ff8835343eb418d6f1b0bdab9d43e6cc72f896219c167",
+          "translation": "这里的数 $a$ 和 $a_n$ 允许为复数，我们自然关心 $f$ 对复数 $z$ 的行为。与实数情形一样，我们通常考虑以 $0$ 为中心的幂级数，"
+        },
+        {
+          "id": "p557-b10",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty a_nz^n;$$",
+          "sourceSha256": "cd3bcfacd2f7ff47cdc8030a0cfbf97d77c0c620fb11ca1ceb9c11a3a0a5da75"
+        },
+        {
+          "id": "p557-b11",
+          "source": "in this case, if $f(z_0)$ converges, then $f(z)$ will also converge for $|z|<|z_0|$. The proof of this fact will be similar to the proof of Theorem 24-6, but, for reasons that will soon become clear, we will not use all the paraphernalia of uniform convergence and the Weierstrass $M$-test, even though they have complex analogues. Our next theorem consequently generalizes only a small part of Theorem 24-6.",
+          "sourceSha256": "e0ba44bccfd5e2a9a0da02dc988da7a4c631ed017f0a4c0871092f7a46beba41",
+          "translation": "在这种情况下，如果 $f(z_0)$ 收敛，那么当 $|z|<|z_0|$ 时，$f(z)$ 也收敛。这一事实的证明与定理 24-6 的证明类似，但出于很快就会明白的原因，我们不会使用一致收敛和魏尔斯特拉斯 $M$ 判别法的全套工具，尽管它们也有复数情形的对应版本。因此，下一个定理只推广了定理 24-6 的一小部分。"
+        },
+        {
+          "id": "p557-b12",
+          "source": "## THEOREM 4",
+          "sourceSha256": "ea66391d2f37df52c554766b9e77c16113e0b045fee313e08dc91f4c1d0e5f83",
+          "translation": "## 定理 4"
+        },
+        {
+          "id": "p557-b13",
+          "source": "Suppose that",
+          "sourceSha256": "fec9870e474474d9697ae5c4f9c7b38353d7c2bda8ba0abfc0249ff8b846c6c1",
+          "translation": "假设"
+        },
+        {
+          "id": "p557-b14",
+          "source": "$$\\sum_{n=0}^\\infty a_nz_0^n=a_0+a_1z_0+a_2z_0^2+\\cdots$$",
+          "sourceSha256": "3afea0c05e5c402bb945422f5c23baab2100c1c9d2482eca782e785b91ef57bc"
+        }
+      ]
+    },
+    {
+      "printed": 558,
+      "sourceSha256": "474ade35f4497e9bdc128cfec2824f1df98b0814ceed06e498eb9ffcaafd0df6",
+      "blocks": [
+        {
+          "id": "p558-b1",
+          "source": "converges for some $z_0\\ne0$. Then if $|z|<|z_0|$, the two series",
+          "sourceSha256": "b11976428ea6c8bc847def4aff4594a46d69062e1a11779e8f8100221c3f2f7a",
+          "translation": "在某个 $z_0\\ne0$ 处收敛。那么，如果 $|z|<|z_0|$，两个级数"
+        },
+        {
+          "id": "p558-b2",
+          "source": "$$\\sum_{n=0}^\\infty a_nz^n=a_0+a_1z+a_2z^2+\\cdots$$",
+          "sourceSha256": "4a68a1514fce6f1e1698de57d608a1885fada99733885ba3dcca69727a5f53f9"
+        },
+        {
+          "id": "p558-b3",
+          "source": "$$\\sum_{n=1}^\\infty na_nz^{n-1}=a_1+2a_2z+3a_3z^2+\\cdots$$",
+          "sourceSha256": "1ff5f96fcdce4ccbfa29461bf2c14d505833a00c3f71a7b866ccb6f56c78eaf2"
+        },
+        {
+          "id": "p558-b4",
+          "source": "both converge absolutely.",
+          "sourceSha256": "1bfb4267e60678be122a0515577b814afebe5bcdf738252653e444a0a9dfc1a2",
+          "translation": "都绝对收敛。"
+        },
+        {
+          "id": "p558-b5",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p558-b6",
+          "source": "As in the proof of Theorem 24-6, we will need only the fact that the set of numbers $a_nz_0^n$ is bounded: there is a number $M$ such that",
+          "sourceSha256": "fab5015c833cb4d389c025cddf9fe6e2a97c2e26397ec2d9c92c27403f61f0fe",
+          "translation": "与定理 24-6 的证明一样，我们只需使用数 $a_nz_0^n$ 构成的集合有界这一事实：存在一个数 $M$，使得"
+        },
+        {
+          "id": "p558-b7",
+          "source": "$$|a_nz_0^n|\\le M\\qquad\\text{for all }n.$$",
+          "sourceSha256": "9b6e9eafecaae52d1a32f0ff2a336926334bf393aac3c8fd2fa791bf52fce7f5"
+        },
+        {
+          "id": "p558-b8",
+          "source": "We then have",
+          "sourceSha256": "8e63c27c3a5f0d36a42a99a6295b2cedae70610cbcfaeaf49fbdd10482137ba2",
+          "translation": "于是有"
+        },
+        {
+          "id": "p558-b9",
+          "source": "$$\\begin{aligned}|a_nz^n|&=|a_nz_0^n|\\cdot\\left|\\frac z{z_0}\\right|^n\\\\&\\le M\\left|\\frac z{z_0}\\right|^n,\\end{aligned}$$",
+          "sourceSha256": "7a3cd12ff94fbc34f3174ae920523d8edc3466349ed53a970fb784a6f20b476f"
+        },
+        {
+          "id": "p558-b10",
+          "source": "and, for $z\\ne0$,",
+          "sourceSha256": "5509db07daaff94f38eae5ff20370a53e77cc26402bab2e409f122c637b089ac",
+          "translation": "而且，对于 $z\\ne0$，"
+        },
+        {
+          "id": "p558-b11",
+          "source": "$$\\begin{aligned}|na_nz^{n-1}|&=\\frac1{|z|}n|a_nz_0^n|\\cdot\\left|\\frac z{z_0}\\right|^n\\\\&\\le\\frac M{|z|}n\\left|\\frac z{z_0}\\right|^n.\\end{aligned}$$",
+          "sourceSha256": "c14df5eccfac535a8143b5e68d0310e1c3b00817a1781301d795ad2b3dbba0d0"
+        },
+        {
+          "id": "p558-b12",
+          "source": "Since the series $\\displaystyle\\sum_{n=0}^\\infty|z/z_0|^n$ and $\\displaystyle\\sum_{n=1}^\\infty n|z/z_0|^n$ converge, this shows that both $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ and $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ converge absolutely (the argument for $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ assumed that $z\\ne0$, but this series certainly converges for $z=0$ also). ■",
+          "sourceSha256": "bc56f3fb836ef2084a403c9ef8fd5486134c58a9df17e0284a79cb672ee38f4a",
+          "translation": "由于级数 $\\displaystyle\\sum_{n=0}^\\infty|z/z_0|^n$ 和 $\\displaystyle\\sum_{n=1}^\\infty n|z/z_0|^n$ 收敛，这说明 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 和 $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ 都绝对收敛（关于 $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ 的论证假设了 $z\\ne0$，但这个级数在 $z=0$ 处当然也收敛）。■"
+        },
+        {
+          "id": "p558-b13",
+          "source": "Theorem 4 evidently restricts greatly the possibilities for the set",
+          "sourceSha256": "857ac3547ab04f138fb946157ecc134d66b1ae78c8c9e27ca8065767909be343",
+          "translation": "定理 4 显然大大限制了下面这个集合可能具有的形状："
+        },
+        {
+          "id": "p558-b14",
+          "source": "$$\\left\\{z:\\sum_{n=0}^\\infty a_nz^n\\text{ converges}\\right\\}.$$",
+          "sourceSha256": "81336c60423b62bf545340976ceb257bc1959e2a69984067616ff6faff1a3dac"
+        },
+        {
+          "id": "p558-b15",
+          "source": "For example, the shaded set $A$ in Figure 3 cannot be the set of all $z$ where $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ converges, since it contains $z$, but not the number $w$ satisfying $|w|<|z|$.",
+          "sourceSha256": "8cb93ee2807ca42d7ff24762b0fbc004454f84ebd4b58fc7749f740345c047f3",
+          "translation": "例如，图 3 中的阴影集合 $A$，不可能是 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 收敛的所有 $z$ 构成的集合，因为它包含 $z$，却不包含满足 $|w|<|z|$ 的数 $w$。"
+        },
+        {
+          "id": "p558-b16",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:345px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 980 346 343\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0577.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 3</figcaption></figure>",
+          "sourceSha256": "39196dcc6e2da93796b93314e06bfa504ba6fd77fa8a401c53de2c31a47f8956"
+        },
+        {
+          "id": "p558-b17",
+          "source": "It seems quite unlikely that the set of points where a power series converges could be anything except the set of points inside a circle. If we allow “circles of radius $0$” (when the power series converges only at $0$) and “circles of radius $\\infty$” (when the power series converges at all points), then this assertion is true (with one complication which we will soon mention); the proof requires only Theorem 4 and a knack for good organization.",
+          "sourceSha256": "c92d1ef47485d70054c11c34f517e278512c1da8d0168cb9aaedd44458aa198d",
+          "translation": "幂级数收敛的点所成的集合，除了某个圆内的点集之外，似乎不大可能有别的样子。如果允许“半径为 $0$ 的圆”（幂级数只在 $0$ 处收敛）和“半径为 $\\infty$ 的圆”（幂级数处处收敛），那么这个断言就成立（但有一个稍后会提到的复杂之处）；证明只需要定理 4，以及良好的组织技巧。"
+        }
+      ]
+    },
+    {
+      "printed": 559,
+      "sourceSha256": "186de418559b28444fa2e5ebf42e876908db67dbe30f28f7f1f3365127fa3c2d",
+      "blocks": [
+        {
+          "id": "p559-b1",
+          "source": "## THEOREM 5",
+          "sourceSha256": "c94f9199fe34be84f23f58e99462e4d11daa375dd377566a2e16a173494ca323",
+          "translation": "## 定理 5"
+        },
+        {
+          "id": "p559-b2",
+          "source": "For any power series",
+          "sourceSha256": "6dcdbbb3a634a6aeed9a14ad283ee1de08a3134694bb57ccc2edf6fc9b209929",
+          "translation": "对于任意幂级数"
+        },
+        {
+          "id": "p559-b3",
+          "source": "$$\\sum_{n=0}^\\infty a_nz^n=a_0+a_1z+a_2z^2+a_3z^3+\\cdots$$",
+          "sourceSha256": "4756f9643e4d4a356f70cd4087acf86755d85ee8c8082bec2dcf3b757bffe411"
+        },
+        {
+          "id": "p559-b4",
+          "source": "one of the following three possibilities must be true:",
+          "sourceSha256": "b51f5224a0945161aeb74db9586f6079d83b21350a1866ffc54870df555d8d4b",
+          "translation": "以下三种情形必有一种成立："
+        },
+        {
+          "id": "p559-b5",
+          "source": "(1) $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ converges only for $z=0$.",
+          "sourceSha256": "235eac05c1b839bc84d0629e5618698fe0d37375a2faf66a36ffa5e3196aa01e",
+          "translation": "(1) $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 只在 $z=0$ 时收敛。"
+        },
+        {
+          "id": "p559-b6",
+          "source": "(2) $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ converges absolutely for all $z$ in $\\mathbf C$.",
+          "sourceSha256": "0937d1f9512f6f8e07776152b4c9ba572696029931afe70a1db479ac260f8052",
+          "translation": "(2) $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 对 $\\mathbf C$ 中的所有 $z$ 都绝对收敛。"
+        },
+        {
+          "id": "p559-b7",
+          "source": "(3) There is a number $R>0$ such that $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ converges absolutely if $|z|<R$ and diverges if $|z|>R$. (Notice that we do not mention what happens when $|z|=R$.)",
+          "sourceSha256": "6cf6833c17c128a841d9c36a5a3bf97747f25b418f32667fc65a854a015a350a",
+          "translation": "(3) 存在一个数 $R>0$，使得 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 在 $|z|<R$ 时绝对收敛，在 $|z|>R$ 时发散。（注意，我们没有说明 $|z|=R$ 时会怎样。）"
+        },
+        {
+          "id": "p559-b8",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p559-b9",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "令"
+        },
+        {
+          "id": "p559-b10",
+          "source": "$$S=\\left\\{x\\text{ in }\\mathbf R:\\sum_{n=0}^\\infty a_nw^n\\text{ converges for some }w\\text{ with }|w|=x\\right\\}.$$",
+          "sourceSha256": "04f4d71ea34a32c022efd8b37e1b98afa840e99a536939f512bd8d6194069675"
+        },
+        {
+          "id": "p559-b11",
+          "source": "Suppose first that $S$ is unbounded. Then for any complex number $z$, there is a number $x$ in $S$ such that $|z|<x$. By definition of $S$, this means that $\\displaystyle\\sum_{n=0}^\\infty a_nw^n$ converges for some $w$ with $|w|=x>|z|$. It follows from Theorem 4 that $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ converges absolutely. Thus, in this case possibility (2) is true.",
+          "sourceSha256": "00c2bc1453d403928b43416d34982358f1ab8c99912e680c074522f64e387aeb",
+          "translation": "先假设 $S$ 无界。那么，对于任意复数 $z$，在 $S$ 中都存在一个数 $x$，使得 $|z|<x$。根据 $S$ 的定义，这意味着对于某个满足 $|w|=x>|z|$ 的 $w$，$\\displaystyle\\sum_{n=0}^\\infty a_nw^n$ 收敛。由定理 4 可知，$\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 绝对收敛。因此，在这种情况下，情形 (2) 成立。"
+        },
+        {
+          "id": "p559-b12",
+          "source": "Now suppose that $S$ is bounded, and let $R$ be the least upper bound of $S$. If $R=0$, then $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ converges only for $z=0$, so possibility (1) is true. Suppose, on the other hand, that $R>0$. Then if $z$ is a complex number with $|z|<R$, there is a number $x$ in $S$ with $|z|<x$. Once again, this means that $\\displaystyle\\sum_{n=0}^\\infty a_nw^n$ converges for some $w$ with $|z|<|w|$, so that $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ converges absolutely. Moreover, if $|z|>R$, then $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ does not converge, since $|z|$ is not in $S$. ■",
+          "sourceSha256": "e4f9a08bf42186f097cd1ebeb921bc5432faf0182c72ec6798daf06106d652c6",
+          "translation": "现在假设 $S$ 有界，并令 $R$ 为 $S$ 的最小上界。如果 $R=0$，那么 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 只在 $z=0$ 时收敛，所以情形 (1) 成立。另一方面，假设 $R>0$。那么，如果 $z$ 是一个满足 $|z|<R$ 的复数，$S$ 中就存在一个满足 $|z|<x$ 的数 $x$。同样，这意味着 $\\displaystyle\\sum_{n=0}^\\infty a_nw^n$ 在某个满足 $|z|<|w|$ 的 $w$ 处收敛，因此 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 绝对收敛。此外，如果 $|z|>R$，那么 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 不收敛，因为 $|z|$ 不属于 $S$。■"
+        },
+        {
+          "id": "p559-b13",
+          "source": "The number $R$ which occurs in case (3) is called the **radius of convergence** of $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$. In cases (1) and (2) it is customary to say that the radius of convergence is $0$ and $\\infty$, respectively. When $0<R<\\infty$, the circle $\\{z:|z|=R\\}$ is called",
+          "sourceSha256": "0c49a694a035cc8b91e4b8109478d96b69f6344b64e3445601fa40c1b0bcfd4d",
+          "translation": "情形 (3) 中出现的数 $R$，称为 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 的**收敛半径**。在情形 (1) 和 (2) 中，习惯上分别说收敛半径为 $0$ 和 $\\infty$。当 $0<R<\\infty$ 时，圆 $\\{z:|z|=R\\}$ 称为"
+        }
+      ]
+    },
+    {
+      "printed": 560,
+      "sourceSha256": "4d3b7a9b455d5131d8068e9c5d5202a670a998a7af5d44ad42a974395094e3ec",
+      "blocks": [
+        {
+          "id": "p560-b1",
+          "source": "the **circle of convergence** of $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$. If $z$ is outside the circle, then, of course, $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ does not converge, but actually a much stronger statement can be made: the terms $a_nz^n$ are not even bounded. To prove this, let $w$ be any number with $|z|>|w|>R$; if the terms $a_nz^n$ were bounded, then the proof of Theorem 4 would show that $\\displaystyle\\sum_{n=0}^\\infty a_nw^n$ converges, which is false. Thus (Figure 4), inside the circle of convergence the series $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ converges in the best possible way (absolutely) and outside the circle the series diverges in the worst possible way (the terms $a_nz^n$ are not bounded).",
+          "sourceSha256": "7754204100b75c687938eb6c377f5fe9e315023db9981f1c7cc214f4f186eee8",
+          "translation": "$\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 的**收敛圆**。如果 $z$ 位于圆外，$\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 当然不收敛，但实际上还可以作出强得多的陈述：各项 $a_nz^n$ 甚至无界。为了证明这一点，任取满足 $|z|>|w|>R$ 的数 $w$；如果各项 $a_nz^n$ 有界，那么定理 4 的证明就会表明 $\\displaystyle\\sum_{n=0}^\\infty a_nw^n$ 收敛，而这是错误的。因此（图 4），在收敛圆内部，级数 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 以最好的方式收敛（绝对收敛）；在圆外，级数则以最糟的方式发散（各项 $a_nz^n$ 无界）。"
+        },
+        {
+          "id": "p560-b2",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:418px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 421 419 335\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0579.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 4</figcaption></figure>",
+          "sourceSha256": "08557cc0aaa26698f2a102efccda87339e79aed6c81ce6f52fdc8fa24efa558a"
+        },
+        {
+          "id": "p560-b3",
+          "source": "What happens *on* the circle of convergence is a much more difficult question. We will not consider that question at all, except to mention that there are power series which converge everywhere on the circle of convergence, power series which converge nowhere on the circle of convergence, and power series that do just about anything in between. (See Problem 5.)",
+          "sourceSha256": "92480d4cb34a0eb49c277b0c5fff72522af8cdb51c3f46801d5a45d08f1388ec",
+          "translation": "*在*收敛圆周上会发生什么，是一个困难得多的问题。我们完全不讨论这个问题，只指出：有的幂级数在收敛圆周上处处收敛，有的处处不收敛，还有的在这两者之间表现出几乎各种可能的行为。（见习题 5。）"
+        },
+        {
+          "id": "p560-b4",
+          "source": "Algebraic manipulations on complex power series can be justified just as in the real case. Thus, if $f(z)=\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ and $g(z)=\\displaystyle\\sum_{n=0}^\\infty b_nz^n$ both have radius of convergence $\\ge R$, then $h(z)=\\displaystyle\\sum_{n=0}^\\infty(a_n+b_n)z^n$ also has radius of convergence $\\ge R$ and $h=f+g$ inside the circle of radius $R$. Similarly, the Cauchy product $h(z)=\\displaystyle\\sum_{n=0}^\\infty c_nz^n$, for $c_n=\\displaystyle\\sum_{k=0}^n a_kb_{n-k}$, has radius of convergence $\\ge R$ and $h=fg$ inside the circle of radius $R$. And if $f(z)=\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ has radius of convergence $>0$ and $a_0\\ne0$, then we can find a power series $\\displaystyle\\sum_{n=0}^\\infty b_nz^n$ with radius of convergence $>0$ which represents $1/f$ inside its circle of convergence.",
+          "sourceSha256": "75385f4fee877cf1e2bab329a0751e43d3c9597741a7588701b1bd870886eced",
+          "translation": "复幂级数的代数运算，可以像实数情形一样得到证明。因此，如果 $f(z)=\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 和 $g(z)=\\displaystyle\\sum_{n=0}^\\infty b_nz^n$ 的收敛半径都 $\\ge R$，那么 $h(z)=\\displaystyle\\sum_{n=0}^\\infty(a_n+b_n)z^n$ 的收敛半径也 $\\ge R$，并且在半径为 $R$ 的圆内有 $h=f+g$。类似地，柯西乘积 $h(z)=\\displaystyle\\sum_{n=0}^\\infty c_nz^n$（其中 $c_n=\\displaystyle\\sum_{k=0}^n a_kb_{n-k}$）的收敛半径 $\\ge R$，且在半径为 $R$ 的圆内有 $h=fg$。如果 $f(z)=\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 的收敛半径 $>0$，且 $a_0\\ne0$，那么就能找到一个收敛半径 $>0$ 的幂级数 $\\displaystyle\\sum_{n=0}^\\infty b_nz^n$，它在自己的收敛圆内表示 $1/f$。"
+        },
+        {
+          "id": "p560-b5",
+          "source": "But our real goal in this chapter is to produce differentiable functions. We therefore want to generalize the result proved for real power series in Chapter 24, that a function defined by a power series can be differentiated term-by-term inside the circle of convergence. At this point we can no longer imitate the proof of Chapter 24, even if we were willing to introduce uniform convergence, because no analogue of Theorem 24-3 seems available. Instead we will use a direct argument (which could also have been used in Chapter 24). Before beginning the proof, we notice that at least there is no problem about the convergence of the series produced by term-by-term differentiation. If the series $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ has radius of convergence $R$, then Theorem 4 immediately implies that the series $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ also converges for $|z|<R$. Moreover, if $|z|>R$, so that the terms $a_nz^n$ are unbounded,",
+          "sourceSha256": "e6ac3a7342815c91d22451c8f620f2207c76aa4d97eb9580b26ea6fe764888be",
+          "translation": "但本章真正的目标，是构造可导函数。因此，我们希望推广第 24 章对实幂级数证明的结果：幂级数所定义的函数，在收敛圆内可以逐项求导。到这里，我们再也无法模仿第 24 章的证明，即使愿意引入一致收敛也不行，因为似乎没有可用的定理 24-3 的对应结果。我们将改用一个直接论证（其实第 24 章也可以使用这个论证）。在开始证明之前，先注意到：至少逐项求导得到的级数的收敛性没有问题。如果级数 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 的收敛半径为 $R$，那么定理 4 立即表明，级数 $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ 在 $|z|<R$ 时也收敛。此外，如果 $|z|>R$，因此各项 $a_nz^n$ 无界，"
+        }
+      ]
+    },
+    {
+      "printed": 561,
+      "sourceSha256": "817171f61d3a734b6e59a134024a1ba1624b29f99ab1832f4f7fa95ab5f88a6e",
+      "blocks": [
+        {
+          "id": "p561-b1",
+          "source": "then the terms $na_nz^{n-1}$ are surely unbounded, so $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ does not converge. This shows that the radius of convergence of $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ is also exactly $R$.",
+          "sourceSha256": "227f511117fafdf374e59695ba5220bed345ca80e13eaaabaec2eacc773cea67",
+          "translation": "那么各项 $na_nz^{n-1}$ 当然也无界，所以 $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ 不收敛。这表明，$\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ 的收敛半径也恰好为 $R$。"
+        },
+        {
+          "id": "p561-b2",
+          "source": "## THEOREM 6",
+          "sourceSha256": "c85b1ed4f66d3fbbfc101c93d64c8ca44d95489433b72304a330fd5e7a947197",
+          "translation": "## 定理 6"
+        },
+        {
+          "id": "p561-b3",
+          "source": "If the power series",
+          "sourceSha256": "aae81b3f07b03520c2f6134907bcf7a07e0935b4469e7090a05e56002e0380b7",
+          "translation": "如果幂级数"
+        },
+        {
+          "id": "p561-b4",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty a_nz^n$$",
+          "sourceSha256": "6eddc0acca5ea2d4db8ba49e58744e73fb001d3c13a172bec4a1e247f4656811"
+        },
+        {
+          "id": "p561-b5",
+          "source": "has radius of convergence $R>0$, then $f$ is differentiable at $z$ for all $z$ with $|z|<R$, and",
+          "sourceSha256": "eb9183bc0e317d7ef0e41f16cefd00a2eb7ad0b0d21068473fe536bb516d6b28",
+          "translation": "的收敛半径为 $R>0$，那么对于所有满足 $|z|<R$ 的 $z$，$f$ 都在 $z$ 处可导，并且"
+        },
+        {
+          "id": "p561-b6",
+          "source": "$$f'(z)=\\sum_{n=1}^\\infty na_nz^{n-1}.$$",
+          "sourceSha256": "bdaad12e4110536c54629ed96ee0adef078af47de67f4aed596908b7587f0aa5"
+        },
+        {
+          "id": "p561-b7",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p561-b8",
+          "source": "We will use another “$\\varepsilon/3$ argument.” The fact that the theorem is clearly true for polynomial functions suggests writing",
+          "sourceSha256": "dfc62242ff01caaa8e88558205b0b48b4768f8e90d57297b2c97f5f36ef49c02",
+          "translation": "我们将再次使用“$\\varepsilon/3$ 论证”。定理对多项式函数显然成立，这提示我们写出"
+        },
+        {
+          "id": "p561-b9",
+          "source": "$$\\begin{aligned}&\\left|\\frac{f(z+h)-f(z)}h-\\sum_{n=1}^\\infty na_nz^{n-1}\\right|=\\left|\\sum_{n=0}^\\infty a_n\\frac{((z+h)^n-z^n)}h-\\sum_{n=1}^\\infty na_nz^{n-1}\\right|\\\\&\\quad\\le\\left|\\sum_{n=0}^\\infty a_n\\frac{((z+h)^n-z^n)}h-\\sum_{n=0}^N a_n\\frac{((z+h)^n-z^n)}h\\right|\\\\&\\qquad+\\left|\\sum_{n=0}^N a_n\\frac{((z+h)^n-z^n)}h-\\sum_{n=1}^N na_nz^{n-1}\\right|\\\\&\\qquad+\\left|\\sum_{n=1}^N na_nz^{n-1}-\\sum_{n=1}^\\infty na_nz^{n-1}\\right|.\\end{aligned}\\tag{*}$$",
+          "sourceSha256": "0a100399b76b0988569a83e20ac4122fd5d42d8379fc45ad5fb7acec07011e32"
+        },
+        {
+          "id": "p561-b10",
+          "source": "We will show that for any $\\varepsilon>0$, each absolute value on the right side can be made $<\\varepsilon/3$ by choosing $N$ sufficiently large and $h$ sufficiently small. This will clearly prove the theorem.",
+          "sourceSha256": "2738e1ec45fa8b3da585697b76481af0b9a15cf7b760c705a57e06d6f31d5682",
+          "translation": "我们将说明：对于任意 $\\varepsilon>0$，只要把 $N$ 选得充分大，$h$ 选得充分小，就能使右边每个绝对值都 $<\\varepsilon/3$。这显然就证明了定理。"
+        },
+        {
+          "id": "p561-b11",
+          "source": "Only the first term in the right side of (*) will present any difficulties. To begin with, choose some $z_0$ with $|z|<|z_0|<R$; henceforth we will consider only $h$ with $|z+h|\\le|z_0|$. The expression $((z+h)^n-z^n)/h$ can be written in a more convenient way if we remember that",
+          "sourceSha256": "845f4fd4ab5fb48ad6a08879cebf54165566a87b7cdbde61f71c37c8ecd1777c",
+          "translation": "只有 (*) 右边的第一项会带来困难。首先，选择某个满足 $|z|<|z_0|<R$ 的 $z_0$；此后，我们只考虑满足 $|z+h|\\le|z_0|$ 的 $h$。只要记住下面的等式，就能把表达式 $((z+h)^n-z^n)/h$ 写成更方便的形式："
+        },
+        {
+          "id": "p561-b12",
+          "source": "$$\\frac{x^n-y^n}{x-y}=x^{n-1}+x^{n-2}y+x^{n-3}y^2+\\cdots+y^{n-1}.$$",
+          "sourceSha256": "a96b30b6003a68b3dfbdadba91371d9b7dc5deab94e81a63f924f28880ff73c3"
+        },
+        {
+          "id": "p561-b13",
+          "source": "Applying this to",
+          "sourceSha256": "ec33bb3c21a88644aa2900da488d4601b47bdc32028c9fdc16a568dbcf1f2cf0",
+          "translation": "把它应用于"
+        },
+        {
+          "id": "p561-b14",
+          "source": "$$\\frac{(z+h)^n-z^n}h=\\frac{(z+h)^n-z^n}{(z+h)-z},$$",
+          "sourceSha256": "2947557d0e0e4465e1acd4047e4187edd62d40e9665ec157173324019216c182"
+        },
+        {
+          "id": "p561-b15",
+          "source": "we obtain",
+          "sourceSha256": "bf31204fc693cd38b319bf1ebfac21f1d5da8ec271c36b120452d72baea81372",
+          "translation": "得到"
+        },
+        {
+          "id": "p561-b16",
+          "source": "$$\\frac{(z+h)^n-z^n}h=(z+h)^{n-1}+z(z+h)^{n-2}+\\cdots+z^{n-1}.$$",
+          "sourceSha256": "a61b19a53fa1af5d1734fb7f27c2f4e0c1eb3339693edf3290f18f53a959be37"
+        }
+      ]
+    },
+    {
+      "printed": 562,
+      "sourceSha256": "756766ad2438c139416483cd96593ea29b9f8aaa6b0d4d0b010621c9ff26a4d6",
+      "blocks": [
+        {
+          "id": "p562-b1",
+          "source": "Since",
+          "sourceSha256": "98af1ed61831e6ab92bbb2a4d429344c8d0581c77d5c85311c5ed8a3207d2eea",
+          "translation": "由于"
+        },
+        {
+          "id": "p562-b2",
+          "source": "$$|(z+h)^{n-1}+z(z+h)^{n-2}+\\cdots+z^{n-1}|\\le n|z_0|^{n-1},$$",
+          "sourceSha256": "14c06a1f79d995b1f01521682b6889a125f173c8ba58298cbd4092f3c6eae43a"
+        },
+        {
+          "id": "p562-b3",
+          "source": "we have",
+          "sourceSha256": "311eecafbfec5e428b3e652becbcd18bf9c9670e490734d5811c85e6a7623ab4",
+          "translation": "我们有"
+        },
+        {
+          "id": "p562-b4",
+          "source": "$$\\left|a_n\\frac{((z+h)^n-z^n)}h\\right|\\le n|a_n|\\cdot|z_0|^{n-1}.$$",
+          "sourceSha256": "15b263d1bd2f18e9add905ad863ed14a30ada2aaa663b6cae966fe65555ed62b"
+        },
+        {
+          "id": "p562-b5",
+          "source": "But the series $\\displaystyle\\sum_{n=1}^\\infty n|a_n|\\cdot|z_0|^{n-1}$ converges, so if $N$ is sufficiently large, then",
+          "sourceSha256": "780ec5db8a228fe17c8e24b5576699ea4e37c0c8e86d0489e9ad36c6f9bc84d1",
+          "translation": "但是级数 $\\displaystyle\\sum_{n=1}^\\infty n|a_n|\\cdot|z_0|^{n-1}$ 收敛，因此如果 $N$ 充分大，就有"
+        },
+        {
+          "id": "p562-b6",
+          "source": "$$\\sum_{n=N+1}^\\infty n|a_n|\\cdot|z_0|^{n-1}<\\frac\\varepsilon3.$$",
+          "sourceSha256": "4d40b0a7843fa07d66e6731142b7c9b5057ea152005aef3df739e2ae0133dde2"
+        },
+        {
+          "id": "p562-b7",
+          "source": "This means that",
+          "sourceSha256": "041259ea12f12eb18f933aa1e8d8e689e381c18f1f462e7a4542e2bc357126de",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p562-b8",
+          "source": "$$\\begin{aligned}&\\left|\\sum_{n=0}^\\infty a_n\\frac{((z+h)^n-z^n)}h-\\sum_{n=0}^N a_n\\frac{((z+h)^n-z^n)}h\\right|\\\\&\\qquad=\\left|\\sum_{n=N+1}^\\infty a_n\\frac{((z+h)^n-z^n)}h\\right|\\le\\sum_{n=N+1}^\\infty\\left|a_n\\frac{((z+h)^n-z^n)}h\\right|\\\\&\\qquad\\le\\sum_{n=N+1}^\\infty n|a_n|\\cdot|z_0|^{n-1}<\\frac\\varepsilon3.\\end{aligned}$$",
+          "sourceSha256": "9d8f234142d76e156243ae20d3adc1edf8f7de9becfdf8c88cd90ff81cd07704"
+        },
+        {
+          "id": "p562-b9",
+          "source": "In short, if $N$ is sufficiently large, then",
+          "sourceSha256": "f8641c5f73f04747ae61f2176a9bc549bc97039577aace1b84de06a2d9f5c813",
+          "translation": "总之，如果 $N$ 充分大，那么"
+        },
+        {
+          "id": "p562-b10",
+          "source": "$$\\left|\\sum_{n=0}^\\infty a_n\\frac{((z+h)^n-z^n)}h-\\sum_{n=0}^N a_n\\frac{((z+h)^n-z^n)}h\\right|<\\frac\\varepsilon3,\\tag{1}$$",
+          "sourceSha256": "14b92e5cbcdf12934aee6f830f93db299fda587e71ba21b56bdec299968a3ac2"
+        },
+        {
+          "id": "p562-b11",
+          "source": "for all $h$ with $|z+h|\\le|z_0|$.",
+          "sourceSha256": "2167899814c1433228271d5e27de69dca6df5bed7a46c55b5a733e2e22cec937",
+          "translation": "对所有满足 $|z+h|\\le|z_0|$ 的 $h$ 成立。"
+        },
+        {
+          "id": "p562-b12",
+          "source": "It is easy to deal with the third term on the right side of (*): Since $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ converges, it follows that if $N$ is sufficiently large, then",
+          "sourceSha256": "5faa4597c9f396d7459d87c9d5641c4797c50ec1b18396c4d3adcfb14b98fb39",
+          "translation": "(*) 右边的第三项很容易处理：由于 $\\displaystyle\\sum_{n=1}^\\infty na_nz^{n-1}$ 收敛，只要 $N$ 充分大，就有"
+        },
+        {
+          "id": "p562-b13",
+          "source": "$$\\left|\\sum_{n=1}^\\infty na_nz^{n-1}-\\sum_{n=1}^N na_nz^{n-1}\\right|<\\frac\\varepsilon3.\\tag{2}$$",
+          "sourceSha256": "ce9e371df9030211a1bb85e90f764081260bab5f78c48cca2efb74131f52eaac"
+        },
+        {
+          "id": "p562-b14",
+          "source": "Finally, choosing an $N$ such that (1) and (2) are true, we note that",
+          "sourceSha256": "084b67c314abadc1a53a20045f13c5ac6334f208eb6222e0ebda298cc08db53a",
+          "translation": "最后，选取一个使 (1) 和 (2) 都成立的 $N$，并注意到"
+        },
+        {
+          "id": "p562-b15",
+          "source": "$$\\lim_{h\\to0}\\sum_{n=0}^N a_n\\frac{((z+h)^n-z^n)}h=\\sum_{n=1}^N na_nz^{n-1},$$",
+          "sourceSha256": "d56ffb83491461212efd829847a494af5b8ca02e8a9bb48fe1560d2c5b99ac8d"
+        },
+        {
+          "id": "p562-b16",
+          "source": "since the polynomial function $g(z)=\\displaystyle\\sum_{n=0}^N a_nz^n$ is certainly differentiable. Therefore",
+          "sourceSha256": "9ec4ab35a7ec227f591be015004cccc4c78238e572a88e018cbcbf878a9c53cc",
+          "translation": "因为多项式函数 $g(z)=\\displaystyle\\sum_{n=0}^N a_nz^n$ 当然可导。因此，"
+        },
+        {
+          "id": "p562-b17",
+          "source": "$$\\left|\\sum_{n=0}^N\\frac{a_n((z+h)^n-z^n)}h-\\sum_{n=1}^N na_nz^{n-1}\\right|<\\frac\\varepsilon3\\tag{3}$$",
+          "sourceSha256": "b8ac58b98170cd1596886cee832c4dd5b64dcbeb13b36e29108975ed6344024b"
+        },
+        {
+          "id": "p562-b18",
+          "source": "for sufficiently small $h$.",
+          "sourceSha256": "0703433fdc5d5d02e9c04efcd950115381d3f0eea639afcdafe7502992aef139",
+          "translation": "对充分小的 $h$ 成立。"
+        },
+        {
+          "id": "p562-b19",
+          "source": "As we have already indicated, (1), (2), and (3) prove the theorem. ■",
+          "sourceSha256": "9f67bc8a4a1410a34220a96870485244f7e43cc20fa910d5815b623d13f5d681",
+          "translation": "正如已经指出的，(1)、(2) 和 (3) 证明了这个定理。■"
+        }
+      ]
+    },
+    {
+      "printed": 563,
+      "sourceSha256": "6d83b698189831838fc29f095c3cbd329b74d5477b43eaef94153f7ee1d310c8",
+      "blocks": [
+        {
+          "id": "p563-b1",
+          "source": "Theorem 6 has an obvious corollary: a function represented by a power series is infinitely differentiable inside the circle of convergence, and the power series is its Taylor series at $0$. It follows, in particular, that $f$ is continuous inside the circle of convergence, since a function differentiable at $z$ is continuous at $z$ (Problem 26-8).",
+          "sourceSha256": "4412504edafd4c470859ce1b4999e549ac7aec588ab47cee331007db02b7920c",
+          "translation": "定理 6 有一个显然的推论：由幂级数表示的函数，在收敛圆内无穷次可导，而这个幂级数就是它在 $0$ 处的泰勒级数。特别地，$f$ 在收敛圆内连续，因为在 $z$ 处可导的函数必定在 $z$ 处连续（习题 26-8）。"
+        },
+        {
+          "id": "p563-b2",
+          "source": "The continuity of a power series inside its circle of convergence helps explain the behavior of certain Taylor series obtained for real functions, and gives the promised answers to the questions raised at the end of Chapter 24. We have already seen that the Taylor series for the function $f(z)=1/(1+z^2)$, namely,",
+          "sourceSha256": "bdcd319164e04bd6b0d6afa0e0dedefd82ad0ed3b0defbea0208b5ec9adea496",
+          "translation": "幂级数在其收敛圆内的连续性，有助于解释某些实函数的泰勒级数的行为，并为第 24 章末尾提出的问题提供了之前承诺的答案。我们已经看到，函数 $f(z)=1/(1+z^2)$ 的泰勒级数，即"
+        },
+        {
+          "id": "p563-b3",
+          "source": "$$1-z^2+z^4-z^6+\\cdots,$$",
+          "sourceSha256": "c23bc8e96195e54076bf36389e7ff7a37005873d80f77cca6637c01f939f8cc4"
+        },
+        {
+          "id": "p563-b4",
+          "source": "converges for real $z$ only when $|z|<1$, and consequently has radius of convergence $1$. It is no accident that the circle of convergence contains the two points $i$ and $-i$ at which $f$ is undefined. If this power series converged in a circle of radius greater than $1$, then (Figure 5) it would represent a function which was continuous in that circle, in particular at $i$ and $-i$. But this is impossible, since it equals $1/(1+z^2)$ inside the unit circle, and $1/(1+z^2)$ does not approach a limit as $z$ approaches $i$ or $-i$ from inside the unit circle.",
+          "sourceSha256": "6715d40cf2c09ab557238939e7c85b5d46017bf35186a6d889dc8e79cf357b29",
+          "translation": "对于实数 $z$ 只在 $|z|<1$ 时收敛，因此收敛半径为 $1$。收敛圆周上恰好有 $f$ 没有定义的两个点 $i$ 和 $-i$，这并非偶然。如果这个幂级数在半径大于 $1$ 的圆内收敛，那么（图 5）它就会表示一个在该圆内连续的函数，特别是在 $i$ 和 $-i$ 处连续。但这是不可能的，因为它在单位圆内等于 $1/(1+z^2)$，而当 $z$ 从单位圆内趋近 $i$ 或 $-i$ 时，$1/(1+z^2)$ 并不趋于某个极限。"
+        },
+        {
+          "id": "p563-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:357px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"40 285 362 362\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0582.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 5</figcaption></figure>",
+          "sourceSha256": "44a6d811f3a674b14421da6dfc1d06a9784cfc51af6049463c9a36c4bf511990"
+        },
+        {
+          "id": "p563-b6",
+          "source": "The use of complex numbers also sheds some light on the strange behavior of the Taylor series for the function",
+          "sourceSha256": "440b55aceb391a886b5cd8264375eb84a8190a902131f08b4a4f083f8211282a",
+          "translation": "使用复数，也能帮助解释下列函数的泰勒级数的奇特行为："
+        },
+        {
+          "id": "p563-b7",
+          "source": "$$f(x)=\\begin{cases}e^{-1/x^2},&x\\ne0\\\\0,&x=0.\\end{cases}$$",
+          "sourceSha256": "c1603178b03d5842c1dcf3a869dcbe3b23ab4f0691d1c7eec08f5e10756d3a3f"
+        },
+        {
+          "id": "p563-b8",
+          "source": "Although we have not yet defined $e^z$ for complex $z$, it will presumably be true that if $y$ is real and unequal to $0$, then",
+          "sourceSha256": "4d39dad0a6d1ec58ef534008890f3bed545e9a257d7e1fd69e7b101279fa882e",
+          "translation": "虽然我们尚未对复数 $z$ 定义 $e^z$，但可以预期：如果 $y$ 是不等于 $0$ 的实数，那么"
+        },
+        {
+          "id": "p563-b9",
+          "source": "$$f(iy)=e^{-1/(iy)^2}=e^{1/y^2}.$$",
+          "sourceSha256": "b3173e9d6432e6209f223a0b66a2766408858dac990a39a3369a8bc1e17ea4fc"
+        },
+        {
+          "id": "p563-b10",
+          "source": "The interesting fact about this expression is that it becomes large as $y$ becomes small. Thus $f$ will not even be continuous at $0$ when defined for complex numbers, so it is hardly surprising that it is equal to its Taylor series only for $z=0$.",
+          "sourceSha256": "96e73449ea46823d48027a3fc880375cfc69b67d4515cf48c597b23a56bb1b28",
+          "translation": "这个表达式的有趣之处，在于它随着 $y$ 变小而变大。因此，当 $f$ 对复数定义后，它在 $0$ 处甚至不连续，所以它只在 $z=0$ 时等于自己的泰勒级数，也就一点不奇怪了。"
+        },
+        {
+          "id": "p563-b11",
+          "source": "The method by which we will actually define $e^z$ (as well as $\\sin z$ and $\\cos z$) for complex $z$ should by now be clear. For real $x$ we know that",
+          "sourceSha256": "810fe751ca2616ed6b978a0f1e6c6c8bb586b507aeab2bab71a822affe16ab33",
+          "translation": "现在，实际用来为复数 $z$ 定义 $e^z$（以及 $\\sin z$ 和 $\\cos z$）的方法，应该已经清楚。对于实数 $x$，我们知道"
+        },
+        {
+          "id": "p563-b12",
+          "source": "$$\\begin{aligned}\\sin x&=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\cdots,\\\\\\cos x&=1-\\frac{x^2}{2!}+\\frac{x^4}{4!}-\\cdots,\\\\e^x&=1+\\frac x{1!}+\\frac{x^2}{2!}+\\cdots\\end{aligned}$$",
+          "sourceSha256": "10773bda36ac97a1aaac1e0957ace20e4ce18b7f5059e5aa23a7945b148ec1bb"
+        },
+        {
+          "id": "p563-b13",
+          "source": "For complex $z$ we therefore *define*",
+          "sourceSha256": "cca3ae3a85752446f5b58fefcc3542a6466e84768c8994a26ef0eee1de0d0a13",
+          "translation": "因此，对于复数 $z$，我们*定义*"
+        },
+        {
+          "id": "p563-b14",
+          "source": "$$\\begin{aligned}\\sin z&=z-\\frac{z^3}{3!}+\\frac{z^5}{5!}-\\cdots,\\\\\\cos z&=1-\\frac{z^2}{2!}+\\frac{z^4}{4!}-\\cdots,\\\\\\exp(z)=e^z&=1+\\frac z{1!}+\\frac{z^2}{2!}+\\cdots.\\end{aligned}$$",
+          "sourceSha256": "16564daa882e5133a219f1c596f9ed66b586af402b684a04936c7c3115ba96e6"
+        }
+      ]
+    },
+    {
+      "printed": 564,
+      "sourceSha256": "c1ce612987e943c89e77ff03e0c0e293f7751867dcc8a46b5b0e848fcf796eb3",
+      "blocks": [
+        {
+          "id": "p564-b1",
+          "source": "Then $\\sin'(z)=\\cos z$, $\\cos'(z)=-\\sin z$, and $\\exp'(z)=\\exp(z)$ by Theorem 6. Moreover, if we replace $z$ by $iz$ in the series for $e^z$, and make a rearrangement of the terms (justified by absolute convergence), something particularly interesting happens:",
+          "sourceSha256": "21348bfb05a8f0b1231d1b382ee952506fea6f5f43e83d665873e33999471ee8",
+          "translation": "由定理 6，有 $\\sin'(z)=\\cos z$、$\\cos'(z)=-\\sin z$ 以及 $\\exp'(z)=\\exp(z)$。此外，如果在 $e^z$ 的级数中把 $z$ 换成 $iz$，并对各项作一次重排（绝对收敛保证这样做是合法的），就会发生一件特别有趣的事："
+        },
+        {
+          "id": "p564-b2",
+          "source": "$$\\begin{aligned}e^{iz}&=1+iz+\\frac{(iz)^2}{2!}+\\frac{(iz)^3}{3!}+\\frac{(iz)^4}{4!}+\\frac{(iz)^5}{5!}+\\cdots\\\\&=1+iz-\\frac{z^2}{2!}-\\frac{iz^3}{3!}+\\frac{iz^4}{4!}+\\frac{iz^5}{5!}+\\cdots\\\\&=\\left(1-\\frac{z^2}{2!}+\\frac{z^4}{4!}-\\cdots\\right)+i\\left(z-\\frac{z^3}{3!}+\\frac{z^5}{5!}+\\cdots\\right),\\end{aligned}$$",
+          "sourceSha256": "449e48945f855244adb4d68f7fc4a73ce9a4c429fc01d1100bed1e0ad0696127"
+        },
+        {
+          "id": "p564-b3",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p564-b4",
+          "source": "$$e^{iz}=\\cos z+i\\sin z.$$",
+          "sourceSha256": "4a804ae8d6aba903a44818b60bffc31f1f89c03bb10be36ca1e4e14a36b28f4d"
+        },
+        {
+          "id": "p564-b5",
+          "source": "It is clear from the definitions (i.e., the power series) that",
+          "sourceSha256": "9d534be8c6edc6532c66c09ac65b73d27a1011091d8503fe8a82a6d0baa1edfc",
+          "translation": "由定义（也就是幂级数）显然有"
+        },
+        {
+          "id": "p564-b6",
+          "source": "$$\\sin(-z)=-\\sin z,$$",
+          "sourceSha256": "9c805bca617ab11e148b8a7a4d07a96132431290b796b266801fa48c775143d9"
+        },
+        {
+          "id": "p564-b7",
+          "source": "$$\\cos(-z)=\\cos z,$$",
+          "sourceSha256": "88e3a459d288d3efd9c9a469988413ffa83033177c4d67fc0653a702e5687c48"
+        },
+        {
+          "id": "p564-b8",
+          "source": "so we also have",
+          "sourceSha256": "d90c3bdc21a4c4ed0e7fe7b697229b18c818233d32915a8f02450b3c6c046357",
+          "translation": "因此我们还有"
+        },
+        {
+          "id": "p564-b9",
+          "source": "$$e^{-iz}=\\cos z-i\\sin z.$$",
+          "sourceSha256": "99f4b1f5f5ede0563304578e4fbea80f5dec1d86de2473f2473f7a1ca79dc83e"
+        },
+        {
+          "id": "p564-b10",
+          "source": "From the equations for $e^{iz}$ and $e^{-iz}$ we can derive the formulas",
+          "sourceSha256": "c443824fb418e5ffa5af86f2f9437e24dad7ac0e40e9b3319349b56965c0af19",
+          "translation": "从 $e^{iz}$ 和 $e^{-iz}$ 的等式，我们可以推出公式"
+        },
+        {
+          "id": "p564-b11",
+          "source": "$$\\sin z=\\frac{e^{iz}-e^{-iz}}{2i},$$",
+          "sourceSha256": "ba6a1685a0bdc2611633238f2ef362d8e63b010683ca780a7cde07c1fc41f923"
+        },
+        {
+          "id": "p564-b12",
+          "source": "$$\\cos z=\\frac{e^{iz}+e^{-iz}}2.$$",
+          "sourceSha256": "9dca58b614a22ecdeeb0c2f6be2c0d9650e85553884f8af3dbc3284dbe5d3575"
+        },
+        {
+          "id": "p564-b13",
+          "source": "The development of complex power series thus places the exponential function at the very core of the development of the elementary functions—it reveals a connection between the trigonometric and exponential functions which was never imagined when these functions were first defined, and which could never have been discovered without the use of complex numbers. As a by-product of this relationship, we obtain a hitherto unsuspected connection between the numbers $e$ and $\\pi$: if in the formula",
+          "sourceSha256": "75f509045ceaaaf8d43174b7bd648164b3044aee9f9ccced109f4f9b1fd8312e",
+          "translation": "这样一来，复幂级数的理论就把指数函数置于初等函数理论的核心——它揭示了三角函数与指数函数之间的一种联系；这种联系在最初定义这些函数时从未被想到，而且不用复数就绝不可能发现。作为这一关系的副产品，我们得到了数 $e$ 与 $\\pi$ 之间一种此前未曾料想的联系：如果在公式"
+        },
+        {
+          "id": "p564-b14",
+          "source": "$$e^{iz}=\\cos z+i\\sin z$$",
+          "sourceSha256": "3d275278000a9ed78294f867646a0084946de2e3d218d47f786ab42a30ec94b6"
+        },
+        {
+          "id": "p564-b15",
+          "source": "we take $z=\\pi$, we obtain the remarkable result",
+          "sourceSha256": "8ab3eaf74188af418193fc7ccf472230221d55b44fe1f96baec1389d6fbe1d8a",
+          "translation": "中取 $z=\\pi$，就得到这个非凡的结果"
+        },
+        {
+          "id": "p564-b16",
+          "source": "$$e^{i\\pi}=-1.$$",
+          "sourceSha256": "636e23bb2a0b7ac4ed765365aa0f6fcfd8aebceee78866fd68090a027ebb6214"
+        },
+        {
+          "id": "p564-b17",
+          "source": "(More generally, $e^{2\\pi i/n}$ is an $n$th root of $1$.)",
+          "sourceSha256": "a0a26b384403f7bb3191f27fd6180f13c4997ded8d993b398c6cb3c108a10dfe",
+          "translation": "（更一般地，$e^{2\\pi i/n}$ 是 $1$ 的一个 $n$ 次方根。）"
+        },
+        {
+          "id": "p564-b18",
+          "source": "With these remarks we will bring to a close our investigation of complex functions. And yet there are still several basic facts about power series which have not been mentioned. Thus far, we have seldom considered power series centered at $a$,",
+          "sourceSha256": "0bc4f67cac0de3ff27d98ddc722df5fb44169611f216bf6fec0dbfeab52408f4",
+          "translation": "说到这里，我们对复函数的研究就告一段落了。然而，关于幂级数，还有几个基本事实尚未提及。到目前为止，我们很少考虑以 $a$ 为中心的幂级数，"
+        },
+        {
+          "id": "p564-b19",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty a_n(z-a)^n,$$",
+          "sourceSha256": "63f2048d80ae6e0667618b6e1beeaa95cc12d9d9bbe800bc493083a383ada381"
+        }
+      ]
+    },
+    {
+      "printed": 565,
+      "sourceSha256": "e42d4aeeb2a6c50fe8255e82a3c6a2a178c5f341e217dc44ce700dcb1cb4e502",
+      "blocks": [
+        {
+          "id": "p565-b1",
+          "source": "except for $a=0$. This omission was adopted partly to simplify the exposition. For power series centered at $a$ there are obvious versions of all the theorems in this chapter (the proofs require only trivial modifications): there is a number $R$ (possibly $0$ or “$\\infty$”) such that the series $\\displaystyle\\sum_{n=0}^\\infty a_n(z-a)^n$ converges absolutely for $z$ with $|z-a|<R$, and has unbounded terms for $z$ with $|z-a|>R$; moreover, for all $z$ with $|z-a|<R$ the function",
+          "sourceSha256": "6570c33ddb3c4f899f4a3052f8d4ddd7eb5d8ddf5332463dae85f6b62c6ee433",
+          "translation": "除非 $a=0$。作这样的省略，部分是为了使叙述简明。对于以 $a$ 为中心的幂级数，本章所有定理都有显而易见的相应版本（证明只需作微不足道的修改）：存在一个数 $R$（可能是 $0$ 或“$\\infty$”），使得级数 $\\displaystyle\\sum_{n=0}^\\infty a_n(z-a)^n$ 对满足 $|z-a|<R$ 的 $z$ 绝对收敛，而对满足 $|z-a|>R$ 的 $z$，它的各项无界；此外，对于所有满足 $|z-a|<R$ 的 $z$，函数"
+        },
+        {
+          "id": "p565-b2",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty a_n(z-a)^n$$",
+          "sourceSha256": "ba0b1fb2073f9467343f29fe6ecd37700672af4e987244b3141d3133f3adf995"
+        },
+        {
+          "id": "p565-b3",
+          "source": "has derivative",
+          "sourceSha256": "16563940c5ad89234d40f723df752b7261db8751b8e47b8806ed671789d00c07",
+          "translation": "的导数为"
+        },
+        {
+          "id": "p565-b4",
+          "source": "$$f'(z)=\\sum_{n=1}^\\infty na_n(z-a)^{n-1}.$$",
+          "sourceSha256": "b17f4d19681322e7ee91169e7549353e556d744d367a1dedfbb19f547e0874f5"
+        },
+        {
+          "id": "p565-b5",
+          "source": "It is less straightforward to investigate the possibility of representing a function as a power series centered at $b$, if it is already written as a power series centered at $a$. If",
+          "sourceSha256": "6f05b8a722d9f073249881f11b773c80328f1222f57ce2c7c4fbb205131ca1a5",
+          "translation": "如果一个函数已经写成了以 $a$ 为中心的幂级数，要研究能否把它表示为以 $b$ 为中心的幂级数，就没有那么直接了。如果"
+        },
+        {
+          "id": "p565-b6",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty a_n(z-a)^n$$",
+          "sourceSha256": "ba0b1fb2073f9467343f29fe6ecd37700672af4e987244b3141d3133f3adf995"
+        },
+        {
+          "id": "p565-b7",
+          "source": "has radius of convergence $R$, and $b$ is a point with $|b-a|<R$ (Figure 6), then it is true that $f(z)$ can also be written as a power series centered at $b$,",
+          "sourceSha256": "f3a50c242156a7a04cee9c489b28d566c52d7dfb5b41d5b690a35dee633c433d",
+          "translation": "的收敛半径为 $R$，而点 $b$ 满足 $|b-a|<R$（图 6），那么 $f(z)$ 确实也可以写成以 $b$ 为中心的幂级数，"
+        },
+        {
+          "id": "p565-b8",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty b_n(z-b)^n$$",
+          "sourceSha256": "0076a6b0a752ab233912ca4e45c8f0a26da9c41d9c117c40e3ee44ebe92b1b22"
+        },
+        {
+          "id": "p565-b9",
+          "source": "(the numbers $b_n$ are necessarily $f^{(n)}(b)/n!$); moreover, this series has radius of convergence at least $R-|b-a|$ (*it may be larger*).",
+          "sourceSha256": "ff69e3f48676b4c65cda28736aa412079583edcaa144dbf0775d6e9ba8d6ed11",
+          "translation": "（数 $b_n$ 必定等于 $f^{(n)}(b)/n!$）；此外，这个级数的收敛半径至少为 $R-|b-a|$（*也可能更大*）。"
+        },
+        {
+          "id": "p565-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:350px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 355 350 307\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0584.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 6</figcaption></figure>",
+          "sourceSha256": "77eb35e28a5ff8c61ca37c78ad143f184655051e5415777d7ae42a8e1e7a3023"
+        },
+        {
+          "id": "p565-b11",
+          "source": "We will *not* prove the facts mentioned in the previous paragraph, and there are several other important facts we shall not prove. For example, if",
+          "sourceSha256": "6a1d09e5e03c7397b07bd702d8d671567bb3c1439ad413c3827f146f797652f5",
+          "translation": "我们将*不*证明上一段所述的事实，还有另外几个重要事实我们也不打算证明。例如，如果"
+        },
+        {
+          "id": "p565-b12",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty a_n(z-a)^n\\quad\\text{and}\\quad g(z)=\\sum_{n=0}^\\infty b_n(z-b)^n,$$",
+          "sourceSha256": "e344a5542ab8d51c6cbbd2834784018edcadf0ca4f5dc670ddb8e9dc04ae87b8"
+        },
+        {
+          "id": "p565-b13",
+          "source": "and $g(b)=a$, then we would expect that $f\\circ g$ can be written as a power series centered at $b$. All such facts could be proved now without introducing any basic new ideas, but the proofs would not be as easy as the proofs about sums, products and reciprocals of power series. The possibility of changing a power series centered at $a$ into one centered at $b$ is quite a bit more involved, and the treatment of $f\\circ g$ requires still more skill. Rather than end this section with a *tour de force* of computations, we will instead give a preview of “complex analysis,” one of the most beautiful branches of mathematics, where all these facts are derived as straightforward consequences of some fundamental results.",
+          "sourceSha256": "a789908910d0f85d9d8e35c47585b9c89c3614dba2508903d1766501f3e95f92",
+          "translation": "且 $g(b)=a$，那么我们会预期 $f\\circ g$ 可以写成以 $b$ 为中心的幂级数。所有这些事实现在都可以证明，而不必引入任何基本的新思想；不过，这些证明不会像关于幂级数的和、积与倒数的证明那么容易。把以 $a$ 为中心的幂级数变成以 $b$ 为中心的幂级数，要复杂得多，而处理 $f\\circ g$ 则需要更高的技巧。与其用一场展示计算功力的*绝技表演*来结束这一节，我们宁愿先让你领略一下“复分析”——数学中最美丽的分支之一；在那里，所有这些事实都是某些基本结果的直接推论。"
+        },
+        {
+          "id": "p565-b14",
+          "source": "Power series were introduced in this chapter in order to provide complex functions which are differentiable. Since these functions are actually infinitely differentiable, it is natural to suppose that we have therefore selected only a very special",
+          "sourceSha256": "a81028c29c37100d9c574032a5b5eff257fdddb9f3f3f6664bb1fcf3b401aae8",
+          "translation": "本章引入幂级数，是为了给出可导的复函数。由于这些函数实际上都是无穷次可导的，自然会让人以为，我们因此只挑出了可导复函数中一个非常特殊的"
+        }
+      ]
+    },
+    {
+      "printed": 566,
+      "sourceSha256": "a9616af1e1b22f0080acb0348a5e6d16cccdb524aee9743e63049a95bd68f1fb",
+      "blocks": [
+        {
+          "id": "p566-b1",
+          "source": "collection of differentiable complex functions. The basic theorems of complex analysis show that this is not at all true:",
+          "sourceSha256": "e7b9fe295a4e6da648f3f5a7248ef484100790694e82c8b6d2c362dd0e65e307",
+          "translation": "类别。复分析的基本定理表明，事实全然不是如此："
+        },
+        {
+          "id": "p566-b2",
+          "source": "*If a complex function is defined in some region $A$ of the plane and is differentiable in $A$, then it is automatically infinitely differentiable in $A$. Moreover, for each point $a$ in $A$ the Taylor series for $f$ at $a$ will converge to $f$ in any circle contained in $A$ (Figure 7).*",
+          "sourceSha256": "5224b8f36e99221c8b7f29ecf58ffc0cbfa9ff185916891f5780914d4166f1e4",
+          "translation": "*如果一个复函数定义在平面的某个区域 $A$ 内，而且在 $A$ 内可导，那么它自动在 $A$ 内无穷次可导。此外，对于 $A$ 内的每个点 $a$，$f$ 在 $a$ 处的泰勒级数，在包含于 $A$ 的任意圆内都收敛于 $f$（图 7）。*"
+        },
+        {
+          "id": "p566-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:405px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 228 408 349\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0585.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 7</figcaption></figure>",
+          "sourceSha256": "cd344601f7c43921304d093a17a379fd97fc3f76c563d310de025903815bc432"
+        },
+        {
+          "id": "p566-b4",
+          "source": "These facts are among the first to be proved in complex analysis. It is impossible to give any idea of the proofs themselves—the methods used are quite different from anything in elementary calculus. If these facts are granted, however, then the facts mentioned before can be proved very easily.",
+          "sourceSha256": "f2810a1fbbf75f6389cfe79c4fdf2cda98abd9c908c564a0cc2c081e937e773d",
+          "translation": "这些事实是复分析中最先证明的一批结果。这里不可能让你了解这些证明的思路——所用方法与初等微积分中的任何方法都很不相同。不过，如果承认这些事实，那么前面提到的那些事实就很容易证明了。"
+        },
+        {
+          "id": "p566-b5",
+          "source": "Suppose, for example, that $f$ and $g$ are functions which can be written as power series. Then, as we have shown, $f$ and $g$ are differentiable—it then follows from easy general theorems that $f+g$, $f\\cdot g$, $1/g$ and $f\\circ g$ are also differentiable. Appealing to the results from complex analysis, it follows that they can be written as power series.",
+          "sourceSha256": "05f861e028bafd9c2be091d88e605d252bfbd0ecd9193f6c3137381ebe8af77e",
+          "translation": "例如，设 $f$ 和 $g$ 是可以写成幂级数的函数。那么，正如我们已经证明的，$f$ 和 $g$ 都可导；于是由简单的一般定理可知，$f+g$、$f\\cdot g$、$1/g$ 和 $f\\circ g$ 也都可导。再引用复分析中的结果，就知道它们可以写成幂级数。"
+        },
+        {
+          "id": "p566-b6",
+          "source": "We already know how to compute the power series for $f+g$, $f\\cdot g$ and $1/g$ from those for $f$ and $g$. It is also easy to guess how one would compute an expression for $f\\circ g$ as a power series in $(z-b)$ when we are given the power series expansions",
+          "sourceSha256": "c63ad7d117689e9862feebe46eb9932eca166712152d43bc8c2ec2089ea67357",
+          "translation": "我们已经知道，怎样从 $f$ 和 $g$ 的幂级数算出 $f+g$、$f\\cdot g$ 和 $1/g$ 的幂级数。给定以下幂级数展开式时，也很容易猜出应该怎样把 $f\\circ g$ 算成关于 $(z-b)$ 的幂级数："
+        },
+        {
+          "id": "p566-b7",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty a_n(z-a)^n$$",
+          "sourceSha256": "ba0b1fb2073f9467343f29fe6ecd37700672af4e987244b3141d3133f3adf995"
+        },
+        {
+          "id": "p566-b8",
+          "source": "$$g(z)=\\sum_{k=0}^\\infty b_k(z-b)^k,$$",
+          "sourceSha256": "dadccbee1d07a7aa5434aab481834439b2606650f71a44a8d627acabe53a1300"
+        },
+        {
+          "id": "p566-b9",
+          "source": "with $a=g(b)=b_0$, so that",
+          "sourceSha256": "b1b543c15c66a7cdd3fdf59b7bc77701bd270f39b5759221fa6ce01670d91fb0",
+          "translation": "且 $a=g(b)=b_0$，因而"
+        },
+        {
+          "id": "p566-b10",
+          "source": "$$g(z)-a=\\sum_{k=1}^\\infty b_k(z-b)^k.$$",
+          "sourceSha256": "da53615526c9b4ae1fe204e5a4c28fba6981c41643f860ceadd279e1ded34380"
+        },
+        {
+          "id": "p566-b11",
+          "source": "First of all, we know how to compute the power series",
+          "sourceSha256": "ffc2436474db925d54a65068167fac4c51d64d7ace0b1d418bfc60915d064583",
+          "translation": "首先，我们知道如何计算幂级数"
+        },
+        {
+          "id": "p566-b12",
+          "source": "$$(g(z)-a)^l=\\left(\\sum_{k=1}^\\infty b_k(z-b)^k\\right)^l,$$",
+          "sourceSha256": "4037db655ae04774858170ba08c1f0651cc6d80c768141622af19b8e73eb71db"
+        },
+        {
+          "id": "p566-b13",
+          "source": "and this power series will begin with $(z-b)^l$. Consequently, the coefficient of $z^n$ in",
+          "sourceSha256": "bc0fd76e44618ebeb3578e847e906bc88111400e1ae8cd6f46a8ce06a18300db",
+          "translation": "而这个幂级数将以 $(z-b)^l$ 开始。因此，下面级数中 $z^n$ 的系数"
+        },
+        {
+          "id": "p566-b14",
+          "source": "$$f(g(z))=\\sum_{l=0}^\\infty a_l(g(z)-a)^l$$",
+          "sourceSha256": "030f116b1acd3bf81da5b5d80ad70aab8ad297f70c3b8c92b7e1ae55f12c67d5"
+        },
+        {
+          "id": "p566-b15",
+          "source": "can be calculated as a finite sum, involving only coefficients arising from the first $n$ powers of $g(z)-a$.",
+          "sourceSha256": "10174395b44460a430560909ee7dcf99e6fa749e102392d15029dfc1029393f0",
+          "translation": "可以作为一个有限和来计算，其中只涉及 $g(z)-a$ 的前 $n$ 个幂所产生的系数。"
+        },
+        {
+          "id": "p566-b16",
+          "source": "Similarly, if",
+          "sourceSha256": "5c2d233a05a4953108d8d9d131a8c35e7656937cf604c6a808d1240dcfeb3576",
+          "translation": "类似地，如果"
+        },
+        {
+          "id": "p566-b17",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty a_n(z-a)^n$$",
+          "sourceSha256": "ba0b1fb2073f9467343f29fe6ecd37700672af4e987244b3141d3133f3adf995"
+        },
+        {
+          "id": "p566-b18",
+          "source": "has radius of convergence $R$, then $f$ is differentiable in the region $A=\\{z:|z-a|<R\\}$. Thus, if $b$ is in $A$, it is possible to write $f$ as a power series centered at $b$,",
+          "sourceSha256": "f018b396f79488db960a4e699bdee0976b2f812510cf1399cce29b25eb764aaa",
+          "translation": "的收敛半径为 $R$，那么 $f$ 在区域 $A=\\{z:|z-a|<R\\}$ 内可导。因此，如果 $b$ 在 $A$ 内，就可以把 $f$ 写成以 $b$ 为中心的幂级数，"
+        }
+      ]
+    },
+    {
+      "printed": 567,
+      "sourceSha256": "128d4c194f8207046c85d36f3b7df266e3e71d57600ec09b71e6006ed7fd462c",
+      "blocks": [
+        {
+          "id": "p567-b1",
+          "source": "which will converge in the circle of radius $R-|b-a|$. The coefficient of $z^n$ will be $f^{(n)}(b)/n!$. This series may actually converge in a larger circle, because $\\displaystyle\\sum_{n=0}^\\infty a_n(z-a)^n$ may be the series for a function differentiable in a larger region than $A$. For example, suppose that $f(z)=1/(1+z^2)$. Then $f$ is differentiable, except at $i$ and $-i$, where it is not defined. Thus $f(z)$ can be written as a power series $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ with radius of convergence $1$ (as a matter of fact, we know that $a_{2n}=(-1)^n$ and $a_k=0$ if $k$ is odd). It is also possible to write",
+          "sourceSha256": "f946f4b27995fd16c27eb4299a13f3cb430126ec4ff37fb13f2c2ddff14bfbaa",
+          "translation": "它将在半径为 $R-|b-a|$ 的圆内收敛。$z^n$ 的系数将是 $f^{(n)}(b)/n!$。这个级数实际上可能在更大的圆内收敛，因为 $\\displaystyle\\sum_{n=0}^\\infty a_n(z-a)^n$ 可能是某个函数的级数，而该函数在比 $A$ 更大的区域内可导。例如，设 $f(z)=1/(1+z^2)$。那么，除去 $i$ 和 $-i$ 这两个没有定义的点之外，$f$ 处处可导。因此 $f(z)$ 可以写成收敛半径为 $1$ 的幂级数 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$（事实上，我们知道 $a_{2n}=(-1)^n$，而当 $k$ 为奇数时 $a_k=0$）。也可以写成"
+        },
+        {
+          "id": "p567-b2",
+          "source": "$$f(z)=\\sum_{n=0}^\\infty b_n(z-\\tfrac12)^n,$$",
+          "sourceSha256": "7813949e37ee3817c1b29e364291f270412653909ce339ca7c96177e030da3de"
+        },
+        {
+          "id": "p567-b3",
+          "source": "where $b_n=f^{(n)}(\\tfrac12)/n!$. We can easily predict the radius of convergence of this series: it is $\\sqrt{1+(\\tfrac12)^2}$, the distance from $\\frac12$ to $i$ or $-i$ (Figure 8).",
+          "sourceSha256": "42469664fbba7ef256fced19302e3033c88bed9a9eb1de4fea05135c2e51043b",
+          "translation": "其中 $b_n=f^{(n)}(\\tfrac12)/n!$。我们很容易预言这个级数的收敛半径：它是 $\\sqrt{1+(\\tfrac12)^2}$，即从 $\\frac12$ 到 $i$ 或 $-i$ 的距离（图 8）。"
+        },
+        {
+          "id": "p567-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:398px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 312 401 307\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0586.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 8</figcaption></figure>",
+          "sourceSha256": "912a075c0dcef6a436c6755d8ececd8445fb3cb4209078d4a6e52a6774f6013e"
+        },
+        {
+          "id": "p567-b5",
+          "source": "As an added incentive to investigate complex analysis further, one more result will be mentioned, which lies quite near the surface, and which will be found in any treatment of the subject.",
+          "sourceSha256": "14aefcd550e15afbde6e08ac0327335b06a45737903780785b040367c7616ea0",
+          "translation": "为了进一步激发你研究复分析的兴趣，我们再提一个不太深奥的结果；任何一本讲述这门学科的书中都会有它。"
+        },
+        {
+          "id": "p567-b6",
+          "source": "For real $z$ the values of $\\sin z$ always lie between $-1$ and $1$, but for complex $z$ this is not at all true. In fact, if $z=iy$, for $y$ real, then",
+          "sourceSha256": "a0fd47fcdd70bd9aa0c9a6fc83afd44ef5b481c5dfeadb836b4d1b0a09d65f94",
+          "translation": "当 $z$ 为实数时，$\\sin z$ 的值总在 $-1$ 和 $1$ 之间，但对复数 $z$，情况全然不是这样。事实上，如果 $z=iy$，其中 $y$ 为实数，那么"
+        },
+        {
+          "id": "p567-b7",
+          "source": "$$\\sin iy=\\frac{e^{i(iy)}-e^{-i(iy)}}{2i}=\\frac{e^{-y}-e^y}{2i}.$$",
+          "sourceSha256": "168326ef0074301b90718a873131bdc2740188425b6369d228c21250166ab874"
+        },
+        {
+          "id": "p567-b8",
+          "source": "If $y$ is large, then $\\sin iy$ is also large in absolute value. This behavior of $\\sin$ is typical of functions which are defined and differentiable on the whole complex plane (such functions are called *entire*). A result which comes quite early in complex analysis is the following:",
+          "sourceSha256": "92ef6a62b92c455a4194ee0978f2a06ac81e515f0d0b6bbc1413171452982436",
+          "translation": "如果 $y$ 很大，那么 $\\sin iy$ 的绝对值也很大。$\\sin$ 的这种行为，是定义在整个复平面上且处处可导的函数的典型表现（这样的函数称为*整函数*）。复分析中较早出现的一个结果如下："
+        },
+        {
+          "id": "p567-b9",
+          "source": "*Liouville’s Theorem: The only bounded entire functions are the constant functions.*",
+          "sourceSha256": "d9a811bc5b03e7e8119cc8b486d79e217ebfa2e8a08219d34eefb6891e9c9596",
+          "translation": "*刘维尔定理：有界整函数只能是常值函数。*"
+        },
+        {
+          "id": "p567-b10",
+          "source": "As a simple application of Liouville’s Theorem, consider a polynomial function",
+          "sourceSha256": "98224ded45ab6bc8b61f6ea21d99e4bae5a335ba47d477cda7ee7f922425c53d",
+          "translation": "作为刘维尔定理的一个简单应用，考虑多项式函数"
+        },
+        {
+          "id": "p567-b11",
+          "source": "$$f(z)=z^n+a_{n-1}z^{n-1}+\\cdots+a_0,$$",
+          "sourceSha256": "f7f3c587079bc957e3007ab10d7cf36ca4b28f2ff34c4907140a0b789e8bbc6d"
+        },
+        {
+          "id": "p567-b12",
+          "source": "where $n>1$, so that $f$ is not a constant. We already know that $f(z)$ is large for large $z$, so Liouville’s Theorem tells us nothing interesting about $f$. But consider the function",
+          "sourceSha256": "6b867f5e99fee6a80965dbf22d016002cc46d8c2c80e6ea4f4f4fc970b9e947f",
+          "translation": "其中 $n>1$，因而 $f$ 不是常值函数。我们已经知道，当 $z$ 很大时 $f(z)$ 也很大，所以刘维尔定理并没有告诉我们关于 $f$ 的什么有趣的事情。不过，考虑函数"
+        },
+        {
+          "id": "p567-b13",
+          "source": "$$g(z)=\\frac1{f(z)}.$$",
+          "sourceSha256": "9116004c0ef5fda9b7dd6f2aa6b07a71b5d8cd5f5da54f116bdb9b82e2fca60f"
+        },
+        {
+          "id": "p567-b14",
+          "source": "If $f(z)$ were never $0$, then $g$ would be entire; since $f(z)$ becomes large for large $z$, the function $g$ would also be bounded, contradicting Liouville’s Theorem. Thus $f(z)=0$ for some $z$, and we have proved the Fundamental Theorem of Algebra.",
+          "sourceSha256": "ea430e78155bb0a507aaf266dc1be7c32b695ce64b6fffe3d558530b157f5a37",
+          "translation": "如果 $f(z)$ 从不等于 $0$，那么 $g$ 就是整函数；由于当 $z$ 很大时 $f(z)$ 会变得很大，函数 $g$ 还将有界，这与刘维尔定理矛盾。因此，对某个 $z$ 有 $f(z)=0$，我们便证明了代数基本定理。"
+        },
+        {
+          "id": "p567-b15",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p567-b16",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p567-b17",
+          "source": "Decide whether each of the following series converges, and whether it converges absolutely.",
+          "sourceSha256": "a144bd86287887cf12b8c413fac1bfa3c737f23d1b3810f3a9558958cfbe1349",
+          "translation": "判断下列各级数是否收敛，以及是否绝对收敛。"
+        }
+      ]
+    },
+    {
+      "printed": 568,
+      "sourceSha256": "086ab6bd7f5f5b95f1f7d0e41c819b6155e8f4f05956fa2dfcb4dc0207dc916d",
+      "blocks": [
+        {
+          "id": "p568-b1",
+          "source": "(i) $\\displaystyle\\sum_{n=1}^\\infty\\frac{(1+i)^n}{n!}$.",
+          "sourceSha256": "fa8e6dcf1d90fe034283a245dbe96dc1f6ae85313ff617df3a69d36a62b435d0"
+        },
+        {
+          "id": "p568-b2",
+          "source": "(ii) $\\displaystyle\\sum_{n=1}^\\infty\\frac{1+2i}{2^n}$.",
+          "sourceSha256": "d6345c878c1b112d00b4c6dbba2cf7e2d1736bd92d70ae53e0586a2862d26398"
+        },
+        {
+          "id": "p568-b3",
+          "source": "(iii) $\\displaystyle\\sum_{n=1}^\\infty\\frac{i^n}n$.",
+          "sourceSha256": "2e828ac072a70e256821279ed3f7f2e05f6763c056a1b4eb19f3dcf0036e7080"
+        },
+        {
+          "id": "p568-b4",
+          "source": "(iv) $\\displaystyle\\sum_{n=1}^\\infty(\\tfrac12+\\tfrac12i)^n$.",
+          "sourceSha256": "7a2b4f55d0f70de56562fc175c1db62be28c1c7b6f5f52a788d6cb96ee8f143d"
+        },
+        {
+          "id": "p568-b5",
+          "source": "(v) $\\displaystyle\\sum_{n=2}^\\infty\\frac{\\log n}n+i^n\\frac{\\log n}n$.",
+          "sourceSha256": "ed7e051df91be99688b479a4a8e016eb5207b46839cd7312742e76084305bcb0"
+        },
+        {
+          "id": "p568-b6",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p568-b7",
+          "source": "Use the ratio test to show that the radius of convergence of each of the following power series is $1$. (In each case the ratios of successive terms will approach a limit $<1$ if $|z|<1$, but for $|z|>1$ the ratios will tend to $\\infty$ or to a limit $>1$.)",
+          "sourceSha256": "e77132020c339e609f97006e4cd3586aeaf994730a98bb869409a9cd2f7d702c",
+          "translation": "用比值判别法证明，下列各幂级数的收敛半径都是 $1$。（在每种情形中，如果 $|z|<1$，相邻两项的比值将趋于一个 $<1$ 的极限；但当 $|z|>1$ 时，这些比值将趋于 $\\infty$ 或一个 $>1$ 的极限。）"
+        },
+        {
+          "id": "p568-b8",
+          "source": "(i) $\\displaystyle\\sum_{n=1}^\\infty\\frac{z^n}{n^2}$.",
+          "sourceSha256": "cd112cc8e34c293888824759bb9488d5128f6673662f4516992d09393206ba3a"
+        },
+        {
+          "id": "p568-b9",
+          "source": "(ii) $\\displaystyle\\sum_{n=1}^\\infty\\frac{z^n}n$.",
+          "sourceSha256": "98bae24bc2878c6a14365e24b9d8aa3a7fad83170ab01e3676e0d4408e11e1e6"
+        },
+        {
+          "id": "p568-b10",
+          "source": "(iii) $\\displaystyle\\sum_{n=1}^\\infty z^n$.",
+          "sourceSha256": "0d63ebd4c16947758527a1cb01ee595876ccb1179fe6c0e68caced319fb9ff4f"
+        },
+        {
+          "id": "p568-b11",
+          "source": "(iv) $\\displaystyle\\sum_{n=1}^\\infty(n+2^{-n})z^n$.",
+          "sourceSha256": "c83fb999cdbe79577f16faa4ad2e54a5e38d0ca9edd217738ba13ed1697524e6"
+        },
+        {
+          "id": "p568-b12",
+          "source": "(v) $\\displaystyle\\sum_{n=1}^\\infty2^nz^{n!}$.",
+          "sourceSha256": "40e76869d875dd640da256be74e55edaa0548e1eb7bc8e2ca8086acc2c944cbf"
+        },
+        {
+          "id": "p568-b13",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p568-b14",
+          "source": "Use the root test (Problem 23-9) to find the radius of convergence of each of the following power series. (In some cases, you will need limits derived in the problems to Chapter 22.)",
+          "sourceSha256": "b7ae1df3e42734a1bf022ca63468172ad0fcd1e2f12dce2015104b04724edf24",
+          "translation": "用根值判别法（习题 23-9）求下列各幂级数的收敛半径。（在某些情形中，你需要用到第 22 章习题中求出的极限。）"
+        },
+        {
+          "id": "p568-b15",
+          "source": "(i) $\\dfrac z2+\\dfrac{z^2}3+\\dfrac{z^3}{2^2}+\\dfrac{z^4}{3^2}+\\dfrac{z^5}{2^3}+\\dfrac{z^6}{3^3}+\\cdots$.",
+          "sourceSha256": "e338a87c0fecd9b697dbbb957c8a83761ecab0a4cd5ce8fefa3612bb38f1ca7c"
+        },
+        {
+          "id": "p568-b16",
+          "source": "(ii) $\\displaystyle\\sum_{n=1}^\\infty\\frac n{2^n}z^n$.",
+          "sourceSha256": "31635f41169e5124c24b3d996a9ab96e302e82ed31bfd9a8c00e9fbaa7cd7cd9"
+        },
+        {
+          "id": "p568-b17",
+          "source": "(iii) $\\displaystyle\\sum_{n=1}^\\infty\\frac{n!z^n}{n^n}$.",
+          "sourceSha256": "ea41aa4afa66afef24cfba2231fecc400db06dcc058e860062de105790ee40eb"
+        },
+        {
+          "id": "p568-b18",
+          "source": "(iv) $\\displaystyle\\sum_{n=1}^\\infty\\frac{n^2}{2^n}z^n$.",
+          "sourceSha256": "99b0c80f8cb53d0e32f059518b77ed5a1c121d79c8e22b7f37e4fbc8ad8fa965"
+        },
+        {
+          "id": "p568-b19",
+          "source": "(v) $\\displaystyle\\sum_{n=1}^\\infty2^nz^{n!}$.",
+          "sourceSha256": "40e76869d875dd640da256be74e55edaa0548e1eb7bc8e2ca8086acc2c944cbf"
+        }
+      ]
+    },
+    {
+      "printed": 569,
+      "sourceSha256": "450683a047762a9bcb7614b2d9411ef652c883e4cec7445c5bd8ddefe7505970",
+      "blocks": [
+        {
+          "id": "p569-b1",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p569-b2",
+          "source": "The root test can always be used, in theory at least, to find the radius of convergence of a power series; in fact, a close analysis of the situation leads to a formula for the radius of convergence, known as the “Cauchy-Hadamard formula.” Suppose first that the set of numbers $\\sqrt[n]{|a_n|}$ is bounded.",
+          "sourceSha256": "d0a978b416c41df1141ef49e05935dddc4a5fcf1539491b41c77ad5032efca88",
+          "translation": "至少在理论上，根值判别法总能用来求幂级数的收敛半径；事实上，仔细分析这一问题，就会得到一个称为“柯西–阿达马公式”的收敛半径公式。先假设数 $\\sqrt[n]{|a_n|}$ 所成的集合有界。"
+        },
+        {
+          "id": "p569-b3",
+          "source": "(a) Use Problem 23-9 to show that if $\\overline{\\lim}_{n\\to\\infty}\\sqrt[n]{|a_n|}\\,|z|<1$, then $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ converges.",
+          "sourceSha256": "59f3191fbd8cdb0f2b572e0640c5a6938ec03eafa64e53f58fef94193c674790",
+          "translation": "(a) 利用习题 23-9 证明，如果 $\\overline{\\lim}_{n\\to\\infty}\\sqrt[n]{|a_n|}\\,|z|<1$，那么 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 收敛。"
+        },
+        {
+          "id": "p569-b4",
+          "source": "(b) Also show that if $\\overline{\\lim}_{n\\to\\infty}\\sqrt[n]{|a_n|}\\,|z|>1$, then $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ has unbounded terms.",
+          "sourceSha256": "a3a3a390c4ef08bda82928e2f1eef6640b6a28c6f1e8321e3ba6fbe3b4ad3e80",
+          "translation": "(b) 再证明，如果 $\\overline{\\lim}_{n\\to\\infty}\\sqrt[n]{|a_n|}\\,|z|>1$，那么 $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 的各项无界。"
+        },
+        {
+          "id": "p569-b5",
+          "source": "(c) Parts (a) and (b) show that the radius of convergence of $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ is $1/\\overline{\\lim}_{n\\to\\infty}\\sqrt[n]{|a_n|}$ (where “$1/0$” means “$\\infty$”). To complete the formula, define $\\overline{\\lim}_{n\\to\\infty}\\sqrt[n]{|a_n|}=\\infty$ if the set of all $\\sqrt[n]{|a_n|}$ is unbounded. Prove that in this case, $\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ diverges for $z\\ne0$, so that the radius of convergence is $0$ (which may be considered as “$1/\\infty$”).",
+          "sourceSha256": "feedb9230325bd6d83704838d1a3bad344e2de20a6e9a4b578130f81f9008831",
+          "translation": "(c) (a)、(b) 两部分表明，$\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 的收敛半径是 $1/\\overline{\\lim}_{n\\to\\infty}\\sqrt[n]{|a_n|}$（这里“$1/0$”表示“$\\infty$”）。为了使这个公式完整，当所有 $\\sqrt[n]{|a_n|}$ 所成的集合无界时，定义 $\\overline{\\lim}_{n\\to\\infty}\\sqrt[n]{|a_n|}=\\infty$。证明在这种情形下，$\\displaystyle\\sum_{n=0}^\\infty a_nz^n$ 对 $z\\ne0$ 都发散，因此收敛半径为 $0$（可以把它看成“$1/\\infty$”）。"
+        },
+        {
+          "id": "p569-b6",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p569-b7",
+          "source": "Consider the following three series from Problem 2:",
+          "sourceSha256": "569ea5f545c25dfc72925c06dc7bf9fa82412565816cce87642997058e27ddb5",
+          "translation": "考虑习题 2 中的下列三个级数："
+        },
+        {
+          "id": "p569-b8",
+          "source": "$$\\sum_{n=1}^\\infty\\frac{z^n}{n^2},\\qquad\\sum_{n=1}^\\infty\\frac{z^n}n,\\qquad\\sum_{n=1}^\\infty z^n.$$",
+          "sourceSha256": "3ff29d2c6082e4e751501e2d3caac2b9b7b4e9ee48934f5659c5fc31191aa458"
+        },
+        {
+          "id": "p569-b9",
+          "source": "Prove that the first series converges everywhere on the unit circle; that the third series converges nowhere on the unit circle; and that the second series converges for at least one point on the unit circle and diverges for at least one point on the unit circle.",
+          "sourceSha256": "b58a768bea3fe1f7d34cbfe33c504877ff802741a98e19990f7724f776f5ad30",
+          "translation": "证明：第一个级数在单位圆上处处收敛；第三个级数在单位圆上处处发散；第二个级数在单位圆上至少有一点收敛，也至少有一点发散。"
+        },
+        {
+          "id": "p569-b10",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p569-b11",
+          "source": "(a) Prove that $e^z\\cdot e^w=e^{z+w}$ for all complex numbers $z$ and $w$ by showing that the infinite series for $e^{z+w}$ is the Cauchy product of the series for $e^z$ and $e^w$.",
+          "sourceSha256": "c7d289eafddeb1b04666649621f0c28dccdc0949c9ab7695cf446e579fee265b",
+          "translation": "(a) 证明对于所有复数 $z$ 和 $w$ 都有 $e^z\\cdot e^w=e^{z+w}$，方法是证明 $e^{z+w}$ 的无穷级数是 $e^z$ 与 $e^w$ 的级数的柯西乘积。"
+        },
+        {
+          "id": "p569-b12",
+          "source": "(b) Show that $\\sin(z+w)=\\sin z\\cos w+\\cos z\\sin w$ and $\\cos(z+w)=\\cos z\\cos w-\\sin z\\sin w$ for all complex $z$ and $w$.",
+          "sourceSha256": "454307f117191295e26f64f98bad946db7e2d6d48389143f0b7110715325f941",
+          "translation": "(b) 证明对于所有复数 $z$ 和 $w$ 都有 $\\sin(z+w)=\\sin z\\cos w+\\cos z\\sin w$ 和 $\\cos(z+w)=\\cos z\\cos w-\\sin z\\sin w$。"
+        },
+        {
+          "id": "p569-b13",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p569-b14",
+          "source": "(a) Prove that every complex number of absolute value $1$ can be written $e^{iy}$ for some real number $y$.",
+          "sourceSha256": "f6928b3eb312f3c3b4e02688890b6ef68442ed99865c90193738e9ff784d2dbd",
+          "translation": "(a) 证明每个绝对值为 $1$ 的复数，都可以对某个实数 $y$ 写成 $e^{iy}$。"
+        },
+        {
+          "id": "p569-b15",
+          "source": "(b) Prove that $|e^{x+iy}|=e^x$ for real $x$ and $y$.",
+          "sourceSha256": "d9cfc5e5302724465bd5cdd3979cb7b37d866e3a2825e310d443e55e538a1ed6",
+          "translation": "(b) 证明对实数 $x$ 和 $y$ 有 $|e^{x+iy}|=e^x$。"
+        },
+        {
+          "id": "p569-b16",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p569-b17",
+          "source": "(a) Prove that $\\exp$ takes on every complex value except $0$.",
+          "sourceSha256": "3fd6d85e322990049aff02220cb300e34633c14718cfa8ac52ad8970df363cd3",
+          "translation": "(a) 证明 $\\exp$ 能取到除 $0$ 之外的每个复数值。"
+        },
+        {
+          "id": "p569-b18",
+          "source": "(b) Prove that $\\sin$ takes on every complex value.",
+          "sourceSha256": "a4752902cd53af51e286fc70b009b761e40989d5e0f70446c6387d014747ff92",
+          "translation": "(b) 证明 $\\sin$ 能取到每个复数值。"
+        },
+        {
+          "id": "p569-b19",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p569-b20",
+          "source": "For each of the following functions, compute the first three nonzero terms of the Taylor series centered at $0$ by manipulating power series.",
+          "sourceSha256": "bd56e7167e9252f18bfa828590d5cac26760223302151a3d6c157107caed1e12",
+          "translation": "对下列各函数，通过运算幂级数，求出以 $0$ 为中心的泰勒级数的前三个非零项。"
+        },
+        {
+          "id": "p569-b21",
+          "source": "(i) $f(z)=\\tan z$.",
+          "sourceSha256": "483f8d010f128b3ca4c7f829d63c1cb570177cb49cc0309561df75b91ef137e6"
+        },
+        {
+          "id": "p569-b22",
+          "source": "(ii) $f(z)=z(1-z)^{-1/2}$.",
+          "sourceSha256": "28eb9675990d34386df0a13b2e8a39076a005d5a936d498ef4418664d376bd93"
+        }
+      ]
+    },
+    {
+      "printed": 570,
+      "sourceSha256": "9b4c8ff53f4d3582ecf8cc6dfa568faa7a2e5671a3b935a8f506d3c1edc230e1",
+      "blocks": [
+        {
+          "id": "p570-b1",
+          "source": "(iii) $f(z)=\\dfrac{e^{\\sin z}-1}z$.",
+          "sourceSha256": "c6ca7d10586a05dd4d6b367df2e2b48ababddffdfdee25b6f0873d0899cfe68f"
+        },
+        {
+          "id": "p570-b2",
+          "source": "(iv) $f(z)=\\log(1-z^2)$.",
+          "sourceSha256": "e09aa50f55d872adfb5e176c162b241b07437e4cf8b99781f82ed795089fb7a8"
+        },
+        {
+          "id": "p570-b3",
+          "source": "(v) $f(z)=\\dfrac{\\sin^2z}{z^2}$.",
+          "sourceSha256": "b400948010d38972b715c1a163de5f26165e6f6fb4ee9dbe90b2a1e5e90ac929"
+        },
+        {
+          "id": "p570-b4",
+          "source": "(vi) $f(z)=\\dfrac{\\sin(z^2)}{z\\cos^2z}$.",
+          "sourceSha256": "0f4d512713355842f804f0fb5a88354d9d3181befce0b2a785256ef2e7d98457"
+        },
+        {
+          "id": "p570-b5",
+          "source": "(vii) $f(z)=\\dfrac1{z^4-2z^2+3}$.",
+          "sourceSha256": "852b9724e6f4b0fcc42f9a965c099021782ed42a5bd47c41462bc9eb38aa0fd0"
+        },
+        {
+          "id": "p570-b6",
+          "source": "(viii) $f(z)=\\dfrac1z[e^{(\\sqrt{1+z}-1)}-1]$.",
+          "sourceSha256": "9129a425cc6705a95a9d140188005c93d6a117f0975840cdf7e8d6bfde41fe95"
+        },
+        {
+          "id": "p570-b7",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p570-b8",
+          "source": "(a) Suppose that we write a differentiable complex function $f$ as $f=u+iv$, where $u$ and $v$ are real-valued. Let $\\bar u$ and $\\bar v$ denote the restrictions of $u$ and $v$ to the real numbers. In other words, $\\bar u(x)=u(x)$ for real numbers $x$ (but $\\bar u$ is not defined for other $x$). Using Problem 26-9, show that for real $x$ we have",
+          "sourceSha256": "4f713114697ab55862a33a163f7bdeebe778f01d50436b0ef5dfd64de17dc1ae",
+          "translation": "(a) 设把一个可导的复函数 $f$ 写成 $f=u+iv$，其中 $u$ 和 $v$ 都是实值函数。用 $\\bar u$ 和 $\\bar v$ 分别表示 $u$ 和 $v$ 在实数上的限制。换句话说，对实数 $x$ 有 $\\bar u(x)=u(x)$（但 $\\bar u$ 对其他 $x$ 没有定义）。利用习题 26-9 证明，对实数 $x$ 有"
+        },
+        {
+          "id": "p570-b9",
+          "source": "$$f'(x)=\\bar u'(x)+i\\bar v'(x),$$",
+          "sourceSha256": "99afe4ea5d0c9f7fceaa3b46e776400be8b203d6f249b7ac36fc965d6069c383"
+        },
+        {
+          "id": "p570-b10",
+          "source": "where $f'$ denotes the complex derivative, while $\\bar u'$ and $\\bar v'$ denote the ordinary derivatives of these real-valued functions on $\\mathbf R$.",
+          "sourceSha256": "34cdd75bc49d49916f3d5d357b5441685db399da5aa66b6142596c68232beead",
+          "translation": "其中 $f'$ 表示复导数，而 $\\bar u'$ 和 $\\bar v'$ 表示这两个定义在 $\\mathbf R$ 上的实值函数的普通导数。"
+        },
+        {
+          "id": "p570-b11",
+          "source": "(b) Show, more generally, that",
+          "sourceSha256": "9824d4dec94b0b84e23fc1ee86b94490d803a9b3eb728a81c2a5096309ec53c1",
+          "translation": "(b) 更一般地，证明"
+        },
+        {
+          "id": "p570-b12",
+          "source": "$$f^{(k)}(x)=\\bar u^{(k)}(x)+i\\bar v^{(k)}(x).$$",
+          "sourceSha256": "661f8823fbc8436803d50b414119ce0e80a432ddb39ce3730838adf72b752e65"
+        },
+        {
+          "id": "p570-b13",
+          "source": "(c) Suppose that $f$ satisfies the equation",
+          "sourceSha256": "3f986e3b1529a11a744320225b7b596c4821c70e06960924d387bc1bbc10a5b6",
+          "translation": "(c) 设 $f$ 满足方程"
+        },
+        {
+          "id": "p570-b14",
+          "source": "$$f^{(n)}+a_{n-1}f^{(n-1)}+\\cdots+a_0f=0,\\tag{*}$$",
+          "sourceSha256": "0a64ed2a3c556a250138cbed7c79e1a1205bf679c179e7c1ad21102953b0d5b9"
+        },
+        {
+          "id": "p570-b15",
+          "source": "where the $a_i$ are real numbers, and where the $f^{(k)}$ denote higher-order complex derivatives. Show that $\\bar u$ and $\\bar v$ satisfy the same equation, where $\\bar u^{(k)}$ and $\\bar v^{(k)}$ now denote higher-order derivatives of real-valued functions on $\\mathbf R$.",
+          "sourceSha256": "3706a0a14fb24891708a9a80dab4a79eed5cf95197e86718b9ed015c654844c3",
+          "translation": "其中 $a_i$ 是实数，$f^{(k)}$ 表示高阶复导数。证明 $\\bar u$ 和 $\\bar v$ 满足同一个方程，其中 $\\bar u^{(k)}$ 和 $\\bar v^{(k)}$ 现在表示定义在 $\\mathbf R$ 上的实值函数的高阶导数。"
+        },
+        {
+          "id": "p570-b16",
+          "source": "(d) Show that if $a=b+ci$ is a complex root of the equation $z^n+a_{n-1}z^{n-1}+\\cdots+a_0=0$, then $f(x)=e^{bx}\\sin cx$ and $f(x)=e^{bx}\\cos cx$ are both solutions of (*).",
+          "sourceSha256": "236b1519a2ec3fbe33fbeca2e6fd8c190897870f7a27d2a07924d3cb8e89bf32",
+          "translation": "(d) 证明，如果 $a=b+ci$ 是方程 $z^n+a_{n-1}z^{n-1}+\\cdots+a_0=0$ 的一个复根，那么 $f(x)=e^{bx}\\sin cx$ 和 $f(x)=e^{bx}\\cos cx$ 都是 (*) 的解。"
+        },
+        {
+          "id": "p570-b17",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p570-b18",
+          "source": "(a) Show that $\\exp$ is not one-one on $\\mathbf C$.",
+          "sourceSha256": "2ddd2c90bbb8486629f3f0f89c951011c5caff054a04f12ceb022187c95b7c63",
+          "translation": "(a) 证明 $\\exp$ 在 $\\mathbf C$ 上不是一一函数。"
+        },
+        {
+          "id": "p570-b19",
+          "source": "(b) Given $w\\ne0$, show that $e^z=w$ if and only if $z=x+iy$ with $x=\\log|w|$ (here $\\log$ denotes the real logarithm function), and $y$ an argument of $w$.",
+          "sourceSha256": "9b1e480115ba20cf99e1035c3530acebb328ddd06958d4704f9032a1334ba155",
+          "translation": "(b) 给定 $w\\ne0$，证明 $e^z=w$ 当且仅当 $z=x+iy$，其中 $x=\\log|w|$（这里 $\\log$ 表示实对数函数），而 $y$ 是 $w$ 的一个辐角。"
+        },
+        {
+          "id": "p570-b20",
+          "source": "\\*(c) Show that there does not exist a continuous function $\\log$ defined for nonzero complex numbers, such that $\\exp(\\log(z))=z$ for all $z\\ne0$. (Show that $\\log$ cannot even be defined continuously for $|z|=1$.)",
+          "sourceSha256": "11f807da809682457e8144f212ce171005595cd9b4f90d49768c81371b3c81d7",
+          "translation": "\\*(c) 证明不存在定义在非零复数上的连续函数 $\\log$，使得对所有 $z\\ne0$ 都有 $\\exp(\\log(z))=z$。（证明甚至在 $|z|=1$ 上，也无法连续地定义 $\\log$。）"
+        },
+        {
+          "id": "p570-b21",
+          "source": "Since there is no way to define a continuous logarithm function we cannot speak of *the* logarithm of a complex number, but only of “a logarithm for $w$,” meaning one of the infinitely many numbers $z$ with $e^z=w$. And",
+          "sourceSha256": "93f899189191f266de6a399047f798cc7d145213d281cea770835537ed6162ff",
+          "translation": "由于无法定义一个连续的对数函数，我们不能谈论一个复数*唯一的那个*对数，只能谈论“$w$ 的一个对数”，意思是满足 $e^z=w$ 的无穷多个数 $z$ 中的一个。并且，"
+        }
+      ]
+    },
+    {
+      "printed": 571,
+      "sourceSha256": "2ccd5b3cedd058f46d545aac30aeabe7d196354541cd330f6b638355c71fc2c7",
+      "blocks": [
+        {
+          "id": "p571-b1",
+          "source": "for complex numbers $a$ and $b$ we define $a^b$ to be a *set* of complex numbers, namely the set of all numbers $e^{b\\log a}$ or, more precisely, the set of all numbers $e^{bz}$ where $z$ is a logarithm for $a$.",
+          "sourceSha256": "48fe178dd24b32ebaafd831eb8a155727a681a934a06f684e8f56a70974a8512",
+          "translation": "对于复数 $a$ 和 $b$，我们把 $a^b$ 定义为一个复数*集合*，即所有数 $e^{b\\log a}$ 所成的集合；更准确地说，就是所有数 $e^{bz}$ 的集合，其中 $z$ 是 $a$ 的一个对数。"
+        },
+        {
+          "id": "p571-b2",
+          "source": "(d) If $m$ is an integer, then $a^m$ consists of only one number, the one given by the usual elementary definition of $a^m$.",
+          "sourceSha256": "f0109b6fd396f10f881abb93f1494191e3cec7a1374feba47be5bdf205a4e061",
+          "translation": "(d) 如果 $m$ 是整数，那么 $a^m$ 只包含一个数，就是 $a^m$ 通常的初等定义给出的那个数。"
+        },
+        {
+          "id": "p571-b3",
+          "source": "(e) If $m$ and $n$ are integers, then the set $a^{m/n}$ coincides with the set of values given by the usual elementary definition, namely the set of all $b^m$ where $b$ is an $n$th root of $a$.",
+          "sourceSha256": "55764796166586c58282bd4525c5a2901b26db9c85bbd615e560db529e78e072",
+          "translation": "(e) 如果 $m$ 和 $n$ 是整数，那么集合 $a^{m/n}$ 与通常的初等定义给出的值的集合一致，也就是所有 $b^m$ 所成的集合，其中 $b$ 是 $a$ 的一个 $n$ 次方根。"
+        },
+        {
+          "id": "p571-b4",
+          "source": "(f) If $a$ and $b$ are real and $b$ is irrational, then $a^b$ contains infinitely many members, even for $a>0$.",
+          "sourceSha256": "286424b652da910b17d18d4b95bd237151e1c1e2b67c9b31818bd87bd17c37e2",
+          "translation": "(f) 如果 $a$ 和 $b$ 都是实数，而且 $b$ 是无理数，那么即使 $a>0$，$a^b$ 也包含无穷多个元素。"
+        },
+        {
+          "id": "p571-b5",
+          "source": "(g) Find all logarithms of $i$, and find all values of $i^i$.",
+          "sourceSha256": "fef21d31836b8547a38e4a5b4f6231ab5c0c3e7c37c2e0e1f8d6447414767e5f",
+          "translation": "(g) 求 $i$ 的所有对数，并求 $i^i$ 的所有值。"
+        },
+        {
+          "id": "p571-b6",
+          "source": "(h) By $(a^b)^c$ we mean the set of all numbers of the form $z^c$ for some number $z$ in the set $a^b$. Show that $(1^i)^i$ has infinitely many values, while $1^{i\\cdot i}$ has only one.",
+          "sourceSha256": "331fa6d5aaf96e0a544a282a75c8e1a94f53e16e3296d2139c7b907e5837d48a",
+          "translation": "(h) 我们用 $(a^b)^c$ 表示所有形如 $z^c$ 的数所成的集合，其中 $z$ 是集合 $a^b$ 中的某个数。证明 $(1^i)^i$ 有无穷多个值，而 $1^{i\\cdot i}$ 只有一个值。"
+        },
+        {
+          "id": "p571-b7",
+          "source": "(i) Show that all values of $a^{b\\cdot c}$ are also values of $(a^b)^c$. Is $a^{b\\cdot c}=(a^b)^c\\cap(a^c)^b$?",
+          "sourceSha256": "3aea94599df3fc638fc6a039484f854a71086cc3ea371ebb7da8b2b4ac004830",
+          "translation": "(i) 证明 $a^{b\\cdot c}$ 的所有值也都是 $(a^b)^c$ 的值。是否有 $a^{b\\cdot c}=(a^b)^c\\cap(a^c)^b$？"
+        },
+        {
+          "id": "p571-b8",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p571-b9",
+          "source": "(a) For real $x$ show that we can choose $\\log(x+i)$ and $\\log(x-i)$ to be",
+          "sourceSha256": "448ec9c946edf5d7ca3ba7f244a1409038d68cdd7ca3f1c38580d41abaa63da3",
+          "translation": "(a) 对实数 $x$，证明我们可以选择 $\\log(x+i)$ 和 $\\log(x-i)$ 为"
+        },
+        {
+          "id": "p571-b10",
+          "source": "$$\\begin{aligned}\\log(x+i)&=\\log(\\sqrt{1+x^2})+i\\left(\\frac\\pi2-\\arctan x\\right),\\\\\\log(x-i)&=\\log(\\sqrt{1+x^2})-i\\left(\\frac\\pi2-\\arctan x\\right).\\end{aligned}$$",
+          "sourceSha256": "ca85932ed50c54b5a84bf51021d8ba65e42488899ed49c446eb1e7ca7d483f21"
+        },
+        {
+          "id": "p571-b11",
+          "source": "(It will help to note that $\\pi/2-\\arctan x=\\arctan1/x$ for $x>0$.)",
+          "sourceSha256": "6b009fbfa45332e3b6bc356cc96c8be08319ac6e6498500e1c2e8f061fe20774",
+          "translation": "（注意到当 $x>0$ 时有 $\\pi/2-\\arctan x=\\arctan1/x$，会有所帮助。）"
+        },
+        {
+          "id": "p571-b12",
+          "source": "(b) The expression",
+          "sourceSha256": "b98b39b852915e25d3fcb3f894e4f0a40ce83ecea03654c4b856e571b583de1f",
+          "translation": "(b) 表达式"
+        },
+        {
+          "id": "p571-b13",
+          "source": "$$\\frac1{1+x^2}=\\frac1{2i}\\left(\\frac1{x-i}-\\frac1{x+i}\\right)$$",
+          "sourceSha256": "65bbd0eb5c915ded0ae1a4cbc20e4b5b5a27ae38b110dac9dbe69eec4d9286c2"
+        },
+        {
+          "id": "p571-b14",
+          "source": "yields, formally,",
+          "sourceSha256": "0f5102b90bb4744ba5057efdc0b8299309aae43f8c905c5ac2c01650a9bae5d7",
+          "translation": "在形式上给出"
+        },
+        {
+          "id": "p571-b15",
+          "source": "$$\\int\\frac{dx}{1+x^2}=\\frac1{2i}[\\log(x-i)-\\log(x+i)].$$",
+          "sourceSha256": "47ebe72695c5843a4c2e9085fe16395b6fd98353f9ea9a4e12f138c2fd7ce61b"
+        },
+        {
+          "id": "p571-b16",
+          "source": "Use part (a) to check that this answer agrees with the usual one.",
+          "sourceSha256": "860d08744a74f852ed2b9ce05c5d4c6d0f02e75f54686210c47c65641f31a843",
+          "translation": "利用 (a) 部分检验，这个答案与通常的答案一致。"
+        },
+        {
+          "id": "p571-b17",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p571-b18",
+          "source": "(a) A sequence $\\{a_n\\}$ of complex numbers is called a **Cauchy sequence** if $\\lim_{m,n\\to\\infty}|a_m-a_n|=0$. Suppose that $a_n=b_n+ic_n$, where $b_n$ and $c_n$ are real. Prove that $\\{a_n\\}$ is a Cauchy sequence if and only if $\\{b_n\\}$ and $\\{c_n\\}$ are Cauchy sequences.",
+          "sourceSha256": "6da3048cdbbfc21af67478666d96bac52e21fa21a7675d0c5f0b2c50a19a1635",
+          "translation": "(a) 复数数列 $\\{a_n\\}$ 称为**柯西数列**，如果 $\\lim_{m,n\\to\\infty}|a_m-a_n|=0$。设 $a_n=b_n+ic_n$，其中 $b_n$ 和 $c_n$ 为实数。证明 $\\{a_n\\}$ 是柯西数列，当且仅当 $\\{b_n\\}$ 和 $\\{c_n\\}$ 都是柯西数列。"
+        },
+        {
+          "id": "p571-b19",
+          "source": "(b) Prove that every Cauchy sequence of complex numbers converges.",
+          "sourceSha256": "0f70b91c1b0834ed5ac01babdff7aa0ef9593c4dae73710d56203ff47ab24188",
+          "translation": "(b) 证明每个复数柯西数列都收敛。"
+        },
+        {
+          "id": "p571-b20",
+          "source": "(c) Give direct proofs, without using theorems about real series, that an absolutely convergent series is convergent and that any rearrangement has the same sum. (It is permitted, and in fact advisable, to use the *proofs* of the corresponding theorems for real series.)",
+          "sourceSha256": "08e4bd091f2a3b8fc0d619bb405128422418ca2ab705a361b1eb1a334b0d1666",
+          "translation": "(c) 不使用关于实数级数的定理，直接证明：绝对收敛的级数必定收敛，且它的任何重排都有相同的和。（允许使用、而且实际上建议使用关于实数级数的相应定理的*证明*。）"
+        },
+        {
+          "id": "p571-b21",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p571-b22",
+          "source": "(a) Prove that",
+          "sourceSha256": "5fd957c03a4a5c36f0dc505bfedc633c34bfb7dc8fb6d6e0639736d4fcc5d37c",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p571-b23",
+          "source": "$$\\sum_{k=1}^n e^{ikx}=e^{ix}\\frac{1-e^{inx}}{1-e^{ix}}=\\frac{\\sin(\\frac n2x)}{\\sin\\frac x2}e^{i(n+1)x/2}.$$",
+          "sourceSha256": "e46ef936e3082336c21f203dc10d32d564f35d44e10511ad9fd1ea141c1968c3"
+        }
+      ]
+    },
+    {
+      "printed": 572,
+      "sourceSha256": "d70c788bb4d745e045d9dd9cf322cb84aa76d27abec3752e13e9590298fdbac9",
+      "blocks": [
+        {
+          "id": "p572-b1",
+          "source": "(b) Deduce the formulas for $\\displaystyle\\sum_{k=1}^n\\cos kx$ and $\\displaystyle\\sum_{k=1}^n\\sin kx$ that are given in Problem 15-33.",
+          "sourceSha256": "3977198b650c824431b29f2bd09e9ddb1fd39a017b7ae52e2a9f4cb45e767db7",
+          "translation": "(b) 推出习题 15-33 给出的 $\\displaystyle\\sum_{k=1}^n\\cos kx$ 和 $\\displaystyle\\sum_{k=1}^n\\sin kx$ 的公式。"
+        },
+        {
+          "id": "p572-b2",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p572-b3",
+          "source": "Let $\\{a_n\\}$ be the Fibonacci sequence, $a_1=a_2=1$, $a_{n+2}=a_n+a_{n+1}$.",
+          "sourceSha256": "e07993b1a6e63be09a0d7e0eac8ade4b1ee5a2e5ec06054a59e3705f9aada5e5",
+          "translation": "设 $\\{a_n\\}$ 是斐波那契数列，$a_1=a_2=1$，$a_{n+2}=a_n+a_{n+1}$。"
+        },
+        {
+          "id": "p572-b4",
+          "source": "(a) If $r_n=a_{n+1}/a_n$, show that $r_{n+1}=1+1/r_n$.",
+          "sourceSha256": "c9c33e6efcafc808c6cacb7bd7b422071377c52267b6eb8266c7e02fa7043851",
+          "translation": "(a) 如果 $r_n=a_{n+1}/a_n$，证明 $r_{n+1}=1+1/r_n$。"
+        },
+        {
+          "id": "p572-b5",
+          "source": "(b) Show that if $r=\\lim_{n\\to\\infty}r_n$ exists, then $r=1+1/r$, so that $r=(1+\\sqrt5)/2$.",
+          "sourceSha256": "d50bc0bbb282b6e85cd1f4a4cbd906a3e5a25916ba086b6e5e40117c51623aca",
+          "translation": "(b) 证明如果 $r=\\lim_{n\\to\\infty}r_n$ 存在，那么 $r=1+1/r$，因而 $r=(1+\\sqrt5)/2$。"
+        },
+        {
+          "id": "p572-b6",
+          "source": "(c) Prove that the limit does exist. Hint: If $r_n<(1+\\sqrt5)/2$, then $r_n^2-r_n-1<0$ and $r_n<r_{n+2}$.",
+          "sourceSha256": "0a813b21e1e54cd44bd100d0c618287dedfa0daf4180a6f7c80ebb83e1caa837",
+          "translation": "(c) 证明这个极限确实存在。提示：如果 $r_n<(1+\\sqrt5)/2$，那么 $r_n^2-r_n-1<0$ 且 $r_n<r_{n+2}$。"
+        },
+        {
+          "id": "p572-b7",
+          "source": "(d) Show that $\\displaystyle\\sum_{n=1}^\\infty a_nz^n$ has radius of convergence $2/(1+\\sqrt5)$. (Using the unproved theorems in this chapter and the fact that $\\displaystyle\\sum_{n=1}^\\infty a_nz^n=-1/(z^2+z-1)$ from Problem 24-16 we could have predicted that the radius of convergence is the smallest absolute value of the roots of $z^2+z-1=0$; since the roots are $(-1\\pm\\sqrt5)/2$, the radius of convergence should be $(-1+\\sqrt5)/2$. Notice that this number is indeed equal to $2/(1+\\sqrt5)$.)",
+          "sourceSha256": "a9736b498e3153f50f7178a16f11dc60d89ae96e8fb979736879ac16a15274bd",
+          "translation": "(d) 证明 $\\displaystyle\\sum_{n=1}^\\infty a_nz^n$ 的收敛半径为 $2/(1+\\sqrt5)$。（利用本章中没有证明的定理，以及习题 24-16 中的事实 $\\displaystyle\\sum_{n=1}^\\infty a_nz^n=-1/(z^2+z-1)$，我们本来可以预言，收敛半径就是 $z^2+z-1=0$ 的根的绝对值中的最小值；由于这些根是 $(-1\\pm\\sqrt5)/2$，收敛半径应当为 $(-1+\\sqrt5)/2$。注意，这个数确实等于 $2/(1+\\sqrt5)$。）"
+        },
+        {
+          "id": "p572-b8",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p572-b9",
+          "source": "Since $(e^z-1)/z$ can be written as the power series $1+z/2!+z^2/3!+\\cdots$ which is nonzero at $0$, it follows that there is a power series",
+          "sourceSha256": "65783a669fea4622a1f395aa5a8f1df655b6e518d8c9069af8ce8da7948bd346",
+          "translation": "由于 $(e^z-1)/z$ 可以写成幂级数 $1+z/2!+z^2/3!+\\cdots$，而它在 $0$ 处非零，因此存在一个幂级数"
+        },
+        {
+          "id": "p572-b10",
+          "source": "$$\\frac z{e^z-1}=\\sum_{n=0}^\\infty\\frac{b_n}{n!}z^n$$",
+          "sourceSha256": "e0d220f692c5dafa0b7cc3a38cf239f7133155f1505c95f3c3c7e682ebf8cbd3"
+        },
+        {
+          "id": "p572-b11",
+          "source": "with nonzero radius of convergence. Using the unproved theorems in this chapter, we can even predict the radius of convergence; it is $2\\pi$, since this is the smallest absolute value of the non-zero numbers $z=2k\\pi i$ for which $e^z-1=0$. The numbers $b_n$ appearing here are called the **Bernoulli numbers**.*",
+          "sourceSha256": "5233601a605ea3520ab7a30f41ecbc9f9e4d825f559ea55f706cc60373b00151",
+          "translation": "其收敛半径非零。利用本章中未加证明的定理，我们甚至可以预言其收敛半径；它是 $2\\pi$，因为这是使 $e^z-1=0$ 成立的非零数 $z=2k\\pi i$ 的绝对值中的最小值。这里出现的数 $b_n$ 称为**伯努利数**。*"
+        },
+        {
+          "id": "p572-b12",
+          "source": "(a) Clearly $b_0=1$. Now show that",
+          "sourceSha256": "ac2c5cae3279203b1b34087e2801e2d108ba886b883e4353be5f6a7479b68b21",
+          "translation": "(a) 显然 $b_0=1$。现在证明"
+        },
+        {
+          "id": "p572-b13",
+          "source": "$$\\begin{aligned}\\frac z{e^z-1}&=-\\frac z2+\\frac z2\\cdot\\frac{e^z+1}{e^z-1},\\\\\\frac{e^{-z}+1}{e^{-z}-1}&=\\frac{e^z+1}{e^z-1},\\end{aligned}$$",
+          "sourceSha256": "1098ea7bc795ddcd07d587018066fba73a7ccb285c12b0a74d1692e88602648c"
+        },
+        {
+          "id": "p572-b14",
+          "source": "and deduce that",
+          "sourceSha256": "a8721425bdf8ae4434e09c20f84318f08e774d754a24bbd9f59f1281e55b6298",
+          "translation": "并推出"
+        },
+        {
+          "id": "p572-b15",
+          "source": "$$b_1=-\\tfrac12,\\qquad b_n=0\\text{ if }n\\text{ is odd and }n>1.$$",
+          "sourceSha256": "a071f30d3b4cd56e3eea406f313dbd01b7fbd0c0453b625588a28abba5b6ab31"
+        },
+        {
+          "id": "p572-b16",
+          "source": "<p class=\"original-footnote\">*Sometimes the numbers $B_n=(-1)^{n-1}b_{2n}$ are called the Bernoulli numbers, because $b_n=0$ if $n$ is odd and $>1$ (see part (a)) and because the numbers $b_{2n}$ alternate in sign, although we will not prove this. Other modifications of this nomenclature are also in use.</p>",
+          "sourceSha256": "743f0fe1a49047a920f82ee9f29724c984446cdd8f45f919040b6e3728c047d6",
+          "translation": "<p class=\"original-footnote\">*有时把数 $B_n=(-1)^{n-1}b_{2n}$ 称为伯努利数，因为当 $n$ 为奇数且 $>1$ 时有 $b_n=0$（见 (a) 部分），而且数 $b_{2n}$ 的正负号交替出现，不过我们不证明后一事实。这套命名还有其他变体在使用。</p>"
+        }
+      ]
+    },
+    {
+      "printed": 573,
+      "sourceSha256": "9d9e75735c461b1c52a922008b4895cf62870c2ea8f321df1d94c7c0bd111825",
+      "blocks": [
+        {
+          "id": "p573-b1",
+          "source": "(b) By finding the coefficient of $z^n$ in the right side of the equation",
+          "sourceSha256": "49a47a2769bf521321e7d408b3b7d1b16a0b3559819d23b8405033092ad49db4",
+          "translation": "(b) 通过求出等式右边 $z^n$ 的系数，"
+        },
+        {
+          "id": "p573-b2",
+          "source": "$$z=\\left(\\sum_{k=0}^\\infty\\frac{b_k}{k!}z^k\\right)\\left(z+\\frac{z^2}{2!}+\\frac{z^3}{3!}+\\cdots\\right),$$",
+          "sourceSha256": "88ed8adecd299e69732ffe5a9de63cf83291bc1ae7025a6d10ed6c51eb3edeed"
+        },
+        {
+          "id": "p573-b3",
+          "source": "show that",
+          "sourceSha256": "bbff6a8a0c668438cb64142eb760c58829e82faf9da7da7b5c582a6b6a974f2c",
+          "translation": "证明"
+        },
+        {
+          "id": "p573-b4",
+          "source": "$$\\sum_{i=0}^{n-1}\\binom ni b_i=0\\qquad\\text{for }n>1.$$",
+          "sourceSha256": "c2ea17ba914018f383acb02c55a98b30738a8813aec8d92c8919be1144b158a7"
+        },
+        {
+          "id": "p573-b5",
+          "source": "This formula allows us to compute any $b_k$ in terms of previous ones, and shows that each $b_k$ is rational. Calculate two or three of the following:",
+          "sourceSha256": "02fadb403c4c95143916d7b287932fa317512dd4fd6b85cb5a75636f5ca0d739",
+          "translation": "这个公式使我们能够用前面的数计算任何一个 $b_k$，并表明每个 $b_k$ 都是有理数。计算下列数中的两三个："
+        },
+        {
+          "id": "p573-b6",
+          "source": "$$b_2=\\tfrac16,\\quad b_4=-\\tfrac1{30},\\quad b_6=\\tfrac1{42},\\quad b_8=-\\tfrac1{30}.$$",
+          "sourceSha256": "00bfcf2e51d49d8a9a74808bbf639a6ad6a1f348dc8e2f706f68e1c1e6620a02"
+        },
+        {
+          "id": "p573-b7",
+          "source": "\\*(c) Part (a) shows that",
+          "sourceSha256": "5fdec7888faf1190b86db1398beb04968866731459520b192ab4c73ed3a33516",
+          "translation": "\\*(c) (a) 部分表明"
+        },
+        {
+          "id": "p573-b8",
+          "source": "$$\\sum_{n=0}^\\infty\\frac{b_{2n}}{(2n)!}z^{2n}=\\frac z2\\cdot\\frac{e^z+1}{e^z-1}=\\frac z2\\cdot\\frac{e^{z/2}+e^{-z/2}}{e^{z/2}-e^{-z/2}}.$$",
+          "sourceSha256": "82439109210fff2faca14aeae7dd6ba995e87ee0ec3b766972c7e8ca1b26ec5d"
+        },
+        {
+          "id": "p573-b9",
+          "source": "Replace $z$ by $2iz$ and show that",
+          "sourceSha256": "bcc4d8b6b8432e4488924f62a63fc642dfe3942a4ae7ee800cad91a44b251098",
+          "translation": "把 $z$ 换成 $2iz$，并证明"
+        },
+        {
+          "id": "p573-b10",
+          "source": "$$z\\cot z=\\sum_{n=0}^\\infty\\frac{b_{2n}}{(2n)!}(-1)^n2^{2n}z^{2n}.$$",
+          "sourceSha256": "60ca3bdc555f59f5344075f406517261344ca07d8ac65d57d6c537dd04c4e367"
+        },
+        {
+          "id": "p573-b11",
+          "source": "\\*(d) Show that",
+          "sourceSha256": "892e8667e5e3456d1ca5576494de1f44cb15faddccf8ec2249ab236847585438",
+          "translation": "\\*(d) 证明"
+        },
+        {
+          "id": "p573-b12",
+          "source": "$$\\tan z=\\cot z-2\\cot2z.$$",
+          "sourceSha256": "65d820741592312db742e7d9696fc3c0ea669572a10a99e7e3162040951359eb"
+        },
+        {
+          "id": "p573-b13",
+          "source": "\\*(e) Show that",
+          "sourceSha256": "a3fd18cf7108ba4ba7ed2331ac22976898627a7be7e2836ada8707c4d0ab49d3",
+          "translation": "\\*(e) 证明"
+        },
+        {
+          "id": "p573-b14",
+          "source": "$$\\tan z=\\sum_{n=1}^\\infty\\frac{b_{2n}}{(2n)!}(-1)^{n-1}2^{2n}(2^{2n}-1)z^{2n-1}.$$",
+          "sourceSha256": "07ed23e0ef331a9a7f585719dc99d34adf16eac775275e038b940f38959b75ec"
+        },
+        {
+          "id": "p573-b15",
+          "source": "(This series converges for $|z|<\\pi/2$.)",
+          "sourceSha256": "843579d872f0bb53bede788ccec3df3f910f1b99a0a8df637d432dabff67d9fc",
+          "translation": "（这个级数对 $|z|<\\pi/2$ 收敛。）"
+        },
+        {
+          "id": "p573-b16",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p573-b17",
+          "source": "The Bernoulli numbers play an important role in a theorem which is best introduced by some notational nonsense. Let us use $D$ to denote the “differentiation operator,” so that $Df$ denotes $f'$. Then $D^kf$ will mean $f^{(k)}$ and $e^Df$ will mean $\\displaystyle\\sum_{n=0}^\\infty f^{(n)}/n!$ (of course this series makes no sense in general, but it will make sense if $f$ is a polynomial function, for example). Finally, let $\\Delta$ denote the “difference operator” for which $\\Delta f(x)=f(x+1)-f(x)$. Now Taylor’s Theorem implies, disregarding questions of convergence, that",
+          "sourceSha256": "f3a906c3c9222f42d97c2ab7ad32489b8501c990d23506c253a7c38ecc3c6c81",
+          "translation": "伯努利数在一个定理中起着重要作用，而引出这个定理的最好方式，是来一番符号游戏。我们用 $D$ 表示“微分算子”，从而 $Df$ 表示 $f'$。那么，$D^kf$ 将表示 $f^{(k)}$，而 $e^Df$ 将表示 $\\displaystyle\\sum_{n=0}^\\infty f^{(n)}/n!$（当然，这个级数一般来说没有意义，但例如当 $f$ 是多项式函数时，它就有意义）。最后，用 $\\Delta$ 表示“差分算子”，它满足 $\\Delta f(x)=f(x+1)-f(x)$。现在，不考虑收敛问题，泰勒定理给出"
+        },
+        {
+          "id": "p573-b18",
+          "source": "$$f(x+1)=\\sum_{n=0}^\\infty\\frac{f^{(n)}(x)}{n!}$$",
+          "sourceSha256": "8857de683dc5a8fc750783e5f5d95722373bbfd0ecf06a8981e692ad302bc592"
+        },
+        {
+          "id": "p573-b19",
+          "source": "or",
+          "sourceSha256": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+          "translation": "或者"
+        },
+        {
+          "id": "p573-b20",
+          "source": "$$f(x+1)-f(x)=\\sum_{n=1}^\\infty\\frac{f^{(n)}(x)}{n!}.\\tag{*}$$",
+          "sourceSha256": "03c4e36e7874db330c6380a86aa1cadf5ef7e104c6ea94b00dd56ff8e4b289fa"
+        }
+      ]
+    },
+    {
+      "printed": 574,
+      "sourceSha256": "5552e82781983371a1893112bbf4ce07965a62aa221b732d9dbe2349e0d82aa2",
+      "blocks": [
+        {
+          "id": "p574-b1",
+          "source": "we may write this symbolically as $\\Delta f=(e^D-1)f$, where $1$ stands for the “identity operator.” Even more symbolically this can be written $\\Delta=e^D-1$, which suggests that",
+          "sourceSha256": "7778461f8f39ab7e10e3591eff48e75c965b3ea7cf45bc8d2e0d02c14061c98e",
+          "translation": "我们可以把它用符号写成 $\\Delta f=(e^D-1)f$，其中 $1$ 代表“恒等算子”。更进一步作符号化处理，可以写成 $\\Delta=e^D-1$，这启发我们得到"
+        },
+        {
+          "id": "p574-b2",
+          "source": "$$D=\\frac D{e^D-1}\\Delta.$$",
+          "sourceSha256": "5da6b2a33fda8f0f6a3166a600e4ce228734209b4bb6412730f4bfdab767f66b"
+        },
+        {
+          "id": "p574-b3",
+          "source": "Thus we obviously ought to have",
+          "sourceSha256": "d87b60ccc579a744da55ebe580039365071e946319d33c4678a0ee3120098360",
+          "translation": "于是，我们显然应当有"
+        },
+        {
+          "id": "p574-b4",
+          "source": "$$D=\\sum_{k=0}^\\infty\\frac{b_k}{k!}D^k\\Delta,$$",
+          "sourceSha256": "3b08860976deee27d646f60ef675e872cf643cc301bb3abdd161dca16495f9d4"
+        },
+        {
+          "id": "p574-b5",
+          "source": "i.e.,",
+          "sourceSha256": "7afac3e48b42674568e5de80efa6b7b8e5d301a2ca93042d0e70bb18a9c890e3",
+          "translation": "即，"
+        },
+        {
+          "id": "p574-b6",
+          "source": "$$f'(x)=\\sum_{k=0}^\\infty\\frac{b_k}{k!}[f^{(k)}(x+1)-f^{(k)}(x)].\\tag{**}$$",
+          "sourceSha256": "e4918da9bb97e79af7de15a4d894bcba9705e7e59e0c894867f27da2522a8e23"
+        },
+        {
+          "id": "p574-b7",
+          "source": "The beautiful thing about all this nonsense is that it works!",
+          "sourceSha256": "9c8e91bd2bca9001329cbf03d9f5a5764603f37fee20d2259664635aca74b31b",
+          "translation": "所有这些胡闹般的运算，妙就妙在它们竟然是对的！"
+        },
+        {
+          "id": "p574-b8",
+          "source": "(a) Prove that (\\*\\*) is literally true if $f$ is a polynomial function (in which case the infinite sum is really a finite sum). Hint: By applying (*) to $f^{(k)}$, find a formula for $f^{(k)}(x+1)-f^{(k)}(x)$, then use the formula in Problem 16(b) to find the coefficient of $f^{(j)}(x)$ in the right side of (\\*\\*).",
+          "sourceSha256": "9d672e40852e4fdbc5e20b2ef399fd4a667a38fbd0937162034634145aa662c7",
+          "translation": "(a) 证明，如果 $f$ 是多项式函数，那么 (\\*\\*) 确实严格成立（在这种情形中，无穷和实际上是有限和）。提示：对 $f^{(k)}$ 应用 (*)，求出 $f^{(k)}(x+1)-f^{(k)}(x)$ 的公式，然后用习题 16(b) 中的公式求出 (\\*\\*) 右边 $f^{(j)}(x)$ 的系数。"
+        },
+        {
+          "id": "p574-b9",
+          "source": "(b) Deduce from (\\*\\*) that",
+          "sourceSha256": "84824a23601ad53a6e3d825fe70086c3059addefb366aa283e380425b2d6a69e",
+          "translation": "(b) 从 (\\*\\*) 推出"
+        },
+        {
+          "id": "p574-b10",
+          "source": "$$f'(0)+\\cdots+f'(n)=\\sum_{k=0}^\\infty\\frac{b_k}{k!}[f^{(k)}(n+1)-f^{(k)}(0)].$$",
+          "sourceSha256": "e9ca22cc674dcef49e8f67757cd0599dda7fb1cfbec3f4bc0d39b823bad57584"
+        },
+        {
+          "id": "p574-b11",
+          "source": "(c) Show that for any polynomial function $g$ we have",
+          "sourceSha256": "4098b3e808dc775c25a430750400069f2705e9c413843210d81a1c6535a7c1f7",
+          "translation": "(c) 证明，对于任意多项式函数 $g$，有"
+        },
+        {
+          "id": "p574-b12",
+          "source": "$$g(0)+\\cdots+g(n)=\\int_0^{n+1}g(t)\\,dt+\\sum_{k=1}^\\infty\\frac{b_k}{k!}[g^{(k-1)}(n+1)-g^{(k-1)}(0)].$$",
+          "sourceSha256": "a5811d7ad365daf2c021a9c98260b6d7087931c5ff9964e6b7c83dcb27744b64"
+        },
+        {
+          "id": "p574-b13",
+          "source": "(d) Apply this to $g(x)=x^p$ to show that",
+          "sourceSha256": "eba89c202d00fb7deac95456ed68e15e40aed5b0c5e8e765c7790ccc9005f638",
+          "translation": "(d) 把它应用于 $g(x)=x^p$，证明"
+        },
+        {
+          "id": "p574-b14",
+          "source": "$$\\sum_{k=1}^{n-1}k^p=\\frac{n^{p+1}}{p+1}+\\sum_{k=1}^p\\frac{b_k}k\\binom p{k-1}n^{p-k+1}.$$",
+          "sourceSha256": "2cf78bbe7c8d87d23e413ab6bdd23d19caa5bb6cc663954e9ae85fbd9b1568fb"
+        },
+        {
+          "id": "p574-b15",
+          "source": "Using the fact that $b_1=-\\frac12$, show that",
+          "sourceSha256": "887404e27e6b2a09806d177cad090bc521f473632464f2a9195816f582c89397",
+          "translation": "利用 $b_1=-\\frac12$ 这一事实，证明"
+        },
+        {
+          "id": "p574-b16",
+          "source": "$$\\sum_{k=1}^n k^p=\\frac{n^{p+1}}{p+1}+\\frac{n^p}2+\\sum_{k=2}^p\\frac{b_k}k\\binom p{k-1}n^{p-k+1}.$$",
+          "sourceSha256": "199b6bcf27b9c1d80ef444f6e4df4e644046fc7b6565ce9151f791f5894e141f"
+        },
+        {
+          "id": "p574-b17",
+          "source": "The first ten instances of this formula were written out in Problem 2-7, which offered as a challenge the discovery of the general pattern. This may now seem to be a preposterous suggestion, but the Bernoulli numbers were actually discovered in precisely this way! After writing out these 10 formulas, Bernoulli claims (in his posthumously printed work *Ars Conjectandi*, 1713): “Whoever will examine the series as to their regularity may be able to continue the table.” He then writes down the above",
+          "sourceSha256": "35b38060e0641162ca6e393d8fa9aa1e95f6804b5a997351e2ab7f15d61d711f",
+          "translation": "习题 2-7 列出了这个公式的前十个具体情形，并把发现一般规律作为一项挑战。现在看来，这个建议也许荒唐得很，但伯努利数确实正是这样发现的！写出这 10 个公式之后，伯努利声称（见他身后于 1713 年出版的著作《猜度术》）： “任何人只要考察这些级数的规律，就能够把这张表继续列下去。”随后，他写出了上面的"
+        }
+      ]
+    },
+    {
+      "printed": 575,
+      "sourceSha256": "60efd2a95e2e278aea92ad24f66309b9dd3167eda8adbbede4079416e89b1629",
+      "blocks": [
+        {
+          "id": "p575-b1",
+          "source": "formula, offering no proof at all, merely noting that the coefficients $b_k$ (which he denoted simply by $A$, $B$, $C$, $\\ldots$) satisfy the equation in Problem 16(b). The relation between these numbers and the coefficients in the power series for $z/(e^z-1)$ was discovered by Euler.",
+          "sourceSha256": "3d66b11b4d328ffadcc0bc747985d61b35ea0ebe9ae2f9b454645dc9cbcc9601",
+          "translation": "公式，完全没有给出证明，只是指出系数 $b_k$（他简单地把它们记为 $A$、$B$、$C$、$\\ldots$）满足习题 16(b) 中的方程。这些数与 $z/(e^z-1)$ 的幂级数系数之间的关系，是欧拉发现的。"
+        },
+        {
+          "id": "p575-b2",
+          "source": "### \\*18.",
+          "sourceSha256": "dc9f11a962e705d50490c24f8b3e71f51b22675236704438ef4ec0936298a65c"
+        },
+        {
+          "id": "p575-b3",
+          "source": "The formula in Problem 17(c) can be generalized to the case where $g$ is not a polynomial function; the infinite sum must be replaced by a finite sum plus a remainder term. In order to find an expression for the remainder, it is useful to introduce some new functions.",
+          "sourceSha256": "20f2dd98eb53366fa56491b4aefbab4f3ac35803db756f9cb8362e8be99528a0",
+          "translation": "习题 17(c) 中的公式可以推广到 $g$ 不是多项式函数的情形；这时，必须把无穷和替换成一个有限和加上一个余项。为了求出余项的表达式，引入一些新的函数会很有用。"
+        },
+        {
+          "id": "p575-b4",
+          "source": "(a) The *Bernoulli polynomials* $\\varphi_n$ are defined by",
+          "sourceSha256": "0ab6b7efa723b2f08a1c9ab6f6f601b07e05cc43437242fb5099417f1782cc5f",
+          "translation": "(a) *伯努利多项式* $\\varphi_n$ 定义为"
+        },
+        {
+          "id": "p575-b5",
+          "source": "$$\\varphi_n(x)=\\sum_{k=0}^n\\binom nk b_{n-k}x^k.$$",
+          "sourceSha256": "b5273e1cd512f76b6f9d910019cf4e2e3cd8799cc12fe794407ff39d12562058"
+        },
+        {
+          "id": "p575-b6",
+          "source": "The first three are",
+          "sourceSha256": "f527faa92e15c8a3cf7b89927d9bb19abb0e396545f89fbf993bd91bd7559798",
+          "translation": "前三个是"
+        },
+        {
+          "id": "p575-b7",
+          "source": "$$\\begin{aligned}\\varphi_1(x)&=x-\\frac12,\\\\\\varphi_2(x)&=x^2-x+\\frac16,\\\\\\varphi_3(x)&=x^3-\\frac{3x^2}2+\\frac x2.\\end{aligned}$$",
+          "sourceSha256": "499b6ef77257416458e6dd5a90fb20972a49d3930fd006b90d12197839f39c48"
+        },
+        {
+          "id": "p575-b8",
+          "source": "Show that",
+          "sourceSha256": "ef0fa5d710a2c9a7cae34308cbb6303eaba9d752f277a43d65825d5ddded74f8",
+          "translation": "证明"
+        },
+        {
+          "id": "p575-b9",
+          "source": "$$\\begin{aligned}\\varphi_n(0)&=b_n,\\\\\\varphi_n(1)&=b_n\\qquad\\text{if }n>1,\\\\\\varphi_n'(x)&=n\\varphi_{n-1}(x),\\\\\\varphi_n(x)&=(-1)^n\\varphi_n(1-x).\\end{aligned}$$",
+          "sourceSha256": "79d0745e95d5951f54d315e0b7923aa738b93857fa704850b5c8848078f09222"
+        },
+        {
+          "id": "p575-b10",
+          "source": "Hint: Prove the last equation by induction on $n$.",
+          "sourceSha256": "82a19f63dd7542a05389e74c64f7811ea870b7cfe3242f023ceca8551c644a82",
+          "translation": "提示：对 $n$ 用归纳法证明最后一个等式。"
+        },
+        {
+          "id": "p575-b11",
+          "source": "(b) Let $R_N{}^k(x)$ be the remainder term in Taylor’s Theorem for $f^{(k)}$, on the interval $[x,x+1]$, so that",
+          "sourceSha256": "f9b46d842440e671f70bbdb42e5d466d91f6b9500eb482c7e821c6731b2aa561",
+          "translation": "(b) 设 $R_N{}^k(x)$ 是 $f^{(k)}$ 在区间 $[x,x+1]$ 上的泰勒定理中的余项，从而"
+        },
+        {
+          "id": "p575-b12",
+          "source": "$$f^{(k)}(x+1)-f^{(k)}(x)=\\sum_{n=1}^N\\frac{f^{(k+n)}(x)}{n!}+R_N{}^k(x).\\tag{*}$$",
+          "sourceSha256": "b507141ed0fff873d5933cecb7616f30bd8ef3de78a13e9eb94954b4af29f4a3"
+        },
+        {
+          "id": "p575-b13",
+          "source": "Prove that",
+          "sourceSha256": "bd05d81834d558ff6258ab898c195fc8fed52ba9be04f6f90e4270d8bdb0bbcb",
+          "translation": "证明"
+        },
+        {
+          "id": "p575-b14",
+          "source": "$$f'(x)=\\sum_{k=0}^N\\frac{b_k}{k!}[f^{(k)}(x+1)-f^{(k)}(x)]-\\sum_{k=0}^N\\frac{b_k}{k!}R_{N-k}{}^k(x).$$",
+          "sourceSha256": "c5a3fffecc6aeaa73337162a473ca00e0b43ad254608adcea57940351daad4df"
+        },
+        {
+          "id": "p575-b15",
+          "source": "Hint: Imitate Problem 17(a). Notice the subscript $N-k$ on $R$.",
+          "sourceSha256": "c8357d84a44dbab2f322d78116a6093edb7f8fd5564b81848f7193315a16bf60",
+          "translation": "提示：仿照习题 17(a)。注意 $R$ 的下标 $N-k$。"
+        },
+        {
+          "id": "p575-b16",
+          "source": "(c) Use the integral form of the remainder to show that",
+          "sourceSha256": "64fef16bda1ea2d1eb5b748e076d33dc36b68aff7d305dd52b09ae8b81b9e298",
+          "translation": "(c) 利用余项的积分形式证明"
+        },
+        {
+          "id": "p575-b17",
+          "source": "$$\\sum_{k=0}^N\\frac{b_k}{k!}R_{N-k}{}^k(x)=\\int_x^{x+1}\\frac{\\varphi_N(x+1-t)}{N!}f^{(N+1)}(t)\\,dt.$$",
+          "sourceSha256": "a9aa9f5c64842cb352d99f70df835f3fcbdd08593450eecbf422120711b5ab50"
+        }
+      ]
+    },
+    {
+      "printed": 576,
+      "sourceSha256": "713a9ba7287034073fbb390c47a9fe510b8948ea094bf33b28bbb8fdf39e15af",
+      "blocks": [
+        {
+          "id": "p576-b1",
+          "source": "(d) Deduce the “Euler-Maclaurin Summation Formula”:",
+          "sourceSha256": "0372bedbd277290a0f202ceea604a0a828705e83a211a7ebc65a9e01465667ba",
+          "translation": "(d) 推出“欧拉–麦克劳林求和公式”："
+        },
+        {
+          "id": "p576-b2",
+          "source": "$$\\begin{aligned}&g(x)+g(x+1)+\\cdots+g(x+n)\\\\&\\quad=\\int_x^{x+n+1}g(t)\\,dt+\\sum_{k=1}^N\\frac{b_k}{k!}[g^{(k-1)}(x+n+1)-g^{(k-1)}(x)]+S_N(x,n),\\end{aligned}$$",
+          "sourceSha256": "08805c5982c69f27ff1662ddc6c75472d5544631e0d2dadba4659a8a6acc35e1"
+        },
+        {
+          "id": "p576-b3",
+          "source": "where",
+          "sourceSha256": "b48111c10c65fc119368edafb19f97451759ee90b3f44647368135ca47aa4753",
+          "translation": "其中"
+        },
+        {
+          "id": "p576-b4",
+          "source": "$$S_N(x,n)=-\\sum_{j=0}^n\\int_{x+j}^{x+j+1}\\frac{\\varphi_N(x+j+1-t)}{N!}g^{(N)}(t)\\,dt.$$",
+          "sourceSha256": "3fae05a4e342d79a81485fb9d4d04986ed4bbeaa6e754d9991e62f516b078efb"
+        },
+        {
+          "id": "p576-b5",
+          "source": "(e) Let $\\psi_n$ be the periodic function, with period $1$, which satisfies $\\psi_n(t)=\\varphi_n(t)$ for $0\\le t<1$. (Part (a) implies that if $n>1$, then $\\psi_n$ is continuous, since $\\varphi_n(1)=\\varphi_n(0)$, and also that $\\psi_n$ is even if $n$ is even and odd if $n$ is odd.) Show that",
+          "sourceSha256": "b185fac4af63c4f4ac28ad6a6a27009b1a8fb7a23b06639efe3b650f363a1aea",
+          "translation": "(e) 设 $\\psi_n$ 是周期为 $1$ 的周期函数，它在 $0\\le t<1$ 时满足 $\\psi_n(t)=\\varphi_n(t)$。（(a) 部分意味着，如果 $n>1$，那么 $\\psi_n$ 连续，因为 $\\varphi_n(1)=\\varphi_n(0)$；它还意味着，当 $n$ 为偶数时 $\\psi_n$ 是偶函数，而当 $n$ 为奇数时它是奇函数。）证明"
+        },
+        {
+          "id": "p576-b6",
+          "source": "$$\\begin{aligned}S_N(x,n)&=-\\int_x^{x+n+1}\\frac{\\psi_N(x-t)}{N!}g^{(N)}(t)\\,dt\\\\&\\left(=(-1)^{N+1}\\int_x^{x+n+1}\\frac{\\psi_N(t)}{N!}g^{(N)}(t)\\,dt\\qquad\\text{if }x\\text{ is an integer}\\right).\\end{aligned}$$",
+          "sourceSha256": "db98bb4bc90516e6c905afb26aa5f5efff0d7dd35ca4984bef8ce1b0c0955856"
+        },
+        {
+          "id": "p576-b7",
+          "source": "Unlike the remainder in Taylor’s Theorem, the remainder $S_N(x,n)$ usually does not satisfy $\\lim_{N\\to\\infty}S_N(x,n)=0$, because the Bernoulli numbers and functions become large very rapidly (although the first few examples do not suggest this). Nevertheless, important information can often be obtained from the summation formula. The general situation is best discussed within the context of a specialized study (“asymptotic series”), but the next problem shows one particularly important example.",
+          "sourceSha256": "96374041c757a5d69c7dba8e3a2927a0d1a08999852a52ff77b8d09b11bd5aaf",
+          "translation": "与泰勒定理中的余项不同，余项 $S_N(x,n)$ 通常不满足 $\\lim_{N\\to\\infty}S_N(x,n)=0$，因为伯努利数和伯努利函数会非常迅速地变大（尽管最初几个例子并没有显露这一点）。尽管如此，从求和公式中往往仍能获得重要信息。一般情形最好放在一个专门的研究课题（“渐近级数”）中讨论，不过下一道习题展示了一个特别重要的例子。"
+        },
+        {
+          "id": "p576-b8",
+          "source": "### \\*\\*19.",
+          "sourceSha256": "8a29ed0731378d9770eb2eecc476894b6a8d0352cc2268a95ac8d6f3e16b4846"
+        },
+        {
+          "id": "p576-b9",
+          "source": "(a) Use the Euler-Maclaurin Formula, with $N=2$, to show that",
+          "sourceSha256": "003424209416532c2fbd1deda03e4bad52c3df56640b6a277271a3889abd31ee",
+          "translation": "(a) 在欧拉–麦克劳林公式中取 $N=2$，证明"
+        },
+        {
+          "id": "p576-b10",
+          "source": "$$\\begin{aligned}&\\log1+\\cdots+\\log(n-1)\\\\&\\quad=\\int_1^n\\log t\\,dt-\\frac12\\log n+\\frac1{12}\\left(\\frac1n-1\\right)+\\int_1^n\\frac{\\psi_2(t)}{2t^2}\\,dt.\\end{aligned}$$",
+          "sourceSha256": "a72f1855108b7e118e19dc6770dcfd42f691bd0cfa24026f4b596774e14fa027"
+        },
+        {
+          "id": "p576-b11",
+          "source": "(b) Show that",
+          "sourceSha256": "87fa4c209da94246118a4450a4cef5838b3ce8b8d46033b776afbac9b6f404e0",
+          "translation": "(b) 证明"
+        },
+        {
+          "id": "p576-b12",
+          "source": "$$\\log\\left(\\frac{n!}{n^{n+1/2}e^{-n+1/(12n)}}\\right)=\\frac{11}{12}+\\int_1^n\\frac{\\psi_2(t)}{2t^2}\\,dt.$$",
+          "sourceSha256": "0a445343afa33dab5f18476ef885e1d79aa288a4c209e7a37e435ce08c23e6a5"
+        },
+        {
+          "id": "p576-b13",
+          "source": "(c) Explain why the improper integral $\\beta=\\displaystyle\\int_1^\\infty\\psi_2(t)/2t^2\\,dt$ exists, and show that if $\\alpha=\\exp(\\beta+11/12)$, then",
+          "sourceSha256": "683fef2c9e8364e22ea28bbc65d70ed24f9747626385c0f3e37384c3e69b9c3e",
+          "translation": "(c) 解释为什么反常积分 $\\beta=\\displaystyle\\int_1^\\infty\\psi_2(t)/2t^2\\,dt$ 存在，并证明如果 $\\alpha=\\exp(\\beta+11/12)$，那么"
+        },
+        {
+          "id": "p576-b14",
+          "source": "$$\\log\\left(\\frac{n!}{\\alpha n^{n+1/2}e^{-n+1/(12n)}}\\right)=-\\int_n^\\infty\\frac{\\psi_2(t)}{2t^2}\\,dt.$$",
+          "sourceSha256": "d9bf631ab4e7785a45cea7fc29c52250bec5e0d5fd21d3f9373c513ec91c0a41"
+        }
+      ]
+    },
+    {
+      "printed": 577,
+      "sourceSha256": "01efd1309b0429215956fe45176f9bb1d95e83ff161684bb650fd6acfcf38e55",
+      "blocks": [
+        {
+          "id": "p577-b1",
+          "source": "(d) Problem 19-41(d) shows that",
+          "sourceSha256": "e1a2ff737c739377206becab43e42d283306a4ac94bb023f28dee48320dda003",
+          "translation": "(d) 习题 19-41(d) 表明"
+        },
+        {
+          "id": "p577-b2",
+          "source": "$$\\sqrt\\pi=\\lim_{n\\to\\infty}\\frac{(n!)^2 2^{2n}}{(2n)!\\sqrt n}.$$",
+          "sourceSha256": "3373f2eef1e31e1fef044080bef89d4bcaffdd2a059aeb165e0e8b362ac9fd0b"
+        },
+        {
+          "id": "p577-b3",
+          "source": "Use part (c) to show that",
+          "sourceSha256": "7a03ed5dea9e4a2eac26d5d0b818913cad936c2f46413c172b3478049b15b567",
+          "translation": "利用 (c) 部分证明"
+        },
+        {
+          "id": "p577-b4",
+          "source": "$$\\sqrt\\pi=\\lim_{n\\to\\infty}\\frac{\\alpha^2n^{2n+1}e^{-2n}2^{2n}}{\\alpha(2n)^{2n+1/2}e^{-2n}\\sqrt n},$$",
+          "sourceSha256": "0c57affc830c1dc4b978a503889fef296285efced6cd4c3da2765ee397dc326d"
+        },
+        {
+          "id": "p577-b5",
+          "source": "and conclude that $\\alpha=\\sqrt{2\\pi}$.",
+          "sourceSha256": "023d577df26a8df9d5bcc71aa9a1a74db2db744afdcda558594c5f57e1d5689e",
+          "translation": "并得出 $\\alpha=\\sqrt{2\\pi}$。"
+        },
+        {
+          "id": "p577-b6",
+          "source": "(e) Show that",
+          "sourceSha256": "b5f532a865d6f5a9031c3aec2d3e693290affb366d64d25b4350fb7e00fe94bd",
+          "translation": "(e) 证明"
+        },
+        {
+          "id": "p577-b7",
+          "source": "$$\\int_0^{1/2}\\varphi_2(t)\\,dt=\\int_0^1\\varphi_2(t)\\,dt=0.$$",
+          "sourceSha256": "56ec4661bfd04ec119f0cfd30691304f91632dc46a050dbb88b73aed5896a885"
+        },
+        {
+          "id": "p577-b8",
+          "source": "(You can do the computations explicitly, but the result also follows immediately from Problem 18(a).) Conclude that",
+          "sourceSha256": "1672623a1a24ff88e7dbd483ccf602ae98a763f8b2e004a7e775ea8d0233fbfb",
+          "translation": "（你可以直接进行计算，但这个结果也能由习题 18(a) 立即得到。）由此推出"
+        },
+        {
+          "id": "p577-b9",
+          "source": "$$\\bar\\psi(x)=\\int_0^x\\psi_2(t)\\,dt\\quad\\begin{cases}\\ge0&\\text{for }0\\le x\\le1/2\\\\\\le0&\\text{for }1/2\\le x\\le1,\\end{cases}$$",
+          "sourceSha256": "3278c6c4774cdabf4acf1d2d73735acc81f7e61c0fd9bf082bef32ec93b683c1"
+        },
+        {
+          "id": "p577-b10",
+          "source": "with $\\bar\\psi(n)=0$ for all $n$. Hint: Graph $\\bar\\psi$ on $[0,1]$, paying particular attention to its values at $x_0$, $\\frac12$, and $x_1$, where $x_0$ and $x_1$ are the roots of $\\varphi_2$ (Figure 9).",
+          "sourceSha256": "829ae4c48990630fa37ea9957f3e6a0b8f30b5cd402d13fa84439d8b80d6218e",
+          "translation": "其中，对所有 $n$ 都有 $\\bar\\psi(n)=0$。提示：画出 $\\bar\\psi$ 在 $[0,1]$ 上的图像，特别注意它在 $x_0$、$\\frac12$ 和 $x_1$ 处的值，其中 $x_0$ 和 $x_1$ 是 $\\varphi_2$ 的根（图 9）。"
+        },
+        {
+          "id": "p577-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:260px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"548 808 255 145\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0596.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 9</figcaption></figure>",
+          "sourceSha256": "d150d4be067568a1fc922bed04c766ae05d154b48f9f5c068d0388ede5c0ad74"
+        },
+        {
+          "id": "p577-b12",
+          "source": "(f) Noting that $\\bar\\psi(x)=-\\bar\\psi(1-x)$, show that",
+          "sourceSha256": "fc5d076c5270ac3e3d5d963b2eec474b2491170a4febe15f3111f2df2e97b632",
+          "translation": "(f) 注意到 $\\bar\\psi(x)=-\\bar\\psi(1-x)$，证明"
+        },
+        {
+          "id": "p577-b13",
+          "source": "$$\\bar{\\bar\\psi}(x)=\\int_0^x\\bar\\psi(t)\\,dt\\ge0\\qquad\\text{on }[0,1],$$",
+          "sourceSha256": "60bd07ed03164bd44417a539de69f569d1b5eba7e765f24cae86561d968bb04b"
+        },
+        {
+          "id": "p577-b14",
+          "source": "and hence everywhere, with $\\bar{\\bar\\psi}(n)=0$ for all $n$.",
+          "sourceSha256": "5e2cbcd67bd8c7ea1f34eacc4628b9b49e706a87613246e82009a572b4a39ab4",
+          "translation": "从而处处成立，并且对所有 $n$ 都有 $\\bar{\\bar\\psi}(n)=0$。"
+        },
+        {
+          "id": "p577-b15",
+          "source": "(g) Finally, use this information and integration by parts to show that",
+          "sourceSha256": "7eca746f43ef157e09b0ac377decbca6c262f828f8d4790dea18528036e82b9f",
+          "translation": "(g) 最后，利用这些信息和分部积分法证明"
+        },
+        {
+          "id": "p577-b16",
+          "source": "$$\\int_n^\\infty\\frac{\\psi_2(t)}{2t^2}\\,dt>0.$$",
+          "sourceSha256": "3fae7ac863279a1b045050cf69cf7d70f413eb53149088e8acc345cdd6509e60"
+        },
+        {
+          "id": "p577-b17",
+          "source": "(h) Using the fact that the maximum value of $|\\varphi_2(x)|$ for $x$ in $[0,1]$ is $\\frac16$, conclude that",
+          "sourceSha256": "aa3ab03599df1e2c2b0be524f0ef4a6b83ea22bf77756059cb951f254619a385",
+          "translation": "(h) 利用当 $x$ 在 $[0,1]$ 中时 $|\\varphi_2(x)|$ 的最大值为 $\\frac16$ 这一事实，推出"
+        },
+        {
+          "id": "p577-b18",
+          "source": "$$0<\\int_n^\\infty\\frac{\\psi_2(t)}{2t^2}\\,dt<\\frac1{12n}.$$",
+          "sourceSha256": "e7172ebe0bba71463513bdfd2f595258409073ff884992f969332189d88e4aeb"
+        },
+        {
+          "id": "p577-b19",
+          "source": "(i) Finally, conclude that",
+          "sourceSha256": "f0a2419ad9ff8a51313afbfbe1b5b4c2cb8b84accac3529fded648ae7bfe872c",
+          "translation": "(i) 最后，得出"
+        },
+        {
+          "id": "p577-b20",
+          "source": "$$\\sqrt{2\\pi}\\,n^{n+1/2}e^{-n}<n!<\\sqrt{2\\pi}\\,n^{n+1/2}e^{-n+1/(12n)}.$$",
+          "sourceSha256": "c73112720b02170ab07480958181476e81e06322eae03e8240e730f7aec7770e"
+        }
+      ]
+    },
+    {
+      "printed": 578,
+      "sourceSha256": "91f03f6efae2ecd91e53c71d615eb07a781e27b5a54f29163bc052836e515456",
+      "blocks": [
+        {
+          "id": "p578-b1",
+          "source": "The final result of Problem 19, a strong form of Stirling’s Formula, shows that $n!$ is approximately $\\sqrt{2\\pi}\\,n^{n+1/2}e^{-n}$, in the sense that this expression differs from $n!$ by an amount which is small compared to $n$ when $n$ is large. For example, for $n=10$ we obtain $3598696$ instead of $3628800$, with an error $<1\\%$.",
+          "sourceSha256": "5249310bb03eafb2b884ef95979d30ba297524e0e4e222a7ad69d9bdd1952c31",
+          "translation": "习题 19 的最终结果是斯特林公式的一种较强形式，它表明 $n!$ 近似等于 $\\sqrt{2\\pi}\\,n^{n+1/2}e^{-n}$；这里的意思是，当 $n$ 很大时，这个表达式与 $n!$ 的差相对于 $n$ 很小。例如，对于 $n=10$，我们得到 $3598696$，而不是 $3628800$，误差 $<1\\%$。"
+        },
+        {
+          "id": "p578-b2",
+          "source": "A more general form of Stirling’s Formula illustrates the “asymptotic” nature of the summation formula. The same argument which was used in Problem 19 can now be used to show that for $N\\ge2$ we have",
+          "sourceSha256": "a4d648731bb2a41c6f7147193d1668e9c2f782f00d5825e6aead3ce0dee37b53",
+          "translation": "斯特林公式的一种更一般的形式，展示了求和公式的“渐近”性质。现在可以用习题 19 中的同样论证证明，对于 $N\\ge2$ 有"
+        },
+        {
+          "id": "p578-b3",
+          "source": "$$\\log\\left(\\frac{n!}{\\sqrt{2\\pi}\\,n^{n+1/2}e^{-n}}\\right)=\\sum_{k=2}^N\\frac{b_k}{k(k-1)n^{k-1}}\\pm\\int_n^\\infty\\frac{\\psi_N(t)}{Nt^N}\\,dt.$$",
+          "sourceSha256": "0cd669547ac3c30c3298b6d3a9699880becb42dc18bd85f18fafbc850194013e"
+        },
+        {
+          "id": "p578-b4",
+          "source": "Since $\\psi_N$ is bounded, we can obtain estimates of the form",
+          "sourceSha256": "65226a50ca038ee440abbabcb7c78b3525f7b8026ffb6a8d89eecc39ebeddabb",
+          "translation": "由于 $\\psi_N$ 有界，我们可以得到形如下面这样的估计："
+        },
+        {
+          "id": "p578-b5",
+          "source": "$$\\left|\\int_n^\\infty\\frac{\\psi_N(t)}{Nt^N}\\,dt\\right|\\le\\frac{M_N}{n^{N-1}}.$$",
+          "sourceSha256": "93392769057253baa037dca0053e677640fc4e0490401161311f6e98e7d81195"
+        },
+        {
+          "id": "p578-b6",
+          "source": "If $N$ is large, the constant $M_N$ will also be large; but for very large $n$ the factor $n^{1-N}$ will make the product very small. Thus, the expression",
+          "sourceSha256": "dda4f1076da82791fa928eebfc101a7337131386997564aa95d196d2ca1b11ff",
+          "translation": "如果 $N$ 很大，常数 $M_N$ 也会很大；但当 $n$ 非常大时，因子 $n^{1-N}$ 将使乘积非常小。因此，表达式"
+        },
+        {
+          "id": "p578-b7",
+          "source": "$$\\sqrt{2\\pi}\\,n^{n+1/2}e^{-n}\\cdot\\exp\\left(\\sum_{k=2}^N\\frac{b_k}{k(k-1)n^{k-1}}\\right)$$",
+          "sourceSha256": "4aa440dde20189df256b7c90c4741961af6a2988042cc400ee727320f8d4e2f3"
+        },
+        {
+          "id": "p578-b8",
+          "source": "may be a very bad approximation for $n!$ when $n$ is small, but for large $n$ (how large depends on $N$) it will be an extremely good one (how good depends on $N$).",
+          "sourceSha256": "ec4fc6c2a54f9c35a3e014508047a45cd815fd359fda1db4fa96ed8b45fedc83",
+          "translation": "在 $n$ 较小时，可能是 $n!$ 的一个非常差的近似；但当 $n$ 很大时（要多大取决于 $N$），它将成为一个极好的近似（好到什么程度取决于 $N$）。"
+        }
+      ]
+    }
+  ]
+}

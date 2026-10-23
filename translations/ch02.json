@@ -1,0 +1,1391 @@
+{
+  "chapter": 2,
+  "language": "zh-CN",
+  "sourceSha256": "31ddd0ddff1e81a9d96abe36df259ec1abb53e85be10ab928169684d027bef1e",
+  "paragraphCount": 143,
+  "pages": [
+    {
+      "printed": 21,
+      "sourceSha256": "e9aa62ae5038f2301d2697baf4449e814d13f6b2a245b12886aab4bf6ac0959b",
+      "blocks": [
+        {
+          "id": "p21-b1",
+          "source": "# CHAPTER 2  NUMBERS OF VARIOUS SORTS",
+          "sourceSha256": "e097269974b7d1389823cef0a7b7b219582313cbb33c8862d8e44b6da025b00e",
+          "translation": "# 第 2 章　各种数"
+        },
+        {
+          "id": "p21-b2",
+          "source": "In Chapter 1 we used the word “number” very loosely, despite our concern with the basic properties of numbers. It will now be necessary to distinguish carefully various kinds of numbers.",
+          "sourceSha256": "5bcf9ea505a75e1f52876fd4a5446cc851aff960945bced737d71bec0a83abf7",
+          "translation": "第一章虽然着重讨论数的基本性质，却一直很宽泛地使用“数”这个词。现在有必要仔细区分各种不同的数。"
+        },
+        {
+          "id": "p21-b3",
+          "source": "The simplest numbers are the “counting numbers”",
+          "sourceSha256": "8abf2c5f3e100e2d3789189a5e89f11116b7f412575ab752749237ddf750c372",
+          "translation": "最简单的数是“计数用的数”"
+        },
+        {
+          "id": "p21-b4",
+          "source": "$$1,2,3,\\ldots.$$",
+          "sourceSha256": "ef81b3506a6c306c0458d772ef72c015e9519fdfff48bc7637c019b42af4fd79"
+        },
+        {
+          "id": "p21-b5",
+          "source": "The fundamental significance of this collection of numbers is emphasized by its symbol $\\mathbf{N}$ (for **natural numbers**). A brief glance at P1–P12 will show that our basic properties of “numbers” do not apply to $\\mathbf{N}$—for example, P2 and P3 do not make sense for $\\mathbf{N}$. From this point of view the system $\\mathbf{N}$ has many deficiencies. Nevertheless, $\\mathbf{N}$ is sufficiently important to deserve several comments before we consider larger collections of numbers.",
+          "sourceSha256": "a3a1bf77d7dc12d320b2e23efee9ae4a4e9e2d94a3f7861aaa173ae78716e687",
+          "translation": "这类数的符号 $\\mathbf{N}$（代表**自然数**，natural numbers）突出了它的根本意义。略看 P1—P12 就会发现，我们关于“数”的基本性质并不适用于 $\\mathbf{N}$——例如，P2 和 P3 对 $\\mathbf{N}$ 就没有意义。从这个角度说，数系 $\\mathbf{N}$ 有许多不足。然而，$\\mathbf{N}$ 十分重要，值得我们在考虑更大的数集之前先作几番说明。"
+        },
+        {
+          "id": "p21-b6",
+          "source": "The most basic property of $\\mathbf{N}$ is the principle of “mathematical induction.” Suppose $P(x)$ means that the property $P$ holds for the number $x$. Then the principle of mathematical induction states that $P(x)$ is true for all natural numbers $x$ provided that",
+          "sourceSha256": "3b3159e5c63b71ee9f296d6ec46e6e6ee1a93de93e683392e2afedf356c344e2",
+          "translation": "$\\mathbf{N}$ 最基本的性质是“数学归纳法”原理。假设 $P(x)$ 表示性质 $P$ 对数 $x$ 成立。那么，数学归纳法原理断言：只要满足以下条件，$P(x)$ 就对所有自然数 $x$ 成立："
+        },
+        {
+          "id": "p21-b7",
+          "source": "(1) $P(1)$ is true.",
+          "sourceSha256": "75d0416ef3748e0aab51f7bc785d21aef2f3f31e179a481389c982e132c7d3c8",
+          "translation": "(1) $P(1)$ 成立。"
+        },
+        {
+          "id": "p21-b8",
+          "source": "(2) Whenever $P(k)$ is true, $P(k+1)$ is true.",
+          "sourceSha256": "853d360dcd940d8390792e853a19a50216d4a2709c5976710618b6caeb412e4a",
+          "translation": "(2) 只要 $P(k)$ 成立，$P(k+1)$ 就成立。"
+        },
+        {
+          "id": "p21-b9",
+          "source": "Note that condition (2) merely asserts the truth of $P(k+1)$ under the assumption that $P(k)$ is true; this suffices to ensure the truth of $P(x)$ for all $x$, if condition (1) also holds. In fact, if $P(1)$ is true, then it follows that $P(2)$ is true (by using (2) in the special case $k=1$). Now, since $P(2)$ is true it follows that $P(3)$ is true (using (2) in the special case $k=2$). It is clear that each number will eventually be reached by a series of steps of this sort, so that $P(k)$ is true for all numbers $k$.",
+          "sourceSha256": "833d2c7848f8e9d1eb219729e5b151c893e6f127e3a3bce4c4df724af79b9830",
+          "translation": "注意，条件 (2) 只是断言：在假定 $P(k)$ 成立的前提下，$P(k+1)$ 成立；如果条件 (1) 也成立，这就足以保证 $P(x)$ 对所有 $x$ 成立。事实上，如果 $P(1)$ 成立，就能推出 $P(2)$ 成立（在特殊情形 $k=1$ 下使用 (2)）。现在，既然 $P(2)$ 成立，又能推出 $P(3)$ 成立（在特殊情形 $k=2$ 下使用 (2)）。显然，经过这样的一连串步骤，最终会到达每一个数，所以 $P(k)$ 对所有数 $k$ 都成立。"
+        },
+        {
+          "id": "p21-b10",
+          "source": "A favorite illustration of the reasoning behind mathematical induction envisions an infinite line of people,",
+          "sourceSha256": "7958d7d1e421974fac64e64312e3f6879ef398bf2ce4ad7263ac58becb105f14",
+          "translation": "说明数学归纳法背后推理的一个常用例子，是设想有无限多个人排成一列："
+        },
+        {
+          "id": "p21-b11",
+          "source": "$$\\text{person number 1, person number 2, person number 3, }\\ldots.$$",
+          "sourceSha256": "104e737c7233b0b562c6b30d3de1780276f3fa8fb5bb1c9f0b37c26a8c5dec6c"
+        },
+        {
+          "id": "p21-b12",
+          "source": "If each person has been instructed to tell any secret he hears to the person behind him (the one with the next largest number) and a secret is told to person number 1, then clearly every person will eventually learn the secret. If $P(x)$ is the assertion that person number $x$ will learn the secret, then the instructions given (to tell all secrets learned to the next person) assures that condition (2) is true, and telling the secret to person number 1 makes (1) true. The following example is a less facetious use of mathematical induction. There is a useful and striking formula which expresses the sum of the first $n$ numbers in a simple way:",
+          "sourceSha256": "4f60ab47fab9c985101ddd05ac6943a3b1c6616182c1f0b8a39b5f6d4a237087",
+          "translation": "如果每个人都被要求把听到的任何秘密告诉后面的人（即编号比他大 1 的那个人），而我们把一个秘密告诉 1 号，那么显然每个人最终都会知道这个秘密。若 $P(x)$ 是“$x$ 号将知道这个秘密”这一断言，那么给出的要求（把听到的所有秘密告诉下一个人）保证了条件 (2) 成立，而把秘密告诉 1 号则使 (1) 成立。下面是数学归纳法的一个不那么诙谐的应用。有一个有用而醒目的公式，用简单的方式表达了前 $n$ 个数的和："
+        }
+      ]
+    },
+    {
+      "printed": 22,
+      "sourceSha256": "903c68ff207fc41a7ef87df0c852c4e8da86d01085a58cef3e45a60e37adc3d4",
+      "blocks": [
+        {
+          "id": "p22-b1",
+          "source": "$$1+\\cdots+n=\\frac{n(n+1)}2.$$",
+          "sourceSha256": "915471339f09628709c50885f477bdcee7cc38dd697e1642c067762217b1ad6a"
+        },
+        {
+          "id": "p22-b2",
+          "source": "To prove this formula, note first that it is clearly true for $n=1$. Now *assume* that for some natural number $k$ we have",
+          "sourceSha256": "5c9e2eb22e3e8ed96e0804d585689ca8f73afa89a8badc404079005a72115c71",
+          "translation": "为了证明这个公式，先注意它对 $n=1$ 显然成立。现在*假设*对某个自然数 $k$ 有"
+        },
+        {
+          "id": "p22-b3",
+          "source": "$$1+\\cdots+k=\\frac{k(k+1)}2.$$",
+          "sourceSha256": "854b90d62dd17125af0c0693c0622b1cf7fff544a2fb95942129988e8827e6c9"
+        },
+        {
+          "id": "p22-b4",
+          "source": "Then",
+          "sourceSha256": "0597f441dcca7c9bb0a79da4d94d03c523c031a3384009afff47ac1fd1a72b95",
+          "translation": "那么"
+        },
+        {
+          "id": "p22-b5",
+          "source": "$$\\begin{aligned}\n1+\\cdots+k+(k+1)&=\\frac{k(k+1)}2+k+1\\\\\n&=\\frac{k(k+1)+2k+2}2\\\\\n&=\\frac{k^2+3k+2}2\\\\\n&=\\frac{(k+1)(k+2)}2,\n\\end{aligned}$$",
+          "sourceSha256": "7f84a8212bedf120a7a918ae8909478ff88f331883897676796a3768bb6dc139"
+        },
+        {
+          "id": "p22-b6",
+          "source": "so the formula is also true for $k+1$. By the principle of induction this proves the formula for all natural numbers $n$. This particular example illustrates a phenomenon that frequently occurs, especially in connection with formulas like the one just proved. Although the proof by induction is often quite straightforward, the method by which the formula was discovered remains a mystery. Problems 5 and 6 indicate how some formulas of this type may be derived.",
+          "sourceSha256": "58665bca226ab43db979bf7eb4217eee0e5115afa3c6de16060e764cafb64514",
+          "translation": "因此公式对 $k+1$ 也成立。由归纳法原理，这就证明了公式对所有自然数 $n$ 都成立。这个例子说明了一种常见现象，尤其是在涉及刚才那类公式时：虽然归纳法证明往往相当直接，公式是怎样发现的却仍然是个谜。习题 5 和 6 指出了这类公式中某些公式的推导方法。"
+        },
+        {
+          "id": "p22-b7",
+          "source": "The principle of mathematical induction may be formulated in an equivalent way without speaking of “properties” of a number, a term which is sufficiently vague to be eschewed in a mathematical discussion. A more precise formulation states that if $A$ is any collection (or “set”—a synonymous mathematical term) of natural numbers and",
+          "sourceSha256": "d2d65ed152cd04acc7d6e3e8f9e936043260016cff43689fafafb33110cce9a2",
+          "translation": "数学归纳法原理还可以用一种等价的方式表述，而不提数的“性质”；这个词颇为含糊，数学讨论应当避免。更精确的表述是：如果 $A$ 是自然数的任意一个集合（数学术语“set”与“collection”同义），并且"
+        },
+        {
+          "id": "p22-b8",
+          "source": "(1) 1 is in $A$,",
+          "sourceSha256": "3b6a66aa4aef59fb3ec8f4ac137249953348a8be7ed165dc98a3919c19c971cd",
+          "translation": "(1) 1 属于 $A$，"
+        },
+        {
+          "id": "p22-b9",
+          "source": "(2) $k+1$ is in $A$ whenever $k$ is in $A$,",
+          "sourceSha256": "3b9d6de7bead5293381d1bf602b7e07c7f9bdf3d74886aac9356ff51ecee5168",
+          "translation": "(2) 只要 $k$ 属于 $A$，$k+1$ 就属于 $A$，"
+        },
+        {
+          "id": "p22-b10",
+          "source": "then $A$ is the set of all natural numbers. It should be clear that this formulation adequately replaces the less formal one given previously—we just consider the set $A$ of natural numbers $x$ which satisfy $P(x)$. For example, suppose $A$ is the set of natural numbers $n$ for which it is true that",
+          "sourceSha256": "4ce3fb6bdbc2ffd7aa81ab5bb99e7387300bb21d2fec0f1e4b763505ca8406ac",
+          "translation": "那么 $A$ 就是全体自然数的集合。应当很清楚，这种表述充分替代了前面不那么正式的说法——只需考虑满足 $P(x)$ 的那些自然数 $x$ 所组成的集合 $A$。例如，假设 $A$ 是使下式成立的自然数 $n$ 的集合："
+        },
+        {
+          "id": "p22-b11",
+          "source": "$$1+\\cdots+n=\\frac{n(n+1)}2.$$",
+          "sourceSha256": "915471339f09628709c50885f477bdcee7cc38dd697e1642c067762217b1ad6a"
+        },
+        {
+          "id": "p22-b12",
+          "source": "Our previous proof of this formula showed that $A$ contains 1, and that $k+1$ is in $A$, if $k$ is. It follows that $A$ is the set of all natural numbers, i.e., that the formula holds for all natural numbers $n$.",
+          "sourceSha256": "4a0741ec6c7b3936da3ec86442ee61b65f664032df4d79b6383f237a74e53906",
+          "translation": "前面对这个公式的证明说明，$A$ 包含 1，并且如果 $k$ 属于 $A$，那么 $k+1$ 也属于它。由此得到 $A$ 是全体自然数的集合，即公式对所有自然数 $n$ 成立。"
+        },
+        {
+          "id": "p22-b13",
+          "source": "There is yet another rigorous formulation of the principle of mathematical induction, which looks quite different. If $A$ is any collection of natural numbers, it",
+          "sourceSha256": "a2198bda618a3b4a7a65aeddc5bece95aa90ceb5301f9c85baa46611d41c1266",
+          "translation": "数学归纳法原理还有另一种看起来很不一样的严格表述。如果 $A$ 是自然数的任意一个集合，我们很容易就想说，它"
+        }
+      ]
+    },
+    {
+      "printed": 23,
+      "sourceSha256": "826fbaba27a922157b3db83e5e55581472b88f8364e16cad6adbb1b47e5c9a51",
+      "blocks": [
+        {
+          "id": "p23-b1",
+          "source": "is tempting to say that $A$ must have a smallest member. Actually, this statement can fail to be true in a rather subtle way. A particularly important set of natural numbers is the collection $A$ that contains no natural numbers at all, the “empty collection” or “null set,”$^{*}$ denoted by $\\varnothing$. The null set $\\varnothing$ is a collection of natural numbers that has no smallest member—in fact, it has no members at all. This is the only possible exception, however; if $A$ is a nonnull set of natural numbers, then $A$ has a least member. This “intuitively obvious” statement, known as the “well-ordering principle,” can be proved from the principle of induction as follows. Suppose that the set $A$ has no least member. Let $B$ be the set of natural numbers $n$ such that $1,\\ldots,n$ are all not in $A$. Clearly 1 is in $B$ (because if 1 were in $A$, then $A$ would have 1 as smallest member). Moreover, if $1,\\ldots,k$ are not in $A$, surely $k+1$ is not in $A$ (otherwise $k+1$ would be the smallest member of $A$), so $1,\\ldots,k+1$ are all not in $A$. This shows that if $k$ is in $B$, then $k+1$ is in $B$. It follows that every number $n$ is in $B$, i.e., the numbers $1,\\ldots,n$ are not in $A$ for any natural number $n$. Thus $A=\\varnothing$, which completes the proof.",
+          "sourceSha256": "b05403401d117628d6400b6f4ad73e70a9c842b097d1cc0e19310613587d6604",
+          "translation": "也就是 $A$，必定有一个最小元素。实际上，这个命题可能由于一种相当微妙的情况而不成立。自然数的一个特别重要的集合，是完全不含自然数的集合 $A$，称为“空集合”或“空集”，$^{*}$ 记作 $\\varnothing$。空集 $\\varnothing$ 是没有最小元素的自然数集合——事实上，它根本没有元素。不过，这是唯一可能的例外；若 $A$ 是非空的自然数集合，那么 $A$ 就有一个最小元素。这个“直观上显然”的命题称为“良序原理”，可以由归纳法原理如下证明。假设集合 $A$ 没有最小元素。令 $B$ 为使得 $1,\\ldots,n$ 全都不属于 $A$ 的自然数 $n$ 所构成的集合。显然，1 属于 $B$（因为如果 1 属于 $A$，那么 $A$ 就会以 1 为最小元素）。此外，如果 $1,\\ldots,k$ 都不属于 $A$，那么 $k+1$ 当然也不属于 $A$（否则 $k+1$ 就是 $A$ 的最小元素），因此 $1,\\ldots,k+1$ 全都不属于 $A$。这表明，若 $k$ 属于 $B$，则 $k+1$ 属于 $B$。由此得到每个数 $n$ 都属于 $B$，也就是说，对任意自然数 $n$，数 $1,\\ldots,n$ 都不属于 $A$。所以 $A=\\varnothing$，证明完毕。"
+        },
+        {
+          "id": "p23-b2",
+          "source": "It is also possible to prove the principle of induction from the well-ordering principle (Problem 10). Either principle may be considered as a basic assumption about the natural numbers.",
+          "sourceSha256": "afc7239d8380902536be5ab5837a683024e000e36db5fb1e648310eb1446470b",
+          "translation": "也可以从良序原理证明归纳法原理（习题 10）。这两个原理中的任意一个，都可以看作关于自然数的基本假设。"
+        },
+        {
+          "id": "p23-b3",
+          "source": "There is still another form of induction which should be mentioned. It sometimes happens that in order to prove $P(k+1)$ we must assume not only $P(k)$, but also $P(l)$ for all natural numbers $l\\le k$. In this case we rely on the “principle of complete induction”: If $A$ is a set of natural numbers and",
+          "sourceSha256": "97c06d878ab1e3c0df3e629b8ad2bdf93d7b997b77b88903b2864430544cd3b6",
+          "translation": "还有一种归纳法也应当提及。有时，为了证明 $P(k+1)$，我们不仅必须假定 $P(k)$，还必须假定 $P(l)$ 对所有自然数 $l\\le k$ 都成立。这时，我们依靠“完全归纳法原理”：如果 $A$ 是一个自然数集合，并且"
+        },
+        {
+          "id": "p23-b4",
+          "source": "(1) 1 is in $A$,",
+          "sourceSha256": "3b6a66aa4aef59fb3ec8f4ac137249953348a8be7ed165dc98a3919c19c971cd",
+          "translation": "(1) 1 属于 $A$，"
+        },
+        {
+          "id": "p23-b5",
+          "source": "(2) $k+1$ is in $A$ if $1,\\ldots,k$ are in $A$,",
+          "sourceSha256": "84403345b7e5913a28a457bb3d55244c9081dc49ceeaf19e1bd02422ddd84ab2",
+          "translation": "(2) 如果 $1,\\ldots,k$ 都属于 $A$，那么 $k+1$ 属于 $A$，"
+        },
+        {
+          "id": "p23-b6",
+          "source": "then $A$ is the set of all natural numbers.",
+          "sourceSha256": "e03a3aa8345afa58908852c0c0f9d0c5f47c7a691e97ef18df7a6124c4e0bcd6",
+          "translation": "则 $A$ 是全体自然数的集合。"
+        },
+        {
+          "id": "p23-b7",
+          "source": "Although the principle of complete induction may appear much stronger than the ordinary principle of induction, it is actually a consequence of that principle. The proof of this fact is left to the reader, with a hint (Problem 11). Applications will be found in Problems 7, 17, 20 and 22.",
+          "sourceSha256": "bc87d1cf4229a6c4687b2ca79b2d800271841ba477d85220e79275a89ebdc706",
+          "translation": "虽然完全归纳法原理看起来比普通归纳法原理强得多，但实际上它是后者的推论。这个事实的证明留给读者，并附有提示（习题 11）。习题 7、17、20 和 22 中可以找到它的应用。"
+        },
+        {
+          "id": "p23-b8",
+          "source": "Closely related to proofs by induction are “recursive definitions.” For example, the number $n!$ (read “$n$ factorial”) is defined as the product of all the natural numbers less than or equal to $n$:",
+          "sourceSha256": "610423b0c70d6ac2f056b2e6661c708446c5a3d6936ca16b5da86d500ec79d09",
+          "translation": "与归纳法证明紧密相关的是“递归定义”。例如，数 $n!$（读作“$n$ 的阶乘”）定义为所有小于或等于 $n$ 的自然数的乘积："
+        },
+        {
+          "id": "p23-b9",
+          "source": "$$n!=1\\cdot2\\cdot\\ldots\\cdot(n-1)\\cdot n.$$",
+          "sourceSha256": "f04040bf4178c6a38133cd9497a1255397973233d422b013d7c57015592d5071"
+        },
+        {
+          "id": "p23-b10",
+          "source": "This can be expressed more precisely as follows:",
+          "sourceSha256": "6de0a3eb33a8d2a77939f05e3310f317bad788ca77b1d6205c784b0b767e13ee",
+          "translation": "这可以更精确地表述如下："
+        },
+        {
+          "id": "p23-b11",
+          "source": "$$\\begin{array}{ll}\n(1)&1!=1\\\\\n(2)&n!=n\\cdot(n-1)!.\n\\end{array}$$",
+          "sourceSha256": "cc23dc2a8f19f22eb4e1050c3864e6805e61fe3fc656a2d99ec28c40848fb427"
+        },
+        {
+          "id": "p23-b12",
+          "source": "This form of the definition exhibits the relationship between $n!$ and $(n-1)!$ in an",
+          "sourceSha256": "ef0e421bffc5c57ba4bda79c3fee27d5fbbffb7b11f325733b484c2f54e2a456",
+          "translation": "这种定义形式把 $n!$ 与 $(n-1)!$ 之间的关系以一种"
+        },
+        {
+          "id": "p23-b13",
+          "source": "<aside class=\"original-footnote\">",
+          "sourceSha256": "a988ce88c87a15fb3986b485f02072e557038b84df66813596e575c7dd6a397f"
+        },
+        {
+          "id": "p23-b14",
+          "source": "\\* Although it may not strike you as a collection, in the ordinary sense of the word, the null set arises quite naturally in many contexts. We frequently consider the set $A$, consisting of all $x$ satisfying some property $P$; often we have no guarantee that $P$ is satisfied by *any* number, so that $A$ might be $\\varnothing$—in fact often one proves that $P$ is always false by showing that $A=\\varnothing$.",
+          "sourceSha256": "1be8d27f39bd0a2ee4fef30b38fa2bba79b16c74b1d4dafa0b44fa4ac1c573a9",
+          "translation": "\\* 虽然从日常词义来看，你可能不觉得空集算得上一个集合，但它在许多场合都会自然出现。我们经常考虑由满足某种性质 $P$ 的所有 $x$ 组成的集合 $A$；往往无法保证有*任何*数满足 $P$，因此 $A$ 可能就是 $\\varnothing$——事实上，人们常常通过证明 $A=\\varnothing$ 来说明 $P$ 总不成立。"
+        },
+        {
+          "id": "p23-b15",
+          "source": "</aside>",
+          "sourceSha256": "0ba5ea9cb632c899daab77879064f3273ebba6af8945f2dfeff764c05af0602a"
+        }
+      ]
+    },
+    {
+      "printed": 24,
+      "sourceSha256": "5addc1565efef1d29f52637058c39545ae2338e547c966943ec5f3535161c622",
+      "blocks": [
+        {
+          "id": "p24-b1",
+          "source": "explicit way that is ideally suited for proofs by induction. Problem 23 reviews a definition already familiar to you, which may be expressed more succinctly as a recursive definition; as this problem shows, the recursive definition is really necessary for a rigorous proof of some of the basic properties of the definition.",
+          "sourceSha256": "a5395cf84919b2ae229a453339ccd16f7645ea1e29c4be88e163bb27aecbd52a",
+          "translation": "明确的方式展示出来，非常适合归纳法证明。习题 23 复习了一个你已经熟悉的定义，它可以更简洁地表述为递归定义；正如那道题所说明的，要严格证明该定义的某些基本性质，递归定义确实是必要的。"
+        },
+        {
+          "id": "p24-b2",
+          "source": "One definition which may not be familiar involves some convenient notation which we will constantly be using. Instead of writing",
+          "sourceSha256": "1261270b6472d541cf7fcf9a58a273fbe2784141bbe8f79803ac406b326a2191",
+          "translation": "有一个你或许不熟悉的定义，涉及我们将不断使用的一种方便记号。我们通常不写"
+        },
+        {
+          "id": "p24-b3",
+          "source": "$$a_1+\\cdots+a_n,$$",
+          "sourceSha256": "23d2fe99665d5dd2292ac47c40c9470f799da2a6d8e769e336864874a80200e2"
+        },
+        {
+          "id": "p24-b4",
+          "source": "we will usually employ the Greek letter $\\Sigma$ (capital sigma, for “sum”) and write",
+          "sourceSha256": "d0a187b536a1da096a6be1d8ab13f31aed02132497daf9b6850bd0a509ffae52",
+          "translation": "而是使用希腊字母 $\\Sigma$（大写的 sigma，表示“和”），写成"
+        },
+        {
+          "id": "p24-b5",
+          "source": "$$\\sum_{i=1}^n a_i.$$",
+          "sourceSha256": "1520faba359f446dca0dca3f140c9af8c504c5b2490d9c0d4fd5f96f4193b57d"
+        },
+        {
+          "id": "p24-b6",
+          "source": "In other words, $\\displaystyle\\sum_{i=1}^n a_i$ denotes the sum of the numbers obtained by letting $i=1,2,\\ldots,n$. Thus",
+          "sourceSha256": "1235a7d47f084cc72db44c1a0abb3d38d3bb623c90883e6260ed0af8ca7c8855",
+          "translation": "换句话说，$\\displaystyle\\sum_{i=1}^n a_i$ 表示让 $i=1,2,\\ldots,n$ 时所得到的那些数的和。因此"
+        },
+        {
+          "id": "p24-b7",
+          "source": "$$\\sum_{i=1}^n i=1+2+\\cdots+n=\\frac{n(n+1)}2.$$",
+          "sourceSha256": "a885cb5d8ea65420ed1a5824e3ecd61436628487a9250f2c497ffecf94077cdb"
+        },
+        {
+          "id": "p24-b8",
+          "source": "Notice that the letter $i$ really has nothing to do with the number denoted by $\\displaystyle\\sum_{i=1}^n i$, and can be replaced by any convenient symbol (except $n$, of course!):",
+          "sourceSha256": "5052b1c6b480c9030135a25d6c5768c02717162423b2c53c8bce7da1ac8e6935",
+          "translation": "注意，字母 $i$ 实际上与 $\\displaystyle\\sum_{i=1}^n i$ 所表示的数无关，可以用任何方便的符号替换（当然，$n$ 除外！）："
+        },
+        {
+          "id": "p24-b9",
+          "source": "$$\\begin{gathered}\n\\sum_{j=1}^n j=\\frac{n(n+1)}2,\\\\\n\\sum_{j=1}^i j=\\frac{i(i+1)}2,\\\\\n\\sum_{n=1}^j n=\\frac{j(j+1)}2.\n\\end{gathered}$$",
+          "sourceSha256": "95c2332de9ad30d0ebfdf297c24f2b287fefd5ff057c1987e8dee75dfd106a49"
+        },
+        {
+          "id": "p24-b10",
+          "source": "To define $\\displaystyle\\sum_{i=1}^n a_i$ precisely really requires a recursive definition:",
+          "sourceSha256": "f0079ec80eaac66e77d9b5c284df481d5221e9a3286c494f911ee422d856fd0c",
+          "translation": "要精确定义 $\\displaystyle\\sum_{i=1}^n a_i$，实际上需要一个递归定义："
+        },
+        {
+          "id": "p24-b11",
+          "source": "$$\\begin{array}{ll}\n(1)&\\displaystyle\\sum_{i=1}^1 a_i=a_1,\\\\[8pt]\n(2)&\\displaystyle\\sum_{i=1}^n a_i=\\sum_{i=1}^{n-1}a_i+a_n.\n\\end{array}$$",
+          "sourceSha256": "4b91a04fe4cff2823dc2c1345f45ad41f8daf16a03e053a24f2b4499412d1025"
+        },
+        {
+          "id": "p24-b12",
+          "source": "But only purveyors of mathematical austerity would insist too strongly on such precision. In practice, all sorts of modifications of this symbolism are used, and no one ever considers it necessary to add any words of explanation. The symbol",
+          "sourceSha256": "e11d5fb53482df011ffd38d32eb0c5977c8f8144d77f56a9fd5ec343b3271edc",
+          "translation": "不过，只有推崇数学上严苛作风的人，才会过分坚持这种精确性。在实际使用中，人们会对这种记号作各种修改，从来没有人觉得还必须加上什么解释。符号"
+        }
+      ]
+    },
+    {
+      "printed": 25,
+      "sourceSha256": "a5ead161753d9056f08846ea367cb2eae797c3e1174d60a34e561e946dbe7aa1",
+      "blocks": [
+        {
+          "id": "p25-b1",
+          "source": "$$\\sum_{\\substack{i=1\\\\i\\ne4}}^n a_i,$$",
+          "sourceSha256": "36d348ff457788e71a14f68fcb41e76adf9473ca4833fb41b30190cf43cc5835"
+        },
+        {
+          "id": "p25-b2",
+          "source": "for example, is an obvious way of writing",
+          "sourceSha256": "eb4b70f9827ef2f34851a89c09f4a3273760856b623c51b3d45957ebc56a85d1",
+          "translation": "例如，显然是下式的一种写法："
+        },
+        {
+          "id": "p25-b3",
+          "source": "$$a_1+a_2+a_3+a_5+a_6+\\cdots+a_n,$$",
+          "sourceSha256": "0639472078ed874b410dddee4b2b2ab5b9df9997441ede35be496b3e2907b95e"
+        },
+        {
+          "id": "p25-b4",
+          "source": "or more precisely,",
+          "sourceSha256": "1369aea9f444a267a7abbc6741f40dc3851d67a8a1cc943f4698edb9f48f96f4",
+          "translation": "或者，更精确地说，"
+        },
+        {
+          "id": "p25-b5",
+          "source": "$$\\sum_{i=1}^3 a_i+\\sum_{i=5}^n a_i.$$",
+          "sourceSha256": "5f79783f149afa95de745907dfcdd2f264adfff8feb325e2c6e678029b8764f9"
+        },
+        {
+          "id": "p25-b6",
+          "source": "The deficiencies of the natural numbers which we discovered at the beginning of this chapter may be partially remedied by extending this system to the set of **integers**",
+          "sourceSha256": "d1334f07ffbafb225ac8bc79b040121cc94cac513ec710633543b0d7adafc74c",
+          "translation": "本章开头发现的自然数的不足，可以通过把这个数系扩展为**整数**集合而得到部分弥补："
+        },
+        {
+          "id": "p25-b7",
+          "source": "$$\\ldots,-2,-1,0,1,2,\\ldots.$$",
+          "sourceSha256": "5ea7a73d263b0fdb6515d9bd7bd6e05463b95c35878608d0e1a25496c990dbd5"
+        },
+        {
+          "id": "p25-b8",
+          "source": "This set is denoted by $\\mathbf{Z}$ (from German “Zahl,” number). Of properties P1–P12, only P7 fails for $\\mathbf{Z}$.",
+          "sourceSha256": "eaca3d07999512770fbfb615fb8fdcce5236d18b8391a9cce2cfe9a398e256c5",
+          "translation": "这个集合记作 $\\mathbf{Z}$（来自德语“Zahl”，意为数）。在 P1—P12 中，只有 P7 对 $\\mathbf{Z}$ 不成立。"
+        },
+        {
+          "id": "p25-b9",
+          "source": "A still larger system of numbers is obtained by taking quotients $m/n$ of integers (with $n\\ne0$). These numbers are called **rational numbers**, and the set of all rational numbers is denoted by $\\mathbf{Q}$ (for “quotients”). In this system of numbers all of P1–P12 are true. It is tempting to conclude that the “properties of numbers,” which we studied in some detail in Chapter 1, refer to just one set of numbers, namely, $\\mathbf{Q}$. There is, however, a still larger collection of numbers to which properties P1–P12 apply—the set of all **real numbers**, denoted by $\\mathbf{R}$. The real numbers include not only the rational numbers, but other numbers as well (the **irrational numbers**) which can be represented by infinite decimals; $\\pi$ and $\\sqrt2$ are both examples of irrational numbers. The proof that $\\pi$ is irrational is not easy—we shall devote all of Chapter 16 of Part III to a proof of this fact. The irrationality of $\\sqrt2$, on the other hand, is quite simple, and was known to the Greeks. (Since the Pythagorean theorem shows that an isosceles right triangle, with sides of length 1, has a hypotenuse of length $\\sqrt2$, it is not surprising that the Greeks should have investigated this question.) The proof depends on a few observations about the natural numbers. Every natural number $n$ can be written either in the form $2k$ for some integer $k$, or else in the form $2k+1$ for some integer $k$ (this “obvious” fact has a simple proof by induction (Problem 8)). Those natural numbers of the form $2k$ are called **even**; those of the form $2k+1$ are called **odd**. Note that even numbers have even squares, and odd numbers have odd squares:",
+          "sourceSha256": "2c9ae15801928a4695daea07118e204069ca48ac13f1927030841ed7509f4c9e",
+          "translation": "取整数的商 $m/n$（其中 $n\\ne0$），就得到一个更大的数系。这些数称为**有理数**，全体有理数的集合记作 $\\mathbf{Q}$（代表“商”，quotients）。在这个数系中，P1—P12 全都成立。很容易因此认为，第一章相当详细地研究过的“数的性质”，只指向一个数集，即 $\\mathbf{Q}$。然而，还有一个更大的数集也满足 P1—P12——全体**实数**的集合，记作 $\\mathbf{R}$。实数不仅包含有理数，还包含其他可以用无限小数表示的数（**无理数**）；$\\pi$ 和 $\\sqrt2$ 都是无理数的例子。证明 $\\pi$ 无理并不容易——第三部分的整个第十六章都将用来证明这一事实。另一方面，$\\sqrt2$ 的无理性却相当容易证明，古希腊人就已经知道。（由勾股定理可知，两条直角边长度为 1 的等腰直角三角形，其斜边长度为 $\\sqrt2$，所以古希腊人研究过这个问题并不奇怪。）证明依赖关于自然数的几个观察。每个自然数 $n$，或者可以写成某个整数 $k$ 所给出的 $2k$，或者可以写成某个整数 $k$ 所给出的 $2k+1$（这个“显然”的事实有一个简单的归纳法证明，见习题 8）。形如 $2k$ 的自然数称为**偶数**；形如 $2k+1$ 的称为**奇数**。注意，偶数的平方是偶数，奇数的平方是奇数："
+        },
+        {
+          "id": "p25-b10",
+          "source": "$$\\begin{aligned}\n(2k)^2&=4k^2=2\\cdot(2k^2),\\\\\n(2k+1)^2&=4k^2+4k+1=2\\cdot(2k^2+2k)+1.\n\\end{aligned}$$",
+          "sourceSha256": "355fd1dc3c9f53905cd86a37716c92b41b534b69ecf2ac39cb9f4cad08dfdf8e"
+        },
+        {
+          "id": "p25-b11",
+          "source": "In particular it follows that the converse must also hold: if $n^2$ is even, then $n$ is even; if $n^2$ is odd, then $n$ is odd. The proof that $\\sqrt2$ is irrational is now quite simple. Suppose that $\\sqrt2$ were rational; that is, suppose there were natural numbers $p$",
+          "sourceSha256": "29968d6109a8385a007039131e44e041a8a7c1f9b671422474627313526aaf45",
+          "translation": "特别地，由此可知反过来也必定成立：若 $n^2$ 为偶数，则 $n$ 为偶数；若 $n^2$ 为奇数，则 $n$ 为奇数。现在证明 $\\sqrt2$ 无理就很简单了。假设 $\\sqrt2$ 是有理数；也就是说，假设存在自然数 $p$"
+        }
+      ]
+    },
+    {
+      "printed": 26,
+      "sourceSha256": "3f7f59e9b13dd86124121b1d3a6a50b5b104a7bc24af9c67752377c7b0cc15f1",
+      "blocks": [
+        {
+          "id": "p26-b1",
+          "source": "and $q$ such that",
+          "sourceSha256": "fbadca0cc40956b1029a19b9dff5e99d3c2bd3c18d96b11f995e2067ef69d150",
+          "translation": "和 $q$，使得"
+        },
+        {
+          "id": "p26-b2",
+          "source": "$$\\left(\\frac pq\\right)^2=2.$$",
+          "sourceSha256": "057623ae5c50c6d478e011600934e15c755895665405840bbde9d7c662b42ef6"
+        },
+        {
+          "id": "p26-b3",
+          "source": "We can assume that $p$ and $q$ have no common divisor (since all common divisors could be divided out to begin with). Now we have",
+          "sourceSha256": "5a60135ab7cdff985ea746a2180708dac47acbf02e6f51b17733b7fd937105c3",
+          "translation": "可以假定 $p$ 和 $q$ 没有公因子（因为一开始就可以把所有公因子约去）。现在有"
+        },
+        {
+          "id": "p26-b4",
+          "source": "$$p^2=2q^2.$$",
+          "sourceSha256": "9560e18c2d49c3f049f3f4edba23499e7bd0791432bc18366769745d4338ebe8"
+        },
+        {
+          "id": "p26-b5",
+          "source": "This shows that $p^2$ is even, and consequently $p$ must be even; that is, $p=2k$ for some natural number $k$. Then",
+          "sourceSha256": "d307ecf7e4633539d05b80695e98c627cdebdbfcf29eab530dabc7aa8ac6048d",
+          "translation": "这表明 $p^2$ 是偶数，所以 $p$ 必定是偶数；也就是说，存在自然数 $k$，使得 $p=2k$。那么"
+        },
+        {
+          "id": "p26-b6",
+          "source": "$$p^2=4k^2=2q^2,$$",
+          "sourceSha256": "dd24c4eff84cd2968f2f6203ce58cb720161c99124fd4d9f333d9cfaaf72f4aa"
+        },
+        {
+          "id": "p26-b7",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p26-b8",
+          "source": "$$2k^2=q^2.$$",
+          "sourceSha256": "dc1bcd4841d0a31da20306b724727809a431ed9cce41bdfb2b2167fc4b905980"
+        },
+        {
+          "id": "p26-b9",
+          "source": "This shows that $q^2$ is even, and consequently that $q$ is even. Thus both $p$ and $q$ are even, contradicting the fact that $p$ and $q$ have no common divisor. This contradiction completes the proof.",
+          "sourceSha256": "e4839fbe22eb2be0b029d457b27d7c04b0f9da3ac02f5a0e70d57f4b8d12ab96",
+          "translation": "这表明 $q^2$ 是偶数，因而 $q$ 是偶数。于是 $p$ 和 $q$ 都是偶数，与 $p$ 和 $q$ 没有公因子这一事实矛盾。这个矛盾完成了证明。"
+        },
+        {
+          "id": "p26-b10",
+          "source": "It is important to understand precisely what this proof shows. We have demonstrated that there is no rational number $x$ such that $x^2=2$. This assertion is often expressed more briefly by saying that $\\sqrt2$ is irrational. Note, however, that the use of the symbol $\\sqrt2$ implies the existence of some number (necessarily irrational) whose square is 2. We have not proved that such a number exists and we can assert confidently that, at present, a proof is *impossible* for us. Any proof at this stage would have to be based on P1–P12 (the only properties of $\\mathbf{R}$ we have mentioned); since P1–P12 are also true for $\\mathbf{Q}$ the exact same argument would show that there is a rational number whose square is 2, and this we know is false. (Note that the reverse argument will not work—our proof that there is no rational number whose square is 2 cannot be used to show that there is no real number whose square is 2, because our proof used not only P1–P12 but also a special property of $\\mathbf{Q}$, the fact that every number in $\\mathbf{Q}$ can be written $p/q$ for integers $p$ and $q$.)",
+          "sourceSha256": "78b208f670602def0137ff09fad45342733ef04aafa952a5eaa60da2412f0e18",
+          "translation": "准确理解这个证明究竟说明了什么，非常重要。我们证明了不存在有理数 $x$ 使 $x^2=2$。这个断言常常简洁地说成 $\\sqrt2$ 是无理数。不过要注意，使用符号 $\\sqrt2$ 已经暗示存在一个平方等于 2 的数（它必然无理）。我们并未证明这样的数存在，而且可以肯定地说，目前对我们而言，给出证明是*不可能的*。现阶段的任何证明都只能以 P1—P12 为依据（这是我们提及的 $\\mathbf{R}$ 的全部性质）；既然 P1—P12 对 $\\mathbf{Q}$ 也成立，完全相同的论证就会说明存在一个平方等于 2 的有理数，而我们知道这是假的。（注意，反过来的论证行不通——我们关于不存在平方等于 2 的有理数的证明，不能用来说明不存在平方等于 2 的实数，因为那个证明不仅使用了 P1—P12，还使用了 $\\mathbf{Q}$ 的一个特殊性质，即 $\\mathbf{Q}$ 中的每个数都能写成 $p/q$，其中 $p$ 和 $q$ 是整数。）"
+        },
+        {
+          "id": "p26-b11",
+          "source": "This particular deficiency in our list of properties of the real numbers could, of course, be corrected by adding a new property which asserts the existence of square roots of positive numbers. Resorting to such a measure is, however, neither aesthetically pleasing nor mathematically satisfactory; we would still not know that every number has an $n$th root if $n$ is odd, and that every positive number has an $n$th root if $n$ is even. Even if we assumed this, we could not prove the existence of a number $x$ satisfying $x^5+x+1=0$ (even though there does happen to be one), since we do not know how to write the solution of the equation in terms of $n$th roots (in fact, it is known that the solution cannot be written in this form). And, of course, we certainly do not wish to assume that all equations have solutions, since this is false (no real number $x$ satisfies $x^2+1=0$, for example). In fact, this direction of investigation is not a fruitful one. The most useful hints about the property distinguishing $\\mathbf{R}$ from $\\mathbf{Q}$, the most compelling evidence for the necessity of elucidating this property, do not come from the study of numbers alone. In order to study the properties of the real numbers in a more profound way, we",
+          "sourceSha256": "8e38ea2e268acb8d98821abf240c9eb197aa09b069baed06604ce5103e7b1ad1",
+          "translation": "当然，可以补充一条断言正数的平方根存在的新性质，来弥补我们列出的实数性质的这一特定不足。但采取这样的办法，既不美观，也不能令人从数学上满意；我们仍然不知道：当 $n$ 为奇数时，每个数都有 $n$ 次方根；当 $n$ 为偶数时，每个正数都有 $n$ 次方根。即使把这些也作为假设，我们仍无法证明存在一个数 $x$ 满足 $x^5+x+1=0$（尽管这样的数确实存在），因为我们不知道怎样用 $n$ 次方根写出这个方程的解（事实上，已知这个解不能写成这样的形式）。当然，我们更不愿假定所有方程都有解，因为这不是真的（例如，没有实数 $x$ 满足 $x^2+1=0$）。实际上，这个研究方向并不富有成效。关于区分 $\\mathbf{R}$ 与 $\\mathbf{Q}$ 的那个性质，最有用的线索，以及说明必须阐明这个性质的最有力证据，都不只来自对数本身的研究。为了更深入地研究实数的性质，我们"
+        }
+      ]
+    },
+    {
+      "printed": 27,
+      "sourceSha256": "c00f62b2b3f672a779c09650997eb9a7b9e8fe97abfdeb4bf87633e2d42c1bcf",
+      "blocks": [
+        {
+          "id": "p27-b1",
+          "source": "must study more than the real numbers. At this point we must begin with the foundations of calculus, in particular the fundamental concept on which calculus is based—functions.",
+          "sourceSha256": "9a6e557cbcd8503a20e0853b4900bf166c7ec36a93dfab7a42bf417aab07b48c",
+          "translation": "必须研究实数以外的更多内容。现在，我们必须着手建立微积分的基础，尤其是微积分所依据的基本概念——函数。"
+        },
+        {
+          "id": "p27-b2",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p27-b3",
+          "source": "### 1. Prove the following formulas by induction.",
+          "sourceSha256": "ab58aa7db13049ccaf0ad5897755fe73077441828f24b2f05f21074a4b2eedc7",
+          "translation": "### 1. 用归纳法证明下列公式。"
+        },
+        {
+          "id": "p27-b4",
+          "source": "(i) $\\displaystyle1^2+\\cdots+n^2=\\frac{n(n+1)(2n+1)}6$.",
+          "sourceSha256": "eb6cc5b2d901ed7e0d6901b8be8688d7af4bd2be47d9263d8a2cb6d987e1a592"
+        },
+        {
+          "id": "p27-b5",
+          "source": "(ii) $1^3+\\cdots+n^3=(1+\\cdots+n)^2$.",
+          "sourceSha256": "1808c17fdd30a2a531412b11d129d052e1f23bc5889f628e5118aa6e2b6be1b5"
+        },
+        {
+          "id": "p27-b6",
+          "source": "### 2. Find a formula for",
+          "sourceSha256": "824e701d2bfd0279bb690e3e8f4cbdbbdeb1bbf78bf0f9736d037e783324ef69",
+          "translation": "### 2. 求下列各式的公式："
+        },
+        {
+          "id": "p27-b7",
+          "source": "(i) $\\displaystyle\\sum_{i=1}^n(2i-1)=1+3+5+\\cdots+(2n-1)$.",
+          "sourceSha256": "4deffe3bbb8cf3334d07b2b7418700aee55759c80bed02a511c43257b8ca6313"
+        },
+        {
+          "id": "p27-b8",
+          "source": "(ii) $\\displaystyle\\sum_{i=1}^n(2i-1)^2=1^2+3^2+5^2+\\cdots+(2n-1)^2$.",
+          "sourceSha256": "64b5cfe3d08c73684c72b9ed501334cd13dc328437d1b6692ab788f770d4c060"
+        },
+        {
+          "id": "p27-b9",
+          "source": "Hint: What do these expressions have to do with $1+2+3+\\cdots+2n$ and $1^2+2^2+3^2+\\cdots+(2n)^2$?",
+          "sourceSha256": "f33f0ca326cb896d39ed95224f17cd51fae2566b84abe8583b05dd500937d982",
+          "translation": "提示：这些表达式与 $1+2+3+\\cdots+2n$ 和 $1^2+2^2+3^2+\\cdots+(2n)^2$ 有什么关系？"
+        },
+        {
+          "id": "p27-b10",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p27-b11",
+          "source": "If $0\\le k\\le n$, the “binomial coefficient” $\\displaystyle\\binom nk$ is defined by",
+          "sourceSha256": "516f96393bf94658cf58d269abe5d4f3fa96b92902b7f809c85513cf2c463894",
+          "translation": "若 $0\\le k\\le n$，“二项式系数”$\\displaystyle\\binom nk$ 定义为"
+        },
+        {
+          "id": "p27-b12",
+          "source": "$$\\binom nk=\\frac{n!}{k!(n-k)!}=\\frac{n(n-1)\\cdots(n-k+1)}{k!},\\qquad\\text{if }k\\ne0,n$$",
+          "sourceSha256": "7346e7fab2a6611a877dff0d275443568af1d7e23253f23f06789e1309f7a50a"
+        },
+        {
+          "id": "p27-b13",
+          "source": "$$\\binom n0=\\binom nn=1\\quad\\text{(a special case of the first formula if we define }0!=1\\text{)},$$",
+          "sourceSha256": "7b1d9b3a6482bb3ba79b9a518daae82f17de9c52c020da819ed05a59277e7961"
+        },
+        {
+          "id": "p27-b14",
+          "source": "and for $k<0$ or $k>n$ we just define the binomial coefficient to be 0.",
+          "sourceSha256": "1ff99b26ec79e9196046782695bbe921c7b03db3ceb289723560425d78a60074",
+          "translation": "而当 $k<0$ 或 $k>n$ 时，直接把二项式系数定义为 0。"
+        },
+        {
+          "id": "p27-b15",
+          "source": "(a) Prove that",
+          "sourceSha256": "5fd957c03a4a5c36f0dc505bfedc633c34bfb7dc8fb6d6e0639736d4fcc5d37c",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p27-b16",
+          "source": "$$\\binom{n+1}k=\\binom n{k-1}+\\binom nk.$$",
+          "sourceSha256": "d7e9b77ea762491e6a3eee77f71ebe835d16d4251e09c4640c37170a70122f1d"
+        },
+        {
+          "id": "p27-b17",
+          "source": "(The proof does not require an induction argument.)",
+          "sourceSha256": "2f277dab3247d2e1a0b5436387a3f162989a34daa7694109cf92e9cdca95941f",
+          "translation": "（证明不需要使用归纳法。）"
+        },
+        {
+          "id": "p27-b18",
+          "source": "This relation gives rise to the following configuration, known as “Pascal’s triangle”—a number not on one of the sides is the sum of the two numbers above it; the binomial coefficient $\\displaystyle\\binom nk$ is the $(k+1)$st number in the $(n+1)$st row.",
+          "sourceSha256": "96fa6cbc1532384c61f08c2d2f6bf244cd291dbd960a7cc04403a7b73ad209c3",
+          "translation": "这个关系产生了下列排列，称为“Pascal 三角形”——不在两侧边上的每个数，都等于它上方两个数之和；二项式系数 $\\displaystyle\\binom nk$ 是第 $(n+1)$ 行的第 $(k+1)$ 个数。"
+        },
+        {
+          "id": "p27-b19",
+          "source": "$$\\begin{array}{rrrrrrrrrrr}\n&&&&&1&&&&&\\\\\n&&&&1&&1&&&&\\\\\n&&&1&&2&&1&&&\\\\\n&&1&&3&&3&&1&&\\\\\n&1&&4&&6&&4&&1&\\\\\n1&&5&&10&&10&&5&&1\n\\end{array}$$",
+          "sourceSha256": "b6f205d709c2c0cebff9c6a98035a19600549697d6b708ca6d5d5c4fc87283e6"
+        }
+      ]
+    },
+    {
+      "printed": 28,
+      "sourceSha256": "be293e0f7b8f1e1056a5944d0d409412c4113c3d989b148b3dd1c52a8e3e6f95",
+      "blocks": [
+        {
+          "id": "p28-b1",
+          "source": "(b) Notice that all the numbers in Pascal’s triangle are natural numbers. Use part (a) to prove by induction that $\\displaystyle\\binom nk$ is always a natural number. (Your entire proof by induction will, in a sense, be summed up in a glance by Pascal’s triangle.)",
+          "sourceSha256": "e93e1627d0173fbbf4ad16061e04558d8dead4c1557a4249b23af460365d1785",
+          "translation": "(b) 注意，Pascal 三角形中的所有数都是自然数。利用 (a)，用归纳法证明 $\\displaystyle\\binom nk$ 始终是自然数。（从某种意义上说，整个归纳法证明都可以在 Pascal 三角形中一目了然地看出来。）"
+        },
+        {
+          "id": "p28-b2",
+          "source": "(c) Give another proof that $\\displaystyle\\binom nk$ is a natural number by showing that $\\displaystyle\\binom nk$ is the number of sets of exactly $k$ integers each chosen from $1,\\ldots,n$.",
+          "sourceSha256": "a99399071b1576801143ceea812f14e03f4893010d4e5cd6992be26a08640170",
+          "translation": "(c) 证明 $\\displaystyle\\binom nk$ 是从 $1,\\ldots,n$ 中选出恰好 $k$ 个整数所能组成的集合的个数，由此给出 $\\displaystyle\\binom nk$ 是自然数的另一证明。"
+        },
+        {
+          "id": "p28-b3",
+          "source": "(d) Prove the “binomial theorem”: If $a$ and $b$ are any numbers and $n$ is a natural number, then",
+          "sourceSha256": "697bc969b7cbf2d2b52c7e9de837c9bb125e9a429eca008c717392190323eb8c",
+          "translation": "(d) 证明“二项式定理”：若 $a$ 和 $b$ 是任意的数，$n$ 是自然数，则"
+        },
+        {
+          "id": "p28-b4",
+          "source": "$$\\begin{aligned}\n(a+b)^n&=a^n+\\binom n1 a^{n-1}b+\\binom n2 a^{n-2}b^2+\\cdots+\\binom n{n-1}ab^{n-1}+b^n\\\\\n&=\\sum_{j=0}^n\\binom nj a^{n-j}b^j.\n\\end{aligned}$$",
+          "sourceSha256": "38499d7414dc04354a448dd70a7cf5970eb8143898601566acda325fe3c2c25f"
+        },
+        {
+          "id": "p28-b5",
+          "source": "(e) Prove that",
+          "sourceSha256": "10846858d726cfd1c32f496755527d3c1f74928f91ffd663ed51c08f62485079",
+          "translation": "(e) 证明"
+        },
+        {
+          "id": "p28-b6",
+          "source": "(i) $\\displaystyle\\sum_{j=0}^n\\binom nj=\\binom n0+\\cdots+\\binom nn=2^n$.",
+          "sourceSha256": "8c8f082ad836c9a483711aaa6eaee2413be0e8b7bff2fc889252c71468e2d994"
+        },
+        {
+          "id": "p28-b7",
+          "source": "(ii) $\\displaystyle\\sum_{j=0}^n(-1)^j\\binom nj=\\binom n0-\\binom n1+\\cdots\\pm\\binom nn=0$.",
+          "sourceSha256": "cb1a641bfa674cd9173bd46e2a38ff5ab94c36dbd6cd76335ac9e1170a2c7b16"
+        },
+        {
+          "id": "p28-b8",
+          "source": "(iii) $\\displaystyle\\sum_{l\\text{ odd}}\\binom nl=\\binom n1+\\binom n3+\\cdots=2^{n-1}$.",
+          "sourceSha256": "d7329017ffc0ba8c6f371a6633508bbe611f08212684e825d9acf30f584a4f7d"
+        },
+        {
+          "id": "p28-b9",
+          "source": "(iv) $\\displaystyle\\sum_{l\\text{ even}}\\binom nl=\\binom n0+\\binom n2+\\cdots=2^{n-1}$.",
+          "sourceSha256": "b9fce05e77b2a42d878910fdef93838936e5225693a7892e2504f69a660f1c27"
+        },
+        {
+          "id": "p28-b10",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p28-b11",
+          "source": "(a) Prove that",
+          "sourceSha256": "5fd957c03a4a5c36f0dc505bfedc633c34bfb7dc8fb6d6e0639736d4fcc5d37c",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p28-b12",
+          "source": "$$\\sum_{k=0}^l\\binom nk\\binom m{l-k}=\\binom{n+m}l.$$",
+          "sourceSha256": "ab30a4dae155e42f8e707880cf8571f31d1e46c22a31ba7e7543e13b3d69dd94"
+        },
+        {
+          "id": "p28-b13",
+          "source": "Hint: Apply the binomial theorem to $(1+x)^n(1+x)^m$.",
+          "sourceSha256": "7df2b776db808640b7f074c368958e4d2aabf43f820efa45785152b4f20de9d9",
+          "translation": "提示：对 $(1+x)^n(1+x)^m$ 应用二项式定理。"
+        },
+        {
+          "id": "p28-b14",
+          "source": "(b) Prove that",
+          "sourceSha256": "c01c6f723571a0bec9b72e9c13def70ffca88ba56ed84a156f192129403a5fdb",
+          "translation": "(b) 证明"
+        },
+        {
+          "id": "p28-b15",
+          "source": "$$\\sum_{k=0}^n\\binom nk^2=\\binom{2n}n.$$",
+          "sourceSha256": "79e7177b0cd257c469238549f43629ef1d9bb39dbc6438fb7833f1dce57a20f5"
+        }
+      ]
+    },
+    {
+      "printed": 29,
+      "sourceSha256": "f4a4a98ce1a383ca45125a1f4c057d40f057c412e4d550c485d664d71b35684d",
+      "blocks": [
+        {
+          "id": "p29-b1",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p29-b2",
+          "source": "(a) Prove by induction on $n$ that",
+          "sourceSha256": "486cba8ca32b45f79cb240dedbf3deddae66da0ccc88ce5829474a0ba1449059",
+          "translation": "(a) 对 $n$ 使用归纳法，证明"
+        },
+        {
+          "id": "p29-b3",
+          "source": "$$1+r+r^2+\\cdots+r^n=\\frac{1-r^{n+1}}{1-r}$$",
+          "sourceSha256": "4867357abad4d55e493e6e3e5ede00d46e92edaca39cb65920cbbf6cc1500982"
+        },
+        {
+          "id": "p29-b4",
+          "source": "if $r\\ne1$ (if $r=1$, evaluating the sum certainly presents no problem).",
+          "sourceSha256": "f0eafa35563de5b24da04b9b5facb1829955202180a8175f283240f9747f0898",
+          "translation": "在 $r\\ne1$ 时成立（若 $r=1$，求和当然毫无困难）。"
+        },
+        {
+          "id": "p29-b5",
+          "source": "(b) Derive this result by setting $S=1+r+\\cdots+r^n$, multiplying this equation by $r$, and solving the two equations for $S$.",
+          "sourceSha256": "e26c9055f34e24708b70484a46427b49e86adceb0debebf5d0ceb738ef47789a",
+          "translation": "(b) 令 $S=1+r+\\cdots+r^n$，将这个等式乘以 $r$，再由这两个等式解出 $S$，从而推导上述结果。"
+        },
+        {
+          "id": "p29-b6",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p29-b7",
+          "source": "The formula for $1^2+\\cdots+n^2$ may be derived as follows. We begin with the formula",
+          "sourceSha256": "92fed530118d1b9f776f7c323fce7d2804c5fcf52cf8f8ad1b20ef470c8a3175",
+          "translation": "$1^2+\\cdots+n^2$ 的公式可以如下推导。我们从公式"
+        },
+        {
+          "id": "p29-b8",
+          "source": "$$(k+1)^3-k^3=3k^2+3k+1.$$",
+          "sourceSha256": "1fbeb87c0828d8caaeef2f6d1bb022f1bb92f08849381a569a034a82aebe1a90"
+        },
+        {
+          "id": "p29-b9",
+          "source": "Writing this formula for $k=1,\\ldots,n$ and adding, we obtain",
+          "sourceSha256": "add70f5646cd54b2ca9c884b6735417c67ad04a461698e9209445bb11cf91630",
+          "translation": "开始。对 $k=1,\\ldots,n$ 写出这个公式，再相加，得到"
+        },
+        {
+          "id": "p29-b10",
+          "source": "$$\\begin{array}{rcl}\n2^3-1^3&=&3\\cdot1^2+3\\cdot1+1\\\\\n3^3-2^3&=&3\\cdot2^2+3\\cdot2+1\\\\[24pt]\n(n+1)^3-n^3&=&3\\cdot n^2+3\\cdot n+1\\\\ \\hline\n(n+1)^3-1&=&3[1^2+\\cdots+n^2]+3[1+\\cdots+n]+n.\n\\end{array}$$",
+          "sourceSha256": "f9cb0f01765b9b22230dc405939b6c302f8cfec700d2914817c4b9ed4fea2900"
+        },
+        {
+          "id": "p29-b11",
+          "source": "Thus we can find $\\displaystyle\\sum_{k=1}^n k^2$ if we already know $\\displaystyle\\sum_{k=1}^n k$ (which could have been found in a similar way). Use this method to find",
+          "sourceSha256": "39deebd358981ca8157561753265e650a1f2a4c3e39dad1d8a52d586d53e4ca6",
+          "translation": "因此，只要已经知道 $\\displaystyle\\sum_{k=1}^n k$（它也可以用类似的方法求出），就可以求出 $\\displaystyle\\sum_{k=1}^n k^2$。用这种方法求"
+        },
+        {
+          "id": "p29-b12",
+          "source": "(i) $1^3+\\cdots+n^3$.",
+          "sourceSha256": "2dec59209951c72ce49a2a015afdc4d2f20690a36ed93bc9f53f31f322a2120f"
+        },
+        {
+          "id": "p29-b13",
+          "source": "(ii) $1^4+\\cdots+n^4$.",
+          "sourceSha256": "508284fde3e0a211b0729fe03681d0a56708dd6b244fd5861761e4683f4a75f3"
+        },
+        {
+          "id": "p29-b14",
+          "source": "(iii) $\\displaystyle\\frac1{1\\cdot2}+\\frac1{2\\cdot3}+\\cdots+\\frac1{n(n+1)}$.",
+          "sourceSha256": "d46454e4e23465ce047a13028580f22b845e4371250fe7d9a790fbba233f643a"
+        },
+        {
+          "id": "p29-b15",
+          "source": "(iv) $\\displaystyle\\frac3{1^2\\cdot2^2}+\\frac5{2^2\\cdot3^2}+\\cdots+\\frac{2n+1}{n^2(n+1)^2}$.",
+          "sourceSha256": "6f0686d86a5ff0844cbaeb6bdc666306acefaec18e9f75115336fdafb04f3c27"
+        },
+        {
+          "id": "p29-b16",
+          "source": "### \\*7.",
+          "sourceSha256": "a3c250175ef75f686231ad7cfb8bf0b67173c35dcca3c526cf8732f53542b144"
+        },
+        {
+          "id": "p29-b17",
+          "source": "Use the method of Problem 6 to show that $\\displaystyle\\sum_{i=1}^n k^p$ can always be written in the form",
+          "sourceSha256": "c1404cb4e3ddf112c14f465fb8a78af9373794af8ad3b316c66101b3024e634a",
+          "translation": "用习题 6 的方法，说明 $\\displaystyle\\sum_{i=1}^n k^p$ 总能写成如下形式："
+        },
+        {
+          "id": "p29-b18",
+          "source": "$$\\frac{n^{p+1}}{p+1}+An^p+Bn^{p-1}+Cn^{p-2}+\\cdots.$$",
+          "sourceSha256": "1efb99837a5d58a17585bc18a6e5302ca709e7150d0cdcb7b311fccbbb2ff4fd"
+        },
+        {
+          "id": "p29-b19",
+          "source": "(The first 10 such expressions are",
+          "sourceSha256": "4bf27ca68c5a40393dd84d38d50a75ba7c2e1021c27d29bf3d189179059e3232",
+          "translation": "（前十个这样的表达式是"
+        }
+      ]
+    },
+    {
+      "printed": 30,
+      "sourceSha256": "79c3fe0a2ce603454c278b435c7aa29ffeee380f8ff21e2c1b17865ccbff83ee",
+      "blocks": [
+        {
+          "id": "p30-b1",
+          "source": "$$\\begin{array}{rclllllll}\n\\displaystyle\\sum_{k=1}^n k&=&\\tfrac12 n^2&+\\tfrac12 n&&&&\\\\[6pt]\n\\displaystyle\\sum_{k=1}^n k^2&=&\\tfrac13 n^3&+\\tfrac12 n^2&+\\tfrac16 n&&&\\\\[6pt]\n\\displaystyle\\sum_{k=1}^n k^3&=&\\tfrac14 n^4&+\\tfrac12 n^3&+\\tfrac14 n^2&&&\\\\[6pt]\n\\displaystyle\\sum_{k=1}^n k^4&=&\\tfrac15 n^5&+\\tfrac12 n^4&+\\tfrac13 n^3&-\\tfrac1{30}n&&\\\\[6pt]\n\\displaystyle\\sum_{k=1}^n k^5&=&\\tfrac16 n^6&+\\tfrac12 n^5&+\\tfrac5{12}n^4&-\\tfrac1{12}n^2&&\\\\[6pt]\n\\displaystyle\\sum_{k=1}^n k^6&=&\\tfrac17 n^7&+\\tfrac12 n^6&+\\tfrac12 n^5&-\\tfrac16 n^3&+\\tfrac1{42}n&\\\\[6pt]\n\\displaystyle\\sum_{k=1}^n k^7&=&\\tfrac18 n^8&+\\tfrac12 n^7&+\\tfrac7{12}n^6&-\\tfrac7{24}n^4&+\\tfrac1{12}n^2&\\\\[6pt]\n\\displaystyle\\sum_{k=1}^n k^8&=&\\tfrac19 n^9&+\\tfrac12 n^8&+\\tfrac23 n^7&-\\tfrac7{15}n^5&+\\tfrac29 n^3&-\\tfrac1{30}n\\\\[6pt]\n\\displaystyle\\sum_{k=1}^n k^9&=&\\tfrac1{10}n^{10}&+\\tfrac12 n^9&+\\tfrac34 n^8&-\\tfrac7{10}n^6&+\\tfrac12 n^4&-\\tfrac3{20}n^2\\\\[6pt]\n\\displaystyle\\sum_{k=1}^n k^{10}&=&\\tfrac1{11}n^{11}&+\\tfrac12 n^{10}&+\\tfrac56 n^9&-1n^7&+1n^5&-\\tfrac12 n^3&+\\tfrac5{66}n.\n\\end{array}$$",
+          "sourceSha256": "82df252677342678757067d74cc60cac7f3cb62b3d0cc4fdbea23ab02a986f21"
+        },
+        {
+          "id": "p30-b2",
+          "source": "Notice that the coefficients in the second column are always $\\frac12$, and that after the third column the powers of $n$ with nonzero coefficients decrease by 2 until $n^2$ or $n$ is reached. The coefficients in all but the first two columns seem to be rather haphazard, but there actually is some sort of pattern; finding it may be regarded as a super-perspicacity test. See Problem 27-17 for the complete story.)",
+          "sourceSha256": "af31b7bfc4f732540ca82b7215202eeb3b8abeb0f8573b9ee61721751938f518",
+          "translation": "注意，第二列的系数总是 $\\frac12$，而第三列之后，具有非零系数的 $n$ 的幂次每次递减 2，直到 $n^2$ 或 $n$ 为止。除了前两列以外，各列的系数似乎颇为杂乱，但实际上仍有某种规律；找出这个规律，可以看作一次超强洞察力测试。完整讨论见习题 27-17。）"
+        },
+        {
+          "id": "p30-b3",
+          "source": "### 8. Prove that every natural number is either even or odd.",
+          "sourceSha256": "b8f53fbbf3c21b90c2391e82735df24544677782f41b14e5422b69814fc38624",
+          "translation": "### 8. 证明每个自然数不是偶数就是奇数。"
+        },
+        {
+          "id": "p30-b4",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p30-b5",
+          "source": "Prove that if a set $A$ of natural numbers contains $n_0$ and contains $k+1$ whenever it contains $k$, then $A$ contains all natural numbers $\\ge n_0$.",
+          "sourceSha256": "ff977162f65ebfe1b280092bb967bd588b616821c5ccbf090bbedd8981b464b8",
+          "translation": "证明：如果一个自然数集合 $A$ 包含 $n_0$，并且只要它包含 $k$ 就包含 $k+1$，那么 $A$ 包含所有 $\\ge n_0$ 的自然数。"
+        },
+        {
+          "id": "p30-b6",
+          "source": "### 10. Prove the principle of mathematical induction from the well-ordering principle.",
+          "sourceSha256": "4ccca1df44704593338a77ce0eb2da4babefa1156120166553c1c9370963d551",
+          "translation": "### 10. 从良序原理证明数学归纳法原理。"
+        },
+        {
+          "id": "p30-b7",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p30-b8",
+          "source": "Prove the principle of complete induction from the ordinary principle of induction. Hint: If $A$ contains 1 and $A$ contains $n+1$ whenever it contains $1,\\ldots,n$, consider the set $B$ of all $k$ such that $1,\\ldots,k$ are all in $A$.",
+          "sourceSha256": "61e1eb3474647e68610b68943b8b35265af1b6f5f8bdce4d10e05560fe8efda9",
+          "translation": "从普通归纳法原理证明完全归纳法原理。提示：如果 $A$ 包含 1，并且只要 $A$ 包含 $1,\\ldots,n$ 就包含 $n+1$，那么考虑使 $1,\\ldots,k$ 全都属于 $A$ 的所有 $k$ 所组成的集合 $B$。"
+        },
+        {
+          "id": "p30-b9",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p30-b10",
+          "source": "(a) If $a$ is rational and $b$ is irrational, is $a+b$ necessarily irrational? What if $a$ and $b$ are both irrational?",
+          "sourceSha256": "b27a99f11bc2c201c3cb439266642434b8a5a7f0dc807fc1078aefe04ce60a53",
+          "translation": "(a) 若 $a$ 是有理数而 $b$ 是无理数，$a+b$ 是否一定是无理数？如果 $a$ 和 $b$ 都是无理数呢？"
+        }
+      ]
+    },
+    {
+      "printed": 31,
+      "sourceSha256": "0015089022922e6121fd1b6064c52960a5f3f587cbc058d01b44de950fc1a017",
+      "blocks": [
+        {
+          "id": "p31-b1",
+          "source": "(b) If $a$ is rational and $b$ is irrational, is $ab$ necessarily irrational? (Careful!)",
+          "sourceSha256": "821cfc564e0d525bb410474f47027580333cd934e4745c72db6786378279ebb2",
+          "translation": "(b) 若 $a$ 是有理数而 $b$ 是无理数，$ab$ 是否一定是无理数？（小心！）"
+        },
+        {
+          "id": "p31-b2",
+          "source": "(c) Is there a number $a$ such that $a^2$ is irrational, but $a^4$ is rational?",
+          "sourceSha256": "2af422b152147e1d68af90f19f5d65824f7720d7811dcc2bd8917ec7057254ec",
+          "translation": "(c) 是否存在一个数 $a$，使 $a^2$ 是无理数，而 $a^4$ 是有理数？"
+        },
+        {
+          "id": "p31-b3",
+          "source": "(d) Are there two irrational numbers whose sum and product are both rational?",
+          "sourceSha256": "206cc4e91b19202ce5f125ff9d5884b458b0f6693f1f412facdb165e88c139dd",
+          "translation": "(d) 是否存在两个无理数，它们的和与积都是有理数？"
+        },
+        {
+          "id": "p31-b4",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p31-b5",
+          "source": "(a) Prove that $\\sqrt3$, $\\sqrt5$, and $\\sqrt6$ are irrational. Hint: To treat $\\sqrt3$, for example, use the fact that every integer is of the form $3n$ or $3n+1$ or $3n+2$. Why doesn’t this proof work for $\\sqrt4$?",
+          "sourceSha256": "f6c0e93fe7a7f59419b8533aade8ccfaccd4207ab2af51b87d43e91e01de5156",
+          "translation": "(a) 证明 $\\sqrt3$、$\\sqrt5$ 和 $\\sqrt6$ 都是无理数。提示：例如，处理 $\\sqrt3$ 时，可以利用每个整数都形如 $3n$、$3n+1$ 或 $3n+2$ 这一事实。为什么这种证明对 $\\sqrt4$ 不起作用？"
+        },
+        {
+          "id": "p31-b6",
+          "source": "(b) Prove that $\\sqrt[3]2$ and $\\sqrt[3]3$ are irrational.",
+          "sourceSha256": "bece43274bdb190b9e121c3260b51fc29d6da76dd059aeef7e400aa7a8a6d759",
+          "translation": "(b) 证明 $\\sqrt[3]2$ 和 $\\sqrt[3]3$ 都是无理数。"
+        },
+        {
+          "id": "p31-b7",
+          "source": "### 14. Prove that",
+          "sourceSha256": "d832e15ef5163d241ac745c26bf4c16b1f1cf2f7c834aed142e4d8fcfdf629c1",
+          "translation": "### 14. 证明"
+        },
+        {
+          "id": "p31-b8",
+          "source": "(a) $\\sqrt2+\\sqrt6$ is irrational.",
+          "sourceSha256": "1897f9de3e1a8982b9b99f729eaaf001563ff65e4a492e8811e2895d4916f085",
+          "translation": "(a) $\\sqrt2+\\sqrt6$ 是无理数。"
+        },
+        {
+          "id": "p31-b9",
+          "source": "(b) $\\sqrt2+\\sqrt3$ is irrational.",
+          "sourceSha256": "41b88b0514fcc5d6acd0d1fbda72861a238ad316dec5ae074d105a501610bd46",
+          "translation": "(b) $\\sqrt2+\\sqrt3$ 是无理数。"
+        },
+        {
+          "id": "p31-b10",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p31-b11",
+          "source": "(a) Prove that if $x=p+\\sqrt q$ where $p$ and $q$ are rational, and $m$ is a natural number, then $x^m=a+b\\sqrt q$ for some rational $a$ and $b$.",
+          "sourceSha256": "e2fe3d8d5484502ed9a1b993c373867d1cf661c18eb5a39b6ba31dc72ffde274",
+          "translation": "(a) 证明：若 $x=p+\\sqrt q$，其中 $p$ 和 $q$ 为有理数，$m$ 为自然数，则对某些有理数 $a$ 和 $b$，有 $x^m=a+b\\sqrt q$。"
+        },
+        {
+          "id": "p31-b12",
+          "source": "(b) Prove also that $(p-\\sqrt q)^m=a-b\\sqrt q$.",
+          "sourceSha256": "dbba4a398d30f65112e879d61e5e4b7fb3734adcb4c76ea69761cb12250f8bd6",
+          "translation": "(b) 还要证明 $(p-\\sqrt q)^m=a-b\\sqrt q$。"
+        },
+        {
+          "id": "p31-b13",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p31-b14",
+          "source": "(a) Prove that if $m$ and $n$ are natural numbers and $m^2/n^2<2$, then $(m+2n)^2/(m+n)^2>2$; show, moreover, that",
+          "sourceSha256": "80ba76d8488b9a33d232aa95cf446918fbb86fb5bfcdd1a77496489ab8da9fbc",
+          "translation": "(a) 证明：若 $m$ 和 $n$ 是自然数，且 $m^2/n^2<2$，则 $(m+2n)^2/(m+n)^2>2$；并进一步证明"
+        },
+        {
+          "id": "p31-b15",
+          "source": "$$\\frac{(m+2n)^2}{(m+n)^2}-2<2-\\frac{m^2}{n^2}.$$",
+          "sourceSha256": "599bfffca670c166b16063580244cc4007f43752ac37f87383ddc6d62dae06d3"
+        },
+        {
+          "id": "p31-b16",
+          "source": "(b) Prove the same results with all inequality signs reversed.",
+          "sourceSha256": "6c6a0e3fa7113d5ae05590bd5bb9394415f42ab269a556793ba2535e773f8066",
+          "translation": "(b) 把所有不等号反向，证明相应的结论仍然成立。"
+        },
+        {
+          "id": "p31-b17",
+          "source": "(c) Prove that if $m/n<\\sqrt2$, then there is another rational number $m'/n'$ with $m/n<m'/n'<\\sqrt2$.",
+          "sourceSha256": "983f95338c1344116cbb35950cdd26765cc7f1355f79f0a671e0b1dbceb4b53b",
+          "translation": "(c) 证明：若 $m/n<\\sqrt2$，则存在另一个有理数 $m'/n'$，使 $m/n<m'/n'<\\sqrt2$。"
+        },
+        {
+          "id": "p31-b18",
+          "source": "### \\*17.",
+          "sourceSha256": "73a87ca782297c86bcc31aae8078c33ff3d47b9a248bb5a447ed5cbbf5874320"
+        },
+        {
+          "id": "p31-b19",
+          "source": "It seems likely that $\\sqrt n$ is irrational whenever the natural number $n$ is not the square of another natural number. Although the method of Problem 13 may actually be used to treat any particular case, it is not clear in advance that it will always work, and a proof for the general case requires some extra information. A natural number $p$ is called a **prime number** if it is impossible to write $p=ab$ for natural numbers $a$ and $b$ unless one of these is $p$, and the other 1; for convenience we also agree that 1 is not a prime number. The first few prime numbers are 2, 3, 5, 7, 11, 13, 17, 19. If $n>1$ is not a prime, then $n=ab$, with $a$ and $b$ both $<n$; if either $a$ or $b$ is not a prime it can be factored similarly; continuing in this way proves that we can write $n$ as a product of primes. For example, $28=4\\cdot7=2\\cdot2\\cdot7$.",
+          "sourceSha256": "6aedf338ea27f65771a5205e435cb6d5f6e5a8697447aa120f4b8e61c4b13a0c",
+          "translation": "看起来，只要自然数 $n$ 不是另一个自然数的平方，$\\sqrt n$ 就应当是无理数。虽然习题 13 的方法实际上可以处理任何一个具体例子，但事先并不清楚它是否总能奏效，而一般情形的证明需要一些额外的知识。如果自然数 $p$ 无法写成 $p=ab$，其中 $a$ 和 $b$ 是自然数，除非二者之一为 $p$、另一个为 1，那么这个数就称为**素数**；为方便起见，我们还约定 1 不是素数。最前面的几个素数是 2、3、5、7、11、13、17、19。如果 $n>1$ 不是素数，就有 $n=ab$，其中 $a$ 和 $b$ 都 $<n$；如果 $a$ 或 $b$ 不是素数，还可以类似地分解；如此继续下去，就说明可以把 $n$ 写成素数的乘积。例如，$28=4\\cdot7=2\\cdot2\\cdot7$。"
+        },
+        {
+          "id": "p31-b20",
+          "source": "(a) Turn this argument into a rigorous proof by complete induction. (To be sure, any reasonable mathematician would accept the informal argument, but this is partly because it would be obvious to her how to state it rigorously.)",
+          "sourceSha256": "aef67ca332873d31d12426d080de8a212b89d19378da1445fd50516963c6441e",
+          "translation": "(a) 用完全归纳法把这个论证改写为严格证明。（诚然，任何通情达理的数学家都会接受这个非正式论证，但部分原因是，她显然知道怎样把它严格地表述出来。）"
+        },
+        {
+          "id": "p31-b21",
+          "source": "A fundamental theorem about integers, which we will not prove here, states that this factorization is unique, except for the order of the factors. Thus, for example, 28 can never be written as a product of primes one of which",
+          "sourceSha256": "de4df30d78583f89a734ced94d5f883881725616f74d5d47b887a9472e64d3af",
+          "translation": "一个关于整数的基本定理断言，除因子的先后次序外，这种分解是唯一的；这里不证明这个定理。因此，例如，28 绝不可能写成其中含有"
+        }
+      ]
+    },
+    {
+      "printed": 32,
+      "sourceSha256": "3b8a128423cae4532cbfaa2da610dc29e4b86ce7f4334bf7ee139d0fb39b1372",
+      "blocks": [
+        {
+          "id": "p32-b1",
+          "source": "is 3, nor can it be written in a way that involves 2 only once (now you should appreciate why 1 is not allowed as a prime).",
+          "sourceSha256": "a08dca9f94ac9031019dadc2fd37163add1b007d99eabfc2dafe5fd3becdada5",
+          "translation": "3 的素数乘积，也不可能写成只含一个因子 2 的形式（现在你应当能体会，为什么不允许把 1 作为素数）。"
+        },
+        {
+          "id": "p32-b2",
+          "source": "(b) Using this fact, prove that $\\sqrt n$ is irrational unless $n=m^2$ for some natural number $m$.",
+          "sourceSha256": "4e9023b7d02008dd3064b15a9ef962c7cb641c848869c5be83fdfd8c90e50b7d",
+          "translation": "(b) 利用这个事实，证明：除非对某个自然数 $m$ 有 $n=m^2$，否则 $\\sqrt n$ 是无理数。"
+        },
+        {
+          "id": "p32-b3",
+          "source": "(c) Prove more generally that $\\sqrt[k]n$ is irrational unless $n=m^k$.",
+          "sourceSha256": "daca5204348ccaf908351f60c9c2433fc13ae742406def513862c04867e2a2a5",
+          "translation": "(c) 更一般地，证明：除非 $n=m^k$，否则 $\\sqrt[k]n$ 是无理数。"
+        },
+        {
+          "id": "p32-b4",
+          "source": "(d) No discussion of prime numbers should fail to allude to Euclid’s beautiful proof that there are infinitely many of them. Prove that there cannot be only finitely many prime numbers $p_1,p_2,p_3,\\ldots,p_n$ by considering $p_1\\cdot p_2\\cdot\\ldots\\cdot p_n+1$.",
+          "sourceSha256": "4fb7bf3a2107ff36a7a6825b843bf9c9a34ddf97e708a4d1440338c56a10395e",
+          "translation": "(d) 讨论素数时，不应不提 Euclid 关于素数有无限多个的优美证明。通过考虑 $p_1\\cdot p_2\\cdot\\ldots\\cdot p_n+1$，证明素数不可能只有有限多个 $p_1,p_2,p_3,\\ldots,p_n$。"
+        },
+        {
+          "id": "p32-b5",
+          "source": "### \\*18.",
+          "sourceSha256": "dc9f11a962e705d50490c24f8b3e71f51b22675236704438ef4ec0936298a65c"
+        },
+        {
+          "id": "p32-b6",
+          "source": "(a) Prove that if $x$ satisfies",
+          "sourceSha256": "f121c262f06662ec069595778cac16446d3e2d46c48c35d6561a5a054d184f44",
+          "translation": "(a) 证明：若 $x$ 满足"
+        },
+        {
+          "id": "p32-b7",
+          "source": "$$x^n+a_{n-1}x^{n-1}+\\cdots+a_0=0,$$",
+          "sourceSha256": "30ac3d8f793b1f5d93c8f653503f1366349dd785912e0446187235384137d15d"
+        },
+        {
+          "id": "p32-b8",
+          "source": "for some integers $a_{n-1},\\ldots,a_0$, then $x$ is irrational unless $x$ is an integer. (Why is this a generalization of Problem 17?)",
+          "sourceSha256": "9eef632fcbb8e89791396dfbf07f773d191838843f79358a7c6a753d44890524",
+          "translation": "其中 $a_{n-1},\\ldots,a_0$ 是某些整数，则除非 $x$ 是整数，否则 $x$ 是无理数。（为什么这是习题 17 的推广？）"
+        },
+        {
+          "id": "p32-b9",
+          "source": "(b) Prove that $\\sqrt6-\\sqrt2-\\sqrt3$ is irrational.",
+          "sourceSha256": "f2d990e1d41b4c6d37cf2e0e67b137f7ecfdfe40e98e16bfff4982cf97a614ea",
+          "translation": "(b) 证明 $\\sqrt6-\\sqrt2-\\sqrt3$ 是无理数。"
+        },
+        {
+          "id": "p32-b10",
+          "source": "(c) Prove that $\\sqrt2+\\sqrt[3]2$ is irrational. Hint: Start by working out the first 6 powers of this number.",
+          "sourceSha256": "bf403221846e5615f57027770dee05a86a5bcf2997dcb70fcec82711fcff502b",
+          "translation": "(c) 证明 $\\sqrt2+\\sqrt[3]2$ 是无理数。提示：先算出这个数的前六次幂。"
+        },
+        {
+          "id": "p32-b11",
+          "source": "### 19. Prove Bernoulli’s inequality: If $h>-1$, then",
+          "sourceSha256": "0244cfa0b35932359a169810782d907710f52370395e69efb563f65562e5368f",
+          "translation": "### 19. 证明 Bernoulli 不等式：若 $h>-1$，则"
+        },
+        {
+          "id": "p32-b12",
+          "source": "$$(1+h)^n\\ge1+nh$$",
+          "sourceSha256": "715f3ffcd337e45817314670c0ed327e1e7241520f9b829d0c4eb12de67de0b3"
+        },
+        {
+          "id": "p32-b13",
+          "source": "for any natural number $n$. Why is this trivial if $h>0$?",
+          "sourceSha256": "2fc1a382a6b25243ca5ac64e8d8a0b26d71c2189854f9119b79cc86fc28f3e6c",
+          "translation": "对任意自然数 $n$ 成立。为什么在 $h>0$ 时，这个结论是平凡的？"
+        },
+        {
+          "id": "p32-b14",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p32-b15",
+          "source": "The Fibonacci sequence $a_1,a_2,a_3,\\ldots$ is defined as follows:",
+          "sourceSha256": "5e8a3e6b6cc80a90d9f44db75bf7683c6431c685253556eb26ef4faa90fe3c94",
+          "translation": "Fibonacci 数列 $a_1,a_2,a_3,\\ldots$ 定义如下："
+        },
+        {
+          "id": "p32-b16",
+          "source": "$$\\begin{aligned}\na_1&=1,\\\\\na_2&=1,\\\\\na_n&=a_{n-1}+a_{n-2}\\qquad\\text{for }n\\ge3.\n\\end{aligned}$$",
+          "sourceSha256": "4cca666afb8385bc1c3337fd143911686dbae1a8a25b0fb5b73820ca9b6e9470"
+        },
+        {
+          "id": "p32-b17",
+          "source": "This sequence, which begins $1,1,2,3,5,8,\\ldots$, was discovered by Fibonacci (circa 1175–1250), in connection with a problem about rabbits. Fibonacci assumed that an initial pair of rabbits gave birth to one new pair of rabbits per month, and that after two months each new pair behaved similarly. The number $a_n$ of pairs born in the $n$th month is $a_{n-1}+a_{n-2}$, because a pair of rabbits is born for each pair born the previous month, and moreover each pair born two months ago now gives birth to another pair. The number of interesting results about this sequence is truly amazing—there is even a Fibonacci Association which publishes a journal, *The Fibonacci Quarterly*. Prove that",
+          "sourceSha256": "7f5651debe2fc40146f16969f0d93c5b8483ef76b906763becda81513fa22ecc",
+          "translation": "这个以 $1,1,2,3,5,8,\\ldots$ 开始的数列，是 Fibonacci（约 1175—1250 年）在研究一个兔子问题时发现的。他假定，最初的一对兔子每月生出一对新兔子，而每对新兔子在两个月后也同样繁殖。第 $n$ 个月出生的兔子对数 $a_n$ 是 $a_{n-1}+a_{n-2}$，因为前一个月出生的每一对兔子都对应一对新出生的兔子，而且两个月前出生的每一对兔子现在又生出一对。关于这个数列的有趣结果之多，确实令人惊叹——甚至还有一个 Fibonacci 协会，出版期刊 *《Fibonacci 季刊》*。证明"
+        },
+        {
+          "id": "p32-b18",
+          "source": "$$a_n=\\frac{\\left(\\dfrac{1+\\sqrt5}2\\right)^n-\\left(\\dfrac{1-\\sqrt5}2\\right)^n}{\\sqrt5}.$$",
+          "sourceSha256": "93f429085b2db0ca5a70e5a37770e7f8fe136155f9bca73881625b794390a077"
+        },
+        {
+          "id": "p32-b19",
+          "source": "One way of deriving this astonishing formula is presented in Problem 24-16.",
+          "sourceSha256": "06bb608b0663da038f7890a5694bbe5172feb1c977339504000a09e59f583a0c",
+          "translation": "习题 24-16 给出了推导这个惊人公式的一种方法。"
+        }
+      ]
+    },
+    {
+      "printed": 33,
+      "sourceSha256": "202d11afae86037857a34a4b007df1370873db0f6857cf56b0f9b4d76a6e275c",
+      "blocks": [
+        {
+          "id": "p33-b1",
+          "source": "### 21.",
+          "sourceSha256": "d908d228d4604b1dd2f9729637ede6c5eb59c7f91a5ba1fe1a64623fe814b30d"
+        },
+        {
+          "id": "p33-b2",
+          "source": "The Schwarz inequality (Problem 1-19) actually has a more general form:",
+          "sourceSha256": "c7e439fee0ac36e4678346b1f574c870dd70bc856b7795c31de0ed6f5559c633",
+          "translation": "Schwarz 不等式（习题 1-19）实际上有一个更一般的形式："
+        },
+        {
+          "id": "p33-b3",
+          "source": "$$\\sum_{i=1}^n x_i y_i\\le\\sqrt{\\sum_{i=1}^n x_i^2}\\sqrt{\\sum_{i=1}^n y_i^2}.$$",
+          "sourceSha256": "bb15aae3b5a4971dbed1eed52133791f07962bdf840a2417a8212e19adb0ef9b"
+        },
+        {
+          "id": "p33-b4",
+          "source": "Give three proofs of this, analogous to the three proofs in Problem 1-19.",
+          "sourceSha256": "f5d1d6b48f83622e0440df9e3fe29fe9c138001daf45076f984d1c79a242550b",
+          "translation": "仿照习题 1-19 中的三种证明，给出它的三种证明。"
+        },
+        {
+          "id": "p33-b5",
+          "source": "### 22.",
+          "sourceSha256": "ce146eae8f2fb4609bfd66abfe5008807912c8203d51e87d6ba4e238e91e9395"
+        },
+        {
+          "id": "p33-b6",
+          "source": "The result in Problem 1-7 has an important generalization: If $a_1,\\ldots,a_n\\ge0$, then the “arithmetic mean”",
+          "sourceSha256": "741ac3d8e3bc847fbff5ea7124938ff45971ca6397d4de49ba5630010ab22cbf",
+          "translation": "习题 1-7 的结果有一个重要推广：若 $a_1,\\ldots,a_n\\ge0$，则“算术平均数”"
+        },
+        {
+          "id": "p33-b7",
+          "source": "$$A_n=\\frac{a_1+\\cdots+a_n}n$$",
+          "sourceSha256": "75e8aefac3751c24653a39a52ef2ed6f39e1d8950f9840a53394bf23352dc721"
+        },
+        {
+          "id": "p33-b8",
+          "source": "and “geometric mean”",
+          "sourceSha256": "2d9883edc8678284c8591a8158fc828b8657c3ac62932a9d3a0911c20b7850de",
+          "translation": "与“几何平均数”"
+        },
+        {
+          "id": "p33-b9",
+          "source": "$$G_n=\\sqrt[n]{a_1\\ldots a_n}$$",
+          "sourceSha256": "d76a70091920c246d329be5f7cab5f18a38f65552f0575695b63f4d4514bf3af"
+        },
+        {
+          "id": "p33-b10",
+          "source": "satisfy",
+          "sourceSha256": "7688bd7c427206cbe6c6ff0a7f235155fb65a562d03db688d07ec9ce081b71cf",
+          "translation": "满足"
+        },
+        {
+          "id": "p33-b11",
+          "source": "$$G_n\\le A_n.$$",
+          "sourceSha256": "7c7b410b3867e35e2e946967e53e41006b4f6273d4935f38594fd5a99272604b"
+        },
+        {
+          "id": "p33-b12",
+          "source": "(a) Suppose that $a_1<A_n$. Then some $a_i$ satisfies $a_i>A_n$; for convenience, say $a_2>A_n$. Let $\\bar a_1=A_n$ and let $\\bar a_2=a_1+a_2-\\bar a_1$. Show that",
+          "sourceSha256": "ce31ba50a04b637de655e1c0d8dd2a4e77921be6f63998a93aee263433d6655d",
+          "translation": "(a) 假设 $a_1<A_n$。那么有某个 $a_i$ 满足 $a_i>A_n$；为方便起见，不妨设 $a_2>A_n$。令 $\\bar a_1=A_n$，并令 $\\bar a_2=a_1+a_2-\\bar a_1$。证明"
+        },
+        {
+          "id": "p33-b13",
+          "source": "$$\\bar a_1\\bar a_2\\ge a_1a_2.$$",
+          "sourceSha256": "8380d8a68aba2a47067231f8c555a41eaf0fe1dda31a11cd3ec8ae76ac51523e"
+        },
+        {
+          "id": "p33-b14",
+          "source": "Why does repeating this process enough times eventually prove that $G_n\\le A_n$? (This is another place where it is a good exercise to provide a formal proof by induction, as well as an informal reason.) When does equality hold in the formula $G_n\\le A_n$?",
+          "sourceSha256": "86e1da3a482e775607c58a4f18e9d396f9d69ed204a870e50193886318aa7988",
+          "translation": "为什么把这个过程重复足够多次，最终就证明了 $G_n\\le A_n$？（这里同样很适合练习：既给出非正式的理由，也给出正式的归纳法证明。）公式 $G_n\\le A_n$ 中何时等号成立？"
+        },
+        {
+          "id": "p33-b15",
+          "source": "The reasoning in this proof is related to another interesting proof.",
+          "sourceSha256": "2b4ec982b63281837a28719a88508625dc54819108a49b69836af70dab22af99",
+          "translation": "这个证明的思路与另一个有趣的证明相关。"
+        },
+        {
+          "id": "p33-b16",
+          "source": "(b) Using the fact that $G_n\\le A_n$ when $n=2$, prove, by induction on $k$, that $G_n\\le A_n$ for $n=2^k$.",
+          "sourceSha256": "16c537b14289bc24657f84dd3124ee20bca8f8f1200a94a9ae2ea956fbcdd8e3",
+          "translation": "(b) 利用 $n=2$ 时有 $G_n\\le A_n$ 这一事实，对 $k$ 使用归纳法，证明当 $n=2^k$ 时有 $G_n\\le A_n$。"
+        },
+        {
+          "id": "p33-b17",
+          "source": "(c) For a general $n$, let $2^m>n$. Apply part (b) to the $2^m$ numbers",
+          "sourceSha256": "8ea45bf3ed3683bb90acce4a0f593b29aa147b55b2b6d13caa2bfaefe3157d44",
+          "translation": "(c) 对一般的 $n$，取 $2^m>n$。对下面 $2^m$ 个数应用 (b)："
+        },
+        {
+          "id": "p33-b18",
+          "source": "$$a_1,\\ldots,a_n,\\underbrace{A_n,\\ldots,A_n}_{2^m-n\\text{ times}}$$",
+          "sourceSha256": "a706d746d55c4b087d7a044b98a475027279a8af9bc68ee95178f19b73db0afd"
+        },
+        {
+          "id": "p33-b19",
+          "source": "to prove that $G_n\\le A_n$.",
+          "sourceSha256": "6024504a271afe735965e4d2de01502ce46b07df6de239f381199a302d6d1971",
+          "translation": "从而证明 $G_n\\le A_n$。"
+        },
+        {
+          "id": "p33-b20",
+          "source": "### 23.",
+          "sourceSha256": "fcb56ced3fb587a05b1e3f24ccfaee441ca9356f2d715d9e8ba59a341ae068ec"
+        },
+        {
+          "id": "p33-b21",
+          "source": "The following is a recursive definition of $a^n$:",
+          "sourceSha256": "b10555fed0a0ca018ad5bf1d1f02a19db1852da4fbf9cc2d6ee47532f35be6e1",
+          "translation": "下面给出 $a^n$ 的一个递归定义："
+        },
+        {
+          "id": "p33-b22",
+          "source": "$$\\begin{aligned}\na^1&=a,\\\\\na^{n+1}&=a^n\\cdot a.\n\\end{aligned}$$",
+          "sourceSha256": "c624871309fa224ed71d0b8e3d9ae227515bb72dbe68b34edf140d4713e988bb"
+        },
+        {
+          "id": "p33-b23",
+          "source": "Prove, by induction, that",
+          "sourceSha256": "04a1c2849d496a1ceb115ccfa726f32fdc0c6895b9d758c45fd9de351aa1f62e",
+          "translation": "用归纳法证明"
+        },
+        {
+          "id": "p33-b24",
+          "source": "$$\\begin{aligned}\na^{n+m}&=a^n\\cdot a^m,\\\\\n(a^n)^m&=a^{nm}.\n\\end{aligned}$$",
+          "sourceSha256": "4c7f0de57a1d6e07030bbb7b8bc60ef7e928d5976372a601a58938d062bfb861"
+        },
+        {
+          "id": "p33-b25",
+          "source": "(Don’t try to be fancy: use either induction on $n$ or induction on $m$, not both at once.)",
+          "sourceSha256": "18d3f7dee3874c6bff2279f6c332169c43c9e19fa0eaecc72371f4b657bb9080",
+          "translation": "（不必故弄玄虚：或者对 $n$ 使用归纳法，或者对 $m$ 使用归纳法，不要同时对两者归纳。）"
+        }
+      ]
+    },
+    {
+      "printed": 34,
+      "sourceSha256": "444c4058406bd4a56d4e8ccf5301fd83374a926a35b6d8f006cea4c918e36d4e",
+      "blocks": [
+        {
+          "id": "p34-b1",
+          "source": "### 24.",
+          "sourceSha256": "1fb8b304cd861a73c12374de97d67ebaec8b5558d02cf56f4db6adadfe75d8aa"
+        },
+        {
+          "id": "p34-b2",
+          "source": "Suppose we know properties P1 and P4 for the natural numbers, but that multiplication has never been mentioned. Then the following can be used as a recursive definition of multiplication:",
+          "sourceSha256": "d36776b35c812690f3a716abb69fc685a8ca5bd6c94af950163fe89cccdc6441",
+          "translation": "假设我们已经知道自然数满足性质 P1 和 P4，但从未提及乘法。那么，可以用下面的规则递归地定义乘法："
+        },
+        {
+          "id": "p34-b3",
+          "source": "$$\\begin{aligned}\n1\\cdot b&=b,\\\\\n(a+1)\\cdot b&=a\\cdot b+b.\n\\end{aligned}$$",
+          "sourceSha256": "169379a0994f611c500f81b62fea152107b16272ca1e7a83fad14f1e51c0dda4"
+        },
+        {
+          "id": "p34-b4",
+          "source": "Prove the following (in the order suggested!):",
+          "sourceSha256": "d883d24884ee70084623e9a8bdb8376538a66bdf69114fa184ccb9f4b0a18ba2",
+          "translation": "证明下列各项（按建议的次序！）："
+        },
+        {
+          "id": "p34-b5",
+          "source": "$$\\begin{aligned}\na\\cdot(b+c)&=a\\cdot b+a\\cdot c\\quad\\text{(use induction on }a\\text{)},\\\\\na\\cdot1&=a,\\\\\na\\cdot b&=b\\cdot a\\quad\\text{(you just finished proving the case }b=1\\text{)}.\n\\end{aligned}$$",
+          "sourceSha256": "bf48272b0c46ea8b53711bc9247c7656bd4671a6006a06c8218b36657ba33570"
+        },
+        {
+          "id": "p34-b6",
+          "source": "### 25.",
+          "sourceSha256": "e243042975caa2efce0a7385b48b4be10d7c1f2cfeac6357090078c2f5eb5e34"
+        },
+        {
+          "id": "p34-b7",
+          "source": "In this chapter we began with the natural numbers and gradually built up to the real numbers. A completely rigorous discussion of this process requires a little book in itself (see Part V). No one has ever figured out how to get to the real numbers without going through this process, but if we do accept the real numbers as given, then the natural numbers can be *defined* as the real numbers of the form $1,1+1,1+1+1$, etc. The whole point of this problem is to show that there is a rigorous mathematical way of saying “etc.”",
+          "sourceSha256": "a0520b602c89a94f64c9e9524cfad90980b8ab9d71b1d7c0bf8fadaa3e58d126",
+          "translation": "本章从自然数开始，逐渐扩展到实数。要完全严格地讨论这个过程，本身就需要一本小书（见第五部分）。还没有人想出绕过这个过程建立实数的方法；不过，如果接受实数已经给定，那么就可以把自然数*定义*为形如 $1,1+1,1+1+1$，等等的实数。这道题的全部目的，就是说明有一种严格的数学方式来表达“等等”。"
+        },
+        {
+          "id": "p34-b8",
+          "source": "(a) A set $A$ of real numbers is called **inductive** if",
+          "sourceSha256": "a71d5b670e4bd7df8987e938c8024e65c3a04e399a38d6d2d7aed1d3bf94c829",
+          "translation": "(a) 一个实数集合 $A$ 称为**归纳集**，如果"
+        },
+        {
+          "id": "p34-b9",
+          "source": "(1) 1 is in $A$,",
+          "sourceSha256": "3b6a66aa4aef59fb3ec8f4ac137249953348a8be7ed165dc98a3919c19c971cd",
+          "translation": "(1) 1 属于 $A$，"
+        },
+        {
+          "id": "p34-b10",
+          "source": "(2) $k+1$ is in $A$ whenever $k$ is in $A$.",
+          "sourceSha256": "4885f89b9ce6a9ac6f067efa62d540d647f257a35ea082813fd03cca88c24204",
+          "translation": "(2) 只要 $k$ 属于 $A$，$k+1$ 就属于 $A$。"
+        },
+        {
+          "id": "p34-b11",
+          "source": "Prove that",
+          "sourceSha256": "bd05d81834d558ff6258ab898c195fc8fed52ba9be04f6f90e4270d8bdb0bbcb",
+          "translation": "证明"
+        },
+        {
+          "id": "p34-b12",
+          "source": "(i) $\\mathbf{R}$ is inductive.",
+          "sourceSha256": "23e9bedcb04f8117b7e384e1914c98d02263da50a44fbdacb01e84b41f79be28",
+          "translation": "(i) $\\mathbf{R}$ 是归纳集。"
+        },
+        {
+          "id": "p34-b13",
+          "source": "(ii) The set of positive real numbers is inductive.",
+          "sourceSha256": "d3115bda19a4b8652d60d75aedbab292a25f0b4d198628c5ad79b59c19035491",
+          "translation": "(ii) 正实数集合是归纳集。"
+        },
+        {
+          "id": "p34-b14",
+          "source": "(iii) The set of positive real numbers unequal to $\\frac12$ is inductive.",
+          "sourceSha256": "d58d4b9ce2e864e7b3cdb620aa1d04cb15fb63c477b7eb33522213ec8f5895a2",
+          "translation": "(iii) 不等于 $\\frac12$ 的正实数构成的集合是归纳集。"
+        },
+        {
+          "id": "p34-b15",
+          "source": "(iv) The set of positive real numbers unequal to 5 is not inductive.",
+          "sourceSha256": "88953c6c798c0cb5cab2bb59ff0b29e4ade0497137bf99b229e9fc0854f47108",
+          "translation": "(iv) 不等于 5 的正实数构成的集合不是归纳集。"
+        },
+        {
+          "id": "p34-b16",
+          "source": "(v) If $A$ and $B$ are inductive, then the set $C$ of real numbers which are in both $A$ and $B$ is also inductive.",
+          "sourceSha256": "b99bfbd090c3978e6ee2bec958fb5d896a2afcc89d3a1c36259cb5ad6977fc00",
+          "translation": "(v) 若 $A$ 和 $B$ 是归纳集，则同时属于 $A$ 和 $B$ 的实数所组成的集合 $C$ 也是归纳集。"
+        },
+        {
+          "id": "p34-b17",
+          "source": "(b) A real number $n$ will be called a **natural number** if $n$ is in *every* inductive set.",
+          "sourceSha256": "b2702fa32b21d096fb4aec2393e7894e7aeb12b2ed83983df22ba91a4c2ea88a",
+          "translation": "(b) 如果实数 $n$ 属于*每一个*归纳集，就把这个实数 $n$ 称为**自然数**。"
+        },
+        {
+          "id": "p34-b18",
+          "source": "(i) Prove that 1 is a natural number.",
+          "sourceSha256": "65462318130f1ccb373cabc6f6c1fc17f9e649fa57fc67669018a1fb7de634be",
+          "translation": "(i) 证明 1 是自然数。"
+        },
+        {
+          "id": "p34-b19",
+          "source": "(ii) Prove that $k+1$ is a natural number if $k$ is a natural number.",
+          "sourceSha256": "52cc882f583e486a2a23a59028f215a5a50f7b6c1d887ddc61de4dd16bf72011",
+          "translation": "(ii) 证明：若 $k$ 是自然数，则 $k+1$ 是自然数。"
+        },
+        {
+          "id": "p34-b20",
+          "source": "### 26.",
+          "sourceSha256": "e0a0eda9f4171fbdc2f78618f10a33fea6c704a744eb8323db3535cb65310a23"
+        },
+        {
+          "id": "p34-b21",
+          "source": "There is a puzzle consisting of three spindles, with $n$ concentric rings of decreasing diameter stacked on the first (Figure 1). A ring at the top of a stack may be moved from one spindle to another spindle, provided that it is not placed on top of a smaller ring. For example, if the smallest ring is moved to spindle 2 and the next-smallest ring is moved to spindle 3, then the smallest ring may be moved to spindle 3 also, on top of the next-smallest. Prove that the entire stack of $n$ rings can be moved onto spindle 3 in $2^n-1$ moves, and that this cannot be done in fewer than $2^n-1$ moves.",
+          "sourceSha256": "224a37bfea7be2291ac29559d777f00070033a0941198c09fb4cd40666f51c10",
+          "translation": "有一种由三根柱子组成的智力游戏，第一根柱子上叠放着 $n$ 个同心圆环，直径从下到上逐渐减小（图 1）。可以把一叠圆环顶部的圆环从一根柱子移到另一根柱子，但不能把它放在比它小的圆环上。例如，若先把最小的圆环移到柱子 2，再把次小的圆环移到柱子 3，那么也可以把最小的圆环移到柱子 3，放在次小的圆环上。证明：整叠 $n$ 个圆环可以用 $2^n-1$ 次移动移到柱子 3 上，而且不可能用少于 $2^n-1$ 次的移动完成。"
+        },
+        {
+          "id": "p34-b22",
+          "source": "<figure class=\"original-source-figure\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"50 1234 390 268\" role=\"img\" aria-label=\"Figure 1: three spindles and a stack of rings\">\n<image href=\"pages/book/0053.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/>\n</svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "c31bf5493f1993f4f743f2fa1984207f972e8f03ec4f62303683623a60a3e0d9"
+        }
+      ]
+    },
+    {
+      "printed": 35,
+      "sourceSha256": "9483235e5bb8626a8374cd6f0be2ec577aaa4f43c04bdeee1e6cfdd673974584",
+      "blocks": [
+        {
+          "id": "p35-b1",
+          "source": "### \\*27.",
+          "sourceSha256": "26de0ce1e7ad858f81f9c81ab5d29403d87bf41e4b56bb2220f8102c9a138242"
+        },
+        {
+          "id": "p35-b2",
+          "source": "University B. once boasted 17 tenured professors of mathematics. Tradition prescribed that at their weekly luncheon meeting, faithfully attended by all 17, any members who had discovered an error in their published work should make an announcement of this fact, and promptly resign. Such an announcement had never actually been made, because no professor was aware of any errors in her or his work. This is not to say that no errors existed, however. In fact, over the years, in the work of every member of the department at least one error had been found, by some other member of the department. This error had been mentioned to all other members of the department, but the actual author of the error had been kept ignorant of the fact, to forestall any resignations.",
+          "sourceSha256": "7446eee453cf96e7f93567ffa2cd0b6eb438527592312df8b49b61c79c02acca",
+          "translation": "B 大学曾以拥有 17 位终身聘任的数学教授而自豪。按照传统，每周的午餐聚会，17 人都会如约出席；凡是发现自己发表的著作中有错误的人，都应当在聚会上宣布此事，并立即辞职。实际上，从未有人作过这样的宣布，因为没有一位教授知道自己的著作中有任何错误。不过，这并不意味着错误不存在。事实上，多年来，系里每位成员的著作中都至少有一个错误被另一位成员发现。为了避免有人辞职，这个错误被告知了系里所有其他成员，唯独错误的作者本人一直被蒙在鼓里。"
+        },
+        {
+          "id": "p35-b3",
+          "source": "One fateful year, the department was augmented by a visitor from another university, one Prof. X, who had come with hopes of being offered a permanent position at the end of the academic year. Naturally, he was apprised, by various members of the department, of the published errors which had been discovered. When the hoped-for appointment failed to materialize, Prof. X obtained his revenge at the last luncheon of the year. “I have enjoyed my visit here very much,” he said, “but I feel that there is one thing that I have to tell you. At least one of you has published an incorrect result, which has been discovered by others in the department.” What happened the next year?",
+          "sourceSha256": "0a25263cbbb40be752014a6a2afdda3d73e3526871e26c68bd790bc0efbebac7",
+          "translation": "在命运攸关的某一年，系里来了一位其他大学的访问学者 X 教授，他希望学年结束时能获得一个永久职位。当然，系里的不同成员把已发现的那些出版物中的错误告诉了他。期盼的聘任落空后，X 教授在当年最后一次午餐聚会上实施了报复。他说：“我在这里访问得非常愉快，但我觉得有一件事必须告诉大家。你们当中至少有一位发表过错误的结果，而系里的其他人已经发现了这个错误。”下一年发生了什么？"
+        },
+        {
+          "id": "p35-b4",
+          "source": "### \\*\\*28.",
+          "sourceSha256": "b344f92411b2a761bcb1816527d8fb5033c2a8b92457cbace516d431ee31174d"
+        },
+        {
+          "id": "p35-b5",
+          "source": "After figuring out, or looking up, the answer to Problem 27, consider the following: Each member of the department already knew what Prof. X asserted, so how could his saying it change anything?",
+          "sourceSha256": "1f8058eaf16089be3f44189d939bc9f3b1cf51917a1bd81ad890bd40d4b6e1aa",
+          "translation": "想出或查到习题 27 的答案后，考虑下面的问题：系里的每位成员早就知道 X 教授所说的事情，那么他把这件事说出来，怎么会改变任何事情呢？"
+        }
+      ]
+    },
+    {
+      "printed": 36,
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blocks": []
+    }
+  ]
+}

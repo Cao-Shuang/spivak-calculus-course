@@ -1,0 +1,2810 @@
+{
+  "chapter": 18,
+  "language": "zh-CN",
+  "sourceSha256": "19bd934923ab866df27b21c35e0fb33150fda3ffeea12c916d8ca312d4fef86f",
+  "paragraphCount": 253,
+  "pages": [
+    {
+      "printed": 339,
+      "sourceSha256": "05b6edb86bca1ace5b11ae17451c6950885ab1b9dcc61810ba285899a94a918d",
+      "blocks": [
+        {
+          "id": "p339-b1",
+          "source": "# CHAPTER 18\n# THE LOGARITHM AND EXPONENTIAL FUNCTIONS",
+          "sourceSha256": "8d929cccb4a5d7ea456a170824d816b7ac355522ae53c73192f904acfd291f9b",
+          "translation": "# 第 18 章\n# 对数函数与指数函数"
+        },
+        {
+          "id": "p339-b2",
+          "source": "In Chapter 15 the integral provided a rigorous formulation for a preliminary definition of the functions sin and cos. In this chapter the integral plays a more essential role. For certain functions even a preliminary definition presents difficulties. For example, consider the function",
+          "sourceSha256": "2599dab6d5cdafc090f46830d829089cf6e932912467b3acd9e783e6ec35352e",
+          "translation": "在第 15 章中，积分为函数 sin 和 cos 的初步定义提供了严格的表述。本章中，积分将发挥更根本的作用。对于某些函数，连初步定义也会遇到困难。例如，考虑函数"
+        },
+        {
+          "id": "p339-b3",
+          "source": "$$f(x)=10^x.$$",
+          "sourceSha256": "094199da840bb190d251695920502c237a2e912a28e5e5e70bcbc7020fb8bbc4"
+        },
+        {
+          "id": "p339-b4",
+          "source": "This function is assumed to be defined for all $x$ and to have an inverse function, defined for positive $x$, which is the “logarithm to the base $10$,”",
+          "sourceSha256": "483e2cf8db5018f69339866792023c8185c0dd1df7fbce27dc305e48c7ce6623",
+          "translation": "我们认为这个函数对所有 $x$ 都有定义，而且有一个对正数 $x$ 定义的反函数，即“以 $10$ 为底的对数”，"
+        },
+        {
+          "id": "p339-b5",
+          "source": "$$f^{-1}(x)=\\log_{10}x.$$",
+          "sourceSha256": "6eaf5e1f2e9100fb1ad27b79ae134c49ad6f140ee02fe07cc51db19b3351479c"
+        },
+        {
+          "id": "p339-b6",
+          "source": "In algebra, $10^x$ is usually defined only for *rational* $x$, while the definition for irrational $x$ is quietly ignored. A brief review of the definition for rational $x$ will not only explain this omission, but also recall an important principle behind the definition of $10^x$.",
+          "sourceSha256": "18dde1dca3b0ca91b70ffe41622d9fb82d3b8faaa1865c688858ac0bde5ac187",
+          "translation": "在代数中，通常只对*有理数* $x$ 定义 $10^x$，而无理数 $x$ 时的定义则被悄悄忽略。简要回顾有理数 $x$ 时的定义，不仅会解释为何会有这种遗漏，还能让我们想起 $10^x$ 定义背后的一个重要原则。"
+        },
+        {
+          "id": "p339-b7",
+          "source": "The symbol $10^n$ is first defined for natural numbers $n$. This notation turns out to be extremely convenient, especially for multiplying very large numbers, because",
+          "sourceSha256": "3abdadd13d09bcff80ce6fac4118d76351de0dde159c2e9a1e3207178e682220",
+          "translation": "符号 $10^n$ 最初是为自然数 $n$ 定义的。这个记号极其方便，尤其在很大的数相乘时，因为"
+        },
+        {
+          "id": "p339-b8",
+          "source": "$$10^n\\cdot10^m=10^{n+m}.$$",
+          "sourceSha256": "4370ba96e40c313996e661f5f90b31e13507db15d6f341cce0f30f4cdda245f8"
+        },
+        {
+          "id": "p339-b9",
+          "source": "The extension of the definition of $10^x$ to rational $x$ is motivated by the desire to preserve this equation; this requirement actually forces upon us the customary definition. Since we want the equation",
+          "sourceSha256": "92ec6a45e3a176e066d35af878e275d89ff43d2d777e4970bcd12e48698289bf",
+          "translation": "把 $10^x$ 的定义推广到有理数 $x$，其动机是希望保留这个等式；这个要求实际上迫使我们采用通常的定义。由于希望等式"
+        },
+        {
+          "id": "p339-b10",
+          "source": "$$10^0\\cdot10^n=10^{0+n}=10^n$$",
+          "sourceSha256": "1cfa7dabdfa31169a1a9337f6f117eba092f0882a60a528d151f4796190c0eb3"
+        },
+        {
+          "id": "p339-b11",
+          "source": "to be true, we must define $10^0=1$; since we want the equation",
+          "sourceSha256": "408f2d71be2b541a957e36d7671846491e754efdaf69436e1dda9e96b8f7309b",
+          "translation": "成立，就必须定义 $10^0=1$；由于希望等式"
+        },
+        {
+          "id": "p339-b12",
+          "source": "$$10^{-n}\\cdot10^n=10^0=1$$",
+          "sourceSha256": "46ac4ff73a63dd15d50e6e388ab3b1a6f2c48e271eb41dd59dd7a2531865e44f"
+        },
+        {
+          "id": "p339-b13",
+          "source": "to be true, we must define $10^{-n}=1/10^n$; since we want the equation",
+          "sourceSha256": "57b297298e2fde43c496f066d01d9127aa5982ce24e2f189ca5e4f2e4e4762c2",
+          "translation": "成立，就必须定义 $10^{-n}=1/10^n$；由于希望等式"
+        },
+        {
+          "id": "p339-b14",
+          "source": "$$\\underbrace{10^{1/n}\\cdot\\ldots\\cdot10^{1/n}}_{n\\text{ times}}=10^{\\overbrace{1/n+\\cdots+1/n}^{n\\text{ times}}}=10^1=10$$",
+          "sourceSha256": "1705d619deeea6f5c62e1a48cb44cec920011da6cc4f0fcd1cdee83a9c4b2d65"
+        },
+        {
+          "id": "p339-b15",
+          "source": "to be true, we must define $10^{1/n}=\\sqrt[n]{10}$; and since we want the equation",
+          "sourceSha256": "01bb85e3aa5ed316ff24fa7b83425f0bb627977bae5eb2a882a080d95432d3ab",
+          "translation": "成立，就必须定义 $10^{1/n}=\\sqrt[n]{10}$；而由于希望等式"
+        },
+        {
+          "id": "p339-b16",
+          "source": "$$\\underbrace{10^{1/n}\\cdot\\ldots\\cdot10^{1/n}}_{m\\text{ times}}=10^{\\overbrace{1/n+\\cdots+1/n}^{m\\text{ times}}}=10^{m/n}$$",
+          "sourceSha256": "ed8bc3565fce7949858bf4ddcf0c559031fa5480580e62e88065d8537dcf0845"
+        },
+        {
+          "id": "p339-b17",
+          "source": "to be true, we must define $10^{m/n}=(\\sqrt[n]{10})^m$.",
+          "sourceSha256": "2139e6fc1b0efceb8f63ed7ac37f5b9b469cb49721b0bbe51d63592f6b48853a",
+          "translation": "成立，就必须定义 $10^{m/n}=(\\sqrt[n]{10})^m$。"
+        },
+        {
+          "id": "p339-b18",
+          "source": "Unfortunately, at this point the program comes to a dead halt. We have been guided by the principle that $10^x$ should be defined so as to ensure that $10^{x+y}=10^x10^y$; but this principle does not suggest any simple algebraic way of defining",
+          "sourceSha256": "f6588f08e5534482bc3b6b47646ccc3e8981198086e37d30b5a1f0cce537c074",
+          "translation": "可惜，到这里，这个方案就彻底停住了。一直引导我们的原则是：定义 $10^x$ 时应当保证 $10^{x+y}=10^x10^y$；但对于无理数，这个原则并没有提示一种简单的代数方法来定义"
+        }
+      ]
+    },
+    {
+      "printed": 340,
+      "sourceSha256": "b4c6861c9b0be8e4165b658369be57ab2458fcacf4363e80ecabdbff42c6ceb8",
+      "blocks": [
+        {
+          "id": "p340-b1",
+          "source": "$10^x$ for irrational $x$. For this reason we will try some more sophisticated ways of finding a function $f$ such that",
+          "sourceSha256": "c4670f643186735687e9a09ba96addac71877ef14acbd7e8b2a7c4054d503381",
+          "translation": "$10^x$，其中 $x$ 为无理数。因此，我们将尝试一些更精巧的方法，寻找满足下式的函数 $f$："
+        },
+        {
+          "id": "p340-b2",
+          "source": "$$\\tag{*}f(x+y)=f(x)\\cdot f(y)\\quad\\text{for all }x\\text{ and }y.$$",
+          "sourceSha256": "548596d7611e34658942a7e380e1d1468aa5af74db6da77c2b7bbfe824a2d40c"
+        },
+        {
+          "id": "p340-b3",
+          "source": "Of course, we are interested in a function which is not always zero, so we might add the condition $f(1)\\ne0$. If we add the more specific condition $f(1)=10$, then (*) will imply that $f(x)=10^x$ for rational $x$, and $10^x$ could be *defined* as $f(x)$ for other $x$; in general $f(x)$ will equal $[f(1)]^x$ for rational $x$.",
+          "sourceSha256": "a05bca13c8e3d02d2b0ed49ea0b7c1ba5e72704841e248d7b80cb42d384c4bc5",
+          "translation": "当然，我们关心的是不恒为零的函数，因此不妨加上条件 $f(1)\\ne0$。如果再加上更具体的条件 $f(1)=10$，那么 (*) 就会推出，对有理数 $x$ 有 $f(x)=10^x$，而对其他 $x$，可以把 $10^x$ *定义*为 $f(x)$；一般地，对于有理数 $x$，$f(x)$ 将等于 $[f(1)]^x$。"
+        },
+        {
+          "id": "p340-b4",
+          "source": "One way to find such a function is suggested if we try to solve an apparently more difficult problem: find a *differentiable* function $f$ such that",
+          "sourceSha256": "d8ce1828af5dfbb8e130aff76d6f565c7848c55022b0412cce567f40dbc6f001",
+          "translation": "尝试解决一个看起来更困难的问题，反倒会提示寻找这种函数的一种办法：找一个*可微*函数 $f$，使得"
+        },
+        {
+          "id": "p340-b5",
+          "source": "$$\\begin{gathered}\nf(x+y)=f(x)\\cdot f(y)\\quad\\text{for all }x\\text{ and }y,\\\\\nf(1)=10.\n\\end{gathered}$$",
+          "sourceSha256": "3a22cc311b8f5e50d62fc4971b5faa86abc2959ed2b0aa319eac7cf86134f9fc"
+        },
+        {
+          "id": "p340-b6",
+          "source": "Assuming that such a function exists, we can try to find $f'$—knowing the derivative of $f$ might provide a clue to the definition of $f$ itself. Now",
+          "sourceSha256": "eab175a93449c6747e0a265da3578529e552a74a8b9f370621455bb79280cffd",
+          "translation": "假设这样的函数存在，可以尝试求 $f'$——知道 $f$ 的导数，也许能为 $f$ 本身的定义提供线索。现在"
+        },
+        {
+          "id": "p340-b7",
+          "source": "$$\\begin{aligned}\nf'(x)&=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}h\\\\\n&=\\lim_{h\\to0}\\frac{f(x)\\cdot f(h)-f(x)}h\\\\\n&=f(x)\\cdot\\lim_{h\\to0}\\frac{f(h)-1}h.\n\\end{aligned}$$",
+          "sourceSha256": "5fa1839f34e6911c8701adcb8cb8d9fd4c3b4ee681b600c555f0ca9641624511"
+        },
+        {
+          "id": "p340-b8",
+          "source": "The answer thus depends on",
+          "sourceSha256": "9e700eea407544bd0a1b955aa3ebd2ce6a36325df303b21f3cbb02a2b8601840",
+          "translation": "因此，答案取决于"
+        },
+        {
+          "id": "p340-b9",
+          "source": "$$f'(0)=\\lim_{h\\to0}\\frac{f(h)-1}h;$$",
+          "sourceSha256": "c154474488b0c6b45ea946e546ea03c7eb4ae0e086727bdb3e872a22d85f0ef5"
+        },
+        {
+          "id": "p340-b10",
+          "source": "for the moment assume this limit exists, and denote it by $\\alpha$. Then",
+          "sourceSha256": "1d7c6422ebabedd7bd2c6595c6b355eed4d82e803d2e8650c1974ec7a42d5433",
+          "translation": "暂且假定这个极限存在，记作 $\\alpha$。那么"
+        },
+        {
+          "id": "p340-b11",
+          "source": "$$f'(x)=\\alpha\\cdot f(x)\\quad\\text{for all }x.$$",
+          "sourceSha256": "b87b313c37a386e7f208d8ab1550b34dfda903a19c535184249b6227f34feef7"
+        },
+        {
+          "id": "p340-b12",
+          "source": "Even if $\\alpha$ could be computed, this approach seems self-defeating. The derivative of $f$ has been expressed in terms of $f$ again.",
+          "sourceSha256": "49aaeb664c7a45370a3443d103a73d7fa99e84bcd3e8a6fbc8c79e5b7867d034",
+          "translation": "即使能够算出 $\\alpha$，这条路似乎仍然是在绕圈子。$f$ 的导数又被表示成了 $f$ 本身。"
+        },
+        {
+          "id": "p340-b13",
+          "source": "If we examine the inverse function $f^{-1}=\\log_{10}$, the whole situation appears in a new light:",
+          "sourceSha256": "676e43298825b6bad5cdd4e48037451b4d1403c8ca4456b53dd6154150be1350",
+          "translation": "如果考察反函数 $f^{-1}=\\log_{10}$，整个局面就会呈现出全新的面貌："
+        },
+        {
+          "id": "p340-b14",
+          "source": "$$\\begin{aligned}\n\\log_{10}'(x)&=\\frac1{f'(f^{-1}(x))}\\\\\n&=\\frac1{\\alpha\\cdot f(f^{-1}(x))}=\\frac1{\\alpha x}.\n\\end{aligned}$$",
+          "sourceSha256": "0e90d4a38dbb7d51d2fbdb9aadcbe517b7cfc54f8c5d3f8a9dc991a65a49f3ea"
+        },
+        {
+          "id": "p340-b15",
+          "source": "The derivative of $f^{-1}$ is about as simple as one could ask! And, what is even more interesting, of all the integrals $\\int_a^b x^n\\,dx$ examined previously, the integral $\\int_a^b x^{-1}\\,dx$ is the only one which we cannot evaluate. Since $\\log_{10}1=0$ we should have",
+          "sourceSha256": "179dbebe4f440150a9e0ee3ff2fe05dd09c63d10dfa6c0a329b10c4fd0d9cad1",
+          "translation": "$f^{-1}$ 的导数几乎简单到了不能再简单的地步！而且，更有意思的是，在前面考察过的所有积分 $\\int_a^b x^n\\,dx$ 中，只有积分 $\\int_a^b x^{-1}\\,dx$ 还无法求出。由于 $\\log_{10}1=0$，应当有"
+        },
+        {
+          "id": "p340-b16",
+          "source": "$$\\frac1\\alpha\\int_1^x\\frac1t\\,dt=\\log_{10}x-\\log_{10}1=\\log_{10}x.$$",
+          "sourceSha256": "48f05b5fe171663234962d073409249509542188a626ee0ef051fcd700e15bc5"
+        }
+      ]
+    },
+    {
+      "printed": 341,
+      "sourceSha256": "d48e5920bc360bda0bac7f2d0473ce7425363c63b5a7eaaa741ab4fe534df1c9",
+      "blocks": [
+        {
+          "id": "p341-b1",
+          "source": "This suggests that we define $\\log_{10}x$ as $(1/\\alpha)\\int_1^x t^{-1}\\,dt$. The difficulty is that $\\alpha$ is unknown. One way of evading this difficulty is to define",
+          "sourceSha256": "003b557fa9be270cf4247195e254276691089e720b42f8efba176610998ced5b",
+          "translation": "这提示我们，可以把 $\\log_{10}x$ 定义为 $(1/\\alpha)\\int_1^x t^{-1}\\,dt$。困难是 $\\alpha$ 未知。绕过这个困难的一种方法是定义"
+        },
+        {
+          "id": "p341-b2",
+          "source": "$$\\log x=\\int_1^x\\frac1t\\,dt,$$",
+          "sourceSha256": "5dfc3458fa57a089c8da30fb9ced86036654537a7c4384bf50f82e0397698e06"
+        },
+        {
+          "id": "p341-b3",
+          "source": "and hope that this integral will be the logarithm to *some* base, which might be determined later. In any case, the function defined in this way is surely more reasonable, from a mathematical point of view, than $\\log_{10}$. The usefulness of $\\log_{10}$ depends on the important role of the number $10$ in arabic notation (and thus ultimately on the fact that we have ten fingers), while the function log provides a notation for an extremely simple integral, which cannot be evaluated in terms of any functions already known to us.",
+          "sourceSha256": "d366665e27d5b582d1a1586393fe47ec8e3b42378fa6c0f2e9654fc639bf58d3",
+          "translation": "并希望这个积分是以*某个*数为底的对数，至于这个底，也许以后可以确定。无论如何，从数学的观点来看，这样定义的函数肯定比 $\\log_{10}$ 更合理。$\\log_{10}$ 的用处，依赖于数字 $10$ 在阿拉伯数字记数法中的重要地位（因而最终依赖于我们有十根手指这一事实）；而函数 log 则为一个极其简单、却无法用已知任何函数表示的积分，提供了一个记号。"
+        },
+        {
+          "id": "p341-b4",
+          "source": "**DEFINITION** If $x>0$, then",
+          "sourceSha256": "c85c351d3487f9fe36c4122b76285638f1935defb23e849256cc9ddd66328071",
+          "translation": "**定义** 如果 $x>0$，那么"
+        },
+        {
+          "id": "p341-b5",
+          "source": "$$\\mathbf{log}\\,x=\\int_1^x\\frac1t\\,dt.$$",
+          "sourceSha256": "c1e1c50615ad15506bc8872ed9a9bca9c22e0186fb419bb22328aa4a7f693172"
+        },
+        {
+          "id": "p341-b6",
+          "source": "The graph of log is shown in Figure 1. Notice that if $x>1$, then $\\log x>0$, and if $0<x<1$, then $\\log x<0$, since, by our conventions,",
+          "sourceSha256": "05643075da5661e66465c466348993d965136bd1d10d38e13e382176ee72ddf8",
+          "translation": "log 的图像如图 1 所示。注意，若 $x>1$，则 $\\log x>0$；若 $0<x<1$，则 $\\log x<0$，因为按照我们的约定，"
+        },
+        {
+          "id": "p341-b7",
+          "source": "$$\\int_1^x\\frac1t\\,dt=-\\int_x^1\\frac1t\\,dt<0.$$",
+          "sourceSha256": "3ffee2175c3f9bec304ddf3338364864ecd5f93634758fd40ed0937ae789af4c"
+        },
+        {
+          "id": "p341-b8",
+          "source": "For $x\\le0$, a number $\\log x$ cannot be defined in this way, because $f(t)=1/t$ is not bounded on $[x,1]$.",
+          "sourceSha256": "e4f6e5e85ed3bd55d47cf0a4f7b9645b88ba2f07b28d44f563e867a9ef8bdbaf",
+          "translation": "对于 $x\\le0$，无法用这种方式定义数 $\\log x$，因为 $f(t)=1/t$ 在 $[x,1]$ 上无界。"
+        },
+        {
+          "id": "p341-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:602px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"450 998 602 308\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0360.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "69c36050996d4e4bd95526060d115fbc69c3fee62e9b7255965b63a7cd7e223d"
+        },
+        {
+          "id": "p341-b10",
+          "source": "The justification for the notation “log” comes from the following theorem.",
+          "sourceSha256": "8609e6f7d8a5602f91b1233f92532a2b3a36c639da350cae0fac60d126d11522",
+          "translation": "采用记号“log”的理由，来自下面的定理。"
+        },
+        {
+          "id": "p341-b11",
+          "source": "**THEOREM 1** If $x,y>0$, then",
+          "sourceSha256": "fcdcdcce9049412316382f050c4be34a8c87e5ca0f135f9958c3c0d70a12448e",
+          "translation": "**定理 1** 如果 $x,y>0$，那么"
+        },
+        {
+          "id": "p341-b12",
+          "source": "$$\\log(xy)=\\log x+\\log y.$$",
+          "sourceSha256": "aaa0771d7e0108b8f027f86b4271030179b42524aac152635eb453e22ef72641"
+        }
+      ]
+    },
+    {
+      "printed": 342,
+      "sourceSha256": "7fa29ae619d6677887c42d174d108973f958a5909d987ecb895399c6db6a4855",
+      "blocks": [
+        {
+          "id": "p342-b1",
+          "source": "**PROOF** Notice first that $\\log'(x)=1/x$, by the Fundamental Theorem of Calculus. Now choose a number $y>0$ and let",
+          "sourceSha256": "cc4b0b485289335113bbdde06ef1f495c3482150232ff3e16a1cf67887f604fd",
+          "translation": "**证明** 首先注意，由微积分基本定理，有 $\\log'(x)=1/x$。现在选取一个数 $y>0$，令"
+        },
+        {
+          "id": "p342-b2",
+          "source": "$$f(x)=\\log(xy).$$",
+          "sourceSha256": "b3580a085642a3b8ec5c1828c97c2e90f0a905e7d6b8aff254d74f1adcc07acb"
+        },
+        {
+          "id": "p342-b3",
+          "source": "Then",
+          "sourceSha256": "0597f441dcca7c9bb0a79da4d94d03c523c031a3384009afff47ac1fd1a72b95",
+          "translation": "那么"
+        },
+        {
+          "id": "p342-b4",
+          "source": "$$f'(x)=\\log'(xy)\\cdot y=\\frac1{xy}\\cdot y=\\frac1x.$$",
+          "sourceSha256": "ddd11962917140ec3810ea9f36c29556aa3091c8c2bdbf76b79b4a47b649bfe2"
+        },
+        {
+          "id": "p342-b5",
+          "source": "Thus $f'=\\log'$. This means that there is a number $c$ such that",
+          "sourceSha256": "fe61de67545e4ca91799a3b3fa25ed247743c19ecd80c1857a8ed60eaaa5a5c5",
+          "translation": "于是 $f'=\\log'$。这意味着存在一个数 $c$，使得"
+        },
+        {
+          "id": "p342-b6",
+          "source": "$$f(x)=\\log x+c\\quad\\text{for all }x>0,$$",
+          "sourceSha256": "a3a3f112249df148ba4d7d0f6aa4a94a32e4a9c8b193b1ab40a5a37615e469ef"
+        },
+        {
+          "id": "p342-b7",
+          "source": "that is,",
+          "sourceSha256": "5647e274eb21c46ac72b17e43eb17c3f42c4cee66202d6dce25ecdaefba31d95",
+          "translation": "即"
+        },
+        {
+          "id": "p342-b8",
+          "source": "$$\\log(xy)=\\log x+c\\quad\\text{for all }x>0.$$",
+          "sourceSha256": "d2df2e44fd09da070558f90f41f10b36445b7cbfd9a76948a8e5319bdccf3615"
+        },
+        {
+          "id": "p342-b9",
+          "source": "The number $c$ can be evaluated by noting that when $x=1$ we obtain",
+          "sourceSha256": "17c7e02005caf725958eeb724af3ba9ff4085965eeaafa592d1ba8f604d66fb7",
+          "translation": "令 $x=1$，得到下面的等式，从而可以求出数 $c$："
+        },
+        {
+          "id": "p342-b10",
+          "source": "$$\\begin{aligned}\n\\log(1\\cdot y)&=\\log1+c\\\\\n&=c.\n\\end{aligned}$$",
+          "sourceSha256": "44befcfe7992170acf81763f5844172dd86b425f21fcc0c8799ca1035e191961"
+        },
+        {
+          "id": "p342-b11",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "因此"
+        },
+        {
+          "id": "p342-b12",
+          "source": "$$\\log(xy)=\\log x+\\log y\\quad\\text{for all }x.$$",
+          "sourceSha256": "d450c575eda7139ebb948213404f130273eef271a1a25cffb9fb0bb12ff70165"
+        },
+        {
+          "id": "p342-b13",
+          "source": "Since this is true for all $y>0$, the theorem is proved. ▮",
+          "sourceSha256": "3b97f4c669f51525a69e9d0c38f5769dfc1815df9bd8c2f3cbdfefe585e4c84e",
+          "translation": "由于这对所有 $y>0$ 都成立，定理得证。▮"
+        },
+        {
+          "id": "p342-b14",
+          "source": "**COROLLARY 1** If $n$ is a natural number and $x>0$, then",
+          "sourceSha256": "07294e4401d3330539889cfddc5b8ecbe2b75dc67294c3ee9ef4a72e10b16d44",
+          "translation": "**推论 1** 如果 $n$ 是自然数，且 $x>0$，那么"
+        },
+        {
+          "id": "p342-b15",
+          "source": "$$\\log(x^n)=n\\log x.$$",
+          "sourceSha256": "25264783510b12fab74c4c2514a067ba4e76244ed71444ffb28d8f79d66828ae"
+        },
+        {
+          "id": "p342-b16",
+          "source": "**PROOF** Let to you (use induction). ▮",
+          "sourceSha256": "6ea42aef44400c0aca0c20bf11b83f46165d49e6052499ef93810414416c51d2",
+          "translation": "**证明** 留给你（使用归纳法）。▮"
+        },
+        {
+          "id": "p342-b17",
+          "source": "**COROLLARY 2** If $x,y>0$, then",
+          "sourceSha256": "fe848988764c2772bc47ec91dae261ab352ca0b7ba6282aca1041bdaf1df5902",
+          "translation": "**推论 2** 如果 $x,y>0$，那么"
+        },
+        {
+          "id": "p342-b18",
+          "source": "$$\\log\\left(\\frac xy\\right)=\\log x-\\log y.$$",
+          "sourceSha256": "9d2ce54255955860261d41ab1ffbc11250103f74b3b477b63f8dc15838a4c957"
+        },
+        {
+          "id": "p342-b19",
+          "source": "**PROOF** This follows from the equations",
+          "sourceSha256": "9d61383653bd2e0a4fba80353fca2b8c2fbe8430e28f4a248751d946a0aaf3dd",
+          "translation": "**证明** 这可以由以下等式得到："
+        },
+        {
+          "id": "p342-b20",
+          "source": "$$\\log x=\\log\\left(\\frac xy\\cdot y\\right)=\\log\\left(\\frac xy\\right)+\\log y.\\ \\text{▮}$$",
+          "sourceSha256": "bf244dd5955d30a761fcf0446922919fdf1c66f78d4797aef4600e865df3ccce"
+        },
+        {
+          "id": "p342-b21",
+          "source": "Theorem 1 provides some important information about the graph of log. The function log is clearly increasing, but since $\\log'(x)=1/x$, the derivative becomes very small as $x$ becomes large, and log consequently grows more and more slowly. It is not immediately clear whether log is bounded or unbounded on $\\mathbf R$. Observe, however, that for a natural number $n$,",
+          "sourceSha256": "ed860c47dbed84f4991ede3721c19a5c298ce559ded2289c1ed83cce475b7916",
+          "translation": "定理 1 提供了关于 log 图像的一些重要信息。函数 log 显然递增，但由于 $\\log'(x)=1/x$，当 $x$ 变大时，导数会变得很小，因此 log 增长得越来越慢。log 在 $\\mathbf R$ 上究竟有界还是无界，并不能立即看清。不过，注意对于自然数 $n$，"
+        },
+        {
+          "id": "p342-b22",
+          "source": "$$\\log(2^n)=n\\log2\\quad(\\text{and }\\log2>0);$$",
+          "sourceSha256": "2364cb49f45ad5988cdfd224820d7b5defbea89741a7bc77c17f8fcc53c3854b"
+        },
+        {
+          "id": "p342-b23",
+          "source": "it follows that log is, in fact, not bounded above. Similarly,",
+          "sourceSha256": "8506d7733d992a91b8f156edf9221dfa6ec4e3a308e67a5ee02f732e71954e1c",
+          "translation": "由此可知，log 实际上没有上界。类似地，"
+        },
+        {
+          "id": "p342-b24",
+          "source": "$$\\log\\left(\\frac1{2^n}\\right)=\\log1-\\log2^n=-n\\log2;$$",
+          "sourceSha256": "0a4382ee6883373c733c0492dcd0dbb2d15d1245a1c4aa89dbe3e57f6b931f57"
+        }
+      ]
+    },
+    {
+      "printed": 343,
+      "sourceSha256": "e1903942062a75268a67ffebaaaecdd4b6c3522cb4f39a0bcb1c7fddd9adc3e1",
+      "blocks": [
+        {
+          "id": "p343-b1",
+          "source": "therefore log is not bounded below on $(0,1)$. Since log is continuous, it actually takes on all values. Therefore $\\mathbf R$ is the domain of the function $\\log^{-1}$. This important function has a special name, whose appropriateness will soon become clear.",
+          "sourceSha256": "c19f02896a24ed01a9e7263f948650f281951483b62b0973f71c30f08658033c",
+          "translation": "所以 log 在 $(0,1)$ 上没有下界。由于 log 连续，它实际上取遍所有值。因此，$\\mathbf R$ 是函数 $\\log^{-1}$ 的定义域。这个重要函数有一个专门的名称，很快就会看出这个名称为何恰当。"
+        },
+        {
+          "id": "p343-b2",
+          "source": "**DEFINITION** The “exponential function,” **exp**, is defined as $\\log^{-1}$.",
+          "sourceSha256": "377475abcca3477c4f4cc42b31b3d1bfb8b10bce6bda50fbf3ead32c018cbbb5",
+          "translation": "**定义** “指数函数” **exp** 定义为 $\\log^{-1}$。"
+        },
+        {
+          "id": "p343-b3",
+          "source": "The graph of exp is shown in Figure 2. Since $\\log x$ is defined only for $x>0$, we always have $\\exp(x)>0$. The derivative of the function exp is easy to determine.",
+          "sourceSha256": "6ab00114c41a7e8bced6a98560d87a41b2240715c8e9bddab42aafef59e8ce7f",
+          "translation": "exp 的图像如图 2 所示。由于 $\\log x$ 只对 $x>0$ 有定义，因此始终有 $\\exp(x)>0$。函数 exp 的导数很容易确定。"
+        },
+        {
+          "id": "p343-b4",
+          "source": "**THEOREM 2** For all numbers $x$,",
+          "sourceSha256": "7793f751df4db1cac6cba5173f5616fcacadeeb05faa21415f1589589b1c0f4d",
+          "translation": "**定理 2** 对于所有数 $x$，"
+        },
+        {
+          "id": "p343-b5",
+          "source": "$$\\exp'(x)=\\exp(x).$$",
+          "sourceSha256": "c460ffd9cb5be9ff1e2f8fcd0883ffa3b9310d52eb874c884d68554fa9b5327c"
+        },
+        {
+          "id": "p343-b6",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p343-b7",
+          "source": "$$\\begin{aligned}\n\\exp'(x)&=(\\log^{-1})'(x)=\\frac1{\\log'(\\log^{-1}(x))}\\\\\n&=\\frac1{\\dfrac1{\\log^{-1}(x)}}\\\\\n&=\\log^{-1}(x)=\\exp(x).\\ \\text{▮}\n\\end{aligned}$$",
+          "sourceSha256": "9d49109c78431d0b08e95836597a74d39c99012d6bae8aaf3571afeb68911f46"
+        },
+        {
+          "id": "p343-b8",
+          "source": "A second important property of exp is an easy consequence of Theorem 1.",
+          "sourceSha256": "9cffaa8347eb74d190511aa8069ac64ea3e20ca0cf0e942264b08818e8ecbd94",
+          "translation": "exp 的第二个重要性质，是定理 1 的一个简单推论。"
+        },
+        {
+          "id": "p343-b9",
+          "source": "**THEOREM 3** If $x$ and $y$ are any two numbers, then",
+          "sourceSha256": "c9e5cff3835e7837d6cf56a3f7f60c9a6bd598c9e811e11116e10a7ae44e1fbb",
+          "translation": "**定理 3** 如果 $x$ 和 $y$ 是任意两个数，那么"
+        },
+        {
+          "id": "p343-b10",
+          "source": "$$\\exp(x+y)=\\exp(x)\\cdot\\exp(y).$$",
+          "sourceSha256": "b233115930f77a9acfe302120244474394325c708450b4d29a3eb200c4d57614"
+        },
+        {
+          "id": "p343-b11",
+          "source": "**PROOF** Let $x'=\\exp(x)$ and $y'=\\exp(y)$, so that",
+          "sourceSha256": "007c710e4cff19ce1eb1dcc6e63882ca9a9ffb640a8d19ce6fe361023728b33b",
+          "translation": "**证明** 令 $x'=\\exp(x)$ 和 $y'=\\exp(y)$，于是"
+        },
+        {
+          "id": "p343-b12",
+          "source": "$$\\begin{aligned}\nx&=\\log x',\\\\\ny&=\\log y'.\n\\end{aligned}$$",
+          "sourceSha256": "ae65efdb1696e5c90663cd3bc99ec91db20d2866b6b9dbe23a2b5ab08ae44908"
+        },
+        {
+          "id": "p343-b13",
+          "source": "Then",
+          "sourceSha256": "0597f441dcca7c9bb0a79da4d94d03c523c031a3384009afff47ac1fd1a72b95",
+          "translation": "那么"
+        },
+        {
+          "id": "p343-b14",
+          "source": "$$x+y=\\log x'+\\log y'=\\log(x'y').$$",
+          "sourceSha256": "cf0b945490384774f73cdeeb94e2893b1a345d70c45c586380e119b6d74ea006"
+        },
+        {
+          "id": "p343-b15",
+          "source": "This means that",
+          "sourceSha256": "041259ea12f12eb18f933aa1e8d8e689e381c18f1f462e7a4542e2bc357126de",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p343-b16",
+          "source": "$$\\exp(x+y)=x'y'=\\exp(x)\\cdot\\exp(y).\\ \\text{▮}$$",
+          "sourceSha256": "0c4afb35e373e16d887763f5123b25b0ae9cfacb46bea4b42984f7e92961b75e"
+        },
+        {
+          "id": "p343-b17",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:315px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"48 1114 315 290\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0362.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "3b37b439750f1bdcfcd73eb5093a082eba78ccaef21ae41db8b25f96f154254a"
+        },
+        {
+          "id": "p343-b18",
+          "source": "This theorem, and the discussion at the beginning of this chapter, suggest that $\\exp(1)$ is particularly important. There is, in fact, a special symbol for this number.",
+          "sourceSha256": "af1feb74f5d278a56f1844c945a89f0684347fecb1318f3e2e77116c287f30b9",
+          "translation": "这个定理以及本章开头的讨论，表明 $\\exp(1)$ 格外重要。事实上，这个数有一个专门的符号。"
+        },
+        {
+          "id": "p343-b19",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p343-b20",
+          "source": "$$\\mathbf e=\\exp(1).$$",
+          "sourceSha256": "d4580b5bbe9d3d2b27042da074d815a2f2dbab2f19335295af83879053e0b4a9"
+        }
+      ]
+    },
+    {
+      "printed": 344,
+      "sourceSha256": "8c71ae268a9983d6f4f39bc82d6fbb32e4f8d636f6e1843d72219eabafd02a29",
+      "blocks": [
+        {
+          "id": "p344-b1",
+          "source": "This definition is equivalent to the equation",
+          "sourceSha256": "5133b9a0e1c8676b22741c19cea9ea4553cd20c7073554d6c76182cad3cba9af",
+          "translation": "这个定义等价于等式"
+        },
+        {
+          "id": "p344-b2",
+          "source": "$$1=\\log e=\\int_1^e\\frac1t\\,dt.$$",
+          "sourceSha256": "4bcf9f35c6036cb37c37f036d17f71fed0c2707fa01275aee91c91d27a31b00b"
+        },
+        {
+          "id": "p344-b3",
+          "source": "As illustrated in Figure 3,",
+          "sourceSha256": "5f08bfef11a78ffa983cdd387f027aa2c5f517e6a2962c6e5fdbe2c94f6d02e5",
+          "translation": "如图 3 所示，"
+        },
+        {
+          "id": "p344-b4",
+          "source": "$$\\int_1^2\\frac1t\\,dt<1,\\quad\\text{since }1\\cdot(2-1)\\text{ is an upper sum for }f(t)=1/t\\text{ on }[1,2],$$",
+          "sourceSha256": "ea5dc69580ea94a9c7e0480faed218c624d71f0d55c4a5082c9bb8a6e59b812c"
+        },
+        {
+          "id": "p344-b5",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "并且"
+        },
+        {
+          "id": "p344-b6",
+          "source": "$$\\int_1^4\\frac1t\\,dt>1,\\quad\\text{since }\\tfrac12\\cdot(2-1)+\\tfrac14\\cdot(4-2)=1\\text{ is a lower sum for }f(t)=1/t\\text{ on }[1,4].$$",
+          "sourceSha256": "9b6c2e1c37622370ff21e379ce6e8db461750da7c3bedb629df1c1563c53f802"
+        },
+        {
+          "id": "p344-b7",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:388px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 258 388 299\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0363.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "9987ba339de5fdb3c8fb29da4075ff4581a73c388594505015bac59446cb943c"
+        },
+        {
+          "id": "p344-b8",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "因此"
+        },
+        {
+          "id": "p344-b9",
+          "source": "$$\\int_1^2\\frac1t\\,dt<\\int_1^e\\frac1t\\,dt<\\int_1^4\\frac1t\\,dt,$$",
+          "sourceSha256": "f1d822d8fcbae6cf9c23abd271c511c068ca00f0b9421bd3c947b34c1bd8c36c"
+        },
+        {
+          "id": "p344-b10",
+          "source": "which shows that",
+          "sourceSha256": "15e0605ac8a8544c0fd25e712e835e401071f50abe3cf1deea2bf11eaedeb534",
+          "translation": "这表明"
+        },
+        {
+          "id": "p344-b11",
+          "source": "$$2<e<4.$$",
+          "sourceSha256": "7ae95c03ef456093cbc965a3d38274c2b57e01c57d7ee09defe243ad5a8ec582"
+        },
+        {
+          "id": "p344-b12",
+          "source": "In Chapter 20 we will find much better approximations for $e$, and also prove that $e$ is irrational (the proof is much easier than the proof that $\\pi$ is irrational!).",
+          "sourceSha256": "b03078b2efd218d51e87870e606f82cb8723c040d55e992bdf55e64ce6668d05",
+          "translation": "第 20 章中，我们将得到 $e$ 的好得多的近似值，还将证明 $e$ 是无理数（证明比 $\\pi$ 是无理数的证明容易得多！）。"
+        },
+        {
+          "id": "p344-b13",
+          "source": "As we remarked at the beginning of the chapter, the equation",
+          "sourceSha256": "0274ee02cb4c674103e173b51ecce88b7126d3a45215f51660664d02f13695ee",
+          "translation": "正如本章开头所说，等式"
+        },
+        {
+          "id": "p344-b14",
+          "source": "$$\\exp(x+y)=\\exp(x)\\cdot\\exp(y)$$",
+          "sourceSha256": "4d03c12a2a4d2753eb9767ec7ad14ea22f4631106edda38749afcdfe55b4bd54"
+        },
+        {
+          "id": "p344-b15",
+          "source": "implies that",
+          "sourceSha256": "dcd7d45f15d02138689c99abbf9f84fbe89dedc20acdbe880ae1af067de4b0ec",
+          "translation": "意味着"
+        },
+        {
+          "id": "p344-b16",
+          "source": "$$\\begin{aligned}\n\\exp(x)&=[\\exp(1)]^x\\\\\n&=e^x,\\quad\\text{for all }\\mathit{rational}\\ x.\n\\end{aligned}$$",
+          "sourceSha256": "61d8520ffb1e19a800498b7886f3f191e924b50ca0566057270484b59a1e41f9"
+        },
+        {
+          "id": "p344-b17",
+          "source": "Since exp is defined for all $x$ and $\\exp(x)=e^x$ for rational $x$, it is consistent with our earlier use of the exponential notation to *define* $e^x$ as $\\exp(x)$ for all $x$.",
+          "sourceSha256": "48468724e53e92dba200c69b05bccc159fe09873994e1146300b2dac2e0fe13f",
+          "translation": "由于 exp 对所有 $x$ 都有定义，而且对有理数 $x$ 有 $\\exp(x)=e^x$，因此，对所有 $x$，把 $e^x$ *定义*为 $\\exp(x)$，与我们此前对指数记号的使用是一致的。"
+        },
+        {
+          "id": "p344-b18",
+          "source": "**DEFINITION** For any number $x$,",
+          "sourceSha256": "666e7d607946ea7f027509df80407e963693eb42eafa072934c93bc47282f0d4",
+          "translation": "**定义** 对于任意数 $x$，"
+        },
+        {
+          "id": "p344-b19",
+          "source": "$$\\mathbf e^{\\mathbf x}=\\exp(x).$$",
+          "sourceSha256": "f5b6fa405f52c9bca04aa1c00eba98727d92a40ef70813dc7cf06673e34b1349"
+        },
+        {
+          "id": "p344-b20",
+          "source": "The terminology “exponential function” should now be clear. We have succeeded in defining $e^x$ for an arbitrary (even irrational) exponent $x$. We have not yet defined $a^x$, if $a\\ne e$, but there is a reasonable principle to guide us in the attempt. If $x$ is *rational*, then",
+          "sourceSha256": "0b6383fff234ffe365467ada59c429d7609fcfbb719944707d60856820e54cf1",
+          "translation": "现在，“指数函数”这个名称应该已经清楚了。我们成功地为任意指数 $x$（即使是无理数）定义了 $e^x$。当 $a\\ne e$ 时，我们尚未定义 $a^x$，但有一个合理的原则可以指导这个尝试。如果 $x$ 是*有理数*，那么"
+        },
+        {
+          "id": "p344-b21",
+          "source": "$$a^x=(e^{\\log a})^x=e^{x\\log a}.$$",
+          "sourceSha256": "cda10875f7ec3b8090247093d21640069b4748782894665784f5d96aa1e025a5"
+        },
+        {
+          "id": "p344-b22",
+          "source": "But the last expression is defined for all $x$, so we can use it to *define* $a^x$.",
+          "sourceSha256": "091f2033d7d6b7c5dcbf7c50294576be1884b893a0317dcbb5c104f98157a750",
+          "translation": "但最后一个表达式对所有 $x$ 都有定义，因此可以用它来*定义* $a^x$。"
+        }
+      ]
+    },
+    {
+      "printed": 345,
+      "sourceSha256": "2c1baf78e48af0201ac82bc022a02afbca5fbd52640202056943f7e93183e335",
+      "blocks": [
+        {
+          "id": "p345-b1",
+          "source": "**DEFINITION** If $a>0$, then, for any real number $x$,",
+          "sourceSha256": "f170ac6b0fc1016fe212a6c26e6e56ce096e1940e1751ecd3015ce7397c79a78",
+          "translation": "**定义** 如果 $a>0$，那么对于任意实数 $x$，"
+        },
+        {
+          "id": "p345-b2",
+          "source": "$$\\mathbf a^{\\mathbf x}=e^{x\\log a}.$$",
+          "sourceSha256": "407649590efa3cb9887c4e6af82724963411ffdeb260b1bb64925ad9a9a0f99e"
+        },
+        {
+          "id": "p345-b3",
+          "source": "(If $a=e$ this definition clearly agrees with the previous one.)",
+          "sourceSha256": "af9a1768792c0f9214a965c7661b9d9af8f50e446ac1115a5fe4c940346f6939",
+          "translation": "（若 $a=e$，这个定义显然与前面的定义一致。）"
+        },
+        {
+          "id": "p345-b4",
+          "source": "The requirement $a>0$ is necessary, in order that $\\log a$ be defined. This is not unduly restrictive since, for example, we would not even expect",
+          "sourceSha256": "c213ef69bc3e2fe79fab454a32852683098285cf328243400e905c71a75a794f",
+          "translation": "要求 $a>0$ 是必要的，这样 $\\log a$ 才有定义。这并非过分的限制，因为例如，我们本来就不会指望"
+        },
+        {
+          "id": "p345-b5",
+          "source": "$$(-1)^{1/2}\\overset?=\\sqrt{-1}$$",
+          "sourceSha256": "d1b3e22a282766f1dcee34f118c008878e6feebcfb4ecf0f4f559be5f8efaf93"
+        },
+        {
+          "id": "p345-b6",
+          "source": "to be defined. (Of course, for certain rational $x$, the symbol $a^x$ will make sense, according to the old definition; for example,",
+          "sourceSha256": "d88c8d3e5be9dfe45f69024fb3f8890b15c82153b4803c7e7e2c2f96e5777787",
+          "translation": "有定义。（当然，对某些有理数 $x$，按旧定义，符号 $a^x$ 仍然有意义；例如，"
+        },
+        {
+          "id": "p345-b7",
+          "source": "$$(-1)^{1/3}=\\sqrt[3]{-1}=-1.)$$",
+          "sourceSha256": "c159bea5cd70baf91d417884124c46673d79af39a3f8885e79794fbd7584c494"
+        },
+        {
+          "id": "p345-b8",
+          "source": "Our definition of $a^x$ was designed to ensure that",
+          "sourceSha256": "6d62575a63d999b10f649a0194893512ec06e46ca3e31739eb90363678c3077b",
+          "translation": "我们对 $a^x$ 的定义，原本就是为了保证"
+        },
+        {
+          "id": "p345-b9",
+          "source": "$$ (e^x)^y=e^{xy}\\quad\\text{for all }x\\text{ and }y.$$",
+          "sourceSha256": "2dbafcacd478f8a72244bfaa0ebe74d3a2200cc80247da59d11a22e4dc2b3516"
+        },
+        {
+          "id": "p345-b10",
+          "source": "As we would hope, this equation turns out to be true when $e$ is replaced by any number $a>0$. The proof is a moderately involved unraveling of terminology. At the same time we will prove the other important properties of $a^x$.",
+          "sourceSha256": "bcad66858593246bf824bd614b7530050078dc9e0e438d49f5c9d0fc244c57a7",
+          "translation": "正如所希望的那样，将 $e$ 换成任意数 $a>0$，这个等式仍然成立。证明需要一番略显繁复的记号展开。我们还将同时证明 $a^x$ 的其他重要性质。"
+        },
+        {
+          "id": "p345-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:422px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"38 401 422 374\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0364.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "d497967114bbb9672adb2b007590226e78019e631c71b5b5d4a4d8bd7a70b6db"
+        },
+        {
+          "id": "p345-b12",
+          "source": "**THEOREM 4** If $a>0$, then",
+          "sourceSha256": "47e11b964725764c5c7f0dfe90a6775cbe4223304c4f0be52b0c7305ab811873",
+          "translation": "**定理 4** 如果 $a>0$，那么"
+        },
+        {
+          "id": "p345-b13",
+          "source": "$$\\tag{1}(a^b)^c=a^{bc}\\quad\\text{for all }b,c.$$",
+          "sourceSha256": "8b99a4bce3c0747f2759526816802add485453c54d93d73c23f5ece8ef2e70b5"
+        },
+        {
+          "id": "p345-b14",
+          "source": "(Notice that $a^b$ will automatically be positive, so $(a^b)^c$ will be defined);",
+          "sourceSha256": "af0bced258cb1bedbe360bfcfb5861bf464a125d191e2bd880b43680c58d0c3b",
+          "translation": "（注意，$a^b$ 自动为正，因此 $(a^b)^c$ 有定义）；"
+        },
+        {
+          "id": "p345-b15",
+          "source": "$$\\tag{2}a^1=a\\text{ and }a^{x+y}=a^x\\cdot a^y\\quad\\text{for all }x,y.$$",
+          "sourceSha256": "49551814f8f7996b584dd461ef13fec7dbe98b9ce0f9ab7180ffb53e2d15e171"
+        },
+        {
+          "id": "p345-b16",
+          "source": "(Notice that (2) implies that this definition of $a^x$ agrees with the old one for all rational $x$.)",
+          "sourceSha256": "f7708285814bc58b61b69590abafa01872857bc73f50806362821a2e21f92184",
+          "translation": "（注意，(2) 意味着，这个 $a^x$ 的定义对所有有理数 $x$ 都与旧定义一致。）"
+        },
+        {
+          "id": "p345-b17",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p345-b18",
+          "source": "$$\\tag{1}(a^b)^c=e^{c\\log a^b}=e^{c\\log(e^{b\\log a})}=e^{c(b\\log a)}=e^{bc\\log a}=a^{bc}.$$",
+          "sourceSha256": "24817de8486f3ffd2dad4ee4d977ff9e3acdc5e82d3e447b70e722844ef45110"
+        },
+        {
+          "id": "p345-b19",
+          "source": "(Each of the steps in this string of equalities depends upon our last definition, or the fact that $\\exp=\\log^{-1}$.)",
+          "sourceSha256": "e38b846ce8ac6e7874d96fe2c29d574966bb590dabe0f269b928411d7617c7bc",
+          "translation": "（这一串等式中的每一步，都依赖于刚才的定义，或者依赖于 $\\exp=\\log^{-1}$ 这一事实。）"
+        },
+        {
+          "id": "p345-b20",
+          "source": "$$\\tag{2}\\begin{aligned}\na^1&=e^{1\\log a}=e^{\\log a}=a,\\\\\na^{x+y}&=e^{(x+y)\\log a}=e^{x\\log a+y\\log a}=e^{x\\log a}\\cdot e^{y\\log a}=a^x\\cdot a^y.\\ \\text{▮}\n\\end{aligned}$$",
+          "sourceSha256": "5667745e73ac4d6b9101933974da7a0bb4b9d2ac3194972dd058a1266c8b7692"
+        },
+        {
+          "id": "p345-b21",
+          "source": "Figure 4 shows the graphs of $f(x)=a^x$ for several different $a$. The behavior of the function depends on whether $a<1$, $a=1$, or $a>1$. If $a=1$, then",
+          "sourceSha256": "dee2e8022f02ad9b06c67840d86e5cb4b1f3898b3fe7e652697234e2059e4973",
+          "translation": "图 4 画出了几个不同 $a$ 所对应的 $f(x)=a^x$ 的图像。函数的变化取决于 $a<1$、$a=1$ 还是 $a>1$。如果 $a=1$，那么"
+        }
+      ]
+    },
+    {
+      "printed": 346,
+      "sourceSha256": "40817edccff5b42ce8dcf0753ce5b6ae91a1839cfacfa1d4b5f0c329f7a47e72",
+      "blocks": [
+        {
+          "id": "p346-b1",
+          "source": "$f(x)=1^x=1$. Suppose $a>1$. In this case $\\log a>0$. Thus,",
+          "sourceSha256": "a889dafb197223300b80231f7ac97913b145c3481acb4dc48f411aaad2b38105",
+          "translation": "$f(x)=1^x=1$。假设 $a>1$。这时 $\\log a>0$。因此，"
+        },
+        {
+          "id": "p346-b2",
+          "source": "$$\\begin{aligned}\n\\text{if}\\qquad&x<y,\\\\\n\\text{then}\\qquad&x\\log a<y\\log a,\\\\\n\\text{so}\\qquad&e^{x\\log a}<e^{y\\log a},\\\\\n\\text{i.e.,}\\qquad&a^x<a^y.\n\\end{aligned}$$",
+          "sourceSha256": "96abf785f9d7572319bfa19228da2d8cabb1e5219122d16027ce444a2a46bf8c"
+        },
+        {
+          "id": "p346-b3",
+          "source": "Thus the function $f(x)=a^x$ is increasing. On the other hand, if $0<a<1$, so that $\\log a<0$, the same sort of reasoning shows that the function $f(x)=a^x$ is decreasing. In either case, if $a>0$ and $a\\ne1$, then $f(x)=a^x$ is one-one. Since exp takes on every positive value it is also easy to see that $a^x$ takes on every positive value. Thus the inverse function is defined for all positive numbers, and takes on all values. If $f(x)=a^x$, then $f^{-1}$ is the function usually denoted by $\\log_a$ (Figure 5).",
+          "sourceSha256": "d2b1d7e164402ef734f19b62c71bc99e4f6ca45fcfb7f35528887ffbc8d46ae0",
+          "translation": "所以函数 $f(x)=a^x$ 递增。另一方面，如果 $0<a<1$，于是 $\\log a<0$，同样的推理表明，函数 $f(x)=a^x$ 递减。不论哪种情形，只要 $a>0$ 且 $a\\ne1$，$f(x)=a^x$ 就是一一的。由于 exp 取遍所有正值，也容易看出 $a^x$ 取遍所有正值。因此，反函数对所有正数都有定义，并取遍所有值。如果 $f(x)=a^x$，那么 $f^{-1}$ 就是通常记作 $\\log_a$ 的函数（图 5）。"
+        },
+        {
+          "id": "p346-b4",
+          "source": "Just as $a^x$ can be expressed in terms of exp, so $\\log_a$ can be expressed in terms of log. Indeed,",
+          "sourceSha256": "374095a3c432f1c2794be029e4a78d657442a9bf1ed180dea90c4ddb0802e347",
+          "translation": "正如 $a^x$ 可以用 exp 表示一样，$\\log_a$ 也可以用 log 表示。事实上，"
+        },
+        {
+          "id": "p346-b5",
+          "source": "$$\\begin{aligned}\n\\text{if}\\qquad&y=\\log_a x,\\\\\n\\text{then}\\qquad&x=a^y=e^{y\\log a},\\\\\n\\text{so}\\qquad&\\log x=y\\log a,\\\\\n\\text{or}\\qquad&y=\\frac{\\log x}{\\log a}.\n\\end{aligned}$$",
+          "sourceSha256": "67369fceca265d378f562fbb2e557171fde14e6118173519fdf042dbb2dc4b46"
+        },
+        {
+          "id": "p346-b6",
+          "source": "In other words,",
+          "sourceSha256": "376930fb6d6ad7ed38259f212227b6fc302725bffd7fa614f54665847d80f308",
+          "translation": "换句话说，"
+        },
+        {
+          "id": "p346-b7",
+          "source": "$$\\log_a x=\\frac{\\log x}{\\log a}.$$",
+          "sourceSha256": "ef1e6a52e1180440d7a3392971c94616df7b3aa3ae3f32b0e997598f079175d2"
+        },
+        {
+          "id": "p346-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:448px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"32 580 448 342\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0365.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "0c888dd659027a45102a7f162bcaf11fc54c4ceaae15cd0e02046be0291a077e"
+        },
+        {
+          "id": "p346-b9",
+          "source": "The derivatives of $f(x)=a^x$ and $g(x)=\\log_a x$ are both easy to find:",
+          "sourceSha256": "0c8d741e88771929c2528c3ffae56aa5136cca0bbcd26a6bb4327386b1071942",
+          "translation": "$f(x)=a^x$ 和 $g(x)=\\log_a x$ 的导数都很容易求出："
+        },
+        {
+          "id": "p346-b10",
+          "source": "$$\\begin{aligned}\nf(x)&=e^{x\\log a},\\quad\\text{so }f'(x)=\\log a\\cdot e^{x\\log a}=\\log a\\cdot a^x,\\\\\ng(x)&=\\frac{\\log x}{\\log a},\\quad\\text{so }g'(x)=\\frac1{x\\log a}.\n\\end{aligned}$$",
+          "sourceSha256": "67eaddb585ce5c9cc4e3f22bade4268ee02d076264dfacd3d683df5313e32002"
+        },
+        {
+          "id": "p346-b11",
+          "source": "A more complicated function like",
+          "sourceSha256": "3601282083b2461461fa786d38830aeebe8f20dd23f0a2801387e571e7628bdf",
+          "translation": "一个更复杂的函数，比如"
+        },
+        {
+          "id": "p346-b12",
+          "source": "$$f(x)=g(x)^{h(x)}$$",
+          "sourceSha256": "c560a058b764496d9a3a753877a6cdb3c71513bca19a71c972772a163639e883"
+        },
+        {
+          "id": "p346-b13",
+          "source": "is also easy to differentiate if you remember that, *by definition*,",
+          "sourceSha256": "5375853f26eef789fdfd330ab9475e445f01c22cabaa72e0ef01bbac918a559a",
+          "translation": "也很容易求导，只要记住，*按照定义*，"
+        },
+        {
+          "id": "p346-b14",
+          "source": "$$f(x)=e^{h(x)\\log g(x)};$$",
+          "sourceSha256": "b4cff8bb85b8fc04d28a4e2bd11a2ac521da1a48ba9c296ade8b7219c1566afc"
+        },
+        {
+          "id": "p346-b15",
+          "source": "it follows from the Chain Rule that",
+          "sourceSha256": "032716e55732aca0bc2b2a58088219968c11b68a1726177f35ff3055f3cf38c5",
+          "translation": "由链式法则得到"
+        },
+        {
+          "id": "p346-b16",
+          "source": "$$\\begin{aligned}\nf'(x)&=e^{h(x)\\log g(x)}\\cdot\\left[h'(x)\\log g(x)+h(x)\\frac{g'(x)}{g(x)}\\right]\\\\\n&=g(x)^{h(x)}\\cdot\\left[h'(x)\\log g(x)+h(x)\\frac{g'(x)}{g(x)}\\right].\n\\end{aligned}$$",
+          "sourceSha256": "d0fc1370a9d42b4cf7debe17349404073381291db237b72cbc567a08f20bb5fc"
+        },
+        {
+          "id": "p346-b17",
+          "source": "There is no point in remembering this formula—simply apply the principle behind it in any specific case that arises; it does help, however, to remember that the first factor in the derivative will be $g(x)^{h(x)}$.",
+          "sourceSha256": "274ed918c4ade1739d2983f3e53597b082439b63db1b9fd081552e2272dae3fa",
+          "translation": "没有必要记忆这个公式——每次遇到具体情形，直接运用它背后的原则即可；不过，记住导数中的第一个因子将是 $g(x)^{h(x)}$，倒是很有帮助。"
+        }
+      ]
+    },
+    {
+      "printed": 347,
+      "sourceSha256": "dbf7e6dde18a253d4f1e42e34d2a296910ce69feaf86c3873575002502fd35ff",
+      "blocks": [
+        {
+          "id": "p347-b1",
+          "source": "There is one special case of the above formula which *is* worth remembering. The function $f(x)=x^a$ was previously defined only for rational $a$. We can now define and find the derivative of the function $f(x)=x^a$ for any number $a$; the result is just what we would expect:",
+          "sourceSha256": "61abdc3da4738534481f3c854aee96d6566d8dc48c934da3626e7b1382d379f9",
+          "translation": "上面公式有一个特殊情形*确实*值得记住。此前，函数 $f(x)=x^a$ 只对有理数 $a$ 有定义。现在，对于任意数 $a$，我们都能定义函数 $f(x)=x^a$ 并求出它的导数；结果正如预期："
+        },
+        {
+          "id": "p347-b2",
+          "source": "$$f(x)=x^a=e^{a\\log x}$$",
+          "sourceSha256": "2dddb6439b37cfebaca2216816d96dc17701f9f19b6a4e2366925d4cc5fb6a58"
+        },
+        {
+          "id": "p347-b3",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p347-b4",
+          "source": "$$f'(x)=\\frac ax\\cdot e^{a\\log x}=\\frac ax\\cdot x^a=ax^{a-1}.$$",
+          "sourceSha256": "dec1e0c36c955d53de1c54a764f414d42ec2ab04e5cc89cf6407bc5d5f7c379b"
+        },
+        {
+          "id": "p347-b5",
+          "source": "Algebraic manipulations with the exponential functions will become second nature after a little practice—just remember that all the rules which ought to work actually do. The basic properties of exp are still those stated in Theorems 2 and 3:",
+          "sourceSha256": "9a6626ce960a82d2b0b457d11833a318358b70ca758d5b54ec0677cd99232e22",
+          "translation": "稍加练习，指数函数的代数运算就会变得十分自然——只要记住，所有理应适用的运算法则，确实都适用。exp 的基本性质仍是定理 2 和 3 中陈述的那两个："
+        },
+        {
+          "id": "p347-b6",
+          "source": "$$\\begin{gathered}\n\\exp'(x)=\\exp(x),\\\\\n\\exp(x+y)=\\exp(x)\\cdot\\exp(y).\n\\end{gathered}$$",
+          "sourceSha256": "9af90f88e3bdafd34da415c924fc8a3fc5546191275b9e3895ab72fcfd8f9cae"
+        },
+        {
+          "id": "p347-b7",
+          "source": "In fact, each of these properties comes close to characterizing the function exp. Naturally, exp is not the only function $f$ satisfying $f'=f$, for if $f=ce^x$, then $f'(x)=ce^x=f(x)$; these functions are the only ones with this property, however.",
+          "sourceSha256": "74bc12fe9e37dd174105cdcf2fa2bafcbd67f913bae5307501e40b7260b8182f",
+          "translation": "事实上，每一条性质都已经接近于完全刻画函数 exp。当然，exp 不是唯一满足 $f'=f$ 的函数 $f$，因为若 $f=ce^x$，便有 $f'(x)=ce^x=f(x)$；不过，具有这一性质的函数也就只有这些。"
+        },
+        {
+          "id": "p347-b8",
+          "source": "**THEOREM 5** If $f$ is differentiable and",
+          "sourceSha256": "e3ceb3b2b2a8dc95494c6bec00a8502a9772db4c49d09b7c480eb6429dd95453",
+          "translation": "**定理 5** 如果 $f$ 可微，并且"
+        },
+        {
+          "id": "p347-b9",
+          "source": "$$f'(x)=f(x)\\quad\\text{for all }x,$$",
+          "sourceSha256": "6cf8f6e138a394d62361ef0f1197c19d734627fcd9260b48a6b7ce45d2b9afaa"
+        },
+        {
+          "id": "p347-b10",
+          "source": "then there is a number $c$ such that",
+          "sourceSha256": "4aeaaf8a394239650f6fbf9ede742702e62d50b14bf46e3af3445a34385afecc",
+          "translation": "那么存在一个数 $c$，使得"
+        },
+        {
+          "id": "p347-b11",
+          "source": "$$f(x)=ce^x\\quad\\text{for all }x.$$",
+          "sourceSha256": "95839aa55398752355f74318b3e77c1bc34405d19bdfc9abf842a25533a355b5"
+        },
+        {
+          "id": "p347-b12",
+          "source": "**PROOF** Let",
+          "sourceSha256": "00975257967be9e73b079cf34e8ea88998a3fbfca30bf96d383c8c36bc439a20",
+          "translation": "**证明** 令"
+        },
+        {
+          "id": "p347-b13",
+          "source": "$$g(x)=\\frac{f(x)}{e^x}.$$",
+          "sourceSha256": "63b0f9d9762fa1613e689f4744f965a67f2ed8b70cff4f2df11ce1e89f4a0f98"
+        },
+        {
+          "id": "p347-b14",
+          "source": "(This is permissible, since $e^x\\ne0$ for all $x$.) Then",
+          "sourceSha256": "ff149d646f41e3cc424d50203ebf38f5b2c7135758abf938b2b6cff79271aad7",
+          "translation": "（这是允许的，因为对所有 $x$ 都有 $e^x\\ne0$。）那么"
+        },
+        {
+          "id": "p347-b15",
+          "source": "$$g'(x)=\\frac{e^xf'(x)-f(x)e^x}{(e^x)^2}=0.$$",
+          "sourceSha256": "95da1db18f1937913164ac2292b58e3425dacc4e0187ddad6dda895e8be4af0a"
+        },
+        {
+          "id": "p347-b16",
+          "source": "Therefore there is a number $c$ such that",
+          "sourceSha256": "868f65719fd8fb2b1f1ba40e379b20ff83565d2ffce7a5401d792544b15a43f6",
+          "translation": "因此存在一个数 $c$，使得"
+        },
+        {
+          "id": "p347-b17",
+          "source": "$$g(x)=\\frac{f(x)}{e^x}=c\\quad\\text{for all }x.\\ \\text{▮}$$",
+          "sourceSha256": "5db06912163865d0cc094a9bb198de30306a235fc87fb75bbd93c24d6c492d3b"
+        },
+        {
+          "id": "p347-b18",
+          "source": "The second basic property of exp requires a more involved discussion. The function exp is clearly not the only function $f$ which satisfies",
+          "sourceSha256": "fb4a8f4aea473365d97b0ee4fa0abb6853a7cd93cb53f9aaeb05f7ac0d09dab3",
+          "translation": "exp 的第二个基本性质，需要更深入一些的讨论。显然，exp 不是唯一满足下式的函数 $f$："
+        },
+        {
+          "id": "p347-b19",
+          "source": "$$f(x+y)=f(x)\\cdot f(y).$$",
+          "sourceSha256": "d0de69226d85c26a2c87a77c6bca3918c11c79a724a679ec655f020f7edcbac3"
+        },
+        {
+          "id": "p347-b20",
+          "source": "In fact, $f(x)=0$ or any function of the form $f(x)=a^x$ also satisfies this equation. But the true story is much more complex than this—there are infinitely many other functions which satisfy this property, but it is impossible, without appealing to more advanced mathematics, to prove that there is even one function other than those",
+          "sourceSha256": "bce95e8ec2daea42841761355e93bb810a23d3c3456eb27368dce1f83e10753f",
+          "translation": "事实上，$f(x)=0$ 或任何形如 $f(x)=a^x$ 的函数，也都满足这个等式。但真实情况远比这复杂——还有无穷多个其他函数满足这一性质；然而，不借助更高等的数学，甚至无法证明在"
+        }
+      ]
+    },
+    {
+      "printed": 348,
+      "sourceSha256": "a3426aca674f2548d43294f23449d125378ea50736939b93a3921a8517b972d0",
+      "blocks": [
+        {
+          "id": "p348-b1",
+          "source": "already mentioned! It is for this reason that the definition of $10^x$ is so difficult: there are infinitely many functions $f$ which satisfy",
+          "sourceSha256": "febab9aaef092d0d4931bd5d93b623073017a66bf4dce702a0718e83496754ff",
+          "translation": "已经提到的函数之外，还存在任何一个这样的函数！这正是 $10^x$ 的定义如此困难的原因：有无穷多个函数 $f$ 满足"
+        },
+        {
+          "id": "p348-b2",
+          "source": "$$\\begin{gathered}\nf(x+y)=f(x)\\cdot f(y),\\\\\nf(1)=10,\n\\end{gathered}$$",
+          "sourceSha256": "b3a437f902982770e4cea96e081330effd95409819a5b691c07621f62cfb05d3"
+        },
+        {
+          "id": "p348-b3",
+          "source": "but which are *not* the function $f(x)=10^x$! One thing is true however—any *continuous* function $f$ satisfying",
+          "sourceSha256": "a65bc7bd397b817d8482f9d38f47e32f60e7ae1cbbbb9644e0f83c306b92709f",
+          "translation": "却*不是*函数 $f(x)=10^x$！不过，有一点是确定的——任何满足下式的*连续*函数 $f$，"
+        },
+        {
+          "id": "p348-b4",
+          "source": "$$f(x+y)=f(x)\\cdot f(y)$$",
+          "sourceSha256": "da7b8e7692011aedfe4c5402f6b360487bf6867796ab91a860c352d756b71056"
+        },
+        {
+          "id": "p348-b5",
+          "source": "must be of the form $f(x)=a^x$ or $f(x)=0$. (Problem 38 indicates the way to prove this, and also has a few words to say about discontinuous functions with this property.)",
+          "sourceSha256": "fb4a035654741e87150aaaaf67b1e9dca1e5172eac79d85fdb8d79a6a25e030f",
+          "translation": "必定具有形式 $f(x)=a^x$ 或 $f(x)=0$。（习题 38 提示了证明的方法，也谈了几句具有这一性质的不连续函数。）"
+        },
+        {
+          "id": "p348-b6",
+          "source": "In addition to the two basic properties stated in Theorems 2 and 3, the function exp has one further property which is very important—exp “grows faster than any polynomial.” In other words,",
+          "sourceSha256": "265e59385c576e5c6bf5efc6b84ab233296399acf846eb0d79958f1f1b486a40",
+          "translation": "除了定理 2 和 3 中的两个基本性质，函数 exp 还有一个非常重要的性质——exp“比任何多项式增长得都快”。换句话说，"
+        },
+        {
+          "id": "p348-b7",
+          "source": "**THEOREM 6** For any natural number $n$,",
+          "sourceSha256": "17d024218239b3aca9ff4f027d9264b544a16d525b80faa8d4b51adf82fba028",
+          "translation": "**定理 6** 对于任意自然数 $n$，"
+        },
+        {
+          "id": "p348-b8",
+          "source": "$$\\lim_{x\\to\\infty}\\frac{e^x}{x^n}=\\infty.$$",
+          "sourceSha256": "4794a19bd3ad73e5119f76abf79fb56ac073094b975716ba44d1da8562d95416"
+        },
+        {
+          "id": "p348-b9",
+          "source": "**PROOF** The proof consists of several steps.",
+          "sourceSha256": "9142a494fd0b315a3dc9f7d460876ba18266bed6af1621af588e9bebefbca985",
+          "translation": "**证明** 证明分为几个步骤。"
+        },
+        {
+          "id": "p348-b10",
+          "source": "*Step 1.* $e^x>x$ for all $x$, and consequently $\\lim_{x\\to\\infty}e^x=\\infty$ (this may be considered to be the case $n=0$).",
+          "sourceSha256": "5826e45ff37a57d6219924d458699720b8ec7ddd795f5e9967e8400b7d81b6fd",
+          "translation": "*步骤 1。* 对所有 $x$，都有 $e^x>x$，因此 $\\lim_{x\\to\\infty}e^x=\\infty$（可以把这看作 $n=0$ 的情形）。"
+        },
+        {
+          "id": "p348-b11",
+          "source": "To prove this statement (which is clear for $x\\le0$) it suffices to show that",
+          "sourceSha256": "605030dc449f8cebb19ad83495d10b36a100d7fa2ef74aa33eee815104d72344",
+          "translation": "要证明这个断言（$x\\le0$ 时显然成立），只需证明"
+        },
+        {
+          "id": "p348-b12",
+          "source": "$$x>\\log x\\quad\\text{for all }x>0.$$",
+          "sourceSha256": "21430bb234757e280b0e31a287c8d352c0f112887197d0a83186727e7f345310"
+        },
+        {
+          "id": "p348-b13",
+          "source": "If $x<1$ this is clearly true, since $\\log x<0$. If $x>1$, then (Figure 6) $x-1$ is an upper sum for $f(t)=1/t$ on $[1,x]$, so $\\log x<x-1<x$.",
+          "sourceSha256": "1a83a48d441e150daf5cb4d41025e178c0d9d4425a3443f31dd4d75a3ccf322c",
+          "translation": "如果 $x<1$，这显然成立，因为 $\\log x<0$。如果 $x>1$，那么（图 6）$x-1$ 是 $f(t)=1/t$ 在 $[1,x]$ 上的一个上和，所以 $\\log x<x-1<x$。"
+        },
+        {
+          "id": "p348-b14",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:305px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"46 980 305 291\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0367.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 6</figcaption>\n</figure>",
+          "sourceSha256": "539a514dbd97aa188c66220c8bbfa7239c0ba9714b312ded58a97dd99bd1cb98"
+        },
+        {
+          "id": "p348-b15",
+          "source": "*Step 2.* $\\displaystyle\\lim_{x\\to\\infty}\\frac{e^x}x=\\infty$.",
+          "sourceSha256": "23f6c1a980f6fac74330b66aa4134108d5dfa20d12a41dc401a5ccdef1d3182a",
+          "translation": "*步骤 2。* $\\displaystyle\\lim_{x\\to\\infty}\\frac{e^x}x=\\infty$。"
+        },
+        {
+          "id": "p348-b16",
+          "source": "To prove this, note that",
+          "sourceSha256": "150b13489f7d8dd942de8a6bd49972dfabe375228cf81fc08364e2ee86057eae",
+          "translation": "为证明这一点，注意"
+        },
+        {
+          "id": "p348-b17",
+          "source": "$$\\frac{e^x}x=\\frac{e^{x/2}\\cdot e^{x/2}}{\\dfrac x2\\cdot2}=\\frac12\\left(\\frac{e^{x/2}}{\\dfrac x2}\\right)\\cdot e^{x/2}.$$",
+          "sourceSha256": "ab70d96bb245e710d9a91eaf26589f0f2e8f77d8eef040b9cf46400e7e674789"
+        },
+        {
+          "id": "p348-b18",
+          "source": "By Step 1, the expression in parentheses is greater than $1$, and $\\lim_{x\\to\\infty}e^{x/2}=\\infty$; this shows that $\\lim_{x\\to\\infty}e^x/x=\\infty$.",
+          "sourceSha256": "252779c3151cf9c901c71888ec946453039332ccff05b77c244309a685502ddc",
+          "translation": "由步骤 1，括号内的表达式大于 $1$，并且 $\\lim_{x\\to\\infty}e^{x/2}=\\infty$；这就表明 $\\lim_{x\\to\\infty}e^x/x=\\infty$。"
+        },
+        {
+          "id": "p348-b19",
+          "source": "*Step 3.* $\\displaystyle\\lim_{x\\to\\infty}\\frac{e^x}{x^n}=\\infty$.",
+          "sourceSha256": "145adc2eea9f03716c4decf9c6512b7888b76806c5495b7f94b90b3bfa03e385",
+          "translation": "*步骤 3。* $\\displaystyle\\lim_{x\\to\\infty}\\frac{e^x}{x^n}=\\infty$。"
+        },
+        {
+          "id": "p348-b20",
+          "source": "Note that",
+          "sourceSha256": "aed9643b3cb6bd21fbaae60232efc51f6743a151a334eda55dd1366b912ae8b8",
+          "translation": "注意"
+        },
+        {
+          "id": "p348-b21",
+          "source": "$$\\frac{e^x}{x^n}=\\frac{(e^{x/n})^n}{\\left(\\dfrac xn\\right)^n\\cdot n^n}=\\frac1{n^n}\\cdot\\left(\\frac{e^{x/n}}{\\dfrac xn}\\right)^n.$$",
+          "sourceSha256": "17c52c71f067d5afe8e5028e7b3c27ffad71a620f88295863dcc70770e8144d5"
+        }
+      ]
+    },
+    {
+      "printed": 349,
+      "sourceSha256": "e46ace325849d978a0a0f001706cdb308b7a5874e8130002c8afd4188c2a81b6",
+      "blocks": [
+        {
+          "id": "p349-b1",
+          "source": "The expression in parentheses becomes arbitrarily large, by Step 2, so the $n$th power certainly becomes arbitrarily large. ▮",
+          "sourceSha256": "9b75f5ff16eaf04fc98bcaecfcc7fe2544a191d83d01e7faa0f64481c5149897",
+          "translation": "由步骤 2，括号内的表达式可以任意大，因此它的 $n$ 次幂当然也可以任意大。▮"
+        },
+        {
+          "id": "p349-b2",
+          "source": "It is now possible to examine carefully the following very interesting function: $f(x)=e^{-1/x^2}$, $x\\ne0$. We have",
+          "sourceSha256": "ac6493c1bb6e88e276887b06c7f198e79b24950997a6edbc0551d65eacf01350",
+          "translation": "现在，可以仔细考察下面这个非常有趣的函数：$f(x)=e^{-1/x^2}$，$x\\ne0$。有"
+        },
+        {
+          "id": "p349-b3",
+          "source": "$$f'(x)=e^{-1/x^2}\\cdot\\frac2{x^3}.$$",
+          "sourceSha256": "66af81840041f37b3747a8cbd4079d41881359f770e2bfe9c459f7c5cd23a743"
+        },
+        {
+          "id": "p349-b4",
+          "source": "Therefore,",
+          "sourceSha256": "875038257bcbbe2d6a85dec6e2757ab7635b070911bbef2968c8d33cc9d8b01d",
+          "translation": "因此，"
+        },
+        {
+          "id": "p349-b5",
+          "source": "$$\\begin{aligned}\nf'(x)&<0\\quad\\text{for }x<0,\\\\\nf'(x)&>0\\quad\\text{for }x>0,\n\\end{aligned}$$",
+          "sourceSha256": "f80d81196fc7fb86834063232f4d909a41300f3fac1eb48d2cce1220e8a08301"
+        },
+        {
+          "id": "p349-b6",
+          "source": "so $f$ is decreasing for negative $x$ and increasing for positive $x$. Moreover, if $|x|$ is large, then $x^2$ is large, so $-1/x^2$ is close to $0$, so $e^{-1/x^2}$ is close to $1$ (Figure 7).",
+          "sourceSha256": "4c88c3a25c4570ec990848e61a70bb5cf13245a0e3ebd58de833676efdd57f34",
+          "translation": "所以，$f$ 在负的 $x$ 处递减，在正的 $x$ 处递增。此外，如果 $|x|$ 很大，那么 $x^2$ 很大，于是 $-1/x^2$ 接近 $0$，所以 $e^{-1/x^2}$ 接近 $1$（图 7）。"
+        },
+        {
+          "id": "p349-b7",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"450 568 724 320\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0368.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 7</figcaption>\n</figure>",
+          "sourceSha256": "6d0ce7d6c0fe84aae745062ba30f2dc551b52ea1625e1223f875ffea6ace29ad"
+        },
+        {
+          "id": "p349-b8",
+          "source": "The behavior of $f$ near $0$ is more interesting. If $x$ is small, then $1/x^2$ is large, so $e^{1/x^2}$ is large, so $e^{-1/x^2}=1/(e^{1/x^2})$ is small. This argument, suitably stated with $\\varepsilon$’s and $\\delta$’s, shows that",
+          "sourceSha256": "0a476d0c5f7658b68f5f5ed3e0d91a37926d71bd2d4b06f2fde9af49cce755b1",
+          "translation": "$f$ 在 $0$ 附近的表现更有意思。如果 $x$ 很小，那么 $1/x^2$ 很大，于是 $e^{1/x^2}$ 很大，所以 $e^{-1/x^2}=1/(e^{1/x^2})$ 很小。用 $\\varepsilon$ 和 $\\delta$ 恰当地表述这一论证，就能证明"
+        },
+        {
+          "id": "p349-b9",
+          "source": "$$\\lim_{x\\to0}e^{-1/x^2}=0.$$",
+          "sourceSha256": "1a2b94428c0a949f3a0edaf4d7e2a8abf5a12204ed738a726bf0de858ae92860"
+        },
+        {
+          "id": "p349-b10",
+          "source": "Therefore, if we define",
+          "sourceSha256": "f586a0089f275899b25f8ecdd38bb7cf916b68bb23b41984862fde5ec1d79ae0",
+          "translation": "因此，如果定义"
+        },
+        {
+          "id": "p349-b11",
+          "source": "$$f(x)=\\begin{cases}e^{-1/x^2},&x\\ne0\\\\0,&x=0,\\end{cases}$$",
+          "sourceSha256": "f5374d3afe792509181ec2127ceae6c1c8bf3c7f67795b500c6f68d8a246a96d"
+        },
+        {
+          "id": "p349-b12",
+          "source": "then the function $f$ is continuous (Figure 8). In fact, $f$ is actually differentiable",
+          "sourceSha256": "ff01b4e449315f1ad57a9bdb5802bedcbe2dcf9d882200d815c7be947e18480d",
+          "translation": "那么函数 $f$ 连续（图 8）。事实上，$f$ 甚至在"
+        },
+        {
+          "id": "p349-b13",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"450 1231 766 282\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0368.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n</figure>",
+          "sourceSha256": "d0c28943e04b72e8c3ede2808ea2af7a8f6dd7e7ca43c05f5343ca05e94e8cc2"
+        }
+      ]
+    },
+    {
+      "printed": 350,
+      "sourceSha256": "4e3cd9f56017cb809c1771c4de4d8e694e38e22ea6c885b4f2c4fc078e5e7bac",
+      "blocks": [
+        {
+          "id": "p350-b1",
+          "source": "at $0$: Indeed",
+          "sourceSha256": "9d8f74ae45b6aa170ccc07e4985c2419c2f87a26ad93711d493933335a44316c",
+          "translation": "$0$ 处可微：确实，"
+        },
+        {
+          "id": "p350-b2",
+          "source": "$$f'(0)=\\lim_{h\\to0}\\frac{e^{-1/h^2}}h=\\lim_{h\\to0}\\frac{1/h}{e^{(1/h)^2}},$$",
+          "sourceSha256": "fe015f8e6208738e71723c965e0d58c9bea2277c3fd1203ca809358a66cf0b12"
+        },
+        {
+          "id": "p350-b3",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "并且"
+        },
+        {
+          "id": "p350-b4",
+          "source": "$$\\lim_{h\\to0^+}\\frac{1/h}{e^{(1/h)^2}}=\\lim_{x\\to\\infty}\\frac{x}{e^{(x^2)}},\\quad\\text{while}\\quad\n\\lim_{h\\to0^-}\\frac{1/h}{e^{(1/h)^2}}=-\\lim_{x\\to\\infty}\\frac{x}{e^{(x^2)}}.$$",
+          "sourceSha256": "42edd848c85311bb8bf52a018f899e62ab5c46d37f86367b6bf7576c8dbd190e"
+        },
+        {
+          "id": "p350-b5",
+          "source": "We already know that",
+          "sourceSha256": "fec6a9a7d58702e3e170d216a1632f69a9fcd8dd359e8d32040ac8b73b789bf5",
+          "translation": "我们已经知道"
+        },
+        {
+          "id": "p350-b6",
+          "source": "$$\\lim_{x\\to\\infty}\\frac{e^x}x=\\infty;$$",
+          "sourceSha256": "28b6f028c55791837e98a839ac3cc18f49cde5a4f674058f259f19c613a0e275"
+        },
+        {
+          "id": "p350-b7",
+          "source": "it is all the more true that",
+          "sourceSha256": "2ae36e45d463c09f89701dd7268bf67b4a041e9c2763358cd33bc92050492a86",
+          "translation": "因此更有"
+        },
+        {
+          "id": "p350-b8",
+          "source": "$$\\lim_{x\\to\\infty}\\frac{e^{(x^2)}}x=\\infty,$$",
+          "sourceSha256": "eb88793f8eaa662236fc6e75d781f11c814da4e26bd1306b5bbad4b9f4654126"
+        },
+        {
+          "id": "p350-b9",
+          "source": "and this means that",
+          "sourceSha256": "cf0f4d327fe83c9b6afbe942ab972e183c1a2e7f689b3bb4828cb059a52b0c8e",
+          "translation": "而这意味着"
+        },
+        {
+          "id": "p350-b10",
+          "source": "$$\\lim_{x\\to\\infty}\\frac{x}{e^{(x^2)}}=0.$$",
+          "sourceSha256": "3efe6f214f58ed04c22d907e67bb9503e5e18c139d00d0f94b3c25fc83953fe4"
+        },
+        {
+          "id": "p350-b11",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "所以"
+        },
+        {
+          "id": "p350-b12",
+          "source": "$$f'(x)=\\begin{cases}e^{-1/x^2}\\cdot\\dfrac2{x^3},&x\\ne0\\\\0,&x=0.\\end{cases}$$",
+          "sourceSha256": "be003cf15b894cdb70d468ca601639ea6e46f48c9bc72385e3fa8871641d5d86"
+        },
+        {
+          "id": "p350-b13",
+          "source": "We can now compute that",
+          "sourceSha256": "02647d7bdad959e753ba523b203642cab5da05a83323171212cd9340d732c912",
+          "translation": "现在可以算出"
+        },
+        {
+          "id": "p350-b14",
+          "source": "$$\\begin{aligned}\nf''(0)&=\\lim_{h\\to0}\\frac{f'(h)-f'(0)}h\\\\\n&=\\lim_{h\\to0}\\frac{e^{-1/h^2}\\cdot\\dfrac2{h^3}}h\\\\\n&=\\lim_{h\\to0}\\frac{2\\cdot e^{-1/h^2}}{h^4}=\\lim_{h\\to0}\\frac{2\\cdot\\dfrac1{h^4}}{e^{1/h^2}}=\\lim_{x\\to\\infty}\\frac{2x^4}{e^{(x^2)}};\n\\end{aligned}$$",
+          "sourceSha256": "a414e5957f8cf7fff5002848f80c81978ffbdccb3c8e44ef8008bc07433643c7"
+        },
+        {
+          "id": "p350-b15",
+          "source": "an argument similar to the one above shows that $f''(0)=0$. Thus",
+          "sourceSha256": "bdc5a0af4a550477e831674cdaee9bdddf2e93de813c0f14e1e7923be3f822f8",
+          "translation": "与上面类似的论证表明，$f''(0)=0$。因此"
+        },
+        {
+          "id": "p350-b16",
+          "source": "$$f''(x)=\\begin{cases}e^{-1/x^2}\\cdot\\dfrac{-6}{x^4}+e^{-1/x^2}\\cdot\\dfrac4{x^6},&x\\ne0\\\\0,&x=0.\\end{cases}$$",
+          "sourceSha256": "4b6cb8941cea4ef22fbbcc5fe2fe2b5ad915a11eaf90fd9f5479fd3463bc81a2"
+        },
+        {
+          "id": "p350-b17",
+          "source": "This argument can be continued. In fact, using induction it can be shown (Problem 40) that $f^{(k)}(0)=0$ for *every* $k$. The function $f$ is *extremely* flat at $0$, and approaches $0$ so quickly that it can mask many irregularities of other functions. For example (Figure 9), suppose that",
+          "sourceSha256": "f28659af1667bba8963044f0c4e022dd834e026718522bef1d42dc1946d3b01a",
+          "translation": "这个论证可以继续下去。事实上，利用归纳法可以证明（习题 40），对*每个* $k$ 都有 $f^{(k)}(0)=0$。函数 $f$ 在 $0$ 处*极其*平坦，并且趋于 $0$ 如此之快，以至于可以掩盖其他函数的许多不规则行为。例如（图 9），假设"
+        },
+        {
+          "id": "p350-b18",
+          "source": "$$f(x)=\\begin{cases}e^{-1/x^2}\\cdot\\sin\\dfrac1x,&x\\ne0\\\\0,&x=0.\\end{cases}$$",
+          "sourceSha256": "da8c9712d698ae6f057579cd9a51fc9a5f4c138676f89fcfbe742828df4ffdac"
+        }
+      ]
+    },
+    {
+      "printed": 351,
+      "sourceSha256": "6281f2e6b3c73c88ff6ec3b59b16876bbbc02722462f13af219b62a2bf5d406d",
+      "blocks": [
+        {
+          "id": "p351-b1",
+          "source": "It can be shown (Problem 41) that for this function it is also true that $f^{(k)}(0)=0$ for all $k$. This example shows, perhaps more strikingly than any other, just how bad a function can be, and still be infinitely differentiable. In Part IV we will investigate even more restrictive conditions on a function, which will finally rule out behavior of this sort.",
+          "sourceSha256": "6538ec06472c707eec38037768f855512faff1081d7f88593618e60e18aad638",
+          "translation": "可以证明（习题 41），对这个函数，也有 $f^{(k)}(0)=0$ 对所有 $k$ 成立。这个例子也许比任何其他例子都更鲜明地说明：一个函数可以有多么糟糕，却仍然无穷次可微。在第四部分中，我们将研究对函数更严格的条件，最终排除这类行为。"
+        },
+        {
+          "id": "p351-b2",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"448 314 771 269\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0370.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 9</figcaption>\n</figure>",
+          "sourceSha256": "886cdd2df42e486356ba66f5dbc77da71608e5f65b215d8b902918e2da888868"
+        },
+        {
+          "id": "p351-b3",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p351-b4",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p351-b5",
+          "source": "Differentiate each of the following functions (remember that $a^{b^c}$ always denotes $a^{(b^c)}$).",
+          "sourceSha256": "637d031cb8b6ef36baab3ff94f0f77b654acf3a1f90daa6dadd0ee1d6134d6a3",
+          "translation": "对下面每个函数求导（记住，$a^{b^c}$ 始终表示 $a^{(b^c)}$）。"
+        },
+        {
+          "id": "p351-b6",
+          "source": "(i) $f(x)=e^{e^{e^{e^x}}}$.",
+          "sourceSha256": "d0d662632aa140360fe87838924d30f68a122590dc1f3c8c68ca53d17fc9dc86"
+        },
+        {
+          "id": "p351-b7",
+          "source": "(ii) $f(x)=\\log(1+\\log(1+\\log(1+e^{1+e^{1+x}})))$.",
+          "sourceSha256": "cfd4eef9f73a89513703c9b12a695252b286985cd61fc56942ca3699ac05907c"
+        },
+        {
+          "id": "p351-b8",
+          "source": "(iii) $f(x)=(\\sin x)^{\\sin(\\sin x)}$.",
+          "sourceSha256": "e3e3ccd3a2e457550636eddb291f883c8699740d6d62aedfe9ab4d79a0bebdf4"
+        },
+        {
+          "id": "p351-b9",
+          "source": "(iv) $f(x)=e^{\\left(\\int_0^x e^{-t^2}\\,dt\\right)}$.",
+          "sourceSha256": "bfb2155ecea145ae39614b2bcd38ef3aa3c3dc2c82cfc4f591beb7f196a75e3e"
+        },
+        {
+          "id": "p351-b10",
+          "source": "(v) $f(x)=(\\sin x)^{(\\sin x)^{\\sin x}}$.",
+          "sourceSha256": "55cfa1f8c670e078ce24395bf330862d2361c3a85313ae37dfc38dcf62729e39"
+        },
+        {
+          "id": "p351-b11",
+          "source": "(vi) $f(x)=\\log_{(e^x)}\\sin x$.",
+          "sourceSha256": "929d3cedff4c4ca82a8c7bd2ecdc1832e56dfdd81b2d7cf6766dd14fc29a98d2"
+        },
+        {
+          "id": "p351-b12",
+          "source": "(vii) $f(x)=\\left[\\arcsin\\left(\\dfrac{x}{\\sin x}\\right)\\right]^{\\log(\\sin e^x)}$.",
+          "sourceSha256": "db0e186daf8b065545f520460cb9c76a8f28928c5658cfc5b339dbd506b6ed55"
+        },
+        {
+          "id": "p351-b13",
+          "source": "(viii) $f(x)=(\\log(3+e^4))e^{4x}+(\\arcsin x)^{\\log3}$.",
+          "sourceSha256": "86627bdfb4f50feae242e43a7e1b5d2fdd93d86f8a0bb4c57afa596d4ae57c39"
+        },
+        {
+          "id": "p351-b14",
+          "source": "(ix) $f(x)=(\\log x)^{\\log x}$.",
+          "sourceSha256": "1e7dee81d98708baf1d29ec25139d7c268cac35f69131ce68df64c8b420223aa"
+        },
+        {
+          "id": "p351-b15",
+          "source": "(x) $f(x)=x^x$.",
+          "sourceSha256": "d41b6b4c392866a9cb2cb49938446d01a368c6de8333f822681ebc86814050f2"
+        },
+        {
+          "id": "p351-b16",
+          "source": "(xi) $f(x)=\\sin(x^{\\sin(x^{\\sin x})})$.",
+          "sourceSha256": "2b71bcc849dcd16504df6cd8d8ffce44683fa24c7830d3c4876a31ec687f6c87"
+        },
+        {
+          "id": "p351-b17",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p351-b18",
+          "source": "(a) Check that the derivative of $\\log\\circ f$ is $f'/f$.",
+          "sourceSha256": "8553ed354b675794bc69d174b6cf827768659f812c9d92525f54e8055c4cc9cf",
+          "translation": "(a) 验证 $\\log\\circ f$ 的导数为 $f'/f$。"
+        },
+        {
+          "id": "p351-b19",
+          "source": "This expression is called the *logarithmic derivative* of $f$. It is often easier to compute than $f'$, since products and powers in the expression for $f$ become sums and products in the expression for $\\log\\circ f$. The derivative $f'$ can then be recovered simply by multiplying by $f$; this process is called *logarithmic differentiation*.",
+          "sourceSha256": "5ab134f2cdbf465996037a0012212eb8691f195de50bdf6425d4c9d1cfb0e238",
+          "translation": "这个表达式称为 $f$ 的*对数导数*。它通常比 $f'$ 更容易计算，因为 $f$ 的表达式中的乘积和幂，在 $\\log\\circ f$ 的表达式中变成了和与乘积。然后，只要乘以 $f$，就能还原出导数 $f'$；这个过程称为*对数求导法*。"
+        },
+        {
+          "id": "p351-b20",
+          "source": "(b) Use logarithmic differentiation to find $f'(x)$ for each of the following.",
+          "sourceSha256": "794d3f375f5d51a4fed224819804f3ea97753480c5453420d2f453f2c15fbedb",
+          "translation": "(b) 对下面每一项，使用对数求导法求 $f'(x)$。"
+        },
+        {
+          "id": "p351-b21",
+          "source": "(i) $f(x)=(1+x)(1+e^{x^2})$.",
+          "sourceSha256": "897cd859b76a2ec0067dc79a786fbd3c27ad525c4397bdf227dced64ef2673a4"
+        }
+      ]
+    },
+    {
+      "printed": 352,
+      "sourceSha256": "d8158e06d65bf45b3413315d9fea3c6c56b0a0cad65dfef63366112465590afb",
+      "blocks": [
+        {
+          "id": "p352-b1",
+          "source": "(ii) $f(x)=\\dfrac{(3-x)^{1/3}x^2}{(1-x)(3+x)^{2/3}}$.",
+          "sourceSha256": "d6a62903fe0b2a00e1e26077950ec31681d180c6627b00a7bec01e0318768b17"
+        },
+        {
+          "id": "p352-b2",
+          "source": "(iii) $f(x)=(\\sin x)^{\\cos x}+(\\cos x)^{\\sin x}$.",
+          "sourceSha256": "b312c44aee02decf08051d32b04ccd8d470caa38364a77c02fbeba51dd66743f"
+        },
+        {
+          "id": "p352-b3",
+          "source": "(iv) $f(x)=\\dfrac{e^x-e^{-x}}{e^{2x}(1+x^3)}$.",
+          "sourceSha256": "f3e11dd7a5027b3f228b6626cbe24f7339d755265d9bfe44315839f27fcb38ed"
+        },
+        {
+          "id": "p352-b4",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p352-b5",
+          "source": "Find",
+          "sourceSha256": "822b2ae4542bc74b8fccf9ec3e08408d33d35b919101760dc27e1ea7822f1818",
+          "translation": "求"
+        },
+        {
+          "id": "p352-b6",
+          "source": "$$\\int_a^b\\frac{f'(t)}{f(t)}\\,dt$$",
+          "sourceSha256": "c58b45863e4e2d1d04de973f9835ace1c9cb63d4d6671281e86838bbf8a006fe"
+        },
+        {
+          "id": "p352-b7",
+          "source": "(for $f>0$ on $[a,b]$).",
+          "sourceSha256": "d0122484f8888e582143b001b1a0681bdcadce544a12e62b07cbbfb3415a0e68",
+          "translation": "（假设在 $[a,b]$ 上有 $f>0$）。"
+        },
+        {
+          "id": "p352-b8",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p352-b9",
+          "source": "Graph each of the following functions.",
+          "sourceSha256": "19b8d1d336b02a112d90729411e50ff32798cc6a458041c7ed0c8a36fab4c945",
+          "translation": "画出下面每个函数的图像。"
+        },
+        {
+          "id": "p352-b10",
+          "source": "(a) $f(x)=e^{x+1}$.",
+          "sourceSha256": "67676bbc4dd2d06714fb4d6208f2462b3114a5766585f7649185ee37639914e3"
+        },
+        {
+          "id": "p352-b11",
+          "source": "(b) $f(x)=e^{\\sin x}$.",
+          "sourceSha256": "6f2abf0659d7dd49a25a6374866c6cebc6027db7cedf1a922f71d8666c0625af"
+        },
+        {
+          "id": "p352-b12",
+          "source": "(c) $f(x)=e^x+e^{-x}$.",
+          "sourceSha256": "cd0ef7e4e2db836ece2d7bec3f093111103f0e6c37343837cc389128290e653a"
+        },
+        {
+          "id": "p352-b13",
+          "source": "(d) $f(x)=e^x-e^{-x}$.",
+          "sourceSha256": "2f2b1cbcbcd3ac4b19e9dd2e2ba901085ec2081d04847c148048f6b3d8ca0294"
+        },
+        {
+          "id": "p352-b14",
+          "source": "(Compare the graph with the graphs of exp and $1/\\exp$.)",
+          "sourceSha256": "dd7d9aef81c256cbbbadf5eb5ed1d5503b1635995a1175609c01b1e68a7caa09",
+          "translation": "（把图像与 exp 和 $1/\\exp$ 的图像比较。）"
+        },
+        {
+          "id": "p352-b15",
+          "source": "(e) $f(x)=\\dfrac{e^x-e^{-x}}{e^x+e^{-x}}=\\dfrac{e^{2x}-1}{e^{2x}+1}=1-\\dfrac2{e^{2x}+1}$.",
+          "sourceSha256": "f1555dd95433eb680fc143b588900704278282c11d2c9c5bfc5e14a202068043"
+        },
+        {
+          "id": "p352-b16",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p352-b17",
+          "source": "Find the following limits by l’Hôpital’s Rule.",
+          "sourceSha256": "e9222063b39b1a0c5a9247643bf702408fc6b9318f53bd82c92672f7e6a8cd58",
+          "translation": "用洛必达法则求下列极限。"
+        },
+        {
+          "id": "p352-b18",
+          "source": "(i) $\\displaystyle\\lim_{x\\to0}\\frac{e^x-1-x-x^2/2}{x^2}$.",
+          "sourceSha256": "d5529d18e208ffd2cc2172c03ebeb5ca5a246ac661d5a248a57061476191b40c"
+        },
+        {
+          "id": "p352-b19",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to0}\\frac{e^x-1-x-x^2/2-x^3/6}{x^3}$.",
+          "sourceSha256": "188adf5434cea1004d202b8251321a6677590fa25bddc7256420d698ba4a3ff9"
+        },
+        {
+          "id": "p352-b20",
+          "source": "(iii) $\\displaystyle\\lim_{x\\to0}\\frac{e^x-1-x-x^2/2}{x^3}$.",
+          "sourceSha256": "aa6845c208cdfc180dbad4f58432a7ea226dd2069d6f47cd70222be399511fa4"
+        },
+        {
+          "id": "p352-b21",
+          "source": "(iv) $\\displaystyle\\lim_{x\\to0}\\frac{\\log(1+x)-x+x^2/2}{x^2}$.",
+          "sourceSha256": "ce147e219dc7d5ad107fcd898e4c3f7be5396321c4f2fa1b22897c7551d2bbf7"
+        },
+        {
+          "id": "p352-b22",
+          "source": "(v) $\\displaystyle\\lim_{x\\to0}\\frac{\\log(1+x)-x+x^2/2}{x^3}$.",
+          "sourceSha256": "56f59f730b3c4ddc15d2f8eed31467317ce218d29d4d859540288a40e98bf417"
+        },
+        {
+          "id": "p352-b23",
+          "source": "(vi) $\\displaystyle\\lim_{x\\to0}\\frac{\\log(1+x)-x+x^2/2-x^3/3}{x^3}$.",
+          "sourceSha256": "ea5048273a439dae7a870eb293478f7c2a9e099a9fd6727ce0bdbc7350d4837b"
+        },
+        {
+          "id": "p352-b24",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p352-b25",
+          "source": "Find the following limits by l’Hôpital’s Rule.",
+          "sourceSha256": "e9222063b39b1a0c5a9247643bf702408fc6b9318f53bd82c92672f7e6a8cd58",
+          "translation": "用洛必达法则求下列极限。"
+        },
+        {
+          "id": "p352-b26",
+          "source": "(i) $\\displaystyle\\lim_{x\\to0}(1-x)^{1/x}$.",
+          "sourceSha256": "8798e8078c7fe5ef5548541d6a648a3af3b260eefec34bc7f1f5f9fb3981a2bf"
+        },
+        {
+          "id": "p352-b27",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to\\pi/4}(\\tan x)^{\\tan2x}$.",
+          "sourceSha256": "803b83af58deea220410ddd0b262e609a6ce031f63e87cdf3ca079a061677387"
+        },
+        {
+          "id": "p352-b28",
+          "source": "(iii) $\\displaystyle\\lim_{x\\to0}(\\cos x)^{1/x^2}$.",
+          "sourceSha256": "f7d999c9000ca38d5001f99b57740925c0d609ac992d09cfa080a33185d51e34"
+        }
+      ]
+    },
+    {
+      "printed": 353,
+      "sourceSha256": "9f4b405d029e0d55a1e030abee384428228a811d5b05cd674559460684f31537",
+      "blocks": [
+        {
+          "id": "p353-b1",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p353-b2",
+          "source": "The functions",
+          "sourceSha256": "e676b40d9979c75b0e0059075c648e0dc5c47f81012454c83d167617490c9891",
+          "translation": "函数"
+        },
+        {
+          "id": "p353-b3",
+          "source": "$$\\begin{aligned}\n\\sinh x&=\\frac{e^x-e^{-x}}2,\\\\\n\\cosh x&=\\frac{e^x+e^{-x}}2,\\\\\n\\tanh x&=\\frac{e^x-e^{-x}}{e^x+e^{-x}}=1-\\frac2{e^{2x}+1},\n\\end{aligned}$$",
+          "sourceSha256": "0b33a2223fc44f806ac294f76493b9cde31bcba831c8cd50fb3214e6cc200a81"
+        },
+        {
+          "id": "p353-b4",
+          "source": "are called the **hyperbolic sine**, **hyperbolic cosine**, and **hyperbolic tangent**, respectively (but usually read ‘sinch,’ ‘cosh,’ and ‘tanch’). There are many analogies between these functions and their ordinary trigonometric counterparts. One analogy is illustrated in Figure 10; a proof that the region shown in Figure 10(b) really has area $x/2$ is best deferred until the next chapter, when we will develop methods of computing integrals. Other analogies are discussed in the following three problems, but the deepest analogies must wait until Chapter 27. If you have not already done Problem 4, graph the functions sinh, cosh, and tanh.",
+          "sourceSha256": "1eecd6e69cd49dfe22d979a7a0364900e27ddf2a2c457b8592acdc19f11ef562",
+          "translation": "分别称为**双曲正弦**、**双曲余弦**和**双曲正切**（不过通常读作“sinch”“cosh”和“tanch”）。这些函数与相应的普通三角函数之间，有许多类似之处。图 10 展示了一种类比；要证明图 10(b) 中区域的面积确实为 $x/2$，最好等到下一章，我们在那里将发展积分的计算方法。下面三道题讨论其他类比，但最深刻的类比必须等到第 27 章。如果尚未做习题 4，请画出 sinh、cosh 和 tanh 的图像。"
+        },
+        {
+          "id": "p353-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:432px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 235 432 832\" role=\"img\" aria-label=\"Figure 10\"><image href=\"pages/book/0372.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 10</figcaption>\n</figure>",
+          "sourceSha256": "2b886018a3d93aefde13ae7ac0034df1c7b16c2cbd56f57da1754d60e1192492"
+        },
+        {
+          "id": "p353-b6",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p353-b7",
+          "source": "Prove that",
+          "sourceSha256": "bd05d81834d558ff6258ab898c195fc8fed52ba9be04f6f90e4270d8bdb0bbcb",
+          "translation": "证明"
+        },
+        {
+          "id": "p353-b8",
+          "source": "(a) $\\cosh^2-\\sinh^2=1$.",
+          "sourceSha256": "da8ee7543a11ae656cdea7f495bc0824d2df905ad3bbc4ba559e6f46b81350f8"
+        },
+        {
+          "id": "p353-b9",
+          "source": "(b) $\\tanh^2+1/\\cosh^2=1$.",
+          "sourceSha256": "1c06e789435888c468484511ef8389f3b851cf44989eb172dccff01264d7e1ba"
+        },
+        {
+          "id": "p353-b10",
+          "source": "(c) $\\sinh(x+y)=\\sinh x\\cosh y+\\cosh x\\sinh y$.",
+          "sourceSha256": "6ea3282e9d1d2a691ee9ef6ac13b1c5e0f9afde69fa8962d63d20802f91549d6"
+        },
+        {
+          "id": "p353-b11",
+          "source": "(d) $\\cosh(x+y)=\\cosh x\\cosh y+\\sinh x\\sinh y$.",
+          "sourceSha256": "4c3ba0906dcdfda0ca574a78af7407a983b60c06e95cfecb0a99e763e3c06f21"
+        },
+        {
+          "id": "p353-b12",
+          "source": "(e) $\\sinh'=\\cosh$.",
+          "sourceSha256": "ba64752ab7edcc1d33638cacce069c89e39105a4e3ea085c50a795b633f90279"
+        },
+        {
+          "id": "p353-b13",
+          "source": "(f) $\\cosh'=\\sinh$.",
+          "sourceSha256": "dc790e7db230474f31814eeb9f0adcf1db9174ca11c55dd278dd2ef358ec431c"
+        },
+        {
+          "id": "p353-b14",
+          "source": "(g) $\\tanh'=\\dfrac1{\\cosh^2}$.",
+          "sourceSha256": "c5ed2773626873e8416ecec31e4e2ab2216ca5496ccb412801130e6e1330349b"
+        },
+        {
+          "id": "p353-b15",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p353-b16",
+          "source": "The functions sinh and tanh are one-one; their inverses $\\sinh^{-1}$ and $\\tanh^{-1}$, are defined on $\\mathbf R$ and $(-1,1)$, respectively. These inverse functions are sometimes denoted by arg sinh and arg tanh (the “argument” of the hyperbolic sine and tangent). If cosh is restricted to $[0,\\infty)$ it has an inverse, denoted by arg cosh, or simply $\\cosh^{-1}$, which is defined on $[1,\\infty)$. Prove, using the information in Problem 8, that",
+          "sourceSha256": "f64428327486f0953d2511301040e2aedda6f827ddda6a1e16e05459463ec3ab",
+          "translation": "函数 sinh 和 tanh 都是一一的；它们的反函数 $\\sinh^{-1}$ 和 $\\tanh^{-1}$，分别定义在 $\\mathbf R$ 和 $(-1,1)$ 上。这些反函数有时记作 arg sinh 和 arg tanh（双曲正弦与双曲正切的“自变量”）。如果将 cosh 限制在 $[0,\\infty)$ 上，它就有一个反函数，记作 arg cosh，或直接记作 $\\cosh^{-1}$，定义在 $[1,\\infty)$ 上。利用习题 8 中的信息，证明"
+        },
+        {
+          "id": "p353-b17",
+          "source": "(a) $\\sinh(\\cosh^{-1}x)=\\sqrt{x^2-1}$.",
+          "sourceSha256": "4627c31c7ab171338f5c39bde7f699b97a1178b139105e19c7eb431c286cb4e9"
+        },
+        {
+          "id": "p353-b18",
+          "source": "(b) $\\cosh(\\sinh^{-1}x)=\\sqrt{1+x^2}$.",
+          "sourceSha256": "09b257ae9e8f20480c053c02e0574e898c3d943cf84e0123a247a9179c9cd807"
+        },
+        {
+          "id": "p353-b19",
+          "source": "(c) $(\\sinh^{-1})'(x)=\\dfrac1{\\sqrt{1+x^2}}$.",
+          "sourceSha256": "be124c57cff70dc6d16a4f0ef575cb2dbe731d40171d77dd002bae6c3dd4e42e"
+        },
+        {
+          "id": "p353-b20",
+          "source": "(d) $(\\cosh^{-1})'(x)=\\dfrac1{\\sqrt{x^2-1}}\\text{ for }x>1$.",
+          "sourceSha256": "a65a0bccb09030d7f82a1f44c6f13946a816bf97f4ea5ae09e99460ad362dde1"
+        },
+        {
+          "id": "p353-b21",
+          "source": "(e) $(\\tanh^{-1})'(x)=\\dfrac1{1-x^2}\\text{ for }|x|<1$.",
+          "sourceSha256": "d5c5c61e0695ba28e2def693b4b8a71010d8bc2fcff0a6d9bc232296868cbc84"
+        }
+      ]
+    },
+    {
+      "printed": 354,
+      "sourceSha256": "5885ec33d276bfc109d8760ff821068cc10219a863722209a898d85a56d5b249",
+      "blocks": [
+        {
+          "id": "p354-b1",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p354-b2",
+          "source": "(a) Find an explicit formula for $\\sinh^{-1}$, $\\cosh^{-1}$, and $\\tanh^{-1}$ (by solving the equation $y=\\sinh^{-1}x$ for $x$ in terms of $y$, etc.).",
+          "sourceSha256": "af53eeba357b9aa0d1c049dc2f9fd08c98bc214ffa1e1b13871aa5652236a242",
+          "translation": "(a) 求 $\\sinh^{-1}$、$\\cosh^{-1}$ 和 $\\tanh^{-1}$ 的显式公式（通过求解方程 $y=\\sinh^{-1}x$，用 $y$ 表示 $x$，等等）。"
+        },
+        {
+          "id": "p354-b3",
+          "source": "(b) Find",
+          "sourceSha256": "7b054bc84ac80fa499fb2726811547090d44c976a1dc30638d69095f3dee1a77",
+          "translation": "(b) 求"
+        },
+        {
+          "id": "p354-b4",
+          "source": "$$\\begin{gathered}\n\\int_a^b\\frac1{\\sqrt{1+x^2}}\\,dx,\\\\\n\\int_a^b\\frac1{\\sqrt{x^2-1}}\\,dx\\qquad\\text{for }a,b>1\\text{ or }a,b<-1,\\\\\n\\int_a^b\\frac1{1-x^2}\\,dx\\qquad\\text{for }|a|,|b|<1.\n\\end{gathered}$$",
+          "sourceSha256": "834a9936834ae8e4c7c8da65200e803abf7bab5c3e5f70d5aeeb451f7d52e2d8"
+        },
+        {
+          "id": "p354-b5",
+          "source": "Compare your answer for the third integral with that obtained by writing",
+          "sourceSha256": "b7aeea3e8caacbb5c01538a31deb3762147d506fdd29aedb0425c06da415c904",
+          "translation": "将第三个积分的答案，与作如下改写后得到的答案比较："
+        },
+        {
+          "id": "p354-b6",
+          "source": "$$\\frac1{1-x^2}=\\frac12\\left[\\frac1{1-x}+\\frac1{1+x}\\right].$$",
+          "sourceSha256": "af2e55477f62bcd68b1f9e964c536ca487a608ee91173dcb1859c01e5ac73064"
+        },
+        {
+          "id": "p354-b7",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p354-b8",
+          "source": "Show that $F(x)=\\int_2^x1/\\log t\\,dt$ is not bounded on $[2,\\infty)$.",
+          "sourceSha256": "892ed9275b60ca5d4501f68db9d923119b61d0835e4babbda6d2c7f398ed286a",
+          "translation": "证明 $F(x)=\\int_2^x1/\\log t\\,dt$ 在 $[2,\\infty)$ 上无界。"
+        },
+        {
+          "id": "p354-b9",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p354-b10",
+          "source": "Let $f$ be a nondecreasing function on $[1,\\infty)$, and define",
+          "sourceSha256": "ed47712abfd06b080ea29c09f4b776e9739e72b1c35ecbae05b8523d8b29c49f",
+          "translation": "设 $f$ 是 $[1,\\infty)$ 上的非递减函数，定义"
+        },
+        {
+          "id": "p354-b11",
+          "source": "$$F(x)=\\int_1^x\\frac{f(t)}t\\,dt,\\qquad x\\ge1.$$",
+          "sourceSha256": "d361a8e79b6193f3bbc29e7df1cb32ba41d0dcfacbdfc56ee2f0e0a6f473e10f"
+        },
+        {
+          "id": "p354-b12",
+          "source": "Prove that $f$ is bounded on $[1,\\infty)$ if and only if $F/\\log$ is bounded on $[1,\\infty)$.",
+          "sourceSha256": "075cfc0cba5ce526b2355e6fe664c9d6e95ef5019d416b13bf8c45856f5373d3",
+          "translation": "证明：$f$ 在 $[1,\\infty)$ 上有界，当且仅当 $F/\\log$ 在 $[1,\\infty)$ 上有界。"
+        },
+        {
+          "id": "p354-b13",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p354-b14",
+          "source": "Find",
+          "sourceSha256": "822b2ae4542bc74b8fccf9ec3e08408d33d35b919101760dc27e1ea7822f1818",
+          "translation": "求"
+        },
+        {
+          "id": "p354-b15",
+          "source": "(a) $\\displaystyle\\lim_{x\\to\\infty}a^x$ for $0<a<1$. (Remember the definition!)",
+          "sourceSha256": "9f07c5bab093981faf30254146460068c6d54e2c512555276a24678390862882",
+          "translation": "(a) $\\displaystyle\\lim_{x\\to\\infty}a^x$，其中 $0<a<1$。（记住定义！）"
+        },
+        {
+          "id": "p354-b16",
+          "source": "(b) $\\displaystyle\\lim_{x\\to\\infty}\\frac{x}{(\\log x)^n}$.",
+          "sourceSha256": "22e342f1c1d145f2c6d80d8cdd348dd013c467e2cdb755d681ba05a89c15b81b"
+        },
+        {
+          "id": "p354-b17",
+          "source": "(c) $\\displaystyle\\lim_{x\\to\\infty}\\frac{(\\log x)^n}{x}$.",
+          "sourceSha256": "0399ef34b538167f766d356c6c514914df8e16ac6f92cabc51cb2f0175fde70d"
+        },
+        {
+          "id": "p354-b18",
+          "source": "(d) $\\displaystyle\\lim_{x\\to0^+}x(\\log x)^n$. Hint: $\\displaystyle x(\\log x)^n=\\frac{(-1)^n\\left(\\log\\frac1x\\right)^n}{\\frac1x}$.",
+          "sourceSha256": "5c8a326242df4d5fbc94f6ef274cd9f6ee0eca482c783cca08d8ccb4ed81a13a",
+          "translation": "(d) $\\displaystyle\\lim_{x\\to0^+}x(\\log x)^n$。提示：$\\displaystyle x(\\log x)^n=\\frac{(-1)^n\\left(\\log\\frac1x\\right)^n}{\\frac1x}$。"
+        },
+        {
+          "id": "p354-b19",
+          "source": "(e) $\\displaystyle\\lim_{x\\to0^+}x^x$.",
+          "sourceSha256": "ddb7036ce0d9efeabaad15dc0d6866093bf04dc995182faeca8ee728bb123630"
+        },
+        {
+          "id": "p354-b20",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p354-b21",
+          "source": "Graph $f(x)=x^x$ for $x>0$. (Use Problem 13(e).)",
+          "sourceSha256": "379b9c8278af19598b732666ae4394d9b95a036abd176243f66ade4cc0931b9a",
+          "translation": "对于 $x>0$，画出 $f(x)=x^x$ 的图像。（使用习题 13(e)。）"
+        },
+        {
+          "id": "p354-b22",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p354-b23",
+          "source": "(a) Find the minimum value of $f(x)=e^x/x^n$ for $x>0$, and conclude that $f(x)>e^n/n^n$ for $x>n$.",
+          "sourceSha256": "7cda1f74d044f336c697f6aad7702a632d93c051b268884083e72e91a72c04b2",
+          "translation": "(a) 求 $f(x)=e^x/x^n$ 在 $x>0$ 时的最小值，并得出：当 $x>n$ 时，$f(x)>e^n/n^n$。"
+        },
+        {
+          "id": "p354-b24",
+          "source": "(b) Using the expression $f'(x)=e^x(x-n)/x^{n+1}$, prove that $f'(x)>e^{n+1}/(n+1)^{n+1}$ for $x>n+1$, and thus obtain another proof that $\\displaystyle\\lim_{x\\to\\infty}f(x)=\\infty$.",
+          "sourceSha256": "a29c738c9afc247f2900ad7fa6f6b6e513c1c01e198a16d4578e036cdfd2276a",
+          "translation": "(b) 利用表达式 $f'(x)=e^x(x-n)/x^{n+1}$，证明当 $x>n+1$ 时有 $f'(x)>e^{n+1}/(n+1)^{n+1}$，从而给出 $\\displaystyle\\lim_{x\\to\\infty}f(x)=\\infty$ 的另一种证明。"
+        },
+        {
+          "id": "p354-b25",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p354-b26",
+          "source": "Graph $f(x)=e^x/x^n$.",
+          "sourceSha256": "8f481f2898c4a0481926f625e93493561971fb5c5eaa889fc46e54c18190e4a8",
+          "translation": "画出 $f(x)=e^x/x^n$ 的图像。"
+        }
+      ]
+    },
+    {
+      "printed": 355,
+      "sourceSha256": "787b210b1b7cd2322ec67ade4763acbc71ff15a56cf23463ebebd9a600b4bbd2",
+      "blocks": [
+        {
+          "id": "p355-b1",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p355-b2",
+          "source": "(a) Find $\\displaystyle\\lim_{y\\to0}\\log(1+y)/y$. (You can use l’Hôpital’s Rule, but that would be silly.)",
+          "sourceSha256": "3ea6d94ffbb9be3517d7e1d250ad3ff0d4f650e838ea9db7ec68f66a1d5b1830",
+          "translation": "(a) 求 $\\displaystyle\\lim_{y\\to0}\\log(1+y)/y$。（可以用洛必达法则，不过那就太傻了。）"
+        },
+        {
+          "id": "p355-b3",
+          "source": "(b) Find $\\displaystyle\\lim_{x\\to\\infty}x\\log(1+1/x)$.",
+          "sourceSha256": "a1bfeafd85b99a9a278ff8a1d2365873732d73a873d4ad21b7a0788b5ddb04f6",
+          "translation": "(b) 求 $\\displaystyle\\lim_{x\\to\\infty}x\\log(1+1/x)$。"
+        },
+        {
+          "id": "p355-b4",
+          "source": "(c) Prove that $e=\\displaystyle\\lim_{x\\to\\infty}(1+1/x)^x$.",
+          "sourceSha256": "b856a80ca6590a6ef0c6174ea1cfbfe36ceec91b1154000fccdcc807abea65b1",
+          "translation": "(c) 证明 $e=\\displaystyle\\lim_{x\\to\\infty}(1+1/x)^x$。"
+        },
+        {
+          "id": "p355-b5",
+          "source": "(d) Prove that $e^a=\\displaystyle\\lim_{x\\to\\infty}(1+a/x)^x$. (It is possible to derive this from part (c) with just a little algebraic fiddling.)",
+          "sourceSha256": "44b88880b25355060b63f98b9f5dd85e9a2345e53590fd5a8ea3e09b2d0f429f",
+          "translation": "(d) 证明 $e^a=\\displaystyle\\lim_{x\\to\\infty}(1+a/x)^x$。（稍作代数变形，就可以从 (c) 推得。）"
+        },
+        {
+          "id": "p355-b6",
+          "source": "\\*(e) Prove that $\\log b=\\displaystyle\\lim_{x\\to\\infty}x(b^{1/x}-1)$.",
+          "sourceSha256": "a78918050efccbb8a95adb86cb502e6cc64c63b25a599af53573aa9a5396b3c8",
+          "translation": "\\*(e) 证明 $\\log b=\\displaystyle\\lim_{x\\to\\infty}x(b^{1/x}-1)$。"
+        },
+        {
+          "id": "p355-b7",
+          "source": "### 18.",
+          "sourceSha256": "ea685e12aa5506177e8354425cc5ef641b0955faf096533840903cb00fca83d4"
+        },
+        {
+          "id": "p355-b8",
+          "source": "Graph $f(x)=(1+1/x)^x$ for $x>0$. (Use Problem 17(c).)",
+          "sourceSha256": "7e9c5220d043360eb9bf7080886b4342bc0484880f28e1134dd62bf3e2645141",
+          "translation": "对于 $x>0$，画出 $f(x)=(1+1/x)^x$ 的图像。（使用习题 17(c)。）"
+        },
+        {
+          "id": "p355-b9",
+          "source": "### 19.",
+          "sourceSha256": "8b09a7bace93d37dfe88ea4c6c08a187efc4b2a287262ba51ada7accf660adbf"
+        },
+        {
+          "id": "p355-b10",
+          "source": "If a bank gives $a$ percent interest per annum, then an initial investment $I$ yields $I(1+a/100)$ after 1 year. If the bank compounds the interest (counts the accrued interest as part of the capital for computing interest the next year), then the initial investment grows to $I(1+a/100)^n$ after $n$ years. Now suppose that interest is given twice a year. The final amount after $n$ years is, alas, not $I(1+a/100)^{2n}$, but merely $I(1+a/200)^{2n}$—although interest is awarded twice as often, the interest must be halved in each calculation, since the interest is $a/2$ per half year. This amount is larger than $I(1+a/100)^n$, but not that much larger. Suppose that the bank now compounds the interest continuously, i.e., the bank considers what the investment would yield when compounding $k$ times a year, and then takes the least upper bound of all these numbers. How much will an initial investment of 1 dollar yield after 1 year?",
+          "sourceSha256": "ab3543e7bc1a998e9c38755d2d7dfd8f566b4669d31f5a417ea26d46971a2643",
+          "translation": "如果银行的年利率为百分之 $a$，那么初始投资 $I$ 在一年后变为 $I(1+a/100)$。如果银行按复利计息（把已经获得的利息算入本金，以计算下一年的利息），那么初始投资在 $n$ 年后增长为 $I(1+a/100)^n$。现在假设每年计息两次。可惜，$n$ 年后的最终金额不是 $I(1+a/100)^{2n}$，而只是 $I(1+a/200)^{2n}$——虽然计息频率加倍，每次计算时的利率却必须减半，因为每半年的利率是 $a/2$。这个金额比 $I(1+a/100)^n$ 大，但并没有大很多。现在假设银行连续复利计息，也就是说，银行考虑每年计息 $k$ 次时的收益，再取所有这些数的最小上界。那么，最初投资 1 美元，一年后会变成多少？"
+        },
+        {
+          "id": "p355-b11",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p355-b12",
+          "source": "(a) Let $f(x)=\\log|x|$ for $x\\ne0$. Prove that $f'(x)=1/x$ for $x\\ne0$.",
+          "sourceSha256": "6606ddd55f51dba37c9b5b323e1c976e1ed8bb973679e10f9fe0ebdc7f26cb75",
+          "translation": "(a) 对 $x\\ne0$，令 $f(x)=\\log|x|$。证明：对 $x\\ne0$，有 $f'(x)=1/x$。"
+        },
+        {
+          "id": "p355-b13",
+          "source": "(b) If $f(x)\\ne0$ for all $x$, prove that $(\\log|f|)'=f'/f$.",
+          "sourceSha256": "7b43a70e45e6ba9c6c4fcc9539ecedd93026c361c6d81b8de8d16d512d1b943f",
+          "translation": "(b) 如果对所有 $x$ 都有 $f(x)\\ne0$，证明 $(\\log|f|)'=f'/f$。"
+        },
+        {
+          "id": "p355-b14",
+          "source": "### 21.",
+          "sourceSha256": "d908d228d4604b1dd2f9729637ede6c5eb59c7f91a5ba1fe1a64623fe814b30d"
+        },
+        {
+          "id": "p355-b15",
+          "source": "Suppose that on some interval the function $f$ satisfies $f'=cf$ for some number $c$.",
+          "sourceSha256": "07dff7049859f76642c30e6ee30a033d770aea4ec2b60d676e295657a5349b30",
+          "translation": "假设在某个区间上，函数 $f$ 对某个数 $c$ 满足 $f'=cf$。"
+        },
+        {
+          "id": "p355-b16",
+          "source": "(a) Assuming that $f$ is never 0, use Problem 20(b) to prove that $|f(x)|=le^{cx}$ for some number $l$ $(>0)$. It follows that $f(x)=ke^{cx}$ for some $k$.",
+          "sourceSha256": "346c63a88d7aef47bbfd5163f11a549fb7cdf5163713b48fe1f96349e7f82a34",
+          "translation": "(a) 假设 $f$ 从不为 0，利用习题 20(b)，证明：存在某个数 $l$ $(>0)$，使得 $|f(x)|=le^{cx}$。由此可知，对某个 $k$，有 $f(x)=ke^{cx}$。"
+        },
+        {
+          "id": "p355-b17",
+          "source": "(b) Show that this result holds without the added assumption that $f$ is never 0. Hint: Show that $f$ can’t be 0 at the endpoint of an open interval on which it is nowhere 0.",
+          "sourceSha256": "cbd4e3b8de5699fecaa2f50632a535a8f4df2ff0662a9d6880a25a070a4e14a7",
+          "translation": "(b) 证明，即使不附加“$f$ 从不为 0”这一假设，结果仍然成立。提示：证明 $f$ 不可能在一个处处非零的开区间的端点处等于 0。"
+        },
+        {
+          "id": "p355-b18",
+          "source": "(c) Give a simpler proof that $f(x)=ke^{cx}$ for some $k$ by considering the function $g(x)=f(x)/e^{cx}$.",
+          "sourceSha256": "d91f30449e6a355a3321e3327133878bf7dcb61769e39fec1d93b770c4abf6d2",
+          "translation": "(c) 考虑函数 $g(x)=f(x)/e^{cx}$，给出存在某个 $k$ 使 $f(x)=ke^{cx}$ 的更简单的证明。"
+        },
+        {
+          "id": "p355-b19",
+          "source": "(d) Suppose that $f'=fg'$ for some $g$. Show that $f(x)=ke^{g(x)}$ for some $k$.",
+          "sourceSha256": "bd7059281bc765a0db253617fa0ed9819dc4c97be7388dcdba285621a0471fa7",
+          "translation": "(d) 假设对于某个 $g$ 有 $f'=fg'$。证明：存在某个 $k$，使得 $f(x)=ke^{g(x)}$。"
+        },
+        {
+          "id": "p355-b20",
+          "source": "### \\*22.",
+          "sourceSha256": "5b0fbafc55bffb1f688d40528bb1f58cb092188c393e832eb794584c9d9d1fc4"
+        },
+        {
+          "id": "p355-b21",
+          "source": "A radioactive substance diminishes at a rate proportional to the amount present (since all atoms have equal probability of disintegrating, the total disintegration is proportional to the number of atoms remaining). If $A(t)$ is the amount at time $t$, this means that $A'(t)=cA(t)$ for some $c$ (which represents the probability that an atom will disintegrate).",
+          "sourceSha256": "322d7a1bce12636ba655a0c344626843a030aa1ba386f469a4bbbed87e8c8d7b",
+          "translation": "放射性物质减少的速率，与当时的存量成正比（由于所有原子发生衰变的概率相同，总衰变量就与剩余原子数成正比）。如果 $A(t)$ 是时刻 $t$ 的存量，这意味着对某个 $c$（它表示一个原子发生衰变的概率），有 $A'(t)=cA(t)$。"
+        },
+        {
+          "id": "p355-b22",
+          "source": "(a) Find $A(t)$ in terms of the amount $A_0=A(0)$ present at time 0.",
+          "sourceSha256": "1cd8b6aa80cae2c34f4af133247f88e7487edf6db173640bf0bca740ab674a57",
+          "translation": "(a) 用时刻 0 的存量 $A_0=A(0)$ 表示 $A(t)$。"
+        }
+      ]
+    },
+    {
+      "printed": 356,
+      "sourceSha256": "8e570fef8e6d982c5b63510d27828444563c4cad2cc2bd4739591f2c2124b580",
+      "blocks": [
+        {
+          "id": "p356-b1",
+          "source": "(b) Show that there is a number $\\tau$ (the “half-life” of the radioactive element) with the property that $A(t+\\tau)=A(t)/2$.",
+          "sourceSha256": "dff896c5d7f2fe17e34165da1851e7cc75b8c27ab4c358c0e92bbc1d870b6657",
+          "translation": "(b) 证明：存在一个数 $\\tau$（该放射性元素的“半衰期”），使得 $A(t+\\tau)=A(t)/2$。"
+        },
+        {
+          "id": "p356-b2",
+          "source": "### 23.",
+          "sourceSha256": "fcb56ced3fb587a05b1e3f24ccfaee441ca9356f2d715d9e8ba59a341ae068ec"
+        },
+        {
+          "id": "p356-b3",
+          "source": "Newton’s law of cooling states that an object cools at a rate proportional to the difference of its temperature and the temperature of the surrounding medium. Find the temperature $T(t)$ of the object at time $t$, in terms of its temperature $T_0$ at time 0, assuming that the temperature of the surrounding medium is kept at a constant, $M$. Hint: To solve the differential equation expressing Newton’s law, remember that $T'=(T-M)'$.",
+          "sourceSha256": "b31c01856377a804ee8ef486e44f54b023abfed233987c2b63baac25023e2b93",
+          "translation": "牛顿冷却定律断言，物体冷却的速率，与其温度和周围介质温度之差成正比。假设周围介质的温度保持为常数 $M$，用物体在时刻 0 的温度 $T_0$，表示它在时刻 $t$ 的温度 $T(t)$。提示：求解表达牛顿定律的微分方程时，记住 $T'=(T-M)'$。"
+        },
+        {
+          "id": "p356-b4",
+          "source": "### 24.",
+          "sourceSha256": "1fb8b304cd861a73c12374de97d67ebaec8b5558d02cf56f4db6adadfe75d8aa"
+        },
+        {
+          "id": "p356-b5",
+          "source": "Prove that if $f(x)=\\int_0^xf(t)\\,dt$, then $f=0$.",
+          "sourceSha256": "4671d3322af72cd9f0681f190531d6831ff5f3225e3c3d6c977fac4c524b92bd",
+          "translation": "证明：如果 $f(x)=\\int_0^xf(t)\\,dt$，那么 $f=0$。"
+        },
+        {
+          "id": "p356-b6",
+          "source": "### 25.",
+          "sourceSha256": "e243042975caa2efce0a7385b48b4be10d7c1f2cfeac6357090078c2f5eb5e34"
+        },
+        {
+          "id": "p356-b7",
+          "source": "Find all continuous functions $f$ satisfying",
+          "sourceSha256": "540ed7c1bf2a539ea706bfb7fbf15d542d1ef31f44256eec52b8a1cbe1a99f9a",
+          "translation": "找出满足下式的所有连续函数 $f$："
+        },
+        {
+          "id": "p356-b8",
+          "source": "(i) $\\displaystyle\\int_0^xf=e^x$.",
+          "sourceSha256": "3dd5856de70eac2fa5b268678cc3071a0d8316a5bd59dc54222179ded19fd402"
+        },
+        {
+          "id": "p356-b9",
+          "source": "(ii) $\\displaystyle\\int_0^{x^2}f=1-e^{2x^2}$.",
+          "sourceSha256": "3af1746c027dd0e787f4b7affa065c0b09c60a18839e17b329f9c123543704ab"
+        },
+        {
+          "id": "p356-b10",
+          "source": "### 26.",
+          "sourceSha256": "e0a0eda9f4171fbdc2f78618f10a33fea6c704a744eb8323db3535cb65310a23"
+        },
+        {
+          "id": "p356-b11",
+          "source": "Find all functions $f$ satisfying $f'(t)=f(t)+\\int_0^1f(t)\\,dt$.",
+          "sourceSha256": "34346797598bbf7b4fdbc0843350e62e927ad73475ed9e69db3320519fe03126",
+          "translation": "找出满足 $f'(t)=f(t)+\\int_0^1f(t)\\,dt$ 的所有函数 $f$。"
+        },
+        {
+          "id": "p356-b12",
+          "source": "### 27.",
+          "sourceSha256": "01de3c63fd790d0deac18299d79a16ecfff7727c478f7c8964568f07245d3eec"
+        },
+        {
+          "id": "p356-b13",
+          "source": "Find all continuous functions $f$ which satisfy the equation",
+          "sourceSha256": "c922c1e5ece37d5d46ed319a2eb0d4fc3aa09fc7df92b1e51064d82c453fc1f5",
+          "translation": "找出满足下列方程的所有连续函数 $f$："
+        },
+        {
+          "id": "p356-b14",
+          "source": "$$(f(x))^2=\\int_0^xf(t)\\frac{t}{t^2+1}\\,dt.$$",
+          "sourceSha256": "23c75cd388c4fc0d6896bd329d79dbce5c9a75a09505580692cba1db1c150328"
+        },
+        {
+          "id": "p356-b15",
+          "source": "### 28.",
+          "sourceSha256": "99710235075939b06c843e9bd945573c4f9f13f6f1481388af7da8a53884193f"
+        },
+        {
+          "id": "p356-b16",
+          "source": "(a) Let $f$ and $g$ be continuous functions on $[a,b]$ with $g$ nonnegative. Suppose that for some $C$ we have",
+          "sourceSha256": "f7b2961fef847ce11c9cd743ed9183f002118e4230966351e867e02dec7a18dc",
+          "translation": "(a) 设 $f$ 和 $g$ 是 $[a,b]$ 上的连续函数，且 $g$ 非负。假设对某个 $C$，有"
+        },
+        {
+          "id": "p356-b17",
+          "source": "$$f(x)\\le C+\\int_a^xfg,\\qquad a\\le x\\le b.$$",
+          "sourceSha256": "bfeda893276d200e70250befe5e08da22d1eec195904f89a2997f711c8e5d051"
+        },
+        {
+          "id": "p356-b18",
+          "source": "Prove **Gronwall’s inequality**:",
+          "sourceSha256": "8c9d2ded2f59ec8a91e50bc4e5cdca83702d995aadc8e5c33599f5f729e7e625",
+          "translation": "证明 **Gronwall（格朗沃尔）不等式**："
+        },
+        {
+          "id": "p356-b19",
+          "source": "$$f(x)\\le Ce^{\\int_a^xg}.$$",
+          "sourceSha256": "b06d54bb6ec86e42870370e55bfee6e7893f4a1ec1befc1a42d07e5c5fffabda"
+        },
+        {
+          "id": "p356-b20",
+          "source": "Hint: Consider the derivative of the function $h(x)=(C+\\int_a^xfg)e^{-\\int_a^xg}$.",
+          "sourceSha256": "0b495395354744de03a558b76348986051c1eb558214c607ab140048eb65c0c4",
+          "translation": "提示：考虑函数 $h(x)=(C+\\int_a^xfg)e^{-\\int_a^xg}$ 的导数。"
+        },
+        {
+          "id": "p356-b21",
+          "source": "(b) Let $f$ and $g$ be nonnegative functions with $g$ continuous and $f$ differentiable. Suppose that $f'(x)=g(x)f(x)$ and $f(0)=0$. Prove that $f=0$. (Compare Problem 21.)",
+          "sourceSha256": "27620236103c159d9fccdfe3b1e8421ec1f18891cf0a11673db7cde44cb0f9d4",
+          "translation": "(b) 设 $f$ 和 $g$ 是非负函数，$g$ 连续，$f$ 可微。假设 $f'(x)=g(x)f(x)$ 且 $f(0)=0$。证明 $f=0$。（比较习题 21。）"
+        },
+        {
+          "id": "p356-b22",
+          "source": "### 29.",
+          "sourceSha256": "2b03e98fafcd40e8fdba5086d1753ea10425470a6703dc5959a8d997b5c69ba4"
+        },
+        {
+          "id": "p356-b23",
+          "source": "(a) Prove that",
+          "sourceSha256": "5fd957c03a4a5c36f0dc505bfedc633c34bfb7dc8fb6d6e0639736d4fcc5d37c",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p356-b24",
+          "source": "$$1+x+\\frac{x^2}{2!}+\\frac{x^3}{3!}+\\cdots+\\frac{x^n}{n!}\\le e^x\\qquad\\text{for }x\\ge0.$$",
+          "sourceSha256": "839991032b93e780360e890a7dd942efb6aa1718975b25b210c9c59b51410f8e"
+        },
+        {
+          "id": "p356-b25",
+          "source": "Hint: Use induction on $n$, and compare derivatives.",
+          "sourceSha256": "a39a839da5069c3766fd16c513c66894ee1d276dbc6f871209d274b8076993c7",
+          "translation": "提示：对 $n$ 使用归纳法，并比较导数。"
+        },
+        {
+          "id": "p356-b26",
+          "source": "(b) Give a new proof that $\\displaystyle\\lim_{x\\to\\infty}e^x/x^n=\\infty$.",
+          "sourceSha256": "8d84563176719513346154262c8bb41388fbad7f5dd52fe4cbcdefe43dcf263d",
+          "translation": "(b) 给出 $\\displaystyle\\lim_{x\\to\\infty}e^x/x^n=\\infty$ 的一个新证明。"
+        },
+        {
+          "id": "p356-b27",
+          "source": "### 30.",
+          "sourceSha256": "3af8d9cda2244caa10c3e85da41840dc8c8c907907fa1a17e47f6da23b5d7ba1"
+        },
+        {
+          "id": "p356-b28",
+          "source": "Give yet another proof of this fact, using the appropriate form of l’Hôpital’s Rule. (See Problem 11-56.)",
+          "sourceSha256": "771619e8e530f5e31f7dac6640c93065c6b1f59f48406dd95ec143b1a459f8f1",
+          "translation": "使用适当形式的洛必达法则，再给出这个事实的另一种证明。（见习题 11-56。）"
+        }
+      ]
+    },
+    {
+      "printed": 357,
+      "sourceSha256": "ac359a6bb99a9910b8cebaacec7c5e74130065b3cd89a6228459353d044f5adf",
+      "blocks": [
+        {
+          "id": "p357-b1",
+          "source": "### 31.",
+          "sourceSha256": "c2a230851d457202448280e05f5df5e0c9dc069d235a5c511aa1e04b450cf4ed"
+        },
+        {
+          "id": "p357-b2",
+          "source": "(a) Evaluate $\\displaystyle\\lim_{x\\to\\infty}e^{-x^2}\\int_0^xe^{t^2}\\,dt$. (You should be able to make an educated guess before doing any calculations.)",
+          "sourceSha256": "2f70a71b9c664d410f1eb5f9871a61be767629b5dd727df9e56faeb21b977eda",
+          "translation": "(a) 求 $\\displaystyle\\lim_{x\\to\\infty}e^{-x^2}\\int_0^xe^{t^2}\\,dt$。（在进行任何计算之前，你应该能够作出一个有根据的猜测。）"
+        },
+        {
+          "id": "p357-b3",
+          "source": "(b) Evaluate the following limits.",
+          "sourceSha256": "08e05adda015a716dacd2d44de2c0cdf6e2d16fc881675359c65aef31c15a98f",
+          "translation": "(b) 求下列极限。"
+        },
+        {
+          "id": "p357-b4",
+          "source": "(i) $\\displaystyle\\lim_{x\\to\\infty}e^{-x^2}\\int_x^{x+(1/x)}e^{t^2}\\,dt$.",
+          "sourceSha256": "baa1c92332ebf2bff431d6bf1f04d197a21256bc0f2b0d6c7d446f1997d44887"
+        },
+        {
+          "id": "p357-b5",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to\\infty}e^{-x^2}\\int_x^{x+(\\log x)/x}e^{t^2}\\,dt$.",
+          "sourceSha256": "af0f58f594434a593dafd0edcf882930ab75a4cf5bbc80530dc6391699d9338b"
+        },
+        {
+          "id": "p357-b6",
+          "source": "(iii) $\\displaystyle\\lim_{x\\to\\infty}e^{-x^2}\\int_x^{x+(\\log x)/2x}e^{t^2}\\,dt$.",
+          "sourceSha256": "126dc53d2792b89f7e9fbcafe4056803470ccb1c6855fd5444efb4395d7e6649"
+        },
+        {
+          "id": "p357-b7",
+          "source": "### 32.",
+          "sourceSha256": "81939346f30e826a21b1c572844c82f1ef83f495d8fb39cf38a0c7b615b27121"
+        },
+        {
+          "id": "p357-b8",
+          "source": "This problem outlines the classical approach to logarithms and exponentials. To begin with, we will simply assume that the function $f(x)=a^x$, defined in an elementary way for rational $x$, can somehow be extended to a continuous one-one function, obeying the same algebraic rules, on the whole line. (See Problem 22-29 for a direct proof of this.) The inverse of $f$ will then be denoted by $\\log_a$.",
+          "sourceSha256": "9f6c632c449ab2e5f8e82bddbe069ddc892a0d90dcc454bacf6899cf80eab23a",
+          "translation": "本题概述对数与指数的经典处理方法。首先，我们直接假设：对于有理数 $x$，以初等方法定义的函数 $f(x)=a^x$，能够以某种方式延拓成整条实数轴上的连续一一函数，并服从相同的代数规则。（直接证明见习题 22-29。）于是，$f$ 的反函数记为 $\\log_a$。"
+        },
+        {
+          "id": "p357-b9",
+          "source": "(a) Show, directly from the definition, that",
+          "sourceSha256": "f2f0001560b2a94118448be559351cb02c384728e23590742b4aa6be0c04f7f7",
+          "translation": "(a) 直接从定义证明"
+        },
+        {
+          "id": "p357-b10",
+          "source": "$$\\begin{aligned}\n\\log_a'(x)&=\\lim_{h\\to0}\\log_a\\left(1+\\frac hx\\right)^{1/h}\\\\\n&=\\frac1x\\cdot\\log_a'\\left(\\lim_{k\\to0}(1+k)^{1/k}\\right).\n\\end{aligned}$$",
+          "sourceSha256": "8dc484dbace0337f4108e5da324cbfa670e23aee4a4ceb5831f1dab86d0e582e"
+        },
+        {
+          "id": "p357-b11",
+          "source": "Thus, the whole problem has been reduced to the determination of $\\displaystyle\\lim_{h\\to0}(1+h)^{1/h}$. If we can show that this has a limit $e$, then $\\log_e'(x)=\\dfrac1x\\cdot\\log_e e=\\dfrac1x$, and consequently $\\exp=\\log_e^{-1}$ has derivative $\\exp'(x)=\\exp(x)$.",
+          "sourceSha256": "c5642dfd1ef96888d8f7fc8c1b02c5e7d5a0285269f285a84d10bdd711609032",
+          "translation": "这样，整个问题就归结为确定 $\\displaystyle\\lim_{h\\to0}(1+h)^{1/h}$。如果能够证明它有极限 $e$，那么 $\\log_e'(x)=\\dfrac1x\\cdot\\log_e e=\\dfrac1x$，因而 $\\exp=\\log_e^{-1}$ 的导数为 $\\exp'(x)=\\exp(x)$。"
+        },
+        {
+          "id": "p357-b12",
+          "source": "(b) Let $a_n=\\left(1+\\dfrac1n\\right)^n$ for natural numbers $n$. Using the binomial theorem, show that",
+          "sourceSha256": "0b27ed9db097d7ff545a0d93949e334fe6e7344577226ee423abf65484d32fea",
+          "translation": "(b) 对自然数 $n$，令 $a_n=\\left(1+\\dfrac1n\\right)^n$。利用二项式定理，证明"
+        },
+        {
+          "id": "p357-b13",
+          "source": "$$a_n=2+\\sum_{k=2}^n\\frac1{k!}\\left(1-\\frac1n\\right)\\left(1-\\frac2n\\right)\\cdots\\left(1-\\frac{k-1}n\\right).$$",
+          "sourceSha256": "f1893d3507e73956d83ee566aa81c2e8f10590683f2fee84f5512730a61487c6"
+        },
+        {
+          "id": "p357-b14",
+          "source": "Conclude that $a_n<a_{n+1}$.",
+          "sourceSha256": "fb507216825d86a54963d9c893dcb3d893a9d05406244a598c71fe722fabe948",
+          "translation": "由此得出 $a_n<a_{n+1}$。"
+        },
+        {
+          "id": "p357-b15",
+          "source": "(c) Using the fact that $1/k!\\le1/2^{k-1}$ for $k\\ge2$, show that all $a_n<3$. Thus, the set of numbers $\\{a_1,a_2,a_3,\\ldots\\}$ is bounded, and therefore has a least upper bound $e$. Show that for any $\\varepsilon>0$ we have $e-a_n<\\varepsilon$ for large enough $n$.",
+          "sourceSha256": "f6ffa5823b250eabe4ea9aefe1a416ddb77fc4655f3539f397e4db1e0c8d6823",
+          "translation": "(c) 利用当 $k\\ge2$ 时有 $1/k!\\le1/2^{k-1}$ 这一事实，证明所有 $a_n<3$。所以数集 $\\{a_1,a_2,a_3,\\ldots\\}$ 有界，因此存在最小上界 $e$。证明：对于任意 $\\varepsilon>0$，当 $n$ 足够大时，有 $e-a_n<\\varepsilon$。"
+        },
+        {
+          "id": "p357-b16",
+          "source": "(d) If $n\\le x\\le n+1$, then",
+          "sourceSha256": "dfb9d64dd54279ab1c62cc0f395305d4323cc697347cd6903a2b1a15fedfae03",
+          "translation": "(d) 如果 $n\\le x\\le n+1$，那么"
+        },
+        {
+          "id": "p357-b17",
+          "source": "$$\\left(1+\\frac1{n+1}\\right)^n\\le\\left(1+\\frac1x\\right)^x\\le\\left(1+\\frac1n\\right)^{n+1}.$$",
+          "sourceSha256": "dfd11a1741a97fcfdaf43a48d36eb172cf28b94e407e2c87b402c420d87f5b72"
+        }
+      ]
+    },
+    {
+      "printed": 358,
+      "sourceSha256": "68624f47761826e924198fd0265249b153ed483e68b735c7af2e87a3b679188e",
+      "blocks": [
+        {
+          "id": "p358-b1",
+          "source": "Conclude that $\\displaystyle\\lim_{x\\to\\infty}\\left(1+\\frac1x\\right)^x=e$. Also show that $\\displaystyle\\lim_{x\\to-\\infty}\\left(1+\\frac1x\\right)^x=e$, and conclude that $\\displaystyle\\lim_{h\\to0}(1+h)^{1/h}=e$.",
+          "sourceSha256": "851e79b3a0e069312c836e3e421c73c7afccc0cdac4b23d285653554da2a38c0",
+          "translation": "由此得出 $\\displaystyle\\lim_{x\\to\\infty}\\left(1+\\frac1x\\right)^x=e$。再证明 $\\displaystyle\\lim_{x\\to-\\infty}\\left(1+\\frac1x\\right)^x=e$，并得出 $\\displaystyle\\lim_{h\\to0}(1+h)^{1/h}=e$。"
+        },
+        {
+          "id": "p358-b2",
+          "source": "### \\*33.",
+          "sourceSha256": "b3c411e1f5835c8697507530adbaa41b4c9bf6c8604eeac1758692c842c37c8d"
+        },
+        {
+          "id": "p358-b3",
+          "source": "A point $P$ is moving along a line segment $AB$ of length $10^7$ while another point $Q$ moves along an infinite ray (Figure 11). The velocity of $P$ is always equal to the distance from $P$ to $B$ (in other words, if $P(t)$ is the position of $P$ at time $t$, then $P'(t)=10^7-P(t)$), while $Q$ moves with constant velocity $Q'(t)=10^7$. The distance traveled by $Q$ after time $t$ is defined to be the *Napierian logarithm* of the distance from $P$ to $B$ at time $t$. Thus",
+          "sourceSha256": "7a927df1b508e371e4fec166846b51fef36c4e4c828d88876af38f516dce4fa8",
+          "translation": "点 $P$ 沿长度为 $10^7$ 的线段 $AB$ 运动，另一点 $Q$ 则沿一条无限射线运动（图 11）。$P$ 的速度始终等于 $P$ 到 $B$ 的距离（换句话说，如果 $P(t)$ 是 $P$ 在时刻 $t$ 的位置，那么 $P'(t)=10^7-P(t)$），而 $Q$ 以恒定速度 $Q'(t)=10^7$ 运动。我们把 $Q$ 在时间 $t$ 后经过的距离，定义为 $P$ 到 $B$ 在时刻 $t$ 的距离的*纳皮尔对数*。因此"
+        },
+        {
+          "id": "p358-b4",
+          "source": "$$10^7t=\\operatorname{Nap}\\log[10^7-P(t)].$$",
+          "sourceSha256": "6538bf71126a6d61a6e895bff8714c0f8060c739908d34f2bca54d907e3a3dd8"
+        },
+        {
+          "id": "p358-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:434px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 383 434 99\" role=\"img\" aria-label=\"Figure 11\"><image href=\"pages/book/0377.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 11</figcaption>\n</figure>",
+          "sourceSha256": "4cdd8e51933f514fb9e056ca33f4b6dae98bc7234b8b025a323b6b0632016030"
+        },
+        {
+          "id": "p358-b6",
+          "source": "This was the definition of logarithms given by Napier (1550–1617) in his publication of 1614, *Mirifici logarithmonum canonis description* (A Description of the Wonderful Law of Logarithms); work which was done *before* the use of exponents was invented! The number $10^7$ was chosen because Napier’s tables (intended for astronomical and navigational calculations), listed the logarithms of sines of angles, for which the best possible available tables extended to seven decimal places, and Napier wanted to avoid fractions. Prove that",
+          "sourceSha256": "6bfa5861895a8dd81d526dd47d29ed900f01255a5881752f8e5f3e19b87f3577",
+          "translation": "这就是纳皮尔（1550—1617）在 1614 年出版的《奇妙的对数法则说明》（*Mirifici logarithmonum canonis description*）中给出的对数定义；这项工作完成于指数用法被发明*之前*！之所以选择数 $10^7$，是因为纳皮尔的表（用于天文和航海计算）列出了角的正弦值的对数，而当时最好的正弦表精确到小数点后七位，纳皮尔又希望避免分数。证明"
+        },
+        {
+          "id": "p358-b7",
+          "source": "$$\\operatorname{Nap}\\log x=10^7\\log\\frac{10^7}x.$$",
+          "sourceSha256": "3332c9db2acb0666d13869f2a45f1b1388f9637f6fce1355ef3338948f5f34f4"
+        },
+        {
+          "id": "p358-b8",
+          "source": "Hint: Use the same trick as in Problem 23 to solve the equation for $P$.",
+          "sourceSha256": "c93c31fbc3083abcfdc4da5e11bb600ecdd851ce559fb6a1f2c2c7a680b039b8",
+          "translation": "提示：采用与习题 23 相同的技巧，求解关于 $P$ 的方程。"
+        },
+        {
+          "id": "p358-b9",
+          "source": "### \\*34.",
+          "sourceSha256": "4a8d49240e4ebaa8eb1b43c8aaba7cbf9ecebdf1165d800f3ca58992232973ef"
+        },
+        {
+          "id": "p358-b10",
+          "source": "(a) Sketch the graph of $f(x)=(\\log x)/x$ (paying particular attention to the behavior near 0 and $\\infty$).",
+          "sourceSha256": "500e0049c4d0ecea04951d8dba06864448587c1e0020a7f1e4747440ddc769a7",
+          "translation": "(a) 画出 $f(x)=(\\log x)/x$ 的图像（特别注意 0 和 $\\infty$ 附近的情形）。"
+        },
+        {
+          "id": "p358-b11",
+          "source": "(b) Which is larger, $e^\\pi$ or $\\pi^e$?",
+          "sourceSha256": "96f35586b4415ac897c5efd3b8c40af96da2db8474bf0c47708cdf4a1abae90a",
+          "translation": "(b) $e^\\pi$ 与 $\\pi^e$ 哪个更大？"
+        },
+        {
+          "id": "p358-b12",
+          "source": "(c) Prove that if $0<x\\le1$, or $x=e$, then the only number $y$ satisfying $x^y=y^x$ is $y=x$; but if $x>1$, $x\\ne e$, then there is precisely one number $y\\ne x$ satisfying $x^y=y^x$; moreover, if $x<e$, then $y>e$, and if $x>e$, then $y<e$. (Interpret these statements in terms of the graph in part (a)!)",
+          "sourceSha256": "8fbcc7082089a140cd869b8e88583f2cdca5185353c08281f9960020a9a27d15",
+          "translation": "(c) 证明：如果 $0<x\\le1$ 或 $x=e$，那么满足 $x^y=y^x$ 的唯一的数 $y$ 是 $y=x$；但如果 $x>1$ 且 $x\\ne e$，那么恰好有一个数 $y\\ne x$ 满足 $x^y=y^x$；此外，如果 $x<e$，那么 $y>e$，如果 $x>e$，那么 $y<e$。（利用 (a) 中的图像解释这些陈述！）"
+        },
+        {
+          "id": "p358-b13",
+          "source": "(d) Prove that if $x$ and $y$ are natural numbers and $x^y=y^x$, then $x=y$ or $x=2$, $y=4$, or $x=4$, $y=2$.",
+          "sourceSha256": "c54fb1b8ba0baf3bd73469f253ce4563106611b926ee9f0392109d8cf912c1c0",
+          "translation": "(d) 证明：如果 $x$ 和 $y$ 都是自然数，且 $x^y=y^x$，那么 $x=y$，或者 $x=2$、$y=4$，或者 $x=4$、$y=2$。"
+        },
+        {
+          "id": "p358-b14",
+          "source": "(e) Show that the set of all pairs $(x,y)$ with $x^y=y^x$ consists of a curve and a straight line which intersect; find the intersection and draw a rough sketch.",
+          "sourceSha256": "2f832fee661d916f36d11d38e081861749f63d5c7537a70fd9ee0c49392337bd",
+          "translation": "(e) 证明：所有满足 $x^y=y^x$ 的数对 $(x,y)$ 组成的集合，由一条曲线和一条直线组成，它们彼此相交；求交点，并画出大致的图像。"
+        },
+        {
+          "id": "p358-b15",
+          "source": "\\*\\*(f) For $1<x<e$ let $g(x)$ be the unique number $>e$ with $x^{g(x)}=g(x)^x$. Prove that $g$ is differentiable. (It is a good idea to consider separate functions,",
+          "sourceSha256": "6ddbcdaf104ea178d0a91a1d0b7be5cdc22c1da0dfb5f681e4e653e7afa9bf1c",
+          "translation": "\\*\\*(f) 对于 $1<x<e$，令 $g(x)$ 是满足 $x^{g(x)}=g(x)^x$ 的唯一的 $>e$ 的数。证明 $g$ 可微。（最好分别考虑两个函数，"
+        },
+        {
+          "id": "p358-b16",
+          "source": "$$\\begin{aligned}\nf_1(x)&=\\frac{\\log x}x,\\qquad0<x<e\\\\\nf_2(x)&=\\frac{\\log x}x,\\qquad e<x\n\\end{aligned}$$",
+          "sourceSha256": "ad95560aebb4f79ef19c77b819801a63d43e398d0e4064cb14158718f170920f"
+        }
+      ]
+    },
+    {
+      "printed": 359,
+      "sourceSha256": "6a472d1de08d0921d992256530abc4107e0f9309fce2a4779a44369426d48985",
+      "blocks": [
+        {
+          "id": "p359-b1",
+          "source": "and write $g$ in terms of $f_1$ and $f_2$. You should be able to show that",
+          "sourceSha256": "8b4c23d53ffab8b67bcbabe2587f7dbc13ebd4bb3454340db29127ff8dc758c4",
+          "translation": "并用 $f_1$ 和 $f_2$ 表示 $g$。你应该能够证明"
+        },
+        {
+          "id": "p359-b2",
+          "source": "$$g'(x)=\\frac{[g(x)]^2}{1-\\log g(x)}\\cdot\\frac{1-\\log x}{x^2}$$",
+          "sourceSha256": "040021c676a1511ea31dce8db642a2dee5670e74297416abd068a5102d3256b3"
+        },
+        {
+          "id": "p359-b3",
+          "source": "if you do this part properly.)",
+          "sourceSha256": "2bbf02f707afd795d05cf95f0606305f5a63c616281f554530e0969a15c2940c",
+          "translation": "只要你正确完成了这一部分。）"
+        },
+        {
+          "id": "p359-b4",
+          "source": "### \\*35.",
+          "sourceSha256": "ed86777f29302ed96b873aea45845e14d2c5ee43e61fb9de557a7defb465e406"
+        },
+        {
+          "id": "p359-b5",
+          "source": "This problem uses the material from the Appendix to Chapter 11.",
+          "sourceSha256": "537774fe82293c9437101fc59a2fcf1ffe8e6dc8db65bff1513c7a10fd203889",
+          "translation": "本题使用第 11 章附录的内容。"
+        },
+        {
+          "id": "p359-b6",
+          "source": "(a) Prove that exp is convex and log is concave.",
+          "sourceSha256": "11e91d951faade1633217b6a63c8e9f579e5cdfb1f029985c923ec35b1867c20",
+          "translation": "(a) 证明 exp 是凸的，log 是凹的。"
+        },
+        {
+          "id": "p359-b7",
+          "source": "(b) Prove that if $\\displaystyle\\sum_{i=1}^np_i=1$ and all $p_i>0$, then for all $z_i>0$ we have",
+          "sourceSha256": "7003b39e161e1de0e258a45340aa87340591a5ba2b39b3ab7bd90c47226ac967",
+          "translation": "(b) 证明：如果 $\\displaystyle\\sum_{i=1}^np_i=1$，而且所有 $p_i>0$，那么对所有 $z_i>0$，都有"
+        },
+        {
+          "id": "p359-b8",
+          "source": "$$z_1^{p_1}\\cdot\\ldots\\cdot z_n^{p_n}<p_1z_1+\\cdots+p_nz_n.$$",
+          "sourceSha256": "9c6eaedd1df3b539ac6c04416c9be3ea168f261063a2f539500585cb7b5b13ce"
+        },
+        {
+          "id": "p359-b9",
+          "source": "(Use Problem 8 from the Appendix to Chapter 11.)",
+          "sourceSha256": "6b52fd527453bfdeb2b6bb5b6376289b1fa9e95f4fb5d8b341a8303cdfb85ec4",
+          "translation": "（使用第 11 章附录的习题 8。）"
+        },
+        {
+          "id": "p359-b10",
+          "source": "(c) Deduce another proof that $G_n\\le A_n$ (Problem 2-22).",
+          "sourceSha256": "fd395fdbaf8a1a86127b179fa5eb4d9a01ab42d9b702a51fdc59747e7e68a550",
+          "translation": "(c) 由此给出 $G_n\\le A_n$（习题 2-22）的另一种证明。"
+        },
+        {
+          "id": "p359-b11",
+          "source": "### 36.",
+          "sourceSha256": "c4090fcf40e6199865d9a24db2f11990e08dc258ad7c0efba02290371edca589"
+        },
+        {
+          "id": "p359-b12",
+          "source": "(a) Let $f$ be a positive function on $[a,b]$, and let $P_n$ be the partition of $[a,b]$ into $n$ equal intervals. Use Problem 2-22 to show that",
+          "sourceSha256": "6d973d00556325ccdf35dfe30e2610156e3831e1d16ab3769801a2a9290a28bb",
+          "translation": "(a) 设 $f$ 是 $[a,b]$ 上的正函数，$P_n$ 是把 $[a,b]$ 分成 $n$ 个相等区间的分割。利用习题 2-22，证明"
+        },
+        {
+          "id": "p359-b13",
+          "source": "$$\\frac1{b-a}L(\\log f,P_n)\\le\\log\\left(\\frac1{b-a}L(f,P_n)\\right).$$",
+          "sourceSha256": "6fb3d94bf60884bda1f8b51ba9a9e1859b3755f3cb0ba8a760acd6f02e84367d"
+        },
+        {
+          "id": "p359-b14",
+          "source": "(b) Use the Appendix to Chapter 13 to conclude that for all integrable $f>0$ we have",
+          "sourceSha256": "6b27c81859a2a2a583aa9a97f4956dd0dcde1ae91665b969b925db2d9bd8e25f",
+          "translation": "(b) 利用第 13 章附录，得出：对于所有可积的 $f>0$，都有"
+        },
+        {
+          "id": "p359-b15",
+          "source": "$$\\frac1{b-a}\\int_a^b\\log f\\le\\log\\left(\\frac1{b-a}\\int_a^bf\\right).$$",
+          "sourceSha256": "0e7b6d25f17373e6387023a4879ffe62da370419077b53bf13acb5033a99d966"
+        },
+        {
+          "id": "p359-b16",
+          "source": "A more direct approach is illustrated in the next part:",
+          "sourceSha256": "1b5c109108793f6120e69117e9330ca3bb19bd3214d78c497beca97da1c74fdc",
+          "translation": "下一部分展示了一种更直接的方法："
+        },
+        {
+          "id": "p359-b17",
+          "source": "(c) In Problem 35, Problem 2-22 was deduced as a special case of the inequality",
+          "sourceSha256": "bc0e5dca75d4c2b7076d6b579a2dbbacde25b77ea24db3cee2242a3d03818613",
+          "translation": "(c) 在习题 35 中，习题 2-22 被作为下列不等式的特例推导出来："
+        },
+        {
+          "id": "p359-b18",
+          "source": "$$g\\left(\\sum_{i=1}^np_ix_i\\right)\\le\\sum_{i=1}^np_ig(x_i)$$",
+          "sourceSha256": "506367205550a0265c3488a15290c7d1c7bced172cb5035719b475e1bbe9c7f6"
+        },
+        {
+          "id": "p359-b19",
+          "source": "for $p_i>0$, $\\displaystyle\\sum_{i=1}^np_i=1$ and $g$ convex. For $g$ concave we have the reverse inequality",
+          "sourceSha256": "353ed17a6dc31e10741204a95543596b5a446f58beb13ceede7391c73efd448c",
+          "translation": "其中 $p_i>0$、$\\displaystyle\\sum_{i=1}^np_i=1$，且 $g$ 为凸函数。对于凹函数 $g$，有反向不等式"
+        },
+        {
+          "id": "p359-b20",
+          "source": "$$\\sum_{i=1}^np_ig(x_i)\\le g\\left(\\sum_{i=1}^np_ix_i\\right).$$",
+          "sourceSha256": "6b4e9e606a24ff3757298fea16d4f36d5d9006044775becad2b21bd67eecbe08"
+        },
+        {
+          "id": "p359-b21",
+          "source": "Apply this with $g=\\log$ to prove the result of part (b) directly for any integrable $f$.",
+          "sourceSha256": "1ecf1987ca13639213e05fcb421c997fe714681b6ba05a34b10fe7f5a3551b62",
+          "translation": "取 $g=\\log$，应用这个不等式，对任意可积的 $f$，直接证明 (b) 的结果。"
+        },
+        {
+          "id": "p359-b22",
+          "source": "(d) State a general theorem of which part (b) is just a special case.",
+          "sourceSha256": "c2b2174f86a91fd41b4162b28b44c83aecb17fc2904744dd31fdc1586e5eff02",
+          "translation": "(d) 陈述一个一般定理，使 (b) 只是它的一个特例。"
+        },
+        {
+          "id": "p359-b23",
+          "source": "### 37.",
+          "sourceSha256": "5475ed2588f51fb321f6ee63cd33a023c6fbecc5cdea891eac6b49f1d623f1a5"
+        },
+        {
+          "id": "p359-b24",
+          "source": "Suppose $f$ satisfies $f'=f$ and $f(x+y)=f(x)f(y)$ for all $x$ and $y$. Prove that $f=\\exp$ or $f=0$.",
+          "sourceSha256": "801d9f86520b3d530d06ef91fbe872e80a1fb83b13f2871d4d7736afeacf3d39",
+          "translation": "假设 $f$ 满足 $f'=f$，且对所有 $x$ 和 $y$ 都有 $f(x+y)=f(x)f(y)$。证明 $f=\\exp$ 或 $f=0$。"
+        }
+      ]
+    },
+    {
+      "printed": 360,
+      "sourceSha256": "273620542e444c05cd95f08efa7fe1cae7ac5326acd984d6d28128d6eb570b64",
+      "blocks": [
+        {
+          "id": "p360-b1",
+          "source": "### \\*38.",
+          "sourceSha256": "95b021a27ac153c8aff39d7c831024276abb79f03889723cc01f7f9532546368"
+        },
+        {
+          "id": "p360-b2",
+          "source": "Prove that if $f$ is continuous and $f(x+y)=f(x)f(y)$ for all $x$ and $y$, then either $f=0$ or $f(x)=[f(1)]^x$ for all $x$. Hint: Show that $f(x)=[f(1)]^x$ for rational $x$, and then use Problem 8-6. This problem is closely related to Problem 8-7, and the information mentioned at the end of Problem 8-7 can be used to show that there are discontinuous functions $f$ satisfying $f(x+y)=f(x)f(y)$.",
+          "sourceSha256": "09f5be55e86d797f604d6f8db227859dac5253a6c54d9f50552974c888b73827",
+          "translation": "证明：如果 $f$ 连续，且对所有 $x$ 和 $y$ 都有 $f(x+y)=f(x)f(y)$，那么要么 $f=0$，要么对所有 $x$ 都有 $f(x)=[f(1)]^x$。提示：先证明对有理数 $x$ 有 $f(x)=[f(1)]^x$，再使用习题 8-6。本题与习题 8-7 密切相关，习题 8-7 末尾提到的信息，可以用来证明存在满足 $f(x+y)=f(x)f(y)$ 的不连续函数 $f$。"
+        },
+        {
+          "id": "p360-b3",
+          "source": "### \\*39.",
+          "sourceSha256": "8a7c4739e60435fbb65e9e04c23ede5374c86d61eb3c7adf66a0f1728ca09a11"
+        },
+        {
+          "id": "p360-b4",
+          "source": "Prove that if $f$ is a continuous function defined on the positive real numbers, and $f(xy)=f(x)+f(y)$ for all positive $x$ and $y$, then $f=0$ or $f(x)=f(e)\\log x$ for all $x>0$. Hint: Consider $g(x)=f(e^x)$.",
+          "sourceSha256": "44f85d076812051837934da9c2882f8ee07c43501ba8c5c9bdc3757958297ff1",
+          "translation": "证明：如果 $f$ 是定义在正实数上的连续函数，且对所有正数 $x$ 和 $y$ 都有 $f(xy)=f(x)+f(y)$，那么要么 $f=0$，要么对所有 $x>0$ 都有 $f(x)=f(e)\\log x$。提示：考虑 $g(x)=f(e^x)$。"
+        },
+        {
+          "id": "p360-b5",
+          "source": "### \\*40.",
+          "sourceSha256": "4e966e6043c72fb8e25399282f0f203ce6b0c9e109826b6fd68d9a17b2df24b1"
+        },
+        {
+          "id": "p360-b6",
+          "source": "Prove that if $f(x)=e^{-1/x^2}$ for $x\\ne0$, and $f(0)=0$, then $f^{(k)}(0)=0$ for all $k$ (you will encounter the same sort of difficulties as in Problem 10-21). Hint: Consider functions $g(x)=e^{-1/x^2}P(1/x)$ for a polynomial function $P$.",
+          "sourceSha256": "1dab22526b8593f6219f546f1601c573308f474115ed9d6e13d6c5fdaf5aa9c0",
+          "translation": "证明：如果在 $x\\ne0$ 时有 $f(x)=e^{-1/x^2}$，且 $f(0)=0$，那么对所有 $k$ 都有 $f^{(k)}(0)=0$（你会遇到与习题 10-21 同类的困难）。提示：考虑函数 $g(x)=e^{-1/x^2}P(1/x)$，其中 $P$ 是多项式函数。"
+        },
+        {
+          "id": "p360-b7",
+          "source": "### \\*41.",
+          "sourceSha256": "5223e0476810e0cc211679dcff67628e81c5356bb179a997f729786836a2d747"
+        },
+        {
+          "id": "p360-b8",
+          "source": "Prove that if $f(x)=e^{-1/x^2}\\sin1/x$ for $x\\ne0$, and $f(0)=0$, then $f^{(k)}(0)=0$ for all $k$.",
+          "sourceSha256": "ff65fae43e3176820b9e91da69211c6feebbdb2c57a7769755e306855dac58a8",
+          "translation": "证明：如果在 $x\\ne0$ 时有 $f(x)=e^{-1/x^2}\\sin1/x$，且 $f(0)=0$，那么对所有 $k$ 都有 $f^{(k)}(0)=0$。"
+        },
+        {
+          "id": "p360-b9",
+          "source": "### 42.",
+          "sourceSha256": "2b8327841824e87b0a4acac15fb818e9f9cd515273bea12070a46244c31b8b63"
+        },
+        {
+          "id": "p360-b10",
+          "source": "(a) Prove that if $\\alpha$ is a root of the equation",
+          "sourceSha256": "414c632d41b1d4d0530b8c190a7115b9ed1cfa156397eb9fbfa7a4322e6e46be",
+          "translation": "(a) 证明：如果 $\\alpha$ 是方程"
+        },
+        {
+          "id": "p360-b11",
+          "source": "$$a_nx^n+a_{n-1}x^{n-1}+\\cdots+a_1x+a_0=0,\\tag{*}$$",
+          "sourceSha256": "3e0240cabbc86a6c46a61ec04e28ddfabf11f66caa06070b78d743fafad4630f"
+        },
+        {
+          "id": "p360-b12",
+          "source": "then the function $y(x)=e^{\\alpha x}$ satisfies the differential equation",
+          "sourceSha256": "6c093711bab90207141d0a9620ef89cf4311f616c3fe6a93c79caae017e33553",
+          "translation": "的一个根，那么函数 $y(x)=e^{\\alpha x}$ 满足微分方程"
+        },
+        {
+          "id": "p360-b13",
+          "source": "$$a_ny^{(n)}+a_{n-1}y^{(n-1)}+\\cdots+a_1y'+a_0y=0.\\tag{**}$$",
+          "sourceSha256": "388037246c02f506beb7cc6e8980f0b573367096c37ea9e9a2273e3d5608e3f3"
+        },
+        {
+          "id": "p360-b14",
+          "source": "\\*(b) Prove that if $\\alpha$ is a double root of (*), then $y(x)=xe^{\\alpha x}$ also satisfies (**). Hint: Remember that if $\\alpha$ is a double root of a polynomial equation $f(x)=0$, then $f'(\\alpha)=0$.",
+          "sourceSha256": "f026653df683914651fd8f2f31df55414ec3282f70fc322f503344073b53027e",
+          "translation": "\\*(b) 证明：如果 $\\alpha$ 是 (*) 的一个二重根，那么 $y(x)=xe^{\\alpha x}$ 也满足 (**)。提示：记住，如果 $\\alpha$ 是多项式方程 $f(x)=0$ 的二重根，那么 $f'(\\alpha)=0$。"
+        },
+        {
+          "id": "p360-b15",
+          "source": "\\*(c) Prove that if $\\alpha$ is a root of (*) of order $r$, then $y(x)=x^ke^{\\alpha x}$ is a solution for $0\\le k\\le r-1$.",
+          "sourceSha256": "516b5e4dedf2bee133da62894785454f1ade5c669697e3f412f4699ccc195a74",
+          "translation": "\\*(c) 证明：如果 $\\alpha$ 是 (*) 的一个 $r$ 重根，那么对于 $0\\le k\\le r-1$，$y(x)=x^ke^{\\alpha x}$ 都是一个解。"
+        },
+        {
+          "id": "p360-b16",
+          "source": "If (*) has $n$ real numbers as roots (counting multiplicities), part (c) gives $n$ solutions $y_1,\\ldots,y_n$ of (**).",
+          "sourceSha256": "9789b74ab6ff3604fdcba5a19f1dc6ccb60ee11ab8242bebca9b35202abbcf54",
+          "translation": "如果 (*) 有 $n$ 个实根（计入重数），那么 (c) 给出了 (**) 的 $n$ 个解 $y_1,\\ldots,y_n$。"
+        },
+        {
+          "id": "p360-b17",
+          "source": "(d) Prove that in this case the function $c_1y_1+\\cdots+c_ny_n$ also satisfies (**).",
+          "sourceSha256": "070be2f613a77c6cdde6198a4ebbc360eba060843c41de86c734ae241841302f",
+          "translation": "(d) 证明：在这种情形中，函数 $c_1y_1+\\cdots+c_ny_n$ 也满足 (**)。"
+        },
+        {
+          "id": "p360-b18",
+          "source": "It is a theorem that in this case these are the only solutions of (**). Problem 21 and the next two problems prove special cases of this theorem, and the general case is considered in Problem 20-26. In Chapter 27 we will see what to do when (*) does not have $n$ real numbers as roots.",
+          "sourceSha256": "e03f4c139d514eb1a573f0c03ba76d9ec68c4ced39f5344ecaa8dff19c580323",
+          "translation": "有一个定理断言，在这种情形中，这些就是 (**) 的全部解。习题 21 和下面两道题证明了这个定理的特殊情形，一般情形则在习题 20-26 中讨论。第 27 章将说明，当 (*) 没有 $n$ 个实根时应当怎样处理。"
+        },
+        {
+          "id": "p360-b19",
+          "source": "### \\*43.",
+          "sourceSha256": "07de890b554e23202fd965916f17985ef2914ab41f957d65077a29d514b0bdc8"
+        },
+        {
+          "id": "p360-b20",
+          "source": "Suppose that $f$ satisfies $f''-f=0$ and $f(0)=f'(0)=0$. Prove that $f=0$ as follows.",
+          "sourceSha256": "e1d11130248be23d82c1a3c429e4f98c0c1a45ce4b432413b6db83f211ad6b11",
+          "translation": "假设 $f$ 满足 $f''-f=0$ 且 $f(0)=f'(0)=0$。按以下步骤证明 $f=0$。"
+        },
+        {
+          "id": "p360-b21",
+          "source": "(a) Show that $f^2-(f')^2=0$.",
+          "sourceSha256": "28228ab82779308adb85e73c4cf35458900e415cc2d49455bed8300ece34a055",
+          "translation": "(a) 证明 $f^2-(f')^2=0$。"
+        },
+        {
+          "id": "p360-b22",
+          "source": "(b) Suppose that $f(x)\\ne0$ for all $x$ in some interval $(a,b)$. Show that either $f(x)=ce^x$ or else $f(x)=ce^{-x}$ for all $x$ in $(a,b)$, for some constant $c$.",
+          "sourceSha256": "df5e86788c87e135ae262853ed56850f34f19cd949262e8f5211221d6c68458e",
+          "translation": "(b) 假设在某个区间 $(a,b)$ 中，对所有 $x$ 都有 $f(x)\\ne0$。证明：存在某个常数 $c$，使得对 $(a,b)$ 中所有 $x$，要么都有 $f(x)=ce^x$，要么都有 $f(x)=ce^{-x}$。"
+        },
+        {
+          "id": "p360-b23",
+          "source": "\\*\\*(c) If $f(x_0)\\ne0$ for $x_0>0$, say, then there would be a number $a$ such that $0\\le a<x_0$ and $f(a)=0$, while $f(x)\\ne0$ for $a<x<x_0$. Why? Use this fact and part (b) to deduce a contradiction.",
+          "sourceSha256": "8028068c73405aa190c4487b2c38ac0350bd6fa68a781f4395a6eba94be4fb95",
+          "translation": "\\*\\*(c) 如果例如在 $x_0>0$ 处有 $f(x_0)\\ne0$，那么会存在一个数 $a$，使得 $0\\le a<x_0$ 且 $f(a)=0$，而对 $a<x<x_0$ 有 $f(x)\\ne0$。为什么？利用这一事实以及 (b)，推出矛盾。"
+        }
+      ]
+    },
+    {
+      "printed": 361,
+      "sourceSha256": "eb1b4405636c55967fbf3330b995a2df9c11ca4608f202119e2b76cae904f4a2",
+      "blocks": [
+        {
+          "id": "p361-b1",
+          "source": "### \\*44.",
+          "sourceSha256": "2fef7b0d2df7b45132da8a51eb65661723283c19c4df237ab75811a6038084fd"
+        },
+        {
+          "id": "p361-b2",
+          "source": "(a) Show that if $f$ satisfies $f''-f=0$, then $f(x)=ae^x+be^{-x}$ for some $a$ and $b$. (First figure out what $a$ and $b$ should be in terms of $f(0)$ and $f'(0)$, and then use Problem 43.)",
+          "sourceSha256": "5cdf1e5f6ef5af9757b801c88dcc6363a14727978c747185d92ccc80b6a08b31",
+          "translation": "(a) 证明：如果 $f$ 满足 $f''-f=0$，那么对某些 $a$ 和 $b$，有 $f(x)=ae^x+be^{-x}$。（先弄清 $a$ 和 $b$ 应当如何用 $f(0)$ 和 $f'(0)$ 表示，再使用习题 43。）"
+        },
+        {
+          "id": "p361-b3",
+          "source": "(b) Show also that $f=a\\sinh+b\\cosh$ for some (other) $a$ and $b$.",
+          "sourceSha256": "270626d2d39c38731449281c4d72ee3cd76ed4c6a99c14e88869620b7010fb9d",
+          "translation": "(b) 再证明：对于某些（另外的）$a$ 和 $b$，有 $f=a\\sinh+b\\cosh$。"
+        },
+        {
+          "id": "p361-b4",
+          "source": "### 45.",
+          "sourceSha256": "e2527980174dfa6a545bb28c9a2975dae5a76b077dcb8221a8a592a3cf6ac64f"
+        },
+        {
+          "id": "p361-b5",
+          "source": "Find all functions $f$ satisfying",
+          "sourceSha256": "53a4143d447c6918cd8fe530f559b7be376e503dbc702a4031fa3743979617cf",
+          "translation": "找出满足下式的所有函数 $f$："
+        },
+        {
+          "id": "p361-b6",
+          "source": "(a) $f^{(n)}=f^{(n-1)}$.",
+          "sourceSha256": "b4fcb0ce4d9028ca3c88942fa94ad2f62e98ad323c10bf8686a211ebd621acb1"
+        },
+        {
+          "id": "p361-b7",
+          "source": "(b) $f^{(n)}=f^{(n-2)}$.",
+          "sourceSha256": "ca9f4729e1c5c69f31f4d81e5b0a11fbe7f9d4c4d3804b61250a6acdbd968780"
+        },
+        {
+          "id": "p361-b8",
+          "source": "### \\*46.",
+          "sourceSha256": "510b3793b79082fcfa6e0b7c89b0adf272bb2ca2899d9be735affbe1693b94b0"
+        },
+        {
+          "id": "p361-b9",
+          "source": "This problem, a companion to Problem 15-30, outlines a treatment of the exponential function starting from the assumption that the differential equation $f'=f$ has a nonzero solution.",
+          "sourceSha256": "c252cf9217485a958ad98905c9b52f51bf446fdd22b15692d739668017fa08a7",
+          "translation": "本题与习题 15-30 相呼应，概述一种从微分方程 $f'=f$ 有非零解这一假设出发，建立指数函数的方法。"
+        },
+        {
+          "id": "p361-b10",
+          "source": "(a) Suppose there is a function $f\\ne0$ with $f'=f$. Prove that $f(x)\\ne0$ for each $x$ by considering the function $g(x)=f(x_0+x)f(x_0-x)$, where $f(x_0)\\ne0$.",
+          "sourceSha256": "534d2b41c85d47ee383b0e876e32aafc75ade4ae62950772dc3e315ad4a19b15",
+          "translation": "(a) 假设存在一个函数 $f\\ne0$，满足 $f'=f$。考虑函数 $g(x)=f(x_0+x)f(x_0-x)$，其中 $f(x_0)\\ne0$，证明对每个 $x$ 都有 $f(x)\\ne0$。"
+        },
+        {
+          "id": "p361-b11",
+          "source": "(b) Show that there is a function $f$ satisfying $f'=f$ and $f(0)=1$.",
+          "sourceSha256": "aede153845eb9feae67f43256c5ec8f3e7b4e5f5b8116e11efa3ff75066268fb",
+          "translation": "(b) 证明：存在一个函数 $f$，满足 $f'=f$ 且 $f(0)=1$。"
+        },
+        {
+          "id": "p361-b12",
+          "source": "(c) For this $f$ show that $f(x+y)=f(x)\\cdot f(y)$ by considering the function $g(x)=f(x+y)/f(x)$.",
+          "sourceSha256": "56a09cea4057e62aa1d51be6d3c5d148857301630153a78f352315f94d4235a6",
+          "translation": "(c) 对于这个 $f$，考虑函数 $g(x)=f(x+y)/f(x)$，证明 $f(x+y)=f(x)\\cdot f(y)$。"
+        },
+        {
+          "id": "p361-b13",
+          "source": "(d) Prove that $f$ is one-one and that $(f^{-1})'(x)=1/x$.",
+          "sourceSha256": "b618b07050c0afbf4e4b726c708d7287606e03feff51b0b1448b958efc0cbc8a",
+          "translation": "(d) 证明 $f$ 是一一的，而且 $(f^{-1})'(x)=1/x$。"
+        },
+        {
+          "id": "p361-b14",
+          "source": "### 47.",
+          "sourceSha256": "0142d2c088b06e5d250b14afac5f3ce4b042c5ec454cbe3ac068d73fe1930266"
+        },
+        {
+          "id": "p361-b15",
+          "source": "Let $f$ and $g$ be continuous functions such that $\\displaystyle\\lim_{x\\to\\infty}f(x)=\\lim_{x\\to\\infty}g(x)=\\infty$. We say that $f$ *grows faster than* $g$ ($f\\gg g$) if",
+          "sourceSha256": "d718c92b17460205ad635837c2191a0ce1c7f076765c6cb73732faa88ad7b90a",
+          "translation": "设 $f$ 和 $g$ 是连续函数，满足 $\\displaystyle\\lim_{x\\to\\infty}f(x)=\\lim_{x\\to\\infty}g(x)=\\infty$。我们称 $f$ *比 $g$ 增长得快*（$f\\gg g$），如果"
+        },
+        {
+          "id": "p361-b16",
+          "source": "$$\\lim_{x\\to\\infty}\\frac{f(x)}{g(x)}=\\infty,$$",
+          "sourceSha256": "cf802dcd0d67e59ed5cc1fa9cae9fc41ac964cd01e81fa1ec726a1de9a0422fa"
+        },
+        {
+          "id": "p361-b17",
+          "source": "and we say that $f$ and $g$ *grow at the same rate* ($f\\sim g$) if",
+          "sourceSha256": "32bed94cc14a5ee26fe635f4b4e6615571dd0e2b6c6a4a32dda26c65c5eb8b6d",
+          "translation": "并称 $f$ 和 $g$ *以相同速率增长*（$f\\sim g$），如果"
+        },
+        {
+          "id": "p361-b18",
+          "source": "$$\\lim_{x\\to\\infty}\\frac{f(x)}{g(x)}\\text{ exists and is }\\ne0,\\infty.$$",
+          "sourceSha256": "e7f4b434ba7a1475a741a306cc5758cc2ffdca26a92d369da648a166743785cb"
+        },
+        {
+          "id": "p361-b19",
+          "source": "For example, for any polynomial function $P$ with $\\displaystyle\\lim_{x\\to\\infty}P(x)=\\infty$ (i.e., $P$ is non-constant and has positive leading coefficient) we have $\\exp\\gg P$ and $P\\gg\\log^n$ for any positive integer $n$.",
+          "sourceSha256": "2b9e0f3689ff471d3828ce38a400ef593b209f05ce2afb94eb3c6d701dca78a7",
+          "translation": "例如，对于任何满足 $\\displaystyle\\lim_{x\\to\\infty}P(x)=\\infty$ 的多项式函数 $P$（即 $P$ 非常数，且首项系数为正），对任意正整数 $n$，都有 $\\exp\\gg P$ 和 $P\\gg\\log^n$。"
+        },
+        {
+          "id": "p361-b20",
+          "source": "(a) Given $f$ and $g$, with $\\displaystyle\\lim_{x\\to\\infty}f(x)=\\lim_{x\\to\\infty}g(x)=\\infty$, is it necessarily true that one of the three conditions $f\\gg g$ or $g\\gg f$ or $f\\sim g$ holds?",
+          "sourceSha256": "68eb415875ff85449c1be268d10a3955b9ec44beb0605cb0aa4d9dc557d6b162",
+          "translation": "(a) 给定满足 $\\displaystyle\\lim_{x\\to\\infty}f(x)=\\lim_{x\\to\\infty}g(x)=\\infty$ 的 $f$ 和 $g$，$f\\gg g$、$g\\gg f$、$f\\sim g$ 这三个条件是否必有一个成立？"
+        },
+        {
+          "id": "p361-b21",
+          "source": "(b) If $f\\gg g$, then $f+g\\sim f$.",
+          "sourceSha256": "e6ece11e36107fc65df81337d68001a8896d312eea2b139c1d03c475acce06c6",
+          "translation": "(b) 如果 $f\\gg g$，那么 $f+g\\sim f$。"
+        },
+        {
+          "id": "p361-b22",
+          "source": "(c) If",
+          "sourceSha256": "94c7ce6e8ae7c43cb8252bd7c8906ba3c81e1cec31f695944df237a9d39d17ce",
+          "translation": "(c) 如果"
+        },
+        {
+          "id": "p361-b23",
+          "source": "$$\\frac{\\log f}{\\log g}\\ge c>1$$",
+          "sourceSha256": "8c9b64897d842c5ab672a4b9bfd3c2706299d0c4a51b5a4d0db9d2196c4879b9"
+        },
+        {
+          "id": "p361-b24",
+          "source": "for sufficiently large $x$, then $f\\gg g$.",
+          "sourceSha256": "be956dd9f66e150b47ee004e5cfc389e7162732e89f987150dad6a226fd3f3d8",
+          "translation": "对足够大的 $x$ 成立，那么 $f\\gg g$。"
+        },
+        {
+          "id": "p361-b25",
+          "source": "(d) If $f\\gg g$ and $F(x)=\\displaystyle\\int_0^xf$, $G(x)=\\displaystyle\\int_0^xg$, does it necessarily follow that $F\\gg G$?",
+          "sourceSha256": "66495a256f47eacc38cf884a85e3a85ac2ebe38b67e90b4c710ff09f7c2b2324",
+          "translation": "(d) 如果 $f\\gg g$，且 $F(x)=\\displaystyle\\int_0^xf$、$G(x)=\\displaystyle\\int_0^xg$，是否必定有 $F\\gg G$？"
+        }
+      ]
+    },
+    {
+      "printed": 362,
+      "sourceSha256": "ebbc3cacbf60652fc80aa6385798204605fcc6da662b3c8c0c78afdfc3f24ea7",
+      "blocks": [
+        {
+          "id": "p362-b1",
+          "source": "(e) Arrange each of the following sets of functions in increasing order of growth (for convenience, we indicate each function simply by giving its value at $x$):",
+          "sourceSha256": "e2c8d1732fbb5cd1fbb2c22761c6758f8b3a11351a7c96b66a52e39c1e376571",
+          "translation": "(e) 将下列每组函数按增长速度从慢到快排列（为方便起见，仅给出函数在 $x$ 处的值来表示各个函数）："
+        },
+        {
+          "id": "p362-b2",
+          "source": "(i) $x^3,\\ e^x,\\ x^3+\\log(x^3),\\ \\log4x,\\ (\\log x)^x,\\ x^x,\\ x+e^{-5x},\\ x^3\\log x$.",
+          "sourceSha256": "3f60cae40020f3aeea4a834f4e874ccb389448113f8b29643ccf8767064b5428"
+        },
+        {
+          "id": "p362-b3",
+          "source": "(ii) $x\\log^2x,\\ e^{5x},\\ \\log(x^x),\\ e^{x^2},\\ x^x,\\ x^{\\log x},\\ (\\log x)^x$.",
+          "sourceSha256": "85efc5150e87135e203bea4559bb1155c62de997e1ebd2e42841961eae66506d"
+        },
+        {
+          "id": "p362-b4",
+          "source": "(iii) $e^x,\\ x^e,\\ x^x,\\ e^{x^2},\\ 2^x,\\ e^{x/2},\\ (\\log x)^{2x}$.",
+          "sourceSha256": "c957fa7cefdd1dc685836eb82f4520342ebef9468b67803b37b08a4cfe8020ac"
+        },
+        {
+          "id": "p362-b5",
+          "source": "### 48.",
+          "sourceSha256": "8f443dec4752f2b0da21bd0f3d17b66ce8e5b33876cf7111ccdcf36345f2207e"
+        },
+        {
+          "id": "p362-b6",
+          "source": "Suppose that $g_1,g_2,g_3,\\ldots$ are continuous functions. Show that there is a continuous function $f$ which grows faster than each $g_i$.",
+          "sourceSha256": "7596a7b8e17bf8f05be3e64da9e6b05548f1527427f63143ad328afe5437e9e8",
+          "translation": "设 $g_1,g_2,g_3,\\ldots$ 是连续函数。证明：存在一个连续函数 $f$，其增长速度比每个 $g_i$ 都快。"
+        },
+        {
+          "id": "p362-b7",
+          "source": "### 49.",
+          "sourceSha256": "b9cba01d8d61f0ef2122b9ca7c7b678b0bc2fe1e13b43b29f0850d7bc64e96f7"
+        },
+        {
+          "id": "p362-b8",
+          "source": "Prove that $\\log_{10}2$ is irrational.",
+          "sourceSha256": "a1caf7346ab5d0fa8afc31dabd17423f4fcb599b60d1ee5e5f30cea2e446d45a",
+          "translation": "证明 $\\log_{10}2$ 是无理数。"
+        }
+      ]
+    }
+  ]
+}

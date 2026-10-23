@@ -1,0 +1,1567 @@
+{
+  "chapter": 25,
+  "language": "zh-CN",
+  "sourceSha256": "018f5afe8c40839299885c3004d5d98341053b9b9ecba4eee5d9e0f3aaf5f19a",
+  "paragraphCount": 139,
+  "pages": [
+    {
+      "printed": 526,
+      "sourceSha256": "f1ed2dc6e629ec285b243f4604ca35b23c0c5c6ef724f5cda04bf489641a7c61",
+      "blocks": [
+        {
+          "id": "p526-b1",
+          "source": "# CHAPTER 25\n# COMPLEX NUMBERS",
+          "sourceSha256": "07bb42c273c20616079bdb29d78ce33ba6d90d6b8edc49a44945b94d43491d3e",
+          "translation": "# 第 25 章\n# 复数"
+        },
+        {
+          "id": "p526-b2",
+          "source": "With the exception of the last few paragraphs of the previous chapter, this book has presented unremitting propaganda for the real numbers. Nevertheless, the real numbers do have a great deficiency—not every polynomial function has a root. The simplest and most notable example is the fact that no number $x$ can satisfy $x^2+1=0$. This deficiency is so severe that long ago mathematicians felt the need to “invent” a number $i$ with the property that $i^2+1=0$. For a long time the status of the “number” $i$ was quite mysterious: since there is no number $x$ satisfying $x^2+1=0$, it is nonsensical to say “let $i$ be the number satisfying $i^2+1=0$.” Nevertheless, admission of the “imaginary” number $i$ to the family of numbers seemed to simplify greatly many algebraic computations, especially when “complex numbers” $a+bi$ (for $a$ and $b$ in $\\mathbf R$) were allowed, and all the laws of arithmetical computation enumerated in Chapter 1 were assumed to be valid. For example, every quadratic equation",
+          "sourceSha256": "b30d3b9fa979212c2461295876ac53c909b4d90927efc6f6f2e422d816ce078e",
+          "translation": "除了上一章最后几段之外，本书一直在不遗余力地为实数作宣传。不过，实数确实有一个重大缺陷——并非每个多项式函数都有根。最简单、也最引人注目的例子，就是不存在满足 $x^2+1=0$ 的数 $x$。这个缺陷如此严重，以至于很久以前，数学家们就觉得有必要“发明”一个具有 $i^2+1=0$ 这一性质的数 $i$。很长一段时间里，这个“数”$i$ 的地位相当神秘：既然不存在满足 $x^2+1=0$ 的数 $x$，那么说“令 $i$ 为满足 $i^2+1=0$ 的数”就是毫无意义的。然而，把“虚”数 $i$ 接纳进数的家族，似乎能大大简化许多代数计算，尤其是在允许“复数”$a+bi$（其中 $a$ 和 $b$ 属于 $\\mathbf R$），并假定第 1 章列出的所有算术运算法则都成立之后。例如，每个二次方程"
+        },
+        {
+          "id": "p526-b3",
+          "source": "$$ax^2+bx+c=0\\qquad(a\\ne0)$$",
+          "sourceSha256": "d51031c40b4cd59e9c22cbbfcf2780531c71ff6d77508d24414be6585e2c85e3"
+        },
+        {
+          "id": "p526-b4",
+          "source": "can be solved formally to give",
+          "sourceSha256": "97344a5f0359095fdeb047cd610c1dec0b8940a8dc16958bb3f249ba312850de",
+          "translation": "都可以形式地解出"
+        },
+        {
+          "id": "p526-b5",
+          "source": "$$x=\\frac{-b+\\sqrt{b^2-4ac}}{2a}\\quad\\text{or}\\quad x=\\frac{-b-\\sqrt{b^2-4ac}}{2a}.$$",
+          "sourceSha256": "2dfef29e7f98f1033cf53c79b735b63a5afd1d204bee1d35ecbbb724398cd268"
+        },
+        {
+          "id": "p526-b6",
+          "source": "If $b^2-4ac\\ge0$, these formulas give correct solutions; when complex numbers are allowed the formulas seem to make sense in all cases. For example, the equation",
+          "sourceSha256": "60d867c3786ba98e704c95faa5309c4cd77f0bfa450d0109e303be5fd5f23fe2",
+          "translation": "如果 $b^2-4ac\\ge0$，这些公式给出正确的解；允许复数之后，这些公式似乎在所有情形中都有意义。例如，方程"
+        },
+        {
+          "id": "p526-b7",
+          "source": "$$x^2+x+1=0$$",
+          "sourceSha256": "e4c6197287a611559b7c0b2eaae74d854b760d13fb5a547b63ad669661d7635d"
+        },
+        {
+          "id": "p526-b8",
+          "source": "has no real root, since",
+          "sourceSha256": "7a48890638256ac40cac34612304c5fb99f432acd8296d1336be0fec292a1545",
+          "translation": "没有实根，因为"
+        },
+        {
+          "id": "p526-b9",
+          "source": "$$x^2+x+1=(x+\\tfrac12)^2+\\tfrac34>0,\\quad\\text{for all }x.$$",
+          "sourceSha256": "bce43f0e9f5e379e279c6f935562edb49649c2dbebbcbc7041f70162b592df30"
+        },
+        {
+          "id": "p526-b10",
+          "source": "But the formula for the roots of a quadratic equation suggest the “solutions”",
+          "sourceSha256": "19d591efe8773e6e0ef41d8655126423c91fb44d4d3f1e8bd35188aaf45f8b02",
+          "translation": "但是，二次方程的求根公式暗示了如下“解”："
+        },
+        {
+          "id": "p526-b11",
+          "source": "$$x=\\frac{-1+\\sqrt{-3}}2\\quad\\text{and}\\quad x=\\frac{-1-\\sqrt{-3}}2;$$",
+          "sourceSha256": "e6086b9c27c38129f0a575cb44b16db2eddd6a929544b4db25ba09afd3b91f3f"
+        },
+        {
+          "id": "p526-b12",
+          "source": "if we understand $\\sqrt{-3}$ to mean $\\sqrt{3\\cdot(-1)}=\\sqrt3\\cdot\\sqrt{-1}=\\sqrt3\\,i$, then these numbers would be",
+          "sourceSha256": "70b582bd253084f1e2670232cb270ee8ac43df69b8420005ffab19ed1f3d2239",
+          "translation": "如果把 $\\sqrt{-3}$ 理解为 $\\sqrt{3\\cdot(-1)}=\\sqrt3\\cdot\\sqrt{-1}=\\sqrt3\\,i$，那么这些数就是"
+        },
+        {
+          "id": "p526-b13",
+          "source": "$$-\\frac12+\\frac{\\sqrt3}2i\\quad\\text{and}\\quad-\\frac12-\\frac{\\sqrt3}2i.$$",
+          "sourceSha256": "596b5473426d592613af7c9478a3f387d6adb59e5ccbd5b4954754f5da748607"
+        },
+        {
+          "id": "p526-b14",
+          "source": "It is not hard to check that these, as yet purely formal, numbers do indeed satisfy the equation",
+          "sourceSha256": "b15657d5f13ea5c5d46c1e4295b78beac0aaece61667f9348557ac471ada4a5a",
+          "translation": "不难验证，这些目前还只是形式上的数，确实满足方程"
+        },
+        {
+          "id": "p526-b15",
+          "source": "$$x^2+x+1=0.$$",
+          "sourceSha256": "a3d3db4673f3a23c11c5d50af5240807229ac7590821a9c3d603aefc0ffdf118"
+        }
+      ]
+    },
+    {
+      "printed": 527,
+      "sourceSha256": "11963dfe66a30793109c21e86533f24ba7b75075ab84be8b01c9aa605b3af0b5",
+      "blocks": [
+        {
+          "id": "p527-b1",
+          "source": "It is even possible to “solve” quadratic equations whose coefficients are themselves complex numbers. For example, the equation",
+          "sourceSha256": "4fc46c7b67fd59ea4db7c471f827174f92f33134f25bcc3681690dd490089502",
+          "translation": "甚至还可以“解”出系数本身就是复数的二次方程。例如，方程"
+        },
+        {
+          "id": "p527-b2",
+          "source": "$$x^2+x+1+i=0$$",
+          "sourceSha256": "d1f358249b6e2e33f48b002b83a387d6fb696492ca84d0fc00b53b26076e9865"
+        },
+        {
+          "id": "p527-b3",
+          "source": "ought to have the solutions",
+          "sourceSha256": "a5078788d3de3c25bb8219397323079f9628abff14f792d882cb09073be24f51",
+          "translation": "应当有如下解："
+        },
+        {
+          "id": "p527-b4",
+          "source": "$$x=\\frac{-1\\pm\\sqrt{1-4(1+i)}}2=\\frac{-1\\pm\\sqrt{-3-4i}}2,$$",
+          "sourceSha256": "ce6af8425d0fea16844c5104d9ce31bb2f9aacabf985b2bd3b56b5bb3142d158"
+        },
+        {
+          "id": "p527-b5",
+          "source": "where the symbol $\\sqrt{-3-4i}$ means a complex number $\\alpha+\\beta i$ whose square is $-3-4i$. In order to have",
+          "sourceSha256": "17cdb925a06ce28c603b78b33052924b3c1328018bdc5c7675565b4c58896138",
+          "translation": "其中符号 $\\sqrt{-3-4i}$ 表示一个平方为 $-3-4i$ 的复数 $\\alpha+\\beta i$。为了使"
+        },
+        {
+          "id": "p527-b6",
+          "source": "$$(\\alpha+\\beta i)^2=\\alpha^2-\\beta^2+2\\alpha\\beta i=-3-4i$$",
+          "sourceSha256": "5f2874d058eb7dc22b73938f629b6592d105ee79ee1264f0c3e301850055c359"
+        },
+        {
+          "id": "p527-b7",
+          "source": "we need",
+          "sourceSha256": "4d2ede62c07ba04a9d662d711f53b58f0e4deb36a10da6dd6b429ed652f20c19",
+          "translation": "成立，我们需要"
+        },
+        {
+          "id": "p527-b8",
+          "source": "$$\\begin{aligned}\\alpha^2-\\beta^2&=-3,\\\\2\\alpha\\beta&=-4.\\end{aligned}$$",
+          "sourceSha256": "1de3348ce541f3a520f39286f0e089375c90450705115afb1d26c47a508d308c"
+        },
+        {
+          "id": "p527-b9",
+          "source": "These two equations can easily be solved for real $\\alpha$ and $\\beta$; in fact, there are two possible solutions:",
+          "sourceSha256": "fb9444412b726a59e6b9ef1e64a342dd250f9522a275fa667ef58acdbabc3ced",
+          "translation": "这两个方程很容易解出实数 $\\alpha$ 和 $\\beta$；事实上，有两组可能的解："
+        },
+        {
+          "id": "p527-b10",
+          "source": "$$\\begin{aligned}\\alpha&=1\\\\\\beta&=-2\\end{aligned}\\qquad\\text{and}\\qquad\\begin{aligned}\\alpha&=-1\\\\\\beta&=2.\\end{aligned}$$",
+          "sourceSha256": "40f09afab6188e9a13768cf9a2dd2379aaac171400a690253c10bc00983ff256"
+        },
+        {
+          "id": "p527-b11",
+          "source": "Thus the two “square roots” of $-3-4i$ are $1-2i$ and $-1+2i$. There is no reasonable way to decide which one of these should be called $\\sqrt{-3-4i}$, and which $-\\sqrt{-3-4i}$; the conventional usage of $\\sqrt x$ makes sense only for real $x\\ge0$, in which case $\\sqrt x$ denotes the (real) nonnegative root. For this reason, the solution",
+          "sourceSha256": "d3d35760f551521a5549348028788e29373b35063039ead85a3fc4a8bd5c1322",
+          "translation": "因此，$-3-4i$ 的两个“平方根”是 $1-2i$ 和 $-1+2i$。没有什么合理的方法，能决定哪一个应称为 $\\sqrt{-3-4i}$，哪一个应称为 $-\\sqrt{-3-4i}$；$\\sqrt x$ 的惯常用法只对实数 $x\\ge0$ 有意义，此时 $\\sqrt x$ 表示那个（实的）非负平方根。因此，解"
+        },
+        {
+          "id": "p527-b12",
+          "source": "$$x=\\frac{-1+\\sqrt{-3-4i}}2$$",
+          "sourceSha256": "605588920a7affc18ba53892dde347fa4caadd5a954ced8337dabba810c5f0c3"
+        },
+        {
+          "id": "p527-b13",
+          "source": "must be understood as an abbreviation for:",
+          "sourceSha256": "4f28a3a0ac9790f82e3840c2d2667c41e88e79b5a26943f1057271ed04385b3d",
+          "translation": "必须理解为下列说法的简写："
+        },
+        {
+          "id": "p527-b14",
+          "source": "$$x=\\frac{-1+r}2,\\quad\\text{where }r\\text{ is one of the square roots of }-3-4i.$$",
+          "sourceSha256": "619cd1b7aaf86235bedd802ba0da36ae13409f4287e613055aa9cbd10354161e"
+        },
+        {
+          "id": "p527-b15",
+          "source": "With this understanding we arrive at the solutions",
+          "sourceSha256": "6aee98c8677da7306243fcd885185ea16a7480e1f18273efda665df80c55f702",
+          "translation": "按这种理解，我们得到解"
+        },
+        {
+          "id": "p527-b16",
+          "source": "$$\\begin{aligned}x&=\\frac{-1+1-2i}2=-i,\\\\x&=\\frac{-1-1+2i}2=-1+i;\\end{aligned}$$",
+          "sourceSha256": "cd5e54b6eb5f9025ab80ec53529815f5d7c01065cf23ee598f31b5570c9cc188"
+        },
+        {
+          "id": "p527-b17",
+          "source": "as you can easily check, these numbers do provide formal solutions for the equation",
+          "sourceSha256": "fb2dee18c736490cbc0756c2e94fba8b229340c101ccb60172618e780e7858a5",
+          "translation": "你可以轻易验证，这些数确实给出了方程"
+        },
+        {
+          "id": "p527-b18",
+          "source": "$$x^2+x+1+i=0.$$",
+          "sourceSha256": "ae2c6531d6cb0c72f9c456bddc5ab9ea2880b793aad9b52630b396a131fcd0dc"
+        },
+        {
+          "id": "p527-b19",
+          "source": "For cubic equations complex numbers are equally useful. Every cubic equation",
+          "sourceSha256": "614917319e471d47b689ef456b7a2140bd33a2a6c19d8cc8517538a442fd9415",
+          "translation": "的形式解。对于三次方程，复数同样有用。我们知道，每个三次方程"
+        },
+        {
+          "id": "p527-b20",
+          "source": "$$ax^3+bx^2+cx+d=0\\qquad(a\\ne0)$$",
+          "sourceSha256": "d13fef7b4c82e905e16135917be00a9e063686139dc06ce3293213222f30fad9"
+        },
+        {
+          "id": "p527-b21",
+          "source": "with real coefficients $a,b,c$, and $d$, has, as we know, a real root $\\alpha$, and if we divide $ax^3+bx^2+cx+d$ by $x-\\alpha$ we obtain a second-degree polynomial whose roots are the other roots of $ax^3+bx^2+cx+d=0$; the roots of this second-degree polynomial",
+          "sourceSha256": "c33582e7267a99d66c8f87665dc48d5868df9d58a0ef87afeff84f2d1ce157fc",
+          "translation": "只要系数 $a,b,c$ 和 $d$ 为实数，就有一个实根 $\\alpha$；如果用 $x-\\alpha$ 去除 $ax^3+bx^2+cx+d$，就得到一个二次多项式，它的根就是 $ax^3+bx^2+cx+d=0$ 的其他根；这个二次多项式的根"
+        }
+      ]
+    },
+    {
+      "printed": 528,
+      "sourceSha256": "abed655012f62e2e751b2f52bd895421f10a0044318be40169103bbc3c41f7c2",
+      "blocks": [
+        {
+          "id": "p528-b1",
+          "source": "may be complex numbers. Thus a cubic equation will have either three real roots or one real root and $2$ complex roots. The existence of the real root is guaranteed by our theorem that every odd degree equation has a real root, but it is not really necessary to appeal to this theorem (which is of no use at all if the coefficients are complex); in the case of a cubic equation we can, with sufficient cleverness, actually find a formula for all the roots. The following derivation is presented not only as an interesting illustration of the ingenuity of early mathematicians, but as further evidence for the importance of complex numbers (whatever they may be).",
+          "sourceSha256": "6f4f6ff2ff7a1b11afed146c2d84e8bce9efce20ad3fc70fb02ea5cfa948ed3f",
+          "translation": "可能是复数。因此，三次方程或者有三个实根，或者有一个实根和 $2$ 个复根。实根的存在由“每个奇数次方程都有实根”这一定理保证，但实际上无须求助于这个定理（如果系数是复数，它就完全没用了）；对于三次方程，只要足够巧妙，实际上可以找到所有根的公式。下面给出推导，不仅是为了有趣地展示早期数学家的创造力，也是为了进一步说明复数的重要性（无论复数究竟是什么）。"
+        },
+        {
+          "id": "p528-b2",
+          "source": "To solve the most general cubic equation, it obviously suffices to consider only equations of the form",
+          "sourceSha256": "02d2d64226e3e32fa57740feb7aa96c70782092dc84d6d81b7a313b995fa338c",
+          "translation": "要解最一般的三次方程，显然只需考虑形如下式的方程："
+        },
+        {
+          "id": "p528-b3",
+          "source": "$$x^3+bx^2+cx+d=0.$$",
+          "sourceSha256": "faccc9c4d4df4347315bb8cdce982ddd45110bfd04f730f75ae11f07614f73f8"
+        },
+        {
+          "id": "p528-b4",
+          "source": "It is even possible to eliminate the term involving $x^2$, by a fairly straight-forward manipulation. If we let",
+          "sourceSha256": "65fec9655ee2e3e699543dc824966afe43cea7cccb67e5c885d3ba9d14b0b94b",
+          "translation": "通过一个相当直接的变换，甚至还可以消去含 $x^2$ 的项。如果令"
+        },
+        {
+          "id": "p528-b5",
+          "source": "$$x=y-\\frac b3,$$",
+          "sourceSha256": "61af7aecd96ae56f85e60d108aaf4df36961de6f7621fabb95ff76a02170f4bd"
+        },
+        {
+          "id": "p528-b6",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p528-b7",
+          "source": "$$\\begin{aligned}x^3&=y^3-by^2+\\frac{b^2y}3-\\frac{b^3}{27},\\\\x^2&=y^2-\\frac{2by}3+\\frac{b^2}9,\\end{aligned}$$",
+          "sourceSha256": "cc3cfc646016d3443921fef3b7e78bdeb33330d652daf53fc7afc20dc5336529"
+        },
+        {
+          "id": "p528-b8",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p528-b9",
+          "source": "$$\\begin{aligned}0&=x^3+bx^2+cx+d\\\\&=\\left(y^3-by^2+\\frac{b^2y}3-\\frac{b^3}{27}\\right)+\\left(by^2-\\frac{2b^2y}3+\\frac{b^3}9\\right)+\\left(cy-\\frac{bc}3\\right)+d\\\\&=y^3+\\left(\\frac{b^2}3-\\frac{2b^2}3+c\\right)y+\\left(\\frac{b^3}9-\\frac{b^3}{27}-\\frac{bc}3+d\\right).\\end{aligned}$$",
+          "sourceSha256": "e1ac9cef6653e395ac4ba51f652073b6ccb46aa10d661298d7378532bac1c025"
+        },
+        {
+          "id": "p528-b10",
+          "source": "The right-hand side now contains no term with $y^2$. If we can solve the equation for $y$ we can find $x$; this shows that it suffices to consider in the first place only equations of the form",
+          "sourceSha256": "41294ef77e3774a45878e6e3ebe3ca34e3be52a57349069281a2687e415a03cb",
+          "translation": "现在，右边不再含有 $y^2$ 项。如果能解出方程中的 $y$，就能求出 $x$；这说明，我们一开始就只需考虑如下形式的方程："
+        },
+        {
+          "id": "p528-b11",
+          "source": "$$x^3+px+q=0.$$",
+          "sourceSha256": "cbf2f1ac874566402728e6dd596c678ddef15460d1d77b13b5f060b929d0eee4"
+        },
+        {
+          "id": "p528-b12",
+          "source": "In the special case $p=0$ we obtain the equation $x^3=-q$. We shall see later on that every complex number does have a cube root, in fact it has three, so that this equation has three solutions. The case $p\\ne0$, on the other hand, requires quite an ingenious step. Let",
+          "sourceSha256": "99780f602171c31349f9d79a1a3c1e7523916900f9cd45f4e9bc934150988e45",
+          "translation": "在特殊情形 $p=0$ 中，得到方程 $x^3=-q$。稍后我们将看到，每个复数确实都有立方根，事实上有三个，所以这个方程有三个解。另一方面，$p\\ne0$ 的情形需要一个相当巧妙的步骤。令"
+        },
+        {
+          "id": "p528-b13",
+          "source": "$$x=w-\\frac p{3w}\\tag{*}$$",
+          "sourceSha256": "cde60d79a13058682610937306360224d6dd5ee2b1f0198739325185ef2a0123"
+        }
+      ]
+    },
+    {
+      "printed": 529,
+      "sourceSha256": "fc89c894a2348e909cdb1374bb3567cbdee2d194409764f156f2b30379623da3",
+      "blocks": [
+        {
+          "id": "p529-b1",
+          "source": "Then",
+          "sourceSha256": "0597f441dcca7c9bb0a79da4d94d03c523c031a3384009afff47ac1fd1a72b95",
+          "translation": "那么"
+        },
+        {
+          "id": "p529-b2",
+          "source": "$$\\begin{aligned}0&=x^3+px+q=\\left(w-\\frac p{3w}\\right)^3+p\\left(w-\\frac p{3w}\\right)+q\\\\&=w^3-\\frac{3w^2p}{3w}+\\frac{3wp^2}{9w^2}-\\frac{p^3}{27w^3}+pw-\\frac{p^2}{3w}+q\\\\&=w^3-\\frac{p^3}{27w^3}+q.\\end{aligned}$$",
+          "sourceSha256": "e7de17a1cb4beb767256fe57d9e06b831bf1203d395840edd5453948cc384938"
+        },
+        {
+          "id": "p529-b3",
+          "source": "This equation can be written",
+          "sourceSha256": "06baad78314bde2360978ae562441c64955b9f7e21ed6721994978fbecba6323",
+          "translation": "这个方程可以写成"
+        },
+        {
+          "id": "p529-b4",
+          "source": "$$27(w^3)^2+27q(w^3)-p^3=0,$$",
+          "sourceSha256": "479fe5384a13d4bbd3a1cc951217452f5fe7f97fb7a84a491d4fe703a373999f"
+        },
+        {
+          "id": "p529-b5",
+          "source": "which is a quadratic equation in $w^3$ (!!).",
+          "sourceSha256": "e3038d268e8f8794f6a2b9d297ee839153045fb185aa433dc8b55364eeb2ace2",
+          "translation": "这竟然是一个关于 $w^3$ 的二次方程（！！）。"
+        },
+        {
+          "id": "p529-b6",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "因此"
+        },
+        {
+          "id": "p529-b7",
+          "source": "$$\\begin{aligned}w^3&=\\frac{-27q\\pm\\sqrt{(27)^2q^2+4\\cdot27p^3}}{2\\cdot27}\\\\&=-\\frac q2\\pm\\sqrt{\\frac{q^2}4+\\frac{p^3}{27}}.\\end{aligned}$$",
+          "sourceSha256": "036ea84c91f63ac0bb2c26a56a2516422dc15ca9cd6311be502d46f08bdf160c"
+        },
+        {
+          "id": "p529-b8",
+          "source": "Remember that this really means:",
+          "sourceSha256": "b36867d3ab93675f5149293af4a179d4c3a9b60a447cc97f1390c130604c5074",
+          "translation": "请记住，这实际上意味着："
+        },
+        {
+          "id": "p529-b9",
+          "source": "$$w^3=-\\frac q2+r,\\quad\\text{where }r\\text{ is a square root of }\\frac{q^2}4+\\frac{p^3}{27}.$$",
+          "sourceSha256": "4233a41d939f249e051e8cf766d7702adb0925e4caf2eb2f45ce63db74d6a512"
+        },
+        {
+          "id": "p529-b10",
+          "source": "We can therefore write",
+          "sourceSha256": "e36f1e7292fd02ff1d6654d573338e1f5133f1a1741f4b45f1d50abf7652fb2a",
+          "translation": "所以我们可以写出"
+        },
+        {
+          "id": "p529-b11",
+          "source": "$$w=\\sqrt[3]{\\frac{-q}2\\pm\\sqrt{\\frac{q^2}4+\\frac{p^3}{27}}};$$",
+          "sourceSha256": "9696d0a9ccf68eced513c6e80c39868441e763922e5a2331b11cdc4e89f8e505"
+        },
+        {
+          "id": "p529-b12",
+          "source": "this equation means that $w$ is some cube root of $-q/2+r$, where $r$ is some square root of $q^2/4+p^3/27$. This allows six possibilities for $w$, but when these are substituted into (*), yielding",
+          "sourceSha256": "df9b221a2cbb899860a8762c559003211b89995765621bf1c17202439daa04f8",
+          "translation": "这个等式意味着，$w$ 是 $-q/2+r$ 的某个立方根，其中 $r$ 是 $q^2/4+p^3/27$ 的某个平方根。这给 $w$ 留下了六种可能，但把它们代入 (*)，得到"
+        },
+        {
+          "id": "p529-b13",
+          "source": "$$x=\\sqrt[3]{\\frac{-q}2\\pm\\sqrt{\\frac{q^2}4+\\frac{p^3}{27}}}-\\frac p{3\\cdot\\sqrt[3]{\\dfrac{-q}2\\pm\\sqrt{\\dfrac{q^2}4+\\dfrac{p^3}{27}}}},$$",
+          "sourceSha256": "ecbe5131513c4428b3fffad1e879cb6caed0ebc6d3fa70cb6888583c3853bbe0"
+        },
+        {
+          "id": "p529-b14",
+          "source": "it turns out that only $3$ different values for $x$ will be obtained! An even more surprising feature of this solution arises when we consider a cubic equation all of whose roots are real; the formula derived above may still involve complex numbers in an essential way. For example, the roots of",
+          "sourceSha256": "1f5549f75037797c39ca08e172728f1025eaae7d38f3e1c861a8af79142f22ca",
+          "translation": "结果却只会得到 $x$ 的 $3$ 个不同值！当我们考虑一个所有根都是实数的三次方程时，这个解法还有一个更加令人惊讶的特点：上面推导出的公式可能仍然本质地涉及复数。例如，方程"
+        },
+        {
+          "id": "p529-b15",
+          "source": "$$x^3-15x-4=0$$",
+          "sourceSha256": "d5c72621b4d5ad5d1ee909ed66f1cbb67787af9606ebf32031a5267d0354f041"
+        }
+      ]
+    },
+    {
+      "printed": 530,
+      "sourceSha256": "ba4678e28b4a8c90d29f18d8e59a39364e2aaad29a15a871af7eac8684c47e7c",
+      "blocks": [
+        {
+          "id": "p530-b1",
+          "source": "are $4$, $-2+\\sqrt3$, and $-2-\\sqrt3$. On the other hand, the formula derived above (with $p=-15$, $q=-4$) gives as one solution",
+          "sourceSha256": "3d666ba151aeeef12cc4008688c26db3d8e2e3b129d9a960a517e35c803dcbdc",
+          "translation": "的根是 $4$、$-2+\\sqrt3$ 和 $-2-\\sqrt3$。另一方面，上面推导的公式（取 $p=-15$、$q=-4$）给出的一个解为"
+        },
+        {
+          "id": "p530-b2",
+          "source": "$$\\begin{aligned}x&=\\sqrt[3]{2+\\sqrt{4-125}}-\\frac{-15}{3\\cdot\\sqrt[3]{2+\\sqrt{4-125}}}\\\\&=\\sqrt[3]{2+11i}+\\frac{15}{3\\cdot\\sqrt[3]{2+11i}}.\\end{aligned}$$",
+          "sourceSha256": "c5f3f373acb16c0384cacf8138ba5f9d07e5177559a86a104084e60968532a07"
+        },
+        {
+          "id": "p530-b3",
+          "source": "Now,",
+          "sourceSha256": "376b66020d77eeb2c54cb02ec72c2d2e0f6380509112cb855628f0dfcccad56e",
+          "translation": "现在，"
+        },
+        {
+          "id": "p530-b4",
+          "source": "$$\\begin{aligned}(2+i)^3&=2^3+3\\cdot2^2i+3\\cdot2\\cdot i^2+i^3\\\\&=8+12i-6-i\\\\&=2+11i,\\end{aligned}$$",
+          "sourceSha256": "1d180746b166e3f2daa4b20de5c88826e7049559a45623850d4a217abb6f3bc3"
+        },
+        {
+          "id": "p530-b5",
+          "source": "so one of the cube roots of $2+11i$ is $2+i$. Thus, for one solution of the equation we obtain",
+          "sourceSha256": "ac0e52c39262e0faaab6b9e140229d557be5c024389dfef557b24a595181741c",
+          "translation": "所以 $2+11i$ 的一个立方根是 $2+i$。于是，我们得到这个方程的一个解："
+        },
+        {
+          "id": "p530-b6",
+          "source": "$$\\begin{aligned}x&=2+i+\\frac{15}{6+3i}\\\\&=2+i+\\frac{15}{6+3i}\\cdot\\frac{6-3i}{6-3i}\\\\&=2+i+\\frac{90-45i}{36+9}\\\\&=4\\ (!).\\end{aligned}$$",
+          "sourceSha256": "9533a0cf82504745fdeb1166fc8776cc390df228dee319603101868f766f830c"
+        },
+        {
+          "id": "p530-b7",
+          "source": "The other roots can also be found if the other cube roots of $2+11i$ are known. The fact that even one of these real roots is obtained from an expression which depends on complex numbers is impressive enough to suggest that the use of complex numbers cannot be entirely nonsense. As a matter of fact, the formulas for the solutions of the quadratic and cubic equations can be interpreted entirely in terms of real numbers.",
+          "sourceSha256": "36e5369b45d55d106c4d1b742614d6a5b2b2de0973216e4aff3764288d34b5c6",
+          "translation": "如果知道 $2+11i$ 的其他立方根，也能求出其余的根。即便只有一个实根是通过依赖复数的表达式得到的，这一事实也已经足够令人印象深刻，足以使人相信，使用复数不可能完全是在胡说。事实上，二次方程和三次方程的求根公式，可以完全用实数来解释。"
+        },
+        {
+          "id": "p530-b8",
+          "source": "Suppose we agree, for the moment, to write all complex numbers as $a+bi$, writing the real number $a$ as $a+0i$ and the number $i$ as $0+1i$. The laws of ordinary arithmetic and the relation $i^2=-1$ show that",
+          "sourceSha256": "899de6fd61ff3fd40cde1e21a156112fa767e376dacfb640097ee729ac27e98a",
+          "translation": "暂且约定把所有复数写成 $a+bi$，把实数 $a$ 写成 $a+0i$，把数 $i$ 写成 $0+1i$。通常的算术法则和关系 $i^2=-1$ 表明"
+        },
+        {
+          "id": "p530-b9",
+          "source": "$$\\begin{aligned}(a+bi)+(c+di)&=(a+c)+(b+d)i\\\\(a+bi)\\cdot(c+di)&=(ac-bd)+(ad+bc)i.\\end{aligned}$$",
+          "sourceSha256": "6b13f6f6eeef2d6d46150fe39e6d7de3b14453f56e8a001e047209d805c80259"
+        },
+        {
+          "id": "p530-b10",
+          "source": "Thus, an equation like",
+          "sourceSha256": "311c0b30c68f51d74cdf389ed64385b60f182bdf3f48c1aa6c0ceed2e9e34aa9",
+          "translation": "因此，下面这样的一个等式"
+        },
+        {
+          "id": "p530-b11",
+          "source": "$$(1+2i)\\cdot(3+1i)=1+7i$$",
+          "sourceSha256": "2b709ce52048d94367c6433c65fa1b578619b48c3a9e3364e9bc0ee0b5f0157e"
+        },
+        {
+          "id": "p530-b12",
+          "source": "may be regarded simply as an abbreviation for the *two* equations",
+          "sourceSha256": "8ee6a8477168320e9200c3066f39e19103a572d2ff82b34d957f014104ca8428",
+          "translation": "可以仅仅看作下面*两个*等式的简写："
+        },
+        {
+          "id": "p530-b13",
+          "source": "$$\\begin{aligned}1\\cdot3-2\\cdot1&=1,\\\\1\\cdot1+2\\cdot3&=7.\\end{aligned}$$",
+          "sourceSha256": "b8425a81862325a037f573f0cd5ab1820236cfcf7c715f82cbd822791804c51a"
+        }
+      ]
+    },
+    {
+      "printed": 531,
+      "sourceSha256": "bf5b502bdf9dcefccb56ed6266d2fb63b76f23a3e87b4bc451fd63589f936ac2",
+      "blocks": [
+        {
+          "id": "p531-b1",
+          "source": "The solution of the quadratic equation $ax^2+bx+c=0$ with real coefficients could be paraphrased as follows:",
+          "sourceSha256": "296a520609a3f05e4fe1f8395ac8438a9d1a1a962291977650e6eb8112dc5665",
+          "translation": "实系数二次方程 $ax^2+bx+c=0$ 的求解，可以改述如下："
+        },
+        {
+          "id": "p531-b2",
+          "source": "$$\\text{If }\\begin{cases}u^2-v^2=b^2-4ac,\\\\uv=0,\\end{cases}$$",
+          "sourceSha256": "b2c021e68794f29e626d3331cb728cc85bda4bfb2c1d84a4b63f9fc0a3555194"
+        },
+        {
+          "id": "p531-b3",
+          "source": "$$(\\text{i.e., if }(u+vi)^2=b^2-4ac),$$",
+          "sourceSha256": "f5de4b749d8955f97efd255a605194d178b616d72364fb9114573f0ca16ba397"
+        },
+        {
+          "id": "p531-b4",
+          "source": "$$\\text{then }\\begin{cases}a\\left[\\left(\\dfrac{-b+u}{2a}\\right)^2-\\left(\\dfrac v{2a}\\right)^2\\right]+b\\left[\\dfrac{-b+u}{2a}\\right]+c=0,\\\\a\\left[2\\left(\\dfrac{-b+u}{2a}\\right)\\left(\\dfrac v{2a}\\right)\\right]+b\\left[\\dfrac v{2a}\\right]=0,\\end{cases}$$",
+          "sourceSha256": "8aa4e70d301c20491426db8b68653ee9a6ce071977a278f4ed01620195b88fb9"
+        },
+        {
+          "id": "p531-b5",
+          "source": "$$\\left(\\text{i.e., then }a\\left(\\frac{-b+u+vi}{2a}\\right)^2+b\\left(\\frac{-b+u+vi}{2a}\\right)+c=0\\right).$$",
+          "sourceSha256": "6233b6c8ecee24305ddbcf0292be930ecd19bf3da76f278667f8b3ad67dda758"
+        },
+        {
+          "id": "p531-b6",
+          "source": "It is not very hard to check this assertion about real numbers without writing down a single “$i$,” but the complications of the statement itself should convince you that equations about complex numbers are worthwhile as abbreviations for pairs of equations about real numbers. (If you are still not convinced, try paraphrasing the solution of the cubic equation.) If we really intend to use complex numbers consistently, however, it is going to be necessary to present some reasonable definition.",
+          "sourceSha256": "f65d543516e81e8cafb85ee2021960236f356684c07021497e031d3ec0f0c839",
+          "translation": "不写出任何一个“$i$”，验证这个关于实数的断言也不太困难；但这个陈述本身的复杂程度，应该足以使你相信：把复数等式作为成对实数等式的简写，是值得的。（如果你仍不信服，不妨试着改述三次方程的求解。）不过，如果我们真打算始终如一地使用复数，就必须给出某个合理的定义。"
+        },
+        {
+          "id": "p531-b7",
+          "source": "One possibility has been implicit in this whole discussion. All mathematical properties of a complex number $a+bi$ are determined completely by the real numbers $a$ and $b$; any mathematical object with this same property may reasonably be used to define a complex number. The obvious candidate is the ordered pair $(a,b)$ of real numbers; we shall accordingly *define* a complex number to be a pair of real numbers, and likewise *define* what addition and multiplication of complex numbers is to mean.",
+          "sourceSha256": "3651870cf9c651aea57d2b8ae398493a58251c914b3087da607738d3956af46f",
+          "translation": "一种可能的做法，已经隐含在整个讨论中。复数 $a+bi$ 的全部数学性质，都完全由实数 $a$ 和 $b$ 决定；任何具有这一相同特点的数学对象，都可以合理地用来定义复数。显而易见的候选对象，就是实数的有序对 $(a,b)$；因此，我们将把复数*定义*为一对实数，并且同样*定义*复数加法和乘法的意义。"
+        },
+        {
+          "id": "p531-b8",
+          "source": "## DEFINITION",
+          "sourceSha256": "676bc8347a70e5e93cbff5e0571ad9eecf86b072557f09f8796edced86dfc6e2",
+          "translation": "## 定义"
+        },
+        {
+          "id": "p531-b9",
+          "source": "A **complex number** is an ordered pair of real numbers; if $z=(a,b)$ is a complex number, then $a$ is called the **real part** of $z$, and $b$ is called the **imaginary part** of $z$. The set of all complex numbers is denoted by $\\mathbf C$. If $(a,b)$ and $(c,d)$ are two complex numbers we define",
+          "sourceSha256": "ee59479ee706af1f8023ad943792a0b472a17e3a4278a075ec9253ea825f15ad",
+          "translation": "一个**复数**就是一个实数有序对；如果 $z=(a,b)$ 是复数，那么 $a$ 称为 $z$ 的**实部**，$b$ 称为 $z$ 的**虚部**。全体复数的集合记为 $\\mathbf C$。如果 $(a,b)$ 和 $(c,d)$ 是两个复数，我们定义"
+        },
+        {
+          "id": "p531-b10",
+          "source": "$$\\begin{aligned}(a,b)+(c,d)&=(a+c,b+d)\\\\(a,b)\\cdot(c,d)&=(a\\cdot c-b\\cdot d,a\\cdot d+b\\cdot c).\\end{aligned}$$",
+          "sourceSha256": "b5fd5afabf1bf3f79387bdab33ae7162da82e8e349bb6661e6d1898b48d01d1c"
+        },
+        {
+          "id": "p531-b11",
+          "source": "(The $+$ and $\\cdot$ appearing on the left side are new symbols being defined, while the $+$ and $\\cdot$ appearing on the right side are the familiar addition and multiplication for real numbers.)",
+          "sourceSha256": "616ca34f62fb04eecf2c34b70bd67225dfcae604ce350f171798af26eab4861f",
+          "translation": "（左边出现的 $+$ 和 $\\cdot$ 是正在定义的新符号，而右边出现的 $+$ 和 $\\cdot$ 则是熟悉的实数加法与乘法。）"
+        },
+        {
+          "id": "p531-b12",
+          "source": "When complex numbers were first introduced, it was understood that real numbers were, in particular, complex numbers; if our definition is taken seriously this is not true—a real number is not a pair of real numbers, after all. This difficulty",
+          "sourceSha256": "6d43b8e5dfaa0deca69b4f70023ebe0c44aee68baaaf53210479187f68f9c3bf",
+          "translation": "最初引入复数时，我们默认实数也是复数的一种；如果认真对待这个定义，这一点就不成立了——毕竟，一个实数并不是一对实数。不过，这个困难"
+        }
+      ]
+    },
+    {
+      "printed": 532,
+      "sourceSha256": "f4aa2e8e63704a353fcd50306f22d36114238f284e59a074148e8e8515d3e0f1",
+      "blocks": [
+        {
+          "id": "p532-b1",
+          "source": "is only a minor annoyance, however. Notice that",
+          "sourceSha256": "1c17927be8b75533aeae5c784a937c48538a4f3f65a89da49606161f534655b1",
+          "translation": "只是一点小麻烦。注意到"
+        },
+        {
+          "id": "p532-b2",
+          "source": "$$\\begin{aligned}(a,0)+(b,0)&=(a+b,0+0)=(a+b,0),\\\\(a,0)\\cdot(b,0)&=(a\\cdot b-0\\cdot0,a\\cdot0+0\\cdot b)=(a\\cdot b,0);\\end{aligned}$$",
+          "sourceSha256": "dab45e1b8b28ece680c300553151de895cf1284762b4e92be8cb4ee6080c6bc2"
+        },
+        {
+          "id": "p532-b3",
+          "source": "this shows that the complex numbers of the form $(a,0)$ behave precisely the same with respect to addition and multiplication of complex numbers as real numbers do with their own addition and multiplication. For this reason we will adopt the convention that $(a,0)$ will be denoted simply by $a$. The familiar $a+bi$ notation for complex numbers can now be recovered if one more definition is made.",
+          "sourceSha256": "9489a728d3f02d72b9d164e0068cd5e2f7663453f5e8d608e7031653f585aedc",
+          "translation": "这表明，形如 $(a,0)$ 的复数对于复数加法和乘法的行为，与实数对于其自身加法和乘法的行为完全相同。因此，我们约定把 $(a,0)$ 简记为 $a$。再作一个定义，就可以恢复熟悉的复数记法 $a+bi$。"
+        },
+        {
+          "id": "p532-b4",
+          "source": "## DEFINITION",
+          "sourceSha256": "676bc8347a70e5e93cbff5e0571ad9eecf86b072557f09f8796edced86dfc6e2",
+          "translation": "## 定义"
+        },
+        {
+          "id": "p532-b5",
+          "source": "$$i=(0,1).$$",
+          "sourceSha256": "2dd8b07d6fd6155a1f6612954ca80ccdba2b501a73dd6af8f68e9d8ee217a100"
+        },
+        {
+          "id": "p532-b6",
+          "source": "Notice that $i^2=(0,1)\\cdot(0,1)=(-1,0)=-1$ (the last equality sign depends on our convention). Moreover",
+          "sourceSha256": "b6a39a2c26a99c00f732b3b6872be14ce818fa0791243475ddee8c2fba8208ec",
+          "translation": "注意 $i^2=(0,1)\\cdot(0,1)=(-1,0)=-1$（最后一个等号依赖于我们的约定）。此外，"
+        },
+        {
+          "id": "p532-b7",
+          "source": "$$\\begin{aligned}(a,b)&=(a,0)+(0,b)\\\\&=(a,0)+(b,0)\\cdot(0,1)\\\\&=a+bi.\\end{aligned}$$",
+          "sourceSha256": "2bc161545d689e85dc3e025048db08b71920056c01c15225a2b54b5fac01744a"
+        },
+        {
+          "id": "p532-b8",
+          "source": "You may feel that our definition was merely an elaborate device for defining complex numbers as “expressions of the form $a+bi$.” That is essentially correct; it is a firmly established prejudice of modern mathematics that new objects must be defined as something specific, not as “expressions.” Nevertheless, it is interesting to note that mathematicians were sincerely worried about using complex numbers until the modern definition was proposed. Moreover, the precise definition emphasizes one important point. Our aim in introducing complex numbers was to avoid the necessity of paraphrasing statements about complex numbers in terms of their real and imaginary parts. This means that we wish to work with complex numbers in the same way that we worked with rational or real numbers. For example, the solution of the cubic equation required writing $x=w-p/3w$, so we want to know that $1/w$ makes sense. Moreover, $w^3$ was found by solving a quadratic equation, which requires numerous other algebraic manipulations. In short, we are likely to use, at some time or other, any manipulations performed on real numbers. We certainly do not want to stop each time and justify every step. Fortunately this is not necessary. Since all algebraic manipulations performed on real numbers can be justified by the properties listed in Chapter 1, it is only necessary to check that these properties are also true for complex numbers. In most cases this is quite easy, and these facts will not be listed as formal theorems. For example, the proof of P1,",
+          "sourceSha256": "ebe706c1b90c725c208b549998935425fea01bdd8412114b5ed4bebb675bc1d6",
+          "translation": "你可能觉得，我们的定义不过是绕了一大圈，把复数定义成“形如 $a+bi$ 的表达式”。这基本上是对的；现代数学有一个根深蒂固的成见：新对象必须定义为某种具体的东西，而不能定义为“表达式”。不过，有趣的是，在现代定义提出之前，数学家们确实真心担忧使用复数。此外，精确定义强调了一个重要之处。我们引入复数的目的，是避免每次都必须把关于复数的陈述改写成关于其实部与虚部的陈述。这意味着，我们希望像使用有理数或实数那样使用复数。例如，求解三次方程时需要写出 $x=w-p/3w$，所以我们希望知道 $1/w$ 是有意义的。此外，$w^3$ 是通过求解一个二次方程得到的，而这又需要许多其他代数运算。总之，我们很可能在某个时候用到对实数进行的任何一种运算。当然，我们不想每一步都停下来加以论证。幸运的是，这没有必要。由于对实数进行的所有代数运算，都可以由第 1 章列出的性质来证明，我们只需检查这些性质对复数也成立。大多数情况下，这相当容易，我们不会把这些事实列为正式定理。例如，P1 的证明，即"
+        },
+        {
+          "id": "p532-b9",
+          "source": "$$[(a,b)+(c,d)]+(e,f)=(a,b)+[(c,d)+(e,f)]$$",
+          "sourceSha256": "6f237e2c17504bdd70048bbed91c8594d9632996bc3a51f9e25b0d26dff71010"
+        },
+        {
+          "id": "p532-b10",
+          "source": "requires only the application of the definition of addition for complex numbers. The left side becomes",
+          "sourceSha256": "00c895fc78eb874841e685e72d3aefe344dc91fda8ed7b0ddc12bb136ae8e1e2",
+          "translation": "只需应用复数加法的定义。左边变成"
+        },
+        {
+          "id": "p532-b11",
+          "source": "$$([a+c]+e,[b+d]+f),$$",
+          "sourceSha256": "816e98336985ae7e9bb88d1e5dc63ed03b73aeb6e241700d7ce177ddb7a22407"
+        }
+      ]
+    },
+    {
+      "printed": 533,
+      "sourceSha256": "725704fcfea97eef6f7c1d5de650ffb7f3c5ec2dae276bba71d2ccf73951dc5a",
+      "blocks": [
+        {
+          "id": "p533-b1",
+          "source": "and the right side becomes",
+          "sourceSha256": "ad7816f3dbf9edb69dc9e5ca346b493119fa514e1581dd02ff17e1f9a43b2e3e",
+          "translation": "右边变成"
+        },
+        {
+          "id": "p533-b2",
+          "source": "$$(a+[c+e],b+[d+f]);$$",
+          "sourceSha256": "8146a699c1402d781c13a977a6898adbe4b494435bf34ae00a2602af92ebf778"
+        },
+        {
+          "id": "p533-b3",
+          "source": "these two are equal because P1 is true for real numbers. It is a good idea to check P2–P6 and P8 and P9. Notice that the complex numbers playing the role of $0$ and $1$ in P2 and P6 are $(0,0)$ and $(1,0)$, respectively. It is not hard to figure out what $-(a,b)$ is, but the multiplicative inverse for $(a,b)$ required in P7 is a little trickier: if $(a,b)\\ne(0,0)$, then $a^2+b^2\\ne0$ and",
+          "sourceSha256": "4ab174045d64000b98344eb165300834d2a59743dd2b3a8eab4d80681904ce60",
+          "translation": "二者相等，因为 P1 对实数成立。最好自己检验一下 P2—P6、P8 和 P9。注意，在 P2 和 P6 中扮演 $0$ 和 $1$ 角色的复数，分别是 $(0,0)$ 和 $(1,0)$。要弄清 $-(a,b)$ 是什么并不难，但 P7 中所要求的 $(a,b)$ 的乘法逆元稍微棘手一些：如果 $(a,b)\\ne(0,0)$，那么 $a^2+b^2\\ne0$，并且"
+        },
+        {
+          "id": "p533-b4",
+          "source": "$$(a,b)\\cdot\\left(\\frac a{a^2+b^2},\\frac{-b}{a^2+b^2}\\right)=(1,0).$$",
+          "sourceSha256": "896ba2eb9d578119998145d798db80bfc73c9ed3a5913540de31b4bc50cac728"
+        },
+        {
+          "id": "p533-b5",
+          "source": "This fact could have been guessed in two ways. To find $(x,y)$ with",
+          "sourceSha256": "f7ff9d9bf749d2653c4a14016dde3d141b8e1af272755c129b5c268205b8d301",
+          "translation": "这个事实可以用两种方式猜出来。要找到 $(x,y)$ 使得"
+        },
+        {
+          "id": "p533-b6",
+          "source": "$$(a,b)\\cdot(x,y)=(1,0)$$",
+          "sourceSha256": "1b0079f295dd842eca62ddeb2daaf4633125e9e01e66d3fe9bf7f98f0c6dcd94"
+        },
+        {
+          "id": "p533-b7",
+          "source": "it is only necessary to solve the equations",
+          "sourceSha256": "d195d660327817cff64140b1aba8cfdc717eb1f87e608211d17561e7c15f2d8a",
+          "translation": "只需解方程组"
+        },
+        {
+          "id": "p533-b8",
+          "source": "$$\\begin{aligned}ax-by&=1,\\\\bx+ay&=0.\\end{aligned}$$",
+          "sourceSha256": "18a5c8c1a015d8883a98a8cf7a3c495b28ab0bb1f2b83879e35a8b998e6a6d18"
+        },
+        {
+          "id": "p533-b9",
+          "source": "The solutions are $x=a/(a^2+b^2)$, $y=-b/(a^2+b^2)$. It is also possible to reason that if $1/(a+bi)$ means anything, then it should be true that",
+          "sourceSha256": "d6c949c58817973eb876a2e554172a5738f81aa07d2e5971504c167766b1f77f",
+          "translation": "其解为 $x=a/(a^2+b^2)$、$y=-b/(a^2+b^2)$。也可以这样想：如果 $1/(a+bi)$ 有任何意义，那么应该有"
+        },
+        {
+          "id": "p533-b10",
+          "source": "$$\\frac1{a+bi}=\\frac1{a+bi}\\cdot\\frac{a-bi}{a-bi}=\\frac{a-bi}{a^2+b^2}.$$",
+          "sourceSha256": "689cbd3a47015be4c0314a505aaae42d7896f52b3ae8bb3df27d57a059d4f919"
+        },
+        {
+          "id": "p533-b11",
+          "source": "Once the existence of inverses has actually been proved (after guessing the inverse by some method), it follows that this manipulation is really valid; it is the easiest one to remember when the inverse of a complex number is actually being sought—it was precisely this trick which we used to evaluate",
+          "sourceSha256": "c0b23e8b8188c705b9d18dd4339eb5748991e6cf85658cec05c83fce7db5556f",
+          "translation": "一旦逆元的存在性确实得到证明（用某种方法猜出逆元之后），就能得出这种运算确实合法；在真正需要求复数的逆元时，它也是最容易记住的方法——我们计算下式时，用的恰好就是这个技巧："
+        },
+        {
+          "id": "p533-b12",
+          "source": "$$\\begin{aligned}\\frac{15}{6+3i}&=\\frac{15}{6+3i}\\cdot\\frac{6-3i}{6-3i}\\\\&=\\frac{90-45i}{36+9}.\\end{aligned}$$",
+          "sourceSha256": "c48cdd61764fbf2c555335c054a0787cb389ca7e80322ac5f36f18581d6941a8"
+        },
+        {
+          "id": "p533-b13",
+          "source": "Unlike P1–P9, the rules P10–P12 do not have analogues: it is easy to prove that there is *no* set $P$ of *complex* numbers such that P10–P12 are satisfied for *all complex* numbers. In fact, if there were, then $P$ would have to contain $1$ (since $1=1^2$) and also $-1$ (since $-1=i^2$), and this would contradict P10. The absence of P10–P12 will not have disastrous consequences, but it does mean that we cannot define $z<w$ for complex $z$ and $w$. Also, you may remember that for the real numbers, P10–P12 were used to prove that $1+1\\ne0$. Fortunately, the corresponding fact for complex numbers can be reduced to this one: clearly $(1,0)+(1,0)\\ne(0,0)$.",
+          "sourceSha256": "1bdb1f618cf738eace53e87821bfc3ae0646eb05d83e50421e6a927535db1ea9",
+          "translation": "与 P1—P9 不同，P10—P12 没有对应的法则：很容易证明，*不存在*一个由*复数*组成的集合 $P$，使得 P10—P12 对*所有复数*都成立。事实上，如果存在，那么 $P$ 必须包含 $1$（因为 $1=1^2$），也必须包含 $-1$（因为 $-1=i^2$），这与 P10 矛盾。缺少 P10—P12 并不会造成灾难性的后果，但这确实意味着，我们不能对复数 $z$ 和 $w$ 定义 $z<w$。此外，你也许记得，对实数，我们曾使用 P10—P12 来证明 $1+1\\ne0$。幸运的是，复数的相应事实可以化归为这一事实：显然 $(1,0)+(1,0)\\ne(0,0)$。"
+        },
+        {
+          "id": "p533-b14",
+          "source": "Although we will usually write complex numbers in the form $a+bi$, it is worth remembering that the set of all complex numbers $\\mathbf C$ is just the collection of all pairs of real numbers. Long ago this collection was identified with the plane, and for this reason the plane is often called the “complex plane.” The horizontal axis, which consists of all points $(a,0)$ for $a$ in $\\mathbf R$, is often called the *real axis*, and the",
+          "sourceSha256": "23351a6a3501ba61dd42da0602e9d26c07ecd8605acc67fc0a1cb6284299da20",
+          "translation": "虽然我们通常把复数写成 $a+bi$ 的形式，但值得记住：全体复数的集合 $\\mathbf C$，就是全体实数对的集合。很久以前，这个集合就与平面等同起来了，所以平面常常称为“复平面”。横轴由所有 $(a,0)$ 组成，其中 $a$ 属于 $\\mathbf R$，通常称为*实轴*；而"
+        }
+      ]
+    },
+    {
+      "printed": 534,
+      "sourceSha256": "c5209f4859f565ece93ca6d9978678bbf545f0b839b23e28d8629b9b46100afa",
+      "blocks": [
+        {
+          "id": "p534-b1",
+          "source": "vertical axis is called the *imaginary axis*. Two important definitions are also related to this geometric picture.",
+          "sourceSha256": "6bb35540eba0ceabdecb1924018f850a0618850e6202964c585d4bd7ca93ae46",
+          "translation": "纵轴称为*虚轴*。还有两个重要定义也与这种几何图像有关。"
+        },
+        {
+          "id": "p534-b2",
+          "source": "## DEFINITION",
+          "sourceSha256": "676bc8347a70e5e93cbff5e0571ad9eecf86b072557f09f8796edced86dfc6e2",
+          "translation": "## 定义"
+        },
+        {
+          "id": "p534-b3",
+          "source": "If $z=x+iy$ is a complex number (with $x$ and $y$ real), then the **conjugate** $\\bar z$ of $z$ is defined as",
+          "sourceSha256": "99c60ef2de494fbf0fd1a11e1d7c370401b1485ead3e55aa49fcc9018f5e36ec",
+          "translation": "如果 $z=x+iy$ 是复数（其中 $x$ 和 $y$ 为实数），那么 $z$ 的**共轭** $\\bar z$ 定义为"
+        },
+        {
+          "id": "p534-b4",
+          "source": "$$\\bar z=x-iy,$$",
+          "sourceSha256": "2ae284e0969b03da65d0c81a54cef1699af1350ab5fd66ba9ca0bf87b591e4d7"
+        },
+        {
+          "id": "p534-b5",
+          "source": "and the **absolute value** or **modulus** $|z|$ of $z$ is defined as",
+          "sourceSha256": "58aa127c38ea6c11726eb3a042d3613f5c945081d8c45a5e8697586154cfffc4",
+          "translation": "而 $z$ 的**绝对值**或**模** $|z|$ 定义为"
+        },
+        {
+          "id": "p534-b6",
+          "source": "$$|z|=\\sqrt{x^2+y^2}.$$",
+          "sourceSha256": "73eca7bde34a700c1756eead566b1727c7b754e4e55b07631579d9a33041dbc4"
+        },
+        {
+          "id": "p534-b7",
+          "source": "(Notice that $x^2+y^2\\ge0$, so that $\\sqrt{x^2+y^2}$ is defined unambiguously; it denotes the nonnegative real square root of $x^2+y^2$.)",
+          "sourceSha256": "ab6e5e118ba9ce0693a9ad251f39ae309d5c3b4b0fed11fb58182aef432b3eca",
+          "translation": "（注意 $x^2+y^2\\ge0$，因此 $\\sqrt{x^2+y^2}$ 的定义没有歧义；它表示 $x^2+y^2$ 的非负实平方根。）"
+        },
+        {
+          "id": "p534-b8",
+          "source": "Geometrically, $\\bar z$ is simply the reflection of $z$ in the real axis, while $|z|$ is the distance from $z$ to $(0,0)$ (Figure 1). Notice that the absolute value notation for complex numbers is consistent with that for real numbers. The **distance** between two complex numbers $z$ and $w$ can be defined quite easily as $|z-w|$. The following theorem lists all the important properties of conjugates and absolute values.",
+          "sourceSha256": "7f74a84ade658379f76f789a156e3857c83235c26a704ce083758c37e2c4dc96",
+          "translation": "从几何上看，$\\bar z$ 就是 $z$ 关于实轴的对称点，而 $|z|$ 是 $z$ 到 $(0,0)$ 的距离（图 1）。注意，复数的绝对值记法与实数的绝对值记法相容。两个复数 $z$ 和 $w$ 之间的**距离**，很容易定义为 $|z-w|$。下一个定理列出了共轭和绝对值的所有重要性质。"
+        },
+        {
+          "id": "p534-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:340px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 410 345 192\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0553.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 1</figcaption></figure>",
+          "sourceSha256": "9bb3727eacbbc1cf6adde217b2f90e50a8a9666f26639e42803318313c603c9a"
+        },
+        {
+          "id": "p534-b10",
+          "source": "## THEOREM 1",
+          "sourceSha256": "53fac1876c9bcfd6bbc4adffba3ffd8cf1b717338f29618152217c60c4746f5f",
+          "translation": "## 定理 1"
+        },
+        {
+          "id": "p534-b11",
+          "source": "Let $z$ and $w$ be complex numbers. Then",
+          "sourceSha256": "7710625f4ccd6d102eef8d09fb6aaaf15a1d237e35da063e3431a1d7a70ff509",
+          "translation": "设 $z$ 和 $w$ 为复数。那么"
+        },
+        {
+          "id": "p534-b12",
+          "source": "(1) $\\overline{\\bar z}=z$.",
+          "sourceSha256": "97246ca50451a54ef63344d34c918b35755894163a52c570ded4a35f779990e2"
+        },
+        {
+          "id": "p534-b13",
+          "source": "(2) $\\bar z=z$ if and only if $z$ is real (i.e., is of the form $a+0i$, for some real number $a$).",
+          "sourceSha256": "428036a7d8cacd56609c24411bbe8e9b664170233a94ec4908daad68e57e3f50",
+          "translation": "(2) $\\bar z=z$ 当且仅当 $z$ 是实数（即对于某个实数 $a$，具有 $a+0i$ 的形式）。"
+        },
+        {
+          "id": "p534-b14",
+          "source": "(3) $\\overline{z+w}=\\bar z+\\bar w$.",
+          "sourceSha256": "ddc34adf926210f5bbabe4257cb1f9f9277b585ce5fa57746667700a545e5b1c"
+        },
+        {
+          "id": "p534-b15",
+          "source": "(4) $\\overline{-z}=-\\bar z$.",
+          "sourceSha256": "26787af7170991f0e3ed10a1d8f4a87ff0bcda5b5dc1b8f3ebca4337b91fe76b"
+        },
+        {
+          "id": "p534-b16",
+          "source": "(5) $\\overline{z\\cdot w}=\\bar z\\cdot\\bar w$.",
+          "sourceSha256": "ed56d602dd47b2de15f9ad8dc7887f81afaced5abda7687b91326c23402bb15d"
+        },
+        {
+          "id": "p534-b17",
+          "source": "(6) $\\overline{z^{-1}}=(\\bar z)^{-1}$, if $z\\ne0$.",
+          "sourceSha256": "54ecec682143224561695e02ea3fef738517aba8f8f9660423001454bcaa55e5",
+          "translation": "(6) $\\overline{z^{-1}}=(\\bar z)^{-1}$，如果 $z\\ne0$。"
+        },
+        {
+          "id": "p534-b18",
+          "source": "(7) $|z|^2=z\\cdot\\bar z$.",
+          "sourceSha256": "0d4386f0bf70e61da39c40f5ddb19a028e4514593261b6faeda4203dd35bf3b7"
+        },
+        {
+          "id": "p534-b19",
+          "source": "(8) $|z\\cdot w|=|z|\\cdot|w|$.",
+          "sourceSha256": "9df9c13af2585dd34a5ead4b2ec4b086d42b51c5c98cd380fceb5a9836b47f4d"
+        },
+        {
+          "id": "p534-b20",
+          "source": "(9) $|z+w|\\le|z|+|w|$.",
+          "sourceSha256": "efecf8cac9921f6c23ccca6a3ba23654b1e1a0cd6e5a6cd45a50f759a87c6e4b"
+        },
+        {
+          "id": "p534-b21",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p534-b22",
+          "source": "Assertions (1) and (2) are obvious. Equations (3) and (5) may be checked by straightforward calculations and (4) and (6) may then be proved by a trick:",
+          "sourceSha256": "da7cfafab66e96cded5091a5ad7a212b664e663ab5369739db1e497472b9895c",
+          "translation": "断言 (1) 和 (2) 显然成立。等式 (3) 和 (5) 可以直接计算验证，随后 (4) 和 (6) 可以通过一个技巧证明："
+        },
+        {
+          "id": "p534-b23",
+          "source": "$$\\begin{aligned}0&=\\bar0=\\overline{z+(-z)}=\\bar z+\\overline{-z},&\\text{so }\\overline{-z}&=-\\bar z,\\\\1&=\\bar1=\\overline{z\\cdot(z^{-1})}=\\bar z\\cdot\\overline{z^{-1}},&\\text{so }\\overline{z^{-1}}&=(\\bar z)^{-1}.\\end{aligned}$$",
+          "sourceSha256": "ec3c848a3031a87d6dce771b2ca08d2af6882923ae3060b031239623b6f25685"
+        },
+        {
+          "id": "p534-b24",
+          "source": "Equations (7) and (8) may also be proved by a straightforward calculation. The only difficult part of the theorem is (9). This inequality has, in fact, already occurred (Problem 4-9), but the proof will be repeated here, using slightly different terminology.",
+          "sourceSha256": "51daa166f5c58e042f9f1cecfb35c5bb9c89fe2e9d7e15333db6dd556f184a25",
+          "translation": "等式 (7) 和 (8) 也可以直接计算证明。定理中唯一困难的部分是 (9)。事实上，这个不等式已经出现过（习题 4-9），但这里将用稍有不同的术语再证明一次。"
+        },
+        {
+          "id": "p534-b25",
+          "source": "It is clear that equality holds in (9) if $z=0$ or $w=0$. It is also easy to see that (9) is true if $z=\\lambda w$ for any real number $\\lambda$ (consider separately the cases $\\lambda>0$ and $\\lambda<0$). Suppose, on the other hand, that $z\\ne\\lambda w$ for any real number $\\lambda$, and that",
+          "sourceSha256": "6c7cd410876e2c179026ad502045fb6fd4790908c5596bc0b7f1be56723f6311",
+          "translation": "显然，如果 $z=0$ 或 $w=0$，(9) 中取等号。也很容易看出，如果对某个实数 $\\lambda$ 有 $z=\\lambda w$，那么 (9) 成立（分别考虑 $\\lambda>0$ 和 $\\lambda<0$ 的情形）。另一方面，假设对于任何实数 $\\lambda$ 都有 $z\\ne\\lambda w$，并且"
+        }
+      ]
+    },
+    {
+      "printed": 535,
+      "sourceSha256": "f74aef130cd8de4c05a6230a2b206368fceca2ba084f3e88c7213124dda18fb4",
+      "blocks": [
+        {
+          "id": "p535-b1",
+          "source": "$w\\ne0$. Then, for all real numbers $\\lambda$,",
+          "sourceSha256": "8850856e21e1121b97d22304765b62f27ef2822c9816912455a3850a43266419",
+          "translation": "$w\\ne0$。那么，对于所有实数 $\\lambda$，"
+        },
+        {
+          "id": "p535-b2",
+          "source": "$$\\begin{aligned}0<|z-\\lambda w|^2&=(z-\\lambda w)\\cdot\\overline{(z-\\lambda w)}\\\\&=(z-\\lambda w)\\cdot(\\bar z-\\lambda\\bar w)\\\\&=z\\bar z+\\lambda^2w\\bar w-\\lambda(w\\bar z+z\\bar w)\\\\&=\\lambda^2|w|^2+|z|^2-\\lambda(w\\bar z+z\\bar w).\\end{aligned}\\tag{*}$$",
+          "sourceSha256": "728a32a17a465232186f8d989e8359d69253cc59628ab8d7cf01d73cc3a84b1c"
+        },
+        {
+          "id": "p535-b3",
+          "source": "Notice that $w\\bar z+z\\bar w$ is real, since",
+          "sourceSha256": "43c7d6cf2fbb4d24c0b1f6060dec731017653813825d5efb500d299370eb043e",
+          "translation": "注意，$w\\bar z+z\\bar w$ 是实数，因为"
+        },
+        {
+          "id": "p535-b4",
+          "source": "$$\\overline{w\\bar z+z\\bar w}=\\bar w\\overline{\\bar z}+\\bar z\\overline{\\bar w}=\\bar wz+\\bar zw=w\\bar z+z\\bar w.$$",
+          "sourceSha256": "2bb71dfb3dd5f9bc0dac7e5386a4965295b9ccf46a56b55741bfab5c2a7bb3f9"
+        },
+        {
+          "id": "p535-b5",
+          "source": "Thus the right side of (*) is a quadratic equation in $\\lambda$ with real coefficients and no real solutions; its discriminant must therefore be negative. Thus",
+          "sourceSha256": "9a09a76ea2bea10c0861e088798e22c1edaa05c768a3313a03d10f28d96b20ce",
+          "translation": "因此，(*) 的右边给出一个关于 $\\lambda$ 的实系数二次方程，而它没有实数解；所以它的判别式必定为负。因此"
+        },
+        {
+          "id": "p535-b6",
+          "source": "$$(w\\bar z+z\\bar w)^2-4|w|^2\\cdot|z|^2<0;$$",
+          "sourceSha256": "f37b69f42af148c41c5a6eded443677515c1add4415b3e2a7713e78f47b01f55"
+        },
+        {
+          "id": "p535-b7",
+          "source": "it follows, since $w\\bar z+z\\bar w$ and $|w|\\cdot|z|$ are real numbers, and $|w|\\cdot|z|\\ge0$, that",
+          "sourceSha256": "2468aca7c20b8a699e510297f514ec4c51433359e1b5cef7fed7e443a38bf1b9",
+          "translation": "由于 $w\\bar z+z\\bar w$ 和 $|w|\\cdot|z|$ 都是实数，而且 $|w|\\cdot|z|\\ge0$，由此得到"
+        },
+        {
+          "id": "p535-b8",
+          "source": "$$(w\\bar z+z\\bar w)<2|w|\\cdot|z|.$$",
+          "sourceSha256": "3f5ab5161ac24e5d1fc6135f707704f4df6b7299a06e18fbde78284b131f948e"
+        },
+        {
+          "id": "p535-b9",
+          "source": "From this inequality it follows that",
+          "sourceSha256": "25a04eab97342a1244e8b571aa1c9969cf5372b8b6c488aad69b044a54490862",
+          "translation": "从这个不等式得到"
+        },
+        {
+          "id": "p535-b10",
+          "source": "$$\\begin{aligned}|z+w|^2&=(z+w)\\cdot(\\bar z+\\bar w)\\\\&=|z|^2+|w|^2+(w\\bar z+z\\bar w)\\\\&<|z|^2+|w|^2+2|w|\\cdot|z|\\\\&=(|z|+|w|)^2,\\end{aligned}$$",
+          "sourceSha256": "fa4da4e1abdc4940beb48aef9553b595d8ed0c9ddf238715df5209dc3de1aaf5"
+        },
+        {
+          "id": "p535-b11",
+          "source": "which implies that",
+          "sourceSha256": "1a85e30aee335a1d59cfb329d51927347d38ace1d3438e2ccbbde37eb9bf1403",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p535-b12",
+          "source": "$$|z+w|<|z|+|w|.\\quad\\blacksquare$$",
+          "sourceSha256": "803effd6dc83af09328d15d2a3ec2003e6e646a194e60ec5ad6a59e4bafe0152"
+        },
+        {
+          "id": "p535-b13",
+          "source": "The operations of addition and multiplication of complex numbers both have important geometric interpretations. The picture for addition is very simple (Figure 2). Two complex numbers $z=(a,b)$ and $w=(c,d)$ determine a parallelogram having for two of its sides the line segment from $(0,0)$ to $z$, and the line segment from $(0,0)$ to $w$; the vertex opposite $(0,0)$ is $z+w$ (a proof of this geometric fact is left to you [compare Appendix 1 to Chapter 4]).",
+          "sourceSha256": "a84fa6fe778ea29a8d57e1ffa04fbf0c8b1145f15b11d459ea4b6e0b5b69fc0e",
+          "translation": "复数的加法和乘法都有重要的几何解释。加法的图像很简单（图 2）。两个复数 $z=(a,b)$ 和 $w=(c,d)$ 确定一个平行四边形，它的两条边分别是从 $(0,0)$ 到 $z$ 的线段，以及从 $(0,0)$ 到 $w$ 的线段；与 $(0,0)$ 相对的顶点就是 $z+w$（这个几何事实的证明留给你［与第 4 章附录 1 比较］）。"
+        },
+        {
+          "id": "p535-b14",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:285px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"45 1026 288 251\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0554.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 2</figcaption></figure>",
+          "sourceSha256": "cc13fea59356ee3c1d0364d6db0e00dd610f65648771d5ba711adf4bdc788d3b"
+        },
+        {
+          "id": "p535-b15",
+          "source": "The interpretation of multiplication is more involved. If $z=0$ or $w=0$, then $z\\cdot w=0$ (a one-line computational proof can be given, but even this is unnecessary—the assertion has already been shown to follow from P1–P9), so we may restrict our attention to nonzero complex numbers. We begin by putting every nonzero complex number into a special form (compare Appendix 3 to Chapter 4).",
+          "sourceSha256": "1e1c62d98a48c2a7b386b0d9fd250da98d3647707b43012bd0dca3c6be67c680",
+          "translation": "乘法的解释要复杂一些。如果 $z=0$ 或 $w=0$，那么 $z\\cdot w=0$（可以给出一行计算证明，但连这也没有必要——这个断言已经被证明可由 P1—P9 推出），因此我们只需关注非零复数。首先，把每个非零复数写成一种特殊形式（与第 4 章附录 3 比较）。"
+        },
+        {
+          "id": "p535-b16",
+          "source": "For any complex number $z\\ne0$ we can write",
+          "sourceSha256": "dde80c78d76ebec309a8447a668b4ae89ecee7c00f67141a539d9e21c6f607ed",
+          "translation": "对于任意复数 $z\\ne0$，可以写成"
+        },
+        {
+          "id": "p535-b17",
+          "source": "$$z=|z|\\frac z{|z|};$$",
+          "sourceSha256": "80026153888206019741eb2394be9126c53f5193bd7d27404e691c6c151d2d98"
+        },
+        {
+          "id": "p535-b18",
+          "source": "in this expression, $|z|$ is a positive real number, while",
+          "sourceSha256": "45f61c3f8c99256e6f44996cba259c1a11e2c0f002d601141ab2ffea1b7ddda3",
+          "translation": "在这个表达式中，$|z|$ 是正实数，而"
+        },
+        {
+          "id": "p535-b19",
+          "source": "$$\\left|\\frac z{|z|}\\right|=\\frac{|z|}{|z|}=1,$$",
+          "sourceSha256": "0449070afe137f123347892950b904108854dce6c575d00e2de77ffb3d58a8e7"
+        }
+      ]
+    },
+    {
+      "printed": 536,
+      "sourceSha256": "07caa406f8796e8f9d9b998fd7489f9e72860555d21ad9d572782956868097de",
+      "blocks": [
+        {
+          "id": "p536-b1",
+          "source": "so that $z/|z|$ is a complex number of absolute value $1$. Now any complex number $a=x+iy$ with $1=|a|=x^2+y^2$ can be written in the form",
+          "sourceSha256": "0dda8620c2e68c90ac294a1a10e6bb4920b44dfee5900e9ddf76aec553fcf177",
+          "translation": "所以 $z/|z|$ 是一个绝对值为 $1$ 的复数。现在，任何满足 $1=|a|=x^2+y^2$ 的复数 $a=x+iy$ 都可以写成"
+        },
+        {
+          "id": "p536-b2",
+          "source": "$$a=(\\cos\\theta,\\sin\\theta)=\\cos\\theta+i\\sin\\theta$$",
+          "sourceSha256": "5ca320f2ac2c8a1fc1574847d79d74fcda07e87da55c74b67df9c3fd55d069b7"
+        },
+        {
+          "id": "p536-b3",
+          "source": "for some number $\\theta$. Thus every nonzero complex number $z$ can be written",
+          "sourceSha256": "646fb4c4a0d38527b485e3bdf785dbde13bba4db79a93deccfd09623e41e00d6",
+          "translation": "其中 $\\theta$ 是某个数。因此，每个非零复数 $z$ 都可以写成"
+        },
+        {
+          "id": "p536-b4",
+          "source": "$$z=r(\\cos\\theta+i\\sin\\theta)$$",
+          "sourceSha256": "747aaabea7b9b655b2b746ca4cd02f4b00872af202ff1e0020fb668bfa9c43e1"
+        },
+        {
+          "id": "p536-b5",
+          "source": "for some $r>0$ and some number $\\theta$. The number $r$ is unique (it equals $|z|$), but $\\theta$ is not unique; if $\\theta_0$ is one possibility, then the others are $\\theta_0+2k\\pi$ for $k$ in $\\mathbf Z$—any one of these numbers is called an **argument** of $z$. Figure 3 shows $z$ in terms of $r$ and $\\theta$. (To find an argument $\\theta$ for $z=x+iy$ we may note that the equation",
+          "sourceSha256": "9620253987202b788cc6a83baa8cbd0117f64eac7136998f4a20001bcc560106",
+          "translation": "其中 $r>0$，$\\theta$ 是某个数。数 $r$ 是唯一的（它等于 $|z|$），但 $\\theta$ 并不唯一；如果 $\\theta_0$ 是一种可能值，那么其他值就是 $\\theta_0+2k\\pi$，其中 $k$ 属于 $\\mathbf Z$——这些数中的任意一个都称为 $z$ 的一个**辐角**。图 3 用 $r$ 和 $\\theta$ 表示 $z$。（要为 $z=x+iy$ 找到一个辐角 $\\theta$，可以注意到等式"
+        },
+        {
+          "id": "p536-b6",
+          "source": "$$x+iy=z=|z|(\\cos\\theta+i\\sin\\theta)$$",
+          "sourceSha256": "faf8ba6e4e6a2b3cc694ed69525ce3ac73b935d596709fbb0b71ee5b66d39663"
+        },
+        {
+          "id": "p536-b7",
+          "source": "means that",
+          "sourceSha256": "48ca4a834414dd3b7fec988c4c32b3a1a0f97f6fa06edc4654bdc253af912edb",
+          "translation": "意味着"
+        },
+        {
+          "id": "p536-b8",
+          "source": "$$\\begin{aligned}x&=|z|\\cos\\theta,\\\\y&=|z|\\sin\\theta.\\end{aligned}$$",
+          "sourceSha256": "39fe5050457d7ac048941af0e14676b284a054f4ad9f934e7aa31f96b4ae1520"
+        },
+        {
+          "id": "p536-b9",
+          "source": "So, for example, if $x>0$ we can take $\\theta=\\arctan y/x$; if $x=0$, we can take $\\theta=\\pi/2$ when $y>0$ and $\\theta=3\\pi/2$ when $y<0$.)",
+          "sourceSha256": "0bbf19404c3f57f0c52b319e49a39c3922a68141311d36b2fc515023fd970464",
+          "translation": "因此，例如当 $x>0$ 时，可以取 $\\theta=\\arctan y/x$；如果 $x=0$，那么在 $y>0$ 时可以取 $\\theta=\\pi/2$，在 $y<0$ 时可以取 $\\theta=3\\pi/2$。）"
+        },
+        {
+          "id": "p536-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:332px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 233 334 208\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0555.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 3</figcaption></figure>",
+          "sourceSha256": "fee3b63a0ba55e86398b94c84e4349e580cde250d22b79a63410c9905f0045c7"
+        },
+        {
+          "id": "p536-b11",
+          "source": "Now the product of two nonzero complex numbers",
+          "sourceSha256": "af24c13ee29294cd69599617a01db1436bf8c002aafdf08e11632fa25849d234",
+          "translation": "现在，两个非零复数"
+        },
+        {
+          "id": "p536-b12",
+          "source": "$$\\begin{aligned}z&=r(\\cos\\theta+i\\sin\\theta),\\\\w&=s(\\cos\\phi+i\\sin\\phi),\\end{aligned}$$",
+          "sourceSha256": "d937c4e55146cb9692fbbd85cf1d6c326b496e4fc0a78bd257c3ce4e0b0aa9cb"
+        },
+        {
+          "id": "p536-b13",
+          "source": "is",
+          "sourceSha256": "fa51fd49abf67705d6a35d18218c115ff5633aec1f9ebfdc9d5d4956416f57f6",
+          "translation": "的乘积为"
+        },
+        {
+          "id": "p536-b14",
+          "source": "$$\\begin{aligned}z\\cdot w&=rs(\\cos\\theta+i\\sin\\theta)(\\cos\\phi+i\\sin\\phi)\\\\&=rs[(\\cos\\theta\\cos\\phi-\\sin\\theta\\sin\\phi)+i(\\sin\\theta\\cos\\phi+\\cos\\theta\\sin\\phi)]\\\\&=rs[\\cos(\\theta+\\phi)+i\\sin(\\theta+\\phi)].\\end{aligned}$$",
+          "sourceSha256": "307c9612f8651d57a48848224aa537aec34976f04ace2a12c46c79c8f2cc478f"
+        },
+        {
+          "id": "p536-b15",
+          "source": "Thus, the absolute value of a product is the product of the absolute values of the factors, while the sum of any argument for each of the factors will be an argument for the product. For a nonzero complex number",
+          "sourceSha256": "81bbb54f48cf0e18b915642424d7ccd67753913126905853bf4df47402a10795",
+          "translation": "因此，乘积的绝对值等于各因子绝对值的乘积；而从每个因子各取任意一个辐角，它们的和就是乘积的一个辐角。对于非零复数"
+        },
+        {
+          "id": "p536-b16",
+          "source": "$$z=r(\\cos\\theta+i\\sin\\theta)$$",
+          "sourceSha256": "747aaabea7b9b655b2b746ca4cd02f4b00872af202ff1e0020fb668bfa9c43e1"
+        },
+        {
+          "id": "p536-b17",
+          "source": "it is now an easy matter to prove by induction the following very important formula (sometimes known as De Moivre’s Theorem):",
+          "sourceSha256": "faa2a6162b9919bee9e9da40f5cbd74a339639e030b396a6fc8fff5b5d7b152a",
+          "translation": "现在很容易用归纳法证明下面这个非常重要的公式（有时称为棣莫弗定理）："
+        },
+        {
+          "id": "p536-b18",
+          "source": "$$z^n=|z|^n(\\cos n\\theta+i\\sin n\\theta),\\quad\\text{for any argument }\\theta\\text{ of }z.$$",
+          "sourceSha256": "cc2a865dd1e7513e56f05aec49ddac74727c3d38a2e879d6728816b1fcfa97b4"
+        },
+        {
+          "id": "p536-b19",
+          "source": "This formula describes $z^n$ so explicitly that it is easy to decide just when $z^n=w$:",
+          "sourceSha256": "a1bfb6935eed64c289c2c7e12d5234805091cf49c5942200e56767fd48569a65",
+          "translation": "这个公式把 $z^n$ 描述得如此明确，以至于很容易判断何时有 $z^n=w$："
+        },
+        {
+          "id": "p536-b20",
+          "source": "## THEOREM 2",
+          "sourceSha256": "9fc963cfb0602ba9c0088ef4562d4aa1212f85de78653a5fb5bf14e8009ff8a7",
+          "translation": "## 定理 2"
+        },
+        {
+          "id": "p536-b21",
+          "source": "Every nonzero complex number has exactly $n$ complex $n$th roots.",
+          "sourceSha256": "24b79b9302f851cacd85e2a05fa9b045dd258f897beb1978fcf6b554c93f6245",
+          "translation": "每个非零复数恰好有 $n$ 个复 $n$ 次方根。"
+        },
+        {
+          "id": "p536-b22",
+          "source": "More precisely, for any complex number $w\\ne0$, and any natural number $n$, there are precisely $n$ different complex numbers $z$ satisfying $z^n=w$.",
+          "sourceSha256": "104671eb7560513546e796cc6fb8405e5ff901c9526e50669de48f8a3e940472",
+          "translation": "更精确地说，对于任意复数 $w\\ne0$ 和任意自然数 $n$，恰好有 $n$ 个不同的复数 $z$ 满足 $z^n=w$。"
+        },
+        {
+          "id": "p536-b23",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p536-b24",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "令"
+        },
+        {
+          "id": "p536-b25",
+          "source": "$$w=s(\\cos\\phi+i\\sin\\phi)$$",
+          "sourceSha256": "71c68129ecdcb22e41f7cae6a825be709373c587a18ecae97bea1e151a496200"
+        }
+      ]
+    },
+    {
+      "printed": 537,
+      "sourceSha256": "be370bb8a5bc28827a4441184ba44a7d5f5a8756559ef8370f4ad7a3e305a378",
+      "blocks": [
+        {
+          "id": "p537-b1",
+          "source": "for $s=|w|$ and some number $\\phi$. Then a complex number",
+          "sourceSha256": "5596a0b1906b44db8d57823c2d0b373cc6e3ea4b40ffc035a7b0e2a49a5d0beb",
+          "translation": "其中 $s=|w|$，$\\phi$ 是某个数。那么，复数"
+        },
+        {
+          "id": "p537-b2",
+          "source": "$$z=r(\\cos\\theta+i\\sin\\theta)$$",
+          "sourceSha256": "747aaabea7b9b655b2b746ca4cd02f4b00872af202ff1e0020fb668bfa9c43e1"
+        },
+        {
+          "id": "p537-b3",
+          "source": "satisfies $z^n=w$ if and only if",
+          "sourceSha256": "de4eeb09699271b8282f991a6952c292ea070a983fd48abdec60ac6dc4d80612",
+          "translation": "满足 $z^n=w$，当且仅当"
+        },
+        {
+          "id": "p537-b4",
+          "source": "$$r^n(\\cos n\\theta+i\\sin n\\theta)=s(\\cos\\phi+i\\sin\\phi),$$",
+          "sourceSha256": "76c68040da3268924445bf9a6f13d90b1ed986711e6c17d758f89133f967cb55"
+        },
+        {
+          "id": "p537-b5",
+          "source": "which happens if and only if",
+          "sourceSha256": "22bea349c90462bd1ca5a327d480a1c8653d0df77ca169b59abc07f2e19f769c",
+          "translation": "而这当且仅当"
+        },
+        {
+          "id": "p537-b6",
+          "source": "$$\\begin{aligned}r^n&=s,\\\\\\cos n\\theta+i\\sin n\\theta&=\\cos\\phi+i\\sin\\phi.\\end{aligned}$$",
+          "sourceSha256": "807d65dac9bdea35148521946bf5df841796df384b532c71283a2c189bc39b44"
+        },
+        {
+          "id": "p537-b7",
+          "source": "From the first equation it follows that",
+          "sourceSha256": "5bbcbacfcfd2a8db0b978cb168bb57ac67cf4734be0a7a3ea3c497128ff8d0c2",
+          "translation": "从第一个等式得到"
+        },
+        {
+          "id": "p537-b8",
+          "source": "$$r=\\sqrt[n]s,$$",
+          "sourceSha256": "2300550ef95c223085d80ab63b6fc575815e9e8c08499b3969f80a30afd8c166"
+        },
+        {
+          "id": "p537-b9",
+          "source": "where $\\sqrt[n]s$ denotes the positive real $n$th root of $s$. From the second equation it follows that for some integer $k$ we have",
+          "sourceSha256": "b69a190d31ae57efc60121d43b9dc81c167ab783de752c79fe51ea79c0a97767",
+          "translation": "其中 $\\sqrt[n]s$ 表示 $s$ 的正实 $n$ 次方根。从第二个等式可知，对于某个整数 $k$，有"
+        },
+        {
+          "id": "p537-b10",
+          "source": "$$\\theta=\\theta_k=\\frac\\phi n+\\frac{2k\\pi}n.$$",
+          "sourceSha256": "42addaffd471ff070fec4d2651c48f9547e9a29c190288e389ba3089c4a0714e"
+        },
+        {
+          "id": "p537-b11",
+          "source": "Conversely, if we choose $r=\\sqrt[n]s$ and $\\theta=\\theta_k$ for some $k$, then the number $z=r(\\cos\\theta+i\\sin\\theta)$ will satisfy $z^n=w$. To determine the number of $n$th roots of $w$, it is therefore only necessary to determine which such $z$ are distinct. Now any integer $k$ can be written",
+          "sourceSha256": "821c05805d24419a916481a03117c4f4a37c080d77feac622c355899db797ec9",
+          "translation": "反过来，如果对于某个 $k$，选取 $r=\\sqrt[n]s$ 和 $\\theta=\\theta_k$，那么数 $z=r(\\cos\\theta+i\\sin\\theta)$ 将满足 $z^n=w$。因此，要确定 $w$ 的 $n$ 次方根的个数，只需确定哪些这样的 $z$ 是不同的。现在，任意整数 $k$ 都可以写成"
+        },
+        {
+          "id": "p537-b12",
+          "source": "$$k=nq+k'$$",
+          "sourceSha256": "ec2bc915c18f394241d2bf0ff13705256bc51d910202793c2899c40c5eba0e9d"
+        },
+        {
+          "id": "p537-b13",
+          "source": "for some integer $q$, and some integer $k'$ between $0$ and $n-1$. Then",
+          "sourceSha256": "8f1be24fac8c30d9f7a59e7892596649dedfdfaa34e805aea31cb07cd5063d34",
+          "translation": "其中 $q$ 是某个整数，$k'$ 是介于 $0$ 与 $n-1$ 之间的某个整数。那么"
+        },
+        {
+          "id": "p537-b14",
+          "source": "$$\\cos\\theta_k+i\\sin\\theta_k=\\cos\\theta_{k'}+i\\sin\\theta_{k'}.$$",
+          "sourceSha256": "ec5c9e888c17ee0958a6ec36b6ee904d9607e251811013d2b345b4602bee1e8d"
+        },
+        {
+          "id": "p537-b15",
+          "source": "This shows that every $z$ satisfying $z^n=w$ can be written",
+          "sourceSha256": "cdff076a553ebf6af3e0df5ccbbe8188cf467beafbf7b63376c2879aa529a260",
+          "translation": "这表明，每个满足 $z^n=w$ 的 $z$ 都可以写成"
+        },
+        {
+          "id": "p537-b16",
+          "source": "$$z=\\sqrt[n]s\\,(\\cos\\theta_k+i\\sin\\theta_k)\\quad k=0,\\ldots,n-1.$$",
+          "sourceSha256": "f563f186e3d55150fb9ffc123a9fdaf587212a3be2287a0787e1ff4ae916c487"
+        },
+        {
+          "id": "p537-b17",
+          "source": "Moreover, it is easy to see that these numbers are all different, since any two $\\theta_k$ for $k=0,\\ldots,n-1$ differ by less than $2\\pi$. ■",
+          "sourceSha256": "7acbc69038b57e63d707afde8ed462e3c4dfca77f1d2a1d234793b9c1b5c3127",
+          "translation": "此外，很容易看出这些数彼此不同，因为对于 $k=0,\\ldots,n-1$，任意两个 $\\theta_k$ 之差都小于 $2\\pi$。■"
+        },
+        {
+          "id": "p537-b18",
+          "source": "In the course of proving Theorem 2, we have actually developed a method for finding the $n$th roots of a complex number. For example, to find the cube roots of $i$ (Figure 4) note that $|i|=1$ and that $\\pi/2$ is an argument for $i$. The cube roots of $i$ are therefore",
+          "sourceSha256": "fdf0aede216619a3b810bbc9e71b043d01818b06ad29872f976da22527f9fd51",
+          "translation": "在证明定理 2 的过程中，我们实际上已经建立了一种求复数 $n$ 次方根的方法。例如，要找出 $i$ 的立方根（图 4），注意 $|i|=1$，且 $\\pi/2$ 是 $i$ 的一个辐角。因此，$i$ 的立方根为"
+        },
+        {
+          "id": "p537-b19",
+          "source": "$$1\\cdot\\left[\\cos\\frac\\pi6+i\\sin\\frac\\pi6\\right],$$",
+          "sourceSha256": "e2d88be472b68828773e1ecdb4dbb0c539311fa34bb06a7944a1191ea72f9e52"
+        },
+        {
+          "id": "p537-b20",
+          "source": "$$1\\cdot\\left[\\cos\\left(\\frac\\pi6+\\frac{2\\pi}3\\right)+i\\sin\\left(\\frac\\pi6+\\frac{2\\pi}3\\right)\\right]=\\cos\\frac{5\\pi}6+i\\sin\\frac{5\\pi}6,$$",
+          "sourceSha256": "5f47d4912708e3187945552bffeb5478eb374dd244b844c7ec04f69432e5d71a"
+        },
+        {
+          "id": "p537-b21",
+          "source": "$$1\\cdot\\left[\\cos\\left(\\frac\\pi6+\\frac{4\\pi}3\\right)+i\\sin\\left(\\frac\\pi6+\\frac{4\\pi}3\\right)\\right]=\\cos\\frac{3\\pi}2+i\\sin\\frac{3\\pi}2.$$",
+          "sourceSha256": "432c30cdd708a60f9225c9174aa931bcd4d80b25fda481883804834ad46e69c3"
+        },
+        {
+          "id": "p537-b22",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:405px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 895 406 396\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0556.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 4</figcaption></figure>",
+          "sourceSha256": "2983b5286e5abcd9169224ad66ce54d27a095f194967618d5eeb25e97026890e"
+        }
+      ]
+    },
+    {
+      "printed": 538,
+      "sourceSha256": "b594e0270b2c0ec110e67f6d836cbce86bff03b5b8f047f51b827701c8721bef",
+      "blocks": [
+        {
+          "id": "p538-b1",
+          "source": "Since",
+          "sourceSha256": "98af1ed61831e6ab92bbb2a4d429344c8d0581c77d5c85311c5ed8a3207d2eea",
+          "translation": "由于"
+        },
+        {
+          "id": "p538-b2",
+          "source": "$$\\begin{aligned}\\cos\\frac\\pi6&=\\frac{\\sqrt3}2,&\\sin\\frac\\pi6&=\\frac12,\\\\\\cos\\frac{5\\pi}6&=-\\frac{\\sqrt3}2,&\\sin\\frac{5\\pi}6&=\\frac12,\\\\\\cos\\frac{3\\pi}2&=0,&\\sin\\frac{3\\pi}2&=-1,\\end{aligned}$$",
+          "sourceSha256": "3fb67d719e095f3d9125adb2759137b291cbfe1b06d90a943908e94cb8124970"
+        },
+        {
+          "id": "p538-b3",
+          "source": "the cube roots of $i$ are",
+          "sourceSha256": "644bf6f9fc5b61d48eed149de6ad6f0c1d46a004f2f1624ef3b3911ac99dc6c9",
+          "translation": "$i$ 的立方根为"
+        },
+        {
+          "id": "p538-b4",
+          "source": "$$\\frac{\\sqrt3+i}2,\\qquad\\frac{-\\sqrt3+i}2,\\qquad-i.$$",
+          "sourceSha256": "261103af3a707ba3fa49404040dcf865bb6c9ed3a90c63f5aec48acf1100d212"
+        },
+        {
+          "id": "p538-b5",
+          "source": "In general, we cannot expect to obtain such simple results. For example, to find the cube roots of $2+11i$, note that $|2+11i|=\\sqrt{2^2+11^2}=\\sqrt{125}$ and that $\\arctan\\frac{11}2$ is an argument for $2+11i$. One of the cube roots of $2+11i$ is therefore",
+          "sourceSha256": "e2e0de5f0dd5f031de1ff90f864dc94b58b243c3bdd9d429684925a4c15c8bbd",
+          "translation": "一般情况下，我们不能指望得到这么简单的结果。例如，要找出 $2+11i$ 的立方根，注意 $|2+11i|=\\sqrt{2^2+11^2}=\\sqrt{125}$，且 $\\arctan\\frac{11}2$ 是 $2+11i$ 的一个辐角。因此，$2+11i$ 的一个立方根为"
+        },
+        {
+          "id": "p538-b6",
+          "source": "$$\\begin{aligned}&\\sqrt[6]{125}\\left[\\cos\\left(\\frac{\\arctan\\frac{11}2}3\\right)+i\\sin\\left(\\frac{\\arctan\\frac{11}2}3\\right)\\right]\\\\&\\qquad=\\sqrt5\\left[\\cos\\left(\\frac{\\arctan\\frac{11}2}3\\right)+i\\sin\\left(\\frac{\\arctan\\frac{11}2}3\\right)\\right].\\end{aligned}$$",
+          "sourceSha256": "2cf0aa088f263510334df57b1b0c71623be54a4ea3d1daaa385f1a1042a114eb"
+        },
+        {
+          "id": "p538-b7",
+          "source": "Previously we noted that $2+i$ is also a cube root of $2+11i$. Since $|2+i|=\\sqrt{2^2+1^2}=\\sqrt5$, and since $\\arctan\\frac12$ is an argument of $2+i$, we can write this cube root as",
+          "sourceSha256": "d5579b10066c54f85155b1b435e0b9fddfb41d63913e2cf984481cb0027a9405",
+          "translation": "前面我们已经注意到，$2+i$ 也是 $2+11i$ 的一个立方根。由于 $|2+i|=\\sqrt{2^2+1^2}=\\sqrt5$，且 $\\arctan\\frac12$ 是 $2+i$ 的一个辐角，我们可以把这个立方根写成"
+        },
+        {
+          "id": "p538-b8",
+          "source": "$$2+i=\\sqrt5(\\cos\\arctan\\tfrac12+i\\sin\\arctan\\tfrac12).$$",
+          "sourceSha256": "9660ba9e62d2dd88938cd7e1bf49bc903e4e048f127a4f15ba70a667060fe896"
+        },
+        {
+          "id": "p538-b9",
+          "source": "These two cube roots are actually the same number, because",
+          "sourceSha256": "79994d73401d35aef30f4a955360c59db795a5e6670e8531398fde054a7fa631",
+          "translation": "这两个立方根实际上是同一个数，因为"
+        },
+        {
+          "id": "p538-b10",
+          "source": "$$\\frac{\\arctan\\frac{11}2}3=\\arctan\\frac12$$",
+          "sourceSha256": "eb88e1549536cf94b8ba431454f090a8696232a2ce7de2ef09f7d779141e2b49"
+        },
+        {
+          "id": "p538-b11",
+          "source": "(you can check this by using the formula in Problem 15-9), but this is hardly the sort of thing one might notice!",
+          "sourceSha256": "bf4b57678f964581f4022a78cacbb9201beb00ed10cca13e71bbba34fc35797d",
+          "translation": "（你可以使用习题 15-9 中的公式验证这一点），不过这可绝不是容易看出来的事！"
+        },
+        {
+          "id": "p538-b12",
+          "source": "The fact that every complex number has an $n$th root for all $n$ is just a special case of a very important theorem. The number $i$ was originally introduced in order to provide a solution for the equation $x^2+1=0$. The *Fundamental Theorem of Algebra* states the remarkable fact that this one addition automatically provides solutions for all other polynomial equations: every equation",
+          "sourceSha256": "d9c78136805ce10e472d09047a336e18d72db12cbe8094420dbaf131b04ab0b0",
+          "translation": "每个复数对于所有 $n$ 都有 $n$ 次方根，这只是一个非常重要的定理的特殊情形。最初引入数 $i$，是为了给方程 $x^2+1=0$ 提供一个解。*代数基本定理*指出一个非凡的事实：仅仅加入这一个数，就自动为所有其他多项式方程提供了解：每个方程"
+        },
+        {
+          "id": "p538-b13",
+          "source": "$$z^n+a_{n-1}z^{n-1}+\\cdots+a_0=0\\qquad a_0,\\ldots,a_{n-1}\\text{ in }\\mathbf C$$",
+          "sourceSha256": "a7b62f60a139cd6d4fb75b4052408da9a61c3a91548ae2e2d5a51bb56827bf50"
+        },
+        {
+          "id": "p538-b14",
+          "source": "has a complex root!",
+          "sourceSha256": "ca88306b0d3cb48f6701fe27b1a7fb8cdc4ad01d239b98d1e785c713ca39d92e",
+          "translation": "都有一个复根！"
+        },
+        {
+          "id": "p538-b15",
+          "source": "In the next chapter we shall give an almost complete proof of the Fundamental Theorem of Algebra; the slight gap left in the text can be filled in as an exercise (Problem 26-5). The proof of the theorem will rely on several new concepts which come up quite naturally in a more thorough investigation of complex numbers.",
+          "sourceSha256": "5a2a1df517ebe8e30788bc546fc7a9ca493e7872fa06623451bcb38f3c812bb3",
+          "translation": "下一章将给出代数基本定理的一个几乎完整的证明；正文中留下的小缺口可以作为习题补齐（习题 26-5）。这个证明依赖几个新概念，而它们在更深入地研究复数时会十分自然地出现。"
+        }
+      ]
+    },
+    {
+      "printed": 539,
+      "sourceSha256": "7b6436e5b0b6cb4fef49f02d1a23236aa5c91b2052dcde5ae4acab130ed12b04",
+      "blocks": [
+        {
+          "id": "p539-b1",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p539-b2",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p539-b3",
+          "source": "Find the absolute value and argument(s) of each of the following.",
+          "sourceSha256": "22c2528b97c1afa83e8e4a26126fa28566150e4ab4c68909f97b2bbf07d2fc22",
+          "translation": "求下列各数的绝对值和辐角。"
+        },
+        {
+          "id": "p539-b4",
+          "source": "(i) $3+4i$.",
+          "sourceSha256": "8f66e082570f8c70797d9b7d076d44bfd88d03ab2071a3d383b20517d676f11f"
+        },
+        {
+          "id": "p539-b5",
+          "source": "(ii) $(3+4i)^{-1}$.",
+          "sourceSha256": "dabfda38171d8404033933dbc233af9e1da5f8ec7e7ffd7fcd44dcb2d0b570cd"
+        },
+        {
+          "id": "p539-b6",
+          "source": "(iii) $(1+i)^5$.",
+          "sourceSha256": "34121de9bef77c254d06a6850bc11a13c7de901c8fce04cec67832a29c55894b"
+        },
+        {
+          "id": "p539-b7",
+          "source": "(iv) $\\sqrt[7]{3+4i}$.",
+          "sourceSha256": "b957c27d0290f7b8e68039078780a20757c00d656c8020fcb0eefa9362dfc8d3"
+        },
+        {
+          "id": "p539-b8",
+          "source": "(v) $|3+4i|$.",
+          "sourceSha256": "e26f14ef0e8554c683e66f04b0929c52459b3a4bf904ca4446ab20db2e963df7"
+        },
+        {
+          "id": "p539-b9",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p539-b10",
+          "source": "Solve the following equations.",
+          "sourceSha256": "e521fccf6447abca1331162dba67feb6c030b2af257b2e65ce235dc4ad49f59a",
+          "translation": "解下列方程。"
+        },
+        {
+          "id": "p539-b11",
+          "source": "(i) $x^2+ix+1=0$.",
+          "sourceSha256": "499663764b41e73224dda1147bf8b064cbcdc5bc7ac4b4c9f9f70e9ffd717518"
+        },
+        {
+          "id": "p539-b12",
+          "source": "(ii) $x^4+x^2+1=0$.",
+          "sourceSha256": "6018f8ef6ecef3d856a0fb9514fee30b6596ba79148d0843f6781f81a5fc6fdf"
+        },
+        {
+          "id": "p539-b13",
+          "source": "(iii) $x^2+2ix-1=0$.",
+          "sourceSha256": "5f549dba5b4b7c90c852d89940a2a1fbc9076eac61c25c7844881d1e35374ec3"
+        },
+        {
+          "id": "p539-b14",
+          "source": "(iv) $\\begin{cases}ix-(1+i)y=3,\\\\(2+i)x+iy=4.\\end{cases}$",
+          "sourceSha256": "160fce2573fd807fa45795a473ddaaf9d1f072cb4ab5f5f05badff6b2b32a214"
+        },
+        {
+          "id": "p539-b15",
+          "source": "(v) $x^3-x^2-x-2=0$.",
+          "sourceSha256": "6a91c4d1080ad58b9e045076db4babfd8bd92256601b919bee119eb3fed0e9e8"
+        },
+        {
+          "id": "p539-b16",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p539-b17",
+          "source": "Describe the set of all complex numbers $z$ such that",
+          "sourceSha256": "594f889e05c6f62a3c0bfd168c9ef6dfbcece69126df40ae4c3dbfc36217f471",
+          "translation": "描述满足下列条件的所有复数 $z$ 构成的集合："
+        },
+        {
+          "id": "p539-b18",
+          "source": "(i) $\\bar z=-z$.",
+          "sourceSha256": "07a085786cc8dcc32a706585ca7de8ad2a44b13745fb1c11895d87aa4c1dbd88"
+        },
+        {
+          "id": "p539-b19",
+          "source": "(ii) $\\bar z=z^{-1}$.",
+          "sourceSha256": "cc18b545663368a938810b0ad0991eac918aff93324650577da6f98f061cea10"
+        },
+        {
+          "id": "p539-b20",
+          "source": "(iii) $|z-a|=|z-b|$.",
+          "sourceSha256": "211b9644cdbc36f42093864f0e15cc55bcb911170487b3d6e69002cbc0d87309"
+        },
+        {
+          "id": "p539-b21",
+          "source": "(iv) $|z-a|+|z-b|=c$.",
+          "sourceSha256": "50b66971163b0e84d244212ff20af871d66d4087218ff58003b15d5c49e25137"
+        },
+        {
+          "id": "p539-b22",
+          "source": "(v) $|z|<1-\\text{real part of }z$.",
+          "sourceSha256": "e50a942c4e87f50082df242bdff0642dbca17e0e0a1e3d37550359e86cdd638c"
+        },
+        {
+          "id": "p539-b23",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p539-b24",
+          "source": "Prove that $|z|=|\\bar z|$, and that the real part of $z$ is $(z+\\bar z)/2$, while the imaginary part is $(z-\\bar z)/2i$.",
+          "sourceSha256": "63aac3b592d840413f825577713222e1da6d3e0c6a81e5c2d47d903d86abe1f5",
+          "translation": "证明 $|z|=|\\bar z|$，并且 $z$ 的实部为 $(z+\\bar z)/2$，虚部为 $(z-\\bar z)/2i$。"
+        },
+        {
+          "id": "p539-b25",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p539-b26",
+          "source": "Prove that $|z+w|^2+|z-w|^2=2(|z|^2+|w|^2)$, and interpret this statement geometrically.",
+          "sourceSha256": "c23598f0305d21cb40997b4408571676036e50eaee464ff18d60cc3aac4a8eb0",
+          "translation": "证明 $|z+w|^2+|z-w|^2=2(|z|^2+|w|^2)$，并对这个陈述作出几何解释。"
+        },
+        {
+          "id": "p539-b27",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p539-b28",
+          "source": "What is the pictorial relation between $z$ and $\\sqrt i\\cdot\\overline{z\\sqrt{-i}}$? (Note that there may be more than one answer, because $\\sqrt i$ and $\\sqrt{-i}$ both have two different possible values.) Hint: Which line goes into the real axis under multiplication by $\\sqrt{-i}$?",
+          "sourceSha256": "5811173c60c739e21c4fee742c146b49afa33f96e1a29d73f883197de81a5280",
+          "translation": "$z$ 与 $\\sqrt i\\cdot\\overline{z\\sqrt{-i}}$ 在图形上有什么关系？（注意，答案可能不止一个，因为 $\\sqrt i$ 和 $\\sqrt{-i}$ 都有两个不同的可能值。）提示：乘以 $\\sqrt{-i}$ 时，哪条直线被变到实轴上？"
+        },
+        {
+          "id": "p539-b29",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p539-b30",
+          "source": "(a) Prove that if $a_0,\\ldots,a_{n-1}$ are *real* and $a+bi$ (for $a$ and $b$ real) satisfies the equation $z^n+a_{n-1}z^{n-1}+\\cdots+a_0=0$, then $a-bi$ also satisfies this equation. (Thus the nonreal roots of such an equation always occur in pairs, and the number of such roots is even.)",
+          "sourceSha256": "965ed098d5a3e6cf236d694d27b5fcd45927a7a359a40793cf68b1698b3c63dc",
+          "translation": "(a) 证明：如果 $a_0,\\ldots,a_{n-1}$ 都是*实数*，且 $a+bi$（其中 $a$ 和 $b$ 为实数）满足方程 $z^n+a_{n-1}z^{n-1}+\\cdots+a_0=0$，那么 $a-bi$ 也满足这个方程。（因此，这样的方程的非实根总是成对出现，非实根的个数为偶数。）"
+        },
+        {
+          "id": "p539-b31",
+          "source": "(b) Conclude that $z^n+a_{n-1}z^{n-1}+\\cdots+a_0$ is divisible by $z^2-2az+(a^2+b^2)$ (whose coefficients are real).",
+          "sourceSha256": "52842991da8af2612911104208f49389704e031806f9962bd82791fec0c197c9",
+          "translation": "(b) 由此得出，$z^n+a_{n-1}z^{n-1}+\\cdots+a_0$ 能被 $z^2-2az+(a^2+b^2)$ 整除（后者的系数都是实数）。"
+        },
+        {
+          "id": "p539-b32",
+          "source": "### \\*8.",
+          "sourceSha256": "d046b6272046f9db72fedfb9f8db16ad72fddcddd800a82b94978c5025a77c5d"
+        },
+        {
+          "id": "p539-b33",
+          "source": "(a) Let $c$ be an integer which is not the square of another integer. If $a$ and $b$ are integers we define the **conjugate** of $a+b\\sqrt c$, denoted by $\\overline{a+b\\sqrt c}$, as $a-b\\sqrt c$. Show that the conjugate is well defined by showing that a number can be written $a+b\\sqrt c$, for integers $a$ and $b$, in only one way.",
+          "sourceSha256": "ac113f0eab541a79d1785703d1372aa618f6b730b6fb48062aaf70c314684692",
+          "translation": "(a) 设整数 $c$ 不是另一个整数的平方。如果 $a$ 和 $b$ 是整数，我们把 $a+b\\sqrt c$ 的**共轭**（记为 $\\overline{a+b\\sqrt c}$）定义为 $a-b\\sqrt c$。证明这个共轭定义是良定义的，方法是说明：一个数只能以唯一的方式写成 $a+b\\sqrt c$，其中 $a$ 和 $b$ 是整数。"
+        }
+      ]
+    },
+    {
+      "printed": 540,
+      "sourceSha256": "46becba504877dd999614178545c0b9bc98c2869ef9bfd188f4ae05821d4d174",
+      "blocks": [
+        {
+          "id": "p540-b1",
+          "source": "(b) Show that for all $\\alpha$ and $\\beta$ of the form $a+b\\sqrt c$, we have $\\overline{\\bar\\alpha}=\\alpha$; $\\bar\\alpha=\\alpha$ if and only if $\\alpha$ is an integer; $\\overline{\\alpha+\\beta}=\\bar\\alpha+\\bar\\beta$; $\\overline{-\\alpha}=-\\bar\\alpha$; $\\overline{\\alpha\\cdot\\beta}=\\bar\\alpha\\cdot\\bar\\beta$; and $\\overline{\\alpha^{-1}}=(\\bar\\alpha)^{-1}$ if $\\alpha\\ne0$.",
+          "sourceSha256": "29a0ed1509d9b7c60c9ee5f0a20edb8db1bba56fefaeb014922375e87c8163ff",
+          "translation": "(b) 证明：对于所有形如 $a+b\\sqrt c$ 的 $\\alpha$ 和 $\\beta$，都有 $\\overline{\\bar\\alpha}=\\alpha$；$\\bar\\alpha=\\alpha$ 当且仅当 $\\alpha$ 是整数；$\\overline{\\alpha+\\beta}=\\bar\\alpha+\\bar\\beta$；$\\overline{-\\alpha}=-\\bar\\alpha$；$\\overline{\\alpha\\cdot\\beta}=\\bar\\alpha\\cdot\\bar\\beta$；并且如果 $\\alpha\\ne0$，就有 $\\overline{\\alpha^{-1}}=(\\bar\\alpha)^{-1}$。"
+        },
+        {
+          "id": "p540-b2",
+          "source": "(c) Prove that if $a_0,\\ldots,a_{n-1}$ are *integers* and $z=a+b\\sqrt c$ satisfies the equation $z^n+a_{n-1}z^{n-1}+\\cdots+a_0=0$, then $\\bar z=a-b\\sqrt c$ also satisfies this equation.",
+          "sourceSha256": "09c85a10508324630c63305ca7d75fda9193dbdf0baffa69f8161b45635f9bde",
+          "translation": "(c) 证明：如果 $a_0,\\ldots,a_{n-1}$ 都是*整数*，且 $z=a+b\\sqrt c$ 满足方程 $z^n+a_{n-1}z^{n-1}+\\cdots+a_0=0$，那么 $\\bar z=a-b\\sqrt c$ 也满足这个方程。"
+        },
+        {
+          "id": "p540-b3",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p540-b4",
+          "source": "Find all the $4$th roots of $i$; express the one having smallest argument in a form that does not involve any trigonometric functions.",
+          "sourceSha256": "b678e657c7c285fb58ac6de1853ff2509c23193b631311963a7324e42f189f70",
+          "translation": "求 $i$ 的所有 $4$ 次方根；把辐角最小的那个根表示成不含任何三角函数的形式。"
+        },
+        {
+          "id": "p540-b5",
+          "source": "### \\*10.",
+          "sourceSha256": "cc9e9741165bfee5bcdee015a051748869190f63742175f7fed445a1c4ba0050"
+        },
+        {
+          "id": "p540-b6",
+          "source": "(a) Prove that if $\\omega$ is an $n$th root of $1$, then so is $\\omega^k$.",
+          "sourceSha256": "2d3cd5980be96fa76c6d82e40612d29aa59f6c042dc422ed2a890d4cc9e59abd",
+          "translation": "(a) 证明：如果 $\\omega$ 是 $1$ 的一个 $n$ 次方根，那么 $\\omega^k$ 也是。"
+        },
+        {
+          "id": "p540-b7",
+          "source": "(b) A number $\\omega$ is called a **primitive $n$th root** of $1$ if $\\{1,\\omega,\\omega^2,\\ldots,\\omega^{n-1}\\}$ is the set of all $n$th roots of $1$. How many primitive $n$th roots of $1$ are there for $n=3,4,5,9$?",
+          "sourceSha256": "31f74b4a2fd526e18072e36f499fd99cdd3b0a5f57d2f40e9b74c052067c9ac4",
+          "translation": "(b) 如果 $\\{1,\\omega,\\omega^2,\\ldots,\\omega^{n-1}\\}$ 是 $1$ 的所有 $n$ 次方根的集合，就称数 $\\omega$ 为 $1$ 的一个**本原 $n$ 次方根**。对于 $n=3,4,5,9$，$1$ 有多少个本原 $n$ 次方根？"
+        },
+        {
+          "id": "p540-b8",
+          "source": "(c) Let $\\omega$ be an $n$th root of $1$, with $\\omega\\ne1$. Prove that $\\displaystyle\\sum_{k=0}^{n-1}\\omega^k=0$.",
+          "sourceSha256": "b8bcc35481d4271eb91b4421b46f3bf975bf6639d86e75998d6bcf30060eb9ba",
+          "translation": "(c) 设 $\\omega$ 是 $1$ 的一个 $n$ 次方根，且 $\\omega\\ne1$。证明 $\\displaystyle\\sum_{k=0}^{n-1}\\omega^k=0$。"
+        },
+        {
+          "id": "p540-b9",
+          "source": "### \\*11.",
+          "sourceSha256": "358fb81be72b55bd9333c1487ec4df4577ff9714e72062d38ef11421826a7ebe"
+        },
+        {
+          "id": "p540-b10",
+          "source": "(a) Prove that if $z_1,\\ldots,z_k$ lie on one side of some straight line through $0$, then $z_1+\\cdots+z_k\\ne0$. Hint: This is obvious from the geometric interpretation of addition, but an analytic proof is also easy: the assertion is clear if the line is the real axis, and a trick will reduce the general case to this one.",
+          "sourceSha256": "82c78a8251c6a960b0d766960972a80cd6e471c817e431f0ee338c96f41f689e",
+          "translation": "(a) 证明：如果 $z_1,\\ldots,z_k$ 位于过 $0$ 的某条直线的同一侧，那么 $z_1+\\cdots+z_k\\ne0$。提示：从加法的几何解释来看，这显而易见，但解析证明也很容易：当这条直线是实轴时，断言是清楚的，而一个技巧可以把一般情形化归为这一情形。"
+        },
+        {
+          "id": "p540-b11",
+          "source": "(b) Show further that $z_1^{-1},\\ldots,z_k^{-1}$ all lie on one side of a straight line through $0$, so that $z_1^{-1}+\\cdots+z_k^{-1}\\ne0$.",
+          "sourceSha256": "22e4128264c01c475fa8b5c9827ec70e2924506defe0f4704b8b5caf32ce1436",
+          "translation": "(b) 进一步证明，$z_1^{-1},\\ldots,z_k^{-1}$ 都位于过 $0$ 的某条直线的同一侧，因此 $z_1^{-1}+\\cdots+z_k^{-1}\\ne0$。"
+        },
+        {
+          "id": "p540-b12",
+          "source": "### \\*12.",
+          "sourceSha256": "22fa584303267407e32d4a1d9b6645b6ac6017506a77572da538b1d330be92ac"
+        },
+        {
+          "id": "p540-b13",
+          "source": "Prove that if $|z_1|=|z_2|=|z_3|$ and $z_1+z_2+z_3=0$, then $z_1,z_2$, and $z_3$ are the vertices of an equilateral triangle. Hint: It will help to assume that $z_1$ is real, and this can be done with no loss of generality. Why?",
+          "sourceSha256": "d92d82084d2aa24902cc2b24ef16e48875d940c0c92d688daf84c82b0b3f64f5",
+          "translation": "证明：如果 $|z_1|=|z_2|=|z_3|$ 且 $z_1+z_2+z_3=0$，那么 $z_1,z_2$ 和 $z_3$ 是一个等边三角形的顶点。提示：假设 $z_1$ 是实数会有所帮助，而且这样做并不损失一般性。为什么？"
+        }
+      ]
+    }
+  ]
+}

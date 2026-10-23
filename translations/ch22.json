@@ -1,0 +1,2098 @@
+{
+  "chapter": 22,
+  "language": "zh-CN",
+  "sourceSha256": "5869b5e909933870901103cc2632302e4716cc257dd3156d95a033110ac75973",
+  "paragraphCount": 201,
+  "pages": [
+    {
+      "printed": 452,
+      "sourceSha256": "0b1d87f04ace84ba7bdab6934c50e3c753fac350db952b0d81be239d6f770526",
+      "blocks": [
+        {
+          "id": "p452-b1",
+          "source": "# CHAPTER 22\n# INFINITE SEQUENCES",
+          "sourceSha256": "9443427a7eecc09c60aa8619b34f69067747944b3aeec3e03e9e8c4552f8d6d3",
+          "translation": "# 第 22 章\n# 无穷数列"
+        },
+        {
+          "id": "p452-b2",
+          "source": "The idea of an infinite sequence is so natural a concept that it is tempting to dispense with a definition altogether. One frequently writes simply “an infinite sequence",
+          "sourceSha256": "0876839c73c0676dd7320fcfde744e5f0493c89cadb7de0acc739c3811ae4678",
+          "translation": "无穷数列这一概念如此自然，以至于我们很容易想干脆省去定义。人们常常只写“一个无穷数列"
+        },
+        {
+          "id": "p452-b3",
+          "source": "$$a_1,a_2,a_3,a_4,a_5,\\ldots,\\text{”}$$",
+          "sourceSha256": "c6bffd375d6e1b5d1f21d640fa6aa5a93fcc42d5e9fd8a4906fc56c27f4f05af"
+        },
+        {
+          "id": "p452-b4",
+          "source": "the three dots indicating that the numbers $a_i$ continue to the right “forever.” A rigorous definition of an infinite sequence is not hard to formulate, however; the important point about an infinite sequence is that for each natural number, $n$, there is a real number $a_n$. This sort of correspondence is precisely what functions are meant to formalize.",
+          "sourceSha256": "1728bf6efb00700b32b63e11a09809b8a6daa7cf3803082cd8fd0626db02faaa",
+          "translation": "”，其中三个点表示这些数 $a_i$ 向右“永远”延续下去。不过，要给无穷数列下一个严格的定义并不难；关键在于：对于每个自然数 $n$，都有一个实数 $a_n$。函数正是用来把这种对应关系形式化的。"
+        },
+        {
+          "id": "p452-b5",
+          "source": "**DEFINITION** An **infinite sequence** of real numbers is a function whose domain is $\\mathbf N$.",
+          "sourceSha256": "f3ef7c5975f59cd8df3e29d8440281966062ce38073031f27ee23e6f1705baab",
+          "translation": "**定义** 一个实数的**无穷数列**，就是定义域为 $\\mathbf N$ 的函数。"
+        },
+        {
+          "id": "p452-b6",
+          "source": "From the point of view of this definition, a sequence should be designated by a single letter like $a$, and particular values by",
+          "sourceSha256": "130e228cbe88d907843617b340e6243a5d3893aa75be6fac103c35b6fef7e6c3",
+          "translation": "从这个定义来看，数列应当用单个字母（例如 $a$）表示，而其具体的值应写成"
+        },
+        {
+          "id": "p452-b7",
+          "source": "$$a(1),a(2),a(3),\\ldots,$$",
+          "sourceSha256": "282b126b47d944d722caee0776e614604d912a45e13c63412d843591e23765d1"
+        },
+        {
+          "id": "p452-b8",
+          "source": "but the subscript notation",
+          "sourceSha256": "85bd72079771254271a22a50ed76ca4419910b773f146ad9183a4c05b7391701",
+          "translation": "不过，人们几乎总是改用下标记法"
+        },
+        {
+          "id": "p452-b9",
+          "source": "$$a_1,a_2,a_3,\\ldots$$",
+          "sourceSha256": "213fc4390bfcde2f06fd0da9195a895ea1de6506de27a8e76d9d3cbf5d92a837"
+        },
+        {
+          "id": "p452-b10",
+          "source": "is almost always used instead, and the sequence itself is usually denoted by a symbol like $\\{a_n\\}$. Thus $\\{n\\}$, $\\{(-1)^n\\}$, and $\\{1/n\\}$ denote the sequences $\\alpha$, $\\beta$, and $\\gamma$ defined by",
+          "sourceSha256": "6fd0ccbd8ab6b97db63a3ab5c4e1aa74f5710895aae494a1ebdb6262c72bf143",
+          "translation": "而数列本身通常用 $\\{a_n\\}$ 这样的符号表示。因此，$\\{n\\}$、$\\{(-1)^n\\}$ 和 $\\{1/n\\}$ 分别表示数列 $\\alpha$、$\\beta$ 和 $\\gamma$，它们定义为"
+        },
+        {
+          "id": "p452-b11",
+          "source": "$$\\begin{aligned}\\alpha_n&=n,\\\\\\beta_n&=(-1)^n,\\\\\\gamma_n&=\\frac1n.\\end{aligned}$$",
+          "sourceSha256": "266046c6ea3723f0b1b348a87101ac13ae6e2253e36f7d339cb029f37c0c7797"
+        },
+        {
+          "id": "p452-b12",
+          "source": "A sequence, like any function, can be graphed (Figure 1) but the graph is usually rather unrevealing, since most of the function cannot be fit on the page.",
+          "sourceSha256": "a365b060dc3c3b0f72199b7215a0051194d70ba0d1404d7bb047a84d2a734c14",
+          "translation": "数列与任何函数一样，也可以画出图像（图 1）；不过，这种图像通常不能说明太多，因为函数的大部分无法放进书页中。"
+        },
+        {
+          "id": "p452-b13",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"488 1255 713 225\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0471.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "561742b33bffe43a44afe780121162a47d5f84dc2375febd2aa820e77f82c3c9"
+        }
+      ]
+    },
+    {
+      "printed": 453,
+      "sourceSha256": "cef40312b03da47b93a818191fe2f9ff922d8c3105f2bfbda6270bbf172aab4e",
+      "blocks": [
+        {
+          "id": "p453-b1",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:532px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"442 156 532 338\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0472.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "58dfcdf8a8fb4219bf0e223242308488092cd171c137cc81b31861ac77a3867f"
+        },
+        {
+          "id": "p453-b2",
+          "source": "A more convenient representation of a sequence is obtained by simply labeling the points $a_1,a_2,a_3,\\ldots$ on a line (Figure 2). This sort of picture shows where the sequence “is going.” The sequence $\\{\\alpha_n\\}$ “goes out to infinity,” the sequence $\\{\\beta_n\\}$ “jumps back and forth between $-1$ and 1,” and the sequence $\\{\\gamma_n\\}$ “converges to 0.” Of the three phrases in quotation marks, the last is the crucial concept associated with sequences, and will be defined precisely (the definition is illustrated in Figure 3).",
+          "sourceSha256": "0a5227569d30387ee5ba9ac533ad111aa0d9c99b1b5f7b896256cc6c032d5780",
+          "translation": "一种更方便的数列表示方法，是直接把点 $a_1,a_2,a_3,\\ldots$ 标在一条直线上（图 2）。这样的图能够显示数列“向哪里去”。数列 $\\{\\alpha_n\\}$“趋向无穷”，数列 $\\{\\beta_n\\}$“在 $-1$ 和 1 之间来回跳动”，而数列 $\\{\\gamma_n\\}$“收敛于 0”。这三个加引号的说法中，最后一个是与数列有关的关键概念，我们将对它作出精确定义（图 3 说明了这个定义）。"
+        },
+        {
+          "id": "p453-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:644px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"444 778 644 62\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0472.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "2a0226fd2d1a7d0e3e79885a53ead533285c16f724722336a666c59266bccc5d"
+        },
+        {
+          "id": "p453-b4",
+          "source": "**DEFINITION** A sequence $\\{a_n\\}$ **converges to $l$** (in symbols $\\lim\\limits_{n\\to\\infty}a_n=l$) if for every $\\varepsilon>0$ there is a natural number $N$ such that, for all natural numbers $n$,",
+          "sourceSha256": "1636e2296c2b324bfbb0c864ea37749aeb238b6d62273a17f7f6dd66161e7de7",
+          "translation": "**定义** 如果对于每个 $\\varepsilon>0$，都存在一个自然数 $N$，使得对于所有自然数 $n$，有下面的关系，那么称数列 $\\{a_n\\}$ **收敛于 $l$**（符号表示为 $\\lim\\limits_{n\\to\\infty}a_n=l$）："
+        },
+        {
+          "id": "p453-b5",
+          "source": "$$\\text{if }n>N,\\text{ then }|a_n-l|<\\varepsilon.$$",
+          "sourceSha256": "943d61ba6ca4ccd1e6f6b28e4a68a19e3bcf7b2fdad2ee39fd0149a99b8d64a4"
+        },
+        {
+          "id": "p453-b6",
+          "source": "In addition to the terminology introduced in this definition, we sometimes say that the sequence $\\{a_n\\}$ **approaches** $l$ or has the **limit** $l$. A sequence $\\{a_n\\}$ is said to **converge** if it converges to $l$ for some $l$, and to **diverge** if it does not converge.",
+          "sourceSha256": "a30e95218e8e588f1b990b392f88c497f69ed5fe25d4abf6ae0c51b0bea37f8c",
+          "translation": "除了这个定义中引入的术语之外，我们有时也说数列 $\\{a_n\\}$ **趋近于** $l$，或者以 $l$ 为**极限**。如果数列 $\\{a_n\\}$ 对于某个 $l$ 收敛于 $l$，就称它**收敛**；如果它不收敛，就称它**发散**。"
+        },
+        {
+          "id": "p453-b7",
+          "source": "To show that the sequence $\\{\\gamma_n\\}$ converges to 0, it suffices to observe the following. If $\\varepsilon>0$, there is a natural number $N$ such that $1/N<\\varepsilon$. Then, if $n>N$ we have",
+          "sourceSha256": "64025d9d9cf1aea4c35b7f6c2de49d6e7909f8452c34e1d5b83205a0e7b09f4e",
+          "translation": "要说明数列 $\\{\\gamma_n\\}$ 收敛于 0，只需注意以下事实。如果 $\\varepsilon>0$，就存在一个自然数 $N$，使得 $1/N<\\varepsilon$。于是，当 $n>N$ 时，有"
+        },
+        {
+          "id": "p453-b8",
+          "source": "$$\\gamma_n=\\frac1n<\\frac1N<\\varepsilon,\\quad\\text{so }|\\gamma_n-0|<\\varepsilon.$$",
+          "sourceSha256": "3aa9a6034b7f68c5c30fe11ea4fcd7d10461b35c25289221f3c20b9e178e3c6a"
+        },
+        {
+          "id": "p453-b9",
+          "source": "The limit",
+          "sourceSha256": "00b73fc6489080c03688bd15a04fc5fbd033b902e1aeaa53350b2f9ba0429876",
+          "translation": "极限"
+        },
+        {
+          "id": "p453-b10",
+          "source": "$$\\lim_{n\\to\\infty}\\sqrt{n+1}-\\sqrt n=0$$",
+          "sourceSha256": "ed72c387fdf148df4e75ceed71691a5da7350d3b315bcd9ccb6d58f73b35492c"
+        },
+        {
+          "id": "p453-b11",
+          "source": "will probably seem reasonable after a little reflection (it just says that $\\sqrt{n+1}$ is practically the same as $\\sqrt n$ for large $n$), but a mathematical proof might not be so",
+          "sourceSha256": "60f27548c6b28fd4f39c10bef210bc0adb0de61104e60135ae32e2667084b04f",
+          "translation": "稍加思考便显得合理（它只是说，当 $n$ 很大时，$\\sqrt{n+1}$ 与 $\\sqrt n$ 几乎相同），但数学证明可能并不那么"
+        }
+      ]
+    },
+    {
+      "printed": 454,
+      "sourceSha256": "ab3d6f34a5a97c2dcda4d7d463d3a5e223b1063d44b414ae6a26ceff79bac367",
+      "blocks": [
+        {
+          "id": "p454-b1",
+          "source": "obvious. To estimate $\\sqrt{n+1}-\\sqrt n$ we can use an algebraic trick:",
+          "sourceSha256": "ad391e73796bceac2e408c027cde10001e2217ad998a0660797330a5721b81ff",
+          "translation": "显而易见。为了估计 $\\sqrt{n+1}-\\sqrt n$，我们可以使用一个代数技巧："
+        },
+        {
+          "id": "p454-b2",
+          "source": "$$\\begin{aligned}\\sqrt{n+1}-\\sqrt n&=\\frac{(\\sqrt{n+1}-\\sqrt n)(\\sqrt{n+1}+\\sqrt n)}{\\sqrt{n+1}+\\sqrt n}\\\\&=\\frac{n+1-n}{\\sqrt{n+1}+\\sqrt n}\\\\&=\\frac1{\\sqrt{n+1}+\\sqrt n}.\\end{aligned}$$",
+          "sourceSha256": "f236f9f5a26a4726ca826f20a700fc8f6c6b209791ced2b0f936c96862ab20a3"
+        },
+        {
+          "id": "p454-b3",
+          "source": "It is also possible to estimate $\\sqrt{n+1}-\\sqrt n$ by applying the Mean Value Theorem to the function $f(x)=\\sqrt x$ on the interval $[n,n+1]$. We obtain",
+          "sourceSha256": "b2f3293d2ec5cebe9756a8994d5d6530cc6221d196098e2be4c4c9ea2387147f",
+          "translation": "也可以通过对函数 $f(x)=\\sqrt x$ 在区间 $[n,n+1]$ 上应用中值定理，来估计 $\\sqrt{n+1}-\\sqrt n$。我们得到"
+        },
+        {
+          "id": "p454-b4",
+          "source": "$$\\begin{aligned}\\frac{\\sqrt{n+1}-\\sqrt n}1&=f'(x)\\\\&=\\frac1{2\\sqrt x},\\quad\\text{for some }x\\text{ in }(n,n+1)\\\\&<\\frac1{2\\sqrt n}.\\end{aligned}$$",
+          "sourceSha256": "c09a69fd5a07ce31d61eebd9c5d9453b1992f9df2f1fcb9f3daa05efa3678bb6"
+        },
+        {
+          "id": "p454-b5",
+          "source": "Either of these estimates may be used to prove the above limit; the detailed proof is left to you, as a simple but valuable exercise.",
+          "sourceSha256": "156682d7eabc82765b0b82b44f1acd9ab311ac414e848e91dbab715571749587",
+          "translation": "这两个估计中的任何一个都可以用来证明上面的极限；具体证明留给你，作为一道简单而有价值的练习。"
+        },
+        {
+          "id": "p454-b6",
+          "source": "The limit",
+          "sourceSha256": "00b73fc6489080c03688bd15a04fc5fbd033b902e1aeaa53350b2f9ba0429876",
+          "translation": "极限"
+        },
+        {
+          "id": "p454-b7",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{3n^3+7n^2+1}{4n^3-8n+63}=\\frac34$$",
+          "sourceSha256": "81f8eef621cd44d346eb45288373a33283a6a6105eb749a9dfa22ef646342917"
+        },
+        {
+          "id": "p454-b8",
+          "source": "should also seem reasonable, because the terms involving $n^3$ are the most important when $n$ is large. If you remember the proof of Theorem 7-9 you will be able to guess the trick that translates this idea into a proof—dividing top and bottom by $n^3$ yields",
+          "sourceSha256": "bc651e917bf2d1df1fda3f2969c26727c1407ae8e92242296b1a3f9b80b8167b",
+          "translation": "也应当显得合理，因为当 $n$ 很大时，含 $n^3$ 的项最为重要。如果你还记得定理 7-9 的证明，就能够猜出把这个想法转化成证明的技巧——分子和分母同除以 $n^3$，得到"
+        },
+        {
+          "id": "p454-b9",
+          "source": "$$\\frac{3n^3+7n^2+1}{4n^3-8n+63}=\\frac{3+\\dfrac7n+\\dfrac1{n^3}}{4-\\dfrac8{n^2}+\\dfrac{63}{n^3}}.$$",
+          "sourceSha256": "8ab7e42c5b8bbc8ed8f13d6678ad672fd869f2c6c3cfecb23fee966b1aa5235a"
+        },
+        {
+          "id": "p454-b10",
+          "source": "Using this expression, the proof of the above limit is not difficult, especially if one uses the following facts:",
+          "sourceSha256": "d929bc2be35bf6b19107d49248fda7163b70d26a58154a13ce32d9a67720bfe7",
+          "translation": "利用这个表达式，证明上面的极限并不困难，尤其是借助以下事实："
+        },
+        {
+          "id": "p454-b11",
+          "source": "If $\\lim\\limits_{n\\to\\infty}a_n$ and $\\lim\\limits_{n\\to\\infty}b_n$ both exist, then",
+          "sourceSha256": "f855c809b9bd912d7c796729604c2fe7f21a6a04a2e15af305e254c92a263889",
+          "translation": "如果 $\\lim\\limits_{n\\to\\infty}a_n$ 和 $\\lim\\limits_{n\\to\\infty}b_n$ 都存在，那么"
+        },
+        {
+          "id": "p454-b12",
+          "source": "$$\\begin{aligned}\\lim_{n\\to\\infty}(a_n+b_n)&=\\lim_{n\\to\\infty}a_n+\\lim_{n\\to\\infty}b_n,\\\\\\lim_{n\\to\\infty}(a_n\\cdot b_n)&=\\lim_{n\\to\\infty}a_n\\cdot\\lim_{n\\to\\infty}b_n;\\end{aligned}$$",
+          "sourceSha256": "b7c54bc970d66002087044f40b541bff167e0ea725dcef397ad3c6db1c4225f4"
+        },
+        {
+          "id": "p454-b13",
+          "source": "moreover, if $\\lim\\limits_{n\\to\\infty}b_n\\ne0$, then $b_n\\ne0$ for all $n$ greater than some $N$, and",
+          "sourceSha256": "4bd7bcb778e84880ec454ab38c6218adac5dd74ab51dbca18b11f47a13d56e8e",
+          "translation": "此外，如果 $\\lim\\limits_{n\\to\\infty}b_n\\ne0$，那么存在某个 $N$，使所有大于它的 $n$ 都满足 $b_n\\ne0$，并且"
+        },
+        {
+          "id": "p454-b14",
+          "source": "$$\\lim_{n\\to\\infty}a_n/b_n=\\lim_{n\\to\\infty}a_n/\\lim_{n\\to\\infty}b_n.$$",
+          "sourceSha256": "9add53f557de2d90884065ec201eb9e60989f346d6d85abf79ff9085e6ae1af6"
+        }
+      ]
+    },
+    {
+      "printed": 455,
+      "sourceSha256": "0e42f5c753838775f5abf463206bfeb4a2fc8e967be954ca5634d65e055772b9",
+      "blocks": [
+        {
+          "id": "p455-b1",
+          "source": "(If we wanted to be utterly precise, the third statement would have to be even more complicated. As it stands, we are considering the limit of the sequence $\\{c_n\\}=\\{a_n/b_n\\}$, where the numbers $c_n$ might not even be defined for certain $n<N$. This doesn’t really matter—we could define $c_n$ any way we liked for such $n$—because the limit of a sequence is not changed if we change the sequence at a finite number of points.)",
+          "sourceSha256": "7d646605164c367818f4b709053f140f446bd0fdd110ceb7915d0a81fb85995c",
+          "translation": "（如果要求绝对精确，第三个陈述还得更复杂一些。按现在的写法，我们在考虑数列 $\\{c_n\\}=\\{a_n/b_n\\}$ 的极限，而对于某些 $n<N$，数 $c_n$ 甚至可能没有定义。这其实无关紧要——对于这样的 $n$，我们可以随意定义 $c_n$——因为只改变数列在有限多个位置的值，并不会改变它的极限。）"
+        },
+        {
+          "id": "p455-b2",
+          "source": "Although these facts are very useful, we will not bother stating them as a theorem—you should have no difficulty proving these results for yourself, because the definition of $\\lim\\limits_{n\\to\\infty}a_n=l$ is so similar to previous definitions of limits, especially $\\lim\\limits_{x\\to\\infty}f(x)=l$.",
+          "sourceSha256": "501bf8d63abbfff40c38ec2c550e8f726dad49c4463e2b0ba5341f84ee5a8c08",
+          "translation": "虽然这些事实非常有用，但我们不打算特地将它们列为定理——你自己证明这些结果应当没有困难，因为 $\\lim\\limits_{n\\to\\infty}a_n=l$ 的定义与先前的极限定义非常相似，特别是与 $\\lim\\limits_{x\\to\\infty}f(x)=l$ 的定义相似。"
+        },
+        {
+          "id": "p455-b3",
+          "source": "The similarity between the definitions of $\\lim\\limits_{n\\to\\infty}a_n=l$ and $\\lim\\limits_{x\\to\\infty}f(x)=l$ is actually closer than mere analogy; it is possible to define the first in terms of the second. If $f$ is the function whose graph (Figure 4) consists of line segments joining",
+          "sourceSha256": "69b13b5a878c8493d9451c802278b0c1e2bbafedbb756791431e0c8f16eaa4cd",
+          "translation": "$\\lim\\limits_{n\\to\\infty}a_n=l$ 与 $\\lim\\limits_{x\\to\\infty}f(x)=l$ 这两个定义之间的相似，实际上不只是类比；我们可以用后者来定义前者。如果函数 $f$ 的图像（图 4）由一些线段组成，这些线段连接"
+        },
+        {
+          "id": "p455-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:502px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"450 591 553 274\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0474.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n</figure>",
+          "sourceSha256": "0fe9baa45a682f922fca99a9d977adfdeada292f906a27479cb7e87bbe66bde5"
+        },
+        {
+          "id": "p455-b5",
+          "source": "the points in the graph of the sequence $\\{a_n\\}$, so that",
+          "sourceSha256": "f8db18b52c2890079bcfd466c5475d34b6827e1b46df916b1d2e28cc1eb12458",
+          "translation": "数列 $\\{a_n\\}$ 的图像中的各点，也就是说"
+        },
+        {
+          "id": "p455-b6",
+          "source": "$$f(x)=(a_{n+1}-a_n)(x-n)+a_n\\qquad n\\le x\\le n+1,$$",
+          "sourceSha256": "f155d74755d8b7cb24b53ee7dee9e75e2bab04111422c1e12528d80a96381df8"
+        },
+        {
+          "id": "p455-b7",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p455-b8",
+          "source": "$$\\lim_{n\\to\\infty}a_n=l\\quad\\text{if and only if}\\quad\\lim_{x\\to\\infty}f(x)=l.$$",
+          "sourceSha256": "25bf101bb10acc4ef6efec10e1cd7d22394f91640919b5f6f2cdc215505a3709"
+        },
+        {
+          "id": "p455-b9",
+          "source": "Conversely, if $f$ satisfies $\\lim\\limits_{x\\to\\infty}f(x)=l$, and we set $a_n=f(n)$, then $\\lim\\limits_{n\\to\\infty}a_n=l$. This second observation is frequently very useful. For example, suppose that $0<a<1$. Then",
+          "sourceSha256": "01fdb651b9057323f2f676934cae070e9ac2899a35487b0284aec9d8a044aa51",
+          "translation": "反过来，如果 $f$ 满足 $\\lim\\limits_{x\\to\\infty}f(x)=l$，并令 $a_n=f(n)$，那么 $\\lim\\limits_{n\\to\\infty}a_n=l$。第二个观察结果往往非常有用。例如，假设 $0<a<1$。那么"
+        },
+        {
+          "id": "p455-b10",
+          "source": "$$\\lim_{n\\to\\infty}a^n=0.$$",
+          "sourceSha256": "c826040424ff5a18c29999b49ce0651143ee11d56577b8f773d66cb2e37e67cb"
+        },
+        {
+          "id": "p455-b11",
+          "source": "To prove this we note that",
+          "sourceSha256": "9cde92be1537be49547fe534ca8c018d24c3f41b1fe59908bdbac7c0bc1ebf9a",
+          "translation": "为了证明这一点，我们注意到"
+        },
+        {
+          "id": "p455-b12",
+          "source": "$$\\lim_{x\\to\\infty}a^x=\\lim_{x\\to\\infty}e^{x\\log a}=0,$$",
+          "sourceSha256": "6c43e751b66be57a13daa44a7d9a5f9f674da1322fa7ad1aad6b4cd5a03a55d2"
+        },
+        {
+          "id": "p455-b13",
+          "source": "since $\\log a<0$, so that $x\\log a$ is a negative and large in absolute value for large $x$. Notice that we actually have",
+          "sourceSha256": "4dc6bf87d0b05ecf8a43f8e8528a841aa6ba38a23db7fd12a60c72089e224e03",
+          "translation": "因为 $\\log a<0$，所以当 $x$ 很大时，$x\\log a$ 是一个绝对值很大的负数。注意，实际上我们有"
+        },
+        {
+          "id": "p455-b14",
+          "source": "$$\\lim_{n\\to\\infty}a^n=0\\quad\\text{if }|a|<1;$$",
+          "sourceSha256": "1702802e8feafa4273b9c330dda219a46da739dff6e39ac589d6e686a300bfe2"
+        },
+        {
+          "id": "p455-b15",
+          "source": "for if $a<0$ we can write",
+          "sourceSha256": "3b079aa06ab1fff3de5820ca85025e80a482947d41177ca1515e3ddc04479dca",
+          "translation": "因为当 $a<0$ 时，可以写成"
+        },
+        {
+          "id": "p455-b16",
+          "source": "$$\\lim_{n\\to\\infty}a^n=\\lim_{n\\to\\infty}(-1)^n|a|^n=0.$$",
+          "sourceSha256": "2ae844b29c3634f7af255659be615697344896ad448ad2937624010d9b6ac764"
+        }
+      ]
+    },
+    {
+      "printed": 456,
+      "sourceSha256": "9b4b98ec1fea7332e1f203f98bed979ccca82c4bac42dad3bd09687bb0c6c353",
+      "blocks": [
+        {
+          "id": "p456-b1",
+          "source": "The behavior of the logarithm function also shows that if $a>1$, then $a^n$ becomes arbitrarily large as $n$ becomes large. This assertion is often written",
+          "sourceSha256": "971157a4e58bbcd1dc51c4c780fdce66438512b4681493a6d7c95ea865368196",
+          "translation": "对数函数的性质还表明：如果 $a>1$，那么当 $n$ 变大时，$a^n$ 会任意大。这一断言常常写成"
+        },
+        {
+          "id": "p456-b2",
+          "source": "$$\\lim_{n\\to\\infty}a^n=\\infty,\\quad a>1,$$",
+          "sourceSha256": "905ec99072eb99bfb2a3b3949c2366f3527d792b82911c8f96baf6e77d3c42d8"
+        },
+        {
+          "id": "p456-b3",
+          "source": "and it is sometimes even said that $\\{a^n\\}$ approaches $\\infty$. We also write equations like",
+          "sourceSha256": "11f6fb3d7bf28242743432ccce506c5422a246ad5386191c7aa7d8033ce2343c",
+          "translation": "有时甚至说 $\\{a^n\\}$ 趋近于 $\\infty$。我们也写出下面这样的等式"
+        },
+        {
+          "id": "p456-b4",
+          "source": "$$\\lim_{n\\to\\infty}-a^n=-\\infty,$$",
+          "sourceSha256": "0defd7a0854e69fb6b7c8fcf3b1b1447b4569b0b74f820bc33956fa89a350737"
+        },
+        {
+          "id": "p456-b5",
+          "source": "and say that $\\{-a^n\\}$ approaches $-\\infty$. Notice, however, that if $a<-1$, then $\\lim\\limits_{n\\to\\infty}a^n$ does not exist, even in this extended sense.",
+          "sourceSha256": "e0d41ba87c7c3976d2b43cae2a63aa3f197d192e80d8a3ffc32320fc4f0fceb5",
+          "translation": "并说 $\\{-a^n\\}$ 趋近于 $-\\infty$。不过请注意，如果 $a<-1$，那么即便在这种推广的意义下，$\\lim\\limits_{n\\to\\infty}a^n$ 也不存在。"
+        },
+        {
+          "id": "p456-b6",
+          "source": "Despite this connection with a familiar concept, it is more important to visualize convergence in terms of the picture of a sequence as points on a line (Figure 3). There is another connection between limits of functions and limits of sequences which is related to this picture. This connection is somewhat less obvious, but considerably more interesting, than the one previously mentioned—instead of defining limits of sequences in terms of limits of functions, it is possible to reverse the procedure.",
+          "sourceSha256": "3299f659d805fdc38fcd2fa0ea11bb68f15fa855d4e223fc23def6d100de508b",
+          "translation": "尽管收敛与一个熟悉的概念存在这种联系，更重要的仍是借助直线上一列点的图像来理解收敛（图 3）。函数极限与数列极限之间还有另一种联系，它与这种图像有关。这种联系比先前提到的联系稍不明显，却有趣得多——我们可以反过来，用数列极限定义函数极限。"
+        },
+        {
+          "id": "p456-b7",
+          "source": "**THEOREM 1** Let $f$ be a function defined in an open interval containing $c$, except perhaps at $c$ itself, with",
+          "sourceSha256": "30fcb64bfea43df65e2c325f3f9eb14a1a3a575573642bb9061c7ebb030aa8ca",
+          "translation": "**定理 1** 设函数 $f$ 定义在一个包含 $c$ 的开区间上，可能唯独在 $c$ 本身没有定义，并且"
+        },
+        {
+          "id": "p456-b8",
+          "source": "$$\\lim_{x\\to c}f(x)=l.$$",
+          "sourceSha256": "bb9fb843f8186a96fddc456a0858de4748b09a137ded8a50a6d822b40bc288f8"
+        },
+        {
+          "id": "p456-b9",
+          "source": "Suppose that $\\{a_n\\}$ is a sequence such that",
+          "sourceSha256": "894f1e1139533feb5d99384164ef009e4a1127da38236ebd1c3d3e347552198b",
+          "translation": "假设数列 $\\{a_n\\}$ 满足"
+        },
+        {
+          "id": "p456-b10",
+          "source": "$$\\begin{aligned}(1)&\\quad\\text{each }a_n\\text{ is in the domain of }f,\\\\(2)&\\quad\\text{each }a_n\\ne c,\\\\(3)&\\quad\\lim_{n\\to\\infty}a_n=c.\\end{aligned}$$",
+          "sourceSha256": "8626a3a29752dfdeab44dfecea75bef7f0210956ed1c16363fb2a7b19e895d9c"
+        },
+        {
+          "id": "p456-b11",
+          "source": "Then the sequence $\\{f(a_n)\\}$ satisfies",
+          "sourceSha256": "4bdebf8fcb6537565185d0c6fb52d97bfa0b291df53963bdbcae023ac83c1c26",
+          "translation": "那么数列 $\\{f(a_n)\\}$ 满足"
+        },
+        {
+          "id": "p456-b12",
+          "source": "$$\\lim_{n\\to\\infty}f(a_n)=l.$$",
+          "sourceSha256": "17d4c1e32145e868f774d1df3816d46dbe5b9655f89555310eab01253eadf3f7"
+        },
+        {
+          "id": "p456-b13",
+          "source": "Conversely, if this is true for every sequence $\\{a_n\\}$ satisfying the above conditions, then $\\lim\\limits_{x\\to c}f(x)=l$.",
+          "sourceSha256": "e762b2c82964874d3864e9a01976e7bf8123e481435ceecc017222bf0a93a0eb",
+          "translation": "反过来，如果对于每个满足上述条件的数列 $\\{a_n\\}$，这一结论都成立，那么 $\\lim\\limits_{x\\to c}f(x)=l$。"
+        },
+        {
+          "id": "p456-b14",
+          "source": "**PROOF** Suppose first that $\\lim\\limits_{x\\to c}f(x)=l$. Then for every $\\varepsilon>0$ there is a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "332b06845f143992c7ef93b9884a8b749786745da12e8db87fa79c7f81efb961",
+          "translation": "**证明** 先假设 $\\lim\\limits_{x\\to c}f(x)=l$。那么，对于每个 $\\varepsilon>0$，都存在一个 $\\delta>0$，使得对于所有 $x$，都有"
+        },
+        {
+          "id": "p456-b15",
+          "source": "$$\\text{if }0<|x-c|<\\delta,\\text{ then }|f(x)-l|<\\varepsilon.$$",
+          "sourceSha256": "7b911d61b5522f047b917507704705d97cb9a618729f5300659dd0916756139b"
+        },
+        {
+          "id": "p456-b16",
+          "source": "If the sequence $\\{a_n\\}$ satisfies $\\lim\\limits_{n\\to\\infty}a_n=c$, then (Figure 3) there is a natural number $N$ such that,",
+          "sourceSha256": "ae1f1e242e973dc64a5b367a62dfe7412d443d5517890e13fdcc580609cd848c",
+          "translation": "如果数列 $\\{a_n\\}$ 满足 $\\lim\\limits_{n\\to\\infty}a_n=c$，那么存在一个自然数 $N$，使得（图 3）"
+        },
+        {
+          "id": "p456-b17",
+          "source": "$$\\text{if }n>N,\\text{ then }|a_n-c|<\\delta.$$",
+          "sourceSha256": "8db1fb1d21ea5b359373aed7c9ab6677c004530d2e9021458486a45a29a69c57"
+        },
+        {
+          "id": "p456-b18",
+          "source": "By our choice of $\\delta$, this means that",
+          "sourceSha256": "7b31edcb15d12c692830244c5cfed9e7d78fd83e0722ee9846dd64ce7aef3e83",
+          "translation": "根据我们对 $\\delta$ 的选择，这意味着"
+        },
+        {
+          "id": "p456-b19",
+          "source": "$$|f(a_n)-l|<\\varepsilon,$$",
+          "sourceSha256": "4808a9e6b2bab1c9754c9294b5055b300a4edf805b500264ee08e09cb4213a3a"
+        }
+      ]
+    },
+    {
+      "printed": 457,
+      "sourceSha256": "b67659176d777efff66d17f7804abfba06d478ed6df000f8a81f76a29133cdf8",
+      "blocks": [
+        {
+          "id": "p457-b1",
+          "source": "showing that",
+          "sourceSha256": "1a8ac7943c8bcece8dfdbaf817681fcf893cccab7aea50ac89b74c26afb16f9d",
+          "translation": "这就说明了"
+        },
+        {
+          "id": "p457-b2",
+          "source": "$$\\lim_{n\\to\\infty}f(a_n)=l.$$",
+          "sourceSha256": "17d4c1e32145e868f774d1df3816d46dbe5b9655f89555310eab01253eadf3f7"
+        },
+        {
+          "id": "p457-b3",
+          "source": "Suppose, conversely, that $\\lim\\limits_{n\\to\\infty}f(a_n)=l$ for every sequence $\\{a_n\\}$ with $\\lim\\limits_{n\\to\\infty}a_n=c$. If $\\lim\\limits_{x\\to c}f(x)=l$ were not true, there would be some $\\varepsilon>0$ such that for *every* $\\delta>0$ there is an $x$ with",
+          "sourceSha256": "cee1b2c499c3c9418e0de9ae290a2e1dedc493b37f06f954f10150ed6c10e424",
+          "translation": "反过来，假设对于每个满足 $\\lim\\limits_{n\\to\\infty}a_n=c$ 的数列 $\\{a_n\\}$，都有 $\\lim\\limits_{n\\to\\infty}f(a_n)=l$。如果 $\\lim\\limits_{x\\to c}f(x)=l$ 不成立，那么就存在某个 $\\varepsilon>0$，使得对于*每个* $\\delta>0$，都存在一个 $x$ 满足"
+        },
+        {
+          "id": "p457-b4",
+          "source": "$$0<|x-c|<\\delta\\quad\\text{but}\\quad|f(x)-l|>\\varepsilon.$$",
+          "sourceSha256": "954a111e50d1c4ec49897a428d8e26b42ab84c77d04f99a72f394ab618c620cd"
+        },
+        {
+          "id": "p457-b5",
+          "source": "In particular, for each $n$ there would be a number $x_n$ such that",
+          "sourceSha256": "f0124afbc478980c0e7a117eac2d36a588582cdfe0d437f8391ce4696c048784",
+          "translation": "特别地，对于每个 $n$，都存在一个数 $x_n$，使得"
+        },
+        {
+          "id": "p457-b6",
+          "source": "$$0<|x_n-c|<\\frac1n\\quad\\text{but}\\quad|f(x_n)-l|>\\varepsilon.$$",
+          "sourceSha256": "d4e0019da20d75047254120b959f0c8e71a8b6d3d32bbc3fc0e8fb8b5d63f9c2"
+        },
+        {
+          "id": "p457-b7",
+          "source": "Now the sequence $\\{x_n\\}$ clearly converges to $c$ but, since $|f(x_n)-l|>\\varepsilon$ for all $n$, the sequence $\\{f(x_n)\\}$ does not converge to $l$. This contradicts the hypothesis, so $\\lim\\limits_{x\\to c}f(x)=l$ must be true. ▮",
+          "sourceSha256": "6866c7b4361367fef0ff56ce7beb45c58fde4f2ab146002506a1530f2dcb116d",
+          "translation": "现在，数列 $\\{x_n\\}$ 显然收敛于 $c$；但由于对于所有 $n$ 都有 $|f(x_n)-l|>\\varepsilon$，数列 $\\{f(x_n)\\}$ 并不收敛于 $l$。这与假设矛盾，所以 $\\lim\\limits_{x\\to c}f(x)=l$ 必定成立。▮"
+        },
+        {
+          "id": "p457-b8",
+          "source": "Theorem 1 provides many examples of convergent sequences. For example, the sequences $\\{a_n\\}$ and $\\{b_n\\}$ defined by",
+          "sourceSha256": "9c801a9f80bbf2de9559511320dd0b97fdc9855c289a10629185b42a436dee90",
+          "translation": "定理 1 提供了许多收敛数列的例子。例如，由下式定义的数列 $\\{a_n\\}$ 和 $\\{b_n\\}$"
+        },
+        {
+          "id": "p457-b9",
+          "source": "$$\\begin{aligned}a_n&=\\sin\\left(13+\\frac1{n^2}\\right)\\\\b_n&=\\cos\\left(\\sin\\left(1+(-1)^n\\cdot\\frac1n\\right)\\right),\\end{aligned}$$",
+          "sourceSha256": "3a4dd57c905eaa09382d13c798121450c4f8143a7c671669c758b69cb046461a"
+        },
+        {
+          "id": "p457-b10",
+          "source": "clearly converge to $\\sin(13)$ and $\\cos(\\sin(1))$, respectively. It is important, however, to have some criteria guaranteeing convergence of sequences which are not obviously of this sort. There is one important criterion which is very easy to prove, but which is the basis for all other results. This criterion is stated in terms of concepts defined for functions, which therefore apply also to sequences: a sequence $\\{a_n\\}$ is **increasing** if $a_{n+1}>a_n$ for all $n$, **nondecreasing** if $a_{n+1}\\ge a_n$ for all $n$, and **bounded above** if there is a number $M$ such that $a_n\\le M$ for all $n$; there are similar definitions for sequences which are decreasing, nonincreasing, and bounded below.",
+          "sourceSha256": "09329e5aef1d0e17d2447f3c8d87251996d4ced06eefdbe50e2b6e9ec497c580",
+          "translation": "显然分别收敛于 $\\sin(13)$ 和 $\\cos(\\sin(1))$。不过，我们还需要一些判别准则，来保证那些不明显属于这类情形的数列收敛。有一个重要准则非常容易证明，却是其他所有结果的基础。这个准则使用了为函数定义的概念，因此这些概念也适用于数列：如果对所有 $n$ 都有 $a_{n+1}>a_n$，就称数列 $\\{a_n\\}$ 是**递增的**；如果对所有 $n$ 都有 $a_{n+1}\\ge a_n$，就称它是**非减的**；如果存在一个数 $M$，使得对所有 $n$ 都有 $a_n\\le M$，就称它**有上界**。递减数列、非增数列和有下界数列也有类似的定义。"
+        },
+        {
+          "id": "p457-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:392px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 994 392 46\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0476.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "d313b769e0bb09f6989a9ed9a2058a3d1426a3f1705c0b2772c191fc1ad9c2a9"
+        },
+        {
+          "id": "p457-b12",
+          "source": "**THEOREM 2** If $\\{a_n\\}$ is nondecreasing and bounded above, then $\\{a_n\\}$ converges (a similar statement is true if $\\{a_n\\}$ is nonincreasing and bounded below).",
+          "sourceSha256": "d4bbdfdb183a85ee4a9420461095b053869c30223704ab481d9f80181156e56e",
+          "translation": "**定理 2** 如果 $\\{a_n\\}$ 非减且有上界，那么 $\\{a_n\\}$ 收敛（如果 $\\{a_n\\}$ 非增且有下界，也有类似的结论）。"
+        },
+        {
+          "id": "p457-b13",
+          "source": "**PROOF** The set $A$ consisting of all numbers $a_n$ is, by assumption, bounded above, so $A$ has a least upper bound $\\alpha$. We claim that $\\lim\\limits_{n\\to\\infty}a_n=\\alpha$ (Figure 5). In fact, if $\\varepsilon>0$, there is some $a_N$ satisfying $\\alpha-a_N<\\varepsilon$, since $\\alpha$ is the least upper bound of $A$. Then if $n>N$ we have",
+          "sourceSha256": "a94be00316dcdf32d57d73c3bdf5121e9971b40a7dacea62b8bd1101a5faadc9",
+          "translation": "**证明** 根据假设，由所有数 $a_n$ 构成的集合 $A$ 有上界，所以 $A$ 有最小上界 $\\alpha$。我们断言 $\\lim\\limits_{n\\to\\infty}a_n=\\alpha$（图 5）。事实上，如果 $\\varepsilon>0$，那么由于 $\\alpha$ 是 $A$ 的最小上界，必定存在某个 $a_N$ 满足 $\\alpha-a_N<\\varepsilon$。于是，当 $n>N$ 时，有"
+        },
+        {
+          "id": "p457-b14",
+          "source": "$$a_n\\ge a_N,\\quad\\text{so }\\alpha-a_n\\le\\alpha-a_N<\\varepsilon.$$",
+          "sourceSha256": "26ab872aadbc54ea92c58dad9cad8aa1d76eabb021d17bcaa698603ed0bd0804"
+        },
+        {
+          "id": "p457-b15",
+          "source": "This proves that $\\lim\\limits_{n\\to\\infty}a_n=\\alpha$. ▮",
+          "sourceSha256": "a0aab2d4963987d3945bd160f8501cab5a4b27bc3eb0519980f5040f73e10ae0",
+          "translation": "这就证明了 $\\lim\\limits_{n\\to\\infty}a_n=\\alpha$。▮"
+        }
+      ]
+    },
+    {
+      "printed": 458,
+      "sourceSha256": "e63f381cd476902d6e9f7b37afa6738d8d920807366acc7f3065aef7e9d87444",
+      "blocks": [
+        {
+          "id": "p458-b1",
+          "source": "The hypothesis that $\\{a_n\\}$ is bounded above is clearly essential in Theorem 2: if $\\{a_n\\}$ is not bounded above, then (whether or not $\\{a_n\\}$ is nondecreasing) $\\{a_n\\}$ clearly diverges. Upon first consideration, it might appear that there should be little trouble deciding whether or not a given nondecreasing sequence $\\{a_n\\}$ is bounded above, and consequently whether or not $\\{a_n\\}$ converges. In the next chapter such sequences will arise very naturally and, as we shall see, deciding whether or not they converge is hardly a trivial matter. For the present, you might try to decide whether or not the following (obviously increasing) sequence is bounded above:",
+          "sourceSha256": "ab093e761f32ebee1e9db97dcc573771349709a2dc6ce32143e160b506e05156",
+          "translation": "定理 2 中关于 $\\{a_n\\}$ 有上界的假设显然不可缺少：如果 $\\{a_n\\}$ 没有上界，那么（无论 $\\{a_n\\}$ 是否非减）$\\{a_n\\}$ 显然发散。初看之下，判断一个给定的非减数列 $\\{a_n\\}$ 是否有上界，进而判断 $\\{a_n\\}$ 是否收敛，似乎不会有什么困难。下一章中，这样的数列将非常自然地出现；正如我们将看到的，判断它们是否收敛绝不是一件轻而易举的事。现在，你不妨尝试判断下面这个（显然递增的）数列是否有上界："
+        },
+        {
+          "id": "p458-b2",
+          "source": "$$1,\\ 1+\\tfrac12,\\ 1+\\tfrac12+\\tfrac13,\\ 1+\\tfrac12+\\tfrac13+\\tfrac14,\\ldots.$$",
+          "sourceSha256": "3e1d13f1812e565d525a47b0fa48221b2abae957ff61bcc60f65df9ef632e16c"
+        },
+        {
+          "id": "p458-b3",
+          "source": "Although Theorem 2 treats only a very special class of sequences, it is more useful than might appear at first, because it is always possible to extract from an arbitrary sequence $\\{a_n\\}$ another sequence which is either nonincreasing or else nondecreasing. To be precise, let us define a **subsequence** of the sequence $\\{a_n\\}$ to be a sequence of the form",
+          "sourceSha256": "05a4c77304a7694438fcf74fc3432d801296393826e548636153fe7e9ea7b0e3",
+          "translation": "虽然定理 2 只处理一类非常特殊的数列，但它比初看起来更有用，因为总能从任意一个数列 $\\{a_n\\}$ 中抽出另一个数列，而后者或者非增，或者非减。精确地说，我们把数列 $\\{a_n\\}$ 的**子列**定义为具有如下形式的数列："
+        },
+        {
+          "id": "p458-b4",
+          "source": "$$a_{n_1},a_{n_2},a_{n_3},\\ldots,$$",
+          "sourceSha256": "9595e759cfb3e3cfc8528940990bc20d86843bf3211c636edfd3a838051d4f1e"
+        },
+        {
+          "id": "p458-b5",
+          "source": "where the $n_j$ are natural numbers with",
+          "sourceSha256": "b1879d5315fc77af1355659dfd85c224cd14a17df49a4034e65333f810665d9c",
+          "translation": "其中 $n_j$ 是自然数，并且"
+        },
+        {
+          "id": "p458-b6",
+          "source": "$$n_1<n_2<n_3\\cdots.$$",
+          "sourceSha256": "9c89913f17c7a8a49d7011178f6d43c58d6979cc506f2a24667b15e045869588"
+        },
+        {
+          "id": "p458-b7",
+          "source": "Then every sequence contains a subsequence which is either nondecreasing or nonincreasing. It is possible to become quite befuddled trying to prove this assertion, although the proof is very short if you think of the right idea; it is worth recording as a lemma.",
+          "sourceSha256": "46fa0b50e910ef7357d9b442322ceba011767153daeab413dc7861b2d2aba05c",
+          "translation": "于是，每个数列都包含一个非减或非增的子列。试图证明这个断言时，人可能会被绕得晕头转向，尽管只要想到正确的思路，证明就非常简短；值得把它记为一个引理。"
+        },
+        {
+          "id": "p458-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:433px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 590 433 266\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0477.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 6</figcaption>\n</figure>",
+          "sourceSha256": "2d390280f1cd13dd61a1b675546a2e0737f5720f3c1c62804e6a193bad532f08"
+        },
+        {
+          "id": "p458-b9",
+          "source": "**LEMMA** Any sequence $\\{a_n\\}$ contains a subsequence which is either nondecreasing or nonincreasing.",
+          "sourceSha256": "6d28cf94e265f5c996636d9843c557bf14522436ff341ac0ae5c271953d7950f",
+          "translation": "**引理** 任意数列 $\\{a_n\\}$ 都包含一个非减或非增的子列。"
+        },
+        {
+          "id": "p458-b10",
+          "source": "**PROOF** Call a natural number $n$ a “peak point” of the sequence $\\{a_n\\}$ if $a_m<a_n$ for all $m>n$ (Figure 6).",
+          "sourceSha256": "cdfa928820b1c112ec3b65133242ef8f5013eab53077143cad9e720d0a80f896",
+          "translation": "**证明** 如果对于所有 $m>n$ 都有 $a_m<a_n$，就把自然数 $n$ 称为数列 $\\{a_n\\}$ 的一个“峰点”（图 6）。"
+        },
+        {
+          "id": "p458-b11",
+          "source": "*Case 1. The sequence has infinitely many peak points.* In this case, if $n_1<n_2<n_3<\\cdots$ are the peak points, then $a_{n_1}>a_{n_2}>a_{n_3}>\\cdots$, so $\\{a_{n_k}\\}$ is the desired (nonincreasing) subsequence.",
+          "sourceSha256": "81ba7e6631532958c772ae50425a177ade19bb2a756e471821cb184a865bd54c",
+          "translation": "*情形 1：数列有无穷多个峰点。* 此时，若 $n_1<n_2<n_3<\\cdots$ 是这些峰点，则 $a_{n_1}>a_{n_2}>a_{n_3}>\\cdots$，因此 $\\{a_{n_k}\\}$ 就是所需的（非增）子列。"
+        },
+        {
+          "id": "p458-b12",
+          "source": "*Case 2. The sequence has only finitely many peak points.* In this case, let $n_1$ be greater than all peak points. Since $n_1$ is not a peak point, there is some $n_2>n_1$ such that $a_{n_2}\\ge a_{n_1}$. Since $n_2$ is not a peak point (it is greater than $n_1$, and hence greater than all peak points) there is some $n_3>n_2$ such that $a_{n_3}\\ge a_{n_2}$. Continuing in this way we obtain the desired (nondecreasing) subsequence. ▮",
+          "sourceSha256": "93d5077e9f68d393ed5303161727c7a7fabc3971a205346ebf41b7b68d26a270",
+          "translation": "*情形 2：数列只有有限多个峰点。* 此时，取 $n_1$ 大于所有峰点。由于 $n_1$ 不是峰点，存在某个 $n_2>n_1$，使得 $a_{n_2}\\ge a_{n_1}$。由于 $n_2$ 也不是峰点（它大于 $n_1$，因而大于所有峰点），存在某个 $n_3>n_2$，使得 $a_{n_3}\\ge a_{n_2}$。如此继续，就得到所需的（非减）子列。▮"
+        },
+        {
+          "id": "p458-b13",
+          "source": "If we assume that our original sequence $\\{a_n\\}$ is bounded, we can pick up an extra corollary along the way.",
+          "sourceSha256": "78710118115b496c35f73d87a093ccbfd9ada9d34a09bc4dc1bc5f6ad2397b5b",
+          "translation": "如果假设原来的数列 $\\{a_n\\}$ 有界，那么顺便还可以得到一个推论。"
+        },
+        {
+          "id": "p458-b14",
+          "source": "**COROLLARY (THE BOLZANO-WEIERSTRASS THEOREM)** Every bounded sequence has a convergent subsequence.",
+          "sourceSha256": "dc5c0435f7d395619ef5a28ef7b72706cbeb506e3720db400c8802c75e345206",
+          "translation": "**推论（博尔查诺–魏尔斯特拉斯定理）** 每个有界数列都有一个收敛子列。"
+        }
+      ]
+    },
+    {
+      "printed": 459,
+      "sourceSha256": "a32b2158d52520c568ef721296221fab21bf81e15f4715ab0b1c4f04f2f8c636",
+      "blocks": [
+        {
+          "id": "p459-b1",
+          "source": "Without some additional assumptions this is as far as we can go: it is easy to construct sequences having many, evenly infinitely many, subsequences converging to different numbers (see Problem 3). There is a reasonable assumption to add, which yields a necessary and sufficient condition for convergence of any sequence. Although this condition will not be crucial for our work, it does simplify many proofs. Moreover, this condition plays a fundamental role in more advanced investigations, and for this reason alone it is worth stating now.",
+          "sourceSha256": "ace7f4125b746f117eacc3f63659ebb8d7f4f5b26a8035f2e80020af8cf2aae5",
+          "translation": "如果不再作一些额外假设，我们就只能走到这里：很容易构造出这样的数列，它有许多、甚至无穷多个收敛于不同数的子列（见习题 3）。有一个合理的附加假设，可以给出任意数列收敛的充分必要条件。尽管这个条件对我们的工作并非至关重要，但它确实能简化许多证明。此外，这个条件在更深入的研究中起着根本作用；单凭这一点，就值得现在把它陈述出来。"
+        },
+        {
+          "id": "p459-b2",
+          "source": "If a sequence converges, so that the individual terms are eventually all close to the same number, then the difference of any two such individual terms should be very small. To be precise, if $\\lim\\limits_{n\\to\\infty}a_n=l$ for some $l$, then for any $\\varepsilon>0$ there is an $N$ such that $|a_n-l|<\\varepsilon/2$ for $n>N$; now if both $n>N$ and $m>N$, then",
+          "sourceSha256": "9d8dc389efa8042dc7eb1a05c1013e0ce5ade8713b403a3a92d442398e146181",
+          "translation": "如果一个数列收敛，也就是说，各项最终都接近同一个数，那么任意两项之间的差就应当非常小。精确地说，如果对于某个 $l$ 有 $\\lim\\limits_{n\\to\\infty}a_n=l$，那么对任意 $\\varepsilon>0$，都存在一个 $N$，使得当 $n>N$ 时有 $|a_n-l|<\\varepsilon/2$；现在，如果 $n>N$ 且 $m>N$，那么"
+        },
+        {
+          "id": "p459-b3",
+          "source": "$$|a_n-a_m|\\le|a_n-l|+|l-a_m|<\\frac\\varepsilon2+\\frac\\varepsilon2=\\varepsilon.$$",
+          "sourceSha256": "57a84343c5ca2450e84849f2c4949c662b9b9c9a49fec785f78aec0129bec406"
+        },
+        {
+          "id": "p459-b4",
+          "source": "This final inequality, $|a_n-a_m|<\\varepsilon$, which eliminates mention of the limit $l$, can be used to formulate a condition (the Cauchy condition) which is clearly necessary for convergence of a sequence.",
+          "sourceSha256": "e86b14cde5022262222d2b24c45d86a8db4f801803de2271675d59b29b396046",
+          "translation": "最后这个不等式 $|a_n-a_m|<\\varepsilon$ 不再提及极限 $l$，可以用来表述一个条件（柯西条件）；这个条件显然是数列收敛的必要条件。"
+        },
+        {
+          "id": "p459-b5",
+          "source": "**DEFINITION** A sequence $\\{a_n\\}$ is a **Cauchy sequence** if for every $\\varepsilon>0$ there is a natural number $N$ such that, for all $m$ and $n$,",
+          "sourceSha256": "52c67ec6f0d8c0d52905173fe8f9bb0ba1ddd1fca2ab136eb9cb9219e126981c",
+          "translation": "**定义** 如果对于每个 $\\varepsilon>0$，都存在一个自然数 $N$，使得对所有 $m$ 和 $n$ 都有下面的关系，那么称数列 $\\{a_n\\}$ 为**柯西数列**："
+        },
+        {
+          "id": "p459-b6",
+          "source": "$$\\text{if }m,n>N,\\text{ then }|a_n-a_m|<\\varepsilon.$$",
+          "sourceSha256": "a8f186f2c933ea2a7c19b1b4d42fb9a1ec11e8da799944dd52e1fcccce9ef301"
+        },
+        {
+          "id": "p459-b7",
+          "source": "(This condition is usually written $\\lim\\limits_{m,n\\to\\infty}|a_m-a_n|=0$.)",
+          "sourceSha256": "25b4ebc306851716c5ab801de368466ec5b79780800e408bb7d9269bc9646058",
+          "translation": "（这个条件通常写成 $\\lim\\limits_{m,n\\to\\infty}|a_m-a_n|=0$。）"
+        },
+        {
+          "id": "p459-b8",
+          "source": "The beauty of the Cauchy condition is that it is also sufficient to ensure convergence of a sequence. After all our preliminary work, there is very little left to do in order to prove this.",
+          "sourceSha256": "9a594cc784801ee0b6b35fa74093efe59fc5549c5136f3e2488d52a288802613",
+          "translation": "柯西条件的妙处在于，它也足以保证数列收敛。经过前面所有的准备工作，要证明这一点，剩下要做的已经很少了。"
+        },
+        {
+          "id": "p459-b9",
+          "source": "**THEOREM 3** A sequence $\\{a_n\\}$ converges if and only if it is a Cauchy sequence.",
+          "sourceSha256": "fc7213c8df0f854f666079539b160d949ef67bea97b36171cbc4071c14510db8",
+          "translation": "**定理 3** 数列 $\\{a_n\\}$ 收敛，当且仅当它是柯西数列。"
+        },
+        {
+          "id": "p459-b10",
+          "source": "**PROOF** We have already shown that $\\{a_n\\}$ is a Cauchy sequence if it converges. The proof of the converse assertion contains only one tricky feature: showing that every Cauchy sequence $\\{a_n\\}$ is bounded. If we take $\\varepsilon=1$ in the definition of a Cauchy sequence we find that there is some $N$ such that",
+          "sourceSha256": "458edcced0c43472ee2f31c16ace5bd56cc58bc7a05198f6cea4a188a8cd4ede",
+          "translation": "**证明** 我们已经说明：如果 $\\{a_n\\}$ 收敛，那么它是柯西数列。逆命题的证明只有一个需要技巧的地方：说明每个柯西数列 $\\{a_n\\}$ 都有界。如果在柯西数列的定义中取 $\\varepsilon=1$，就会得到存在某个 $N$，使得"
+        },
+        {
+          "id": "p459-b11",
+          "source": "$$|a_m-a_n|<1\\quad\\text{for }m,n>N.$$",
+          "sourceSha256": "3eff3d2ab9e3cfafd19ab50814461174314b76295a1eb5742cded15dd135fcf0"
+        },
+        {
+          "id": "p459-b12",
+          "source": "In particular, this means that",
+          "sourceSha256": "5ac8d8ba4c9df72cd7c49d9af92faeb8b56c31ed7fe607e2fe70dcea6096ce75",
+          "translation": "特别地，这意味着"
+        },
+        {
+          "id": "p459-b13",
+          "source": "$$|a_m-a_{N+1}|<1\\quad\\text{for all }m>N.$$",
+          "sourceSha256": "0ae1b486043576fcba853e57fab09f1ead5a87e6974aad1a55f6c60c9f5140d0"
+        },
+        {
+          "id": "p459-b14",
+          "source": "Thus $\\{a_m:m>N\\}$ is bounded; since there are only finitely many other $a_i$’s the whole sequence is bounded.",
+          "sourceSha256": "012ceb778b5881f8c0d44cdb29fbfbc2fb62f6b5da9c26290c451bc57e0d8baa",
+          "translation": "因此 $\\{a_m:m>N\\}$ 有界；由于其余的 $a_i$ 只有有限多个，所以整个数列有界。"
+        }
+      ]
+    },
+    {
+      "printed": 460,
+      "sourceSha256": "79856f080d524c860a12c4e5660640061d3d95d67e13a66abb95a7db8dc321f2",
+      "blocks": [
+        {
+          "id": "p460-b1",
+          "source": "The corollary to the Lemma thus implies that some subsequence of $\\{a_n\\}$ converges.",
+          "sourceSha256": "62f8331323cc64677d78202f32ae0fb7d0897f212ab6809322b35a8419f6c039",
+          "translation": "于是，引理的推论表明，$\\{a_n\\}$ 的某个子列收敛。"
+        },
+        {
+          "id": "p460-b2",
+          "source": "Only one point remains, whose proof will be left to you: if a subsequence of a Cauchy sequence converges, then the Cauchy sequence itself converges. ▮",
+          "sourceSha256": "d06a72998443865f90f97f38bb9143be68d6a9e9f5c19f63bc62b40b10009f6c",
+          "translation": "只剩下一点，其证明留给你：如果柯西数列的一个子列收敛，那么这个柯西数列本身也收敛。▮"
+        },
+        {
+          "id": "p460-b3",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p460-b4",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p460-b5",
+          "source": "Verify each of the following limits.",
+          "sourceSha256": "078c20560d9e4247a0a9e6fb3fa32bc95d620e42bccc4580c8f9be0f3ddbb1e7",
+          "translation": "验证以下各个极限。"
+        },
+        {
+          "id": "p460-b6",
+          "source": "(i) $\\displaystyle\\lim_{n\\to\\infty}\\frac n{n+1}=1$.",
+          "sourceSha256": "85bde2ba0472ca532eaea22cd79ca071e128a9c27b0a4d0fa851932c5c6623d0"
+        },
+        {
+          "id": "p460-b7",
+          "source": "(ii) $\\displaystyle\\lim_{n\\to\\infty}\\frac{n+3}{n^3+4}=0$.",
+          "sourceSha256": "abe5c799a81e37670ae42e860e1af71dc149506c73f06d31c86a3e748b3e7792"
+        },
+        {
+          "id": "p460-b8",
+          "source": "(iii) $\\displaystyle\\lim_{n\\to\\infty}\\sqrt[8]{n^2+1}-\\sqrt[4]{n+1}=0$. Hint: You should at least be able to prove that $\\displaystyle\\lim_{n\\to\\infty}\\sqrt[8]{n^2+1}-\\sqrt[8]{n^2}=0$.",
+          "sourceSha256": "42def7782f45de81e92e0b8a7ac344ba3565b825837adb6ff400b7edb94d8dc6",
+          "translation": "(iii) $\\displaystyle\\lim_{n\\to\\infty}\\sqrt[8]{n^2+1}-\\sqrt[4]{n+1}=0$。提示：你至少应当能够证明 $\\displaystyle\\lim_{n\\to\\infty}\\sqrt[8]{n^2+1}-\\sqrt[8]{n^2}=0$。"
+        },
+        {
+          "id": "p460-b9",
+          "source": "(iv) $\\displaystyle\\lim_{n\\to\\infty}\\frac{n!}{n^n}=0$.",
+          "sourceSha256": "a75961a6630710390016dae0359c0cbfbf94dac255d28984d941bc870c5ad926"
+        },
+        {
+          "id": "p460-b10",
+          "source": "(v) $\\displaystyle\\lim_{n\\to\\infty}\\sqrt[n]a=1,\\qquad a>0$.",
+          "sourceSha256": "3a470eaec6c8d2ceee8579db8fcb7a2602a5e346acd366b665dd8fe54f9c91b4"
+        },
+        {
+          "id": "p460-b11",
+          "source": "(vi) $\\displaystyle\\lim_{n\\to\\infty}\\sqrt[n]n=1$.",
+          "sourceSha256": "1d9dc5b4edcbea6e0c4d90c075c9ebf166ba29a61a97a160e77078ed5dcdd5a1"
+        },
+        {
+          "id": "p460-b12",
+          "source": "(vii) $\\displaystyle\\lim_{n\\to\\infty}\\sqrt[n]{n^2+n}=1$.",
+          "sourceSha256": "84b9a460ca050a464594cbb0921f8b401716463002f5c9d773d53cd588f2a14b"
+        },
+        {
+          "id": "p460-b13",
+          "source": "(viii) $\\displaystyle\\lim_{n\\to\\infty}\\sqrt[n]{a^n+b^n}=\\max(a,b),\\qquad a,b\\ge0$.",
+          "sourceSha256": "3c902197a3096f4acc83ae3c8de70bb421f7e4a7851c1ecfeb16f5e90e65e97d"
+        },
+        {
+          "id": "p460-b14",
+          "source": "(ix) $\\displaystyle\\lim_{n\\to\\infty}\\frac{\\alpha(n)}n=0$, where $\\alpha(n)$ is the number of primes which divide $n$. Hint: The fact that each prime is $\\ge2$ gives a very simple estimate of how small $\\alpha(n)$ must be.",
+          "sourceSha256": "9c78f5f5ad5205ca21affee2defa6b8b083751bbda6dcbb38cc818f9f8f0f755",
+          "translation": "(ix) $\\displaystyle\\lim_{n\\to\\infty}\\frac{\\alpha(n)}n=0$，其中 $\\alpha(n)$ 是整除 $n$ 的素数的个数。提示：每个素数都 $\\ge2$，利用这一事实就能非常简单地估计 $\\alpha(n)$ 必须有多小。"
+        },
+        {
+          "id": "p460-b15",
+          "source": "\\*(x) $\\displaystyle\\lim_{n\\to\\infty}\\frac{\\displaystyle\\sum_{k=1}^nk^p}{n^{p+1}}=\\frac1{p+1}$.",
+          "sourceSha256": "0b3bd62fc6e8040a563184337f8e962d4b5a8316f35e06f7fba0b6f9e71f0a13"
+        },
+        {
+          "id": "p460-b16",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p460-b17",
+          "source": "Find the following limits.",
+          "sourceSha256": "0308a8b9fdfd6413154327e3ede91ad81bb6c82d0ca666d1e47abd0affb4c898",
+          "translation": "求以下极限。"
+        },
+        {
+          "id": "p460-b18",
+          "source": "(i) $\\displaystyle\\lim_{n\\to\\infty}\\frac n{n+1}-\\frac{n+1}n$.",
+          "sourceSha256": "d14c29cf144ed4098338f69b6d99368f842c52d1d8800260e18bb5f8a0e25048"
+        },
+        {
+          "id": "p460-b19",
+          "source": "(ii) $\\displaystyle\\lim_{n\\to\\infty}n-\\sqrt{n+a}\\sqrt{n+b}$.",
+          "sourceSha256": "259ba942fcab655555dce52fdb9c7d90e6b7c813db9c55ba5c421dbe7738c437"
+        },
+        {
+          "id": "p460-b20",
+          "source": "(iii) $\\displaystyle\\lim_{n\\to\\infty}\\frac{2^n+(-1)^n}{2^{n+1}+(-1)^{n+1}}$.",
+          "sourceSha256": "14d20ac182570bdd7855ae5209efb3cb50317e123e8aad3dcbbadaa80be6cabd"
+        },
+        {
+          "id": "p460-b21",
+          "source": "(iv) $\\displaystyle\\lim_{n\\to\\infty}\\frac{(-1)^n\\sqrt n\\sin(n^n)}{n+1}$.",
+          "sourceSha256": "764a23aa6401570d2409d866cfe4bcbca8e5b95fc0ce655109a2ee26f365ded1"
+        },
+        {
+          "id": "p460-b22",
+          "source": "(v) $\\displaystyle\\lim_{n\\to\\infty}\\frac{a^n-b^n}{a^n+b^n}$.",
+          "sourceSha256": "fe1a136179a3b002e89c91851a538f00cc87f21f853a0acceb91c86e958c40b9"
+        },
+        {
+          "id": "p460-b23",
+          "source": "(vi) $\\displaystyle\\lim_{n\\to\\infty}nc^n,\\qquad|c|<1$.",
+          "sourceSha256": "0a2adda470fb4925d722d6f7a1de0b182f57d631deb6c4f79debc4f64561b55e"
+        }
+      ]
+    },
+    {
+      "printed": 461,
+      "sourceSha256": "014c9fb44bdd83dd006b5751eb3174fa345efab30d53514fe4a60f3ff913cb3d",
+      "blocks": [
+        {
+          "id": "p461-b1",
+          "source": "(vii) $\\displaystyle\\lim_{n\\to\\infty}\\frac{2^{n^2}}{n!}$.",
+          "sourceSha256": "d2e279f3ae66dd774cc804dd901854b00fdd9d82c9a7b4527499889ea3012064"
+        },
+        {
+          "id": "p461-b2",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p461-b3",
+          "source": "(a) What can be said about the sequence $\\{a_n\\}$ if it converges and each $a_n$ is an integer?",
+          "sourceSha256": "87577c5d31415734c7ad2709e826d31a1bfd79aca6781d7baa07a37b86b19ac9",
+          "translation": "(a) 如果数列 $\\{a_n\\}$ 收敛，而且每个 $a_n$ 都是整数，那么关于这个数列可以得出什么结论？"
+        },
+        {
+          "id": "p461-b4",
+          "source": "(b) Find all convergent subsequences of the sequence $1,-1,1,-1,1,-1,\\ldots$. (There are infinitely many, although there are only two limits which such subsequences can have.)",
+          "sourceSha256": "63020750901e27a471d8f587466a89de19dd8d9a9fe4ff5cc196f8bb61051e84",
+          "translation": "(b) 求数列 $1,-1,1,-1,1,-1,\\ldots$ 的所有收敛子列。（这样的子列有无穷多个，尽管它们只可能有两个极限。）"
+        },
+        {
+          "id": "p461-b5",
+          "source": "(c) Find all convergent subsequences of the sequence $1,2,1,2,3,1,2,3,4,1,2,3,4,5,\\ldots$. (There are infinitely many limits which such subsequences can have.)",
+          "sourceSha256": "5ff0e19ab3794466f7338e8e089e21b425d802dafde277f1d6d311bb51f2da8e",
+          "translation": "(c) 求数列 $1,2,1,2,3,1,2,3,4,1,2,3,4,5,\\ldots$ 的所有收敛子列。（这些子列可能具有的极限有无穷多个。）"
+        },
+        {
+          "id": "p461-b6",
+          "source": "(d) Consider the sequence",
+          "sourceSha256": "02237ab884a342ca8041d83557d19b4591cc1f5b9148d9567c67228eb7a5a878",
+          "translation": "(d) 考虑数列"
+        },
+        {
+          "id": "p461-b7",
+          "source": "$$\\frac12,\\ \\frac13,\\ \\frac23,\\ \\frac14,\\ \\frac24,\\ \\frac34,\\ \\frac15,\\ \\frac25,\\ \\frac35,\\ \\frac45,\\ \\frac16,\\ldots.$$",
+          "sourceSha256": "2110cf05c63b24225fbe72320858b5bebd20076c8bb68db90e69550268cff245"
+        },
+        {
+          "id": "p461-b8",
+          "source": "For which numbers $\\alpha$ is there a subsequence converging to $\\alpha$?",
+          "sourceSha256": "76ac15a6a6d7e769394212c07c563fb5b5da523d562cda1bb82e76137daf3f9c",
+          "translation": "对于哪些数 $\\alpha$，存在一个收敛于 $\\alpha$ 的子列？"
+        },
+        {
+          "id": "p461-b9",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p461-b10",
+          "source": "(a) Prove that if a subsequence of a Cauchy sequence converges, then so does the original Cauchy sequence.",
+          "sourceSha256": "1baa1ad9395643f88a6f0ef9abd879f2cd044403c379a741f126155444a7a5ce",
+          "translation": "(a) 证明：如果柯西数列的一个子列收敛，那么原来的柯西数列也收敛。"
+        },
+        {
+          "id": "p461-b11",
+          "source": "(b) Prove that any subsequence of a convergent sequence converges.",
+          "sourceSha256": "c364dac772ebf80b3cc21ff02a55f0328974eaa8cd7cf77ed52e965bb6fe6996",
+          "translation": "(b) 证明：收敛数列的任意子列都收敛。"
+        },
+        {
+          "id": "p461-b12",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p461-b13",
+          "source": "(a) Prove that if $0<a<2$, then $a<\\sqrt{2a}<2$.",
+          "sourceSha256": "55c05a631c9033bc93b86347dfcd9300571f47893589a2b359534708d60c4387",
+          "translation": "(a) 证明：如果 $0<a<2$，那么 $a<\\sqrt{2a}<2$。"
+        },
+        {
+          "id": "p461-b14",
+          "source": "(b) Prove that the sequence",
+          "sourceSha256": "9357cd02f230c2880fcf7a74b62ae4bdaed4814d8fb30e5fd9356b80880a115d",
+          "translation": "(b) 证明数列"
+        },
+        {
+          "id": "p461-b15",
+          "source": "$$\\sqrt2,\\ \\sqrt{2\\sqrt2},\\ \\sqrt{2\\sqrt{2\\sqrt2}},\\ldots$$",
+          "sourceSha256": "c7a63c750e2741d1238a28d07d26024557483e82c62c7b0ad12c7d46d7ef5c1a"
+        },
+        {
+          "id": "p461-b16",
+          "source": "converges.",
+          "sourceSha256": "53993f1f77a638d8c492ef7c2e993904790612692d494347d0a35fc3a9e6d9bd",
+          "translation": "收敛。"
+        },
+        {
+          "id": "p461-b17",
+          "source": "(c) Find the limit. Hint: Notice that if $\\lim\\limits_{n\\to\\infty}a_n=l$, then $\\lim\\limits_{n\\to\\infty}\\sqrt{2a_n}=\\sqrt{2l}$, by Theorem 1.",
+          "sourceSha256": "e62cae6acdb71ee6953c6222ef96d6085d7f25036ad1f15b2d43de4bfb5128fd",
+          "translation": "(c) 求其极限。提示：注意，根据定理 1，如果 $\\lim\\limits_{n\\to\\infty}a_n=l$，那么 $\\lim\\limits_{n\\to\\infty}\\sqrt{2a_n}=\\sqrt{2l}$。"
+        },
+        {
+          "id": "p461-b18",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p461-b19",
+          "source": "Let $0<a_1<b_1$ and define",
+          "sourceSha256": "573bcc18a24d9119a5e7c259fc0f801a6439ac9c2e2ff1ee28b5df2ac19741fa",
+          "translation": "设 $0<a_1<b_1$，并定义"
+        },
+        {
+          "id": "p461-b20",
+          "source": "$$a_{n+1}=\\sqrt{a_nb_n},\\qquad b_{n+1}=\\frac{a_n+b_n}2.$$",
+          "sourceSha256": "bab311fdf9cf3707f6bf0231d82f1556ed671be04a37f992373a44ded8290425"
+        },
+        {
+          "id": "p461-b21",
+          "source": "(a) Prove that the sequences $\\{a_n\\}$ and $\\{b_n\\}$ each converge.",
+          "sourceSha256": "6b5157982eac73795d7c73070ee28d582f6aa088a620282264342df74d8fd71e",
+          "translation": "(a) 证明数列 $\\{a_n\\}$ 和 $\\{b_n\\}$ 各自收敛。"
+        },
+        {
+          "id": "p461-b22",
+          "source": "(b) Prove that they have the same limit.",
+          "sourceSha256": "4b2ae0fd4e207682e27e6153a703168986757b2735b425255f2b0cd11f61a4c7",
+          "translation": "(b) 证明它们有相同的极限。"
+        },
+        {
+          "id": "p461-b23",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p461-b24",
+          "source": "In Problem 2-16 we saw that any rational approximation $k/l$ to $\\sqrt2$ can be replaced by a better approximation $(k+2l)/(k+l)$. In particular, starting with $k=l=1$, we obtain",
+          "sourceSha256": "8601969833efbb55323974329661df4b9acece4dad7ad21709369ff95d3c2b4a",
+          "translation": "在习题 2-16 中，我们看到：$\\sqrt2$ 的任意一个有理近似值 $k/l$，都可以用更好的近似值 $(k+2l)/(k+l)$ 来替代。特别地，从 $k=l=1$ 开始，我们得到"
+        },
+        {
+          "id": "p461-b25",
+          "source": "$$1,\\ \\frac32,\\ \\frac75,\\ldots.$$",
+          "sourceSha256": "8c68188fc49f0bd175f9c7f891025396f58f16dbb90ed77ae5b1b666ff00341d"
+        },
+        {
+          "id": "p461-b26",
+          "source": "(a) Prove that this sequence is given recursively by",
+          "sourceSha256": "4e75623e3bba609f9b490729e5c6a7fcda9f3de0e590918ece7a4b022a8321df",
+          "translation": "(a) 证明这个数列可以由下式递归给出："
+        },
+        {
+          "id": "p461-b27",
+          "source": "$$a_1=1,\\qquad a_{n+1}=1+\\frac1{1+a_n}.$$",
+          "sourceSha256": "144f700937da1fb32d239a9e2f2379b47155cd652d8df84f33e16abd23d6cda2"
+        }
+      ]
+    },
+    {
+      "printed": 462,
+      "sourceSha256": "b2492b9ae45f5608be93a8542d4688ee9dbea6ec3c7d0f8dae50a18acef47fe6",
+      "blocks": [
+        {
+          "id": "p462-b1",
+          "source": "(b) Prove that $\\lim\\limits_{n\\to\\infty}a_n=\\sqrt2$. This gives the so-called *continued fraction expansion*",
+          "sourceSha256": "5b5e195ccf6ec423bc0515dfecbff3ceab1a96c17a850966592a280c71972145",
+          "translation": "(b) 证明 $\\lim\\limits_{n\\to\\infty}a_n=\\sqrt2$。这给出了所谓的*连分数展开*"
+        },
+        {
+          "id": "p462-b2",
+          "source": "$$\\sqrt2=1+\\frac1{2+\\dfrac1{2+\\cdots}}.$$",
+          "sourceSha256": "7cf9c6857aa8d9de2996387ad7891a3cd13819854c0d243687f8d1a834f0e7ec"
+        },
+        {
+          "id": "p462-b3",
+          "source": "Hint: Consider separately the subsequences $\\{a_{2n}\\}$ and $\\{a_{2n+1}\\}$.",
+          "sourceSha256": "e39bda37517ccd62d51c0c0aba67f87b8ccba8f9a7741dc5b3649dbcdaff9d44",
+          "translation": "提示：分别考虑子列 $\\{a_{2n}\\}$ 和 $\\{a_{2n+1}\\}$。"
+        },
+        {
+          "id": "p462-b4",
+          "source": "(c) Prove that for any natural numbers $a$ and $b$,",
+          "sourceSha256": "7990d7500897a10e0efae56c1c71cdc324f59cf50348712550b5d8362eb0227e",
+          "translation": "(c) 证明：对于任意自然数 $a$ 和 $b$，有"
+        },
+        {
+          "id": "p462-b5",
+          "source": "$$\\sqrt{a^2+b}=a+\\frac b{2a+\\dfrac b{2a+\\cdots}}.$$",
+          "sourceSha256": "9c42eb29e31c4e41ed552edeba649e15b7f3dde0cbb3746476a3ed5037e0b353"
+        },
+        {
+          "id": "p462-b6",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p462-b7",
+          "source": "Identify the function $f(x)=\\lim\\limits_{n\\to\\infty}(\\lim\\limits_{k\\to\\infty}(\\cos n!\\pi x)^{2k})$. (It has been mentioned many times in this book.)",
+          "sourceSha256": "2f8ace6759fe078862f697bae4ce6f37a6a1499a21551068a32a53b122be4cdd",
+          "translation": "确定函数 $f(x)=\\lim\\limits_{n\\to\\infty}(\\lim\\limits_{k\\to\\infty}(\\cos n!\\pi x)^{2k})$ 是什么。（本书已多次提到过它。）"
+        },
+        {
+          "id": "p462-b8",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p462-b9",
+          "source": "Many impressive looking limits can be evaluated easily (especially by the person who makes them up), because they are really lower or upper sums in disguise. With this remark as hint, evaluate each of the following. (Warning: the list contains one red herring which can be evaluated by elementary considerations.)",
+          "sourceSha256": "06bf9dc4ad4cb7dcedbeb2dca6dbf90586c6d151bf60f7891460cbccad4e2054",
+          "translation": "许多看起来令人惊叹的极限，其实很容易求出（尤其是对编出它们的人而言），因为它们实际上只是改头换面的下和或上和。以这句话为提示，求以下各个极限。（提醒：列表中混进了一个干扰项，它可以用初等方法求出。）"
+        },
+        {
+          "id": "p462-b10",
+          "source": "(i) $\\displaystyle\\lim_{n\\to\\infty}\\frac{\\sqrt[n]e+\\sqrt[n]{e^2}+\\cdots+\\sqrt[n]{e^n}}n$.",
+          "sourceSha256": "8fe116c006a66b8652db416d804132d2fe66e2ab270cf220d48cfacd4d5d643f"
+        },
+        {
+          "id": "p462-b11",
+          "source": "(ii) $\\displaystyle\\lim_{n\\to\\infty}\\frac{\\sqrt[n]e+\\sqrt[n]{e^2}+\\cdots+\\sqrt[n]{e^{2n}}}n$.",
+          "sourceSha256": "7cf9d2751fa8ed5df033b515d8fd8cc60565865221e392cc165959cf3aa67b42"
+        },
+        {
+          "id": "p462-b12",
+          "source": "(iii) $\\displaystyle\\lim_{n\\to\\infty}\\left(\\frac1{n+1}+\\cdots+\\frac1{2n}\\right)$.",
+          "sourceSha256": "5b72cd8580b6bf565fb1fa8743fb651f8d224560fa983738badaeaac92654013"
+        },
+        {
+          "id": "p462-b13",
+          "source": "(iv) $\\displaystyle\\lim_{n\\to\\infty}\\left(\\frac1{n^2}+\\frac1{(n+1)^2}+\\cdots+\\frac1{(2n)^2}\\right)$.",
+          "sourceSha256": "1ec344a281372bfb3d874475873c0c1a99109bf8cb7c77cca7be8dd5bc5ed106"
+        },
+        {
+          "id": "p462-b14",
+          "source": "(v) $\\displaystyle\\lim_{n\\to\\infty}\\left(\\frac n{(n+1)^2}+\\frac n{(n+2)^2}+\\cdots+\\frac n{(n+n)^2}\\right)$.",
+          "sourceSha256": "6e76bc1c390e4305f8d7220341b6da9f563ae6be6bcd0da03e5cc25392db450b"
+        },
+        {
+          "id": "p462-b15",
+          "source": "(vi) $\\displaystyle\\lim_{n\\to\\infty}\\left(\\frac n{n^2+1}+\\frac n{n^2+2^2}+\\cdots+\\frac n{n^2+n^2}\\right)$.",
+          "sourceSha256": "500c7313429d7ce8ecbf08bc0ed3ccb200a10d29f129f94553b8a9ad8527ef07"
+        },
+        {
+          "id": "p462-b16",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p462-b17",
+          "source": "Although limits like $\\lim\\limits_{n\\to\\infty}\\sqrt[n]n$ and $\\lim\\limits_{n\\to\\infty}a^n$ can be evaluated using facts about the behavior of the logarithm and exponential functions, this approach is vaguely dissatisfying, because integral roots and powers can be defined without using the exponential function. Some of the standard “elementary” arguments for such limits are outlined here; the basic tools are inequalities derived from the binomial theorem, notably",
+          "sourceSha256": "b912fab0ad5db1e2e12edb21c791f4613c7143d53f34a88a76df70c9b39e56a6",
+          "translation": "虽然 $\\lim\\limits_{n\\to\\infty}\\sqrt[n]n$ 和 $\\lim\\limits_{n\\to\\infty}a^n$ 这样的极限可以借助对数函数和指数函数的性质求出，但这种做法总让人隐约感到不够满意，因为整数次根和整数次幂无须使用指数函数就可以定义。这里概述一些求这类极限的标准“初等”论证；基本工具是从二项式定理推导出的不等式，特别是"
+        },
+        {
+          "id": "p462-b18",
+          "source": "$$ (1+h)^n\\ge1+nh,\\quad\\text{for }h>0;$$",
+          "sourceSha256": "dd2dc52429085cef340ae640cb104305a5ca2c5dc308c87732fd6b5d729bc50e"
+        },
+        {
+          "id": "p462-b19",
+          "source": "and, for part (e),",
+          "sourceSha256": "d2a9cb26a0469a03016101a9460cd4a9c42d098bcc5aa7495e807f37fded9422",
+          "translation": "以及在 (e) 中使用的"
+        },
+        {
+          "id": "p462-b20",
+          "source": "$$ (1+h)^n\\ge1+nh+\\frac{n(n-1)}2h^2\\ge\\frac{n(n-1)}2h^2,\\quad\\text{for }h>0.$$",
+          "sourceSha256": "f52cfbedd2a267ddd214002011a3ea2b823d897967258ec95429699f0c52ed5e"
+        }
+      ]
+    },
+    {
+      "printed": 463,
+      "sourceSha256": "f217bca1bd3f6f0e3e90c83161a428ebac9021b009a7b883c95e063f985d4798",
+      "blocks": [
+        {
+          "id": "p463-b1",
+          "source": "(a) Prove that $\\lim\\limits_{n\\to\\infty}a^n=\\infty$ if $a>1$, by setting $a=1+h$, where $h>0$.",
+          "sourceSha256": "a058b8a94674050195c4e06687409371c76fce62b8db14e033965126fa5eb1f2",
+          "translation": "(a) 当 $a>1$ 时，令 $a=1+h$，其中 $h>0$，证明 $\\lim\\limits_{n\\to\\infty}a^n=\\infty$。"
+        },
+        {
+          "id": "p463-b2",
+          "source": "(b) Prove that $\\lim\\limits_{n\\to\\infty}a^n=0$ if $0<a<1$.",
+          "sourceSha256": "7a9e2ca96084455bc7c7fa4f35b88be6d75431f38cae1e3ce0c1a1d6dc331290",
+          "translation": "(b) 证明：如果 $0<a<1$，那么 $\\lim\\limits_{n\\to\\infty}a^n=0$。"
+        },
+        {
+          "id": "p463-b3",
+          "source": "(c) Prove that $\\lim\\limits_{n\\to\\infty}\\sqrt[n]a=1$ if $a>1$, by setting $\\sqrt[n]a=1+h$ and estimating $h$.",
+          "sourceSha256": "8fbe0f282286f85a56383c42c8b14aae144c77fd191dfc614c2646417726e142",
+          "translation": "(c) 当 $a>1$ 时，令 $\\sqrt[n]a=1+h$，并估计 $h$，证明 $\\lim\\limits_{n\\to\\infty}\\sqrt[n]a=1$。"
+        },
+        {
+          "id": "p463-b4",
+          "source": "(d) Prove that $\\lim\\limits_{n\\to\\infty}\\sqrt[n]a=1$ if $0<a<1$.",
+          "sourceSha256": "09a83e25da03a774cb28846068fd4a57b6460ec82e8ff6a7dd00c43116865510",
+          "translation": "(d) 证明：如果 $0<a<1$，那么 $\\lim\\limits_{n\\to\\infty}\\sqrt[n]a=1$。"
+        },
+        {
+          "id": "p463-b5",
+          "source": "(e) Prove that $\\lim\\limits_{n\\to\\infty}\\sqrt[n]n=1$.",
+          "sourceSha256": "ad472341bdf5a5bd81722d7a41a0d8c5e14ace97b86d1cddb6be198c0c2d0c13",
+          "translation": "(e) 证明 $\\lim\\limits_{n\\to\\infty}\\sqrt[n]n=1$。"
+        },
+        {
+          "id": "p463-b6",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p463-b7",
+          "source": "(a) Prove that a convergent sequence is always bounded.",
+          "sourceSha256": "a485b0d889a2725b4046e0c9b9b403ba8b64346e43a0f065c1dc2600993aa73b",
+          "translation": "(a) 证明收敛数列总是有界的。"
+        },
+        {
+          "id": "p463-b8",
+          "source": "(b) Suppose that $\\lim\\limits_{n\\to\\infty}a_n=0$, and that some $a_n>0$. Prove that the set of all numbers $a_n$ actually has a maximum member.",
+          "sourceSha256": "e5f6e0e54a02ea21e6a7e1cbb6eb991889beaa376392506853b1cd68545c5ad9",
+          "translation": "(b) 假设 $\\lim\\limits_{n\\to\\infty}a_n=0$，并且某个 $a_n>0$。证明所有数 $a_n$ 构成的集合确实有一个最大的元素。"
+        },
+        {
+          "id": "p463-b9",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p463-b10",
+          "source": "(a) Prove that",
+          "sourceSha256": "5fd957c03a4a5c36f0dc505bfedc633c34bfb7dc8fb6d6e0639736d4fcc5d37c",
+          "translation": "(a) 证明"
+        },
+        {
+          "id": "p463-b11",
+          "source": "$$\\frac1{n+1}<\\log(n+1)-\\log n<\\frac1n.$$",
+          "sourceSha256": "06a73e9c03ede1b4272558d213bad926f8c5e224f5e7ddbd3d1fd4cdeeb525de"
+        },
+        {
+          "id": "p463-b12",
+          "source": "(b) If",
+          "sourceSha256": "56a1fca518a7ff915b4f98b4f8dff7ba8e5170b3193ec71f1f5cf0acccb9e0d1",
+          "translation": "(b) 如果"
+        },
+        {
+          "id": "p463-b13",
+          "source": "$$a_n=1+\\frac12+\\frac13+\\cdots+\\frac1n-\\log n,$$",
+          "sourceSha256": "1ef17a46f38c1b98fe8d5e558a66dff8ea7e59d824ec4c077a7b05563ab1e1e3"
+        },
+        {
+          "id": "p463-b14",
+          "source": "show that the sequence $\\{a_n\\}$ is decreasing, and that each $a_n\\ge0$. It follows that there is a number",
+          "sourceSha256": "f3295e1f176061fe706c05367cc6f77e7be31c7d79a57bc3b5d15f8f399621b1",
+          "translation": "证明数列 $\\{a_n\\}$ 递减，而且每个 $a_n\\ge0$。由此可知，存在一个数"
+        },
+        {
+          "id": "p463-b15",
+          "source": "$$\\gamma=\\lim_{n\\to\\infty}\\left(1+\\cdots+\\frac1n-\\log n\\right).$$",
+          "sourceSha256": "1b0bc1df23e4ff746b3d9b3ea8d94f25d6b4a38e4af1c84098df5a84d7021524"
+        },
+        {
+          "id": "p463-b16",
+          "source": "This number, known as Euler’s number, has proved to be quite refractory; it is not even known whether $\\gamma$ is rational.",
+          "sourceSha256": "a89652387d68c96904417358abdfa0b70899fda1b3e26f9a33369be3739b8cb6",
+          "translation": "这个数称为欧拉常数，事实证明它相当难以对付；甚至连 $\\gamma$ 是否为有理数都还不知道。"
+        },
+        {
+          "id": "p463-b17",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p463-b18",
+          "source": "(a) Suppose that $f$ is increasing on $[1,\\infty)$. Show that",
+          "sourceSha256": "564b43cc72bf15662c0aa58950257a2832aa90d73475a1719d8b48fe0e0e335a",
+          "translation": "(a) 假设 $f$ 在 $[1,\\infty)$ 上递增。证明"
+        },
+        {
+          "id": "p463-b19",
+          "source": "$$f(1)+\\cdots+f(n-1)<\\int_1^nf(x)\\,dx<f(2)+\\cdots+f(n).$$",
+          "sourceSha256": "cb8d10810e196dd13ceb7a570995baec10f050e3694111b5a2631d1d2b9a299c"
+        },
+        {
+          "id": "p463-b20",
+          "source": "(b) Now choose $f=\\log$ and show that",
+          "sourceSha256": "0563217cefa4b9d75bc818a13bbcdeaa3f8df84a5d8021323ca1d2e3da289405",
+          "translation": "(b) 现在取 $f=\\log$，并证明"
+        },
+        {
+          "id": "p463-b21",
+          "source": "$$\\frac{n^n}{e^{n-1}}<n!<\\frac{(n+1)^{n+1}}{e^n};$$",
+          "sourceSha256": "af5287b96cb82a9ac3b05d5461c9e1d1bc7d56143902734119e7af90d96f0eed"
+        },
+        {
+          "id": "p463-b22",
+          "source": "it follows that",
+          "sourceSha256": "d65e00e35bf8747723cc3719e603f3217426b49946d42d0ac5cc5c3ad2d04dbb",
+          "translation": "由此得到"
+        },
+        {
+          "id": "p463-b23",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{\\sqrt[n]{n!}}n=\\frac1e.$$",
+          "sourceSha256": "2a07c50a02719075a8b4b8c6a44c5f0fc93e9d232d62bb066b3c7d33714aeb5a"
+        },
+        {
+          "id": "p463-b24",
+          "source": "This result shows that $\\sqrt[n]{n!}$ is approximately $n/e$, in the sense that the ratio of these two quantities is close to 1 for large $n$. But we cannot conclude that $n!$ is close to $(n/e)^n$ in this sense; in fact, this is false. An estimate for $n!$ is very desirable, even for concrete computations, because $n!$ cannot be calculated easily even with logarithm tables. The standard (and difficult) theorem which provides the right information will be found in Problem 27-19.",
+          "sourceSha256": "7cc0cbbf25ecfbd27ce551315aebcf4aca2dc6a56bbaa3b29156416b8d85d17a",
+          "translation": "这个结果说明，$\\sqrt[n]{n!}$ 近似等于 $n/e$，这里的意义是：当 $n$ 很大时，这两个量的比值接近 1。但我们不能由此得出 $n!$ 在同样意义下接近 $(n/e)^n$；事实上，这是错误的。对 $n!$ 的估计是非常有用的，即使对于具体计算也是如此，因为哪怕借助对数表，$n!$ 也不容易算出。提供正确估计的那个标准定理（而且是困难的定理），将在习题 27-19 中出现。"
+        }
+      ]
+    },
+    {
+      "printed": 464,
+      "sourceSha256": "fd2d837d64cbc68a2961016c0792eac71371907d92c7906a175d7f59fcb595e9",
+      "blocks": [
+        {
+          "id": "p464-b1",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p464-b2",
+          "source": "(a) Show that the tangent line to the graph of $f$ at $(x_1,f(x_1))$ intersects the horizontal axis at $(x_2,0)$, where",
+          "sourceSha256": "0db667d14652ba97b8c407100c12edc248c65498767d71082cc980c1896aa9f1",
+          "translation": "(a) 证明：$f$ 的图像在 $(x_1,f(x_1))$ 处的切线与横轴相交于 $(x_2,0)$，其中"
+        },
+        {
+          "id": "p464-b3",
+          "source": "$$x_2=x_1-\\frac{f(x_1)}{f'(x_1)}.$$",
+          "sourceSha256": "4472d4e3b4212eb671a4810005342aa618452f7a94539e9f619f4f7f3b139fa2"
+        },
+        {
+          "id": "p464-b4",
+          "source": "This intersection point may be regarded as a rough approximation to the point where the graph of $f$ intersects the horizontal axis. If we now start at $x_2$ and repeat the process to get $x_3$, then use $x_3$ to get $x_4$, etc., we have a sequence $\\{x_n\\}$ defined inductively by",
+          "sourceSha256": "d8ae925345f00d255735bd5ef9168993c2142a648cebfb62ede2b01f1ceb7f3a",
+          "translation": "这个交点可以看作 $f$ 的图像与横轴交点的一个粗略近似。如果我们现在从 $x_2$ 出发，重复这一过程得到 $x_3$，再用 $x_3$ 得到 $x_4$，如此等等，就得到一个由下式归纳定义的数列 $\\{x_n\\}$："
+        },
+        {
+          "id": "p464-b5",
+          "source": "$$x_{n+1}=x_n-\\frac{f(x_n)}{f'(x_n)}.$$",
+          "sourceSha256": "5a0f0175fe7495c616b7e88a9f38ad219b251f48281241d1cf61c86f50d91883"
+        },
+        {
+          "id": "p464-b6",
+          "source": "Figure 7 suggests that $\\{x_n\\}$ will converge to a number $c$ with $f(c)=0$; this is called *Newton’s method* for finding a zero of $f$. In the remainder of this problem we will establish some conditions under which Newton’s method works (Figures 8 and 9 show two cases where it doesn’t). A few facts about convexity may be found useful; see Chapter 11, Appendix.",
+          "sourceSha256": "25763f2f252f81c9bcefedf3047ba563d1b44bd350c6cd107464b7bb36db26e7",
+          "translation": "图 7 暗示，$\\{x_n\\}$ 将收敛于一个满足 $f(c)=0$ 的数 $c$；这称为求 $f$ 的零点的*牛顿法*。在本题剩余部分中，我们将建立一些保证牛顿法奏效的条件（图 8 和图 9 展示了它不奏效的两种情形）。关于凸性的几个事实可能有用；见第 11 章附录。"
+        },
+        {
+          "id": "p464-b7",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:370px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"47 223 370 391\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0483.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 7</figcaption>\n</figure>",
+          "sourceSha256": "4c6c610710eab4d016a2b2b59cfa777fc7382d5825d3f5267f716721020776f6"
+        },
+        {
+          "id": "p464-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:419px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 701 419 339\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0483.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 8</figcaption>\n</figure>",
+          "sourceSha256": "deacb26f4efd2ee02bcb81370bbea475df127a1c8d15ddc9cf09bd985d8296a8"
+        },
+        {
+          "id": "p464-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:361px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"51 1247 361 248\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0483.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 9</figcaption>\n</figure>",
+          "sourceSha256": "2939d67272e41c4bea77a14b785013b08e2ab6e3a19e6e5ce1ad72911c649ec9"
+        },
+        {
+          "id": "p464-b10",
+          "source": "(b) Suppose that $f',f''>0$, and that we choose $x_1$ with $f(x_1)>0$. Show that $x_1>x_2>x_3>\\cdots>c$.",
+          "sourceSha256": "1c6324dd1d63c3b5e9ce37754daf0c6697c48e611c1992e998c1ed88ec80cf12",
+          "translation": "(b) 假设 $f',f''>0$，并且我们选取了满足 $f(x_1)>0$ 的 $x_1$。证明 $x_1>x_2>x_3>\\cdots>c$。"
+        },
+        {
+          "id": "p464-b11",
+          "source": "(c) Let $\\delta_k=x_k-c$. Then",
+          "sourceSha256": "f6258ba5cc4b518bee68266c20614a587d3a8718873c5fce2eeb16e6e9b2b9ba",
+          "translation": "(c) 令 $\\delta_k=x_k-c$。那么"
+        },
+        {
+          "id": "p464-b12",
+          "source": "$$\\delta_k=\\frac{f(x_k)}{f'(\\xi_k)}$$",
+          "sourceSha256": "e6ec11678f533dc77abdd45f13a310350b00e8843947d5b51627bc9ed3728ace"
+        },
+        {
+          "id": "p464-b13",
+          "source": "for some $\\xi_k$ in $(c,x_k)$. Show that",
+          "sourceSha256": "8720d4302527a869fe1e8556a284b6e5772854e9260e7ef7c063aba036a4fa3d",
+          "translation": "其中某个 $\\xi_k$ 位于 $(c,x_k)$ 中。证明"
+        },
+        {
+          "id": "p464-b14",
+          "source": "$$\\delta_{k+1}=\\frac{f(x_k)}{f'(\\xi_k)}-\\frac{f(x_k)}{f'(x_k)}.$$",
+          "sourceSha256": "ab6d88424bd9e9eb8f628f98194e2d4e33bb6e0031910bad5f67e5f17d4bcf08"
+        },
+        {
+          "id": "p464-b15",
+          "source": "Conclude that",
+          "sourceSha256": "a3421824c69582242d754adfef772c94c369fd01a66d2699f4b162882bef15b9",
+          "translation": "由此得出"
+        },
+        {
+          "id": "p464-b16",
+          "source": "$$\\delta_{k+1}=\\frac{f(x_k)}{f'(\\xi_k)f'(x_k)}\\cdot f''(\\eta_k)(x_k-\\xi_k)$$",
+          "sourceSha256": "eb6c03201ec2ec80c55d3d901010471f147b73c7691ec807e5c8fdd9297910ba"
+        },
+        {
+          "id": "p464-b17",
+          "source": "for some $\\eta_k$ in $(c,x_k)$, and then that",
+          "sourceSha256": "461c0391715c75c6caa4212b0a7b41ee0a610ef10dfa3e29dd7e3fea38327f97",
+          "translation": "其中某个 $\\eta_k$ 位于 $(c,x_k)$ 中，然后再得出"
+        },
+        {
+          "id": "p464-b18",
+          "source": "$$\\delta_{k+1}\\le\\frac{f''(\\eta_k)}{f'(x_k)}\\delta_k{}^2.\\tag{*}$$",
+          "sourceSha256": "8e41e36cfcd784fb07280b4b609d00d48de480aa196c3e26acb70306802c34d2"
+        },
+        {
+          "id": "p464-b19",
+          "source": "(d) Let $m=f'(c)=\\inf f'$ on $[c,x_1]$ and let $M=\\sup f''$ on $[c,x_1]$. Show that Newton’s method works if $x_1-c<m/M$.",
+          "sourceSha256": "2eb1f4fbd5221ce05e15c88e6011dccb050ef9d9005fc29eeefb10735618240a",
+          "translation": "(d) 令 $m=f'(c)=\\inf f'$，这里取 $[c,x_1]$ 上的下确界；再令 $M=\\sup f''$，这里取 $[c,x_1]$ 上的上确界。证明：如果 $x_1-c<m/M$，那么牛顿法奏效。"
+        },
+        {
+          "id": "p464-b20",
+          "source": "(e) What is the formula for $x_{n+1}$ when $f(x)=x^2-A$?",
+          "sourceSha256": "26586cff330b35d1fc46a7d914a6a3130778a95cbc8f5d1cb13b12bd4478de94",
+          "translation": "(e) 当 $f(x)=x^2-A$ 时，$x_{n+1}$ 的公式是什么？"
+        },
+        {
+          "id": "p464-b21",
+          "source": "If we take $A=2$ and $x_1=1.4$ we get",
+          "sourceSha256": "2d5ac87a47351bb4f9b49fdeb470ace9fb74bcbf2f0e34fb92d540a028df2c60",
+          "translation": "如果取 $A=2$ 和 $x_1=1.4$，就得到"
+        },
+        {
+          "id": "p464-b22",
+          "source": "$$\\begin{aligned}x_1&=1.4\\\\x_2&=1.4142857\\\\x_3&=1.4142136\\\\x_4&=1.4142136,\\end{aligned}$$",
+          "sourceSha256": "23895830f1c644aba3fb4f298a9e1460ca98b15b993c892e12cc44df84e2e30e"
+        },
+        {
+          "id": "p464-b23",
+          "source": "which is already correct to 7 decimals! Notice that the number of correct decimals at least doubled each time. This is essentially guaranteed by the inequality $(*)$ when $M/m<1$.",
+          "sourceSha256": "5437601c8e48ce0675425d21f50a6961d8a555aa273a04848401a06489711527",
+          "translation": "它已经精确到小数点后 7 位！注意，每一步正确小数位数都至少翻了一番。当 $M/m<1$ 时，不等式 $(*)$ 基本上就保证了这一点。"
+        }
+      ]
+    },
+    {
+      "printed": 465,
+      "sourceSha256": "894fd1d874a3eca6a346429a47d15715cabe71ef48d66bcaee33050463e03497",
+      "blocks": [
+        {
+          "id": "p465-b1",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p465-b2",
+          "source": "Use Newton’s method to estimate the zeros of the following functions.",
+          "sourceSha256": "26c64a99370ae541dbec2b6884c90e21d7a468a464f349571edd5a20402d8451",
+          "translation": "使用牛顿法估计下列函数的零点。"
+        },
+        {
+          "id": "p465-b3",
+          "source": "(i) $f(x)=\\tan x-\\cos^2x\\qquad\\text{near }0$.",
+          "sourceSha256": "553f10d9e469a2ce8b909340ac5b9067d14c00a47723dfd50309898223a6c69b"
+        },
+        {
+          "id": "p465-b4",
+          "source": "(ii) $f(x)=\\cos x-x^2\\qquad\\text{near }0$.",
+          "sourceSha256": "76413b5b40c127d0510dd125f264cac0e312ddbc15138fe219da730da0c339fe"
+        },
+        {
+          "id": "p465-b5",
+          "source": "(iii) $f(x)=x^3+x-1\\qquad\\text{on }[0,1]$.",
+          "sourceSha256": "267a20720938c9c8cb67c93f2f53c6ae0c426004c416badbd8757b404127e96d"
+        },
+        {
+          "id": "p465-b6",
+          "source": "(iv) $f(x)=x^3-3x^2+1\\qquad\\text{on }[0,1]$.",
+          "sourceSha256": "c250df47736a70da22a4c08fbaa92c16512c297ab9c2c2634a4354eb07f58293"
+        },
+        {
+          "id": "p465-b7",
+          "source": "### \\*16.",
+          "sourceSha256": "f63edeb4dbccfdc649f956ca6c68709a605b569f278ea9d361bd034f417fda87"
+        },
+        {
+          "id": "p465-b8",
+          "source": "Prove that if $\\lim\\limits_{n\\to\\infty}a_n=l$, then",
+          "sourceSha256": "43dc543e7768e77c1b8246034b6667188d732b0f07f3d4279abfb7a59590ba08",
+          "translation": "证明：如果 $\\lim\\limits_{n\\to\\infty}a_n=l$，那么"
+        },
+        {
+          "id": "p465-b9",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{a_1+\\cdots+a_n}n=l.$$",
+          "sourceSha256": "bee7effa36820a51bc3b559e9666bcb46a00a380a880212ae2d054a25c41841d"
+        },
+        {
+          "id": "p465-b10",
+          "source": "Hint: This problem is very similar to (in fact, it is actually a special case of) Problem 13-40.",
+          "sourceSha256": "b616c8ff4cc48a8066d2dec94e79a89874e1551a5200517e1c71737aac61b140",
+          "translation": "提示：这道题与习题 13-40 非常相似（事实上，它正是那道题的一个特殊情形）。"
+        },
+        {
+          "id": "p465-b11",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p465-b12",
+          "source": "(a) Prove that if $\\lim\\limits_{n\\to\\infty}a_{n+1}-a_n=l$, then $\\lim\\limits_{n\\to\\infty}a_n/n=l$. Hint: See the previous problem.",
+          "sourceSha256": "b6fde658678675c5e839a34d62a7ffc8ed9fe54924a2d8c19ce1187f0f78999c",
+          "translation": "(a) 证明：如果 $\\lim\\limits_{n\\to\\infty}a_{n+1}-a_n=l$，那么 $\\lim\\limits_{n\\to\\infty}a_n/n=l$。提示：见上一题。"
+        },
+        {
+          "id": "p465-b13",
+          "source": "(b) Suppose that $f$ is continuous and $\\lim\\limits_{x\\to\\infty}f(x+1)-f(x)=l$. Prove that $\\lim\\limits_{x\\to\\infty}f(x)/x=l$. Hint: Let $a_n$ and $b_n$ be the inf and sup of $f$ on $[n,n+1]$.",
+          "sourceSha256": "c7595e564adc9bef1548ec60ef683bdaadd05c3c695bffeb2e1aa8c8bce30992",
+          "translation": "(b) 假设 $f$ 连续，并且 $\\lim\\limits_{x\\to\\infty}f(x+1)-f(x)=l$。证明 $\\lim\\limits_{x\\to\\infty}f(x)/x=l$。提示：令 $a_n$ 和 $b_n$ 分别为 $f$ 在 $[n,n+1]$ 上的下确界和上确界。"
+        },
+        {
+          "id": "p465-b14",
+          "source": "### \\*18.",
+          "sourceSha256": "dc9f11a962e705d50490c24f8b3e71f51b22675236704438ef4ec0936298a65c"
+        },
+        {
+          "id": "p465-b15",
+          "source": "Suppose that $a_n>0$ for each $n$ and that $\\lim\\limits_{n\\to\\infty}a_{n+1}/a_n=l$. Prove that $\\lim\\limits_{n\\to\\infty}\\sqrt[n]{a_n}=l$. Hint: This requires the same sort of argument that works in Problem 16, except using multiplication instead of addition, together with the fact that $\\lim\\limits_{n\\to\\infty}\\sqrt[n]a=1$, for $a>0$.",
+          "sourceSha256": "0005af8e95df5a1f765e0466a538cfb84affb953e1c536e6a5f4c76507af3d8d",
+          "translation": "假设对每个 $n$ 都有 $a_n>0$，而且 $\\lim\\limits_{n\\to\\infty}a_{n+1}/a_n=l$。证明 $\\lim\\limits_{n\\to\\infty}\\sqrt[n]{a_n}=l$。提示：这需要与习题 16 中奏效的论证相同的一类方法，只是用乘法代替加法，并结合 $a>0$ 时 $\\lim\\limits_{n\\to\\infty}\\sqrt[n]a=1$ 这一事实。"
+        },
+        {
+          "id": "p465-b16",
+          "source": "### 19.",
+          "sourceSha256": "8b09a7bace93d37dfe88ea4c6c08a187efc4b2a287262ba51ada7accf660adbf"
+        },
+        {
+          "id": "p465-b17",
+          "source": "(a) Suppose that $\\{a_n\\}$ is a convergent sequence of points all in $[0,1]$. Prove that $\\lim\\limits_{n\\to\\infty}a_n$ is also in $[0,1]$.",
+          "sourceSha256": "0d16e843b34c6c68163d911c9826f2bd421d5301a294caa38ab5124cc6ce2cf8",
+          "translation": "(a) 假设 $\\{a_n\\}$ 是一个收敛数列，所有项都在 $[0,1]$ 中。证明 $\\lim\\limits_{n\\to\\infty}a_n$ 也在 $[0,1]$ 中。"
+        },
+        {
+          "id": "p465-b18",
+          "source": "(b) Find a convergent sequence $\\{a_n\\}$ of points all in $(0,1)$ such that $\\lim\\limits_{n\\to\\infty}a_n$ is not in $(0,1)$.",
+          "sourceSha256": "1a5774b5858a59ae5f33c9771abde5ca41354be46ff6e3daad4f05ac7dc87e5f",
+          "translation": "(b) 找一个收敛数列 $\\{a_n\\}$，使所有项都在 $(0,1)$ 中，但 $\\lim\\limits_{n\\to\\infty}a_n$ 不在 $(0,1)$ 中。"
+        },
+        {
+          "id": "p465-b19",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p465-b20",
+          "source": "Suppose that $f$ is continuous and that the sequence",
+          "sourceSha256": "9096a06b8fdf4af2d5781f31d79412280291a08b4706f13bf9455b9b103f4a43",
+          "translation": "假设 $f$ 连续，并且数列"
+        },
+        {
+          "id": "p465-b21",
+          "source": "$$x,\\ f(x),\\ f(f(x)),\\ f(f(f(x))),\\ldots$$",
+          "sourceSha256": "dbea1c80c69f86aa0ad8f99b8d9025fd53054e00edf9702d5d37ba9605b42564"
+        },
+        {
+          "id": "p465-b22",
+          "source": "converges to $l$. Prove that $l$ is a “fixed point” for $f$, i.e., $f(l)=l$. Hint: Two special cases have occurred already.",
+          "sourceSha256": "2e13c555a5eff73694c4cb20976383738dde663daec8ddf1c47e03794ea268ae",
+          "translation": "收敛于 $l$。证明 $l$ 是 $f$ 的一个“不动点”，即 $f(l)=l$。提示：两个特殊情形已经出现过。"
+        },
+        {
+          "id": "p465-b23",
+          "source": "### 21.",
+          "sourceSha256": "d908d228d4604b1dd2f9729637ede6c5eb59c7f91a5ba1fe1a64623fe814b30d"
+        },
+        {
+          "id": "p465-b24",
+          "source": "(a) Suppose that $f$ is continuous on $[0,1]$ and that $0\\le f(x)\\le1$ for all $x$ in $[0,1]$. Problem 7-11 shows that $f$ has a fixed point (in the terminology of Problem 20). If $f$ is *increasing*, a much stronger statement can be made: For any $x$ in $[0,1]$, the sequence",
+          "sourceSha256": "53a11be0fea78d4c3f8f03d68001d127a4d3d8744c2cc69c7a275df0b3f7f942",
+          "translation": "(a) 假设 $f$ 在 $[0,1]$ 上连续，并且对于 $[0,1]$ 中的所有 $x$，都有 $0\\le f(x)\\le1$。习题 7-11 表明，$f$ 有一个不动点（使用习题 20 中的术语）。如果 $f$ *递增*，还可以得出强得多的结论：对于 $[0,1]$ 中的任意 $x$，数列"
+        },
+        {
+          "id": "p465-b25",
+          "source": "$$x,\\ f(x),\\ f(f(x)),\\ldots$$",
+          "sourceSha256": "c24fad48f6519f45c1b077744f3acf4b0add6b9f8a241f779375b2d0ba6da108"
+        },
+        {
+          "id": "p465-b26",
+          "source": "has a limit (which is necessarily a fixed point, by Problem 20). Prove this assertion, by examining the behavior of the sequence for $f(x)>x$ and $f(x)<x$, or by looking at Figure 10. A diagram of this sort is used in Littlewood’s *Mathematician’s Miscellany* to preach the value of drawing pictures: “For the professional the only proof needed is [this Figure].”",
+          "sourceSha256": "11fd2910418d9f7e9f796c93f595ff050db80b2c73f971d9917c4beb30100899",
+          "translation": "都有极限（根据习题 20，这个极限必定是不动点）。通过分别考察 $f(x)>x$ 和 $f(x)<x$ 时数列的行为，或者观察图 10，证明这一断言。利特尔伍德在《数学家杂记》中使用了这样一幅图来宣扬画图的价值：“对专业人士来说，所需的唯一证明就是［这幅图］。”"
+        },
+        {
+          "id": "p465-b27",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:250px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"45 1281 250 216\" role=\"img\" aria-label=\"Figure 10\"><image href=\"pages/book/0484.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 10</figcaption>\n</figure>",
+          "sourceSha256": "79e35ba67ffb2ffa64ada93ccb1486c8295812e9d497f05c0d9cb3d924397078"
+        }
+      ]
+    },
+    {
+      "printed": 466,
+      "sourceSha256": "6dd62f7c38fbefcfddcc6f2103e377ef365dad2155dfd7a2a40c510892da1dfb",
+      "blocks": [
+        {
+          "id": "p466-b1",
+          "source": "\\*(b) Suppose that $f$ and $g$ are two continuous functions on $[0,1]$, with $0\\le f(x)\\le1$ and $0\\le g(x)\\le1$ for all $x$ in $[0,1]$, which satisfy $f\\circ g=g\\circ f$. Suppose, moreover, that $f$ is increasing. Show that $f$ and $g$ have a common fixed point; in other words, there is a number $l$ such that $f(l)=l=g(l)$. Hint: Begin by choosing a fixed point for $g$.",
+          "sourceSha256": "8be52751e20782a171af5698f17659a3d5e91aa9c452cd9cbc7c4a16ae8498ae",
+          "translation": "\\*(b) 假设 $f$ 和 $g$ 是 $[0,1]$ 上的两个连续函数，对于 $[0,1]$ 中的所有 $x$，都有 $0\\le f(x)\\le1$ 和 $0\\le g(x)\\le1$，并且满足 $f\\circ g=g\\circ f$。再假设 $f$ 递增。证明 $f$ 和 $g$ 有一个公共不动点；换句话说，存在一个数 $l$，使得 $f(l)=l=g(l)$。提示：先选取 $g$ 的一个不动点。"
+        },
+        {
+          "id": "p466-b2",
+          "source": "For a long time mathematicians amused themselves by asking whether the conclusion of part (b) holds without the assumption that $f$ is increasing, but two independent announcements in the *Notices* of the American Mathematical Society, Volume 14, Number 2 give counterexamples, so it was probably a pretty silly problem all along.",
+          "sourceSha256": "6eb4263ddd342336da440c46e40afa8c3d25ec607ad309ec7da5ee00312b9d29",
+          "translation": "很长一段时间里，数学家们乐于追问：如果不假设 $f$ 递增，(b) 的结论是否仍然成立？但美国数学会《通报》第 14 卷第 2 期的两份独立公告给出了反例，所以也许这个问题从头到尾都相当无聊。"
+        },
+        {
+          "id": "p466-b3",
+          "source": "The trick in Problem 20 is really much more valuable than Problem 20 might suggest, and some of the most important “fixed point theorems” depend upon looking at sequences of the form $x,f(x),f(f(x)),\\ldots$. A special, but representative, case of one such theorem is treated in Problem 23 (for which the next problem is preparation).",
+          "sourceSha256": "2f75729bef7ec94705f20f8386f5b95bff555b232fa9f9fddb9e90e5734b4de8",
+          "translation": "习题 20 中的技巧实际上比这道题本身所显示的有价值得多，一些最重要的“不动点定理”正是通过考察形如 $x,f(x),f(f(x)),\\ldots$ 的数列得到的。习题 23 将处理其中一个定理的特殊而有代表性的情形（下一题是为它作准备）。"
+        },
+        {
+          "id": "p466-b4",
+          "source": "### 22.",
+          "sourceSha256": "ce146eae8f2fb4609bfd66abfe5008807912c8203d51e87d6ba4e238e91e9395"
+        },
+        {
+          "id": "p466-b5",
+          "source": "(a) Use Problem 2-5 to show that if $c\\ne1$, then",
+          "sourceSha256": "f9893c4290827b226d924bbb4166b2af46acf2ce226d10b51976cde87c66f052",
+          "translation": "(a) 利用习题 2-5 说明：如果 $c\\ne1$，那么"
+        },
+        {
+          "id": "p466-b6",
+          "source": "$$c^m+c^{m+1}+\\cdots+c^n=\\frac{c^m-c^{n+1}}{1-c}.$$",
+          "sourceSha256": "7cb18a93a4364d205fd8aad98b4bc3942024c0265fb5bd148548273cba610df0"
+        },
+        {
+          "id": "p466-b7",
+          "source": "(b) Suppose that $|c|<1$. Prove that",
+          "sourceSha256": "8b3fa6fa87bde0b695684bc27c2a481e9c6684e9f90c01024ed0b0421b997830",
+          "translation": "(b) 假设 $|c|<1$。证明"
+        },
+        {
+          "id": "p466-b8",
+          "source": "$$\\lim_{m,n\\to\\infty}c^m+\\cdots+c^n=0.$$",
+          "sourceSha256": "60d4a81734d8816797b94ed4910f59a715845bf6f6bb1e5771529ec533158ba8"
+        },
+        {
+          "id": "p466-b9",
+          "source": "(c) Suppose that $\\{x_n\\}$ is a sequence with $|x_n-x_{n+1}|\\le c^n$, where $0<c<1$. Prove that $\\{x_n\\}$ is a Cauchy sequence.",
+          "sourceSha256": "c3fc53ab1c95324603019bac5b93e6720f03a4ce84234fbf08a58f40566e8e7c",
+          "translation": "(c) 假设数列 $\\{x_n\\}$ 满足 $|x_n-x_{n+1}|\\le c^n$，其中 $0<c<1$。证明 $\\{x_n\\}$ 是柯西数列。"
+        },
+        {
+          "id": "p466-b10",
+          "source": "### 23.",
+          "sourceSha256": "fcb56ced3fb587a05b1e3f24ccfaee441ca9356f2d715d9e8ba59a341ae068ec"
+        },
+        {
+          "id": "p466-b11",
+          "source": "Suppose that $f$ is a function on $\\mathbf R$ such that",
+          "sourceSha256": "44e9d84250ae784f6414c081562af75fcd0287f581d9d91b300981222acf2b66",
+          "translation": "假设 $f$ 是 $\\mathbf R$ 上的一个函数，并且"
+        },
+        {
+          "id": "p466-b12",
+          "source": "$$|f(x)-f(y)|\\le c|x-y|,\\quad\\text{for all }x\\text{ and }y,\\tag{*}$$",
+          "sourceSha256": "f0a7e6d92fcace8ebe71866712e1f67cfb4e23f35bcd6e759e1834be702479cc"
+        },
+        {
+          "id": "p466-b13",
+          "source": "where $c<1$. (Such a function is called a *contraction*.)",
+          "sourceSha256": "acf69860da6d2e12c045115e1a00d350c39773a1fb04db299a8337d6734c66ee",
+          "translation": "其中 $c<1$。（这样的函数称为*压缩映射*。）"
+        },
+        {
+          "id": "p466-b14",
+          "source": "(a) Prove that $f$ is continuous.",
+          "sourceSha256": "b0f0465f9a4e820d738fe0f74ced8d63a04dfb0818c57acf6e9992ac806f9d03",
+          "translation": "(a) 证明 $f$ 连续。"
+        },
+        {
+          "id": "p466-b15",
+          "source": "(b) Prove that $f$ has at most one fixed point.",
+          "sourceSha256": "246fb5959c207e9cd505ffaf9914e24abb72260a47e8f12a59271eb26c1e8e2f",
+          "translation": "(b) 证明 $f$ 至多有一个不动点。"
+        },
+        {
+          "id": "p466-b16",
+          "source": "(c) By considering the sequence",
+          "sourceSha256": "3a4f85514a14a75dd1ff7c1185deff8dfbb2e9bd03005169350c8796b5535c92",
+          "translation": "(c) 通过考虑数列"
+        },
+        {
+          "id": "p466-b17",
+          "source": "$$x,\\ f(x),\\ f(f(x)),\\ldots,$$",
+          "sourceSha256": "bd2905c79bc1e3f99a40ef04631fe18a37340e986b85ab2c42d046e8d81fb7d3"
+        },
+        {
+          "id": "p466-b18",
+          "source": "for any $x$, prove that $f$ does have a fixed point. (This result, in a more general setting, is known as the “contraction lemma.”)",
+          "sourceSha256": "1a056820ba343195c42fcfd97086da075e47f50b958d903e891617d4e05a97fe",
+          "translation": "（其中 $x$ 任取），证明 $f$ 确实有一个不动点。（这一结果在更一般的背景下称为“压缩引理”。）"
+        },
+        {
+          "id": "p466-b19",
+          "source": "### 24.",
+          "sourceSha256": "1fb8b304cd861a73c12374de97d67ebaec8b5558d02cf56f4db6adadfe75d8aa"
+        },
+        {
+          "id": "p466-b20",
+          "source": "(a) Prove that if $f$ is differentiable and $|f'|<1$, then $f$ has at most one fixed point.",
+          "sourceSha256": "4c0990bf71cc16c2da633a443a961949fc5b7c0a3d509f7bc5444920eca467d5",
+          "translation": "(a) 证明：如果 $f$ 可导，并且 $|f'|<1$，那么 $f$ 至多有一个不动点。"
+        },
+        {
+          "id": "p466-b21",
+          "source": "(b) Prove that if $|f'(x)|\\le c<1$ for all $x$, then $f$ has a fixed point.",
+          "sourceSha256": "cbcc163c7e259e783c95a7dfd4930a7fabe799288a9baf198a79c6c813767b59",
+          "translation": "(b) 证明：如果对于所有 $x$ 都有 $|f'(x)|\\le c<1$，那么 $f$ 有一个不动点。"
+        },
+        {
+          "id": "p466-b22",
+          "source": "(c) Give an example to show that the hypothesis $|f'(x)|\\le1$ is not sufficient to ensure that $f$ has a fixed point.",
+          "sourceSha256": "d1ac36eef3b1e44404b10cc712fa7df48f0b9a007b9c0b35cd393a9762a6696b",
+          "translation": "(c) 举例说明，假设 $|f'(x)|\\le1$ 不足以保证 $f$ 有不动点。"
+        },
+        {
+          "id": "p466-b23",
+          "source": "### 25.",
+          "sourceSha256": "e243042975caa2efce0a7385b48b4be10d7c1f2cfeac6357090078c2f5eb5e34"
+        },
+        {
+          "id": "p466-b24",
+          "source": "This problem is a sort of converse to the previous problem. Let $b_n$ be a sequence defined by $b_1=a$, $b_{n+1}=f(b_n)$. Prove that if $b=\\lim\\limits_{n\\to\\infty}b_n$ exists",
+          "sourceSha256": "5e3135e688c01da71c08963cb85e910373ce6fac9fb3eb71a8cdab8a7131bd2c",
+          "translation": "这道题可以看作上一题的某种逆命题。设数列 $b_n$ 由 $b_1=a$、$b_{n+1}=f(b_n)$ 定义。证明：如果 $b=\\lim\\limits_{n\\to\\infty}b_n$ 存在，"
+        }
+      ]
+    },
+    {
+      "printed": 467,
+      "sourceSha256": "d1f69bc81615c26554b5f3b2e82b8d5a9bc835de56b28507e140c36404d60bc5",
+      "blocks": [
+        {
+          "id": "p467-b1",
+          "source": "and $f'$ is continuous at $b$, then $|f'(b)|\\le1$ (provided that we don’t already have $b_n=b$ for some $n$). Hint: If $|f'(b)|>1$, then $|f'(x)|>1$ for all $x$ in an interval around $b$, and $b_n$ will be in this interval for large enough $n$. Now consider $f$ on the interval $[b,b_n]$.",
+          "sourceSha256": "19d3281b2fb51a56e74d53c3ac9e26b24f9b6d71c5d6a7a72643759f7e0b5cef",
+          "translation": "而且 $f'$ 在 $b$ 处连续，那么 $|f'(b)|\\le1$（前提是并没有某个 $n$ 使 $b_n=b$ 已经成立）。提示：如果 $|f'(b)|>1$，那么对于 $b$ 周围某个区间内的所有 $x$，都有 $|f'(x)|>1$；而当 $n$ 充分大时，$b_n$ 会落在这个区间内。现在考虑 $f$ 在区间 $[b,b_n]$ 上的情形。"
+        },
+        {
+          "id": "p467-b2",
+          "source": "### 26.",
+          "sourceSha256": "e0a0eda9f4171fbdc2f78618f10a33fea6c704a744eb8323db3535cb65310a23"
+        },
+        {
+          "id": "p467-b3",
+          "source": "This problem investigates for which $a>0$ the symbol",
+          "sourceSha256": "bd21e92d87ebd7372e87d32e242ab4dfc9c8a2944fd696fc58ff98e92d780b11",
+          "translation": "本题研究对于哪些 $a>0$，符号"
+        },
+        {
+          "id": "p467-b4",
+          "source": "$$a^{a^{a^{\\cdot^{\\cdot^\\cdot}}}}$$",
+          "sourceSha256": "c3fed3b49e9ab786aa61ea6f119fad404cc714fe7d6087bba113afd11ecc99ac"
+        },
+        {
+          "id": "p467-b5",
+          "source": "makes sense. In other words, if we define $b_1=a$, $b_{n+1}=a^{b_n}$, when does $b=\\lim\\limits_{n\\to\\infty}b_n$ exist? Note that if $b$ exists, then $a^b=b$ by Problem 20.",
+          "sourceSha256": "c31f3ec5e3ca873b3379245d4f19a987f480107798a0d5e4b6e5532a7ee389a4",
+          "translation": "具有意义。换句话说，如果定义 $b_1=a$、$b_{n+1}=a^{b_n}$，那么 $b=\\lim\\limits_{n\\to\\infty}b_n$ 何时存在？注意，如果 $b$ 存在，那么根据习题 20，有 $a^b=b$。"
+        },
+        {
+          "id": "p467-b6",
+          "source": "(a) If $b$ exists, then $a$ can be written in the form $y^{1/y}$ for some $y$. Describe the graph of $g(y)=y^{1/y}$ and conclude that $0<a\\le e^{1/e}$.",
+          "sourceSha256": "56708c648beb6654de9dd6d7e9b2e8cc74010d2c8351cd8a12c62604dda8ad84",
+          "translation": "(a) 如果 $b$ 存在，那么对于某个 $y$，$a$ 可以写成 $y^{1/y}$ 的形式。描述 $g(y)=y^{1/y}$ 的图像，并由此得出 $0<a\\le e^{1/e}$。"
+        },
+        {
+          "id": "p467-b7",
+          "source": "(b) Suppose that $1\\le a\\le e^{1/e}$. Show that $\\{b_n\\}$ is increasing and also $b_n\\le e$. This proves that $b$ exists (and also that $b\\le e$).",
+          "sourceSha256": "3bcd9db77a2c442bb5816032dd2b85b20f2d9b0bba766ed8970979275ae1eb32",
+          "translation": "(b) 假设 $1\\le a\\le e^{1/e}$。证明 $\\{b_n\\}$ 递增，而且 $b_n\\le e$。这就证明了 $b$ 存在（并且 $b\\le e$）。"
+        },
+        {
+          "id": "p467-b8",
+          "source": "The analysis for $a<1$ is more difficult.",
+          "sourceSha256": "0088f7068615c0f7a0b52f1df6a1c6cd81d8080063bc11678eede2ac9956e86e",
+          "translation": "$a<1$ 时的分析要困难一些。"
+        },
+        {
+          "id": "p467-b9",
+          "source": "(c) Using Problem 25, show that if $b$ exists, then $e^{-1}\\le b\\le e$. Then show that $e^{-e}\\le a\\le e^{1/e}$.",
+          "sourceSha256": "4f758cf8bf358040db01254a18b3c2ab4de67844b6cc845e5609ad010017b43c",
+          "translation": "(c) 利用习题 25 证明：如果 $b$ 存在，那么 $e^{-1}\\le b\\le e$。然后证明 $e^{-e}\\le a\\le e^{1/e}$。"
+        },
+        {
+          "id": "p467-b10",
+          "source": "From now on we will suppose that $e^{-e}\\le a<1$.",
+          "sourceSha256": "7cceda7b7fe366dcf93eda13cce2c54961ef2d92133ddbdbb92970717d3305c1",
+          "translation": "从现在起，我们假设 $e^{-e}\\le a<1$。"
+        },
+        {
+          "id": "p467-b11",
+          "source": "(d) Show that the function",
+          "sourceSha256": "e9241cdfc538322052d6c0ac4be7cddd7dfabed5e34a504bf4c58ab10eb7415e",
+          "translation": "(d) 证明函数"
+        },
+        {
+          "id": "p467-b12",
+          "source": "$$f(x)=\\frac{a^x}{\\log x}$$",
+          "sourceSha256": "e003ab8d4526764777aabf19c947ec2225b5364cc4ea60227147b47e71579d25"
+        },
+        {
+          "id": "p467-b13",
+          "source": "is decreasing on the interval $(0,1)$.",
+          "sourceSha256": "73aedf9afbba25726ed44ca6418d2f4122ddccfcc3a21e06127aa68af5c546dc",
+          "translation": "在区间 $(0,1)$ 上递减。"
+        },
+        {
+          "id": "p467-b14",
+          "source": "(e) Let $b$ be the unique number such that $a^b=b$. Show that $a<b<1$. Using part (e), show that if $0<x<b$, then $x<a^{a^x}<b$. Conclude that $l=\\lim\\limits_{n\\to\\infty}a_{2n+1}$ exists and that $a^{a^l}=l$.",
+          "sourceSha256": "e3ca0c20dabc75801c81fd147283937f61a86d78f4edf688e9c5cf8cb9507c9b",
+          "translation": "(e) 设 $b$ 是使 $a^b=b$ 成立的唯一的数。证明 $a<b<1$。利用 (e) 证明：如果 $0<x<b$，那么 $x<a^{a^x}<b$。由此得出 $l=\\lim\\limits_{n\\to\\infty}a_{2n+1}$ 存在，并且 $a^{a^l}=l$。"
+        },
+        {
+          "id": "p467-b15",
+          "source": "(f) Using part (e) again, show that $l=b$.",
+          "sourceSha256": "6939e13ee465bdb881a316253f5506abe02afa74ad0518c3fb193af32588aba9",
+          "translation": "(f) 再次利用 (e)，证明 $l=b$。"
+        },
+        {
+          "id": "p467-b16",
+          "source": "(g) Finally, show that $\\lim\\limits_{n\\to\\infty}a_{2n+2}=b$, so that $\\lim\\limits_{n\\to\\infty}b_n=b$.",
+          "sourceSha256": "a3bb7e04a184676393ee36c6eb12f33a0b35e4cd12f44c4b89f5bdc3dd0d5e2c",
+          "translation": "(g) 最后，证明 $\\lim\\limits_{n\\to\\infty}a_{2n+2}=b$，从而 $\\lim\\limits_{n\\to\\infty}b_n=b$。"
+        },
+        {
+          "id": "p467-b17",
+          "source": "### 27.",
+          "sourceSha256": "01de3c63fd790d0deac18299d79a16ecfff7727c478f7c8964568f07245d3eec"
+        },
+        {
+          "id": "p467-b18",
+          "source": "Let $\\{x_n\\}$ be a sequence which is bounded, and let",
+          "sourceSha256": "0133aa5f3c74079d6ecc01df426ec7525c68898b768f37c0c1563abc503b8581",
+          "translation": "设 $\\{x_n\\}$ 是一个有界数列，并令"
+        },
+        {
+          "id": "p467-b19",
+          "source": "$$y_n=\\sup\\{x_n,x_{n+1},x_{n+2},\\ldots\\}.$$",
+          "sourceSha256": "9b68382cdcaa8fc745c6578107922973098b8aee74ac69b2efe98f682c45c768"
+        },
+        {
+          "id": "p467-b20",
+          "source": "(a) Prove that the sequence $\\{y_n\\}$ converges. The limit $\\lim\\limits_{n\\to\\infty}y_n$ is denoted by $\\overline{\\lim}\\limits_{n\\to\\infty}x_n$ or $\\limsup\\limits_{n\\to\\infty}x_n$, and called the **limit superior**, or **upper limit**, of the sequence $\\{x_n\\}$.",
+          "sourceSha256": "cc501689ddab6a834e2069b71424bd52c1e088e0a93b78e0b958f0e77e30f06f",
+          "translation": "(a) 证明数列 $\\{y_n\\}$ 收敛。极限 $\\lim\\limits_{n\\to\\infty}y_n$ 记为 $\\overline{\\lim}\\limits_{n\\to\\infty}x_n$ 或 $\\limsup\\limits_{n\\to\\infty}x_n$，称为数列 $\\{x_n\\}$ 的**上极限**。"
+        },
+        {
+          "id": "p467-b21",
+          "source": "(b) Find $\\overline{\\lim}\\limits_{n\\to\\infty}x_n$ for each of the following:",
+          "sourceSha256": "10114bd1c1e6de1f85792c103973d8b3809620476616d159960202b4aed20dde",
+          "translation": "(b) 对以下各个数列求 $\\overline{\\lim}\\limits_{n\\to\\infty}x_n$："
+        },
+        {
+          "id": "p467-b22",
+          "source": "(i) $x_n=\\dfrac1n$.",
+          "sourceSha256": "b45fa22876b34a7f4610720cc64db95f38fa6dcd11547ad6b6d0f81314003f43"
+        },
+        {
+          "id": "p467-b23",
+          "source": "(ii) $x_n=(-1)^n\\dfrac1n$.",
+          "sourceSha256": "536561409f0a178c9e089af8763970a56b5919ab137f6460f100415d8bb56df1"
+        }
+      ]
+    },
+    {
+      "printed": 468,
+      "sourceSha256": "02335eadb94724c2529b6cb4b3dfd78e858a8a7f98c23653edd2f47a0d2889b6",
+      "blocks": [
+        {
+          "id": "p468-b1",
+          "source": "(iii) $x_n=(-1)^n\\left[1+\\dfrac1n\\right]$.",
+          "sourceSha256": "513bed50309cdef09a40506cbb9892810baf40cd3f1dd660d7fe4b5074ae002f"
+        },
+        {
+          "id": "p468-b2",
+          "source": "(iv) $x_n=\\sqrt[n]n$.",
+          "sourceSha256": "2cb29b5b6bf03f2aa0bbbb63e14f0a08ec901f2f4e96c346b4637da07fddcdf4"
+        },
+        {
+          "id": "p468-b3",
+          "source": "(c) Define $\\underline{\\lim}\\limits_{n\\to\\infty}x_n$ (or $\\liminf\\limits_{n\\to\\infty}x_n$) and prove that",
+          "sourceSha256": "840c900b2892120dd4d446566f9850991dee8559dbcf6002b50fa519ef144dee",
+          "translation": "(c) 定义 $\\underline{\\lim}\\limits_{n\\to\\infty}x_n$（或 $\\liminf\\limits_{n\\to\\infty}x_n$），并证明"
+        },
+        {
+          "id": "p468-b4",
+          "source": "$$\\underline{\\lim}_{n\\to\\infty}x_n\\le\\overline{\\lim}_{n\\to\\infty}x_n.$$",
+          "sourceSha256": "dd0bcd5eaad333e4196a52fcc6c4ed4e40b11c89721d3086c10aa5080f9db149"
+        },
+        {
+          "id": "p468-b5",
+          "source": "(d) Prove that $\\lim\\limits_{n\\to\\infty}x_n$ exists if and only if $\\overline{\\lim}\\limits_{n\\to\\infty}x_n=\\underline{\\lim}\\limits_{n\\to\\infty}x_n$ and that in this case $\\lim\\limits_{n\\to\\infty}x_n=\\overline{\\lim}\\limits_{n\\to\\infty}x_n=\\underline{\\lim}\\limits_{n\\to\\infty}x_n$.",
+          "sourceSha256": "44cd22bb3a70f0d5f77a205eb1ad4afd1a506a99852c8d6bbd4a39f60e560817",
+          "translation": "(d) 证明：$\\lim\\limits_{n\\to\\infty}x_n$ 存在，当且仅当 $\\overline{\\lim}\\limits_{n\\to\\infty}x_n=\\underline{\\lim}\\limits_{n\\to\\infty}x_n$；而且在这种情况下，$\\lim\\limits_{n\\to\\infty}x_n=\\overline{\\lim}\\limits_{n\\to\\infty}x_n=\\underline{\\lim}\\limits_{n\\to\\infty}x_n$。"
+        },
+        {
+          "id": "p468-b6",
+          "source": "(e) Recall the definition, in Problem 8-18, of $\\overline{\\lim}A$ for a bounded set $A$. Prove that if the numbers $x_n$ are distinct, then $\\overline{\\lim}\\limits_{n\\to\\infty}x_n=\\overline{\\lim}A$, where $A=\\{x_n:n\\text{ in }\\mathbf N\\}$.",
+          "sourceSha256": "5be32039becf68e0d2546de6359a6281b02d9151d5f27d4fab76e2245c57f1a3",
+          "translation": "(e) 回忆习题 8-18 中对有界集合 $A$ 的 $\\overline{\\lim}A$ 所作的定义。证明：如果各个数 $x_n$ 互不相同，那么 $\\overline{\\lim}\\limits_{n\\to\\infty}x_n=\\overline{\\lim}A$，其中 $A=\\{x_n:n\\text{ in }\\mathbf N\\}$。"
+        },
+        {
+          "id": "p468-b7",
+          "source": "### 28.",
+          "sourceSha256": "99710235075939b06c843e9bd945573c4f9f13f6f1481388af7da8a53884193f"
+        },
+        {
+          "id": "p468-b8",
+          "source": "In the Appendix to Chapter 8 we defined uniform continuity of a function on an interval. If $f(x)$ is defined only for rational $x$, this concept still makes sense: we say that $f$ is uniformly continuous on an interval if for every $\\varepsilon>0$ there is some $\\delta>0$ such that, if $x$ and $y$ are rational numbers in the interval and $|x-y|<\\delta$, then $|f(x)-f(y)|<\\varepsilon$.",
+          "sourceSha256": "4a8a4d54d06787dd908d93a395264e7b944c7e6a24da2ad2d14498eaf92a4be8",
+          "translation": "在第 8 章附录中，我们定义了函数在区间上的一致连续性。如果 $f(x)$ 只对有理数 $x$ 有定义，这个概念仍然有意义：如果对于每个 $\\varepsilon>0$，都存在某个 $\\delta>0$，使得只要 $x$ 和 $y$ 是该区间中的有理数，且 $|x-y|<\\delta$，就有 $|f(x)-f(y)|<\\varepsilon$，那么我们就说 $f$ 在这个区间上一致连续。"
+        },
+        {
+          "id": "p468-b9",
+          "source": "(a) Let $x$ be any (rational or irrational) point in the interval, and let $\\{x_n\\}$ be a sequence of *rational* points in the interval such that $\\lim\\limits_{n\\to\\infty}x_n=x$. Show that the sequence $\\{f(x_n)\\}$ converges.",
+          "sourceSha256": "3dbc477a43722ea40650a6ed2ca38c342a3d77951b863b0491cbce053590f3eb",
+          "translation": "(a) 设 $x$ 是这个区间中的任意一点（有理点或无理点），并设 $\\{x_n\\}$ 是这个区间中一个满足 $\\lim\\limits_{n\\to\\infty}x_n=x$ 的*有理*点列。证明数列 $\\{f(x_n)\\}$ 收敛。"
+        },
+        {
+          "id": "p468-b10",
+          "source": "(b) Prove that the limit of the sequence $\\{f(x_n)\\}$ doesn’t depend on the choice of the sequence $\\{x_n\\}$.",
+          "sourceSha256": "20cf0019a17f776327d361cc1d6d65bef79d4467c4a3199c660ee11b08fbab59",
+          "translation": "(b) 证明数列 $\\{f(x_n)\\}$ 的极限不依赖于数列 $\\{x_n\\}$ 的选择。"
+        },
+        {
+          "id": "p468-b11",
+          "source": "We will denote this limit by $\\bar f(x)$, so that $\\bar f$ is an extension of $f$ to the whole interval.",
+          "sourceSha256": "22bd7bc98eb769b2dd8851869585005ef7c2048d79ea52b5eee271444a2b6099",
+          "translation": "我们将这个极限记为 $\\bar f(x)$，于是 $\\bar f$ 就是 $f$ 到整个区间的延拓。"
+        },
+        {
+          "id": "p468-b12",
+          "source": "(c) Prove that the extended function $\\bar f$ is uniformly continuous on the interval.",
+          "sourceSha256": "a19a72e0f1cc43ba795bec7f85d90a384c813276375347aaa630fac1bd0fbc96",
+          "translation": "(c) 证明延拓后的函数 $\\bar f$ 在这个区间上一致连续。"
+        },
+        {
+          "id": "p468-b13",
+          "source": "### 29.",
+          "sourceSha256": "2b03e98fafcd40e8fdba5086d1753ea10425470a6703dc5959a8d997b5c69ba4"
+        },
+        {
+          "id": "p468-b14",
+          "source": "Let $a>0$, and for rational $x$ let $f(x)=a^x$, as defined in the usual elementary algebraic way. This problem shows directly that $f$ can be extended to a continuous function $\\bar f$ on the whole line. Problem 28 provides the necessary machinery.",
+          "sourceSha256": "20161ff1aff24604d9971e93b8955d083c196c4dfc2ff0a3661c17b3bae0010a",
+          "translation": "设 $a>0$，对于有理数 $x$，令 $f(x)=a^x$，其中幂按通常的初等代数方式定义。本题直接说明，$f$ 可以延拓为整个数轴上的连续函数 $\\bar f$。习题 28 提供了所需的工具。"
+        },
+        {
+          "id": "p468-b15",
+          "source": "(a) For rational $x<y$, show that $a^x<a^y$ for $a>1$ and $a^x>a^y$ for $a<1$.",
+          "sourceSha256": "6e4f4204ee0246900486465bbbf939930d1e53962e410ab8f58a0071db9e0ef8",
+          "translation": "(a) 对于有理数 $x<y$，证明：$a>1$ 时 $a^x<a^y$，而 $a<1$ 时 $a^x>a^y$。"
+        },
+        {
+          "id": "p468-b16",
+          "source": "(b) Using Problem 10, show that for any $\\varepsilon>0$ we have $|a^x-1|<\\varepsilon$ for rational numbers $x$ close enough to 0.",
+          "sourceSha256": "82fd9faf2b99815ec86d493d896cd5e8910c19a4a8b38c2fc7869d9d3bcf71ec",
+          "translation": "(b) 利用习题 10 证明：对于任意 $\\varepsilon>0$，当有理数 $x$ 充分接近 0 时，有 $|a^x-1|<\\varepsilon$。"
+        },
+        {
+          "id": "p468-b17",
+          "source": "(c) Using the equation $a^x-a^y=a^y(a^{x-y}-1)$, prove that on any closed interval $f$ is uniformly continuous, in the sense of Problem 28.",
+          "sourceSha256": "af19927ae40d6ae358aaad891b312cfee21ba2e7e0d19b2a0799acc3c1a49c4d",
+          "translation": "(c) 利用等式 $a^x-a^y=a^y(a^{x-y}-1)$，证明 $f$ 在任何闭区间上都在习题 28 的意义下一致连续。"
+        },
+        {
+          "id": "p468-b18",
+          "source": "(d) Show that the extended function $\\bar f$ of Problem 28 is increasing for $a>1$ and decreasing for $a<1$ and satisfies $\\bar f(x+y)=\\bar f(x)\\bar f(y)$.",
+          "sourceSha256": "a5ce032d5e437b2b03da4e35e5b1e07c95b5e06b41f40a266257b196f41e2e6e",
+          "translation": "(d) 证明习题 28 中延拓后的函数 $\\bar f$ 在 $a>1$ 时递增，在 $a<1$ 时递减，并且满足 $\\bar f(x+y)=\\bar f(x)\\bar f(y)$。"
+        }
+      ]
+    },
+    {
+      "printed": 469,
+      "sourceSha256": "4383ba07ea1e811661884dfa2834c06b247b847ad3c10ad0f9897a600ff4244f",
+      "blocks": [
+        {
+          "id": "p469-b1",
+          "source": "### \\*30.",
+          "sourceSha256": "167bdd116a2087adc4f5048255b176761ccc565074b4e2eac8766561c7e11e51"
+        },
+        {
+          "id": "p469-b2",
+          "source": "The Bolzano-Weierstrass Theorem is usually stated, and also proved, quite differently than in the text—the classical statement uses the notion of limit points. A point $x$ is a **limit point** of the set $A$ if for every $\\varepsilon>0$ there is a point $a$ in $A$ with $|x-a|<\\varepsilon$ but $x\\ne a$.",
+          "sourceSha256": "5b839322b4a41471acf4eb43b2b140775cfd4e13929112db0a01e747eec2eb2f",
+          "translation": "博尔查诺–魏尔斯特拉斯定理通常的表述和证明都与正文中的方式很不相同——经典表述使用极限点的概念。如果对于每个 $\\varepsilon>0$，在 $A$ 中都存在一点 $a$，满足 $|x-a|<\\varepsilon$ 但 $x\\ne a$，那么就称点 $x$ 是集合 $A$ 的一个**极限点**。"
+        },
+        {
+          "id": "p469-b3",
+          "source": "(a) Find all limit points of the following sets.",
+          "sourceSha256": "77e4fabc0e9b66f25c00b34705d7441b39ad5cde3c82cd44322b074504f38009",
+          "translation": "(a) 求下列集合的所有极限点。"
+        },
+        {
+          "id": "p469-b4",
+          "source": "(i) $\\left\\{\\dfrac1n:n\\text{ in }\\mathbf N\\right\\}$.",
+          "sourceSha256": "dfa1c7523e7d1034c2203547ca7bcd59419d8c157ffcaf9129b4da87b6952bab"
+        },
+        {
+          "id": "p469-b5",
+          "source": "(ii) $\\left\\{\\dfrac1n+\\dfrac1m:n\\text{ and }m\\text{ in }\\mathbf N\\right\\}$.",
+          "sourceSha256": "6b4879c67f7483c65d07d2e2f3550eb36459f330c5e774183fba1072abee996d"
+        },
+        {
+          "id": "p469-b6",
+          "source": "(iii) $\\left\\{(-1)^n\\left[1+\\dfrac1n\\right]:n\\text{ in }\\mathbf N\\right\\}$.",
+          "sourceSha256": "7b54035de7b2b85caa26b9a4f5be3367779ebda1cb257550fe51489b745f6f7b"
+        },
+        {
+          "id": "p469-b7",
+          "source": "(iv) $\\mathbf Z$.",
+          "sourceSha256": "269ce01b6bdd29bb4bb2f3eb89e52182915743707d9aa78f90dc1bb8df8f37f1"
+        },
+        {
+          "id": "p469-b8",
+          "source": "(v) $\\mathbf Q$.",
+          "sourceSha256": "563b2e800f6a2536dbf6faeca4bb491640925ae57f595e999cc98ce5d52204be"
+        },
+        {
+          "id": "p469-b9",
+          "source": "(b) Prove that $x$ is a limit point of $A$ if and only if for every $\\varepsilon>0$ there are infinitely many points $a$ of $A$ satisfying $|x-a|<\\varepsilon$.",
+          "sourceSha256": "dc7dbc7afe8eadc9333d1ff5ce62a618a7bf2a43a4abe645ca40a48eb3b0947f",
+          "translation": "(b) 证明：$x$ 是 $A$ 的极限点，当且仅当对于每个 $\\varepsilon>0$，在 $A$ 中都有无穷多个点 $a$ 满足 $|x-a|<\\varepsilon$。"
+        },
+        {
+          "id": "p469-b10",
+          "source": "(c) Prove that $\\overline{\\lim}A$ is the largest limit point of $A$, and $\\underline{\\lim}A$ the smallest.",
+          "sourceSha256": "0055bcafcc545b8d2878a30c597d8f250500a3ec305ed035ea9fdb856129b4fd",
+          "translation": "(c) 证明 $\\overline{\\lim}A$ 是 $A$ 的最大极限点，而 $\\underline{\\lim}A$ 是其最小极限点。"
+        },
+        {
+          "id": "p469-b11",
+          "source": "The usual form of the Bolzano-Weierstrass Theorem states that if $A$ is an infinite set of numbers contained in a closed interval $[a,b]$, then some point of $[a,b]$ is a limit point of $A$. Prove this in two ways:",
+          "sourceSha256": "d7caca5c12eca5be0ac85d72f1c8dc3dc0b4de4b4bf958f9b281d81d0b33d8f6",
+          "translation": "博尔查诺–魏尔斯特拉斯定理的通常形式是：如果 $A$ 是包含在闭区间 $[a,b]$ 中的一个无穷数集，那么 $[a,b]$ 中的某个点是 $A$ 的极限点。用以下两种方法证明它："
+        },
+        {
+          "id": "p469-b12",
+          "source": "(d) Using the form already proved in the text. Hint: Since $A$ is infinite, there are distinct numbers $x_1,x_2,x_3,\\ldots$ in $A$.",
+          "sourceSha256": "bbf9175b58c3316703c12d2efcc32d70cf0f55be46e76f6428730e626a1217dd",
+          "translation": "(d) 使用正文中已经证明的形式。提示：由于 $A$ 是无穷集，$A$ 中存在互不相同的数 $x_1,x_2,x_3,\\ldots$。"
+        },
+        {
+          "id": "p469-b13",
+          "source": "(e) Using the Nested Intervals Theorem. Hint: If $[a,b]$ is divided into two intervals, at least one must contain infinitely many points of $A$.",
+          "sourceSha256": "e12604a83c936b3ec9f852736efae3688783cc930b34e415e7403300093799bd",
+          "translation": "(e) 使用闭区间套定理。提示：如果把 $[a,b]$ 分成两个区间，那么至少有一个区间包含 $A$ 中无穷多个点。"
+        },
+        {
+          "id": "p469-b14",
+          "source": "### 31.",
+          "sourceSha256": "c2a230851d457202448280e05f5df5e0c9dc069d235a5c511aa1e04b450cf4ed"
+        },
+        {
+          "id": "p469-b15",
+          "source": "(a) Use the Bolzano-Weierstrass Theorem to prove that if $f$ is continuous on $[a,b]$, then $f$ is bounded above on $[a,b]$. Hint: If $f$ is not bounded above, then there are points $x_n$ in $[a,b]$ with $f(x_n)>n$.",
+          "sourceSha256": "344335b1bd74c8d1285586e54b5eff7d77c2c0c4f110ec6ccd70e7cfa509e1be",
+          "translation": "(a) 利用博尔查诺–魏尔斯特拉斯定理证明：如果 $f$ 在 $[a,b]$ 上连续，那么 $f$ 在 $[a,b]$ 上有上界。提示：如果 $f$ 没有上界，那么 $[a,b]$ 中存在点 $x_n$，使得 $f(x_n)>n$。"
+        },
+        {
+          "id": "p469-b16",
+          "source": "(b) Also use the Bolzano-Weierstrass Theorem to prove that if $f$ is continuous on $[a,b]$, then $f$ is uniformly continuous on $[a,b]$ (see Chapter 8, Appendix).",
+          "sourceSha256": "86c5c28041baeb50e832b7bf140b1f04cb48e7f76cd8060cafc5ca0b8a7ff796",
+          "translation": "(b) 同样利用博尔查诺–魏尔斯特拉斯定理证明：如果 $f$ 在 $[a,b]$ 上连续，那么 $f$ 在 $[a,b]$ 上一致连续（见第 8 章附录）。"
+        },
+        {
+          "id": "p469-b17",
+          "source": "### \\*\\*32.",
+          "sourceSha256": "45c04c72e997ae36e11345a201274332f54bc02350e51856365635e3152c0a13"
+        },
+        {
+          "id": "p469-b18",
+          "source": "(a) Let $\\{a_n\\}$ be the sequence",
+          "sourceSha256": "6041ecad702b5c771807b31b07e98c1da8329e5f218f1f5f112660939877cbb2",
+          "translation": "(a) 设 $\\{a_n\\}$ 为数列"
+        },
+        {
+          "id": "p469-b19",
+          "source": "$$\\frac12,\\ \\frac13,\\ \\frac23,\\ \\frac14,\\ \\frac24,\\ \\frac34,\\ \\frac15,\\ \\frac25,\\ \\frac35,\\ \\frac45,\\ \\frac16,\\ \\frac26,\\ldots.$$",
+          "sourceSha256": "a3a8c0b04fe63d4942d0f4180f3c460e9f5329e43a416244f64ef487da457909"
+        },
+        {
+          "id": "p469-b20",
+          "source": "Suppose that $0\\le a<b\\le1$. Let $N(n;a,b)$ be the number of integers $j\\le n$ such that $a_j$ is in $(a,b)$. (Thus $N(2;\\frac13,\\frac23)=2$, and $N(4;\\frac13,\\frac23)=3$.) Prove that",
+          "sourceSha256": "4c588c7a9f8fd6b6921ef2c70e29f7df0c90294e0004dbda795933331568278f",
+          "translation": "假设 $0\\le a<b\\le1$。令 $N(n;a,b)$ 为满足以下条件的整数 $j\\le n$ 的个数：$a_j$ 属于 $(a,b)$。（因此 $N(2;\\frac13,\\frac23)=2$，且 $N(4;\\frac13,\\frac23)=3$。）证明"
+        },
+        {
+          "id": "p469-b21",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{N(n;a,b)}n=b-a.$$",
+          "sourceSha256": "dcb1f39681e9a334c69f11caa950afb46b2c4d09bc019ca9b60b41128243ca92"
+        },
+        {
+          "id": "p469-b22",
+          "source": "(b) A sequence $\\{a_n\\}$ of numbers in $[0,1]$ is called **uniformly distributed** in $[0,1]$ if",
+          "sourceSha256": "678cbf4856a477b96da796f7acb10408bfb3261094c800011cc6b312911198fd",
+          "translation": "(b) 如果满足下式，就称 $[0,1]$ 中的数列 $\\{a_n\\}$ 在 $[0,1]$ 中**均匀分布**："
+        },
+        {
+          "id": "p469-b23",
+          "source": "$$\\lim_{n\\to\\infty}\\frac{N(n;a,b)}n=b-a$$",
+          "sourceSha256": "1871f216371e8ce7e71d3c50cf860d62d49392cf37bb6e7063a442276ce4bdb0"
+        }
+      ]
+    },
+    {
+      "printed": 470,
+      "sourceSha256": "03b3f6e737c79815e59b0e06834a4dc0e0b794e399cf10a5950eac414692df94",
+      "blocks": [
+        {
+          "id": "p470-b1",
+          "source": "for all $a$ and $b$ with $0\\le a<b\\le1$. Prove that if $s$ is a step function defined on $[0,1]$, and $\\{a_n\\}$ is uniformly distributed in $[0,1]$, then",
+          "sourceSha256": "2453d7c488833822716036ad6a089a3b31845d7daf4f7c69090ce8003e08c082",
+          "translation": "其中，等式对所有满足 $0\\le a<b\\le1$ 的 $a$ 和 $b$ 都成立。证明：如果 $s$ 是定义在 $[0,1]$ 上的阶梯函数，而 $\\{a_n\\}$ 在 $[0,1]$ 中均匀分布，那么"
+        },
+        {
+          "id": "p470-b2",
+          "source": "$$\\int_0^1s=\\lim_{n\\to\\infty}\\frac{s(a_1)+\\cdots+s(a_n)}n.$$",
+          "sourceSha256": "36742d97f3ee03f109b2b28f3ceb417642537119aab8b4c9bbfea1f114c42bdf"
+        },
+        {
+          "id": "p470-b3",
+          "source": "(c) Prove that if $\\{a_n\\}$ is uniformly distributed in $[0,1]$ and $f$ is integrable on $[0,1]$, then",
+          "sourceSha256": "2a3c8e36e4b5a4fd2d39ab2d728252efe7db86863bed7cdc023615ed0d5abe86",
+          "translation": "(c) 证明：如果 $\\{a_n\\}$ 在 $[0,1]$ 中均匀分布，而 $f$ 在 $[0,1]$ 上可积，那么"
+        },
+        {
+          "id": "p470-b4",
+          "source": "$$\\int_0^1f=\\lim_{n\\to\\infty}\\frac{f(a_1)+\\cdots+f(a_n)}n.$$",
+          "sourceSha256": "3cfb9688d41494ccd5ae1cb13712cbcc6229a525327917331fc33d1767e92741"
+        },
+        {
+          "id": "p470-b5",
+          "source": "### \\*\\*33.",
+          "sourceSha256": "50ee50d72006b5652ba6ef50f9471b8018a250ef831854aaeb636682ca006ce3"
+        },
+        {
+          "id": "p470-b6",
+          "source": "(a) Let $f$ be a function defined on $[0,1]$ such that $\\lim\\limits_{y\\to a}f(y)$ exists for all $a$ in $[0,1]$. For any $\\varepsilon>0$ prove that there are only finitely many points $a$ in $[0,1]$ with $|\\lim\\limits_{y\\to a}f(y)-f(a)|>\\varepsilon$. Hint: Show that the set of such points cannot have a limit point $x$, by showing that $\\lim\\limits_{y\\to x}f(y)$ could not exist.",
+          "sourceSha256": "1a2ba26ae90c7b5abb1890de3cd35425736e70fcc345020aca82e067d22332c4",
+          "translation": "(a) 设 $f$ 是定义在 $[0,1]$ 上的函数，对于 $[0,1]$ 中的所有 $a$，$\\lim\\limits_{y\\to a}f(y)$ 都存在。对于任意 $\\varepsilon>0$，证明 $[0,1]$ 中只有有限多个点 $a$ 满足 $|\\lim\\limits_{y\\to a}f(y)-f(a)|>\\varepsilon$。提示：证明这些点所成的集合不可能有极限点 $x$，方法是说明那样一来 $\\lim\\limits_{y\\to x}f(y)$ 就不可能存在。"
+        },
+        {
+          "id": "p470-b7",
+          "source": "(b) Prove that, in the terminology of Problem 21-5, the set of points where $f$ is discontinuous is countable. This finally answers the question of Problem 6-17: If $f$ has only removable discontinuities, then $f$ is continuous except at a countable set of points, and in particular, $f$ cannot be discontinuous everywhere.",
+          "sourceSha256": "a42e4ca8c1811154b100e0e32a9b3dbc31c8f0af1d06eabbb4798a3453dde81c",
+          "translation": "(b) 使用习题 21-5 的术语，证明 $f$ 的不连续点集是可数的。这终于回答了习题 6-17 中的问题：如果 $f$ 只有可去间断点，那么 $f$ 除了一个可数点集之外处处连续；特别地，$f$ 不可能处处不连续。"
+        }
+      ]
+    }
+  ]
+}

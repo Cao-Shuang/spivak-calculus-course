@@ -1,0 +1,1357 @@
+{
+  "chapter": 29,
+  "language": "zh-CN",
+  "sourceSha256": "9064d4aeabcc12822880284fe6fa216ed66bcafa5dc78f819afddad7aa34c2d6",
+  "paragraphCount": 186,
+  "pages": [
+    {
+      "printed": 588,
+      "sourceSha256": "afc42e01dc72c825b2c29197fe83252b01515e8e800a527ab8cb2a4c3862b6e7",
+      "blocks": [
+        {
+          "id": "p588-b1",
+          "source": "# CHAPTER 29\n# CONSTRUCTION OF THE REAL NUMBERS",
+          "sourceSha256": "daba990d8395d80ef04026e836b791c8739196686f36b2ad6ca7a796b6edc2a8",
+          "translation": "# 第 29 章\n# 实数的构造"
+        },
+        {
+          "id": "p588-b2",
+          "source": "The mass of drudgery which this chapter necessarily contains is relieved by one truly first-rate idea. In order to prove that a complete ordered field exists we will have to explicitly describe one in detail; verifying conditions (1)–(10) for an ordered field will be a straightforward ordeal, but the description of the field itself, of the elements in it, is ingenious indeed.",
+          "sourceSha256": "49bb0efb6fc8d1ae3ba50cdabff003955ac9ef31d63d6bc2fefe50bd7b3a86b4",
+          "translation": "本章不可避免地包含大量繁琐工作，不过有一个真正一流的思想，使这些劳作不至于索然无味。为了证明完备有序域存在，我们必须明确而详细地描述一个这样的域；验证有序域的条件 (1)–(10) 将是一场直接而乏味的考验，但域本身以及其中元素的描述，确实精妙。"
+        },
+        {
+          "id": "p588-b3",
+          "source": "At our disposal is the set of rational numbers, and from this raw material it is necessary to produce the field which will ultimately be called the real numbers. To the uninitiated this must seem utterly hopeless—if only the rational numbers are known, where are the others to come from? By now we have had enough experience to realize that the situation may not be quite so hopeless as that casual consideration suggests. The strategy to be adopted in our construction has already been used effectively for defining functions and complex numbers. Instead of trying to determine the “real nature” of these concepts, we settled for a definition that described enough about them to determine their mathematical properties completely.",
+          "sourceSha256": "a8dff411edcf4cba7758924e1adab3f0161fe8fc7deb4eeb3f645fd4bda9fcd5",
+          "translation": "我们手头已有的是有理数集合，必须用这份原材料造出一个最终将被称为实数的域。对初次接触这一问题的人来说，这似乎完全没有希望——如果只知道有理数，其他数又从哪里来呢？不过，到现在为止，我们已经积累了足够的经验，知道实际情况或许并不像随意一想所觉得的那样绝望。构造中将要采用的策略，在定义函数和复数时已经有效地用过了。我们没有试图确定这些概念的“真正本质”，而是满足于给出一种定义，其描述足以完全确定它们的数学性质。"
+        },
+        {
+          "id": "p588-b4",
+          "source": "A similar proposal for defining real numbers requires a description of real numbers in terms of rational numbers. The observation, that a real number ought to be determined completely by the set of rational numbers less than it, suggests a strikingly simple and quite attractive possibility: a real number might (and in fact eventually will) be described as a collection of rational numbers. In order to make this proposal effective, however, some means must be found for describing “the set of rational numbers less than a real number” without mentioning real numbers, which are still nothing more than heuristic figments of our mathematical imagination.",
+          "sourceSha256": "39d4e583bafcecdd0459f67c3189d2b12ef79e6cdcd59201d40c26b8d26f3a2c",
+          "translation": "要以类似的方案定义实数，就需要用有理数来描述实数。一个实数应当由所有小于它的有理数所成的集合完全确定；这一观察启发了一种惊人地简单而又颇有吸引力的可能性：一个实数可以（而且最终确实会）被描述成一个有理数的集合。不过，要使这个方案真正可行，就必须找到一种方式，在不提实数的情况下描述“所有小于某个实数的有理数所成的集合”；因为实数目前仍不过是数学想象中起启发作用的虚构之物。"
+        },
+        {
+          "id": "p588-b5",
+          "source": "If $A$ is to be regarded as the set of rational numbers which are less than the real number $\\alpha$, then $A$ ought to have the following property: If $x$ is in $A$ and $y$ is a rational number satisfying $y<x$, then $y$ is in $A$. In addition to this property, the set $A$ should have a few others. Since there should be some rational number $x<\\alpha$, the set $A$ should not be empty. Likewise, since there should be some rational number $x>\\alpha$, the set $A$ should not be all of $\\mathbf Q$. Finally, if $x<\\alpha$, then there should be another rational number $y$ with $x<y<\\alpha$, so $A$ should not contain a greatest member.",
+          "sourceSha256": "2e3ce0e0b5106af723b35cd3949c19c5f616b2c3520e559173fde55df4e71df0",
+          "translation": "如果要把 $A$ 看作所有小于实数 $\\alpha$ 的有理数所成的集合，那么 $A$ 应当有如下性质：如果 $x$ 在 $A$ 中，且 $y$ 是满足 $y<x$ 的有理数，那么 $y$ 在 $A$ 中。除这一性质外，集合 $A$ 还应当有另外几条性质。由于应当存在某个有理数 $x<\\alpha$，集合 $A$ 应当非空。同样，由于应当存在某个有理数 $x>\\alpha$，集合 $A$ 应当不是整个 $\\mathbf Q$。最后，如果 $x<\\alpha$，那么应当还有另一个有理数 $y$，使得 $x<y<\\alpha$，所以 $A$ 不应包含最大元素。"
+        },
+        {
+          "id": "p588-b6",
+          "source": "If we temporarily regard the real numbers as known, then it is not hard to check (Problem 8-17) that a set $A$ with these properties is indeed the set of rational numbers less than some real number $\\alpha$. Since the real numbers are presently in limbo, your proof, if you supply one, must be regarded only as an unofficial comment on these proceedings. It will serve to convince you, however, that we have not failed to notice any crucial property of the set $A$. There appears to be no reason for hesitating any longer.",
+          "sourceSha256": "3d27a6efc831ae6453da2a4ddaa3066ab7a3238783a52af8b8e8af28c543a7d4",
+          "translation": "如果暂时把实数看作已知的，那么不难检验（习题 8-17），具有这些性质的集合 $A$ 确实是所有小于某个实数 $\\alpha$ 的有理数所成的集合。由于实数目前尚无着落，如果你给出了证明，也只能把它看作对这一过程的非正式评论。不过，它将使你确信，我们没有遗漏集合 $A$ 的任何关键性质。看来已经没有理由再犹豫了。"
+        }
+      ]
+    },
+    {
+      "printed": 589,
+      "sourceSha256": "08e7871afb750cb26811458b11a2c6d5fbc3e1dafc590def2aa6075b7921b30d",
+      "blocks": [
+        {
+          "id": "p589-b1",
+          "source": "## DEFINITION",
+          "sourceSha256": "676bc8347a70e5e93cbff5e0571ad9eecf86b072557f09f8796edced86dfc6e2",
+          "translation": "## 定义"
+        },
+        {
+          "id": "p589-b2",
+          "source": "A **real number** is a set $\\alpha$, of rational numbers, with the following four properties:",
+          "sourceSha256": "4dd1976cedef734d04d7bcb0a1dd6651d884e2d36883cb16fe8b1ff042819dee",
+          "translation": "一个**实数**是一个有理数集合 $\\alpha$，具有以下四条性质："
+        },
+        {
+          "id": "p589-b3",
+          "source": "(1) If $x$ is in $\\alpha$ and $y$ is a rational number with $y<x$, then $y$ is also in $\\alpha$.",
+          "sourceSha256": "d4d898e54da099386961fc0c2791c5224d6f5b0b7d0fdda84b03d6f14c54cc7b",
+          "translation": "(1) 如果 $x$ 在 $\\alpha$ 中，且 $y$ 是满足 $y<x$ 的有理数，那么 $y$ 也在 $\\alpha$ 中。"
+        },
+        {
+          "id": "p589-b4",
+          "source": "(2) $\\alpha\\ne\\varnothing$.",
+          "sourceSha256": "45a47b10f2e1916d10cbf40a4a86f316f51968f21424152adecf869d3f0d8b57"
+        },
+        {
+          "id": "p589-b5",
+          "source": "(3) $\\alpha\\ne\\mathbf Q$.",
+          "sourceSha256": "6b1852abfd8141113d60418c3cf806b625103433352f90a42da38f559fe13402"
+        },
+        {
+          "id": "p589-b6",
+          "source": "(4) There is no greatest element in $\\alpha$; in other words, if $x$ is in $\\alpha$, then there is some $y$ in $\\alpha$ with $y>x$.",
+          "sourceSha256": "a614a6388099f645d62f2f1bbcfd1392db28608c5dc9161f52b150902afe7d4d",
+          "translation": "(4) $\\alpha$ 中没有最大元素；换句话说，如果 $x$ 在 $\\alpha$ 中，那么 $\\alpha$ 中存在某个 $y$，使得 $y>x$。"
+        },
+        {
+          "id": "p589-b7",
+          "source": "The set of all real numbers is denoted by $\\mathbf R$.",
+          "sourceSha256": "dfc61beaba64399e5f162a5459b5e4bfe36b911ecd1c9b3a78b2413e81fa6405",
+          "translation": "全体实数所成的集合记为 $\\mathbf R$。"
+        },
+        {
+          "id": "p589-b8",
+          "source": "Just to remind you of the philosophy behind our definition, here is an explicit example of a real number:",
+          "sourceSha256": "b3233f63b1b0d94de9a9c6eceb19ae0bcf354a29aacba736e9a7c1e8ebce851e",
+          "translation": "为了提醒你我们这个定义背后的想法，下面给出一个实数的具体例子："
+        },
+        {
+          "id": "p589-b9",
+          "source": "$$\\alpha=\\{x\\text{ in }\\mathbf Q:x<0\\text{ or }x^2<2\\}.$$",
+          "sourceSha256": "1bdd7e235809889b341950380ab513d4dde613704e5ca36be66dc2ffb433f335"
+        },
+        {
+          "id": "p589-b10",
+          "source": "It should be clear that $\\alpha$ is the real number which will eventually be known as $\\sqrt2$, but it is not an entirely trivial exercise to show that $\\alpha$ actually is a real number. The whole point of such an exercise is to prove this using only facts about $\\mathbf Q$; the hard part will be checking condition (4), but this has already appeared as a problem in a previous chapter (finding out which one is up to you). Notice that condition (4), although quite bothersome here, is really essential in order to avoid ambiguity; without it both",
+          "sourceSha256": "e22b0c5a964cf0612efef6957146a878f128146a0ff9fa3230799e6bd0fe7670",
+          "translation": "应当很清楚，$\\alpha$ 就是最终将称为 $\\sqrt2$ 的那个实数；不过，证明 $\\alpha$ 确实是一个实数，并不是完全轻而易举的练习。这样一道练习的全部意义，就在于只用关于 $\\mathbf Q$ 的事实来证明这一点；困难之处在于检验条件 (4)，不过它已经作为习题出现在前面某章中（是哪一道，留给你去找）。注意，条件 (4) 在这里虽然很麻烦，却确实是避免歧义所必需的；如果没有它，那么"
+        },
+        {
+          "id": "p589-b11",
+          "source": "$$\\{x\\text{ in }\\mathbf Q:x<1\\}$$",
+          "sourceSha256": "fc69c4c80074b1441ae7fb447f96155d9d793627f315b376d858d2ff70d73af0"
+        },
+        {
+          "id": "p589-b12",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "和"
+        },
+        {
+          "id": "p589-b13",
+          "source": "$$\\{x\\text{ in }\\mathbf Q:x\\le1\\}$$",
+          "sourceSha256": "f044bf16e32ac8f79609ccb557560cdc25762c3b987797f142bf01ef0fe5c11f"
+        },
+        {
+          "id": "p589-b14",
+          "source": "would be candidates for the “real number 1.”",
+          "sourceSha256": "ebe7b2769de97b98b6ca7cb1d65b4fd09b6ceef18a5d2c9b824c146ee2e2a35b",
+          "translation": "都可以作为“实数 1”的候选者。"
+        },
+        {
+          "id": "p589-b15",
+          "source": "The shift from $A$ to $\\alpha$ in our definition indicates both a conceptual and a notational concern. Henceforth, a real number *is*, by definition, a set of rational numbers. This means, in particular, that a rational number (a member of $\\mathbf Q$) is *not* a real number; instead every rational number $x$ has a natural counterpart which is a real number, namely, $\\{y\\text{ in }\\mathbf Q:y<x\\}$. After completing the construction of the real numbers, we can mentally throw away the elements of $\\mathbf Q$ and agree that $\\mathbf Q$ will henceforth denote these special sets. For the moment, however, it will be necessary to work at the same time with rational numbers, real numbers (sets of rational numbers) and even sets of real numbers (sets of sets of rational numbers). Some confusion is perhaps inevitable, but proper notation should keep this to a minimum. Rational numbers will be denoted by lower case Roman letters ($x$, $y$, $z$, $a$, $b$, $c$) and real numbers by lower case Greek letters ($\\alpha$, $\\beta$, $\\gamma$); capital Roman letters ($A$, $B$, $C$) will be used to denote sets of real numbers.",
+          "sourceSha256": "dd194d36cde68c0f49fd272992c5483c9d3b91a8210370f290127130795e3669",
+          "translation": "定义中从 $A$ 改用 $\\alpha$，既涉及概念，也涉及记号。从现在起，根据定义，一个实数*就是*一个有理数的集合。特别地，这意味着一个有理数（$\\mathbf Q$ 的一个元素）*不是*一个实数；取而代之的是，每个有理数 $x$ 都有一个自然对应的实数，即 $\\{y\\text{ in }\\mathbf Q:y<x\\}$。完成实数构造之后，我们可以在心里把 $\\mathbf Q$ 的元素抛开，约定以后用 $\\mathbf Q$ 表示这些特殊的集合。不过眼下，我们必须同时处理有理数、实数（有理数的集合），甚至实数集（有理数集合的集合）。或许难免产生一些混淆，但合适的记号应当能把混淆减到最少。有理数用小写拉丁字母（$x$、$y$、$z$、$a$、$b$、$c$）表示，实数用小写希腊字母（$\\alpha$、$\\beta$、$\\gamma$）表示；大写拉丁字母（$A$、$B$、$C$）则用来表示实数集。"
+        },
+        {
+          "id": "p589-b16",
+          "source": "The remainder of this chapter is devoted to the definition of $+$, $\\cdot$, and $P$ for $\\mathbf R$, and a proof that with these structures $\\mathbf R$ is indeed a complete ordered field.",
+          "sourceSha256": "488f2c99409377d75eb22273422bb3544839e88f89b16183484e69f850c3cf7d",
+          "translation": "本章余下部分将为 $\\mathbf R$ 定义 $+$、$\\cdot$ 和 $P$，并证明带有这些结构的 $\\mathbf R$ 确实是一个完备有序域。"
+        },
+        {
+          "id": "p589-b17",
+          "source": "We shall actually begin with the definition of $P$, and even here we shall work backwards. We first define $\\alpha<\\beta$; later, when $+$, $\\cdot$, and $\\mathbf0$ are available, we shall define $P$ as the set of all $\\alpha$ with $\\mathbf0<\\alpha$, and prove the necessary properties for $P$.",
+          "sourceSha256": "a5b892c680ffa82f619671ebc1f05c19cb328ca45f07b2996ba4d32b9fa7c049",
+          "translation": "实际上，我们先从定义 $P$ 开始，而且即使在这里，也采用倒着来的方式。我们先定义 $\\alpha<\\beta$；以后有了 $+$、$\\cdot$ 和 $\\mathbf0$，再把 $P$ 定义为所有满足 $\\mathbf0<\\alpha$ 的 $\\alpha$ 所成的集合，并证明 $P$ 所需的性质。"
+        }
+      ]
+    },
+    {
+      "printed": 590,
+      "sourceSha256": "ee53d52f84d169534fc813930aa755fcc742b27828d89b663f73ecf0d3b86495",
+      "blocks": [
+        {
+          "id": "p590-b1",
+          "source": "The reason for beginning with the definition of $<$ is the simplicity of this concept in our present setup:",
+          "sourceSha256": "eb36e3df401099b62124cff8f39dab0a4e79dcb0024f9952477e8d6ffb51022d",
+          "translation": "之所以从 $<$ 的定义开始，是因为在我们目前的安排下，这个概念很简单："
+        },
+        {
+          "id": "p590-b2",
+          "source": "*Definition.* If $\\alpha$ and $\\beta$ are real numbers, then $\\alpha<\\beta$ means that $\\alpha$ is contained in $\\beta$ (that is, every element of $\\alpha$ is also an element of $\\beta$), but $\\alpha\\ne\\beta$.",
+          "sourceSha256": "1b41c7732dd664d314524e7e5e6d69e7f6ff2d744c25c5e82797d6436d501b91",
+          "translation": "*定义。* 如果 $\\alpha$ 和 $\\beta$ 是实数，那么 $\\alpha<\\beta$ 的意思是 $\\alpha$ 包含于 $\\beta$（即 $\\alpha$ 的每个元素也都是 $\\beta$ 的元素），但 $\\alpha\\ne\\beta$。"
+        },
+        {
+          "id": "p590-b3",
+          "source": "A repetition of the definitions of $\\le$, $>$, $\\ge$ would be stultifying, but it is interesting to note that $\\le$ can now be expressed more simply than $<$; if $\\alpha$ and $\\beta$ are real numbers, then $\\alpha\\le\\beta$ if and only if $\\alpha$ is contained in $\\beta$.",
+          "sourceSha256": "4bc42e106aa398dc7a18c613de0e6fcab5beb4f0423fd18797f9231d088c6033",
+          "translation": "再把 $\\le$、$>$、$\\ge$ 的定义重复一遍，未免呆板乏味；不过，有趣的是，现在 $\\le$ 比 $<$ 还容易表达：如果 $\\alpha$ 和 $\\beta$ 是实数，那么 $\\alpha\\le\\beta$ 当且仅当 $\\alpha$ 包含于 $\\beta$。"
+        },
+        {
+          "id": "p590-b4",
+          "source": "If $A$ is a bounded collection of real numbers, it is almost obvious that $A$ should have a least upper bound. Each $\\alpha$ in $A$ is a collection of rational numbers; if these rational numbers are all put in one collection $\\beta$, then $\\beta$ is presumably $\\sup A$. In the proof of the following theorem we check all the little details which have not been mentioned, not least of which is the assertion that $\\beta$ is a real number. (We will not bother numbering theorems in this chapter, since they all add up to one big Theorem: There is a complete ordered field.)",
+          "sourceSha256": "8e8c43954083cdcaf153bd354f3dc79733f5a67a2885c92980380e95f8206deb",
+          "translation": "如果 $A$ 是一个有界的实数集合，那么 $A$ 应当有最小上界，这几乎是显然的。$A$ 中的每个 $\\alpha$ 都是一个有理数集合；如果把所有这些有理数放进同一个集合 $\\beta$，那么 $\\beta$ 想必就是 $\\sup A$。在下面定理的证明中，我们将检查所有尚未提到的小细节，其中尤其不能忽略的，是断言 $\\beta$ 本身是一个实数。（本章不再费心给定理编号，因为所有定理合起来就是一个大定理：存在一个完备有序域。）"
+        },
+        {
+          "id": "p590-b5",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p590-b6",
+          "source": "If $A$ is a set of real numbers and $A\\ne\\varnothing$ and $A$ is bounded above, then $A$ has a least upper bound.",
+          "sourceSha256": "26bf35b048085667803111fe192576840df871cdde5e17a02a836debc3d74d15",
+          "translation": "如果 $A$ 是一个实数集，且 $A\\ne\\varnothing$，$A$ 有上界，那么 $A$ 有最小上界。"
+        },
+        {
+          "id": "p590-b7",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p590-b8",
+          "source": "Let $\\beta=\\{x:x\\text{ is in some }\\alpha\\text{ in }A\\}$. Then $\\beta$ is certainly a collection of rational numbers; the proof that $\\beta$ is a real number requires checking four facts.",
+          "sourceSha256": "dbfb8014123d2c8de948d206d5835ab477fe72812f457092675e98ce9843e976",
+          "translation": "令 $\\beta=\\{x:x\\text{ is in some }\\alpha\\text{ in }A\\}$。那么 $\\beta$ 当然是一个有理数集合；要证明 $\\beta$ 是实数，需要检验四个事实。"
+        },
+        {
+          "id": "p590-b9",
+          "source": "(1) Suppose that $x$ is in $\\beta$ and $y<x$. The first condition means that $x$ is in $\\alpha$ for some $\\alpha$ in $A$. Since $\\alpha$ is a real number, the assumption $y<x$ implies that $y$ is in $\\alpha$. Therefore it is certainly true that $y$ is in $\\beta$.",
+          "sourceSha256": "409c9efccc40ac7963fe8bc3af817836624c32903d47f13858cad95d87543d1c",
+          "translation": "(1) 假设 $x$ 在 $\\beta$ 中，且 $y<x$。第一个条件意味着，对 $A$ 中某个 $\\alpha$，$x$ 在 $\\alpha$ 中。由于 $\\alpha$ 是实数，假设 $y<x$ 意味着 $y$ 在 $\\alpha$ 中。因此，$y$ 当然在 $\\beta$ 中。"
+        },
+        {
+          "id": "p590-b10",
+          "source": "(2) Since $A\\ne\\varnothing$, there is some $\\alpha$ in $A$. Since $\\alpha$ is a real number, there is some $x$ in $\\alpha$. This means that $x$ is in $\\beta$, so $\\beta\\ne\\varnothing$.",
+          "sourceSha256": "e75e50676931be1a42f1ddb73fbf19b1b994c23293de7d73518cd4a7110f0ad4",
+          "translation": "(2) 由于 $A\\ne\\varnothing$，$A$ 中存在某个 $\\alpha$。由于 $\\alpha$ 是实数，$\\alpha$ 中存在某个 $x$。这意味着 $x$ 在 $\\beta$ 中，因此 $\\beta\\ne\\varnothing$。"
+        },
+        {
+          "id": "p590-b11",
+          "source": "(3) Since $A$ is bounded above, there is some real number $\\gamma$ such that $\\alpha<\\gamma$ for every $\\alpha$ in $A$. Since $\\gamma$ is a real number, there is some rational number $x$ which is not in $\\gamma$. Now $\\alpha<\\gamma$ means that $\\alpha$ is contained in $\\gamma$, so it is also true that $x$ is not in $\\alpha$ for any $\\alpha$ in $A$. This means that $x$ is not in $\\beta$; so $\\beta\\ne\\mathbf Q$.",
+          "sourceSha256": "a535e20cdd657a819a4d4faf0cfca7b5729ed525e25dc0f96c80e25644cc8d91",
+          "translation": "(3) 由于 $A$ 有上界，存在某个实数 $\\gamma$，使得对 $A$ 中每个 $\\alpha$ 都有 $\\alpha<\\gamma$。由于 $\\gamma$ 是实数，存在某个有理数 $x$ 不在 $\\gamma$ 中。现在，$\\alpha<\\gamma$ 意味着 $\\alpha$ 包含于 $\\gamma$，所以对 $A$ 中任何 $\\alpha$，$x$ 也都不在 $\\alpha$ 中。这意味着 $x$ 不在 $\\beta$ 中；所以 $\\beta\\ne\\mathbf Q$。"
+        },
+        {
+          "id": "p590-b12",
+          "source": "(4) Suppose that $x$ is in $\\beta$. Then $x$ is in $\\alpha$ for some $\\alpha$ in $A$. Since $\\alpha$ does not have a greatest member, there is some rational number $y$ with $x<y$ and $y$ in $\\alpha$. But this means that $y$ is in $\\beta$; thus $\\beta$ does not have a greatest member.",
+          "sourceSha256": "9313d651eb5d53247df226a4749b664f3ca0af651d478295031869b8d057d349",
+          "translation": "(4) 假设 $x$ 在 $\\beta$ 中。那么对 $A$ 中某个 $\\alpha$，$x$ 在 $\\alpha$ 中。由于 $\\alpha$ 没有最大元素，存在某个有理数 $y$，使得 $x<y$，且 $y$ 在 $\\alpha$ 中。但这意味着 $y$ 在 $\\beta$ 中；因此 $\\beta$ 没有最大元素。"
+        },
+        {
+          "id": "p590-b13",
+          "source": "These four observations prove that $\\beta$ is a real number. The proof that $\\beta$ is the least upper bound of $A$ is easier. If $\\alpha$ is in $A$, then clearly $\\alpha$ is contained in $\\beta$; this means that $\\alpha\\le\\beta$, so $\\beta$ is an upper bound for $A$. On the other hand, if $\\gamma$ is an upper bound for $A$, then $\\alpha\\le\\gamma$ for every $\\alpha$ in $A$; this means that $\\alpha$ is contained in $\\gamma$, for every $\\alpha$ in $A$, and this surely implies that $\\beta$ is contained in $\\gamma$. This, in turn, means that $\\beta\\le\\gamma$; thus $\\beta$ is the least upper bound of $A$. ■",
+          "sourceSha256": "a451ffbcab6109de099e86d91cbb960a4bed304ccaba1614f6151bfae5f122e0",
+          "translation": "以上四点证明了 $\\beta$ 是一个实数。证明 $\\beta$ 是 $A$ 的最小上界则更容易。如果 $\\alpha$ 在 $A$ 中，那么显然 $\\alpha$ 包含于 $\\beta$；这意味着 $\\alpha\\le\\beta$，所以 $\\beta$ 是 $A$ 的一个上界。另一方面，如果 $\\gamma$ 是 $A$ 的一个上界，那么对 $A$ 中每个 $\\alpha$ 都有 $\\alpha\\le\\gamma$；这意味着，对 $A$ 中每个 $\\alpha$，$\\alpha$ 都包含于 $\\gamma$，而这当然意味着 $\\beta$ 包含于 $\\gamma$。这又意味着 $\\beta\\le\\gamma$；因此 $\\beta$ 是 $A$ 的最小上界。■"
+        },
+        {
+          "id": "p590-b14",
+          "source": "The definition of $+$ is both obvious and easy, but is must be complemented with a proof that this “obvious” definition makes any sense at all.",
+          "sourceSha256": "b611842d85251165f38f6821b315f355a8ba8053f49b439cc4eba9ed627b2e5e",
+          "translation": "$+$ 的定义既显然又容易，但还必须补上一个证明，说明这个“显然”的定义确实有意义。"
+        }
+      ]
+    },
+    {
+      "printed": 591,
+      "sourceSha256": "a5ce2874168f9292900fb9af7c933069986a8b3929f097d7beacaf5539a2b1fd",
+      "blocks": [
+        {
+          "id": "p591-b1",
+          "source": "*Definition.* If $\\alpha$ and $\\beta$ are real numbers, then",
+          "sourceSha256": "dce4ec0d42c108ba143c7f84bd22659b8fd0d8b4d80e8d178cbb6e3a4d34bbbf",
+          "translation": "*定义。* 如果 $\\alpha$ 和 $\\beta$ 是实数，那么"
+        },
+        {
+          "id": "p591-b2",
+          "source": "$$\\alpha+\\beta=\\{x:x=y+z\\text{ for some }y\\text{ in }\\alpha\\text{ and some }z\\text{ in }\\beta\\}.$$",
+          "sourceSha256": "a977988dbf2ef6cd0c909f314641ad683a301bf87267542b0f0e969038d89017"
+        },
+        {
+          "id": "p591-b3",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p591-b4",
+          "source": "If $\\alpha$ and $\\beta$ are real numbers, then $\\alpha+\\beta$ is a real number.",
+          "sourceSha256": "256757e6b07f9a86fbe8ae7adabc5ec152a2c0ee8db09537e4b9b3a704e57c13",
+          "translation": "如果 $\\alpha$ 和 $\\beta$ 是实数，那么 $\\alpha+\\beta$ 是实数。"
+        },
+        {
+          "id": "p591-b5",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p591-b6",
+          "source": "Once again four facts must be verified.",
+          "sourceSha256": "fa9605a332144605f8c8e3c3e85094aea974f2f958309f89d81732faa01eb068",
+          "translation": "又一次需要验证四个事实。"
+        },
+        {
+          "id": "p591-b7",
+          "source": "(1) Suppose $w<x$ for some $x$ in $\\alpha+\\beta$. Then $x=y+z$ for some $y$ in $\\alpha$ and some $z$ in $\\beta$, which means that $w<y+z$, and consequently, $w-y<z$. This shows that $w-y$ is in $\\beta$ (since $z$ is in $\\beta$, and $\\beta$ is a real number). Since $w=y+(w-y)$, it follows that $w$ is in $\\alpha+\\beta$.",
+          "sourceSha256": "a76a225f9cbfe3229c0e1a2f31d49978ec29230a94ada419229e18d6abdc9eda",
+          "translation": "(1) 假设对于 $\\alpha+\\beta$ 中的某个 $x$，有 $w<x$。那么，对于 $\\alpha$ 中的某个 $y$ 和 $\\beta$ 中的某个 $z$，有 $x=y+z$；这意味着 $w<y+z$，从而 $w-y<z$。这表明 $w-y$ 在 $\\beta$ 中（因为 $z$ 在 $\\beta$ 中，而 $\\beta$ 是实数）。由于 $w=y+(w-y)$，可知 $w$ 在 $\\alpha+\\beta$ 中。"
+        },
+        {
+          "id": "p591-b8",
+          "source": "(2) It is clear that $\\alpha+\\beta\\ne\\varnothing$, since $\\alpha\\ne\\varnothing$ and $\\beta\\ne\\varnothing$.",
+          "sourceSha256": "143ab2a12921b8881b1f94eb02df13ae48cc55e9e00f39a3e143b92f3ecf2a8b",
+          "translation": "(2) 显然 $\\alpha+\\beta\\ne\\varnothing$，因为 $\\alpha\\ne\\varnothing$ 且 $\\beta\\ne\\varnothing$。"
+        },
+        {
+          "id": "p591-b9",
+          "source": "(3) Since $\\alpha\\ne\\mathbf Q$ and $\\beta\\ne\\mathbf Q$, there are rational numbers $a$ and $b$ with $a$ not in $\\alpha$ and $b$ not in $\\beta$. Any $x$ in $\\alpha$ satisfies $x<a$ (for if $a<x$, then condition (1) for a real number would imply that $a$ is in $\\alpha$); similarly any $y$ in $\\beta$ satisfies $y<b$. Thus $x+y<a+b$ for any $x$ in $\\alpha$ and $y$ in $\\beta$. This shows that $a+b$ is not in $\\alpha+\\beta$, so $\\alpha+\\beta\\ne\\mathbf Q$.",
+          "sourceSha256": "8b456fac4c6ea2596b83092577f2b0ffccd336d4bb602fbf6c93fd474e01c0ec",
+          "translation": "(3) 由于 $\\alpha\\ne\\mathbf Q$ 且 $\\beta\\ne\\mathbf Q$，存在有理数 $a$ 和 $b$，使得 $a$ 不在 $\\alpha$ 中，$b$ 不在 $\\beta$ 中。$\\alpha$ 中任何 $x$ 都满足 $x<a$（否则若 $a<x$，实数的条件 (1) 就意味着 $a$ 在 $\\alpha$ 中）；类似地，$\\beta$ 中任何 $y$ 都满足 $y<b$。所以，对 $\\alpha$ 中任何 $x$ 和 $\\beta$ 中任何 $y$，都有 $x+y<a+b$。这表明 $a+b$ 不在 $\\alpha+\\beta$ 中，因此 $\\alpha+\\beta\\ne\\mathbf Q$。"
+        },
+        {
+          "id": "p591-b10",
+          "source": "(4) If $x$ is in $\\alpha+\\beta$, then $x=y+z$ for $y$ in $\\alpha$ and $z$ in $\\beta$. There are $y'$ in $\\alpha$ and $z'$ in $\\beta$ with $y<y'$ and $z<z'$; then $x<y'+z'$ and $y'+z'$ is in $\\alpha+\\beta$. Thus $\\alpha+\\beta$ has no greatest member. ■",
+          "sourceSha256": "385cf4c2ee5966831b131996d2d8507d23e087510ebf875e3a7d375ff3ea2b5a",
+          "translation": "(4) 如果 $x$ 在 $\\alpha+\\beta$ 中，那么对于 $\\alpha$ 中的 $y$ 和 $\\beta$ 中的 $z$，有 $x=y+z$。存在 $\\alpha$ 中的 $y'$ 和 $\\beta$ 中的 $z'$，使得 $y<y'$ 且 $z<z'$；于是 $x<y'+z'$，而 $y'+z'$ 在 $\\alpha+\\beta$ 中。因此 $\\alpha+\\beta$ 没有最大元素。■"
+        },
+        {
+          "id": "p591-b11",
+          "source": "By now you can see how tiresome this whole procedure is going to be. Every time we mention a new real number, we must prove that it is a real number; this requires checking four conditions, and even when trivial they require concentration. There is really no help for this (except that it will be less boring if you check the four conditions for yourself). Fortunately, however, a few points of interest will arise now and then, and some of our theorems will be easy. In particular, two properties of $+$ present no problems.",
+          "sourceSha256": "f477a8c73faf77993c27ae0f52d9856334c28a7abbc9a512873dce99af9aa489",
+          "translation": "到这里，你已经能看出整个过程将有多么烦琐。每次提到一个新的实数，我们都必须证明它是实数；这需要检验四个条件，即使条件很简单，也需要集中注意力。这实在没有办法避免（不过，如果你亲自检验这四个条件，倒会少些无聊）。好在不时还会出现几个有意思的地方，而且有些定理会很容易。特别是，$+$ 的两条性质毫无困难。"
+        },
+        {
+          "id": "p591-b12",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p591-b13",
+          "source": "If $\\alpha$, $\\beta$, and $\\gamma$ are real numbers, then $(\\alpha+\\beta)+\\gamma=\\alpha+(\\beta+\\gamma)$.",
+          "sourceSha256": "eea2089f916deaadd27443c29fbc14e93ead7d0d3c55efc643e92c630f0e94b0",
+          "translation": "如果 $\\alpha$、$\\beta$ 和 $\\gamma$ 是实数，那么 $(\\alpha+\\beta)+\\gamma=\\alpha+(\\beta+\\gamma)$。"
+        },
+        {
+          "id": "p591-b14",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p591-b15",
+          "source": "Since $(x+y)+z=x+(y+z)$ for all rational numbers $x$, $y$, and $z$, every member of $(\\alpha+\\beta)+\\gamma$ is also a member of $\\alpha+(\\beta+\\gamma)$, and vice versa. ■",
+          "sourceSha256": "2b751c6ede5d95335959fed001daff2fcfc88ce02b46a2e5b87613163781d803",
+          "translation": "由于对所有有理数 $x$、$y$ 和 $z$ 都有 $(x+y)+z=x+(y+z)$，$(\\alpha+\\beta)+\\gamma$ 的每个元素也都是 $\\alpha+(\\beta+\\gamma)$ 的元素，反之亦然。■"
+        },
+        {
+          "id": "p591-b16",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p591-b17",
+          "source": "If $\\alpha$ and $\\beta$ are real numbers, then $\\alpha+\\beta=\\beta+\\alpha$.",
+          "sourceSha256": "5b58483c9ed3948a809b3f7b6741a7a842b984ec75489fb9c31d9ab869db2daa",
+          "translation": "如果 $\\alpha$ 和 $\\beta$ 是实数，那么 $\\alpha+\\beta=\\beta+\\alpha$。"
+        },
+        {
+          "id": "p591-b18",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p591-b19",
+          "source": "Left to you (even easier). ■",
+          "sourceSha256": "5eea9aa438c626bc7263387412a355acffa994e87240bdf09a380fd11e10cc52",
+          "translation": "留给你证明（甚至更容易）。■"
+        },
+        {
+          "id": "p591-b20",
+          "source": "To prove the other properties of $+$ we first define $\\mathbf0$.",
+          "sourceSha256": "b04472e654f9ec1866c6f4d653313244e1e278ec4cc782a49094bdcb86aeda5c",
+          "translation": "为了证明 $+$ 的其他性质，我们先定义 $\\mathbf0$。"
+        },
+        {
+          "id": "p591-b21",
+          "source": "*Definition.* $\\mathbf0=\\{x\\text{ in }\\mathbf Q:x<0\\}$.",
+          "sourceSha256": "b5a990570580bad2eceef7d8b8140419d2b4a7e490208d903cac75557b142378",
+          "translation": "*定义。* $\\mathbf0=\\{x\\text{ in }\\mathbf Q:x<0\\}$。"
+        },
+        {
+          "id": "p591-b22",
+          "source": "It is, thank goodness, obvious that $\\mathbf0$ is a real number, and the following theorem is also simple.",
+          "sourceSha256": "f05e30ebc43f4352f5a13f8bef184497f943d504fe84971ef6049b1f37ef2d52",
+          "translation": "谢天谢地，$\\mathbf0$ 显然是一个实数，而下面的定理也很简单。"
+        }
+      ]
+    },
+    {
+      "printed": 592,
+      "sourceSha256": "5de4390c51b34526151ef26d72bfdcab8bd13e0594c1e930c69ae0e66dfd93d6",
+      "blocks": [
+        {
+          "id": "p592-b1",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p592-b2",
+          "source": "If $\\alpha$ is a real number, then $\\alpha+\\mathbf0=\\alpha$.",
+          "sourceSha256": "2f637eef08391ccb498b339b7b4bb90850bc504c5a6fd50c607e84a9869c772c",
+          "translation": "如果 $\\alpha$ 是实数，那么 $\\alpha+\\mathbf0=\\alpha$。"
+        },
+        {
+          "id": "p592-b3",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p592-b4",
+          "source": "If $x$ is in $\\alpha$ and $y$ is in $\\mathbf0$, then $y<0$, so $x+y<x$. This implies that $x+y$ is in $\\alpha$. Thus every member of $\\alpha+\\mathbf0$ is also a member of $\\alpha$.",
+          "sourceSha256": "f75ed6565d8f0934a0739d3d3808480e8f539413f631283ec23d104103081341",
+          "translation": "如果 $x$ 在 $\\alpha$ 中，且 $y$ 在 $\\mathbf0$ 中，那么 $y<0$，所以 $x+y<x$。这意味着 $x+y$ 在 $\\alpha$ 中。因此 $\\alpha+\\mathbf0$ 的每个元素也都是 $\\alpha$ 的元素。"
+        },
+        {
+          "id": "p592-b5",
+          "source": "On the other hand, if $x$ is in $\\alpha$, then there is a rational number $y$ in $\\alpha$ such that $y>x$. Since $x=y+(x-y)$, where $y$ is in $\\alpha$, and $x-y<0$ (so that $x-y$ is in $\\mathbf0$), this shows that $x$ is in $\\alpha+\\mathbf0$. Thus every member of $\\alpha$ is also a member of $\\alpha+\\mathbf0$. ■",
+          "sourceSha256": "3dc5ee97e65c0b4fb1043ea2425fdc2e382000fe8a2f514d20dd5963d88e37c8",
+          "translation": "另一方面，如果 $x$ 在 $\\alpha$ 中，那么 $\\alpha$ 中存在某个有理数 $y$，使得 $y>x$。由于 $x=y+(x-y)$，其中 $y$ 在 $\\alpha$ 中，且 $x-y<0$（所以 $x-y$ 在 $\\mathbf0$ 中），这就表明 $x$ 在 $\\alpha+\\mathbf0$ 中。因此 $\\alpha$ 的每个元素也都是 $\\alpha+\\mathbf0$ 的元素。■"
+        },
+        {
+          "id": "p592-b6",
+          "source": "The reasonable candidate for $-\\alpha$ would seem to be the set",
+          "sourceSha256": "6bfef4118e24bc3dbc611e7758792acc8ed30c97145d8f5f501af5f261559ebd",
+          "translation": "$-\\alpha$ 的合理候选者似乎应当是集合"
+        },
+        {
+          "id": "p592-b7",
+          "source": "$$\\{x\\text{ in }\\mathbf Q:-x\\text{ is not in }\\alpha\\}$$",
+          "sourceSha256": "25f7e9f9814c0532eb159a6ac4d5eeec572436191c97964a5239a38f9a1d2460"
+        },
+        {
+          "id": "p592-b8",
+          "source": "(since $-x$ not in $\\alpha$ means, intuitively, that $-x>\\alpha$, so that $x<-\\alpha$). But in certain cases this set will not even be a real number. Although a real number $\\alpha$ does not have a greatest member, the set",
+          "sourceSha256": "238b5bb4842e5b2798a42f58fbd0af1f11622a6baef5eda9c48b56c6bd201dce",
+          "translation": "（因为直观地说，$-x$ 不在 $\\alpha$ 中意味着 $-x>\\alpha$，从而 $x<-\\alpha$）。但是，在某些情形下，这个集合甚至不是一个实数。尽管实数 $\\alpha$ 没有最大元素，集合"
+        },
+        {
+          "id": "p592-b9",
+          "source": "$$\\mathbf Q-\\alpha=\\{x\\text{ in }\\mathbf Q:x\\text{ is not in }\\alpha\\}$$",
+          "sourceSha256": "de9b64077e1172b0e57b1bc7615b6a7baa576dfb3f5b26ed92426333163eb2a3"
+        },
+        {
+          "id": "p592-b10",
+          "source": "may have a least element $x_0$; when $\\alpha$ is a real number of this kind, the set $\\{x:-x\\text{ is not in }\\alpha\\}$ will have a greatest element $-x_0$. It is therefore necessary to introduce a slight modification into the definition of $-\\alpha$, which comes equipped with a theorem.",
+          "sourceSha256": "2d5dcc56a60e39ccfe4cd6eed8bbab354c6cf76abd15c30c6369dd19ce878264",
+          "translation": "却可能有一个最小元素 $x_0$；如果 $\\alpha$ 是这种实数，那么集合 $\\{x:-x\\text{ is not in }\\alpha\\}$ 就会有一个最大元素 $-x_0$。因此，必须对 $-\\alpha$ 的定义作一点小小的修改，并且还要配上一个定理。"
+        },
+        {
+          "id": "p592-b11",
+          "source": "*Definition.* If $\\alpha$ is a real number, then",
+          "sourceSha256": "0a908f1014d6665285d9675058a49237412a9063b36772cdcd1d502fb39903c8",
+          "translation": "*定义。* 如果 $\\alpha$ 是实数，那么"
+        },
+        {
+          "id": "p592-b12",
+          "source": "$$-\\alpha=\\{x\\text{ in }\\mathbf Q:-x\\text{ is not in }\\alpha,\\text{ but }-x\\text{ is not the least element of }\\mathbf Q-\\alpha\\}.$$",
+          "sourceSha256": "4ca274ce5780042edb45aa8338f293f7dcccccf2f24eaaca6512b51ad548356d"
+        },
+        {
+          "id": "p592-b13",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p592-b14",
+          "source": "If $\\alpha$ is a real number, then $-\\alpha$ is a real number.",
+          "sourceSha256": "8bbe166e6b75a000a6f1948f704f812add1ce9232b73f8be507a80aee1affc38",
+          "translation": "如果 $\\alpha$ 是实数，那么 $-\\alpha$ 是实数。"
+        },
+        {
+          "id": "p592-b15",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p592-b16",
+          "source": "(1) Suppose that $x$ is in $-\\alpha$ and $y<x$. Then $-y>-x$. Since $-x$ is not in $\\alpha$, it is also true that $-y$ is not in $\\alpha$. Moreover, it is clear that $-y$ is not the smallest element of $\\mathbf Q-\\alpha$, since $-x$ is a smaller element. This shows that $y$ is in $-\\alpha$.",
+          "sourceSha256": "8847a75d562640723d8bc48d28a5463862a3e0b4d359d66fe15c733a527cfff4",
+          "translation": "(1) 假设 $x$ 在 $-\\alpha$ 中，且 $y<x$。那么 $-y>-x$。由于 $-x$ 不在 $\\alpha$ 中，$-y$ 也不在 $\\alpha$ 中。此外，$-y$ 显然不是 $\\mathbf Q-\\alpha$ 的最小元素，因为 $-x$ 是其中一个更小的元素。这表明 $y$ 在 $-\\alpha$ 中。"
+        },
+        {
+          "id": "p592-b17",
+          "source": "(2) Since $\\alpha\\ne\\mathbf Q$, there is some rational number $y$ which is not in $\\alpha$. We can assume that $y$ is not the smallest rational number in $\\mathbf Q-\\alpha$ (since $y$ can always be replaced by any $y'>y$). Then $-y$ is in $-\\alpha$. Thus $-\\alpha\\ne\\varnothing$.",
+          "sourceSha256": "812d2ef2b32c36ca10c78773bb3a4304eba1b11fd5c6cdf2afdd60c5957435a6",
+          "translation": "(2) 由于 $\\alpha\\ne\\mathbf Q$，存在某个有理数 $y$ 不在 $\\alpha$ 中。我们可以假设 $y$ 不是 $\\mathbf Q-\\alpha$ 中最小的有理数（因为总可以把 $y$ 换成任何 $y'>y$）。那么 $-y$ 在 $-\\alpha$ 中。因此 $-\\alpha\\ne\\varnothing$。"
+        },
+        {
+          "id": "p592-b18",
+          "source": "(3) Since $\\alpha\\ne\\varnothing$, there is some $x$ in $\\alpha$. Then $-x$ cannot possibly be in $-\\alpha$, so $-\\alpha\\ne\\mathbf Q$.",
+          "sourceSha256": "caaa29527a0aa52addeabcc0419f94526d2d3a9f873608c5fa05cae352f4bfb0",
+          "translation": "(3) 由于 $\\alpha\\ne\\varnothing$，$\\alpha$ 中存在某个 $x$。那么 $-x$ 绝不可能在 $-\\alpha$ 中，因此 $-\\alpha\\ne\\mathbf Q$。"
+        },
+        {
+          "id": "p592-b19",
+          "source": "(4) If $x$ is in $-\\alpha$, then $-x$ is not in $\\alpha$, and there is a rational number $y<-x$ which is also not in $\\alpha$. Let $z$ be a rational number with $y<z<-x$. Then $z$ is also not in $\\alpha$, and $z$ is clearly not the smallest element of $\\mathbf Q-\\alpha$. So $-z$ is in $-\\alpha$. Since $-z>x$, this shows that $-\\alpha$ does not have a greatest element. ■",
+          "sourceSha256": "d0d9ed2d01ec1084e548f91f2e78f46aec94ba6c6f672e7b3515e182e270ec80",
+          "translation": "(4) 如果 $x$ 在 $-\\alpha$ 中，那么 $-x$ 不在 $\\alpha$ 中，而且存在一个有理数 $y<-x$，它也不在 $\\alpha$ 中。取一个有理数 $z$，使得 $y<z<-x$。那么 $z$ 也不在 $\\alpha$ 中，而 $z$ 显然不是 $\\mathbf Q-\\alpha$ 的最小元素。所以 $-z$ 在 $-\\alpha$ 中。由于 $-z>x$，这就表明 $-\\alpha$ 没有最大元素。■"
+        },
+        {
+          "id": "p592-b20",
+          "source": "The proof that $\\alpha+(-\\alpha)=\\mathbf0$ is not entirely straightforward. The difficulties are not caused, as you might presume, by the finicky details in the definition",
+          "sourceSha256": "4daadb8cdb1f2a0c072b136ee0accfe76c800aaed4f51e26670ffe13b3b1a4c3",
+          "translation": "证明 $\\alpha+(-\\alpha)=\\mathbf0$ 并非完全直接。你也许以为困难来自定义中的繁琐细节，"
+        }
+      ]
+    },
+    {
+      "printed": 593,
+      "sourceSha256": "aa46b236b7e1888bb399a2f483300ac9eba207f0916b1ae9a78e9eb7ba492616",
+      "blocks": [
+        {
+          "id": "p593-b1",
+          "source": "of $-\\alpha$. Rather, at this point we require the Archimedean property of $\\mathbf Q$ stated on page 584, which does not follow from P1–P12. This property is needed to prove the following lemma, which plays a crucial role in the next theorem.",
+          "sourceSha256": "c57be56c2745a1e23e504243e32309bbaf8d805095ff958ee6fb7ddf6ef5e52a",
+          "translation": "也就是 $-\\alpha$ 定义中的那些细节，但实际上并非如此。在这里，我们需要第 584 页陈述的 $\\mathbf Q$ 的阿基米德性质；它不能从 P1–P12 推出。证明下面的引理就需要这个性质，而该引理在下一个定理中起着关键作用。"
+        },
+        {
+          "id": "p593-b2",
+          "source": "## LEMMA",
+          "sourceSha256": "07ac55301ea6b0a97eb0aa24b21439b232113e07b78a37389ce42c41900e2368",
+          "translation": "## 引理"
+        },
+        {
+          "id": "p593-b3",
+          "source": "Let $\\alpha$ be a real number, and $z$ a positive rational number. Then there are (Figure 1) rational numbers $x$ in $\\alpha$, and $y$ not in $\\alpha$, such that $y-x=z$. Moreover, we may assume that $y$ is not the smallest element of $\\mathbf Q-\\alpha$.",
+          "sourceSha256": "11af4a8516d2ffdb3c5a6728867c986e485f0b0f9de45bd0469fe918eb83ef4e",
+          "translation": "设 $\\alpha$ 是一个实数，$z$ 是一个正有理数。那么存在有理数 $x$ 和 $y$，其中 $\\alpha$ 包含前者，$\\alpha$ 不包含后者，使得 $y-x=z$（图 1）。此外，可以假设 $y$ 不是 $\\mathbf Q-\\alpha$ 的最小元素。"
+        },
+        {
+          "id": "p593-b4",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p593-b5",
+          "source": "Suppose first that $z$ is in $\\alpha$. If the numbers",
+          "sourceSha256": "af34e0b25c54f9b29e87011b3894cd5ffe1e45b4d21ad21b0571646c0b223fab",
+          "translation": "先假设 $z$ 在 $\\alpha$ 中。如果数"
+        },
+        {
+          "id": "p593-b6",
+          "source": "$$z,2z,3z,\\ldots$$",
+          "sourceSha256": "22336291240d1aff1868cb1385565c0967702d86160834479e4324db2700f574"
+        },
+        {
+          "id": "p593-b7",
+          "source": "were all in $\\alpha$, then every rational number would be in $\\alpha$, since every rational number $w$ satisfies $w<nz$ for some $n$, by the additional assumption on page 584. This contradicts the fact that $\\alpha$ is a real number, so there is some $k$ such that $x=kz$ is in $\\alpha$ and $y=(k+1)z$ is not in $\\alpha$. Clearly $y-x=z$.",
+          "sourceSha256": "815b4b4ac4169fd5305e7fac8e2b29bce7d8907e78d7c639badba029e5b73c0d",
+          "translation": "全都在 $\\alpha$ 中，那么每个有理数都会在 $\\alpha$ 中；因为由第 584 页的附加假设，对每个有理数 $w$，都存在某个 $n$，使得 $w<nz$。这与 $\\alpha$ 是实数的事实矛盾，因此存在某个 $k$，使得 $x=kz$ 在 $\\alpha$ 中，而 $y=(k+1)z$ 不在 $\\alpha$ 中。显然 $y-x=z$。"
+        },
+        {
+          "id": "p593-b8",
+          "source": "Moreover, if $y$ happens to be the smallest element of $\\mathbf Q-\\alpha$, let $x'>x$ be an element of $\\alpha$, and replace $x$ by $x'$, and $y$ by $y+(x'-x)$.",
+          "sourceSha256": "607e828ceccc30eabb051e03b2d120b7dae3ca611445b3d6e5f21698ff222aa8",
+          "translation": "此外，如果 $y$ 恰好是 $\\mathbf Q-\\alpha$ 的最小元素，就取 $\\alpha$ 中的一个元素 $x'>x$，把 $x$ 换成 $x'$，把 $y$ 换成 $y+(x'-x)$。"
+        },
+        {
+          "id": "p593-b9",
+          "source": "If $z$ is not in $\\alpha$, there is a similar proof, based on the fact that the numbers $(-n)z$ cannot all fail to be in $\\alpha$. ■",
+          "sourceSha256": "fd971d1ce00c921f2ef655e07c6c48f0fd9be6a0dd8df205c0e0373f592c0356",
+          "translation": "如果 $z$ 不在 $\\alpha$ 中，也有一个类似的证明，它基于如下事实：数 $(-n)z$ 不可能全都不在 $\\alpha$ 中。■"
+        },
+        {
+          "id": "p593-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"455 820 680 132\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0612.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg></figure>",
+          "sourceSha256": "cb339116af91f966441b0cd3f217afc96b7d80822003d7605b51262c14edc54e"
+        },
+        {
+          "id": "p593-b11",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p593-b12",
+          "source": "If $\\alpha$ is a real number, then",
+          "sourceSha256": "d6253ab6579434360afe2cda2e571087bb4bf1a6cb0a1a12705d254a5daab0fd",
+          "translation": "如果 $\\alpha$ 是实数，那么"
+        },
+        {
+          "id": "p593-b13",
+          "source": "$$\\alpha+(-\\alpha)=\\mathbf0.$$",
+          "sourceSha256": "370053ae4e4e1b8607a8ed69ad927c11bb009344ced985fc2348c278d600e421"
+        },
+        {
+          "id": "p593-b14",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p593-b15",
+          "source": "Suppose $x$ is in $\\alpha$ and $y$ is in $-\\alpha$. Then $-y$ is not in $\\alpha$, so $-y>x$. Hence $x+y<0$, so $x+y$ is in $\\mathbf0$. Thus every member of $\\alpha+(-\\alpha)$ is in $\\mathbf0$.",
+          "sourceSha256": "e5ec8f60f26c1b94fb8ef92bcfd1035fcdfc3f740be0990afe350f06aaa57b21",
+          "translation": "假设 $x$ 在 $\\alpha$ 中，且 $y$ 在 $-\\alpha$ 中。那么 $-y$ 不在 $\\alpha$ 中，所以 $-y>x$。因此 $x+y<0$，所以 $x+y$ 在 $\\mathbf0$ 中。于是 $\\alpha+(-\\alpha)$ 的每个元素都在 $\\mathbf0$ 中。"
+        },
+        {
+          "id": "p593-b16",
+          "source": "It is a little more difficult to go in the other direction. If $z$ is in $\\mathbf0$, then $-z>0$. According to the lemma, there is some $x$ in $\\alpha$, and some $y$ not in $\\alpha$, with $y$ not the smallest element of $\\mathbf Q-\\alpha$, such that $y-x=-z$. This equation can be written $x+(-y)=z$. Since $x$ is in $\\alpha$, and $-y$ is in $-\\alpha$, this proves that $z$ is in $\\alpha+(-\\alpha)$. ■",
+          "sourceSha256": "419a0aabd773c63d1d82a9ca1c60b7c2a862b949c3517ad755fdb1a476a5020c",
+          "translation": "反过来稍难一点。如果 $z$ 在 $\\mathbf0$ 中，那么 $-z>0$。根据引理，存在 $\\alpha$ 中的某个 $x$，以及不在 $\\alpha$ 中的某个 $y$，而且 $y$ 不是 $\\mathbf Q-\\alpha$ 的最小元素，使得 $y-x=-z$。这个等式可以写成 $x+(-y)=z$。由于 $x$ 在 $\\alpha$ 中，$-y$ 在 $-\\alpha$ 中，这就证明 $z$ 在 $\\alpha+(-\\alpha)$ 中。■"
+        },
+        {
+          "id": "p593-b17",
+          "source": "Before proceeding with multiplication, we define the “positive elements” and prove a basic property:",
+          "sourceSha256": "7061817183f0d8d2ad3f92b9a85509df37dea17c1307bc08a79e5716918edf1f",
+          "translation": "在继续讨论乘法之前，我们先定义“正元素”，并证明一条基本性质："
+        },
+        {
+          "id": "p593-b18",
+          "source": "*Definition.* $P=\\{\\alpha\\text{ in }\\mathbf R:\\alpha>\\mathbf0\\}$.",
+          "sourceSha256": "c89f55e26c8b2d9db519eafc667d192574edf5e088582303d6a5fd560537909a",
+          "translation": "*定义。* $P=\\{\\alpha\\text{ in }\\mathbf R:\\alpha>\\mathbf0\\}$。"
+        },
+        {
+          "id": "p593-b19",
+          "source": "Notice that $\\alpha+\\beta$ is clearly in $P$ if $\\alpha$ and $\\beta$ are.",
+          "sourceSha256": "99eca3546953baacf4009c6f26860bc23053a9f56bf00cf4aa9d53ac87a2a938",
+          "translation": "注意，如果 $\\alpha$ 和 $\\beta$ 在 $P$ 中，那么 $\\alpha+\\beta$ 显然也在其中。"
+        }
+      ]
+    },
+    {
+      "printed": 594,
+      "sourceSha256": "95ee14aac01c86341a7c3a68a4bd519dfe3882d34b24f65a102beca7ba8b1ef6",
+      "blocks": [
+        {
+          "id": "p594-b1",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p594-b2",
+          "source": "If $\\alpha$ is a real number, then one and only one of the following conditions holds:",
+          "sourceSha256": "3e3ab8ba11a6e1fff578080afb372c3143210fb250842086ae3a758138dee2ba",
+          "translation": "如果 $\\alpha$ 是实数，那么下列条件恰有一个成立："
+        },
+        {
+          "id": "p594-b3",
+          "source": "(i) $\\alpha=\\mathbf0$,",
+          "sourceSha256": "d9a09755a3144c537d15eeedd52051ef6ce72e9b58d9272eb35b60309801dbfe"
+        },
+        {
+          "id": "p594-b4",
+          "source": "(ii) $\\alpha$ is in $P$,",
+          "sourceSha256": "540db3f306b3e86ab258a39ef926449a0380f5b10c7f9cff07d3ad0db9294420",
+          "translation": "(ii) $\\alpha$ 在 $P$ 中，"
+        },
+        {
+          "id": "p594-b5",
+          "source": "(iii) $-\\alpha$ is in $P$.",
+          "sourceSha256": "93bd49f32d3486a2a63db655723aa1c8cb177620ccdfe322f04958a054d9efde",
+          "translation": "(iii) $-\\alpha$ 在 $P$ 中。"
+        },
+        {
+          "id": "p594-b6",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p594-b7",
+          "source": "If $\\alpha$ contains any positive rational number, then $\\alpha$ certainly contains all negative rational numbers, so $\\alpha$ contains $\\mathbf0$ and $\\alpha\\ne\\mathbf0$, i.e., $\\alpha$ is in $P$. If $\\alpha$ contains no positive rational numbers, then one of two possibilities must hold:",
+          "sourceSha256": "71b22cc2037d0adc32cbc373b0c9244364cf2aad8a482e1bc829c340f6532025",
+          "translation": "如果 $\\alpha$ 包含某个正有理数，那么 $\\alpha$ 当然包含所有负有理数，所以 $\\alpha$ 包含 $\\mathbf0$ 且 $\\alpha\\ne\\mathbf0$，即 $\\alpha$ 在 $P$ 中。如果 $\\alpha$ 不包含任何正有理数，那么以下两种可能性必有一种成立："
+        },
+        {
+          "id": "p594-b8",
+          "source": "(1) $\\alpha$ contains all negative rational numbers; then $\\alpha=\\mathbf0$.",
+          "sourceSha256": "43561027491bde32e8a33b55dcf6ab9b191b8a6bc9d53fedec6d41b21f08d0e4",
+          "translation": "(1) $\\alpha$ 包含所有负有理数；那么 $\\alpha=\\mathbf0$。"
+        },
+        {
+          "id": "p594-b9",
+          "source": "(2) there is some negative rational number $x$ which is not in $\\alpha$; it can be assumed that $x$ is not the least element of $\\mathbf Q-\\alpha$ (since $x$ could be replaced by $x/2>x$); then $-\\alpha$ contains the positive rational number $-x$, so, as we have just proved, $-\\alpha$ is in $P$.",
+          "sourceSha256": "48be130f78ff857fc2df3299810e828ae95bdb675e6522b1ad99fe906bc4990f",
+          "translation": "(2) 存在某个负有理数 $x$ 不在 $\\alpha$ 中；可以假设 $x$ 不是 $\\mathbf Q-\\alpha$ 的最小元素（因为可以把 $x$ 换成 $x/2>x$）；那么 $-\\alpha$ 包含正有理数 $-x$，所以根据刚才的证明，$-\\alpha$ 在 $P$ 中。"
+        },
+        {
+          "id": "p594-b10",
+          "source": "This shows that *at least* one of (i)–(iii) must hold. If $\\alpha=\\mathbf0$, it is clearly impossible for condition (ii) or (iii) to hold. Moreover, it is impossible that $\\alpha>\\mathbf0$ and $-\\alpha>\\mathbf0$ both hold, since this would imply that $\\mathbf0=\\alpha+(-\\alpha)>\\mathbf0$. ■",
+          "sourceSha256": "0dbc23b5fb8bf4e3c4947123e782577c21a088cd19f975710258d14d05a31660",
+          "translation": "这表明 (i)–(iii) 中*至少*有一个成立。如果 $\\alpha=\\mathbf0$，那么条件 (ii) 或 (iii) 显然都不可能成立。此外，$\\alpha>\\mathbf0$ 和 $-\\alpha>\\mathbf0$ 也不可能同时成立，因为这会意味着 $\\mathbf0=\\alpha+(-\\alpha)>\\mathbf0$。■"
+        },
+        {
+          "id": "p594-b11",
+          "source": "Recall that $\\alpha>\\beta$ was defined to mean that $\\alpha$ contains $\\beta$, but is unequal to $\\beta$. This definition was fine for proving completeness, but now we have to show that it is equivalent to the definition which would be made in terms of $P$. Thus, we must show that $\\alpha-\\beta>\\mathbf0$ is equivalent to $\\alpha>\\beta$. This is clearly a consequence of the next theorem.",
+          "sourceSha256": "90e75c0a68933f68a56efed526f959ead3bd8d0a0753bbeb2b20fb6318f81fc5",
+          "translation": "回想一下，$\\alpha>\\beta$ 的定义是 $\\alpha$ 包含 $\\beta$，但不等于 $\\beta$。这个定义用于证明完备性很好，但现在我们必须证明，它等价于用 $P$ 所作的定义。因此，我们必须证明 $\\alpha-\\beta>\\mathbf0$ 等价于 $\\alpha>\\beta$。这显然是下一个定理的推论。"
+        },
+        {
+          "id": "p594-b12",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p594-b13",
+          "source": "If $\\alpha$, $\\beta$, and $\\gamma$ are real numbers and $\\alpha>\\beta$, then $\\alpha+\\gamma>\\beta+\\gamma$.",
+          "sourceSha256": "c9db7974ef79031d941dd92eb4d756438c3ea0a22dc10eba674f4aa4e5cfc8aa",
+          "translation": "如果 $\\alpha$、$\\beta$ 和 $\\gamma$ 是实数，且 $\\alpha>\\beta$，那么 $\\alpha+\\gamma>\\beta+\\gamma$。"
+        },
+        {
+          "id": "p594-b14",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p594-b15",
+          "source": "The hypothesis $\\alpha>\\beta$ implies that $\\beta$ is contained in $\\alpha$; it follows immediately from the definition of $+$ that $\\beta+\\gamma$ is contained in $\\alpha+\\gamma$. This shows that $\\alpha+\\gamma\\ge\\beta+\\gamma$. We can easily rule out the possibility of equality, for if",
+          "sourceSha256": "92a9b01721d726d521c08700da9d886e2cb640b28a59fd0e0ba0706bff5296f3",
+          "translation": "假设 $\\alpha>\\beta$ 意味着 $\\beta$ 包含于 $\\alpha$；由 $+$ 的定义立即可知，$\\beta+\\gamma$ 包含于 $\\alpha+\\gamma$。这表明 $\\alpha+\\gamma\\ge\\beta+\\gamma$。我们很容易排除相等的可能性，因为如果"
+        },
+        {
+          "id": "p594-b16",
+          "source": "$$\\alpha+\\gamma=\\beta+\\gamma,$$",
+          "sourceSha256": "f9937325dcdb3ca7b7f7e1f4cde11b54db7e8633d25f279acefaad6f7506ab5c"
+        },
+        {
+          "id": "p594-b17",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p594-b18",
+          "source": "$$\\alpha=(\\alpha+\\gamma)+(-\\gamma)=(\\beta+\\gamma)+(-\\gamma)=\\beta,$$",
+          "sourceSha256": "61522ac6838a8ae144781ccbafa6b72bb1c16c825018aa55d0c2846bcf9b8bea"
+        },
+        {
+          "id": "p594-b19",
+          "source": "which is false. Thus $\\alpha+\\gamma>\\beta+\\gamma$. ■",
+          "sourceSha256": "f4be295c6d31e31b5aa449cbf6018b737ba5f9e7aa1a4a68e2c3a3d47697d9aa",
+          "translation": "而这是不成立的。因此 $\\alpha+\\gamma>\\beta+\\gamma$。■"
+        },
+        {
+          "id": "p594-b20",
+          "source": "Multiplication presents difficulties of its own. If $\\alpha,\\beta>\\mathbf0$, then $\\alpha\\cdot\\beta$ can be defined as follows.",
+          "sourceSha256": "fe6232e72d5c39ecb9010beef6cd33129d4d79ba17ca85a61f63e426724376c3",
+          "translation": "乘法也有它自身的困难。如果 $\\alpha,\\beta>\\mathbf0$，那么 $\\alpha\\cdot\\beta$ 可以如下定义。"
+        },
+        {
+          "id": "p594-b21",
+          "source": "*Definition.* If $\\alpha$ and $\\beta$ are real numbers and $\\alpha,\\beta>\\mathbf0$, then",
+          "sourceSha256": "f769416bd2a684052cfd56f1b5ffa95b771d39a3ba80446b4c47e051cde4db1b",
+          "translation": "*定义。* 如果 $\\alpha$ 和 $\\beta$ 是实数，且 $\\alpha,\\beta>\\mathbf0$，那么"
+        },
+        {
+          "id": "p594-b22",
+          "source": "$$\\alpha\\cdot\\beta=\\{z:z\\le0\\text{ or }z=x\\cdot y\\text{ for some }x\\text{ in }\\alpha\\text{ and }y\\text{ in }\\beta\\text{ with }x,y>0\\}.$$",
+          "sourceSha256": "b0c4bd96c5e4607ebe1f263e53e4237ce52f3b8530b9356e4c7e63a1b888c962"
+        },
+        {
+          "id": "p594-b23",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p594-b24",
+          "source": "If $\\alpha$ and $\\beta$ are real numbers with $\\alpha,\\beta>\\mathbf0$, then $\\alpha\\cdot\\beta$ is a real number.",
+          "sourceSha256": "5eda3c30a0f05d7997e81fa3794e8fd95fc4b8351a4f55fbaefcb5fa444148e7",
+          "translation": "如果 $\\alpha$ 和 $\\beta$ 是满足 $\\alpha,\\beta>\\mathbf0$ 的实数，那么 $\\alpha\\cdot\\beta$ 是实数。"
+        }
+      ]
+    },
+    {
+      "printed": 595,
+      "sourceSha256": "76e334d3f547f351965c5e67328f543eb599339af4b522a6da009b177abc2217",
+      "blocks": [
+        {
+          "id": "p595-b1",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p595-b2",
+          "source": "As usual, we must check four conditions.",
+          "sourceSha256": "ec7c5aea8115658191a05e3e4c79f82d24102638ca95bf6ae4bd545cc5f75e43",
+          "translation": "像往常一样，我们必须检查四个条件。"
+        },
+        {
+          "id": "p595-b3",
+          "source": "(1) Suppose $w<z$, where $z$ is in $\\alpha\\cdot\\beta$. If $w\\le0$, then $w$ is automatically in $\\alpha\\cdot\\beta$. Suppose that $w>0$. Then $z>0$, so $z=x\\cdot y$ for some positive $x$ in $\\alpha$ and positive $y$ in $\\beta$. Now",
+          "sourceSha256": "a05141e02db106e9797c1e94d44322c21a9b7a9d51cd0425dacced0a237dc6e6",
+          "translation": "(1) 假设 $w<z$，其中 $z$ 在 $\\alpha\\cdot\\beta$ 中。如果 $w\\le0$，那么 $w$ 自动就在 $\\alpha\\cdot\\beta$ 中。假设 $w>0$。那么 $z>0$，所以对 $\\alpha$ 中某个正数 $x$ 和 $\\beta$ 中某个正数 $y$，有 $z=x\\cdot y$。现在"
+        },
+        {
+          "id": "p595-b4",
+          "source": "$$w=\\frac{wz}z=\\frac{wxy}z=\\left(\\frac wz\\cdot x\\right)\\cdot y.$$",
+          "sourceSha256": "fbc7ebc6e7e0b89cad35a6ee144929bb0fab938398c494d14291edafdf2d95d2"
+        },
+        {
+          "id": "p595-b5",
+          "source": "Since $0<w<z$, we have $w/z<1$, so $(w/z)\\cdot x$ is in $\\alpha$. Thus $w$ is in $\\alpha\\cdot\\beta$.",
+          "sourceSha256": "b96abf14e1d036c21549086c5327234e15f14d8bf4b41f0e06a1070e17aa634a",
+          "translation": "由于 $0<w<z$，有 $w/z<1$，所以 $(w/z)\\cdot x$ 在 $\\alpha$ 中。因此 $w$ 在 $\\alpha\\cdot\\beta$ 中。"
+        },
+        {
+          "id": "p595-b6",
+          "source": "(2) Clearly $\\alpha\\cdot\\beta\\ne\\varnothing$.",
+          "sourceSha256": "888482b024e68accbefd16fcb760b1078ed250213b237c13f92434f80429da65",
+          "translation": "(2) 显然 $\\alpha\\cdot\\beta\\ne\\varnothing$。"
+        },
+        {
+          "id": "p595-b7",
+          "source": "(3) If $x$ is not in $\\alpha$, and $y$ is not in $\\beta$, then $x>x'$ for all $x'$ in $\\alpha$, and $y>y'$ for all $y'$ in $\\beta$. Hence $xy>x'y'$ for all such positive $x'$ and $y'$. So $xy$ is not in $\\alpha\\cdot\\beta$; thus $\\alpha\\cdot\\beta\\ne\\mathbf Q$.",
+          "sourceSha256": "35078814887c4eb4cc3716f04f1f218c8e2475d658a8d987546dd1ca92fd30b1",
+          "translation": "(3) 如果 $x$ 不在 $\\alpha$ 中，且 $y$ 不在 $\\beta$ 中，那么对 $\\alpha$ 中所有 $x'$ 都有 $x>x'$，对 $\\beta$ 中所有 $y'$ 都有 $y>y'$。因此，对所有这样的正数 $x'$ 和 $y'$，都有 $xy>x'y'$。所以 $xy$ 不在 $\\alpha\\cdot\\beta$ 中；因此 $\\alpha\\cdot\\beta\\ne\\mathbf Q$。"
+        },
+        {
+          "id": "p595-b8",
+          "source": "(4) Suppose $w$ is in $\\alpha\\cdot\\beta$, and $w\\le0$. There is some $x$ in $\\alpha$ with $x>0$ and some $y$ in $\\beta$ with $y>0$. Then $z=xy$ is in $\\alpha\\cdot\\beta$ and $z>w$. Now suppose $w>0$. Then $w=xy$ for some positive $x$ in $\\alpha$ and some positive $y$ in $\\beta$. Moreover, $\\alpha$ contains some $x'>x$; if $z=x'y$, then $z>xy=w$, and $z$ is in $\\alpha\\cdot\\beta$. Thus $\\alpha\\cdot\\beta$ does not have a greatest element. ■",
+          "sourceSha256": "9718eb9bc077aa308ceb5d844ce7e5ee4663cbbf6c713ff6be3733b6341fab40",
+          "translation": "(4) 假设 $w$ 在 $\\alpha\\cdot\\beta$ 中，且 $w\\le0$。存在 $\\alpha$ 中某个 $x$ 使得 $x>0$，以及 $\\beta$ 中某个 $y$ 使得 $y>0$。那么 $z=xy$ 在 $\\alpha\\cdot\\beta$ 中，且 $z>w$。现在假设 $w>0$。那么对于 $\\alpha$ 中某个正数 $x$ 和 $\\beta$ 中某个正数 $y$，有 $w=xy$。此外，$\\alpha$ 包含某个 $x'>x$；如果 $z=x'y$，那么 $z>xy=w$，而 $z$ 在 $\\alpha\\cdot\\beta$ 中。因此 $\\alpha\\cdot\\beta$ 没有最大元素。■"
+        },
+        {
+          "id": "p595-b9",
+          "source": "Notice that $\\alpha\\cdot\\beta$ is clearly in $P$ if $\\alpha$ and $\\beta$ are. This completes the verification of all properties of $P$. To complete the definition of $\\cdot$ we first define $|\\alpha|$.",
+          "sourceSha256": "7e4988dd7256af8ca160aafe2cf6ba79af771c79adc6bd4ad28374335be538bb",
+          "translation": "注意，如果 $\\alpha$ 和 $\\beta$ 在 $P$ 中，那么 $\\alpha\\cdot\\beta$ 显然也在其中。至此，$P$ 的所有性质都验证完毕了。为了完成 $\\cdot$ 的定义，我们先定义 $|\\alpha|$。"
+        },
+        {
+          "id": "p595-b10",
+          "source": "*Definition.* If $\\alpha$ is a real number, then",
+          "sourceSha256": "0a908f1014d6665285d9675058a49237412a9063b36772cdcd1d502fb39903c8",
+          "translation": "*定义。* 如果 $\\alpha$ 是实数，那么"
+        },
+        {
+          "id": "p595-b11",
+          "source": "$$|\\alpha|=\\begin{cases}\\alpha,&\\text{if }\\alpha\\ge\\mathbf0\\\\-\\alpha,&\\text{if }\\alpha\\le\\mathbf0.\\end{cases}$$",
+          "sourceSha256": "f168592bc59f03499c92f9b4f32dfe417b5bd621aee5098b790c490c6ca762e9"
+        },
+        {
+          "id": "p595-b12",
+          "source": "*Definition.* If $\\alpha$ and $\\beta$ are real numbers, then",
+          "sourceSha256": "dce4ec0d42c108ba143c7f84bd22659b8fd0d8b4d80e8d178cbb6e3a4d34bbbf",
+          "translation": "*定义。* 如果 $\\alpha$ 和 $\\beta$ 是实数，那么"
+        },
+        {
+          "id": "p595-b13",
+          "source": "$$\\alpha\\cdot\\beta=\\begin{cases}\\mathbf0,&\\text{if }\\alpha=\\mathbf0\\text{ or }\\beta=\\mathbf0\\\\|\\alpha|\\cdot|\\beta|,&\\text{if }\\alpha>\\mathbf0,\\beta>\\mathbf0\\text{ or }\\alpha<\\mathbf0,\\beta<\\mathbf0\\\\-(|\\alpha|\\cdot|\\beta|),&\\text{if }\\alpha>\\mathbf0,\\beta<\\mathbf0\\text{ or }\\alpha<\\mathbf0,\\beta>\\mathbf0.\\end{cases}$$",
+          "sourceSha256": "7de0beabbd651e41101d6df35d187db1721b3ab9893071823655fab4d91ccd20"
+        },
+        {
+          "id": "p595-b14",
+          "source": "As one might suspect, the proofs of the properties of multiplication usually involve reduction to the case of positive numbers.",
+          "sourceSha256": "c2ea69dd45a7af0837180ed5568f88806e759454f5df18afd8d7820126dd0406",
+          "translation": "正如你可能猜到的，乘法性质的证明通常要化归到正数的情形。"
+        },
+        {
+          "id": "p595-b15",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p595-b16",
+          "source": "If $\\alpha$, $\\beta$, and $\\gamma$ are real numbers, then $\\alpha\\cdot(\\beta\\cdot\\gamma)=(\\alpha\\cdot\\beta)\\cdot\\gamma$.",
+          "sourceSha256": "759595cd122394c90f6cdc83d951e80c9b44bb3e891d812cc519f85cd29bad07",
+          "translation": "如果 $\\alpha$、$\\beta$ 和 $\\gamma$ 是实数，那么 $\\alpha\\cdot(\\beta\\cdot\\gamma)=(\\alpha\\cdot\\beta)\\cdot\\gamma$。"
+        },
+        {
+          "id": "p595-b17",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p595-b18",
+          "source": "This is clear if $\\alpha,\\beta,\\gamma>\\mathbf0$. The proof for the general case requires considering separate cases (and is simplified slightly if one uses the following theorem). ■",
+          "sourceSha256": "55392104f6fef7060ec25c52856f93f622ef1555a0082d31fe81e18d12889777",
+          "translation": "如果 $\\alpha,\\beta,\\gamma>\\mathbf0$，这显然成立。一般情形的证明需要分别考虑各种情况（利用下面的定理可以稍微简化）。■"
+        },
+        {
+          "id": "p595-b19",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p595-b20",
+          "source": "If $\\alpha$ and $\\beta$ are real numbers, then $\\alpha\\cdot\\beta=\\beta\\cdot\\alpha$.",
+          "sourceSha256": "3a81d5a8d0da9e4d73539fb36fe0d22fcdf4c73eb9c40561997e882ee26d8a6e",
+          "translation": "如果 $\\alpha$ 和 $\\beta$ 是实数，那么 $\\alpha\\cdot\\beta=\\beta\\cdot\\alpha$。"
+        }
+      ]
+    },
+    {
+      "printed": 596,
+      "sourceSha256": "5c9eac41fa9bcb98ad383bbbf1c50d705c385c5847dd75984412984768147dc4",
+      "blocks": [
+        {
+          "id": "p596-b1",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p596-b2",
+          "source": "This is clear if $\\alpha,\\beta>\\mathbf0$, and the other cases are easily checked. ■",
+          "sourceSha256": "5e7799ca6da663f83d9b5f12dd917b670f11bd8926b7077b10e1d9a6f50c16c0",
+          "translation": "如果 $\\alpha,\\beta>\\mathbf0$，这显然成立，其他情况也很容易检验。■"
+        },
+        {
+          "id": "p596-b3",
+          "source": "*Definition.* $\\mathbf1=\\{x\\text{ in }\\mathbf Q:x<1\\}$.",
+          "sourceSha256": "ed1ab9c54f6f4650a30c714d839c85c785a206316637255014a44a996671966e",
+          "translation": "*定义。* $\\mathbf1=\\{x\\text{ in }\\mathbf Q:x<1\\}$。"
+        },
+        {
+          "id": "p596-b4",
+          "source": "(It is clear that $\\mathbf1$ is a real number.)",
+          "sourceSha256": "3b32d2348cd4d68ac194f77fbce61461c3633bc472b68c3a6d23e88cbb291004",
+          "translation": "（显然 $\\mathbf1$ 是一个实数。）"
+        },
+        {
+          "id": "p596-b5",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p596-b6",
+          "source": "If $\\alpha$ is a real number, then $\\alpha\\cdot\\mathbf1=\\alpha$.",
+          "sourceSha256": "214e678808eac52f9013953d6ec39ddeb1c69c62b1b0e6c2bda975971b702506",
+          "translation": "如果 $\\alpha$ 是实数，那么 $\\alpha\\cdot\\mathbf1=\\alpha$。"
+        },
+        {
+          "id": "p596-b7",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p596-b8",
+          "source": "Let $\\alpha>\\mathbf0$. It is easy to see that every member of $\\alpha\\cdot\\mathbf1$ is also a member of $\\alpha$. On the other hand, suppose $x$ is in $\\alpha$. If $x\\le0$, then $x$ is automatically in $\\alpha\\cdot\\mathbf1$. If $x>0$, then there is some rational number $y$ in $\\alpha$ such that $x<y$. Then $x=y\\cdot(x/y)$, and $x/y$ is in $\\mathbf1$, so $x$ is in $\\alpha\\cdot\\mathbf1$. This proves that $\\alpha\\cdot\\mathbf1=\\alpha$ if $\\alpha>\\mathbf0$.",
+          "sourceSha256": "4ccac44683fc476c9aaa61eff0d12a50b44bbd2bc380b4b86b5489568a4d134c",
+          "translation": "令 $\\alpha>\\mathbf0$。容易看出，$\\alpha\\cdot\\mathbf1$ 的每个元素也都是 $\\alpha$ 的元素。另一方面，假设 $x$ 在 $\\alpha$ 中。如果 $x\\le0$，那么 $x$ 自动就在 $\\alpha\\cdot\\mathbf1$ 中。如果 $x>0$，那么 $\\alpha$ 中存在某个有理数 $y$，使得 $x<y$。于是 $x=y\\cdot(x/y)$，而 $x/y$ 在 $\\mathbf1$ 中，所以 $x$ 在 $\\alpha\\cdot\\mathbf1$ 中。这就证明了当 $\\alpha>\\mathbf0$ 时 $\\alpha\\cdot\\mathbf1=\\alpha$。"
+        },
+        {
+          "id": "p596-b9",
+          "source": "If $\\alpha<\\mathbf0$, then, applying the result just proved, we have",
+          "sourceSha256": "88ba8b97d5161530a3a257f93cb95c9692e6bbfbb8d5753de9073d5136e1bc09",
+          "translation": "如果 $\\alpha<\\mathbf0$，那么应用刚才证明的结果，有"
+        },
+        {
+          "id": "p596-b10",
+          "source": "$$\\alpha\\cdot\\mathbf1=-(|\\alpha|\\cdot|\\mathbf1|)=-(|\\alpha|)=\\alpha.$$",
+          "sourceSha256": "91f9973dd0b49fabd12ce38ebec54512cbadfba70d25f51daecf95c16d172916"
+        },
+        {
+          "id": "p596-b11",
+          "source": "Finally, the theorem is obvious when $\\alpha=\\mathbf0$. ■",
+          "sourceSha256": "8a2a57da00368f850e9db1a055711a485ea04aec714a0aca14662c9e2ef20781",
+          "translation": "最后，当 $\\alpha=\\mathbf0$ 时，定理显然成立。■"
+        },
+        {
+          "id": "p596-b12",
+          "source": "*Definition.* If $\\alpha$ is a real number and $\\alpha>\\mathbf0$, then",
+          "sourceSha256": "d9cd79208e857b02131c8f423a092ac13510e2943d9b15339a0c647b3e27df36",
+          "translation": "*定义。* 如果 $\\alpha$ 是实数，且 $\\alpha>\\mathbf0$，那么"
+        },
+        {
+          "id": "p596-b13",
+          "source": "$$\\begin{aligned}\\alpha^{-1}=\\{x\\text{ in }\\mathbf Q:\\;&x\\le0,\\text{ or }x>0\\text{ and }1/x\\text{ is not in }\\alpha,\\text{ but }1/x\\text{ is not the smallest}\\\\&\\text{member of }\\mathbf Q-\\alpha\\};\\end{aligned}$$",
+          "sourceSha256": "8f1fa472a0a49803d170f765ecc4fcb66cebb65465fc3b06ea19a64dfbe658e6"
+        },
+        {
+          "id": "p596-b14",
+          "source": "if $\\alpha<\\mathbf0$, then $\\alpha^{-1}=-(|\\alpha|)^{-1}$.",
+          "sourceSha256": "22bbafa9c3e963a17ddead2138079883cf1b937a3c69fb56e8c09873fe2b87cf",
+          "translation": "如果 $\\alpha<\\mathbf0$，那么 $\\alpha^{-1}=-(|\\alpha|)^{-1}$。"
+        },
+        {
+          "id": "p596-b15",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p596-b16",
+          "source": "If $\\alpha$ is a real number unequal to $\\mathbf0$, then $\\alpha^{-1}$ is a real number.",
+          "sourceSha256": "39d8b43f2b6e62125393e24c10db93d004064f4829f89ff9ec7534f2db03a0da",
+          "translation": "如果 $\\alpha$ 是不等于 $\\mathbf0$ 的实数，那么 $\\alpha^{-1}$ 是实数。"
+        },
+        {
+          "id": "p596-b17",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p596-b18",
+          "source": "Clearly it suffices to consider only $\\alpha>\\mathbf0$. Four conditions must be checked.",
+          "sourceSha256": "7ac8ea6fdf9932bf5c09c43fd75a45374d44f7ef507b46f93573cda50bc87046",
+          "translation": "显然只需考虑 $\\alpha>\\mathbf0$。必须检查四个条件。"
+        },
+        {
+          "id": "p596-b19",
+          "source": "(1) Suppose $y<x$, and $x$ is in $\\alpha^{-1}$. If $y\\le0$, then $y$ is in $\\alpha^{-1}$. If $y>0$, then $x>0$, so $1/x$ is not in $\\alpha$. Since $1/y>1/x$, it follows that $1/y$ is not in $\\alpha$, and $1/y$ is clearly not the smallest element of $\\mathbf Q-\\alpha$, so $y$ is in $\\alpha^{-1}$.",
+          "sourceSha256": "6d9ef0070642dc5a46ed6b3bff30ec1459595665c7104f8ce00651189fcae059",
+          "translation": "(1) 假设 $y<x$，且 $x$ 在 $\\alpha^{-1}$ 中。如果 $y\\le0$，那么 $y$ 在 $\\alpha^{-1}$ 中。如果 $y>0$，那么 $x>0$，所以 $1/x$ 不在 $\\alpha$ 中。由于 $1/y>1/x$，可知 $1/y$ 不在 $\\alpha$ 中，而 $1/y$ 显然不是 $\\mathbf Q-\\alpha$ 的最小元素，所以 $y$ 在 $\\alpha^{-1}$ 中。"
+        },
+        {
+          "id": "p596-b20",
+          "source": "(2) Clearly $\\alpha^{-1}\\ne\\varnothing$.",
+          "sourceSha256": "d6412637becb53b733b20eee4962c3763a6668e2c8452468e10a8381ab451c87",
+          "translation": "(2) 显然 $\\alpha^{-1}\\ne\\varnothing$。"
+        },
+        {
+          "id": "p596-b21",
+          "source": "(3) Since $\\alpha>\\mathbf0$, there is some positive rational number $x$ in $\\alpha$. Then $1/x$ is not in $\\alpha^{-1}$, so $\\alpha^{-1}\\ne\\mathbf Q$.",
+          "sourceSha256": "f9345ca1b347464c2682de4ee67c462831e66c4edb9bfababc602852801bf4d0",
+          "translation": "(3) 由于 $\\alpha>\\mathbf0$，$\\alpha$ 中存在某个正有理数 $x$。那么 $1/x$ 不在 $\\alpha^{-1}$ 中，所以 $\\alpha^{-1}\\ne\\mathbf Q$。"
+        },
+        {
+          "id": "p596-b22",
+          "source": "(4) Suppose $x$ is in $\\alpha^{-1}$. If $x\\le0$, there is clearly some $y$ in $\\alpha^{-1}$ with $y>x$ because $\\alpha^{-1}$ contains some positive rationals. If $x>0$, then $1/x$ is not in $\\alpha$. Since $1/x$ is not the smallest member of $\\mathbf Q-\\alpha$, there is a rational number $y$ not in $\\alpha$, with $y<1/x$. Choose a rational number $z$ with $y<z<1/x$. Then $1/z$ is in $\\alpha^{-1}$, and $1/z>x$. Thus $\\alpha^{-1}$ does not contain a largest member. ■",
+          "sourceSha256": "cab7ebc2e18b703cc14dacfb4d56f93e7b9366d82962df7e64085dc4d5616b7a",
+          "translation": "(4) 假设 $x$ 在 $\\alpha^{-1}$ 中。如果 $x\\le0$，显然存在 $\\alpha^{-1}$ 中的某个 $y$，使得 $y>x$，因为 $\\alpha^{-1}$ 包含某些正有理数。如果 $x>0$，那么 $1/x$ 不在 $\\alpha$ 中。由于 $1/x$ 不是 $\\mathbf Q-\\alpha$ 的最小元素，存在一个不在 $\\alpha$ 中的有理数 $y$，使得 $y<1/x$。选择一个有理数 $z$，使得 $y<z<1/x$。那么 $1/z$ 在 $\\alpha^{-1}$ 中，且 $1/z>x$。因此 $\\alpha^{-1}$ 不包含最大元素。■"
+        },
+        {
+          "id": "p596-b23",
+          "source": "In order to prove that $\\alpha^{-1}$ is really the multiplicative inverse of $\\alpha$, it helps to have another lemma, which is the multiplicative analogue of our first lemma.",
+          "sourceSha256": "0951438a5559130fa964309df391332f7ddda81abfc9ab570bf86ffc4d636c79",
+          "translation": "为了证明 $\\alpha^{-1}$ 确实是 $\\alpha$ 的乘法逆元，再有一个引理会很有帮助；它是第一个引理在乘法方面的对应形式。"
+        },
+        {
+          "id": "p596-b24",
+          "source": "## LEMMA",
+          "sourceSha256": "07ac55301ea6b0a97eb0aa24b21439b232113e07b78a37389ce42c41900e2368",
+          "translation": "## 引理"
+        },
+        {
+          "id": "p596-b25",
+          "source": "Let $\\alpha$ be a real number with $\\alpha>\\mathbf0$, and $z$ a rational number with $z>1$. Then there are rational numbers $x$ in $\\alpha$, and $y$ not in $\\alpha$, such that $y/x=z$. Moreover, we can assume that $y$ is not the least element of $\\mathbf Q-\\alpha$.",
+          "sourceSha256": "39e3629983441bc1a719a22eaa3bd20edb66ec65d0f88779fb461efe54014009",
+          "translation": "设 $\\alpha$ 是满足 $\\alpha>\\mathbf0$ 的实数，而 $z$ 是满足 $z>1$ 的有理数。那么存在 $\\alpha$ 中的有理数 $x$，以及不在 $\\alpha$ 中的有理数 $y$，使得 $y/x=z$。此外，可以假设 $y$ 不是 $\\mathbf Q-\\alpha$ 的最小元素。"
+        }
+      ]
+    },
+    {
+      "printed": 597,
+      "sourceSha256": "0c7d3c96ed903cefb27539307f801c58869a8c736a2bf646ec8233740e5e3719",
+      "blocks": [
+        {
+          "id": "p597-b1",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p597-b2",
+          "source": "Suppose first that $z$ is in $\\alpha$. Since $z-1>0$ and",
+          "sourceSha256": "a0e02d8ac2df4b4a9641cf88c36776ec40901cc4002d642c024f9cf52da5b9eb",
+          "translation": "先假设 $z$ 在 $\\alpha$ 中。由于 $z-1>0$，并且"
+        },
+        {
+          "id": "p597-b3",
+          "source": "$$z^n=(1+(z-1))^n\\ge1+n(z-1),$$",
+          "sourceSha256": "2b2f6f3a0b92e7472d2e38912500d8c209f24fe49ce57e1ab60798234a443a89"
+        },
+        {
+          "id": "p597-b4",
+          "source": "it follows that the numbers",
+          "sourceSha256": "521801cbef69b40c389f2aa79eb20867bb41d272dd41af79b73261afebac4f5e",
+          "translation": "可知数"
+        },
+        {
+          "id": "p597-b5",
+          "source": "$$z,z^2,z^3,\\ldots$$",
+          "sourceSha256": "e50eb3afc3b14ed18dd1235f3e5dd005434c192ba8e582166ae724afc952d443"
+        },
+        {
+          "id": "p597-b6",
+          "source": "cannot all be in $\\alpha$. So there is some $k$ such that $x=z^k$ is in $\\alpha$, and $y=z^{k+1}$ is not in $\\alpha$. Clearly $y/x=z$. Moreover, if $y$ happens to be the least element of $\\mathbf Q-\\alpha$, let $x'>x$ be an element of $\\alpha$, and replace $x$ by $x'$ and $y$ by $yx'/x$.",
+          "sourceSha256": "6d7af21acffc6c0887cce6979732a69364e5cc5b393a823979180053e9e29779",
+          "translation": "不可能全都在 $\\alpha$ 中。所以存在某个 $k$，使得 $x=z^k$ 在 $\\alpha$ 中，而 $y=z^{k+1}$ 不在 $\\alpha$ 中。显然 $y/x=z$。此外，如果 $y$ 恰好是 $\\mathbf Q-\\alpha$ 的最小元素，就取 $\\alpha$ 中的一个元素 $x'>x$，把 $x$ 换成 $x'$，把 $y$ 换成 $yx'/x$。"
+        },
+        {
+          "id": "p597-b7",
+          "source": "If $z$ is not in $\\alpha$, there is a similar proof, based on the fact that the numbers $1/z^k$ cannot all fail to be in $\\alpha$. ■",
+          "sourceSha256": "7f6cda6daad9dcb0ace99eeab870025dcac77d78d5ab5db98467f141de6accc2",
+          "translation": "如果 $z$ 不在 $\\alpha$ 中，也有一个类似的证明，它基于如下事实：数 $1/z^k$ 不可能全都不在 $\\alpha$ 中。■"
+        },
+        {
+          "id": "p597-b8",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p597-b9",
+          "source": "If $\\alpha$ is a real number and $\\alpha\\ne\\mathbf0$, then $\\alpha\\cdot\\alpha^{-1}=\\mathbf1$.",
+          "sourceSha256": "d875248905c18c6dd3a6cfbcf16913785d3ee3caba134a20f192234ee6f37a7f",
+          "translation": "如果 $\\alpha$ 是实数，且 $\\alpha\\ne\\mathbf0$，那么 $\\alpha\\cdot\\alpha^{-1}=\\mathbf1$。"
+        },
+        {
+          "id": "p597-b10",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p597-b11",
+          "source": "It obviously suffices to consider only $\\alpha>\\mathbf0$, in which case $\\alpha^{-1}>\\mathbf0$. Suppose that $x$ is a positive rational number in $\\alpha$, and $y$ is a positive rational number in $\\alpha^{-1}$. Then $1/y$ is not in $\\alpha$, so $1/y>x$; consequently $xy<1$, which means that $xy$ is in $\\mathbf1$. Since all rational numbers $x\\le0$ are also in $\\mathbf1$, this shows that every member of $\\alpha\\cdot\\alpha^{-1}$ is in $\\mathbf1$.",
+          "sourceSha256": "3a4c9b4e99952c8c938595146612366fbb6d3440a2c14344ffac5b0814d99433",
+          "translation": "显然，只需考虑 $\\alpha>\\mathbf0$，在这种情形中 $\\alpha^{-1}>\\mathbf0$。设 $x$ 是 $\\alpha$ 中的正有理数，$y$ 是 $\\alpha^{-1}$ 中的正有理数。那么 $1/y$ 不在 $\\alpha$ 中，所以 $1/y>x$；从而 $xy<1$，也就是说 $xy$ 在 $\\mathbf1$ 中。由于所有有理数 $x\\le0$ 也都在 $\\mathbf1$ 中，这表明 $\\alpha\\cdot\\alpha^{-1}$ 的每个元素都在 $\\mathbf1$ 中。"
+        },
+        {
+          "id": "p597-b12",
+          "source": "To prove the converse assertion, let $z$ be in $\\mathbf1$. If $z\\le0$, then clearly $z$ is in $\\alpha\\cdot\\alpha^{-1}$. Suppose $0<z<1$. According to the lemma, there are positive rational numbers $x$ in $\\alpha$, and $y$ not in $\\alpha$, such that $y/x=1/z$; and we can assume that $y$ is not the smallest element of $\\mathbf Q-\\alpha$. But this means that $z=x\\cdot(1/y)$, where $x$ is in $\\alpha$, and $1/y$ is in $\\alpha^{-1}$. Consequently, $z$ is in $\\alpha\\cdot\\alpha^{-1}$. ■",
+          "sourceSha256": "8278c91fbf05627f07cae5feb2e85d9302546c6a0b7b02b9b9959f278a71e44a",
+          "translation": "为了证明反向的断言，设 $z$ 在 $\\mathbf1$ 中。如果 $z\\le0$，那么 $z$ 显然在 $\\alpha\\cdot\\alpha^{-1}$ 中。假设 $0<z<1$。根据引理，存在 $\\alpha$ 中的正有理数 $x$，以及不在 $\\alpha$ 中的正有理数 $y$，使得 $y/x=1/z$；而且可以假设 $y$ 不是 $\\mathbf Q-\\alpha$ 的最小元素。但这意味着 $z=x\\cdot(1/y)$，其中 $x$ 在 $\\alpha$ 中，$1/y$ 在 $\\alpha^{-1}$ 中。因此，$z$ 在 $\\alpha\\cdot\\alpha^{-1}$ 中。■"
+        },
+        {
+          "id": "p597-b13",
+          "source": "We are almost done! Only the proof of the distributive law remains. Once again we must consider many cases, but do not despair. The case when all numbers are positive contains an interesting point, and the other cases can all be taken care of very neatly.",
+          "sourceSha256": "9f4c3a839defe67693a15a9e44569e2844d13d8ee25642a584b692d6321e1d14",
+          "translation": "我们快完成了！只剩分配律的证明。我们又一次必须考虑许多情况，但不要绝望。三个数全为正数的情形有一个有意思的地方，其他情况则都可以很利落地处理。"
+        },
+        {
+          "id": "p597-b14",
+          "source": "## THEOREM",
+          "sourceSha256": "6d4c61029368030156f2bd4640a0ac272734166bf95f8141df14c82f5268aa52",
+          "translation": "## 定理"
+        },
+        {
+          "id": "p597-b15",
+          "source": "If $\\alpha$, $\\beta$, and $\\gamma$ are real numbers, then $\\alpha\\cdot(\\beta+\\gamma)=\\alpha\\cdot\\beta+\\alpha\\cdot\\gamma$.",
+          "sourceSha256": "8c2c43705731eca66054c1cb59e60edf8d612c032fcc3ae4ea739761c97728f3",
+          "translation": "如果 $\\alpha$、$\\beta$ 和 $\\gamma$ 是实数，那么 $\\alpha\\cdot(\\beta+\\gamma)=\\alpha\\cdot\\beta+\\alpha\\cdot\\gamma$。"
+        },
+        {
+          "id": "p597-b16",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p597-b17",
+          "source": "Assume first that $\\alpha,\\beta,\\gamma>\\mathbf0$. Then both numbers in the equation contain all rational numbers $\\le0$. A positive rational number in $\\alpha\\cdot(\\beta+\\gamma)$ is of the form $x\\cdot(y+z)$ for positive $x$ in $\\alpha$, $y$ in $\\beta$, and $z$ in $\\gamma$. Since $x\\cdot(y+z)=x\\cdot y+x\\cdot z$, where $x\\cdot y$ is a positive element of $\\alpha\\cdot\\beta$, and $x\\cdot z$ is a positive element of $\\alpha\\cdot\\gamma$, this number is also in $\\alpha\\cdot\\beta+\\alpha\\cdot\\gamma$. Thus, every element of $\\alpha\\cdot(\\beta+\\gamma)$ is also in $\\alpha\\cdot\\beta+\\alpha\\cdot\\gamma$.",
+          "sourceSha256": "7e339c98e5a45937d70a30ce93a87698f57626f7975bf15319bd1b399689ce69",
+          "translation": "先假设 $\\alpha,\\beta,\\gamma>\\mathbf0$。那么等式中的两个数都包含所有 $\\le0$ 的有理数。$\\alpha\\cdot(\\beta+\\gamma)$ 中的一个正有理数具有形式 $x\\cdot(y+z)$，其中 $x$ 是 $\\alpha$ 中的正数，$y$ 是 $\\beta$ 中的正数，$z$ 是 $\\gamma$ 中的正数。由于 $x\\cdot(y+z)=x\\cdot y+x\\cdot z$，其中 $x\\cdot y$ 是 $\\alpha\\cdot\\beta$ 的正元素，而 $x\\cdot z$ 是 $\\alpha\\cdot\\gamma$ 的正元素，所以这个数也在 $\\alpha\\cdot\\beta+\\alpha\\cdot\\gamma$ 中。因此，$\\alpha\\cdot(\\beta+\\gamma)$ 的每个元素也都是 $\\alpha\\cdot\\beta+\\alpha\\cdot\\gamma$ 的元素。"
+        },
+        {
+          "id": "p597-b18",
+          "source": "On the other hand, a positive rational number in $\\alpha\\cdot\\beta+\\alpha\\cdot\\gamma$ is of the form $x_1\\cdot y+x_2\\cdot z$ for positive $x_1,x_2$ in $\\alpha$, $y$ in $\\beta$, and $z$ in $\\gamma$. If $x_1\\le x_2$, then $(x_1/x_2)\\cdot y\\le y$, so $(x_1/x_2)\\cdot y$ is in $\\beta$. Thus",
+          "sourceSha256": "fec99f54b5693733b910938acee0e7577e9b7f19b0b56df39411488e95d71f38",
+          "translation": "另一方面，$\\alpha\\cdot\\beta+\\alpha\\cdot\\gamma$ 中的一个正有理数具有形式 $x_1\\cdot y+x_2\\cdot z$，其中 $x_1,x_2$ 是 $\\alpha$ 中的正数，$y$ 是 $\\beta$ 中的正数，$z$ 是 $\\gamma$ 中的正数。如果 $x_1\\le x_2$，那么 $(x_1/x_2)\\cdot y\\le y$，所以 $(x_1/x_2)\\cdot y$ 在 $\\beta$ 中。因此"
+        },
+        {
+          "id": "p597-b19",
+          "source": "$$x_1\\cdot y+x_2\\cdot z=x_2[(x_1/x_2)y+z]$$",
+          "sourceSha256": "d038a3f638ac8bb7cc82ece89b08dd1d39b6d5a797ee3f716e14d4b1e14b8467"
+        },
+        {
+          "id": "p597-b20",
+          "source": "is in $\\alpha\\cdot(\\beta+\\gamma)$. Of course, the same trick works if $x_2\\le x_1$.",
+          "sourceSha256": "3d364de825249ad820726c5e8ddcbba8dcb6f23ba5719d826659c3ba68d6102b",
+          "translation": "在 $\\alpha\\cdot(\\beta+\\gamma)$ 中。当然，如果 $x_2\\le x_1$，同样的技巧仍然适用。"
+        },
+        {
+          "id": "p597-b21",
+          "source": "To complete the proof it is necessary to consider the cases when $\\alpha$, $\\beta$, and $\\gamma$ are not all $>\\mathbf0$. If any one of the three equals $\\mathbf0$, the proof is easy and the cases",
+          "sourceSha256": "821f78cb79394d99667550393d936e862cc69f29257904c2d742b7deb9a144d4",
+          "translation": "为了完成证明，必须考虑 $\\alpha$、$\\beta$ 和 $\\gamma$ 不全都 $>\\mathbf0$ 的情况。如果这三个数中有任何一个等于 $\\mathbf0$，证明就很容易，而"
+        }
+      ]
+    },
+    {
+      "printed": 598,
+      "sourceSha256": "c73d575d647e93198dceb3fd434c7ba80c90bcd9ecfb2b7dd4697c1361b55977",
+      "blocks": [
+        {
+          "id": "p598-b1",
+          "source": "involving $\\alpha<\\mathbf0$ can be derived immediately once all the possibilities for $\\beta$ and $\\gamma$ have been accounted for. Thus we assume $\\alpha>\\mathbf0$ and consider three cases: $\\beta,\\gamma<\\mathbf0$, and $\\beta<\\mathbf0,\\gamma>\\mathbf0$, and $\\beta>\\mathbf0,\\gamma<\\mathbf0$. The first follows immediately from the case already proved, and the third follows from the second by interchanging $\\beta$ and $\\gamma$. Therefore we concentrate on the case $\\beta<\\mathbf0,\\gamma>\\mathbf0$. There are then two possibilities:",
+          "sourceSha256": "c733990fc37d9280c27ad64b874ac0f2f49f1c63cdfed200b861d15873e3c242",
+          "translation": "涉及 $\\alpha<\\mathbf0$ 的情形，只要已经处理了 $\\beta$ 和 $\\gamma$ 的所有可能情况，就能立即推出。因此，我们假设 $\\alpha>\\mathbf0$，并考虑三种情形：$\\beta,\\gamma<\\mathbf0$、$\\beta<\\mathbf0,\\gamma>\\mathbf0$ 和 $\\beta>\\mathbf0,\\gamma<\\mathbf0$。第一种直接由已经证明的情形得到；第三种则可通过交换 $\\beta$ 和 $\\gamma$，从第二种得到。因此，我们集中考虑 $\\beta<\\mathbf0,\\gamma>\\mathbf0$ 的情形。这时又有两种可能："
+        },
+        {
+          "id": "p598-b2",
+          "source": "(1) $\\beta+\\gamma\\ge\\mathbf0$. Then",
+          "sourceSha256": "1c78dd18cf007ddff34c01918a1882791b4870212ef20f9701767f700949f0e4",
+          "translation": "(1) $\\beta+\\gamma\\ge\\mathbf0$。那么"
+        },
+        {
+          "id": "p598-b3",
+          "source": "$$\\alpha\\cdot\\gamma=\\alpha\\cdot([\\beta+\\gamma]+|\\beta|)=\\alpha\\cdot(\\beta+\\gamma)+\\alpha\\cdot|\\beta|,$$",
+          "sourceSha256": "4233ab37515d28f4be25dfe91dc98a2df228ad914725cabd7611ca1615de123a"
+        },
+        {
+          "id": "p598-b4",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p598-b5",
+          "source": "$$\\begin{aligned}\\alpha\\cdot(\\beta+\\gamma)&=-(\\alpha\\cdot|\\beta|)+\\alpha\\cdot\\gamma\\\\&=\\alpha\\cdot\\beta+\\alpha\\cdot\\gamma.\\end{aligned}$$",
+          "sourceSha256": "324d557db1404929e8deadd8290b883805b35f38de7e62d1866a1c4f265f66a0"
+        },
+        {
+          "id": "p598-b6",
+          "source": "(2) $\\beta+\\gamma\\le\\mathbf0$. Then",
+          "sourceSha256": "132f23cd52723e9e3988c3126ad2943e1eb820556d472b785d67d74e33622427",
+          "translation": "(2) $\\beta+\\gamma\\le\\mathbf0$。那么"
+        },
+        {
+          "id": "p598-b7",
+          "source": "$$\\alpha\\cdot|\\beta|=\\alpha\\cdot(|\\beta+\\gamma|+\\gamma)=\\alpha\\cdot|\\beta+\\gamma|+\\alpha\\cdot\\gamma,$$",
+          "sourceSha256": "cbac3cd2221770229167915bf826f9aa95b71c13ffc40d50e6c3679801f288f9"
+        },
+        {
+          "id": "p598-b8",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p598-b9",
+          "source": "$$\\alpha\\cdot(\\beta+\\gamma)=-(\\alpha\\cdot|\\beta+\\gamma|)=-(\\alpha\\cdot|\\beta|)+\\alpha\\cdot\\gamma=\\alpha\\cdot\\beta+\\alpha\\cdot\\gamma.\\quad\\blacksquare$$",
+          "sourceSha256": "d9365fc843c7c1e20c4f8e77c28ca21fb676438f441d171dbb01c8881b4f3f16"
+        },
+        {
+          "id": "p598-b10",
+          "source": "This proof completes the work of the chapter. Although long and frequently tedious, this chapter contains results sufficiently important to be read in detail at least once (and preferably not more than once!). For the first time we know that we have not been operating in a vacuum—there is indeed a complete ordered field, the theorems of this book are not based on assumptions which can never be realized. One interesting and horrid possibility remains: there may be several complete ordered fields. If this is true, then the theorems of calculus are unexpectedly rich in content, but the properties P1–P13 are disappointingly incomplete. The last chapter disposes of this possibility; properties P1–P13 completely characterize the real numbers—anything that can be proved about real numbers can be proved on the basis of these properties alone.",
+          "sourceSha256": "481e6d3b61296eb59d44da29a9c0eb4cfe05786df66adc207c4a6901c3f468ac",
+          "translation": "这个证明完成了本章的工作。尽管本章很长，而且常常乏味，但其中的结果足够重要，值得至少仔细读一遍（最好也不要超过一遍！）。我们第一次知道，自己并非一直在真空中操作——确实存在一个完备有序域，本书中的定理并不是建立在永远无法实现的假设之上的。还剩一种既有趣又可怕的可能性：也许存在好几个完备有序域。如果确实如此，那么微积分定理所包含的内容将丰富得出乎意料，但性质 P1–P13 则不完整得令人失望。最后一章将排除这种可能性；性质 P1–P13 完全刻画了实数——任何能够证明的关于实数的结论，都能够仅以这些性质为基础来证明。"
+        },
+        {
+          "id": "p598-b11",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p598-b12",
+          "source": "There are only two problems in this set, but each asks for an entirely different construction of the real numbers! The detailed examination of another construction is recommended only for masochists, but the main idea behind these other constructions is worth knowing. The real numbers constructed in this chapter might be called “the algebraist’s real numbers,” since they were purposely defined so as to guarantee the least upper bound property, which involves the ordering $<$, an algebraic notion. The real number system constructed in the next problem might be called “the analyst’s real numbers,” since they are devised so that Cauchy sequences will always converge.",
+          "sourceSha256": "76aca97ccfec3037b365c30c840c5c4e0a85ee8ad3c0404bb5e175741efe69fb",
+          "translation": "本组只有两道习题，但每道都要求给出一种完全不同的实数构造！仔细检验另一种构造，只推荐给喜欢自讨苦吃的人，不过这些其他构造背后的主要思想值得了解。本章构造的实数，可以称为“代数学家的实数”，因为它们被特意定义成能保证最小上界性质成立，而这一性质涉及次序 $<$，这是一个代数概念。下一道习题中构造的实数系统，可以称为“分析学家的实数”，因为它们的设计目的，是让柯西数列总能收敛。"
+        },
+        {
+          "id": "p598-b13",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p598-b14",
+          "source": "Since every real number ought to be the limit of some Cauchy sequence of rational numbers, we might try to *define* a real number to be a Cauchy",
+          "sourceSha256": "52c6631bf4b5477d2450d69283b698dcfe5423d1aa9508c07c7f0a185b6d3458",
+          "translation": "由于每个实数都应当是某个有理数柯西数列的极限，我们可以尝试把一个实数*定义*为一个有理数的柯西"
+        }
+      ]
+    },
+    {
+      "printed": 599,
+      "sourceSha256": "5f7ed074d9278303948a7111b7ab3587f35aedb0c3ffb63323b2ac317aed20a1",
+      "blocks": [
+        {
+          "id": "p599-b1",
+          "source": "sequence of rational numbers. Since two Cauchy sequences might converge to the same real number, however, this proposal requires some modifications.",
+          "sourceSha256": "38b580e4b51a658d0d4a230c3492c2479b1b8260ededc2ebb6454dd312d524aa",
+          "translation": "数列。不过，由于两个柯西数列可能收敛于同一个实数，这个方案需要作些修改。"
+        },
+        {
+          "id": "p599-b2",
+          "source": "(a) Define two Cauchy sequences of rational numbers $\\{a_n\\}$ and $\\{b_n\\}$ to be *equivalent* (denoted by $\\{a_n\\}\\sim\\{b_n\\}$) if $\\lim_{n\\to\\infty}(a_n-b_n)=0$. Prove that $\\{a_n\\}\\sim\\{a_n\\}$, that $\\{b_n\\}\\sim\\{a_n\\}$ if $\\{a_n\\}\\sim\\{b_n\\}$, and that $\\{a_n\\}\\sim\\{c_n\\}$ if $\\{a_n\\}\\sim\\{b_n\\}$ and $\\{b_n\\}\\sim\\{c_n\\}$.",
+          "sourceSha256": "83392a9e65cabd08aaa19111916411e50ec3d80fd7a2d9f67963df21a59c7c3d",
+          "translation": "(a) 定义两个有理数柯西数列 $\\{a_n\\}$ 和 $\\{b_n\\}$ 是*等价的*（记为 $\\{a_n\\}\\sim\\{b_n\\}$），如果 $\\lim_{n\\to\\infty}(a_n-b_n)=0$。证明 $\\{a_n\\}\\sim\\{a_n\\}$；如果 $\\{a_n\\}\\sim\\{b_n\\}$，那么 $\\{b_n\\}\\sim\\{a_n\\}$；如果 $\\{a_n\\}\\sim\\{b_n\\}$ 且 $\\{b_n\\}\\sim\\{c_n\\}$，那么 $\\{a_n\\}\\sim\\{c_n\\}$。"
+        },
+        {
+          "id": "p599-b3",
+          "source": "(b) Suppose that $\\alpha$ is the set of all sequences equivalent to $\\{a_n\\}$, and $\\beta$ is the set of all sequences equivalent to $\\{b_n\\}$. Prove that either $\\alpha\\cap\\beta=\\varnothing$ or $\\alpha=\\beta$. (If $\\alpha\\cap\\beta\\ne\\varnothing$, then there is some $\\{c_n\\}$ in both $\\alpha$ and $\\beta$. Show that in this case $\\alpha$ and $\\beta$ both consist precisely of those sequences equivalent to $\\{c_n\\}$.)",
+          "sourceSha256": "6b8e993e8d073f7624bc37cfb4bc99829a991146329fa2ab34b4fd712c902999",
+          "translation": "(b) 假设 $\\alpha$ 是所有与 $\\{a_n\\}$ 等价的数列所成的集合，而 $\\beta$ 是所有与 $\\{b_n\\}$ 等价的数列所成的集合。证明，要么 $\\alpha\\cap\\beta=\\varnothing$，要么 $\\alpha=\\beta$。（如果 $\\alpha\\cap\\beta\\ne\\varnothing$，那么存在某个 $\\{c_n\\}$ 同时属于 $\\alpha$ 和 $\\beta$。证明在这种情形中，$\\alpha$ 和 $\\beta$ 都恰好由所有与 $\\{c_n\\}$ 等价的数列组成。）"
+        },
+        {
+          "id": "p599-b4",
+          "source": "Part (b) shows that the collection of all Cauchy sequences can be split up into disjoint sets, each set consisting of all sequences equivalent to some fixed sequence. We define a real number to be such a collection, and denote the set of all real numbers by $\\mathbf R$.",
+          "sourceSha256": "a620859b9d0c5653df6d8f8b1538edbd66f4023cbe63c17a5ea960e40bb9869d",
+          "translation": "(b) 部分表明，可以把全体柯西数列分成互不相交的集合，每个集合都由与某个固定数列等价的所有数列组成。我们把实数定义为这样的一个集合，并用 $\\mathbf R$ 表示全体实数所成的集合。"
+        },
+        {
+          "id": "p599-b5",
+          "source": "(c) If $\\alpha$ and $\\beta$ are real numbers, let $\\{a_n\\}$ be a sequence in $\\alpha$, and $\\{b_n\\}$ a sequence in $\\beta$. Define $\\alpha+\\beta$ to be the collection of all sequences equivalent to the sequence $\\{a_n+b_n\\}$. Show that $\\{a_n+b_n\\}$ is a Cauchy sequence and also show that this definition does not depend on the particular sequences $\\{a_n\\}$ and $\\{b_n\\}$ chosen for $\\alpha$ and $\\beta$. Check also that the analogous definition of multiplication is well defined.",
+          "sourceSha256": "1275135c9cd989a9254cce3426dcb6f5edaa0a0d626d02fde78a0592065d6858",
+          "translation": "(c) 如果 $\\alpha$ 和 $\\beta$ 是实数，取 $\\alpha$ 中的一个数列 $\\{a_n\\}$，以及 $\\beta$ 中的一个数列 $\\{b_n\\}$。把 $\\alpha+\\beta$ 定义为所有与数列 $\\{a_n+b_n\\}$ 等价的数列所成的集合。证明 $\\{a_n+b_n\\}$ 是柯西数列，并证明这个定义不依赖于为 $\\alpha$ 和 $\\beta$ 所选取的具体数列 $\\{a_n\\}$ 和 $\\{b_n\\}$。也检验乘法的类似定义是良好定义的。"
+        },
+        {
+          "id": "p599-b6",
+          "source": "(d) Show that $\\mathbf R$ is a field with these operations; existence of a multiplicative inverse is the only interesting point to check.",
+          "sourceSha256": "d3ef612ba80774917428c056d8dd36b24aaaa324146f21ce530ec32b18f89c13",
+          "translation": "(d) 证明，带有这些运算的 $\\mathbf R$ 是一个域；乘法逆元的存在性是唯一值得费心检验的地方。"
+        },
+        {
+          "id": "p599-b7",
+          "source": "(e) Define the positive real numbers $P$ so that $\\mathbf R$ will be an ordered field.",
+          "sourceSha256": "066439aa5e68c94ead5ff784972411555b794a5adebd1169c1903963b8bfc741",
+          "translation": "(e) 定义正实数集合 $P$，使得 $\\mathbf R$ 成为有序域。"
+        },
+        {
+          "id": "p599-b8",
+          "source": "(f) Prove that every Cauchy sequence of real numbers converges. Remember that if $\\{\\alpha_n\\}$ is a sequence of real numbers, then each $\\alpha_n$ is itself a collection of Cauchy sequences of rational numbers.",
+          "sourceSha256": "9bae45bff6ba695cbe67644fbf89eb486a236fc1c2749a8f813857b77ea64628",
+          "translation": "(f) 证明每个实数柯西数列都收敛。记住，如果 $\\{\\alpha_n\\}$ 是一个实数数列，那么每个 $\\alpha_n$ 本身都是一个有理数柯西数列的集合。"
+        },
+        {
+          "id": "p599-b9",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p599-b10",
+          "source": "This problem outlines a construction of “the high-school student’s real numbers.” We define a real number to be a pair $(a,\\{b_n\\})$, where $a$ is an integer and $\\{b_n\\}$ is a sequence of natural numbers from $0$ to $9$, with the proviso that the sequence is not eventually $9$; intuitively, this pair represents $a+\\displaystyle\\sum_{n=1}^\\infty b_n10^{-n}$. With this definition, a real number is a very concrete object, but the difficulties involved in defining addition and multiplication are formidable (how do you add infinite decimals without worrying about carrying digits infinitely far out?). A reasonable approach is outlined below; the trick is to use least upper bounds right from the start.",
+          "sourceSha256": "457039f118fd796f3430a6bd055c4be990f6fe7326409d36e03ca7dc7c266afa",
+          "translation": "本题概述一种“中学生的实数”的构造。我们把一个实数定义为一个有序对 $(a,\\{b_n\\})$，其中 $a$ 是整数，$\\{b_n\\}$ 是由 $0$ 到 $9$ 之间的自然数组成的数列，并附加要求：该数列不能从某一项起全为 $9$；直观地说，这个有序对表示 $a+\\displaystyle\\sum_{n=1}^\\infty b_n10^{-n}$。在这个定义下，实数是一个非常具体的对象，但定义加法和乘法所涉及的困难却极为棘手（相加两个无限小数时，怎样才能不操心任意遥远的小数位上的进位问题？）。下面概述一种合理的方法；诀窍是从一开始就使用最小上界。"
+        },
+        {
+          "id": "p599-b11",
+          "source": "(a) Define $(a,\\{b_n\\})<(c,\\{d_n\\})$ if $a<c$, or if $a=c$ and for some $n$ we have $b_n<d_n$ but $b_j=d_j$ for $1\\le j<n$. Using this definition, prove the least upper bound property.",
+          "sourceSha256": "61945aac028312b14256c8b0e654f6151d4ce120a00e11010a6e7d5a405d5996",
+          "translation": "(a) 如果 $a<c$，或者 $a=c$ 且对某个 $n$ 有 $b_n<d_n$、而对 $1\\le j<n$ 有 $b_j=d_j$，就定义 $(a,\\{b_n\\})<(c,\\{d_n\\})$。利用这个定义证明最小上界性质。"
+        },
+        {
+          "id": "p599-b12",
+          "source": "(b) Given $\\alpha=(a,\\{b_n\\})$, define $\\alpha_k=a+\\displaystyle\\sum_{n=1}^k b_n10^{-n}$; intuitively, $\\alpha_k$ is the",
+          "sourceSha256": "ad35ba46a5030e016862b6244a46d9c2360c990c8598441b59e5dea8b7198811",
+          "translation": "(b) 给定 $\\alpha=(a,\\{b_n\\})$，定义 $\\alpha_k=a+\\displaystyle\\sum_{n=1}^k b_n10^{-n}$；直观地说，$\\alpha_k$ 是把"
+        }
+      ]
+    },
+    {
+      "printed": 600,
+      "sourceSha256": "ee14007b1a8b66773262021377ca4821821363f1d5f4db77c1142bfddab0ddc2",
+      "blocks": [
+        {
+          "id": "p600-b1",
+          "source": "rational number obtained by changing all decimal places after the $k$th to $0$. Conversely, given a rational number $r$ of the form $a+\\displaystyle\\sum_{n=1}^k b_n10^{-n}$, let $r'$ denote the real number $(a,\\{b_n'\\})$, where $b_n'=b_n$ for $1\\le n\\le k$ and $b_n'=0$ for $n>k$. Now for $\\alpha=(a,\\{b_n\\})$ and $\\beta=(c,\\{d_n\\})$ define",
+          "sourceSha256": "af4083588638c833ecb9728c1a3aa1008b55c4a1ac7236882a5c5e896ba83a6d",
+          "translation": "第 $k$ 位之后的小数位全部改成 $0$ 所得到的有理数。反过来，给定形如 $a+\\displaystyle\\sum_{n=1}^k b_n10^{-n}$ 的有理数 $r$，用 $r'$ 表示实数 $(a,\\{b_n'\\})$，其中当 $1\\le n\\le k$ 时 $b_n'=b_n$，当 $n>k$ 时 $b_n'=0$。现在，对于 $\\alpha=(a,\\{b_n\\})$ 和 $\\beta=(c,\\{d_n\\})$，定义"
+        },
+        {
+          "id": "p600-b2",
+          "source": "$$\\alpha+\\beta=\\sup\\{(\\alpha_k+\\beta_k)':k\\text{ a natural number}\\}$$",
+          "sourceSha256": "797cfce53a0c59895f14d567a3d9a2c74e847e93bc4add1e9dae6692cd65e598"
+        },
+        {
+          "id": "p600-b3",
+          "source": "(the least upper bound exists by part (a)). If multiplication is defined similarly, then the verification of all conditions for a field is a straightforward task, not highly recommended. Once more, however, existence of multiplicative inverses will be the hardest.",
+          "sourceSha256": "fd4111862b79f76cbf0fc23f60a6d1418cb45cc3f5acac68afdba2299f3876d8",
+          "translation": "（由 (a) 部分可知，最小上界存在）。如果类似地定义乘法，那么验证域的全部条件就是一项直接的工作，不过不太推荐你去做。然而，乘法逆元的存在性又将是最困难的一点。"
+        }
+      ]
+    }
+  ]
+}

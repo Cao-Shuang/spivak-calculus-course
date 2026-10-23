@@ -1,0 +1,1342 @@
+{
+  "chapter": 7,
+  "language": "zh-CN",
+  "sourceSha256": "de249c2539ef054a49180b0b833447fdc33a68f8027595d1ca9ad7cb1db97ab2",
+  "paragraphCount": 153,
+  "pages": [
+    {
+      "printed": 122,
+      "sourceSha256": "f4a95ca22e43f8b140ba4b4b003a1a58829e2869c28f7c757e794da3bc4a732d",
+      "blocks": [
+        {
+          "id": "p122-b1",
+          "source": "# CHAPTER 7  THREE HARD THEOREMS",
+          "sourceSha256": "eb19e09d20e51f549476552cd7a9795366f928855cb35a5ff581042f05fdf814",
+          "translation": "# 第 7 章　三个困难的定理"
+        },
+        {
+          "id": "p122-b2",
+          "source": "This chapter is devoted to three theorems about continuous functions, and some of their consequences. The proofs of the three theorems themselves will not be given until the next chapter, for reasons which are explained at the end of this chapter.",
+          "sourceSha256": "a7f2617d9b95d1c1227d75a9752b01b56ad58b389f71e47801990b67e0658a01",
+          "translation": "本章专门讨论关于连续函数的三个定理，以及它们的一些推论。这三个定理本身的证明将留到下一章，原因会在本章末尾解释。"
+        },
+        {
+          "id": "p122-b3",
+          "source": "**THEOREM 1**",
+          "sourceSha256": "2b6c6f1cd8500f04785734eb53e38fae29cf7651dd2ba301e21cef75e224df22",
+          "translation": "**定理 1**"
+        },
+        {
+          "id": "p122-b4",
+          "source": "If $f$ is continuous on $[a,b]$ and $f(a)<0<f(b)$, then there is some $x$ in $[a,b]$ such that $f(x)=0$.",
+          "sourceSha256": "ec264a441da386d70b33ff340d46d2baee4b1d3f2955a5199fd9cf241eb3ede0",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，且 $f(a)<0<f(b)$，那么存在某个属于 $[a,b]$ 的 $x$，使得 $f(x)=0$。"
+        },
+        {
+          "id": "p122-b5",
+          "source": "(Geometrically, this means that the graph of a continuous function which starts below the horizontal axis and ends above it must cross this axis at some point, as in Figure 1.)",
+          "sourceSha256": "bac94c1cf9d57c8bbb5ae1078274818a4a5f3abacccfcc5e3562d4ebf1db5a2b",
+          "translation": "（从几何上说，这意味着一个连续函数的图像，如果开始时位于水平轴下方，结束时位于水平轴上方，就必须在某处穿过这条轴，如图 1 所示。）"
+        },
+        {
+          "id": "p122-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:404px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"37 1207 404 271\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0141.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "ecaa4125936621d42d5aa70e0e1d1675222550672287ae4fdeda46b912701f64"
+        },
+        {
+          "id": "p122-b7",
+          "source": "**THEOREM 2**",
+          "sourceSha256": "59bd15153c31a53f3eec003199c59649639a3b3a6b854407f90576e04346c1a4",
+          "translation": "**定理 2**"
+        },
+        {
+          "id": "p122-b8",
+          "source": "If $f$ is continuous on $[a,b]$, then $f$ is **bounded above** on $[a,b]$, that is, there is some number $N$ such that $f(x)\\le N$ for all $x$ in $[a,b]$.",
+          "sourceSha256": "14b5c45f3de2de3eeb146837bdc5c3d3ebaac4e3ea671d9cc2bc3d759ed10594",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，那么 $f$ 在 $[a,b]$ 上**有上界**，即存在某个数 $N$，使得对于 $[a,b]$ 中的所有 $x$ 都有 $f(x)\\le N$。"
+        },
+        {
+          "id": "p122-b9",
+          "source": "(Geometrically, this theorem means that the graph of $f$ lies below some line parallel to the horizontal axis, as in Figure 2.)",
+          "sourceSha256": "292ad400d1ca099e4d06387cc45e87bf7ff249320e7629fc5b77f19cd164bca4",
+          "translation": "（从几何上说，这个定理意味着 $f$ 的图像位于某条平行于水平轴的直线下方，如图 2 所示。）"
+        },
+        {
+          "id": "p122-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:399px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"468 1060 399 419\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0141.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "1941021eadbbdbeaffba6cb9207d90d9dd02a444ed236ad98547ef2fdd15ca0e"
+        },
+        {
+          "id": "p122-b11",
+          "source": "**THEOREM 3**",
+          "sourceSha256": "144f2b1c919e3eccfd2f2d3b52b3a51686b023b4bc55f5d83f53928650fda205",
+          "translation": "**定理 3**"
+        },
+        {
+          "id": "p122-b12",
+          "source": "If $f$ is continuous on $[a,b]$, then there is some number $y$ in $[a,b]$ such that $f(y)\\ge f(x)$ for all $x$ in $[a,b]$ (Figure 3).",
+          "sourceSha256": "1efd8577e8a629f3cf2bff7c522c94920f973e2928f2952bea96ddd302d52375",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，那么存在 $[a,b]$ 中的某个数 $y$，使得对于 $[a,b]$ 中的所有 $x$ 都有 $f(y)\\ge f(x)$（图 3）。"
+        },
+        {
+          "id": "p122-b13",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:365px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"933 1184 365 295\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0141.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "fe6056ea456698d8c427abda66d3bc07e085eaa09803779b89a8263dd0039ebc"
+        },
+        {
+          "id": "p122-b14",
+          "source": "These three theorems differ markedly from the theorems of Chapter 6. The hypotheses of those theorems always involved continuity at a single point, while",
+          "sourceSha256": "61b8204d461daf7b1172f5eaa1ec9a9b60332cb0c92a7ef8637bcd179de6c726",
+          "translation": "这三个定理与第 6 章的定理有显著区别。那些定理的假设总是涉及在单个点处连续，而"
+        }
+      ]
+    },
+    {
+      "printed": 123,
+      "sourceSha256": "f718378952940667c291c5ca4bb32dde353f08b5c87076a2e94fab9011159808",
+      "blocks": [
+        {
+          "id": "p123-b1",
+          "source": "the hypotheses of the present theorems require continuity on a whole interval $[a,b]$—if continuity fails to hold at a single point, the conclusions may fail. For example, let $f$ be the function shown in Figure 4,",
+          "sourceSha256": "175d4aa18c7ce9e49e56dbfa8569a9f171bf050c235485b787c0223d36f2aafc",
+          "translation": "这里的定理则要求在整个区间 $[a,b]$ 上连续：哪怕只在一点不连续，结论也可能失效。例如，令 $f$ 为图 4 所示的函数，"
+        },
+        {
+          "id": "p123-b2",
+          "source": "$$f(x)=\\begin{cases}-1,&0\\le x<\\sqrt2\\\\1,&\\sqrt2\\le x\\le2.\\end{cases}$$",
+          "sourceSha256": "663eb168ea8af09c038f8fd7b3fad3551bf9fedf3e4fb1e00da9702c371dbd57"
+        },
+        {
+          "id": "p123-b3",
+          "source": "Then $f$ is continuous at every point of $[0,2]$ except $\\sqrt2$, and $f(0)<0<f(2)$, but there is no point $x$ in $[0,2]$ such that $f(x)=0$; the discontinuity at the single point $\\sqrt2$ is sufficient to destroy the conclusion of Theorem 1.",
+          "sourceSha256": "ce3de962dc264585f5a03dcb502e1bc93c6effba02c5812fd07168f456c898d0",
+          "translation": "那么 $f$ 在 $[0,2]$ 中除 $\\sqrt2$ 以外的每一点都连续，而且 $f(0)<0<f(2)$，但 $[0,2]$ 中没有任何点 $x$ 满足 $f(x)=0$；仅在 $\\sqrt2$ 这一点的不连续，就足以破坏定理 1 的结论。"
+        },
+        {
+          "id": "p123-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:289px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 132 289 316\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0142.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "a2cc2c54c8f388560510e877b67e5d962d1f8af5761f864c117bd6d896a2f5bf"
+        },
+        {
+          "id": "p123-b5",
+          "source": "Similarly, suppose that $f$ is the function shown in Figure 5,",
+          "sourceSha256": "2ff471d3a997d0dea76702e19b258f893bd161de826fadfcc2a182051351771d",
+          "translation": "类似地，设 $f$ 为图 5 所示的函数，"
+        },
+        {
+          "id": "p123-b6",
+          "source": "$$f(x)=\\begin{cases}1/x,&x\\ne0\\\\0,&x=0.\\end{cases}$$",
+          "sourceSha256": "4c605d4ce7586a838c0450091cb984fb4b728a812fcc003faf6dd1cc675d6850"
+        },
+        {
+          "id": "p123-b7",
+          "source": "Then $f$ is continuous at every point of $[0,1]$ except $0$, but $f$ is not bounded above on $[0,1]$. In fact, for any number $N>0$ we have $f(1/2N)=2N>N$.",
+          "sourceSha256": "dcbfcc3ca7e6cee31a777f772281e88c97a00d63c308219475777bec3804180d",
+          "translation": "那么 $f$ 在 $[0,1]$ 中除 $0$ 以外的每一点都连续，但 $f$ 在 $[0,1]$ 上没有上界。事实上，对于任意数 $N>0$，都有 $f(1/2N)=2N>N$。"
+        },
+        {
+          "id": "p123-b8",
+          "source": "This example also shows that the closed interval $[a,b]$ in Theorem 2 cannot be replaced by the open interval $(a,b)$, for the function $f$ is continuous on $(0,1)$, but is not bounded there.",
+          "sourceSha256": "a34685ea817c8f7be1069acbd8d2a066882ebec3907f2cf90d2f2c931aa4c6a5",
+          "translation": "这个例子还说明，定理 2 中的闭区间 $[a,b]$ 不能换成开区间 $(a,b)$，因为函数 $f$ 在 $(0,1)$ 上连续，却在那里无界。"
+        },
+        {
+          "id": "p123-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:428px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 537 428 366\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0142.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "0f7e04bc6c4e70fa73e49f87275d7732b2bbfd9f24977c8e389732eb34e0d75d"
+        },
+        {
+          "id": "p123-b10",
+          "source": "Finally, consider the function shown in Figure 6,",
+          "sourceSha256": "05d16d750b5e094b4f1b81e0c4ecd1c858cb40ac22dcf50bd26e6c2386555c2a",
+          "translation": "最后，考虑图 6 所示的函数，"
+        },
+        {
+          "id": "p123-b11",
+          "source": "$$f(x)=\\begin{cases}x^2,&x<1\\\\0,&x\\ge1.\\end{cases}$$",
+          "sourceSha256": "c5cb2b5c0dc8a6dc15b71423699e56d255274b49bdea5f6e9b198b36e1315857"
+        },
+        {
+          "id": "p123-b12",
+          "source": "On the interval $[0,1]$ the function $f$ is bounded above, so $f$ does satisfy the conclusion of Theorem 2, even though $f$ is not continuous on $[0,1]$. But $f$ does not satisfy the conclusion of Theorem 3—there is no $y$ in $[0,1]$ such that $f(y)\\ge f(x)$ for all $x$ in $[0,1]$; in fact, it is certainly not true that $f(1)\\ge f(x)$ for all $x$ in $[0,1]$ so we cannot choose $y=1$, nor can we choose $0\\le y<1$ because $f(y)<f(x)$ if $x$ is any number with $y<x<1$.",
+          "sourceSha256": "ab2713af8f8db5f60d5e97813db49387ca6cd9bbccddae49b5df8635c0a8997c",
+          "translation": "在区间 $[0,1]$ 上，函数 $f$ 有上界，所以尽管 $f$ 在 $[0,1]$ 上并不连续，$f$ 仍满足定理 2 的结论。但 $f$ 不满足定理 3 的结论：不存在 $[0,1]$ 中的 $y$，使得对于 $[0,1]$ 中所有 $x$ 都有 $f(y)\\ge f(x)$。事实上，$f(1)\\ge f(x)$ 对 $[0,1]$ 中所有 $x$ 成立，显然不是真的，因此不能选 $y=1$；也不能选 $0\\le y<1$，因为只要 $x$ 满足 $y<x<1$，就有 $f(y)<f(x)$。"
+        },
+        {
+          "id": "p123-b13",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:427px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"46 1044 427 338\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0142.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 6</figcaption>\n</figure>",
+          "sourceSha256": "6f6c9ad655b6a7634f1ae21300b1ac8fb45521d2f040abfe130fac59592672ff"
+        },
+        {
+          "id": "p123-b14",
+          "source": "This example shows that Theorem 3 is considerably stronger than Theorem 2. Theorem 3 is often paraphrased by saying that a continuous function on a closed interval “takes on its maximum value” on that interval.",
+          "sourceSha256": "53e5e08c3ff7f7905f88a0084ce0d01406f50df8dc20ed458699bca72a4af9ce",
+          "translation": "这个例子说明，定理 3 比定理 2 强得多。定理 3 常被改述为：闭区间上的连续函数在该区间上“取到它的最大值”。"
+        },
+        {
+          "id": "p123-b15",
+          "source": "As a compensation for the stringency of the hypotheses of our three theorems, the conclusions are of a totally different order than those of previous theorems. They describe the behavior of a function, not just near a point, but on a whole interval; such “global” properties of a function are always significantly more difficult to prove than “local” properties, and are correspondingly of much greater power. To illustrate the usefulness of Theorems 1, 2, and 3, we will soon deduce some important consequences, but it will help to first mention some simple generalizations of these theorems.",
+          "sourceSha256": "0dd951b1909b9bffc0f05476505f0d338be58db1231ee059d81f08ceb82bf34f",
+          "translation": "作为三个定理的假设如此严格的补偿，它们的结论与此前定理的结论处于完全不同的层次。它们描述的不是函数仅在某点附近的行为，而是在整个区间上的行为；函数的这种“整体”性质，总比“局部”性质难证明得多，也相应地强大得多。为了说明定理 1、2、3 的作用，我们马上会推出一些重要结论，不过先介绍几个简单推广会有所帮助。"
+        },
+        {
+          "id": "p123-b16",
+          "source": "**THEOREM 4**",
+          "sourceSha256": "d16fba7a917c9c15e4b51d223329530c5a111ff7400a22ca7cd56f0d249dc764",
+          "translation": "**定理 4**"
+        },
+        {
+          "id": "p123-b17",
+          "source": "If $f$ is continuous on $[a,b]$ and $f(a)<c<f(b)$, then there is some $x$ in $[a,b]$ such that $f(x)=c$.",
+          "sourceSha256": "9deba3c7b0ad0964b75634617fb135f5aef1caddaf6f3ee289697b5ae66e7647",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，且 $f(a)<c<f(b)$，那么存在 $[a,b]$ 中的某个 $x$，使 $f(x)=c$。"
+        }
+      ]
+    },
+    {
+      "printed": 124,
+      "sourceSha256": "93cb8f7f881c6a9f1842c00ea9682a4298763684b71e6108ebf2ab843722b455",
+      "blocks": [
+        {
+          "id": "p124-b1",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p124-b2",
+          "source": "Let $g=f-c$. Then $g$ is continuous, and $g(a)<0<g(b)$. By Theorem 1, there is some $x$ in $[a,b]$ such that $g(x)=0$. But this means that $f(x)=c$. $\\blacksquare$",
+          "sourceSha256": "cbd3192aa2a093b6901b3798d2cb560bacffc5ea171334989e645b7c69961603",
+          "translation": "令 $g=f-c$。那么 $g$ 连续，且 $g(a)<0<g(b)$。由定理 1，存在 $[a,b]$ 中的某个 $x$，使 $g(x)=0$。但这意味着 $f(x)=c$。$\\blacksquare$"
+        },
+        {
+          "id": "p124-b3",
+          "source": "**THEOREM 5**",
+          "sourceSha256": "5dcab1f06cc18ed0ab06225f9f74060299a70e7a835b1c96d623fc00518f1048",
+          "translation": "**定理 5**"
+        },
+        {
+          "id": "p124-b4",
+          "source": "If $f$ is continuous on $[a,b]$ and $f(a)>c>f(b)$, then there is some $x$ in $[a,b]$ such that $f(x)=c$.",
+          "sourceSha256": "133bb5667c5fac29792d1b1d9ff7c4001eca2f4bf6d238ecbfb462cec289cb04",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，且 $f(a)>c>f(b)$，那么存在 $[a,b]$ 中的某个 $x$，使 $f(x)=c$。"
+        },
+        {
+          "id": "p124-b5",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p124-b6",
+          "source": "The function $-f$ is continuous on $[a,b]$ and $-f(a)<-c<-f(b)$. By Theorem 4 there is some $x$ in $[a,b]$ such that $-f(x)=-c$, which means that $f(x)=c$. $\\blacksquare$",
+          "sourceSha256": "4654751874414ade9af6434d8f6d79b0f74387355b0b4250b8abe2899898b58b",
+          "translation": "函数 $-f$ 在 $[a,b]$ 上连续，且 $-f(a)<-c<-f(b)$。由定理 4，存在 $[a,b]$ 中的某个 $x$，使 $-f(x)=-c$，也就是说 $f(x)=c$。$\\blacksquare$"
+        },
+        {
+          "id": "p124-b7",
+          "source": "Theorems 4 and 5 together show that $f$ takes on any value between $f(a)$ and $f(b)$. We can do even better than this: if $c$ and $d$ are in $[a,b]$, then $f$ takes on any value between $f(c)$ and $f(d)$. The proof is simple: if, for example, $c<d$, then just apply Theorems 4 and 5 to the interval $[c,d]$. Summarizing, if a continuous function on an interval takes on two values, it takes on every value in between; this slight generalization of Theorem 1 is often called the Intermediate Value Theorem.",
+          "sourceSha256": "7f403a21ea3f034cdff442f84ac663e03c00d1faec66cd956e7898c4d6ed151f",
+          "translation": "定理 4 和 5 合起来说明，$f$ 取到 $f(a)$ 与 $f(b)$ 之间的每个值。还可以说得更强：如果 $c$ 和 $d$ 属于 $[a,b]$，那么 $f$ 取到 $f(c)$ 与 $f(d)$ 之间的每个值。证明很简单：例如，若 $c<d$，只需把定理 4 和 5 应用于区间 $[c,d]$。因此，区间上的连续函数只要取到两个值，就取到它们之间的每个值；定理 1 的这一小小推广，常称为介值定理。"
+        },
+        {
+          "id": "p124-b8",
+          "source": "**THEOREM 6**",
+          "sourceSha256": "0acfa86ec2e5544dd653b69d2bc35e7ae86a3506500366e8d6c4b2c0bd0d302f",
+          "translation": "**定理 6**"
+        },
+        {
+          "id": "p124-b9",
+          "source": "If $f$ is continuous on $[a,b]$, then $f$ is **bounded below** on $[a,b]$, that is, there is some number $N$ such that $f(x)\\ge N$ for all $x$ in $[a,b]$.",
+          "sourceSha256": "f076765131785496a8fe9e4808347423adf6efb40df8b748537644f6bf537847",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，那么 $f$ 在 $[a,b]$ 上**有下界**，即存在某个数 $N$，使得对于 $[a,b]$ 中所有 $x$ 都有 $f(x)\\ge N$。"
+        },
+        {
+          "id": "p124-b10",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p124-b11",
+          "source": "The function $-f$ is continuous on $[a,b]$, so by Theorem 2 there is a number $M$ such that $-f(x)\\le M$ for all $x$ in $[a,b]$. But this means that $f(x)\\ge-M$ for all $x$ in $[a,b]$, so we can let $N=-M$. $\\blacksquare$",
+          "sourceSha256": "a491d07a07245823e031cbfb31a330ab67854d9747ff51999fdc9f7c53224c7f",
+          "translation": "函数 $-f$ 在 $[a,b]$ 上连续，因此由定理 2，存在数 $M$，使得对 $[a,b]$ 中所有 $x$ 都有 $-f(x)\\le M$。但这意味着对 $[a,b]$ 中所有 $x$ 都有 $f(x)\\ge-M$，所以可以令 $N=-M$。$\\blacksquare$"
+        },
+        {
+          "id": "p124-b12",
+          "source": "Theorems 2 and 6 together show that a continuous function $f$ on $[a,b]$ is **bounded** on $[a,b]$, that is, there is a number $N$ such that $|f(x)|\\le N$ for all $x$ in $[a,b]$. In fact, since Theorem 2 ensures the existence of a number $N_1$ such that $f(x)\\le N_1$ for all $x$ in $[a,b]$, and Theorem 6 ensures the existence of a number $N_2$ such that $f(x)\\ge N_2$ for all $x$ in $[a,b]$, we can take $N=\\max(|N_1|,|N_2|)$.",
+          "sourceSha256": "ced658b348fc14e0aa3c284db11e63fa2e31a9bdbe27ee7ecb06970281a50998",
+          "translation": "定理 2 和 6 合起来说明，$[a,b]$ 上的连续函数 $f$ 在 $[a,b]$ 上**有界**，即存在数 $N$，使得对于 $[a,b]$ 中所有 $x$ 都有 $|f(x)|\\le N$。事实上，定理 2 保证存在数 $N_1$，使对 $[a,b]$ 中所有 $x$ 都有 $f(x)\\le N_1$；定理 6 保证存在数 $N_2$，使对 $[a,b]$ 中所有 $x$ 都有 $f(x)\\ge N_2$，所以可以取 $N=\\max(|N_1|,|N_2|)$。"
+        },
+        {
+          "id": "p124-b13",
+          "source": "**THEOREM 7**",
+          "sourceSha256": "c7bedbb2aa72058fc15e5ce23c554199f77c5067e37abc1813c0d56b4068a459",
+          "translation": "**定理 7**"
+        },
+        {
+          "id": "p124-b14",
+          "source": "If $f$ is continuous on $[a,b]$, then there is some $y$ in $[a,b]$ such that $f(y)\\le f(x)$ for all $x$ in $[a,b]$.",
+          "sourceSha256": "1378ae000cd6cb053bd840f924a2e73b2e39ee3129a044c47e8778c94c8bf701",
+          "translation": "如果 $f$ 在 $[a,b]$ 上连续，那么存在 $[a,b]$ 中的某个 $y$，使得对 $[a,b]$ 中所有 $x$ 都有 $f(y)\\le f(x)$。"
+        },
+        {
+          "id": "p124-b15",
+          "source": "(A continuous function on a closed interval takes on its minimum value on that interval.)",
+          "sourceSha256": "58cbbaeb11ba7cb0eecd42bf3d36e16625d4d5e2a6b4cc7e217d6e4eb90901fe",
+          "translation": "（闭区间上的连续函数在该区间上取到它的最小值。）"
+        },
+        {
+          "id": "p124-b16",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p124-b17",
+          "source": "The function $-f$ is continuous on $[a,b]$; by Theorem 3 there is some $y$ in $[a,b]$ such that $-f(y)\\ge-f(x)$ for all $x$ in $[a,b]$, which means that $f(y)\\le f(x)$ for all $x$ in $[a,b]$. $\\blacksquare$",
+          "sourceSha256": "344d9bba1ba6fa583d4844c2dbb30b1588c4354e2b0a8fbd6c9bd02c99285920",
+          "translation": "函数 $-f$ 在 $[a,b]$ 上连续；由定理 3，存在 $[a,b]$ 中的某个 $y$，使得对 $[a,b]$ 中所有 $x$ 都有 $-f(y)\\ge-f(x)$，这意味着对 $[a,b]$ 中所有 $x$ 都有 $f(y)\\le f(x)$。$\\blacksquare$"
+        },
+        {
+          "id": "p124-b18",
+          "source": "Now that we have derived the trivial consequences of Theorems 1, 2, and 3, we can begin proving a few interesting things.",
+          "sourceSha256": "4af75450d81b9f5bc9f32a85511225bbdc71fee1b6b8da3416a38e1358b2ec14",
+          "translation": "现在已经推出了定理 1、2、3 的那些直接推论，可以开始证明几个有趣的结果了。"
+        },
+        {
+          "id": "p124-b19",
+          "source": "**THEOREM 8**",
+          "sourceSha256": "834a7e7ca54934d9d3044c034c4fc1210b5e5bba199ec7db56fef616f95d47fc",
+          "translation": "**定理 8**"
+        },
+        {
+          "id": "p124-b20",
+          "source": "Every positive number has a square root. In other words, if $\\alpha>0$, then there is some number $x$ such that $x^2=\\alpha$.",
+          "sourceSha256": "893e3e1a88362a5f56bc4bb9dcbec91c42194464a22f954afbd918583260ba3e",
+          "translation": "每个正数都有平方根。换句话说，若 $\\alpha>0$，则存在某个数 $x$，使 $x^2=\\alpha$。"
+        }
+      ]
+    },
+    {
+      "printed": 125,
+      "sourceSha256": "c70da3e34f74fcbc74a137b6c156f36c21a9cb3f52d08bf3c2309bd0bd0aac6d",
+      "blocks": [
+        {
+          "id": "p125-b1",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p125-b2",
+          "source": "Consider the function $f(x)=x^2$, which is certainly continuous. Notice that the statement of the theorem can be expressed in terms of $f$: “the number $\\alpha$ has a square root” means that $f$ takes on the value $\\alpha$. The proof of this fact about $f$ will be an easy consequence of Theorem 4.",
+          "sourceSha256": "73eacff4e48763e833b46ad04d610f448ffdcfd235967a237742c29d4ef923cf",
+          "translation": "考虑函数 $f(x)=x^2$，它当然连续。注意，定理的陈述可以用 $f$ 来表达：“数 $\\alpha$ 有平方根”意味着 $f$ 取到值 $\\alpha$。关于 $f$ 的这一事实，很容易由定理 4 推出。"
+        },
+        {
+          "id": "p125-b3",
+          "source": "There is obviously a number $b>0$ such that $f(b)>\\alpha$ (as illustrated in Figure 7); in fact, if $\\alpha>1$ we can take $b=\\alpha$, while if $\\alpha<1$ we can take $b=1$. Since $f(0)<\\alpha<f(b)$, Theorem 4 applied to $[0,b]$ implies that for some $x$ (in $[0,b]$), we have $f(x)=\\alpha$, i.e., $x^2=\\alpha$. $\\blacksquare$",
+          "sourceSha256": "2cf104149576d4040d9f4c8e5c18254c1ef6494aab78acacb9f1cd2a83168fbc",
+          "translation": "显然存在数 $b>0$，使 $f(b)>\\alpha$（如图 7 所示）；事实上，若 $\\alpha>1$，可取 $b=\\alpha$，若 $\\alpha<1$，可取 $b=1$。由于 $f(0)<\\alpha<f(b)$，把定理 4 应用于 $[0,b]$，可知存在某个 $x$（属于 $[0,b]$），使 $f(x)=\\alpha$，即 $x^2=\\alpha$。$\\blacksquare$"
+        },
+        {
+          "id": "p125-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:379px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 335 379 383\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0144.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 7</figcaption>\n</figure>",
+          "sourceSha256": "07943f3f54e2d495fc6d5cfaede3f95c5ca7b07b7b166a8c92ac4b5282fcd4ff"
+        },
+        {
+          "id": "p125-b5",
+          "source": "Precisely the same argument can be used to prove that a positive number has an $n$th root, for any natural number $n$. If $n$ happens to be odd, one can do better: *every* number has an $n$th root. To prove this we just note that if the positive number $\\alpha$ has the $n$th root $x$, i.e., if $x^n=\\alpha$, then $(-x)^n=-\\alpha$ (since $n$ is odd), so $-\\alpha$ has the $n$th root $-x$. The assertion, that for odd $n$ any number $\\alpha$ has an $n$th root, is equivalent to the statement that the equation",
+          "sourceSha256": "7004dbef782e40aa07b3a8ac2b138540b290d1c31ed9529b15e8865cc44abf52",
+          "translation": "完全相同的论证可以证明：对任意自然数 $n$，每个正数都有 $n$ 次方根。如果 $n$ 恰好为奇数，还能得到更强的结论：*每个*数都有 $n$ 次方根。要证明这一点，只需注意，如果正数 $\\alpha$ 的 $n$ 次方根是 $x$，即 $x^n=\\alpha$，那么 $(-x)^n=-\\alpha$（因为 $n$ 是奇数），所以 $-\\alpha$ 的 $n$ 次方根是 $-x$。当 $n$ 为奇数时，任意数 $\\alpha$ 都有 $n$ 次方根，这一断言等价于说：方程"
+        },
+        {
+          "id": "p125-b6",
+          "source": "$$x^n-\\alpha=0$$",
+          "sourceSha256": "fb718ef6140c68609b01fa12f5b87f60e1552c8806a6ec1a86b1635ec353270f"
+        },
+        {
+          "id": "p125-b7",
+          "source": "has a root if $n$ is odd. Expressed in this way the result is susceptible of great generalization.",
+          "sourceSha256": "0aa44961446aeaab5d3e78619216f965d6d3049a5bbd42fc841ef07efed1fe1f",
+          "translation": "在 $n$ 为奇数时有根。这样表述，就可以作出很大的推广。"
+        },
+        {
+          "id": "p125-b8",
+          "source": "**THEOREM 9**",
+          "sourceSha256": "19cc478ed0c5e129f16491c2bdc7fed43573d094b970d845d299af226a324e20",
+          "translation": "**定理 9**"
+        },
+        {
+          "id": "p125-b9",
+          "source": "If $n$ is odd, then any equation",
+          "sourceSha256": "b397fac3246124d860e9cec81bdc84db19376dcd3a89902ec0d939697ced9142",
+          "translation": "如果 $n$ 是奇数，那么任意方程"
+        },
+        {
+          "id": "p125-b10",
+          "source": "$$x^n+a_{n-1}x^{n-1}+\\cdots+a_0=0$$",
+          "sourceSha256": "bbbddc80f082bd433d71a4b71e8df9e8c1f2cbadda0df2c6fbff48261426b7c3"
+        },
+        {
+          "id": "p125-b11",
+          "source": "has a root.",
+          "sourceSha256": "79d3fbf42a59bf74ebda0432d7d8c3b692558132609024016a8f9eac6d0b1c38",
+          "translation": "都有根。"
+        },
+        {
+          "id": "p125-b12",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p125-b13",
+          "source": "We obviously want to consider the function",
+          "sourceSha256": "29a14545ba1a6eb566350ed24e607e09608fe8b641821482a30c68b1995e68bb",
+          "translation": "显然，要考虑函数"
+        },
+        {
+          "id": "p125-b14",
+          "source": "$$f(x)=x^n+a_{n-1}x^{n-1}+\\cdots+a_0;$$",
+          "sourceSha256": "fbfec1bd75212275273345ec740e3e3174096f57b2efc0787fbd75438ed7b019"
+        },
+        {
+          "id": "p125-b15",
+          "source": "we would like to prove that $f$ is sometimes positive and sometimes negative. The intuitive idea is that for large $|x|$, the function is very much like $g(x)=x^n$ and, since $n$ is odd, this function is positive for large positive $x$ and negative for large negative $x$. A little algebra is all we need to make this intuitive idea work.",
+          "sourceSha256": "5a7785f2c0b1b224dbae7691bf527cc85118303683a36c641bee8e785c4d79e2",
+          "translation": "我们希望证明 $f$ 有时为正、有时为负。直观想法是：当 $|x|$ 很大时，这个函数很像 $g(x)=x^n$；而因为 $n$ 是奇数，后者在很大的正数 $x$ 处为正，在绝对值很大的负数 $x$ 处为负。只需一点代数，就能让这个直观想法发挥作用。"
+        },
+        {
+          "id": "p125-b16",
+          "source": "The proper analysis of the function $f$ depends on writing",
+          "sourceSha256": "c180f38277324223c68beebeab41955fa1daf743359a8aeed839b3a75ddb161d",
+          "translation": "恰当地分析函数 $f$，关键在于写成"
+        },
+        {
+          "id": "p125-b17",
+          "source": "$$f(x)=x^n+a_{n-1}x^{n-1}+\\cdots+a_0\n=x^n\\left(1+\\frac{a_{n-1}}x+\\cdots+\\frac{a_0}{x^n}\\right).$$",
+          "sourceSha256": "eff2bde92e914050ba4d26cf307e4a577bb6bae83322a665da5248c401646a94"
+        },
+        {
+          "id": "p125-b18",
+          "source": "Note that",
+          "sourceSha256": "aed9643b3cb6bd21fbaae60232efc51f6743a151a334eda55dd1366b912ae8b8",
+          "translation": "注意"
+        },
+        {
+          "id": "p125-b19",
+          "source": "$$\\left|\\frac{a_{n-1}}x+\\frac{a_{n-2}}{x^2}+\\cdots+\\frac{a_0}{x^n}\\right|\n\\le\\frac{|a_{n-1}|}{|x|}+\\cdots+\\frac{|a_0|}{|x^n|}.$$",
+          "sourceSha256": "6945b633e31ee63281ab3c4a76767a2a0946ebce0e298a7ba2a6abdd3377ee5f"
+        },
+        {
+          "id": "p125-b20",
+          "source": "Consequently, if we choose $x$ satisfying",
+          "sourceSha256": "6b5ddca842bd1602b9cc8dcc7a8c2a335f067f52a9831a766f193e001dec9800",
+          "translation": "因此，如果选取 $x$ 满足"
+        },
+        {
+          "id": "p125-b21",
+          "source": "$$({*})\\qquad |x|>1,2n|a_{n-1}|,\\ldots,2n|a_0|,$$",
+          "sourceSha256": "01a5841d8465fa371cdf46a1167462339d0dfd78767f98779879e8aaa221f38e"
+        },
+        {
+          "id": "p125-b22",
+          "source": "then $|x^k|>|x|$ and",
+          "sourceSha256": "9c779460920891b3952e0e30f2957d3e11720dfb78195aa5ca6d67c80dbd9cd4",
+          "translation": "那么 $|x^k|>|x|$，并且"
+        },
+        {
+          "id": "p125-b23",
+          "source": "$$\\frac{|a_{n-k}|}{|x^k|}\n<\\frac{|a_{n-k}|}{|x|}\n<\\frac{|a_{n-k}|}{2n|a_{n-k}|}\n=\\frac1{2n},$$",
+          "sourceSha256": "c2ee16bd769f9a41d7b47460c7aea32b9334823156c97e6c0524c07672fff0e6"
+        }
+      ]
+    },
+    {
+      "printed": 126,
+      "sourceSha256": "769dee53de8dd1e80f2b07c3571a5e7e125dfa54821715d2b10f761c8ef9eec4",
+      "blocks": [
+        {
+          "id": "p126-b1",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p126-b2",
+          "source": "$$\\left|\\frac{a_{n-1}}x+\\frac{a_{n-2}}{x^2}+\\cdots+\\frac{a_0}{x^n}\\right|\n\\le\\underbrace{\\frac1{2n}+\\cdots+\\frac1{2n}}_{n\\text{ terms}}=\\frac12.$$",
+          "sourceSha256": "c230a89565c6d6133e5c862bd1be377b7da953e4145cf72c6e878eacc2673f7b"
+        },
+        {
+          "id": "p126-b3",
+          "source": "In other words,",
+          "sourceSha256": "376930fb6d6ad7ed38259f212227b6fc302725bffd7fa614f54665847d80f308",
+          "translation": "换句话说，"
+        },
+        {
+          "id": "p126-b4",
+          "source": "$$-\\frac12\\le\\frac{a_{n-1}}x+\\cdots+\\frac{a_0}{x^n}\\le\\frac12,$$",
+          "sourceSha256": "7e96de5423911848999c4cfbd04f7bb4c372150ac620fa95f7738c8364f07ee9"
+        },
+        {
+          "id": "p126-b5",
+          "source": "which implies that",
+          "sourceSha256": "1a85e30aee335a1d59cfb329d51927347d38ace1d3438e2ccbbde37eb9bf1403",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p126-b6",
+          "source": "$$\\frac12\\le1+\\frac{a_{n-1}}x+\\cdots+\\frac{a_0}{x^n}.$$",
+          "sourceSha256": "d31c72f1b1a425ca80d4e7bf71a8227923137e93f86dfa1252d3179f33daad74"
+        },
+        {
+          "id": "p126-b7",
+          "source": "Therefore, if we choose an $x_1>0$ which satisfies $({*})$, then",
+          "sourceSha256": "92b07f4c08222841bdc986938b75bc7d93b0608da6845ca19447af10394d371f",
+          "translation": "因此，若选择满足 $({*})$ 的 $x_1>0$，则"
+        },
+        {
+          "id": "p126-b8",
+          "source": "$$\\frac{(x_1)^n}{2}\n\\le(x_1)^n\\left(1+\\frac{a_{n-1}}{x_1}+\\cdots+\\frac{a_0}{(x_1)^n}\\right)=f(x_1),$$",
+          "sourceSha256": "4d522166b39e0fa88d1688107d93ec93118057dc3a5505fa75e46826f6bf2d54"
+        },
+        {
+          "id": "p126-b9",
+          "source": "so that $f(x_1)>0$. On the other hand, if $x_2<0$ satisfies $({*})$, then $(x_2)^n<0$ and",
+          "sourceSha256": "a0a71b3fbe2e6d1020078b9395073f4f4be302b008da091a78668d6e7414f299",
+          "translation": "从而 $f(x_1)>0$。另一方面，若 $x_2<0$ 满足 $({*})$，那么 $(x_2)^n<0$，并且"
+        },
+        {
+          "id": "p126-b10",
+          "source": "$$\\frac{(x_2)^n}{2}\n\\ge(x_2)^n\\left(1+\\frac{a_{n-1}}{x_2}+\\cdots+\\frac{a_0}{(x_2)^n}\\right)=f(x_2),$$",
+          "sourceSha256": "f22df13f116d559d475bac23e8722cf5dd5e6c30b65f11c295641642b83d00a2"
+        },
+        {
+          "id": "p126-b11",
+          "source": "so that $f(x_2)<0$.",
+          "sourceSha256": "2d502c9460daad7712a2269ad86deb039ca8cf9573954564bf3b00adf502a8dd",
+          "translation": "从而 $f(x_2)<0$。"
+        },
+        {
+          "id": "p126-b12",
+          "source": "Now applying Theorem 1 to the interval $[x_2,x_1]$ we conclude that there is an $x$ in $[x_2,x_1]$ such that $f(x)=0$. $\\blacksquare$",
+          "sourceSha256": "11bfb4044fe7c10cf470b7d2cd41ef2e7fe05d2811db379fbf96cf922c0390ea",
+          "translation": "现在把定理 1 应用于区间 $[x_2,x_1]$，可知存在 $[x_2,x_1]$ 中的 $x$，使 $f(x)=0$。$\\blacksquare$"
+        },
+        {
+          "id": "p126-b13",
+          "source": "Theorem 9 disposes of the problem of odd degree equations so happily that it would be frustrating to leave the problem of even degree equations completely undiscussed. At first sight, however, the problem seems insuperable. Some equations, like $x^2-1=0$, have a solution, and some, like $x^2+1=0$, do not—what more is there to say? If we are willing to consider a more general question, however, something interesting can be said. Instead of trying to solve the equation",
+          "sourceSha256": "add7cc7d7bfaa635465346b6904cc9108322d558ede6f3ca78e492761b1bcc58",
+          "translation": "定理 9 如此圆满地解决了奇数次方程的问题，倘若完全不讨论偶数次方程，难免令人失望。然而，乍看之下，这个问题似乎无法解决。有些方程，例如 $x^2-1=0$，有解；另一些，例如 $x^2+1=0$，无解——还能说些什么？不过，如果愿意考虑一个更一般的问题，就能说出一些有趣的东西。不去尝试求解方程"
+        },
+        {
+          "id": "p126-b14",
+          "source": "$$x^n+a_{n-1}x^{n-1}+\\cdots+a_0=0,$$",
+          "sourceSha256": "30ac3d8f793b1f5d93c8f653503f1366349dd785912e0446187235384137d15d"
+        },
+        {
+          "id": "p126-b15",
+          "source": "let us ask about the possibility of solving the equations",
+          "sourceSha256": "9bb40a6c27803ee36bd90044ec3b56aa5c440c88c5fdd523f3898008f25b4bf9",
+          "translation": "而来询问下列方程有解的可能性："
+        },
+        {
+          "id": "p126-b16",
+          "source": "$$x^n+a_{n-1}x^{n-1}+\\cdots+a_0=c$$",
+          "sourceSha256": "5013b130ab728d6819b42f4d1c392c0df75a11f4a027f5cfe8dc9223997b15fb"
+        },
+        {
+          "id": "p126-b17",
+          "source": "for all possible numbers $c$. This amounts to allowing the constant term $a_0$ to vary. The information which can be given concerning the solution of these equations depends on a fact which is illustrated in Figure 8.",
+          "sourceSha256": "17149bff11184e435c8095f76b3ec50910d88d4b05c03dc11d05a429fc33465d",
+          "translation": "其中 $c$ 遍取所有可能的数。这相当于允许常数项 $a_0$ 变化。关于这些方程解的情况所能提供的信息，依赖于图 8 所说明的一个事实。"
+        },
+        {
+          "id": "p126-b18",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:425px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 895 425 339\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0145.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 8</figcaption>\n</figure>",
+          "sourceSha256": "a403f686ce62d62cf51d784d4bcdab676f482d4ae76799c73f9b980cb6e20d51"
+        },
+        {
+          "id": "p126-b19",
+          "source": "The graph of the function $f(x)=x^n+a_{n-1}x^{n-1}+\\cdots+a_0$, with $n$ even, contains, at least the way we have drawn it, a lowest point. In other words, there is a number $y$ such that $f(y)\\le f(x)$ for all numbers $x$—the function $f$ takes on a minimum value, not just on each closed interval, but on the whole line. (Notice that this is false if $n$ is odd.) The proof depends on Theorem 7, but a tricky application will be required. We can apply Theorem 7 to any interval $[a,b]$, and obtain a point $y_0$ such that $f(y_0)$ is the minimum value of $f$ on $[a,b]$; but if $[a,b]$ happens to be the interval shown in Figure 8, for example, then the point $y_0$ will not be the place where $f$ has its minimum value for the whole line. In the next",
+          "sourceSha256": "e2e07a8606ce1111ebbbdc0a8b8fbab5a8f8758180377b2fedd308581e34b004",
+          "translation": "函数 $f(x)=x^n+a_{n-1}x^{n-1}+\\cdots+a_0$ 在 $n$ 为偶数时，其图像——至少按我们画出的样子——有一个最低点。换句话说，存在数 $y$，使得对所有数 $x$ 都有 $f(y)\\le f(x)$：函数 $f$ 不仅在每个闭区间上，而且在整条直线上取到最小值。（注意，$n$ 为奇数时，这不成立。）证明依赖于定理 7，但需要巧妙运用。把定理 7 应用于任意区间 $[a,b]$，都能得到点 $y_0$，使 $f(y_0)$ 是 $f$ 在 $[a,b]$ 上的最小值；但如果 $[a,b]$ 恰好是图 8 所示的区间，例如，那么点 $y_0$ 就不是 $f$ 在整条直线上取得最小值的地方。在下一个"
+        }
+      ]
+    },
+    {
+      "printed": 127,
+      "sourceSha256": "126939adf724d1319170f6bfee7a2abc64770d6495a53a2880202d4799ea1bf8",
+      "blocks": [
+        {
+          "id": "p127-b1",
+          "source": "theorem the entire point of the proof is to choose an interval $[a,b]$ in such a way that this cannot happen.",
+          "sourceSha256": "4431f108d14c8db169dffc857e51cd1a295423479eba6ef51a4d917b919144a2",
+          "translation": "定理中，证明的全部关键，就是恰当选取区间 $[a,b]$，使这种情况不会发生。"
+        },
+        {
+          "id": "p127-b2",
+          "source": "**THEOREM 10**",
+          "sourceSha256": "e86383ffaf3da67a612cf25dddc6fdfef35f78116626012ff9280c9a5953e76b",
+          "translation": "**定理 10**"
+        },
+        {
+          "id": "p127-b3",
+          "source": "If $n$ is even and $f(x)=x^n+a_{n-1}x^{n-1}+\\cdots+a_0$, then there is a number $y$ such that $f(y)\\le f(x)$ for all $x$.",
+          "sourceSha256": "d841009da6e4ce7b6b37ee8b661e120b6affdb333c95ff80c99ca75fdbe73af0",
+          "translation": "如果 $n$ 是偶数，且 $f(x)=x^n+a_{n-1}x^{n-1}+\\cdots+a_0$，那么存在数 $y$，使得对所有 $x$ 都有 $f(y)\\le f(x)$。"
+        },
+        {
+          "id": "p127-b4",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p127-b5",
+          "source": "As in the proof of Theorem 9, if",
+          "sourceSha256": "5955606e35f8b707765041b81a154ff164194f378361542679146a9f7ef94dc0",
+          "translation": "如同定理 9 的证明，如果"
+        },
+        {
+          "id": "p127-b6",
+          "source": "$$M=\\max(1,2n|a_{n-1}|,\\ldots,2n|a_0|),$$",
+          "sourceSha256": "97cbac72dcfab92d1883a30d6c3ba98039adf4ff92f1fe8de4ed7a01d08296b0"
+        },
+        {
+          "id": "p127-b7",
+          "source": "then for all $x$ with $|x|\\ge M$, we have",
+          "sourceSha256": "42506558c1c33c2dc4e2b5539fbb040ac12caa27189e4a2592bc83d404b8e309",
+          "translation": "那么对于所有满足 $|x|\\ge M$ 的 $x$，都有"
+        },
+        {
+          "id": "p127-b8",
+          "source": "$$\\frac12\\le1+\\frac{a_{n-1}}x+\\cdots+\\frac{a_0}{x^n}.$$",
+          "sourceSha256": "d31c72f1b1a425ca80d4e7bf71a8227923137e93f86dfa1252d3179f33daad74"
+        },
+        {
+          "id": "p127-b9",
+          "source": "Since $n$ is even, $x^n\\ge0$ for all $x$, so",
+          "sourceSha256": "f7e9995d9672a9a2e295bc35210b9543a1c5ca92ee425a0300f3229b62573a0a",
+          "translation": "由于 $n$ 是偶数，对所有 $x$ 都有 $x^n\\ge0$，所以"
+        },
+        {
+          "id": "p127-b10",
+          "source": "$$\\frac{x^n}2\\le x^n\\left(1+\\frac{a_{n-1}}x+\\cdots+\\frac{a_0}{x^n}\\right)=f(x),$$",
+          "sourceSha256": "76681209c06c9c4243da77ca171fbfd4fca22361b3e987bf8956134fb0d1181e"
+        },
+        {
+          "id": "p127-b11",
+          "source": "provided that $|x|\\ge M$. Now consider the number $f(0)$. Let $b>0$ be a number such that $b^n\\ge2f(0)$ and also $b>M$. Then, if $x\\ge b$, we have (Figure 9)",
+          "sourceSha256": "a83a5c50582fd57e8a94870f0dc0b22dcb5a7e54c402b01633feef3ed716b4a0",
+          "translation": "只要 $|x|\\ge M$ 就成立。现在考虑数 $f(0)$。取数 $b>0$，使 $b^n\\ge2f(0)$，并且 $b>M$。那么若 $x\\ge b$，就有（图 9）"
+        },
+        {
+          "id": "p127-b12",
+          "source": "$$f(x)\\ge\\frac{x^n}2\\ge\\frac{b^n}2\\ge f(0).$$",
+          "sourceSha256": "031845d56b988014d1341be4863287e2b37ad5d5c42a7ad3e5765cbf3de6364d"
+        },
+        {
+          "id": "p127-b13",
+          "source": "Similarly, if $x\\le-b$, then",
+          "sourceSha256": "784992fef8d1351f3df4b819c071bedbcc009699a23307536251298a3ee9773c",
+          "translation": "类似地，若 $x\\le-b$，则"
+        },
+        {
+          "id": "p127-b14",
+          "source": "$$f(x)\\ge\\frac{x^n}2\\ge\\frac{(-b)^n}2=\\frac{b^n}2\\ge f(0).$$",
+          "sourceSha256": "1c01f01186199553719c942561e08bdaf78e9387c61d12b4e3eb0d55fed84265"
+        },
+        {
+          "id": "p127-b15",
+          "source": "Summarizing:",
+          "sourceSha256": "6cfec698f79eb2310d2f4804f51531c62dea698eb71ff820d0285ee58daef9e1",
+          "translation": "归纳起来："
+        },
+        {
+          "id": "p127-b16",
+          "source": "$$\\text{if }x\\ge b\\text{ or }x\\le-b,\\text{ then }f(x)\\ge f(0).$$",
+          "sourceSha256": "600ecd1e8f9fb2997bc97186eb209801963ed6cd153e2dc38a302c0a79269b42"
+        },
+        {
+          "id": "p127-b17",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:423px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"39 501 423 420\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0147.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 9</figcaption>\n</figure>",
+          "sourceSha256": "788d0fa24a2f494efd2433eb26cf7af49d5b81fe0313fba87ee5fec80fdd6cb2"
+        },
+        {
+          "id": "p127-b18",
+          "source": "Now apply Theorem 7 to the function $f$ on the interval $[-b,b]$. We conclude that there is a number $y$ such that",
+          "sourceSha256": "55c2878acc82cf0cb9dba5a684637150fefbea2ad93bebde1768060afb7852b7",
+          "translation": "现在对区间 $[-b,b]$ 上的函数 $f$ 应用定理 7。可知存在数 $y$，使"
+        },
+        {
+          "id": "p127-b19",
+          "source": "$$(1)\\qquad\\text{if }-b\\le x\\le b,\\text{ then }f(y)\\le f(x).$$",
+          "sourceSha256": "b525fc03bdfd827282779e76b7e6251649a23824dd9b1244e95c201f4ac07fae"
+        },
+        {
+          "id": "p127-b20",
+          "source": "In particular, $f(y)\\le f(0)$. Thus",
+          "sourceSha256": "b5022a7c02a0f1096418cab4088f8f18819c886f25cea327d4b12bcbb471fa9a",
+          "translation": "特别地，$f(y)\\le f(0)$。因此"
+        },
+        {
+          "id": "p127-b21",
+          "source": "$$(2)\\qquad\\text{if }x\\le-b\\text{ or }x\\ge b,\\text{ then }f(x)\\ge f(0)\\ge f(y).$$",
+          "sourceSha256": "b384eee1be98c0a5082c2353f8b4e8a397e20bdbe8ac45b5c3b692cfa64817e2"
+        },
+        {
+          "id": "p127-b22",
+          "source": "Combining (1) and (2) we see that $f(y)\\le f(x)$ for all $x$. $\\blacksquare$",
+          "sourceSha256": "1dd7b777112109ebd124c4e7ab568cb77b1cc216f3eed64a553b7657d4dc394f",
+          "translation": "结合 (1) 和 (2)，可知对所有 $x$ 都有 $f(y)\\le f(x)$。$\\blacksquare$"
+        },
+        {
+          "id": "p127-b23",
+          "source": "Theorem 10 now allows us to prove the following result.",
+          "sourceSha256": "a6505f1b4ddcd709b5f84c168b26f8afead1c9d9319f3e83f412f61118074eaa",
+          "translation": "现在借助定理 10，可以证明以下结果。"
+        },
+        {
+          "id": "p127-b24",
+          "source": "**THEOREM 11**",
+          "sourceSha256": "a33fe05380e2a7f4ea74ddf4754cc26c2de87c1b8092f00d48337ff88ca746a2",
+          "translation": "**定理 11**"
+        },
+        {
+          "id": "p127-b25",
+          "source": "Consider the equation",
+          "sourceSha256": "59eda0316030bf9faf7d709ea22aa0d863e8315cccebfbd1a13d62b2edfb7c54",
+          "translation": "考虑方程"
+        },
+        {
+          "id": "p127-b26",
+          "source": "$$({*})\\qquad x^n+a_{n-1}x^{n-1}+\\cdots+a_0=c,$$",
+          "sourceSha256": "32e08659cd7b5e18f64fee7416c558027835684a18dc2b49853630a2c34bcf6c"
+        }
+      ]
+    },
+    {
+      "printed": 128,
+      "sourceSha256": "7aade30c2eb4351cf0cb633cddbde4e3f79cc624666fb36e3327e2c215e18274",
+      "blocks": [
+        {
+          "id": "p128-b1",
+          "source": "and suppose $n$ is even. Then there is a number $m$ such that $({*})$ has a solution for $c\\ge m$ and has no solution for $c<m$.",
+          "sourceSha256": "96ea0d671c2e1bcda125133637f3fad256c7fd9ba8c2028ab0bcff28d3e042b0",
+          "translation": "并假设 $n$ 为偶数。那么存在数 $m$，使得当 $c\\ge m$ 时 $({*})$ 有解，而当 $c<m$ 时无解。"
+        },
+        {
+          "id": "p128-b2",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p128-b3",
+          "source": "Let $f(x)=x^n+a_{n-1}x^{n-1}+\\cdots+a_0$ (Figure 10).",
+          "sourceSha256": "efe187a222b1d077b8ab1fabcd2c64e0d25836e5fb0b1ddadc2483845019fdae",
+          "translation": "令 $f(x)=x^n+a_{n-1}x^{n-1}+\\cdots+a_0$（图 10）。"
+        },
+        {
+          "id": "p128-b4",
+          "source": "According to Theorem 10 there is a number $y$ such that $f(y)\\le f(x)$ for all $x$. Let $m=f(y)$. If $c<m$, then the equation $({*})$ obviously has no solution, since the left side always has a value $\\ge m$. If $c=m$, then $({*})$ has $y$ as a solution. Finally, suppose $c>m$. Let $b$ be a number such that $b>y$ and $f(b)>c$. Then $f(y)=m<c<f(b)$. Consequently, by Theorem 4, there is some number $x$ in $[y,b]$ such that $f(x)=c$, so $x$ is a solution of $({*})$. $\\blacksquare$",
+          "sourceSha256": "1c9d815a1d273b20c457873b34902dfb825a8cec4677bde9110ceb07411b9727",
+          "translation": "由定理 10，存在数 $y$，使得对所有 $x$ 都有 $f(y)\\le f(x)$。令 $m=f(y)$。若 $c<m$，方程 $({*})$ 显然无解，因为左边的值总是 $\\ge m$。若 $c=m$，则 $y$ 是 $({*})$ 的一个解。最后，设 $c>m$。取一个数 $b$，满足 $b>y$ 和 $f(b)>c$。于是 $f(y)=m<c<f(b)$。因此，由定理 4，存在 $[y,b]$ 中的某个数 $x$，使 $f(x)=c$，所以 $x$ 是 $({*})$ 的一个解。$\\blacksquare$"
+        },
+        {
+          "id": "p128-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:432px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 489 432 351\" role=\"img\" aria-label=\"Figure 10\"><image href=\"pages/book/0146.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 10</figcaption>\n</figure>",
+          "sourceSha256": "d93d57a7f77a41e040ff42f1fab5554e06d990e8f8ffcff98ec6b251f8fa8603"
+        },
+        {
+          "id": "p128-b6",
+          "source": "These consequences of Theorems 1, 2, and 3 are the only ones we will derive now (these theorems will play a fundamental role in everything we do later, however). Only one task remains—to prove Theorems 1, 2, and 3. Unfortunately, we cannot hope to do this—on the basis of our present knowledge about the real numbers (namely, P1–P12) a proof is *impossible*. There are several ways of convincing ourselves that this gloomy conclusion is actually the case. For example, the proof of Theorem 8 relies only on the proof of Theorem 1; if we could prove Theorem 1, then the proof of Theorem 8 would be complete, and we would have a proof that every positive number has a square root. As pointed out in Part I, it is impossible to prove this on the basis of P1–P12. Again, suppose we consider the function",
+          "sourceSha256": "42616aaec8bb2d9e82540b44bd8e4a99678b4051a828675037f915ce4d000b67",
+          "translation": "目前，我们只从定理 1、2、3 推出这些结果（不过，这些定理将在后续的一切工作中起根本作用）。只剩下一个任务：证明定理 1、2、3。不幸的是，我们不能指望完成它：仅根据目前关于实数的知识，即 P1–P12，证明是*不可能的*。有几种方法可以使我们确信，这个令人沮丧的结论确实如此。例如，定理 8 的证明只依赖于定理 1；如果能证明定理 1，定理 8 的证明就完整了，我们也就证明了每个正数都有平方根。如第一部分所指出，仅根据 P1–P12，不可能证明这一点。再例如，考虑函数"
+        },
+        {
+          "id": "p128-b7",
+          "source": "$$f(x)=\\frac1{x^2-2}.$$",
+          "sourceSha256": "06554bf7d484f5fbd0b18f72fca53d1f0a19006ee56f21261c85e595e07abcfd"
+        },
+        {
+          "id": "p128-b8",
+          "source": "If there were no number $x$ with $x^2=2$, then $f$ would be continuous, since the denominator would never $=0$. But $f$ is not bounded on $[0,2]$. So Theorem 2 depends essentially on the existence of numbers other than rational numbers, and therefore on some property of the real numbers other than P1–P12.",
+          "sourceSha256": "60de558b19d61bb6e029e7f9e2036d3d5a72da70c9bf9d204a384f6a7f2e7837",
+          "translation": "如果不存在满足 $x^2=2$ 的数 $x$，那么 $f$ 就连续，因为分母永远不会 $=0$。但 $f$ 在 $[0,2]$ 上无界。因此，定理 2 本质上依赖于有理数以外的数的存在，也就依赖于实数的某个不在 P1–P12 之内的性质。"
+        },
+        {
+          "id": "p128-b9",
+          "source": "Despite our inability to prove Theorems 1, 2, and 3, they are certainly results which we want to be true. If the pictures we have been drawing have any connection with the mathematics we are doing, if our notion of continuous function corresponds to any degree with our intuitive notion, Theorems 1, 2, and 3 have got to be true. Since a proof of any of these theorems must require some new property of $\\mathbf R$ which has so far been overlooked, our present difficulties suggest a way to discover that property: let us try to construct a proof of Theorem 1, for example, and see what goes wrong.",
+          "sourceSha256": "02a23486f33fe480ef6167ae56a030473f3e3cf8e577b967fee405b82db5a55a",
+          "translation": "尽管无法证明定理 1、2、3，它们当然是我们希望成立的结果。如果所画的图景与正在研究的数学确有联系，如果连续函数的概念在某种程度上对应于直观认识，那么定理 1、2、3 就一定得成立。既然其中任何一个定理的证明，都必须依赖于 $\\mathbf R$ 的某个此前被忽略的新性质，眼下的困难就提示了一种发现该性质的方法：例如，试着为定理 1 构造一个证明，看看究竟在哪里出了问题。"
+        },
+        {
+          "id": "p128-b10",
+          "source": "One idea which seems promising is to locate the first point where $f(x)=0$, that is, the smallest $x$ in $[a,b]$ such that $f(x)=0$. To find this point, first consider the set $A$ which contains all numbers $x$ in $[a,b]$ such that $f$ is negative on $[a,x]$. In Figure 11, $x$ is such a point, while $x'$ is not. The set $A$ itself is indicated by a heavy line. Since $f$ is negative at $a$, and positive at $b$, the set $A$ contains some points greater than $a$, while all points sufficiently close to $b$ are not in $A$. (We are here using the continuity of $f$ on $[a,b]$, as well as Problem 6-16.)",
+          "sourceSha256": "ab1d25ea745e739427a02c620f4d86dfcdf04edf8e1f3eeebcc5065c3e20a5bc",
+          "translation": "一个看似有希望的想法，是找出第一个使 $f(x)=0$ 的点，即 $[a,b]$ 中满足 $f(x)=0$ 的最小 $x$。为找到这个点，先考虑集合 $A$：它包含 $[a,b]$ 中所有满足“$f$ 在 $[a,x]$ 上为负”的数 $x$。图 11 中，$x$ 是这样的点，$x'$ 则不是。集合 $A$ 本身用粗线表示。由于 $f$ 在 $a$ 处为负，在 $b$ 处为正，集合 $A$ 包含一些大于 $a$ 的点，而所有充分接近 $b$ 的点都不属于 $A$。（这里使用了 $f$ 在 $[a,b]$ 上的连续性，以及习题 6-16。）"
+        },
+        {
+          "id": "p128-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:354px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 1075 354 276\" role=\"img\" aria-label=\"Figure 11\"><image href=\"pages/book/0146.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 11</figcaption>\n</figure>",
+          "sourceSha256": "5673101eca0d7fefc98989ee2a84072c608950a8511982242e04e4f8ae7ec5ab"
+        }
+      ]
+    },
+    {
+      "printed": 129,
+      "sourceSha256": "de12bc548eb9c2c7bd9529c394b509e39875165124befe4b178b692c7efd35da",
+      "blocks": [
+        {
+          "id": "p129-b1",
+          "source": "Now suppose $\\alpha$ is the smallest number which is greater than all members of $A$; clearly $a<\\alpha<b$. We claim that $f(\\alpha)=0$, and to prove this we only have to eliminate the possibilities $f(\\alpha)<0$ and $f(\\alpha)>0$.",
+          "sourceSha256": "c2904d52010611bf8b01a8a441a913fac27eb80bc10380676554db40aa24c02b",
+          "translation": "现在，假设 $\\alpha$ 是大于 $A$ 中所有元素的最小数；显然 $a<\\alpha<b$。我们断言 $f(\\alpha)=0$，而要证明这一点，只需排除 $f(\\alpha)<0$ 和 $f(\\alpha)>0$ 两种可能。"
+        },
+        {
+          "id": "p129-b2",
+          "source": "Suppose first that $f(\\alpha)<0$. Then, by Theorem 6-3, $f(x)$ would be less than $0$ for all $x$ in a small interval containing $\\alpha$, in particular for some numbers bigger than $\\alpha$ (Figure 12); but this contradicts the fact that $\\alpha$ is bigger than every member of $A$, since the larger numbers would also be in $A$. Consequently, $f(\\alpha)<0$ is false.",
+          "sourceSha256": "ebac336ae8b135be3728bcb9050ce37c5258bf2022a0a9c452637636ecd78717",
+          "translation": "先假设 $f(\\alpha)<0$。那么由定理 6-3，在包含 $\\alpha$ 的一个小区间中，对所有 $x$ 都有 $f(x)$ 小于 $0$；特别地，对某些大于 $\\alpha$ 的数也如此（图 12）。但这与 $\\alpha$ 大于 $A$ 中每个元素矛盾，因为那些更大的数也会属于 $A$。因此，$f(\\alpha)<0$ 不成立。"
+        },
+        {
+          "id": "p129-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:435px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 133 435 278\" role=\"img\" aria-label=\"Figure 12\"><image href=\"pages/book/0148.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 12</figcaption>\n</figure>",
+          "sourceSha256": "2df5280bac4632f8fd54b109693fad7b90c34580249c6cfde4c153b49d3dc627"
+        },
+        {
+          "id": "p129-b4",
+          "source": "On the other hand, suppose $f(\\alpha)>0$. Again applying Theorem 6-3, we see that $f(x)$ would be positive for all $x$ in a small interval containing $\\alpha$, in particular for some numbers smaller than $\\alpha$ (Figure 13). This means that these smaller numbers are all not in $A$. Consequently, one could have chosen an even smaller $\\alpha$ which would be greater than all members of $A$. Once again we have a contradiction; $f(\\alpha)>0$ is also false. Hence $f(\\alpha)=0$ and, we are tempted to say, Q.E.D.",
+          "sourceSha256": "d3161f3152ad5a5c385ea7795b87c114db27d60453a0aa89720044f5cb4a9369",
+          "translation": "另一方面，假设 $f(\\alpha)>0$。再次应用定理 6-3，可知在包含 $\\alpha$ 的一个小区间中，对所有 $x$，$f(x)$ 都为正；特别地，对某些小于 $\\alpha$ 的数也如此（图 13）。这意味着这些更小的数都不属于 $A$。因此，可以选一个更小的 $\\alpha$，它仍大于 $A$ 中所有元素。再次得到矛盾，所以 $f(\\alpha)>0$ 也不成立。于是 $f(\\alpha)=0$，我们不禁想说：证毕。"
+        },
+        {
+          "id": "p129-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:400px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 618 400 280\" role=\"img\" aria-label=\"Figure 13\"><image href=\"pages/book/0148.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 13</figcaption>\n</figure>",
+          "sourceSha256": "423368f491a966e626b0f7424eb9d9332ef20d58c09ae2ce95e1aa59fdde7462"
+        },
+        {
+          "id": "p129-b6",
+          "source": "We know, however, that something must be wrong, since no new properties of $\\mathbf R$ were ever used, and it does not require much scrutiny to find the dubious point. It is clear that we can choose a number $\\alpha$ which is greater than all members of $A$ (for example, we can choose $\\alpha=b$), but it is not so clear that we can choose a *smallest* one. In fact, suppose $A$ consists of all numbers $x\\ge0$ such that $x^2<2$. If the number $\\sqrt2$ did not exist, there would not be a least number greater than all the members of $A$; for any $y>\\sqrt2$ we chose, we could always choose a still smaller one.",
+          "sourceSha256": "e846681ce0078213f8cb1d4dc90acc3f91b4e829b5dbffb4866f927d4800b4f8",
+          "translation": "然而，我们知道一定有哪里不对，因为从未使用 $\\mathbf R$ 的任何新性质；而且不必仔细审查多久，就能发现可疑之处。显然可以选一个数 $\\alpha$，大于 $A$ 中所有元素（例如，可以取 $\\alpha=b$）；但能否选出其中*最小的*一个，就不那么清楚了。事实上，假设 $A$ 由满足 $x^2<2$ 的所有数 $x\\ge0$ 组成。如果数 $\\sqrt2$ 不存在，就不存在大于 $A$ 中所有元素的最小数；无论选哪一个 $y>\\sqrt2$，总能再选一个更小的。"
+        },
+        {
+          "id": "p129-b7",
+          "source": "Now that we have discovered the fallacy, it is almost obvious what additional property of the real numbers we need. All we must do is say it properly and use it. That is the business of the next chapter.",
+          "sourceSha256": "38bdecf1ab5711eb67c85f2044a55be4f981e21098cfa8a3c1a23ec5a1716752",
+          "translation": "既然已经发现了漏洞，所需要补充的实数性质几乎就一目了然了。剩下的，只是恰当地表述它并运用它。这就是下一章的任务。"
+        },
+        {
+          "id": "p129-b8",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p129-b9",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p129-b10",
+          "source": "For each of the following functions, decide which are bounded above or below on the indicated interval, and which take on their maximum or minimum value. (Notice that $f$ *might* have these properties even if $f$ is not continuous, and even if the interval is not a closed interval.)",
+          "sourceSha256": "1a8273c8ec680fdb3291b13eeb327629f34976fd30b8e89e781c80a3605e6972",
+          "translation": "对下面每个函数，判断它在指定区间上是否有上界或下界，以及是否取到最大值或最小值。（注意，即使 $f$ 不连续，即使区间不是闭区间，$f$ 也*可能*具有这些性质。）"
+        },
+        {
+          "id": "p129-b11",
+          "source": "(i) $f(x)=x^2$ on $(-1,1)$.",
+          "sourceSha256": "54cd33f5ef5db0c49a659b17ee2e010a140a2628790959987c7c1608a0001f66",
+          "translation": "(i) $f(x)=x^2$，在 $(-1,1)$ 上。"
+        },
+        {
+          "id": "p129-b12",
+          "source": "(ii) $f(x)=x^3$ on $(-1,1)$.",
+          "sourceSha256": "c8f2cdb462d58be0cec10172ed1dad19a817dec40186c547472efa9921e3ae08",
+          "translation": "(ii) $f(x)=x^3$，在 $(-1,1)$ 上。"
+        },
+        {
+          "id": "p129-b13",
+          "source": "(iii) $f(x)=x^2$ on $\\mathbf R$.",
+          "sourceSha256": "08b42ba526db794a8c06b017b05284fa7e95a42e2608a14b3f9c18038cef5eed",
+          "translation": "(iii) $f(x)=x^2$，在 $\\mathbf R$ 上。"
+        },
+        {
+          "id": "p129-b14",
+          "source": "(iv) $f(x)=x^2$ on $[0,\\infty)$.",
+          "sourceSha256": "145427ba98097f05839a79e2bcd3287c00b07d3fc26982c4fb30ace1835d0d2c",
+          "translation": "(iv) $f(x)=x^2$，在 $[0,\\infty)$ 上。"
+        },
+        {
+          "id": "p129-b15",
+          "source": "(v) $f(x)=\\begin{cases}x^2,&x\\le a\\\\a+2,&x>a\\end{cases}$ on $(-a-1,a+1)$. (We assume $a>-1$, so that $-a-1<a+1$; it will be necessary to consider several possibilities for $a$.)",
+          "sourceSha256": "6f68edd843022c36087a6c946078239f119c546a9ec33d8b633d404d6ee38489",
+          "translation": "(v) $f(x)=\\begin{cases}x^2,&x\\le a\\\\a+2,&x>a\\end{cases}$，在 $(-a-1,a+1)$ 上。（假设 $a>-1$，从而 $-a-1<a+1$；需要考虑 $a$ 的几种可能情形。）"
+        },
+        {
+          "id": "p129-b16",
+          "source": "(vi) $f(x)=\\begin{cases}x^2,&x<a\\\\a+2,&x\\ge a\\end{cases}$ on $[-a-1,a+1]$. (Again assume $a>-1$.)",
+          "sourceSha256": "39484a819a134db48d3e52b6dc566b7149ba1029a20f468e85d23cfacb103a01",
+          "translation": "(vi) $f(x)=\\begin{cases}x^2,&x<a\\\\a+2,&x\\ge a\\end{cases}$，在 $[-a-1,a+1]$ 上。（仍假设 $a>-1$。）"
+        },
+        {
+          "id": "p129-b17",
+          "source": "(vii) $f(x)=\\begin{cases}0,&x\\text{ irrational}\\\\1/q,&x=p/q\\text{ in lowest terms}\\end{cases}$ on $[0,1]$.",
+          "sourceSha256": "c94720493fa7554467a97801d64224064085e9204ddeafcda5adfb7ae1d0f8f5",
+          "translation": "(vii) $f(x)=\\begin{cases}0,&x\\text{ irrational}\\\\1/q,&x=p/q\\text{ in lowest terms}\\end{cases}$，在 $[0,1]$ 上。"
+        }
+      ]
+    },
+    {
+      "printed": 130,
+      "sourceSha256": "34c69bb85bbe5efe73e90f671992f9a88da2377f48a1357284687186a54876aa",
+      "blocks": [
+        {
+          "id": "p130-b1",
+          "source": "(viii) $f(x)=\\begin{cases}1,&x\\text{ irrational}\\\\1/q,&x=p/q\\text{ in lowest terms}\\end{cases}$ on $[0,1]$.",
+          "sourceSha256": "23ae95be6e740a0dffed51c3098af4b759a101d864176b09f987d08366aaf444",
+          "translation": "(viii) $f(x)=\\begin{cases}1,&x\\text{ irrational}\\\\1/q,&x=p/q\\text{ in lowest terms}\\end{cases}$，在 $[0,1]$ 上。"
+        },
+        {
+          "id": "p130-b2",
+          "source": "(ix) $f(x)=\\begin{cases}1,&x\\text{ irrational}\\\\-1/q,&x=p/q\\text{ in lowest terms}\\end{cases}$ on $[0,1]$.",
+          "sourceSha256": "3961157c3a8b8295d157825afe4d355da6b18fcaae301d5661e0fc917314c562",
+          "translation": "(ix) $f(x)=\\begin{cases}1,&x\\text{ irrational}\\\\-1/q,&x=p/q\\text{ in lowest terms}\\end{cases}$，在 $[0,1]$ 上。"
+        },
+        {
+          "id": "p130-b3",
+          "source": "(x) $f(x)=\\begin{cases}x,&x\\text{ rational}\\\\0,&x\\text{ irrational}\\end{cases}$ on $[0,a]$.",
+          "sourceSha256": "50164704c506bcb01353209a878c25479f7a9e0ac791efb6db27a446d0b99d23",
+          "translation": "(x) $f(x)=\\begin{cases}x,&x\\text{ rational}\\\\0,&x\\text{ irrational}\\end{cases}$，在 $[0,a]$ 上。"
+        },
+        {
+          "id": "p130-b4",
+          "source": "(xi) $f(x)=\\sin^2(\\cos x+\\sqrt{a+a^2})$ on $[0,a^3]$.",
+          "sourceSha256": "18d3ce6f781614f56c1b0cf93ebab5340a85bbbee5c4cdcd4082850c19c831f7",
+          "translation": "(xi) $f(x)=\\sin^2(\\cos x+\\sqrt{a+a^2})$，在 $[0,a^3]$ 上。"
+        },
+        {
+          "id": "p130-b5",
+          "source": "(xii) $f(x)=[x]$ on $[0,a]$.",
+          "sourceSha256": "607d34045edfe1d71aecadc0136d43584fefb6a667ad534de2740f121921d64d",
+          "translation": "(xii) $f(x)=[x]$，在 $[0,a]$ 上。"
+        },
+        {
+          "id": "p130-b6",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p130-b7",
+          "source": "For each of the following polynomial functions $f$, find an integer $n$ such that $f(x)=0$ for some $x$ between $n$ and $n+1$.",
+          "sourceSha256": "54e2166f4e3bf06fb6b453dfe3c0f848033b53c8aed3455100e8001233b33b64",
+          "translation": "对下面每个多项式函数 $f$，找出一个整数 $n$，使得 $n$ 与 $n+1$ 之间存在某个 $x$ 满足 $f(x)=0$。"
+        },
+        {
+          "id": "p130-b8",
+          "source": "(i) $f(x)=x^3-x+3$.",
+          "sourceSha256": "bab2f7b24bee68fc60d910eab8bbd791ebcf4d2579027f9f0e384767418f8017"
+        },
+        {
+          "id": "p130-b9",
+          "source": "(ii) $f(x)=x^5+5x^4+2x+1$.",
+          "sourceSha256": "c9ef351b07e5a848bb3efd73f88945aa6cfa5f5d333963caabe21bf8a869a712"
+        },
+        {
+          "id": "p130-b10",
+          "source": "(iii) $f(x)=x^5+x+1$.",
+          "sourceSha256": "ba4695024d88e4b4d1a23e76e314e0f8c3165add9b7b8b56182f6af36e299c4c"
+        },
+        {
+          "id": "p130-b11",
+          "source": "(iv) $f(x)=4x^2-4x+1$.",
+          "sourceSha256": "54c8a05178ab1ee1bfe4914a678dc8acac8ac493052f14ece9350dd7725069df"
+        },
+        {
+          "id": "p130-b12",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p130-b13",
+          "source": "Prove that there is some number $x$ such that",
+          "sourceSha256": "1159f98e7c5274e1052c41a48a622efe3eb1cc7e725ae48366e45b12346ac145",
+          "translation": "证明存在某个数 $x$，使得"
+        },
+        {
+          "id": "p130-b14",
+          "source": "(i) $x^{179}+\\dfrac{163}{1+x^2+\\sin^2x}=119$.",
+          "sourceSha256": "0ca0a671e4faac9f982ffe2e298b93744ff7d5e0689f7e2bf16fa5cf70f8de06"
+        },
+        {
+          "id": "p130-b15",
+          "source": "(ii) $\\sin x=x-1$.",
+          "sourceSha256": "04985ffae8145cfc31035d503e15d1df90c66fcb268c4ebf8d5ca1c3319555bc"
+        },
+        {
+          "id": "p130-b16",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p130-b17",
+          "source": "This problem is a continuation of Problem 3-7.",
+          "sourceSha256": "d2922f125beeb24ea43f08979bb56f79a1f2aa66ffabbeb8b8d4de9180d1b839",
+          "translation": "本题是习题 3-7 的继续。"
+        },
+        {
+          "id": "p130-b18",
+          "source": "(a) If $n-k$ is even, and $\\ge0$, find a polynomial function of degree $n$ with exactly $k$ roots.",
+          "sourceSha256": "71538fc857c8726b666f579503e4ea146f576d57552d451dab8e8a4fbadbd37f",
+          "translation": "(a) 若 $n-k$ 为偶数，且 $\\ge0$，找出一个次数为 $n$、恰有 $k$ 个根的多项式函数。"
+        },
+        {
+          "id": "p130-b19",
+          "source": "(b) A root $a$ of the polynomial function $f$ is said to have **multiplicity $m$** if $f(x)=(x-a)^mg(x)$, where $g$ is a polynomial function that does *not* have $a$ as a root. Let $f$ be a polynomial function of degree $n$. Suppose that $f$ has $k$ roots, counting multiplicities, i.e., suppose that $k$ is the sum of the multiplicities of all the roots. Show that $n-k$ is even.",
+          "sourceSha256": "b6ec3fedb268ad9caf0b21a0742dbf3a4f1b2d2e3563d762cd78a02b3f554e6e",
+          "translation": "(b) 如果 $f(x)=(x-a)^mg(x)$，其中 $g$ 是一个*不*以 $a$ 为根的多项式函数，就称多项式函数 $f$ 的根 $a$ 具有**重数 $m$**。设 $f$ 为次数为 $n$ 的多项式函数。假设计入重数后，$f$ 有 $k$ 个根，即 $k$ 是所有根的重数之和。证明 $n-k$ 为偶数。"
+        },
+        {
+          "id": "p130-b20",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p130-b21",
+          "source": "Suppose that $f$ is continuous on $[a,b]$ and that $f(x)$ is always rational. What can be said about $f$?",
+          "sourceSha256": "c8915ee1a71f5d755aee37d301ee253a196b48af44e38939cb0932fe37bc35b8",
+          "translation": "假设 $f$ 在 $[a,b]$ 上连续，而且 $f(x)$ 总是有理数。关于 $f$，能得出什么结论？"
+        },
+        {
+          "id": "p130-b22",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p130-b23",
+          "source": "Suppose that $f$ is a continuous function on $[-1,1]$ such that $x^2+(f(x))^2=1$ for all $x$. (This means that $(x,f(x))$ always lies on the unit circle.) Show that either $f(x)=\\sqrt{1-x^2}$ for all $x$, or else $f(x)=-\\sqrt{1-x^2}$ for all $x$.",
+          "sourceSha256": "8cedbeb0a6ffdf41448a3ff671e3c7ea481cca5d92110444ef75eaebfdc640e0",
+          "translation": "假设 $f$ 是 $[-1,1]$ 上的连续函数，对所有 $x$ 都满足 $x^2+(f(x))^2=1$。（这意味着 $(x,f(x))$ 始终位于单位圆上。）证明：要么对所有 $x$ 都有 $f(x)=\\sqrt{1-x^2}$，要么对所有 $x$ 都有 $f(x)=-\\sqrt{1-x^2}$。"
+        },
+        {
+          "id": "p130-b24",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p130-b25",
+          "source": "How many continuous functions $f$ are there which satisfy $(f(x))^2=x^2$ for all $x$?",
+          "sourceSha256": "9632fd5ffc6a52052d9045b1b4fa7c3d76eec7cab9839483c6f43a27c36efc1b",
+          "translation": "对于所有 $x$ 都满足 $(f(x))^2=x^2$ 的连续函数 $f$ 有多少个？"
+        },
+        {
+          "id": "p130-b26",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p130-b27",
+          "source": "Suppose that $f$ and $g$ are continuous, that $f^2=g^2$, and that $f(x)\\ne0$ for all $x$. Prove that either $f(x)=g(x)$ for all $x$, or else $f(x)=-g(x)$ for all $x$.",
+          "sourceSha256": "76125d35c247e35dba74073289d2025155b6a42709167ecba97c6203d25950a3",
+          "translation": "假设 $f$ 和 $g$ 连续，$f^2=g^2$，而且对所有 $x$ 都有 $f(x)\\ne0$。证明：要么对所有 $x$ 都有 $f(x)=g(x)$，要么对所有 $x$ 都有 $f(x)=-g(x)$。"
+        },
+        {
+          "id": "p130-b28",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p130-b29",
+          "source": "(a) Suppose that $f$ is continuous, that $f(x)=0$ only for $x=a$, and that $f(x)>0$ for some $x>a$ as well as for some $x<a$. What can be said about $f(x)$ for all $x\\ne a$?",
+          "sourceSha256": "dc5bdd9fccea33a2f79172b9c4cb7a08a78ca48f20521816348da66eca7e9064",
+          "translation": "(a) 假设 $f$ 连续，且只有在 $x=a$ 时才有 $f(x)=0$，并且对某个 $x>a$ 以及某个 $x<a$ 都有 $f(x)>0$。对于所有 $x\\ne a$，关于 $f(x)$ 能得出什么结论？"
+        }
+      ]
+    },
+    {
+      "printed": 131,
+      "sourceSha256": "0a2adda1785d88753255b090dedc63bc351b9a9b55fe0126ff55bdeeaf864215",
+      "blocks": [
+        {
+          "id": "p131-b1",
+          "source": "(b) Again assume that $f$ is continuous and that $f(x)=0$ only for $x=a$, but suppose, instead, that $f(x)>0$ for some $x>a$ and $f(x)<0$ for some $x<a$. Now what can be said about $f(x)$ for $x\\ne a$?",
+          "sourceSha256": "95a4d4c7b3479caeef08abcf7f2fb0fd95c798a201e17e4b59209f648728ae68",
+          "translation": "(b) 仍假设 $f$ 连续，且只有在 $x=a$ 时才有 $f(x)=0$，但这次假设对某个 $x>a$ 有 $f(x)>0$，对某个 $x<a$ 有 $f(x)<0$。现在，对于 $x\\ne a$，关于 $f(x)$ 能得出什么结论？"
+        },
+        {
+          "id": "p131-b2",
+          "source": "\\*(c) Discuss the sign of $x^3+x^2y+xy^2+y^3$ when $x$ and $y$ are not both $0$.",
+          "sourceSha256": "f3da9faaa6ad6d592fbde7ae717f9f81580bdbf381cc6d6c7b436a18a108d258",
+          "translation": "\\*(c) 当 $x$ 和 $y$ 不同时为 $0$ 时，讨论 $x^3+x^2y+xy^2+y^3$ 的符号。"
+        },
+        {
+          "id": "p131-b3",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p131-b4",
+          "source": "Suppose $f$ and $g$ are continuous on $[a,b]$ and that $f(a)<g(a)$, but $f(b)>g(b)$. Prove that $f(x)=g(x)$ for some $x$ in $[a,b]$. (If your proof isn’t very short, it’s not the right one.)",
+          "sourceSha256": "dcf33c9738c4a2af1aa1ed580d5fc0cad40b2e1ed79be62ee52a2b4e3da258eb",
+          "translation": "假设 $f$ 和 $g$ 在 $[a,b]$ 上连续，且 $f(a)<g(a)$，但 $f(b)>g(b)$。证明：存在 $[a,b]$ 中某个 $x$，使 $f(x)=g(x)$。（如果你的证明不够短，那就不是合适的证明。）"
+        },
+        {
+          "id": "p131-b5",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p131-b6",
+          "source": "Suppose that $f$ is a continuous function on $[0,1]$ and that $f(x)$ is in $[0,1]$ for each $x$ (draw a picture). Prove that $f(x)=x$ for some number $x$.",
+          "sourceSha256": "16ca55bada5438fcce22d157ab34ffe148fc81db4b866966186606e73285233f",
+          "translation": "假设 $f$ 是 $[0,1]$ 上的连续函数，而且对于每个 $x$，$f(x)$ 都属于 $[0,1]$（画图）。证明：存在某个数 $x$，使 $f(x)=x$。"
+        },
+        {
+          "id": "p131-b7",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p131-b8",
+          "source": "(a) Problem 11 shows that $f$ intersects the diagonal of the square in Figure 14 (solid line). Show that $f$ must also intersect the other (dashed) diagonal.",
+          "sourceSha256": "252bb65fb9bbf2b61a6bdb52d9fa69eddef789a78fd7f5b7e48533d10053cac3",
+          "translation": "(a) 习题 11 表明，$f$ 与图 14 中正方形的一条对角线（实线）相交。证明 $f$ 也必须与另一条对角线（虚线）相交。"
+        },
+        {
+          "id": "p131-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:294px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 382 294 239\" role=\"img\" aria-label=\"Figure 14\"><image href=\"pages/book/0151.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 14</figcaption>\n</figure>",
+          "sourceSha256": "5c12d75d3e9bfa2c077857ff85a7b0ca830e3e7ae26c46d481ffa876b43e1e87"
+        },
+        {
+          "id": "p131-b10",
+          "source": "(b) Prove the following more general fact: If $g$ is continuous on $[0,1]$ and $g(0)=0$, $g(1)=1$ or $g(0)=1$, $g(1)=0$, then $f(x)=g(x)$ for some $x$.",
+          "sourceSha256": "8d214e8e5c3eb3fe0fe32566e66955935caae5b525abdcc44699cc5f6257bfdc",
+          "translation": "(b) 证明以下更一般的事实：若 $g$ 在 $[0,1]$ 上连续，并且 $g(0)=0$、$g(1)=1$，或者 $g(0)=1$、$g(1)=0$，那么存在某个 $x$，使 $f(x)=g(x)$。"
+        },
+        {
+          "id": "p131-b11",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p131-b12",
+          "source": "(a) Let $f(x)=\\sin1/x$ for $x\\ne0$ and let $f(0)=0$. Is $f$ continuous on $[-1,1]$? Show that $f$ satisfies the conclusion of the Intermediate Value Theorem on $[-1,1]$; in other words, if $f$ takes on two values somewhere on $[-1,1]$, it also takes on every value in between.",
+          "sourceSha256": "bf4b1485ee09186d4b58304ea0c1659af48906d1af9917ee28e62fc01bd7d38f",
+          "translation": "(a) 当 $x\\ne0$ 时令 $f(x)=\\sin1/x$，并令 $f(0)=0$。$f$ 在 $[-1,1]$ 上连续吗？证明 $f$ 在 $[-1,1]$ 上满足介值定理的结论；换句话说，如果 $f$ 在 $[-1,1]$ 的某些地方取到两个值，那么也取到它们之间的每个值。"
+        },
+        {
+          "id": "p131-b13",
+          "source": "\\*(b) Suppose that $f$ satisfies the conclusion of the Intermediate Value Theorem, and that $f$ takes on each value *only once*. Prove that $f$ is continuous.",
+          "sourceSha256": "dea2dea80a89965d3f8b906bbb2d6646fef4e682ce46040ab5e85d47e65256d4",
+          "translation": "\\*(b) 假设 $f$ 满足介值定理的结论，而且 $f$ 的每个值*只取一次*。证明 $f$ 连续。"
+        },
+        {
+          "id": "p131-b14",
+          "source": "\\*(c) Generalize to the case where $f$ takes on each value only finitely many times.",
+          "sourceSha256": "8a6995d97a6b1e576adf5ca3092f29746a44d548e846239dd296cda942e0d669",
+          "translation": "\\*(c) 推广到 $f$ 的每个值只取有限次的情形。"
+        },
+        {
+          "id": "p131-b15",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p131-b16",
+          "source": "If $f$ is a continuous function on $[0,1]$, let $\\|f\\|$ be the maximum value of $|f|$ on $[0,1]$.",
+          "sourceSha256": "13af6053a2aec9672404f70dd330a8d9bd400314dc53e0a1d20881af48bffdf0",
+          "translation": "如果 $f$ 是 $[0,1]$ 上的连续函数，令 $\\|f\\|$ 表示 $|f|$ 在 $[0,1]$ 上的最大值。"
+        },
+        {
+          "id": "p131-b17",
+          "source": "(a) Prove that for any number $c$ we have $\\|cf\\|=|c|\\cdot\\|f\\|$.",
+          "sourceSha256": "f8cc3e502ee45352353115794f5b84c0a7ba29872a24a7e65a83afde44e257d0",
+          "translation": "(a) 证明：对于任意数 $c$，都有 $\\|cf\\|=|c|\\cdot\\|f\\|$。"
+        },
+        {
+          "id": "p131-b18",
+          "source": "\\*(b) Prove that $\\|f+g\\|\\le\\|f\\|+\\|g\\|$. Give an example where $\\|f+g\\|\\ne\\|f\\|+\\|g\\|$.",
+          "sourceSha256": "80dffcd87f531bd3c42ce821c73c4231b3af66d99568c8abb5eef4c1c1f71f2a",
+          "translation": "\\*(b) 证明 $\\|f+g\\|\\le\\|f\\|+\\|g\\|$。举出满足 $\\|f+g\\|\\ne\\|f\\|+\\|g\\|$ 的例子。"
+        },
+        {
+          "id": "p131-b19",
+          "source": "(c) Prove that $\\|h-f\\|\\le\\|h-g\\|+\\|g-f\\|$.",
+          "sourceSha256": "f57452aeeefc84bc47c22243af456ce5db157309da398fe422ce06f884c7b24a",
+          "translation": "(c) 证明 $\\|h-f\\|\\le\\|h-g\\|+\\|g-f\\|$。"
+        },
+        {
+          "id": "p131-b20",
+          "source": "### \\*15.",
+          "sourceSha256": "cd353e85483e37db9d25f065f1219e5a0d4626c718bb5e6c15f1bcef5ff38a16"
+        },
+        {
+          "id": "p131-b21",
+          "source": "Suppose that $\\phi$ is continuous and $\\displaystyle\\lim_{x\\to\\infty}\\phi(x)/x^n=0=\\lim_{x\\to-\\infty}\\phi(x)/x^n$.",
+          "sourceSha256": "09488e34f865c2e686c7cca8476f8088f504efa31ed086fdaad6596eabc0753b",
+          "translation": "假设 $\\phi$ 连续，而且 $\\displaystyle\\lim_{x\\to\\infty}\\phi(x)/x^n=0=\\lim_{x\\to-\\infty}\\phi(x)/x^n$。"
+        },
+        {
+          "id": "p131-b22",
+          "source": "(a) Prove that if $n$ is odd, then there is a number $x$ such that $x^n+\\phi(x)=0$.",
+          "sourceSha256": "2955641d4452f6781f7531f4b72fab4877b23a4c8b15688042fcfbdc9fe6b22e",
+          "translation": "(a) 证明：若 $n$ 为奇数，则存在数 $x$，使 $x^n+\\phi(x)=0$。"
+        },
+        {
+          "id": "p131-b23",
+          "source": "(b) Prove that if $n$ is even, then there is a number $y$ such that $y^n+\\phi(y)\\le x^n+\\phi(x)$ for all $x$.",
+          "sourceSha256": "7e0eb031a1307aaf46ca6476c01d16641ea90b2612be9fc6394589d18dcfc322",
+          "translation": "(b) 证明：若 $n$ 为偶数，则存在数 $y$，使对所有 $x$ 都有 $y^n+\\phi(y)\\le x^n+\\phi(x)$。"
+        },
+        {
+          "id": "p131-b24",
+          "source": "Hint: Of which proofs does this problem test your understanding?",
+          "sourceSha256": "9424777aa843baf34b36c6bf0813f2efa0315cdfb110c68a8df934d79ea52058",
+          "translation": "提示：本题检验的是你对哪些证明的理解？"
+        },
+        {
+          "id": "p131-b25",
+          "source": "### \\*16.",
+          "sourceSha256": "f63edeb4dbccfdc649f956ca6c68709a605b569f278ea9d361bd034f417fda87"
+        },
+        {
+          "id": "p131-b26",
+          "source": "(a) Suppose that $f$ is continuous on $(a,b)$ and $\\displaystyle\\lim_{x\\to a^+}f(x)=\\lim_{x\\to b^-}f(x)=\\infty$. Prove that $f$ has a minimum on all of $(a,b)$.",
+          "sourceSha256": "c3a83d6bc84bbcb9181504df269abb07de195a65eaf2cc4256e8519b4badf0b2",
+          "translation": "(a) 假设 $f$ 在 $(a,b)$ 上连续，且 $\\displaystyle\\lim_{x\\to a^+}f(x)=\\lim_{x\\to b^-}f(x)=\\infty$。证明 $f$ 在整个 $(a,b)$ 上有最小值。"
+        },
+        {
+          "id": "p131-b27",
+          "source": "(b) Prove the corresponding result when $a=-\\infty$ and/or $b=\\infty$.",
+          "sourceSha256": "f7685fa2df79db1ffc6429f4998ec5a988e21f3c96a9e9d904657831a2047ee0",
+          "translation": "(b) 当 $a=-\\infty$ 和／或 $b=\\infty$ 时，证明相应的结论。"
+        },
+        {
+          "id": "p131-b28",
+          "source": "### \\*17.",
+          "sourceSha256": "73a87ca782297c86bcc31aae8078c33ff3d47b9a248bb5a447ed5cbbf5874320"
+        },
+        {
+          "id": "p131-b29",
+          "source": "Let $f$ be any polynomial function. Prove that there is some number $y$ such that $|f(y)|\\le|f(x)|$ for all $x$.",
+          "sourceSha256": "40b73b9193f5b1946c0eebe9edab9869a9627f16336c67b4ead432b4c8be0c4b",
+          "translation": "设 $f$ 为任意多项式函数。证明：存在某个数 $y$，使对所有 $x$ 都有 $|f(y)|\\le|f(x)|$。"
+        }
+      ]
+    },
+    {
+      "printed": 132,
+      "sourceSha256": "8940dd4099663ef0d0bc098f4ae472d51731de2153cf24340d275b15584f9590",
+      "blocks": [
+        {
+          "id": "p132-b1",
+          "source": "### \\*18.",
+          "sourceSha256": "dc9f11a962e705d50490c24f8b3e71f51b22675236704438ef4ec0936298a65c"
+        },
+        {
+          "id": "p132-b2",
+          "source": "Suppose that $f$ is a continuous function with $f(x)>0$ for all $x$, and $\\displaystyle\\lim_{x\\to\\infty}f(x)=0=\\lim_{x\\to-\\infty}f(x)$. (Draw a picture.) Prove that there is some number $y$ such that $f(y)\\ge f(x)$ for all $x$.",
+          "sourceSha256": "a27116c41e7d322580b3a9413c01c9017a6f05cca46c3580cc885bab13c21f75",
+          "translation": "假设 $f$ 是连续函数，对所有 $x$ 都有 $f(x)>0$，并且 $\\displaystyle\\lim_{x\\to\\infty}f(x)=0=\\lim_{x\\to-\\infty}f(x)$。（画图。）证明：存在某个数 $y$，使对所有 $x$ 都有 $f(y)\\ge f(x)$。"
+        },
+        {
+          "id": "p132-b3",
+          "source": "### \\*19.",
+          "sourceSha256": "7e4f2b11b162b6abc626b910cd4565b2247b0ee93dbac4aad15418c46a98a3e3"
+        },
+        {
+          "id": "p132-b4",
+          "source": "(a) Suppose that $f$ is continuous on $[a,b]$, and let $x$ be any number. Prove that there is a point on the graph of $f$ which is closest to $(x,0)$; in other words there is some $y$ in $[a,b]$ such that the distance from $(x,0)$ to $(y,f(y))$ is $\\le$ distance from $(x,0)$ to $(z,f(z))$ for all $z$ in $[a,b]$. (See Figure 15.)",
+          "sourceSha256": "afcf5504f19ef2cd153700ccd2583e18604ea0219f20aaf8dda18d6deadd8341",
+          "translation": "(a) 假设 $f$ 在 $[a,b]$ 上连续，$x$ 为任意一个数。证明：$f$ 的图像上有一个点距离 $(x,0)$ 最近；换句话说，存在 $[a,b]$ 中的某个 $y$，使得对于 $[a,b]$ 中所有 $z$，从 $(x,0)$ 到 $(y,f(y))$ 的距离 $\\le$ 从 $(x,0)$ 到 $(z,f(z))$ 的距离。（见图 15。）"
+        },
+        {
+          "id": "p132-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:410px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 329 410 253\" role=\"img\" aria-label=\"Figure 15\"><image href=\"pages/book/0150.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 15</figcaption>\n</figure>",
+          "sourceSha256": "a21452702a3301b4f8a2442a12349085e3fc5de185f202f9e7d89ca3d61ed082"
+        },
+        {
+          "id": "p132-b6",
+          "source": "(b) Show that this same assertion is not necessarily true if $[a,b]$ is replaced by $(a,b)$ throughout.",
+          "sourceSha256": "ef98080d688756a84b2d8999af29f716e2514fbe6b0b8a3f2aad9a87eb8b1cbf",
+          "translation": "(b) 说明：把各处的 $[a,b]$ 都换成 $(a,b)$，这一断言就不一定成立。"
+        },
+        {
+          "id": "p132-b7",
+          "source": "(c) Show that the assertion is true if $[a,b]$ is replaced by $\\mathbf R$ throughout.",
+          "sourceSha256": "48e5b6f395dde8e6e49f3e1bbef7d0464b2fbc2dfaf453d80727510310efd1bf",
+          "translation": "(c) 说明：把各处的 $[a,b]$ 都换成 $\\mathbf R$，这一断言仍成立。"
+        },
+        {
+          "id": "p132-b8",
+          "source": "(d) In cases (a) and (c), let $g(x)$ be the minimum distance from $(x,0)$ to a point on the graph of $f$. Prove that $g(y)\\le g(x)+|x-y|$, and conclude that $g$ is continuous.",
+          "sourceSha256": "3884a767c6918674be5fef7afc326878616f13417a409d83dce930165bb82502",
+          "translation": "(d) 在 (a) 和 (c) 两种情形中，令 $g(x)$ 为 $(x,0)$ 到 $f$ 图像上各点的最小距离。证明 $g(y)\\le g(x)+|x-y|$，并推出 $g$ 连续。"
+        },
+        {
+          "id": "p132-b9",
+          "source": "(e) Prove that there are numbers $x_0$ and $x_1$ in $[a,b]$ such that the distance from $(x_0,0)$ to $(x_1,f(x_1))$ is $\\le$ the distance from $(x_0',0)$ to $(x_1',f(x_1'))$ for any $x_0',x_1'$ in $[a,b]$.",
+          "sourceSha256": "d86b1e5959805d17951d54d6e9ec781f71f3762136f5650aa347b08006bf1a6a",
+          "translation": "(e) 证明：存在 $[a,b]$ 中的数 $x_0$ 和 $x_1$，使得对 $[a,b]$ 中任意 $x_0',x_1'$，从 $(x_0,0)$ 到 $(x_1,f(x_1))$ 的距离 $\\le$ 从 $(x_0',0)$ 到 $(x_1',f(x_1'))$ 的距离。"
+        },
+        {
+          "id": "p132-b10",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p132-b11",
+          "source": "(a) Suppose that $f$ is continuous on $[0,1]$ and $f(0)=f(1)$. Let $n$ be any natural number. Prove that there is some number $x$ such that $f(x)=f(x+1/n)$, as shown in Figure 16 for $n=4$. Hint: Consider the function $g(x)=f(x)-f(x+1/n)$; what would be true if $g(x)\\ne0$ for all $x$?",
+          "sourceSha256": "0d6c5eddb050b35fa1416ed0baebb93c19c2633177a543f361bb569c5e3eacd3",
+          "translation": "(a) 假设 $f$ 在 $[0,1]$ 上连续，且 $f(0)=f(1)$。令 $n$ 为任意自然数。证明：存在某个数 $x$，使 $f(x)=f(x+1/n)$；图 16 给出了 $n=4$ 的情形。提示：考虑函数 $g(x)=f(x)-f(x+1/n)$；如果对所有 $x$ 都有 $g(x)\\ne0$，会得到什么？"
+        },
+        {
+          "id": "p132-b12",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:229px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 782 229 184\" role=\"img\" aria-label=\"Figure 16\"><image href=\"pages/book/0150.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 16</figcaption>\n</figure>",
+          "sourceSha256": "e0d89764bf1128d03d2e16526044046915836434707662eea94344e697ad7af9"
+        },
+        {
+          "id": "p132-b13",
+          "source": "\\*(b) Suppose $0<a<1$, but that $a$ is not equal to $1/n$ for any natural number $n$. Find a function $f$ which is continuous on $[0,1]$ and which satisfies $f(0)=f(1)$, but which does not satisfy $f(x)=f(x+a)$ for any $x$.",
+          "sourceSha256": "c056f60679a9a2673687eac83bfdf67adf5685f3dc31609525057e535fc6b63d",
+          "translation": "\\*(b) 假设 $0<a<1$，但 $a$ 不等于任何自然数 $n$ 对应的 $1/n$。找出一个在 $[0,1]$ 上连续的函数 $f$，使它满足 $f(0)=f(1)$，却对任何 $x$ 都不满足 $f(x)=f(x+a)$。"
+        },
+        {
+          "id": "p132-b14",
+          "source": "### \\*21.",
+          "sourceSha256": "33b92f9ad51d9ceb97efb59b74bce1f2db2ba7244762802e8119a4e23a206b4c"
+        },
+        {
+          "id": "p132-b15",
+          "source": "(a) Prove that there does not exist a continuous function $f$ defined on $\\mathbf R$ which takes on every value exactly twice. Hint: If $f(a)=f(b)$ for $a<b$, then either $f(x)>f(a)$ for all $x$ in $(a,b)$ or $f(x)<f(a)$ for all $x$ in $(a,b)$. Why? In the first case all values close to $f(a)$, but slightly larger than $f(a)$, are taken on somewhere in $(a,b)$; this implies that $f(x)<f(a)$ for $x<a$ and $x>b$.",
+          "sourceSha256": "2b22a130505ce7904edafd96395ed5603c4ef629f4a0f6d88cccbb60565a58f3",
+          "translation": "(a) 证明：不存在一个定义在 $\\mathbf R$ 上的连续函数 $f$，使每个值恰好取两次。提示：如果 $a<b$ 且 $f(a)=f(b)$，那么要么对 $(a,b)$ 中所有 $x$ 都有 $f(x)>f(a)$，要么对 $(a,b)$ 中所有 $x$ 都有 $f(x)<f(a)$。为什么？在第一种情形中，所有接近 $f(a)$、但略大于 $f(a)$ 的值，都在 $(a,b)$ 中某处取到；这意味着当 $x<a$ 以及 $x>b$ 时，有 $f(x)<f(a)$。"
+        },
+        {
+          "id": "p132-b16",
+          "source": "(b) Refine part (a) by proving that there is no continuous function $f$ which takes on each value either $0$ times or $2$ times, i.e., which takes on exactly twice each value that it does take on. Hint: The previous hint implies that $f$ has either a maximum or a minimum value (which must be taken on twice). What can be said about values close to the maximum value?",
+          "sourceSha256": "68a6b2837f1ccc4a7413764a91abe339805d54041baa3ab3c6b8ccdcd442eb93",
+          "translation": "(b) 改进 (a)：证明不存在连续函数 $f$，使每个值或者取 $0$ 次，或者取 $2$ 次；也就是说，它取到的每个值都恰好取两次。提示：上一条提示意味着 $f$ 有最大值或最小值（必须取到两次）。关于接近最大值的那些值，能说些什么？"
+        },
+        {
+          "id": "p132-b17",
+          "source": "(c) Find a continuous function $f$ which takes on every value exactly $3$ times. More generally, find one which takes on every value exactly $n$ times, if $n$ is odd.",
+          "sourceSha256": "d1ec5dbf83529cf8577ca7e7b7e04902d30a664a403d180dcfb0a7fc9738c650",
+          "translation": "(c) 找出一个连续函数 $f$，使每个值都恰好取 $3$ 次。更一般地，当 $n$ 为奇数时，找出每个值恰好取 $n$ 次的连续函数。"
+        },
+        {
+          "id": "p132-b18",
+          "source": "(d) Prove that if $n$ is even, then there is no continuous $f$ which takes on every value exactly $n$ times. Hint: To treat the case $n=4$, for example, let $f(x_1)=f(x_2)=f(x_3)=f(x_4)$. Then either $f(x)>0$ for all $x$ in two of the three intervals $(x_1,x_2)$, $(x_2,x_3)$, $(x_3,x_4)$, or else $f(x)<0$ for all $x$ in two of these three intervals.",
+          "sourceSha256": "c99144a4d674f756cbee8be86db61ba2fd4942a258288885f24f524aa48afc3f",
+          "translation": "(d) 证明：若 $n$ 为偶数，就不存在每个值都恰好取 $n$ 次的连续函数 $f$。提示：例如处理 $n=4$ 的情形时，令 $f(x_1)=f(x_2)=f(x_3)=f(x_4)$。那么，在三个区间 $(x_1,x_2)$、$(x_2,x_3)$、$(x_3,x_4)$ 中，或者有两个区间对其中所有 $x$ 都满足 $f(x)>0$，或者有两个区间对其中所有 $x$ 都满足 $f(x)<0$。"
+        }
+      ]
+    }
+  ]
+}

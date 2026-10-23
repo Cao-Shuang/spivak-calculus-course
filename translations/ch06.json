@@ -1,0 +1,828 @@
+{
+  "chapter": 6,
+  "language": "zh-CN",
+  "sourceSha256": "6d2c0258e74489eae8efc9986b475898305b13e4e644cfa6a2fbaec0698aece2",
+  "paragraphCount": 88,
+  "pages": [
+    {
+      "printed": 115,
+      "sourceSha256": "68152c5b1e5c45441e5f026fb5c3dfc6539969ed25d76977f708e71a53fa290d",
+      "blocks": [
+        {
+          "id": "p115-b1",
+          "source": "# CHAPTER 6  CONTINUOUS FUNCTIONS",
+          "sourceSha256": "9d9179973a80df0288a9a06eacea648bc386c7a5e87c28f85d83d1ab80d3f030",
+          "translation": "# 第 6 章　连续函数"
+        },
+        {
+          "id": "p115-b2",
+          "source": "If $f$ is an arbitrary function, it is not necessarily true that",
+          "sourceSha256": "9fd541d5fd29534fabb348e6857c68c6d69566b2803ba6299ecd02432673ca9e",
+          "translation": "如果 $f$ 是任意函数，下式未必成立："
+        },
+        {
+          "id": "p115-b3",
+          "source": "$$\\lim_{x\\to a}f(x)=f(a).$$",
+          "sourceSha256": "c8863f4cf127a43bc8b252e31fe3598e751847cfeb6ee3c32eaa5ed7a0d37e4b"
+        },
+        {
+          "id": "p115-b4",
+          "source": "In fact, there are many ways this can fail to be true. For example, $f$ might not even be defined at $a$, in which case the equation makes no sense (Figure 1). Again, $\\displaystyle\\lim_{x\\to a}f(x)$ might not exist (Figure 2). Finally, as illustrated in Figure 3, even if $f$ is defined at $a$ and $\\displaystyle\\lim_{x\\to a}f(x)$ exists, the limit might not equal $f(a)$.",
+          "sourceSha256": "c8fc2c45c62418b2d488df417f59c1e38506d94efb6599c9e643b8d705d2f838",
+          "translation": "事实上，它可能以许多方式不成立。例如，$f$ 甚至可能在 $a$ 处没有定义，此时这个等式就没有意义（图 1）。又或者，$\\displaystyle\\lim_{x\\to a}f(x)$ 不存在（图 2）。最后，如图 3 所示，即使 $f$ 在 $a$ 处有定义，而且 $\\displaystyle\\lim_{x\\to a}f(x)$ 存在，极限仍可能不等于 $f(a)$。"
+        },
+        {
+          "id": "p115-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:226px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 389 226 190\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0134.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>\n<figure class=\"original-source-figure\" style=\"max-width:677px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"479 620 677 229\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0134.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>\n<figure class=\"original-source-figure\" style=\"max-width:254px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 1208 254 220\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0134.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "7161e38d66cdf918e128c6eccf01daa748ffa866128f7a620af8b3a3ae75e999"
+        },
+        {
+          "id": "p115-b6",
+          "source": "We would like to regard all behavior of this type as abnormal and honor, with some complimentary designation, functions which do not exhibit such peculiarities. The term which has been adopted is “continuous.” Intuitively, a function $f$ is continuous if the graph contains no breaks, jumps, or wild oscillations. Although this description will usually enable you to decide whether a function is continuous simply by looking at its graph (a skill well worth cultivating) it is easy to be fooled, and the precise definition is *very* important.",
+          "sourceSha256": "3d46056e455d34984f29352db0caccccf0a17c0281dacce87eeea4efdfa97666",
+          "translation": "我们希望把所有这类行为都视为不正常，并用某个带有赞许意味的名称，来称呼那些不表现出这些怪异之处的函数。人们采用的术语是“连续”。直观地说，如果函数 $f$ 的图像没有断裂、跳跃或剧烈振荡，那么它就是连续的。虽然这一描述通常能让你只看图像就判断函数是否连续（这是一种很值得培养的能力），但也很容易受到误导，因此精确定义*非常*重要。"
+        },
+        {
+          "id": "p115-b7",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p115-b8",
+          "source": "The function $f$ is **continuous at $a$** if",
+          "sourceSha256": "fe65edee7e60a20d8405d416706311edee771e87f9766e2253c298259a78bb80",
+          "translation": "如果下式成立，则称函数 $f$ **在 $a$ 处连续**："
+        },
+        {
+          "id": "p115-b9",
+          "source": "$$\\lim_{x\\to a}f(x)=f(a).$$",
+          "sourceSha256": "c8863f4cf127a43bc8b252e31fe3598e751847cfeb6ee3c32eaa5ed7a0d37e4b"
+        },
+        {
+          "id": "p115-b10",
+          "source": "We will have no difficulty finding many examples of functions which are, or are not, continuous at some number $a$—every example involving limits provides an example about continuity, and Chapter 5 certainly provides enough of these.",
+          "sourceSha256": "11d4dc6c9a87cd1dcb2f859780061b21b0942ee7098986c34385ba4232219d65",
+          "translation": "要找出许多在某个数 $a$ 处连续或不连续的函数例子，并不困难：每一个涉及极限的例子都提供了一个关于连续性的例子，第 5 章当然已经给出了足够多的例子。"
+        },
+        {
+          "id": "p115-b11",
+          "source": "The function $f(x)=\\sin1/x$ is not continuous at $0$, because it is not even defined at $0$, and the same is true of the function $g(x)=x\\sin1/x$. On the other hand, if we are willing to extend the second of these functions, that is, if we wish to define",
+          "sourceSha256": "f7bbb0317cd6328b409ef50ccbe4ef02025e1fe0af04aca16dd0c4aada33644f",
+          "translation": "函数 $f(x)=\\sin1/x$ 在 $0$ 处不连续，因为它甚至在 $0$ 处没有定义；函数 $g(x)=x\\sin1/x$ 也一样。另一方面，如果愿意把第二个函数延拓，也就是说，想定义"
+        }
+      ]
+    },
+    {
+      "printed": 116,
+      "sourceSha256": "1b42731deee00625c551f8e9843810cadb8416a7f86834c100766e71c698dfc5",
+      "blocks": [
+        {
+          "id": "p116-b1",
+          "source": "a new function $G$ by",
+          "sourceSha256": "99830dc4932209609647d2fdee93467191ec1a484d164c0b9842f52bf7fb7b95",
+          "translation": "一个新函数 $G$ 如下："
+        },
+        {
+          "id": "p116-b2",
+          "source": "$$G(x)=\\begin{cases}x\\sin1/x,&x\\ne0\\\\a,&x=0,\\end{cases}$$",
+          "sourceSha256": "d3b93c298690f533b0fb89ba378101aa66154f9a6257da27019d93c0cfa7ecee"
+        },
+        {
+          "id": "p116-b3",
+          "source": "then the choice of $a=G(0)$ can be made in such a way that $G$ will be continuous at $0$—to do this we can (if fact, we must) define $G(0)=0$ (Figure 4). This sort of extension is not possible for $f$; if we define",
+          "sourceSha256": "fa3e450624328fe7265601942a13d4fc6217096b446f690fa830214ca4dc57d7",
+          "translation": "那么可以适当选取 $a=G(0)$，使 $G$ 在 $0$ 处连续；为此，可以（事实上，必须）定义 $G(0)=0$（图 4）。对于 $f$，这样的延拓却不可能；如果定义"
+        },
+        {
+          "id": "p116-b4",
+          "source": "$$F(x)=\\begin{cases}\\sin1/x,&x\\ne0\\\\a,&x=0,\\end{cases}$$",
+          "sourceSha256": "6367bb598864efc3e4652b103d424a3c14342be80c8800a5c5e14b51b909c05b"
+        },
+        {
+          "id": "p116-b5",
+          "source": "then $F$ will not be continuous at $0$, no matter what $a$ is, because $\\displaystyle\\lim_{x\\to0}f(x)$ does not exist.",
+          "sourceSha256": "fa32bfb96d2910e92fb89262c4c9714fd6ce307f5ee286673944524ff2573e1b",
+          "translation": "那么无论 $a$ 取何值，$F$ 在 $0$ 处都不连续，因为 $\\displaystyle\\lim_{x\\to0}f(x)$ 不存在。"
+        },
+        {
+          "id": "p116-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:285px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"38 451 285 626\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0135.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "c5ea323942dd10cf9193a4b10f135da2a000af2ef6e6008cfde27ed9527ba437"
+        },
+        {
+          "id": "p116-b7",
+          "source": "The function",
+          "sourceSha256": "9bd46db7bec99e0c589fa18a58df44c34061cf0aafb9d99dae0723e39d0c3861",
+          "translation": "函数"
+        },
+        {
+          "id": "p116-b8",
+          "source": "$$f(x)=\\begin{cases}x,&x\\text{ rational}\\\\0,&x\\text{ irrational}\\end{cases}$$",
+          "sourceSha256": "43c9d065a3bebb7bb8cac5293f8de7861a725811794843c99a881136b1d61f26"
+        },
+        {
+          "id": "p116-b9",
+          "source": "is not continuous at $a$, if $a\\ne0$, since $\\displaystyle\\lim_{x\\to a}f(x)$ does not exist. However, $\\displaystyle\\lim_{x\\to0}f(x)=0=f(0)$, so $f$ is continuous at precisely one point, $0$.",
+          "sourceSha256": "7bbe3017ce900a17fd1d6daf6bcb85038c3dd5201e44187bf66487b6f79ff0bb",
+          "translation": "在 $a\\ne0$ 时于 $a$ 处不连续，因为 $\\displaystyle\\lim_{x\\to a}f(x)$ 不存在。不过，$\\displaystyle\\lim_{x\\to0}f(x)=0=f(0)$，因此 $f$ 恰好只在一点 $0$ 处连续。"
+        },
+        {
+          "id": "p116-b10",
+          "source": "The functions $f(x)=c$, $g(x)=x$, and $h(x)=x^2$ are continuous at all numbers $a$, since",
+          "sourceSha256": "6ebef82580b707f1a24b322d31167b7da813a998043a91c19a3fbc334bfe9d30",
+          "translation": "函数 $f(x)=c$、$g(x)=x$ 和 $h(x)=x^2$ 在所有数 $a$ 处都连续，因为"
+        },
+        {
+          "id": "p116-b11",
+          "source": "$$\\begin{aligned}\n\\lim_{x\\to a}f(x)&=\\lim_{x\\to a}c=c=f(a),\\\\\n\\lim_{x\\to a}g(x)&=\\lim_{x\\to a}x=a=g(a),\\\\\n\\lim_{x\\to a}h(x)&=\\lim_{x\\to a}x^2=a^2=h(a).\n\\end{aligned}$$",
+          "sourceSha256": "c42377181ccc668bcfb983bdf0f80eb97b2d08d040f9b17a3d023f60ef9eb2d2"
+        },
+        {
+          "id": "p116-b12",
+          "source": "Finally, consider the function",
+          "sourceSha256": "0046352aebba063618f8c5dcc7c4fe830064ffd874cf84916bfc8064d53de72c",
+          "translation": "最后，考虑函数"
+        },
+        {
+          "id": "p116-b13",
+          "source": "$$f(x)=\\begin{cases}0,&x\\text{ irrational}\\\\1/q,&x=p/q\\text{ in lowest terms.}\\end{cases}$$",
+          "sourceSha256": "0ca12bd54b24e159c2be699e6f46c3704ca271eae82db27fe415350f8c5d2991"
+        },
+        {
+          "id": "p116-b14",
+          "source": "In Chapter 5 we showed that $\\displaystyle\\lim_{x\\to a}f(x)=0$ for all $a$ (actually, only for $0<a<1$, but you can easily see that this is true for all $a$). Since $0=f(a)$ only when $a$ is irrational, this function is continuous at $a$ if $a$ is irrational, but not if $a$ is rational.",
+          "sourceSha256": "cb9d9fff1c058b89dece36a7ac47d846f6c72b401b1bb46c997a822043e581c4",
+          "translation": "在第 5 章中，我们证明了对所有 $a$ 都有 $\\displaystyle\\lim_{x\\to a}f(x)=0$（实际上只证明了 $0<a<1$，但很容易看出它对所有 $a$ 都成立）。由于只有 $a$ 为无理数时才有 $0=f(a)$，因此当 $a$ 是无理数时，这个函数在 $a$ 处连续；而当 $a$ 是有理数时则不连续。"
+        },
+        {
+          "id": "p116-b15",
+          "source": "It is even easier to give examples of continuity if we prove two simple theorems.",
+          "sourceSha256": "eada704a4528e9c0b0ada01269d77ea3503c094b2d5b685d583de24e95997ac6",
+          "translation": "如果先证明两个简单定理，举出连续性的例子就更容易了。"
+        },
+        {
+          "id": "p116-b16",
+          "source": "**THEOREM 1**",
+          "sourceSha256": "2b6c6f1cd8500f04785734eb53e38fae29cf7651dd2ba301e21cef75e224df22",
+          "translation": "**定理 1**"
+        },
+        {
+          "id": "p116-b17",
+          "source": "If $f$ and $g$ are continuous at $a$, then",
+          "sourceSha256": "6b24885dfa7b857ceebed7f010426a2eecfee43ba17790f0824582b2920f1bda",
+          "translation": "如果 $f$ 和 $g$ 在 $a$ 处连续，那么"
+        },
+        {
+          "id": "p116-b18",
+          "source": "$$(1)\\qquad f+g\\text{ is continuous at }a,$$",
+          "sourceSha256": "cb0547c57e7f04bd3a3a52426b88f1449e3669ee294f5903d6901db53684f220"
+        },
+        {
+          "id": "p116-b19",
+          "source": "$$(2)\\qquad f\\cdot g\\text{ is continuous at }a.$$",
+          "sourceSha256": "beb94224b52bca96720dd907d6602a5858692b7ce3290a03467a1933df2f12d6"
+        },
+        {
+          "id": "p116-b20",
+          "source": "Moreover, if $g(a)\\ne0$, then",
+          "sourceSha256": "3df32c8a2cf1fbc1cb28cb15ddb09140f555393d2db4cc4254b346a3b930b627",
+          "translation": "此外，若 $g(a)\\ne0$，那么"
+        },
+        {
+          "id": "p116-b21",
+          "source": "$$(3)\\qquad1/g\\text{ is continuous at }a.$$",
+          "sourceSha256": "b2af52d9e103dec9b69aecb3923d6fe0deef6de30cfe4166df0bf776382b246e"
+        }
+      ]
+    },
+    {
+      "printed": 117,
+      "sourceSha256": "da699c0fea11a30939bd7855ce1bb8ff5488603561a5260b72da6ca0a3059526",
+      "blocks": [
+        {
+          "id": "p117-b1",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p117-b2",
+          "source": "Since $f$ and $g$ are continuous at $a$,",
+          "sourceSha256": "15050181356facb3e6c42d4ecb19ffc385aef03c63e76d3ae3b678bca12cdb2b",
+          "translation": "由于 $f$ 和 $g$ 在 $a$ 处连续，"
+        },
+        {
+          "id": "p117-b3",
+          "source": "$$\\lim_{x\\to a}f(x)=f(a)\\quad\\text{and}\\quad\\lim_{x\\to a}g(x)=g(a).$$",
+          "sourceSha256": "f4ea3e622f6a7893a5b9d0b314b95558f3e17f6c537ad47af97d00dccde18f65"
+        },
+        {
+          "id": "p117-b4",
+          "source": "By Theorem 2(1) of Chapter 5 this implies that",
+          "sourceSha256": "43c97317f3e50fc49cf6c0fb1d6f4aa4b94832b13058e9696838968441198959",
+          "translation": "由第 5 章定理 2(1)，这蕴含"
+        },
+        {
+          "id": "p117-b5",
+          "source": "$$\\lim_{x\\to a}(f+g)(x)=f(a)+g(a)=(f+g)(a),$$",
+          "sourceSha256": "1159f5f59a042de9d23199d7ce5efa780881cec01ee62096e88e6a92f8d5565a"
+        },
+        {
+          "id": "p117-b6",
+          "source": "which is just the assertion that $f+g$ is continuous at $a$. The proofs of parts (2) and (3) are left to you. $\\blacksquare$",
+          "sourceSha256": "d6c59a4c19f0872b9677c4ed120f3f731fed4b694d62815bca959e65d09172fe",
+          "translation": "这正是 $f+g$ 在 $a$ 处连续的断言。(2) 和 (3) 的证明留给你。$\\blacksquare$"
+        },
+        {
+          "id": "p117-b7",
+          "source": "Starting with the functions $f(x)=c$ and $f(x)=x$, which are continuous at $a$, for every $a$, we can use Theorem 1 to conclude that a function",
+          "sourceSha256": "408570cb95cd28506b008011939c2e075f483d51b6e1983f32cefb2f7f5fcac5",
+          "translation": "从函数 $f(x)=c$ 和 $f(x)=x$ 出发，它们对每个 $a$ 都在 $a$ 处连续，利用定理 1 可以推出函数"
+        },
+        {
+          "id": "p117-b8",
+          "source": "$$f(x)=\\frac{b_nx^n+b_{n-1}x^{n-1}+\\cdots+b_0}{c_mx^m+c_{m-1}x^{m-1}+\\cdots+c_0}$$",
+          "sourceSha256": "90eb86178bc2e66ed3341b27bde8c0c6eef1d41daed6849ed920276c852c6141"
+        },
+        {
+          "id": "p117-b9",
+          "source": "is continuous at every point in its domain. But it is harder to get much further than that. When we discuss the sine function in detail it will be easy to prove that $\\sin$ is continuous at $a$ for all $a$; let us assume this fact meanwhile. A function like",
+          "sourceSha256": "23187308571c725801da55537510feb5f55ad8792f10a9888492f3085ada3ac5",
+          "translation": "在其定义域的每一点都连续。但要再往前推进很多就比较困难了。等到详细讨论正弦函数时，很容易证明：对所有 $a$，$\\sin$ 都在 $a$ 处连续；目前先假定这个事实。现在，像下面这样的函数"
+        },
+        {
+          "id": "p117-b10",
+          "source": "$$f(x)=\\frac{\\sin^2x+x^2+x^4\\sin x}{\\sin^{27}x+4x^2\\sin^2x}$$",
+          "sourceSha256": "9278b0b52a8fb7992235ed3eff1faa03822d1b4c3f9d0952a9e3531bd9bbbaa7"
+        },
+        {
+          "id": "p117-b11",
+          "source": "can now be proved continuous at every point in its domain. But we are still unable to prove the continuity of a function like $f(x)=\\sin(x^2)$; we obviously need a theorem about the composition of continuous functions. Before stating this theorem, the following point about the definition of continuity is worth noting. If we translate the equation $\\displaystyle\\lim_{x\\to a}f(x)=f(a)$ according to the definition of limits, we obtain",
+          "sourceSha256": "8b29123db5d78e2b5b897255aded97f3a6ce5956c90e25715cbcbb40bfd3e4a0",
+          "translation": "可以证明在定义域的每一点都连续。但我们仍无法证明 $f(x)=\\sin(x^2)$ 这样的函数的连续性；显然，需要一个关于连续函数复合的定理。在陈述该定理之前，值得注意连续性定义中的以下一点。按极限定义展开等式 $\\displaystyle\\lim_{x\\to a}f(x)=f(a)$，得到"
+        },
+        {
+          "id": "p117-b12",
+          "source": "for every $\\varepsilon>0$ there is $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "fcb27f6832c53bfb2ceb4a06e10c5cd224e72e784f8233136e43d7f8b2f45594",
+          "translation": "对于每个 $\\varepsilon>0$，存在 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p117-b13",
+          "source": "$$\\text{if }0<|x-a|<\\delta,\\text{ then }|f(x)-f(a)|<\\varepsilon.$$",
+          "sourceSha256": "0bf8715ff350e7ca21dcd87ac1ebbe8b7a3483f2970b0eecbd1db7c6fe08a334"
+        },
+        {
+          "id": "p117-b14",
+          "source": "But in this case, where the limit is $f(a)$, the phrase",
+          "sourceSha256": "37344bb7b71189b74f50770368ebcf2379e10df8574128d34c2fc56a44313d39",
+          "translation": "但在极限为 $f(a)$ 的这种情况下，条件"
+        },
+        {
+          "id": "p117-b15",
+          "source": "$$0<|x-a|<\\delta$$",
+          "sourceSha256": "fbebd6f4070bf7b91b6eb10203eafe48cffb97eec8ce08e3e62fb23f83dc6b91"
+        },
+        {
+          "id": "p117-b16",
+          "source": "may be changed to the simpler condition",
+          "sourceSha256": "18e1290356731b86272e9774a7dcd29dcba7701b5b4b2b2e3123884bfc314c17",
+          "translation": "可以换成更简单的条件"
+        },
+        {
+          "id": "p117-b17",
+          "source": "$$|x-a|<\\delta,$$",
+          "sourceSha256": "27b33b6a962fbfbfb4ee20d96fd7205a6009e1e00c279b267ed2e7e93a1333ce"
+        },
+        {
+          "id": "p117-b18",
+          "source": "since if $x=a$ it is certainly true that $|f(x)-f(a)|<\\varepsilon$.",
+          "sourceSha256": "bfc9216919cefedbce1c2056930a317152d893671feaad9a10be5c6ba2ed1590",
+          "translation": "因为若 $x=a$，则 $|f(x)-f(a)|<\\varepsilon$ 肯定成立。"
+        },
+        {
+          "id": "p117-b19",
+          "source": "**THEOREM 2**",
+          "sourceSha256": "59bd15153c31a53f3eec003199c59649639a3b3a6b854407f90576e04346c1a4",
+          "translation": "**定理 2**"
+        },
+        {
+          "id": "p117-b20",
+          "source": "If $g$ is continuous at $a$ and $f$ is continuous at $g(a)$, then $f\\circ g$ is continuous at $a$. (Notice that $f$ is required to be continuous at $g(a)$, not at $a$.)",
+          "sourceSha256": "a30146089cdea27704dd185880fd578336f52b83257e87e5efe6d83f2668ab9c",
+          "translation": "如果 $g$ 在 $a$ 处连续，而 $f$ 在 $g(a)$ 处连续，那么 $f\\circ g$ 在 $a$ 处连续。（注意，要求 $f$ 在 $g(a)$ 处连续，而不是在 $a$ 处连续。）"
+        },
+        {
+          "id": "p117-b21",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p117-b22",
+          "source": "Let $\\varepsilon>0$. We wish to find a $\\delta>0$ such that for all $x$,",
+          "sourceSha256": "81b8834bd0e9dea86c33a20fa2e74576bf25acbace4ca6ada9a12e68a5194c5b",
+          "translation": "设 $\\varepsilon>0$。希望找到 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p117-b23",
+          "source": "$$\\begin{aligned}\n\\text{if }|x-a|<\\delta,&\\text{ then }|(f\\circ g)(x)-(f\\circ g)(a)|<\\varepsilon,\\\\\n&\\text{i.e., }|f(g(x))-f(g(a))|<\\varepsilon.\n\\end{aligned}$$",
+          "sourceSha256": "072f891104905afc6dddd1e6371bfbda0b9c9614fca74bf102e88c47be133d0c"
+        }
+      ]
+    },
+    {
+      "printed": 118,
+      "sourceSha256": "52cf9ce9c6b36e9e8ecd3e69747680793efba1961054eaf8082989422842a424",
+      "blocks": [
+        {
+          "id": "p118-b1",
+          "source": "We first use continuity of $f$ to estimate how close $g(x)$ must be to $g(a)$ in order for this inequality to hold. Since $f$ is continuous at $g(a)$, there is a $\\delta'>0$ such that for all $y$,",
+          "sourceSha256": "fd0bf1cf3a5514d3c1abd520363ffa206d4d8abea2513a5fb5ed035b3183af44",
+          "translation": "先利用 $f$ 的连续性，估计为了使这个不等式成立，$g(x)$ 必须多么接近 $g(a)$。由于 $f$ 在 $g(a)$ 处连续，存在 $\\delta'>0$，使得对所有 $y$，"
+        },
+        {
+          "id": "p118-b2",
+          "source": "$$(1)\\qquad\\text{if }|y-g(a)|<\\delta',\\text{ then }|f(y)-f(g(a))|<\\varepsilon.$$",
+          "sourceSha256": "96f2528bbcf7bfe6271fb4bf86679f9182b8fae2e3657a93c752660cd9d67548"
+        },
+        {
+          "id": "p118-b3",
+          "source": "In particular, this means that",
+          "sourceSha256": "5ac8d8ba4c9df72cd7c49d9af92faeb8b56c31ed7fe607e2fe70dcea6096ce75",
+          "translation": "特别地，这意味着"
+        },
+        {
+          "id": "p118-b4",
+          "source": "$$(2)\\qquad\\text{if }|g(x)-g(a)|<\\delta',\\text{ then }|f(g(x))-f(g(a))|<\\varepsilon.$$",
+          "sourceSha256": "a50448998b7ff75757d4f291d63e95d172ddbec7337489e5d502445e89040f52"
+        },
+        {
+          "id": "p118-b5",
+          "source": "We now use continuity of $g$ to estimate how close $x$ must be to $a$ in order for the inequality $|g(x)-g(a)|<\\delta'$ to hold. The number $\\delta'$ is a positive number just like any other positive number; we can therefore take $\\delta'$ as the $\\varepsilon$ (!) in the definition of continuity of $g$ at $a$. We conclude that there is a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "c95664b71d20fda6379be978ae9368a09068574abb5dad4c0f8d04d032801c22",
+          "translation": "现在利用 $g$ 的连续性，估计为了使不等式 $|g(x)-g(a)|<\\delta'$ 成立，$x$ 必须多么接近 $a$。数 $\\delta'$ 和其他正数一样，也是一个正数；因此，可以把 $\\delta'$ 当作 $g$ 在 $a$ 处连续的定义中的 $\\varepsilon$（！）。由此得到，存在 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p118-b6",
+          "source": "$$(3)\\qquad\\text{if }|x-a|<\\delta,\\text{ then }|g(x)-g(a)|<\\delta'.$$",
+          "sourceSha256": "99c1a4c353a3585fac4d2d3d95473c30f855218d53c9ace9501fc7e4db3d02f1"
+        },
+        {
+          "id": "p118-b7",
+          "source": "Combining (2) and (3) we see that for all $x$,",
+          "sourceSha256": "33d160f421364cca9cb39ce25420639b2ad16d4cc8145d859806de88c25d89fc",
+          "translation": "结合 (2) 和 (3)，可知对所有 $x$，"
+        },
+        {
+          "id": "p118-b8",
+          "source": "$$\\text{if }|x-a|<\\delta,\\text{ then }|f(g(x))-f(g(a))|<\\varepsilon.\\quad\\blacksquare$$",
+          "sourceSha256": "6e8825998dba20c1288862b90a8e4a84ef5f33c36fd2af7cf47f055bfe911d6c"
+        },
+        {
+          "id": "p118-b9",
+          "source": "We can now reconsider the function",
+          "sourceSha256": "ed9c7e5b0e52369e7dadb1da52e6be3cd8c9b3a0286bf92549eaeb93700e4e1f",
+          "translation": "现在可以重新考察函数"
+        },
+        {
+          "id": "p118-b10",
+          "source": "$$f(x)=\\begin{cases}x\\sin1/x,&x\\ne0\\\\0,&x=0.\\end{cases}$$",
+          "sourceSha256": "ce4ff019af39f6553c0afc5a50f95305c3d632261f1260357f6a5e07792d06d1"
+        },
+        {
+          "id": "p118-b11",
+          "source": "We have already noted that $f$ is continuous at $0$. A few applications of Theorems 1 and 2, together with the continuity of $\\sin$, show that $f$ is also continuous at $a$, for $a\\ne0$. Functions like $f(x)=\\sin(x^2+\\sin(x+\\sin^2(x^3)))$ should be equally easy for you to analyze.",
+          "sourceSha256": "acd81d11b5557a8f5942b5242d0ad0a1c6b7a20911a6b06a6a05ec0ea871ecfc",
+          "translation": "我们已经指出，$f$ 在 $0$ 处连续。几次应用定理 1、2，再结合 $\\sin$ 的连续性，就可以说明：当 $a\\ne0$ 时，$f$ 在 $a$ 处也连续。对于 $f(x)=\\sin(x^2+\\sin(x+\\sin^2(x^3)))$ 这样的函数，你应该也能同样轻松地分析。"
+        },
+        {
+          "id": "p118-b12",
+          "source": "The few theorems of this chapter have all been related to continuity of functions at a single point, but the concept of continuity doesn’t begin to be really interesting until we focus our attention on functions which are continuous at all points of some interval. If $f$ is continuous at $x$ for all $x$ in $(a,b)$, then $f$ is called **continuous on $(a,b)$**; as a “special case”, $f$ is **continuous on $\\mathbf R=(-\\infty,\\infty)$** [see page 57] if it is continuous at $x$ for all $x$ in $\\mathbf R$. Continuity on a closed interval must be defined a little differently; a function $f$ is called **continuous on $[a,b]$** if",
+          "sourceSha256": "c4e37b037eec482881b2b701bc32f6ab8cddfbffd032819da072e9406556e1a0",
+          "translation": "本章的几个定理都涉及函数在单个点处的连续性；但是，只有当我们把注意力集中到在某个区间的所有点处都连续的函数上时，连续性概念才真正开始变得有趣。如果 $f$ 对 $(a,b)$ 中的所有 $x$ 都在 $x$ 处连续，那么称 $f$ **在 $(a,b)$ 上连续**；作为一个“特殊情形”，如果 $f$ 对 $\\mathbf R$ 中的所有 $x$ 都在 $x$ 处连续，就称它**在 $\\mathbf R=(-\\infty,\\infty)$ 上连续**〔见第 57 页〕。闭区间上的连续性需要略作不同的定义：称函数 $f$ **在 $[a,b]$ 上连续**，是指"
+        },
+        {
+          "id": "p118-b13",
+          "source": "$$(1)\\qquad f\\text{ is continuous at }x\\text{ for all }x\\text{ in }(a,b),$$",
+          "sourceSha256": "a05ee06f1d00e90d3fc4cbf48c7e78d28943fb503bf9b9a1af16a5a91543ad88"
+        },
+        {
+          "id": "p118-b14",
+          "source": "$$(2)\\qquad\\lim_{x\\to a^+}f(x)=f(a)\\text{ and }\\lim_{x\\to b^-}f(x)=f(b).$$",
+          "sourceSha256": "594dbab79e8e8e3461a686e46a9c4d82b0ed05b7dbc6ff041c3039d23487cdfc"
+        },
+        {
+          "id": "p118-b15",
+          "source": "(We also often simply say that a function is continuous if it is continuous at $x$ for all $x$ in its domain.)",
+          "sourceSha256": "4504190edd34ba0bce851e28264637ba162bee8b212167aa397b7681cc9e2958",
+          "translation": "（如果一个函数在定义域中的每个 $x$ 处，即在每个 $x$ 处都连续，我们也常简单地说它是连续的。）"
+        },
+        {
+          "id": "p118-b16",
+          "source": "Functions which are continuous on an interval are usually regarded as especially well behaved; indeed continuity might be specified as the first condition which a “reasonable” function ought to satisfy. A continuous function is sometimes described, intuitively, as one whose graph can be drawn without lifting your pencil from the paper. Consideration of the function",
+          "sourceSha256": "80c703a3dba7dc15e5203f431a92a519c9bf89e884736dc374d6520a705f7e1b",
+          "translation": "在一个区间上连续的函数，通常被视为行为特别规整；事实上，连续性可以被规定为“规整”函数应满足的第一个条件。有时，人们直观地把连续函数描述为：画其图像时，铅笔不必离开纸面。考虑函数"
+        },
+        {
+          "id": "p118-b17",
+          "source": "$$f(x)=\\begin{cases}x\\sin1/x,&x\\ne0\\\\0,&x=0\\end{cases}$$",
+          "sourceSha256": "ad63039580062cd369c0d2654573fdd8a3574f41fa8e04353566cf4c0cf15c68"
+        }
+      ]
+    },
+    {
+      "printed": 119,
+      "sourceSha256": "43a8a096a0414d0d5c3f9ae92e0cb1a61180f8e1fe54730a31d96b4cfd0d8da5",
+      "blocks": [
+        {
+          "id": "p119-b1",
+          "source": "shows that this description is a little too optimistic, but it is nevertheless true that there are many important results involving functions which are continuous on an interval. There theorems are generally much harder than the ones in this chapter, but there is a simple theorem which forms a bridge between the two kinds of results. The hypothesis of this theorem requires continuity at only a single point, but the conclusion describes the behavior of the function on some interval containing the point. Although this theorem is really a lemma for later arguments, it is included here as a preview of things to come.",
+          "sourceSha256": "fb3b07b8cf3efb7d08a1c2dd64b745352503aeec14020fe1d246f3fd82406539",
+          "translation": "就会发现，这种描述有些过于乐观。不过，关于区间上连续的函数，确实有许多重要结果。这些定理一般比本章的定理困难得多，但有一个简单定理，搭起了两类结果之间的桥梁。它的假设只要求在单个点处连续，结论却描述了函数在包含该点的某个区间上的行为。虽然这个定理实际上是以后论证中的一个引理，我们还是把它放在这里，作为后续内容的预告。"
+        },
+        {
+          "id": "p119-b2",
+          "source": "**THEOREM 3**",
+          "sourceSha256": "144f2b1c919e3eccfd2f2d3b52b3a51686b023b4bc55f5d83f53928650fda205",
+          "translation": "**定理 3**"
+        },
+        {
+          "id": "p119-b3",
+          "source": "Suppose $f$ is continuous at $a$, and $f(a)>0$. Then $f(x)>0$ for all $x$ in some interval containing $a$; more precisely, there is a number $\\delta>0$ such that $f(x)>0$ for all $x$ satisfying $|x-a|<\\delta$. Similarly, if $f(a)<0$, then there is a number $\\delta>0$ such that $f(x)<0$ for all $x$ satisfying $|x-a|<\\delta$.",
+          "sourceSha256": "4e261ed69ce4c02a5e0234e84646d8bb1660cf18d5c278fca51f2f017d988dbc",
+          "translation": "假设 $f$ 在 $a$ 处连续，且 $f(a)>0$。那么，在某个包含 $a$ 的区间内，对所有 $x$ 都有 $f(x)>0$；更精确地说，存在数 $\\delta>0$，使得所有满足 $|x-a|<\\delta$ 的 $x$ 都满足 $f(x)>0$。类似地，如果 $f(a)<0$，那么存在数 $\\delta>0$，使得所有满足 $|x-a|<\\delta$ 的 $x$ 都满足 $f(x)<0$。"
+        },
+        {
+          "id": "p119-b4",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p119-b5",
+          "source": "Consider the case $f(a)>0$. Since $f$ is continuous at $a$, for every $\\varepsilon>0$ there is a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "d87f4b0052d81a2521f290e0b780b34ec0fdc8211e43e7caaed5531d5b0c8927",
+          "translation": "考虑 $f(a)>0$ 的情形。由于 $f$ 在 $a$ 处连续，对每个 $\\varepsilon>0$ 都存在 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p119-b6",
+          "source": "$$\\begin{aligned}\n\\text{if }|x-a|<\\delta,&\\text{ then }|f(x)-f(a)|<\\varepsilon,\\\\\n&\\text{i.e., }-\\varepsilon<f(x)-f(a)<\\varepsilon.\n\\end{aligned}$$",
+          "sourceSha256": "8f8b0f0b170c9fdc2f197a80a44fba23155394ef3dbe0f98e66e6050599bebd4"
+        },
+        {
+          "id": "p119-b7",
+          "source": "In particular, this must hold for $\\varepsilon=\\frac12f(a)$, since $\\frac12f(a)>0$ (Figure 5). Thus there is a $\\delta>0$ so that for all $x$,",
+          "sourceSha256": "d1ffa48c886cd01507322f38bec2f38188be0dd7cb681c67f4f84d278874b9d3",
+          "translation": "特别地，对 $\\varepsilon=\\frac12f(a)$ 这也必须成立，因为 $\\frac12f(a)>0$（图 5）。因此，存在 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p119-b8",
+          "source": "$$\\text{if }|x-a|<\\delta,\\text{ then }-\\tfrac12f(a)<f(x)-f(a)<\\tfrac12f(a),$$",
+          "sourceSha256": "ea50d4bca4e194312d6661ed638763b95a1df54b00ba9b9419cb939e32c4cc41"
+        },
+        {
+          "id": "p119-b9",
+          "source": "and this implies that $f(x)>\\frac12f(a)>0$. (We could even have picked $\\varepsilon$ to be $f(a)$ itself, leading to a proof that is more elegant, but more confusing to picture.)",
+          "sourceSha256": "30f030d5615b7e8a7f8b3c9f50f2a2e031aa4c18770f9c0f845850ebe09862c8",
+          "translation": "这就蕴含 $f(x)>\\frac12f(a)>0$。（甚至可以把 $\\varepsilon$ 取为 $f(a)$ 本身，得到一个更优雅、但图像上更不容易看清的证明。）"
+        },
+        {
+          "id": "p119-b10",
+          "source": "A similar proof can be given in the case $f(a)<0$: take $\\varepsilon=-\\frac12f(a)$. Or one can apply the first case to the function $-f$. $\\blacksquare$",
+          "sourceSha256": "ec30874eb555d75ffb4899c7325f296ae391eab579a5331b19ebe885e1f56205",
+          "translation": "在 $f(a)<0$ 的情形中，可以给出类似证明：取 $\\varepsilon=-\\frac12f(a)$。或者，对函数 $-f$ 应用第一种情形。$\\blacksquare$"
+        },
+        {
+          "id": "p119-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:398px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 723 402 350\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0137.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "431406df79e8d38092e44e6c6c759774ef3ff567c22ef96b0e13cc023e3539b3"
+        },
+        {
+          "id": "p119-b12",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p119-b13",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p119-b14",
+          "source": "For which of the following functions $f$ is there a continuous function $F$ with domain $\\mathbf R$ such that $F(x)=f(x)$ for all $x$ in the domain of $f$?",
+          "sourceSha256": "68409a66f5efee2f79cfd126018f60e1c248bd9336e8c09ff700353ea7cf4458",
+          "translation": "对于下列哪些函数 $f$，存在定义域为 $\\mathbf R$ 的连续函数 $F$，使得对 $f$ 的定义域中的所有 $x$ 都有 $F(x)=f(x)$？"
+        },
+        {
+          "id": "p119-b15",
+          "source": "(i) $f(x)=\\dfrac{x^2-4}{x-2}$.",
+          "sourceSha256": "dc9623ef07e803445d423492830b8e30330a1207bc95625817bdb73812cce826"
+        },
+        {
+          "id": "p119-b16",
+          "source": "(ii) $f(x)=\\dfrac{|x|}x$.",
+          "sourceSha256": "8ed7a59cee80924aa81542005630410155aca58b3a22d56a2c759867019a4948"
+        },
+        {
+          "id": "p119-b17",
+          "source": "(iii) $f(x)=0$, $x$ irrational.",
+          "sourceSha256": "3f4f57ec2c4f7f9715c6dc914f6f31b5ee270d6324da4cd968a3fb7db9a9a1b4",
+          "translation": "(iii) $f(x)=0$，$x$ 为无理数。"
+        },
+        {
+          "id": "p119-b18",
+          "source": "(iv) $f(x)=1/q$, $x=p/q$ rational in lowest terms.",
+          "sourceSha256": "9c66c1979862d3b7be223cb006a07182485fa373a9fb6d5e7fdd8bc988c6a1f3",
+          "translation": "(iv) $f(x)=1/q$，$x=p/q$ 为最简形式的有理数。"
+        },
+        {
+          "id": "p119-b19",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p119-b20",
+          "source": "At which points are the functions of Problems 4-17 and 4-19 continuous?",
+          "sourceSha256": "2d36db82f25f752b2020fdedf1361adfe145c30711e487a851964d4518308377",
+          "translation": "习题 4-17 和 4-19 中的函数在哪些点连续？"
+        }
+      ]
+    },
+    {
+      "printed": 120,
+      "sourceSha256": "3eb8cb4a8b87ed8d99f067842f6bb587a2d660f20176412b483c0147f1bde801",
+      "blocks": [
+        {
+          "id": "p120-b1",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p120-b2",
+          "source": "(a) Suppose that $f$ is a function satisfying $|f(x)|\\le|x|$ for all $x$. Show that $f$ is continuous at $0$. (Notice that $f(0)$ must equal $0$.)",
+          "sourceSha256": "7ec616a5f23fa3b778a12ce967192ed65add3dcf1cd30cd5063e9545ff81ba1f",
+          "translation": "(a) 假设函数 $f$ 对所有 $x$ 都满足 $|f(x)|\\le|x|$。证明 $f$ 在 $0$ 处连续。（注意，$f(0)$ 必须等于 $0$。）"
+        },
+        {
+          "id": "p120-b3",
+          "source": "(b) Give an example of such a function $f$ which is not continuous at any $a\\ne0$.",
+          "sourceSha256": "79521068cf2b6bb90099a5c9508c38dcf7db10c172c9aecf72c83a16296f6559",
+          "translation": "(b) 举出一个这样的函数 $f$，使它在任何 $a\\ne0$ 处都不连续。"
+        },
+        {
+          "id": "p120-b4",
+          "source": "(c) Suppose that $g$ is continuous at $0$ and $g(0)=0$, and $|f(x)|\\le|g(x)|$. Prove that $f$ is continuous at $0$.",
+          "sourceSha256": "fbc6a8b4f6a5f70ef0327d4f8526d02724eb241ebf97e6a94fda0606daa7f665",
+          "translation": "(c) 假设 $g$ 在 $0$ 处连续，$g(0)=0$，而且 $|f(x)|\\le|g(x)|$。证明 $f$ 在 $0$ 处连续。"
+        },
+        {
+          "id": "p120-b5",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p120-b6",
+          "source": "Give an example of a function $f$ such that $f$ is continuous nowhere but $|f|$ is continuous everywhere.",
+          "sourceSha256": "f6312f36efa4eb2f6309ea894b466ef09ddeef1611a38e158fc61201941441c9",
+          "translation": "举出一个函数 $f$，使得 $f$ 处处不连续，而 $|f|$ 处处连续。"
+        },
+        {
+          "id": "p120-b7",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p120-b8",
+          "source": "For each number $a$, find a function which is continuous at $a$, but not at any other points.",
+          "sourceSha256": "9edd4f33d219162058651838df6dcb40aa361772f6ff98a5e892bae79a036df1",
+          "translation": "对于每个数 $a$，找出一个在 $a$ 处连续、但在其他所有点都不连续的函数。"
+        },
+        {
+          "id": "p120-b9",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p120-b10",
+          "source": "(a) Find a function $f$ which is discontinuous at $1,\\frac12,\\frac13,\\frac14,\\ldots$ but continuous at all other points.",
+          "sourceSha256": "a9a23d2259172c918d49c4e420ed1da1fc8b30fc3fe9fe116caa4976342faeff",
+          "translation": "(a) 找出一个函数 $f$，使它在 $1,\\frac12,\\frac13,\\frac14,\\ldots$ 处不连续，但在其他所有点都连续。"
+        },
+        {
+          "id": "p120-b11",
+          "source": "(b) Find a function $f$ which is discontinuous at $1,\\frac12,\\frac13,\\frac14,\\ldots$ and at $0$, but continuous at all other points.",
+          "sourceSha256": "ba078c8d0ea41b3be61d2eaf4ee15dc0f94d8725ae723b8bb2bb6d18311c3f3e",
+          "translation": "(b) 找出一个函数 $f$，使它在 $1,\\frac12,\\frac13,\\frac14,\\ldots$ 以及 $0$ 处不连续，但在其他所有点都连续。"
+        },
+        {
+          "id": "p120-b12",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p120-b13",
+          "source": "Suppose that $f$ satisfies $f(x+y)=f(x)+f(y)$, and that $f$ is continuous at $0$. Prove that $f$ is continuous at $a$ for all $a$.",
+          "sourceSha256": "ec78b2f026b457a759d9afdd6931187de2397ae71cdc82ab8ce9db9fc1af9d28",
+          "translation": "假设 $f$ 满足 $f(x+y)=f(x)+f(y)$，且 $f$ 在 $0$ 处连续。证明：对于所有 $a$，$f$ 都在 $a$ 处连续。"
+        },
+        {
+          "id": "p120-b14",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p120-b15",
+          "source": "Suppose that $f$ is continuous at $a$ and $f(a)=0$. Prove that if $\\alpha\\ne0$, then $f+\\alpha$ is nonzero in some open interval containing $a$.",
+          "sourceSha256": "065b62a76302cda257a52061d6d0672085f65bd395fbd7e69b8afddfab26e19f",
+          "translation": "假设 $f$ 在 $a$ 处连续，且 $f(a)=0$。证明：若 $\\alpha\\ne0$，那么 $f+\\alpha$ 在包含 $a$ 的某个开区间内不为零。"
+        },
+        {
+          "id": "p120-b16",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p120-b17",
+          "source": "(a) Suppose $f$ is defined at $a$ but is not continuous at $a$. Prove that for some number $\\varepsilon>0$ there are numbers $x$ arbitrarily close to $a$ with $|f(x)-f(a)|>\\varepsilon$. Illustrate graphically.",
+          "sourceSha256": "d93df6264fa392e46b7e4b1f38c4ad9401acf5e264353ea9de04124017684814",
+          "translation": "(a) 假设 $f$ 在 $a$ 处有定义，但在 $a$ 处不连续。证明：存在某个数 $\\varepsilon>0$，使得任意接近 $a$ 的地方都有数 $x$ 满足 $|f(x)-f(a)|>\\varepsilon$。画图说明。"
+        },
+        {
+          "id": "p120-b18",
+          "source": "(b) Conclude that for some number $\\varepsilon>0$ *either* there are numbers $x$ arbitrarily close to $a$ with $f(x)<f(a)-\\varepsilon$ *or* there are numbers $x$ arbitrarily close to $a$ with $f(x)>f(a)+\\varepsilon$.",
+          "sourceSha256": "9e7981a3618f04fcecbf66d098807054196433e05db2e342a6e3431c0ed96dde",
+          "translation": "(b) 由此推出：存在某个数 $\\varepsilon>0$，*或者*在任意接近 $a$ 的地方都有数 $x$ 满足 $f(x)<f(a)-\\varepsilon$，*或者*在任意接近 $a$ 的地方都有数 $x$ 满足 $f(x)>f(a)+\\varepsilon$。"
+        },
+        {
+          "id": "p120-b19",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p120-b20",
+          "source": "(a) Prove that if $f$ is continuous at $a$, then so is $|f|$.",
+          "sourceSha256": "c1a3f692cbec274557b9b69f0bfbc0e060f715e3816ab8e24254889b00b4af56",
+          "translation": "(a) 证明：如果 $f$ 在 $a$ 处连续，那么 $|f|$ 也在该点连续。"
+        },
+        {
+          "id": "p120-b21",
+          "source": "(b) Prove that every function $f$ continuous on $\\mathbf R$ can be written $f=E+O$, where $E$ is even and continuous and $O$ is odd and continuous.",
+          "sourceSha256": "65401852a82d9f0973937876b20d48d0767f95a65026157ee6650a6a398ea100",
+          "translation": "(b) 证明：在 $\\mathbf R$ 上连续的每个函数 $f$ 都可以写成 $f=E+O$，其中 $E$ 是连续偶函数，$O$ 是连续奇函数。"
+        },
+        {
+          "id": "p120-b22",
+          "source": "(c) Prove that if $f$ and $g$ are continuous, then so are $\\max(f,g)$ and $\\min(f,g)$.",
+          "sourceSha256": "e09786f3a0056ed7d379af6b033e82eca3a43411fd5b0317067a619673313e0f",
+          "translation": "(c) 证明：如果 $f$ 和 $g$ 连续，那么 $\\max(f,g)$ 和 $\\min(f,g)$ 也连续。"
+        },
+        {
+          "id": "p120-b23",
+          "source": "(d) Prove that every continuous $f$ can be written $f=g-h$, where $g$ and $h$ are nonnegative and continuous.",
+          "sourceSha256": "85ec31efc70f23b46e9c601d2b066e9d55c3c295d7003d3edebf9aec5f54708b",
+          "translation": "(d) 证明：每个连续函数 $f$ 都可以写成 $f=g-h$，其中 $g$ 和 $h$ 都非负且连续。"
+        },
+        {
+          "id": "p120-b24",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p120-b25",
+          "source": "Prove Theorem 1(3) by using Theorem 2 and continuity of the function $f(x)=1/x$.",
+          "sourceSha256": "a972eba2eb9170a2b02fcae671667b92d3782ee26b84d20c6f9a1944cd18f666",
+          "translation": "利用定理 2 和函数 $f(x)=1/x$ 的连续性，证明定理 1(3)。"
+        },
+        {
+          "id": "p120-b26",
+          "source": "### \\*12.",
+          "sourceSha256": "22fa584303267407e32d4a1d9b6645b6ac6017506a77572da538b1d330be92ac"
+        },
+        {
+          "id": "p120-b27",
+          "source": "(a) Prove that if $f$ is continuous at $l$ and $\\displaystyle\\lim_{x\\to a}g(x)=l$, then $\\displaystyle\\lim_{x\\to a}f(g(x))=f(l)$. (You can go right back to the definitions, but it is easier to consider the function $G$ with $G(x)=g(x)$ for $x\\ne a$, and $G(a)=l$.)",
+          "sourceSha256": "0bacfd9fb661f3232a06dd0be2019b8bce9e190e84b268d48af46507c30c174c",
+          "translation": "(a) 证明：如果 $f$ 在 $l$ 处连续，而且 $\\displaystyle\\lim_{x\\to a}g(x)=l$，那么 $\\displaystyle\\lim_{x\\to a}f(g(x))=f(l)$。（可以直接回到定义，但更简单的方法是考虑函数 $G$：当 $x\\ne a$ 时令 $G(x)=g(x)$，并令 $G(a)=l$。）"
+        },
+        {
+          "id": "p120-b28",
+          "source": "(b) Show that if continuity of $f$ at $l$ is not assumed, then it is not generally true that $\\displaystyle\\lim_{x\\to a}f(g(x))=f(\\lim_{x\\to a}g(x))$. Hint: Try $f(x)=0$ for $x\\ne l$, and $f(l)=1$.",
+          "sourceSha256": "4784627f506e5fd345d4d113869705bb339360cc9f0a9136b8ff3f338bd9e36c",
+          "translation": "(b) 说明：如果不假设 $f$ 在 $l$ 处连续，那么一般不能断言 $\\displaystyle\\lim_{x\\to a}f(g(x))=f(\\lim_{x\\to a}g(x))$。提示：试着在 $x\\ne l$ 时取 $f(x)=0$，并取 $f(l)=1$。"
+        }
+      ]
+    },
+    {
+      "printed": 121,
+      "sourceSha256": "c5d162b8638c994cf260e7b05bf24b45578225160f3b72abc17a97a6ca455f9d",
+      "blocks": [
+        {
+          "id": "p121-b1",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p121-b2",
+          "source": "(a) Prove that if $f$ is continuous on $[a,b]$, then there is a function $g$ which is continuous on $\\mathbf R$, and which satisfies $g(x)=f(x)$ for all $x$ in $[a,b]$. Hint: Since you obviously have a great deal of choice, try making $g$ constant on $(-\\infty,a]$ and $[b,\\infty)$.",
+          "sourceSha256": "c5bc4c4c22dcf5afe5ceb2639da027dd238e249e37066cb5acd0f7703710ba80",
+          "translation": "(a) 证明：如果 $f$ 在 $[a,b]$ 上连续，那么存在一个在 $\\mathbf R$ 上连续的函数 $g$，使得对 $[a,b]$ 中所有 $x$ 都有 $g(x)=f(x)$。提示：显然有很大的选择余地，不妨让 $g$ 在 $(-\\infty,a]$ 和 $[b,\\infty)$ 上分别为常数。"
+        },
+        {
+          "id": "p121-b3",
+          "source": "(b) Give an example to show that this assertion is false if $[a,b]$ is replaced by $(a,b)$.",
+          "sourceSha256": "16b3277dac8090211b7ffd776be4e510fd6b9e17b174000215faa04f6aa482af",
+          "translation": "(b) 举例说明：如果把 $[a,b]$ 换成 $(a,b)$，上述断言就不成立。"
+        },
+        {
+          "id": "p121-b4",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p121-b5",
+          "source": "(a) Suppose that $g$ and $h$ are continuous at $a$, and that $g(a)=h(a)$. Define $f(x)$ to be $g(x)$ if $x\\ge a$ and $h(x)$ if $x\\le a$. Prove that $f$ is continuous at $a$.",
+          "sourceSha256": "c6f06ccdb8857b1835fe3596da0869aa06991c36ff2738327a8ae3b8fd2e4615",
+          "translation": "(a) 假设 $g$ 和 $h$ 在 $a$ 处连续，且 $g(a)=h(a)$。定义 $f(x)$：当 $x\\ge a$ 时取 $g(x)$，当 $x\\le a$ 时取 $h(x)$。证明 $f$ 在 $a$ 处连续。"
+        },
+        {
+          "id": "p121-b6",
+          "source": "(b) Suppose $g$ is continuous on $[a,b]$ and $h$ is continuous on $[b,c]$ and $g(b)=h(b)$. Let $f(x)$ be $g(x)$ for $x$ in $[a,b]$ and $h(x)$ for $x$ in $[b,c]$. Show that $f$ is continuous on $[a,c]$. (Thus, continuous functions can be “pasted together”.)",
+          "sourceSha256": "3487afe6ee264e354e1e9183f2355f2e6f39789c4b1221d8709c5532eda55b97",
+          "translation": "(b) 假设 $g$ 在 $[a,b]$ 上连续，$h$ 在 $[b,c]$ 上连续，且 $g(b)=h(b)$。定义 $f(x)$：当 $x$ 属于 $[a,b]$ 时取 $g(x)$，当 $x$ 属于 $[b,c]$ 时取 $h(x)$。证明 $f$ 在 $[a,c]$ 上连续。（因此，连续函数可以“粘接起来”。）"
+        },
+        {
+          "id": "p121-b7",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p121-b8",
+          "source": "Prove that if $f$ is continuous at $a$, then for any $\\varepsilon>0$ there is a $\\delta>0$ so that whenever $|x-a|<\\delta$ and $|y-a|<\\delta$, we have $|f(x)-f(y)|<\\varepsilon$.",
+          "sourceSha256": "13a85d1e400544e34c1a87b0e32ae5ddfa91e3b451f3e5003e4ff79524933693",
+          "translation": "证明：如果 $f$ 在 $a$ 处连续，那么对任意 $\\varepsilon>0$，都存在 $\\delta>0$，使得只要 $|x-a|<\\delta$ 且 $|y-a|<\\delta$，就有 $|f(x)-f(y)|<\\varepsilon$。"
+        },
+        {
+          "id": "p121-b9",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p121-b10",
+          "source": "(a) Prove the following version of Theorem 3 for “right-hand continuity”: Suppose that $\\displaystyle\\lim_{x\\to a^+}f(x)=f(a)$, and $f(a)>0$. Then there is a number $\\delta>0$ such that $f(x)>0$ for all $x$ satisfying $0\\le x-a<\\delta$. Similarly, if $f(a)<0$, then there is a number $\\delta>0$ such that $f(x)<0$ for all $x$ satisfying $0\\le x-a<\\delta$.",
+          "sourceSha256": "2ccd14866ce379137cebad90e02ae08b8b7fb915f04511cbf0c2505c809d7fd8",
+          "translation": "(a) 证明定理 3 关于“右连续”的以下版本：假设 $\\displaystyle\\lim_{x\\to a^+}f(x)=f(a)$ 且 $f(a)>0$。那么存在数 $\\delta>0$，使得所有满足 $0\\le x-a<\\delta$ 的 $x$ 都满足 $f(x)>0$。类似地，若 $f(a)<0$，则存在数 $\\delta>0$，使得所有满足 $0\\le x-a<\\delta$ 的 $x$ 都满足 $f(x)<0$。"
+        },
+        {
+          "id": "p121-b11",
+          "source": "(b) Prove a version of Theorem 3 when $\\displaystyle\\lim_{x\\to b^-}f(x)=f(b)$.",
+          "sourceSha256": "02a8d59859d04ddaddd2e4edb3e4e539e896e22fc1f3da0f3c882c3e2b1f7136",
+          "translation": "(b) 在 $\\displaystyle\\lim_{x\\to b^-}f(x)=f(b)$ 的情形下，证明定理 3 的一个相应版本。"
+        },
+        {
+          "id": "p121-b12",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p121-b13",
+          "source": "If $\\displaystyle\\lim_{x\\to a}f(x)$ exists, but is $\\ne f(a)$, then $f$ is said to have a **removable discontinuity** at $a$.",
+          "sourceSha256": "43a0accad7f94b7a758d534bc5f2b3fdf9f070e9795e528041227898e038862f",
+          "translation": "如果 $\\displaystyle\\lim_{x\\to a}f(x)$ 存在，但 $\\ne f(a)$，那么称 $f$ 在 $a$ 处有一个**可去间断点**。"
+        },
+        {
+          "id": "p121-b14",
+          "source": "(a) If $f(x)=\\sin1/x$ for $x\\ne0$ and $f(0)=1$, does $f$ have a removable discontinuity at $0$? What if $f(x)=x\\sin1/x$ for $x\\ne0$ and $f(0)=1$?",
+          "sourceSha256": "b3caa966b8c747ee6a3755d925390a9b260499888a5fd470fe021a712314cb89",
+          "translation": "(a) 如果在 $x\\ne0$ 时有 $f(x)=\\sin1/x$，并且 $f(0)=1$，那么 $f$ 在 $0$ 处有可去间断点吗？如果在 $x\\ne0$ 时有 $f(x)=x\\sin1/x$，并且 $f(0)=1$，又如何？"
+        },
+        {
+          "id": "p121-b15",
+          "source": "(b) Suppose $f$ has a removable discontinuity at $a$. Let $g(x)=f(x)$ for $x\\ne a$, and let $g(a)=\\displaystyle\\lim_{x\\to a}f(x)$. Prove that $g$ is continuous at $a$. (Don’t work very hard: this is quite easy.)",
+          "sourceSha256": "19a6187157d275ea1a7c0e551257b5e341dfac8c6139a69188f23bab8a2c5f0e",
+          "translation": "(b) 假设 $f$ 在 $a$ 处有可去间断点。在 $x\\ne a$ 时令 $g(x)=f(x)$，并令 $g(a)=\\displaystyle\\lim_{x\\to a}f(x)$。证明 $g$ 在 $a$ 处连续。（不必费太大力气：这很容易。）"
+        },
+        {
+          "id": "p121-b16",
+          "source": "(c) Let $f(x)=0$ if $x$ is irrational, and let $f(p/q)=1/q$ if $p/q$ is in lowest terms. What is the function $g$ defined by $g(x)=\\displaystyle\\lim_{y\\to x}f(y)$?",
+          "sourceSha256": "03783dc48ac05fa68d4c42e2ac260011698c014135ece22907dfff9e98e8d000",
+          "translation": "(c) 当 $x$ 是无理数时令 $f(x)=0$，当 $p/q$ 为最简分数时令 $f(p/q)=1/q$。由 $g(x)=\\displaystyle\\lim_{y\\to x}f(y)$ 定义的函数 $g$ 是什么？"
+        },
+        {
+          "id": "p121-b17",
+          "source": "\\*(d) Let $f$ be a function with the property that every point of discontinuity is a removable discontinuity. This means that $\\displaystyle\\lim_{y\\to x}f(y)$ exists for all $x$, but $f$ may be discontinuous at some (even infinitely many) numbers $x$. Define $g(x)=\\displaystyle\\lim_{y\\to x}f(y)$. Prove that $g$ is continuous. (This is not quite so easy as part (b).)",
+          "sourceSha256": "8b55ad8906a3cb56eadc7f74f7b07747a8048b9d7d17276997d272e7ffa2e3df",
+          "translation": "\\*(d) 设 $f$ 的每个间断点都是可去间断点。这意味着 $\\displaystyle\\lim_{y\\to x}f(y)$ 对所有 $x$ 都存在，但 $f$ 可能在某些（甚至无穷多个）数 $x$ 处不连续。定义 $g(x)=\\displaystyle\\lim_{y\\to x}f(y)$。证明 $g$ 连续。（这一问不像 (b) 那么容易。）"
+        },
+        {
+          "id": "p121-b18",
+          "source": "\\*\\*(e) Is there a function $f$ which is discontinuous at every point, and which has only removable discontinuities? (It is worth thinking about this problem now, but mainly as a test of intuition; even if you suspect the correct answer, you will almost certainly be unable to prove it at the present time. See Problem 22-33.)",
+          "sourceSha256": "3ee96f4b730e52647bc13efba2ee34ee258a43ab4738e24f8bce3c30fd403baf",
+          "translation": "\\*\\*(e) 是否存在一个函数 $f$，它处处不连续，却只有可去间断点？（现在就思考这个问题很值得，但主要是为了检验直觉；即使猜到了正确答案，目前你几乎肯定也无法证明。见习题 22-33。）"
+        }
+      ]
+    }
+  ]
+}

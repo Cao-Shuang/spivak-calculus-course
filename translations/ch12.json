@@ -1,0 +1,2427 @@
+{
+  "chapter": 12,
+  "language": "zh-CN",
+  "sourceSha256": "b1ec5b1c25788b9ebdb7cfbcf11778e19f7adbec6777e1896d25ca35bd5dba28",
+  "paragraphCount": 241,
+  "pages": [
+    {
+      "printed": 230,
+      "sourceSha256": "f56ea072b8c463bf4896ea47f72636b8c9d92cdd7974379afbefd14e745fd59a",
+      "blocks": [
+        {
+          "id": "p230-b1",
+          "source": "# CHAPTER 12  INVERSE FUNCTIONS",
+          "sourceSha256": "4ddf1a2399f9d11138c9fa61d34c052ac83142f5297e67dc5356ab8190236e78",
+          "translation": "# 第 12 章　反函数"
+        },
+        {
+          "id": "p230-b2",
+          "source": "We now have at our disposal quite powerful methods for investigating functions; what we lack is an adequate supply of functions to which these methods may be applied. We have studied various ways of forming new functions from old—addition, multiplication, division, and composition—but using these alone, we can produce only the rational functions (even the sine function, although frequently used for examples, has never been defined). In the next few chapters we will begin to construct new functions in quite sophisticated ways, but there is one important method which will practically double the usefulness of any other method we discover.",
+          "sourceSha256": "9ffd84bcf5d0aa5ec310f2b45b718227acacad69b156d06bf4e36a695b7cd0f0",
+          "translation": "现在，我们已经掌握了研究函数的相当有力的方法；所缺少的是足够多的函数，好让这些方法有用武之地。我们研究过从旧函数构造新函数的各种方法——加、乘、除以及复合——但单靠这些方法，我们只能得到有理函数（连经常被用作例子的正弦函数，也从未得到定义）。接下来的几章中，我们将开始用相当精巧的方法构造新函数，不过有一种重要的方法，几乎能让我们发现的其他任何方法的用途翻一番。"
+        },
+        {
+          "id": "p230-b3",
+          "source": "If we recall that a function is a collection of pairs of numbers, we might hit upon the bright idea of simply reversing all the pairs. Thus from the function",
+          "sourceSha256": "ceaf7994e26d181bbf7a0bd1e8f7083b701a3b2bc22b83857abd6a96e7174432",
+          "translation": "回想函数是一族数对，我们也许会想到一个妙主意：只要把所有数对的次序颠倒过来就行了。于是，从函数"
+        },
+        {
+          "id": "p230-b4",
+          "source": "$$f=\\{(1,2),(3,4),(5,9),(13,8)\\},$$",
+          "sourceSha256": "c0c3db3e017fcfa2a327b464d644f5926bb25ebbcf987e5ec8990e22ffe94f3f"
+        },
+        {
+          "id": "p230-b5",
+          "source": "we obtain",
+          "sourceSha256": "bf31204fc693cd38b319bf1ebfac21f1d5da8ec271c36b120452d72baea81372",
+          "translation": "我们得到"
+        },
+        {
+          "id": "p230-b6",
+          "source": "$$g=\\{(2,1),(4,3),(9,5),(8,13)\\}.$$",
+          "sourceSha256": "1e8babec1e2754a978a808bb6bd2a062de25812f875863cbe9ff74e52ddcd43d"
+        },
+        {
+          "id": "p230-b7",
+          "source": "While $f(1)=2$ and $f(3)=4$, we have $g(2)=1$ and $g(4)=3$.",
+          "sourceSha256": "c935c2d684b81be4171d34f93b59bcf8cd48558e72517e0a1ba930a0ac8d7634",
+          "translation": "原来有 $f(1)=2$ 和 $f(3)=4$，现在则有 $g(2)=1$ 和 $g(4)=3$。"
+        },
+        {
+          "id": "p230-b8",
+          "source": "Unfortunately, this bright idea does not always work. If",
+          "sourceSha256": "4f98b69b7dbe3fbad91f25d0af2943a016acf0eab6bd71707aac2268c72fec6d",
+          "translation": "可惜，这个妙主意并不总是奏效。如果"
+        },
+        {
+          "id": "p230-b9",
+          "source": "$$f=\\{(1,2),(3,4),(5,9),(13,4)\\},$$",
+          "sourceSha256": "72d1bd7981bb50d78ba819a9e99c2cb5f0a4181639aa63c5bf63f8173b3a0eae"
+        },
+        {
+          "id": "p230-b10",
+          "source": "then the collection",
+          "sourceSha256": "f8801bcf5c1a46b747480deec472702110644b46a06a38b1c8aaee8ed46be2f7",
+          "translation": "那么，数对的集合"
+        },
+        {
+          "id": "p230-b11",
+          "source": "$$\\{(2,1),(4,3),(9,5),(4,13)\\}$$",
+          "sourceSha256": "34fa27dd3a288e0b455412c791181e26c7b91ab936ef6813f2e6ff4c0cf5191a"
+        },
+        {
+          "id": "p230-b12",
+          "source": "is not a function at all, since it contains both $(4,3)$ and $(4,13)$. It is clear where the trouble lies: $f(3)=f(13)$, even though $3\\ne13$. This is the only sort of thing that can go wrong, and it is worthwhile giving a name to the functions for which this does not happen.",
+          "sourceSha256": "3df16db53f95c595ba96093f7db4a4bde3f02761e0a83206f92aab0084492581",
+          "translation": "根本不是函数，因为它同时包含 $(4,3)$ 和 $(4,13)$。问题显然出在这里：尽管 $3\\ne13$，却有 $f(3)=f(13)$。可能出的问题只有这一种，值得给不会发生这种情况的函数起个名字。"
+        },
+        {
+          "id": "p230-b13",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p230-b14",
+          "source": "A function $f$ is **one-one** (read “one-to-one”) if $f(a)\\ne f(b)$ whenever $a\\ne b$.",
+          "sourceSha256": "0dedcf21ae30e657bd2ffba49cb35b147302066f5352756b1c5c47dd5ca7fb91",
+          "translation": "如果每当 $a\\ne b$ 时都有 $f(a)\\ne f(b)$，就称函数 $f$ 是**一一的**（读作“一对一”）。"
+        },
+        {
+          "id": "p230-b15",
+          "source": "The identity function $I$ is obviously one-one, and so is the following modification:",
+          "sourceSha256": "9893374d2f598c07f450a186b6cdafe2e102f3eceef536cf9caafcaad82c5c22",
+          "translation": "恒等函数 $I$ 显然是一一的，下面这个改造后的函数也是："
+        },
+        {
+          "id": "p230-b16",
+          "source": "$$g(x)=\\begin{cases}x,&x\\ne3,5\\\\3,&x=5\\\\5,&x=3.\\end{cases}$$",
+          "sourceSha256": "3e28ae1455bd4c5520be2034ec6e17f4411ec8935741b7fcdafb3bfa8c3ed0a2"
+        },
+        {
+          "id": "p230-b17",
+          "source": "The function $f(x)=x^2$ is not one-one, since $f(-1)=f(1)$, but if we define",
+          "sourceSha256": "a10090dcaa2734b70110547daf942b1b4811bb22179a00c8eab2290c99776273",
+          "translation": "函数 $f(x)=x^2$ 不是一一的，因为 $f(-1)=f(1)$；但如果定义"
+        },
+        {
+          "id": "p230-b18",
+          "source": "$$g(x)=x^2,\\qquad x\\ge0$$",
+          "sourceSha256": "127362f6586f8e0b1eebdb6b0e5a85ee8bdfd773c47a0e98b70bac3087b290d5"
+        }
+      ]
+    },
+    {
+      "printed": 231,
+      "sourceSha256": "e3a39da42e253ce672ced6a469edd9866ac38c086175995f50f74ac3b9e44eb5",
+      "blocks": [
+        {
+          "id": "p231-b1",
+          "source": "(and leave $g$ undefined for $x<0$), then $g$ is one-one, because $g$ is increasing (since $g'(x)=2x>0$, for $x>0$). This observation is easily generalized: If $n$ is a natural number and",
+          "sourceSha256": "7d4352739fe1915b91b473562a0406b8e5b713867df0be12313d6867f3879c2d",
+          "translation": "（并且让 $g$ 在 $x<0$ 时无定义），那么 $g$ 就是一一的，因为 $g$ 是递增的（这是因为，在 $x>0$ 时，$g'(x)=2x>0$）。这一观察很容易推广：如果 $n$ 是自然数，并且"
+        },
+        {
+          "id": "p231-b2",
+          "source": "$$f(x)=x^n,\\qquad x\\ge0,$$",
+          "sourceSha256": "13138ee165a9744c33bd61fa9fe38bab26235cf86b7998ce03da82a77762c8f4"
+        },
+        {
+          "id": "p231-b3",
+          "source": "then $f$ is one-one. If $n$ is odd, one can do better: the function",
+          "sourceSha256": "e061a05abf8da4f302a2e155f31439b094d65d141e793b8ecfc7c71f14432bac",
+          "translation": "那么 $f$ 就是一一的。如果 $n$ 是奇数，还可以做得更好：函数"
+        },
+        {
+          "id": "p231-b4",
+          "source": "$$f(x)=x^n\\quad\\text{for all }x$$",
+          "sourceSha256": "30f0e363198800d260bcfc9a7d9f10543d60d81e9b61634cb20e6294f4d2a1ee"
+        },
+        {
+          "id": "p231-b5",
+          "source": "is one-one (since $f'(x)=nx^{n-1}>0$, for all $x\\ne0$).",
+          "sourceSha256": "18cfa387dfe46ba3e4c0df7f0c174d6761b29a9476c311b210512a47dabe7cd2",
+          "translation": "是一一的（因为对所有 $x\\ne0$ 都有 $f'(x)=nx^{n-1}>0$）。"
+        },
+        {
+          "id": "p231-b6",
+          "source": "It is particularly easy to decide from the graph of $f$ whether $f$ is one-one: the condition $f(a)\\ne f(b)$ for $a\\ne b$ means that no *horizontal* line intersects the graph of $f$ twice (Figure 1).",
+          "sourceSha256": "2f2a6533b11976f1f0a16ad7cd2153a8fa61d16f134d96d5d693dac1638bf0ca",
+          "translation": "从 $f$ 的图像判断 $f$ 是否一一，格外容易：在 $a\\ne b$ 时有 $f(a)\\ne f(b)$ 这一条件，意味着没有任何一条*水平*直线与 $f$ 的图像相交两次（图 1）。"
+        },
+        {
+          "id": "p231-b7",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:590px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"445 544 590 375\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0250.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "6a6d9563488f287963f845603404170f3cfc0dcbdbc35d4ddc7e512db8dd2e0d"
+        },
+        {
+          "id": "p231-b8",
+          "source": "If we reverse all the pairs in (a not necessarily one-one function) $f$ we obtain, in any case, some collection of pairs. It is popular to abstain from this procedure unless $f$ is one-one, but there is no particular reason to do so—instead of a definition with restrictive conditions we obtain a definition and a theorem.",
+          "sourceSha256": "e43a4bb4deaf1e5eaf0373fe681d023a675b7b698c5b330bfef9443629f9010a",
+          "translation": "如果把（不一定一一的函数）$f$ 中所有数对的次序都颠倒过来，无论如何都会得到某个数对集合。通常的做法是，除非 $f$ 是一一的，否则不这样做；但并没有什么特别的理由一定要如此——我们可以得到一个定义和一个定理，而不是一个附有限制条件的定义。"
+        },
+        {
+          "id": "p231-b9",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p231-b10",
+          "source": "For any function $f$, the **inverse** of $f$, denoted by $f^{-1}$, is the set of all pairs $(a,b)$ for which the pair $(b,a)$ is in $f$.",
+          "sourceSha256": "a077e8c1c7acea2cf2f17972bbbcb0bdbb9b28abc048e08ed63d1c2e2c38ad03",
+          "translation": "对于任意函数 $f$，$f$ 的**逆**记作 $f^{-1}$，它是由所有这样的数对 $(a,b)$ 组成的集合：数对 $(b,a)$ 属于 $f$。"
+        },
+        {
+          "id": "p231-b11",
+          "source": "**THEOREM 1**",
+          "sourceSha256": "2b6c6f1cd8500f04785734eb53e38fae29cf7651dd2ba301e21cef75e224df22",
+          "translation": "**定理 1**"
+        },
+        {
+          "id": "p231-b12",
+          "source": "$f^{-1}$ is a function if and only if $f$ is one-one.",
+          "sourceSha256": "3c7c0c64f0ac152c975965ddf03e23de8e7dddb94b109a6fc84fb4823b815622",
+          "translation": "$f^{-1}$ 是函数，当且仅当 $f$ 是一一的。"
+        },
+        {
+          "id": "p231-b13",
+          "source": "**PROOF** Suppose first that $f$ is one-one. Let $(a,b)$ and $(a,c)$ be two pairs in $f^{-1}$. Then $(b,a)$ and $(c,a)$ are in $f$, so $a=f(b)$ and $a=f(c)$; since $f$ is one-one this implies that $b=c$. Thus $f^{-1}$ is a function.",
+          "sourceSha256": "2d364c8611020fb34e082e45f778fe99d4df0a0f5767327d1c99bc829f82da11",
+          "translation": "**证明** 首先假设 $f$ 是一一的。设 $(a,b)$ 和 $(a,c)$ 是 $f^{-1}$ 中的两个数对。那么 $(b,a)$ 和 $(c,a)$ 属于 $f$，所以 $a=f(b)$ 且 $a=f(c)$；由于 $f$ 是一一的，这就意味着 $b=c$。因此 $f^{-1}$ 是函数。"
+        },
+        {
+          "id": "p231-b14",
+          "source": "Conversely, suppose that $f^{-1}$ is a function. If $f(b)=f(c)$, then $f$ contains the pairs $(b,f(b))$ and $(c,f(c))=(c,f(b))$, so $(f(b),b)$ and $(f(b),c)$ are in $f^{-1}$. Since $f^{-1}$ is a function this implies that $b=c$. Thus $f$ is one-one. $\\blacksquare$",
+          "sourceSha256": "0a99c52f8173effdad4e6123a61a493d46ea4602d17191d4e94e5a19bffcf865",
+          "translation": "反过来，假设 $f^{-1}$ 是函数。如果 $f(b)=f(c)$，那么 $f$ 包含数对 $(b,f(b))$ 和 $(c,f(c))=(c,f(b))$，所以 $(f(b),b)$ 和 $(f(b),c)$ 都属于 $f^{-1}$。由于 $f^{-1}$ 是函数，这就意味着 $b=c$。因此 $f$ 是一一的。$\\blacksquare$"
+        }
+      ]
+    },
+    {
+      "printed": 232,
+      "sourceSha256": "477c1e32949d74fd546cbab624ff3f8485826a94817bfa012d1bc770166fb2a6",
+      "blocks": [
+        {
+          "id": "p232-b1",
+          "source": "The graphs of $f$ and $f^{-1}$ are so closely related that it is possible to use the graph of $f$ to visualize the graph of $f^{-1}$. Since the graph of $f^{-1}$ consists of all pairs $(a,b)$ with $(b,a)$ in the graph of $f$, one obtains the graph of $f^{-1}$ from the graph of $f$ by interchanging the horizontal and vertical axes. If $f$ has the graph shown in Figure 2(a),",
+          "sourceSha256": "ee0aa48b8daf04da7f856935fa90711111de22f12080204c183933b9d71bb17f",
+          "translation": "$f$ 与 $f^{-1}$ 的图像关系十分密切，因此可以借助 $f$ 的图像来想象 $f^{-1}$ 的图像。由于 $f^{-1}$ 的图像由所有这样的数对 $(a,b)$ 组成：$(b,a)$ 在 $f$ 的图像上，因此只需交换横轴和纵轴，就能由 $f$ 的图像得到 $f^{-1}$ 的图像。如果 $f$ 的图像如图 2(a) 所示，"
+        },
+        {
+          "id": "p232-b2",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:330px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"485 330 330 350\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0251.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n</figure>",
+          "sourceSha256": "adff1a338f0341d9a3a33a6feb4d516361dd7d9e8318032cda7d7816426e4bfc"
+        },
+        {
+          "id": "p232-b3",
+          "source": "and you rotate this page counter clockwise through a right angle, then the graph of $f^{-1}$ appears on your left (Figure 2(b)). The only trouble is that the numbering on the horizontal axis goes in the wrong direction, so you must flip this picture over, to get the usual picture of $f^{-1}$, which appears on your right (Figure 3).",
+          "sourceSha256": "4864e98b1877d5e1d5dcba8b1414dc6544caa7f9ab664539cf8857b922008110",
+          "translation": "而你把本页逆时针旋转一个直角，那么 $f^{-1}$ 的图像就出现在你的左边（图 2(b)）。唯一的问题是，横轴上数字的排列方向反了，因此还必须把这幅图翻过来，才能得到通常的 $f^{-1}$ 图像，它会出现在你的右边（图 3）。"
+        },
+        {
+          "id": "p232-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:325px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"485 1130 325 267\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0251.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n</figure>",
+          "sourceSha256": "be4956969eaedb8315b3dad4015f5b975569ba6498164618d37ebe005313b381"
+        },
+        {
+          "id": "p232-b5",
+          "source": "This procedure is awkward with books and impossible with blackboards, so it is fortunate that there is another way of constructing the graph of $f^{-1}$. The points",
+          "sourceSha256": "1901fb7003298bfaa26355cfb20c4c69b98dcc3324c60073ee0d00d814ba58c5",
+          "translation": "对书本来说，这种操作很不方便；对黑板来说，根本不可能。幸好，还有另一种构造 $f^{-1}$ 图像的方法。点"
+        }
+      ]
+    },
+    {
+      "printed": 233,
+      "sourceSha256": "7c387dbcadc69621c9db0a03257976e86d3944192d495832292d40bfc4d832dd",
+      "blocks": [
+        {
+          "id": "p233-b1",
+          "source": "$(a,b)$ and $(b,a)$ are reflections of each other through the graph of $I(x)=x$, which is called the **diagonal** (Figure 4). To obtain the graph of $f^{-1}$ we merely reflect the graph of $f$ through this line (Figure 5).",
+          "sourceSha256": "9359186d776390edbf1d464e1f3d73fe388393e6fae58d69cf847be43a4f8c10",
+          "translation": "$(a,b)$ 和 $(b,a)$ 关于 $I(x)=x$ 的图像互相对称，这条直线称为**对角线**（图 4）。只需将 $f$ 的图像关于这条直线作反射，就能得到 $f^{-1}$ 的图像（图 5）。"
+        },
+        {
+          "id": "p233-b2",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:350px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"455 272 350 341\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0252.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "90142f9dd435bacf33936cadd5d9a0b24b4f599a4bda203dd3a318150b942c21"
+        },
+        {
+          "id": "p233-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:365px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"951 260 365 355\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0252.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "636e5b39c8d78168c560cf1b11ec2245c0a31dfb70bd3b71993e71a3997ca449"
+        },
+        {
+          "id": "p233-b4",
+          "source": "Reflecting through the diagonal twice will clearly leave us right back where we started; this means that $(f^{-1})^{-1}=f$, which is also clear from the definition. In conjunction with Theorem 1, this equation has a significant consequence: if $f$ is a one-one function, then the function $f^{-1}$ is also one-one (since $(f^{-1})^{-1}$ is a function).",
+          "sourceSha256": "8b85a93e133401bffcde103637b0114a530d31b26be5db8d8c350f4a1b946825",
+          "translation": "关于对角线连续反射两次，显然会回到原来的位置；这意味着 $(f^{-1})^{-1}=f$，而从定义也能看出这一点。结合定理 1，这个等式有一个重要推论：如果 $f$ 是一一函数，那么函数 $f^{-1}$ 也是一一的（因为 $(f^{-1})^{-1}$ 是函数）。"
+        },
+        {
+          "id": "p233-b5",
+          "source": "There are a few other simple manipulations with inverse functions of which you should be aware. Since $(a,b)$ is in $f$ precisely when $(b,a)$ is in $f^{-1}$, it follows that",
+          "sourceSha256": "528c484886fa718c5531436f09a81071f199f8c349feb0a724e12cf7ca073fee",
+          "translation": "还有几种有关反函数的简单运算，你应当熟悉。由于 $(a,b)$ 属于 $f$ 当且仅当 $(b,a)$ 属于 $f^{-1}$，因此"
+        },
+        {
+          "id": "p233-b6",
+          "source": "$$b=f(a)\\quad\\text{means the same as}\\quad a=f^{-1}(b).$$",
+          "sourceSha256": "eda1059e3b40abe1799c532c4dfacb5d723ab20f5a49d4e19c792573fb68a670"
+        },
+        {
+          "id": "p233-b7",
+          "source": "Thus $f^{-1}(b)$ is the (unique) number $a$ such that $f(a)=b$; for example, if $f(x)=x^3$, then $f^{-1}(b)$ is the unique number $a$ such that $a^3=b$, and this number is, by definition, $\\sqrt[3]{b}$.",
+          "sourceSha256": "b938ceaa529bd1fee997daef9cb6c4cb05929323526e711144dd0be49fa5ffd3",
+          "translation": "所以，$f^{-1}(b)$ 就是使得 $f(a)=b$ 的那个（唯一的）数 $a$；例如，若 $f(x)=x^3$，则 $f^{-1}(b)$ 是使得 $a^3=b$ 的唯一的数 $a$，而这个数按定义就是 $\\sqrt[3]{b}$。"
+        },
+        {
+          "id": "p233-b8",
+          "source": "The fact that $f^{-1}(x)$ is the number $y$ such that $f(y)=x$ can be restated in a much more compact form:",
+          "sourceSha256": "11e93db7177e4079278d7cebaa76e59dd85344f393c1ac8e11bcaa3f62c28489",
+          "translation": "$f^{-1}(x)$ 是满足 $f(y)=x$ 的数 $y$ 这一事实，可以用简洁得多的形式重述："
+        },
+        {
+          "id": "p233-b9",
+          "source": "$$f(f^{-1}(x))=x,\\quad\\text{for all }x\\text{ in the domain of }f^{-1}.$$",
+          "sourceSha256": "ee209c8df609ac5c9276ee9590ad49f59629edb1431b42117f5e7976d6f0d0a4"
+        },
+        {
+          "id": "p233-b10",
+          "source": "Moreover,",
+          "sourceSha256": "e94a545b030ad40d2be07529f588ec2f28b72216234f9c8c6947c48f779a7d2c",
+          "translation": "此外，"
+        },
+        {
+          "id": "p233-b11",
+          "source": "$$f^{-1}(f(x))=x,\\quad\\text{for all }x\\text{ in the domain of }f;$$",
+          "sourceSha256": "6524d39079a159b0188db771a0842b79feae74c4997506729486b25f9a053b77"
+        },
+        {
+          "id": "p233-b12",
+          "source": "this follows from the previous equation upon replacing $f$ by $f^{-1}$. These two important equations can be written",
+          "sourceSha256": "bd6f2765893e2067fd6e31974cd76a2660de4420eda874b7876931c68dff2b9d",
+          "translation": "在前一个等式中把 $f$ 换成 $f^{-1}$，就能得到这个式子。这两个重要等式可以写成"
+        },
+        {
+          "id": "p233-b13",
+          "source": "$$\\begin{aligned}f\\circ f^{-1}&=I,\\\\f^{-1}\\circ f&=I\\end{aligned}$$",
+          "sourceSha256": "15650c27efb74f5f06971e894f917f5400857f1b11ec97b3f05658424cc58c38"
+        },
+        {
+          "id": "p233-b14",
+          "source": "(except that the right side will have a bigger domain if the domain of $f$ or $f^{-1}$ is not all of $\\mathbf R$).",
+          "sourceSha256": "e7b4850b2b87705e681c78a5390e01a885041fc39a825b66623ed79bbd0a14d3",
+          "translation": "（不过，如果 $f$ 或 $f^{-1}$ 的定义域不是整个 $\\mathbf R$，那么右边的定义域会更大）。"
+        }
+      ]
+    },
+    {
+      "printed": 234,
+      "sourceSha256": "0f339c36c299f493fa8e615fd82baaa1e3fa647a4620ca1c8b3521bbaa33ee7e",
+      "blocks": [
+        {
+          "id": "p234-b1",
+          "source": "Since many standard functions will be defined as the inverses of other functions, it is quite important that we be able to tell which functions are one-one. We have already hinted which class of functions are most easily dealt with—increasing and decreasing functions are obviously one-one. Moreover, if $f$ is increasing, then $f^{-1}$ is also increasing, and if $f$ is decreasing, then $f^{-1}$ is decreasing (the proof is left to you). In addition, $f$ is increasing if and only if $-f$ is decreasing, a very useful fact to remember.",
+          "sourceSha256": "80aa5d6a5d6339b9fe2670e55cd6c5559b6cebd31c2feb32ef5e5f3dbace79b2",
+          "translation": "许多常见函数都将被定义为其他函数的反函数，因此，能够判断哪些函数是一一的十分重要。我们已经暗示过，哪一类函数最容易处理——递增函数和递减函数显然都是一一的。此外，若 $f$ 递增，$f^{-1}$ 也递增；若 $f$ 递减，$f^{-1}$ 也递减（证明留给你）。另外，$f$ 递增当且仅当 $-f$ 递减，这是一个很值得记住的事实。"
+        },
+        {
+          "id": "p234-b2",
+          "source": "It is certainly not true that every one-one function is either increasing or decreasing. One example has already been mentioned, and is now graphed in Figure 6:",
+          "sourceSha256": "0faf979f91f55a40d12aa5ee4635a79a39432bb76d9804f7de3c23f8b5ff4d98",
+          "translation": "并非每个一一函数都非增即减。我们已经提到过一个例子，现在将它画在图 6 中："
+        },
+        {
+          "id": "p234-b3",
+          "source": "$$g(x)=\\begin{cases}x,&x\\ne3,5\\\\3,&x=5\\\\5,&x=3.\\end{cases}$$",
+          "sourceSha256": "3e28ae1455bd4c5520be2034ec6e17f4411ec8935741b7fcdafb3bfa8c3ed0a2"
+        },
+        {
+          "id": "p234-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:261px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"40 183 261 202\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0253.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 6</figcaption>\n</figure>",
+          "sourceSha256": "4ebdebea2a85d7f66453e692dd05e97d55a75ed66ee55cd32270ac891fc1d3c8"
+        },
+        {
+          "id": "p234-b5",
+          "source": "Figure 7 shows that there are even continuous one-one functions which are neither increasing nor decreasing. But if you try drawing a few pictures you will soon suspect that every one-one continuous function defined on an interval is either increasing or decreasing.",
+          "sourceSha256": "d156b06caa83e4d6e0c4b9436dfe5fb921e7628abce8b5f968636de420fa7a6a",
+          "translation": "图 7 表明，甚至存在既不递增也不递减的连续一一函数。不过，只要试着画几幅图，你很快就会猜想：定义在一个区间上的每个连续一一函数，不是递增的，就是递减的。"
+        },
+        {
+          "id": "p234-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:290px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 490 290 239\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0253.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 7</figcaption>\n</figure>",
+          "sourceSha256": "0a4e268282888e7cdbc789d56990f1a8de06d0b840d165eb79dc4169fd559745"
+        },
+        {
+          "id": "p234-b7",
+          "source": "**THEOREM 2**",
+          "sourceSha256": "59bd15153c31a53f3eec003199c59649639a3b3a6b854407f90576e04346c1a4",
+          "translation": "**定理 2**"
+        },
+        {
+          "id": "p234-b8",
+          "source": "If $f$ is continuous and one-one on an interval, then $f$ is either increasing or decreasing on that interval.",
+          "sourceSha256": "2efbaa2f6f2469ae930ebd5e2847d2ac6a88ea1a77b290c6c038a234243dc9c7",
+          "translation": "如果 $f$ 在一个区间上连续且一一，那么 $f$ 在该区间上不是递增的，就是递减的。"
+        },
+        {
+          "id": "p234-b9",
+          "source": "**PROOF** The proof proceeds in three easy steps:",
+          "sourceSha256": "0e2df1830a6c60c27f36575661fc4f7cfa413a9a26ce7bdc417c23951e7601ee",
+          "translation": "**证明** 证明分为三个简单步骤："
+        },
+        {
+          "id": "p234-b10",
+          "source": "(1) If $a<b<c$ are three points in the interval, then",
+          "sourceSha256": "da776ef22104e1113544997483efd419ab2ec4d3ca2bfbdaff032319b330b5da",
+          "translation": "(1) 如果 $a<b<c$ 是区间中的三个点，那么"
+        },
+        {
+          "id": "p234-b11",
+          "source": "$$\\begin{array}{rll}\\text{either}&\\text{(i)}&f(a)<f(b)<f(c)\\\\\\text{or}&\\text{(ii)}&f(a)>f(b)>f(c).\\end{array}$$",
+          "sourceSha256": "0a8283e7d18ad772b4a7c6af2212b8eec664b856c8a65a60b0434b96e5448b18"
+        },
+        {
+          "id": "p234-b12",
+          "source": "Suppose, for example, that $f(a)<f(c)$. If we had $f(b)<f(a)$ (Figure 8), then the Intermediate Value Theorem applied to the interval $[b,c]$ would give an $x$ with",
+          "sourceSha256": "34627db219af1cfcfa285fec4264cca63e639b466dc99f1415dc3ce983ed6dc3",
+          "translation": "例如，假设 $f(a)<f(c)$。如果 $f(b)<f(a)$（图 8），那么在区间 $[b,c]$ 上应用介值定理，就会得到某个 $x$，使得"
+        },
+        {
+          "id": "p234-b13",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:214px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"800 1034 214 183\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0253.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 8</figcaption>\n</figure>",
+          "sourceSha256": "7b4ef6971676680a460982fb7aa67fe01e5148645221ca778d4ef21463c7517f"
+        },
+        {
+          "id": "p234-b14",
+          "source": "$b<x<c$ and $f(x)=f(a)$, contradicting the fact that $f$ is one-one on $[a,c]$. Similarly, $f(b)>f(c)$ would lead to a contradiction, so $f(a)<f(b)<f(c)$.",
+          "sourceSha256": "a72e246241d61e2f748b5817c14e37005b3af23527228967791044835a88d91f",
+          "translation": "$b<x<c$ 且 $f(x)=f(a)$，这与 $f$ 在 $[a,c]$ 上一一相矛盾。同样，$f(b)>f(c)$ 也会导致矛盾，所以 $f(a)<f(b)<f(c)$。"
+        },
+        {
+          "id": "p234-b15",
+          "source": "Naturally, the same sort of argument works for the case $f(a)>f(c)$.",
+          "sourceSha256": "7b929741f8e27c2e0f797449eacf4ad7be73ae9704cd09cfcb20aa1f40b9302b",
+          "translation": "当然，对于 $f(a)>f(c)$ 的情形，同样的论证仍然适用。"
+        },
+        {
+          "id": "p234-b16",
+          "source": "(2) If $a<b<c<d$ are four points in the interval, then",
+          "sourceSha256": "97364af39405632b9800440b625766da4ab81518780071ac2c163be791370212",
+          "translation": "(2) 如果 $a<b<c<d$ 是区间中的四个点，那么"
+        },
+        {
+          "id": "p234-b17",
+          "source": "$$\\begin{array}{rll}\\text{either}&\\text{(i)}&f(a)<f(b)<f(c)<f(d)\\\\\\text{or}&\\text{(ii)}&f(a)>f(b)>f(c)>f(d).\\end{array}$$",
+          "sourceSha256": "976f83127b12ed54ef1c86208cf5968fb8f23cbbc6c55632afbb468c096dcf4a"
+        },
+        {
+          "id": "p234-b18",
+          "source": "For we can apply (1) to $a<b<c$ and then to $b<c<d$.",
+          "sourceSha256": "57189bb44733f644fba9dc7e505247c3457f22cdde14d9043062dcbd981b2413",
+          "translation": "因为我们可以先对 $a<b<c$ 应用 (1)，再对 $b<c<d$ 应用 (1)。"
+        }
+      ]
+    },
+    {
+      "printed": 235,
+      "sourceSha256": "a2d0dd413424a159d8f38a08d90c15c2eb0fc64c7681ad107d822e1315f667bc",
+      "blocks": [
+        {
+          "id": "p235-b1",
+          "source": "(3) Take any $a<b$ in the interval, and suppose that $f(a)<f(b)$. Then $f$ is increasing: For if $c$ and $d$ are any two points, we can apply (2) to the collection $\\{a,b,c,d\\}$ (after arranging them in increasing order). $\\blacksquare$",
+          "sourceSha256": "6d68678af371deaece6ddd8c4f1ddc1726bc58ea5a1653544033328c4bb041b6",
+          "translation": "(3) 在区间内任取 $a<b$，并假设 $f(a)<f(b)$。那么 $f$ 就是递增的：因为，对于任意两个点 $c$ 和 $d$，我们都可以对集合 $\\{a,b,c,d\\}$ 应用 (2)（先将它们按从小到大的次序排列）。$\\blacksquare$"
+        },
+        {
+          "id": "p235-b2",
+          "source": "Henceforth we shall be concerned almost exclusively with continuous increasing or decreasing functions which are defined on an interval. If $f$ is such a function, it is possible to say quite precisely what the domain of $f^{-1}$ will be like.",
+          "sourceSha256": "c997f2ef43752da8d2d547597b1870ee0411a16009cfb295d5e1086bbbbe927f",
+          "translation": "从现在起，我们所关心的几乎都是定义在一个区间上的连续递增函数或连续递减函数。若 $f$ 是这样的函数，就可以相当精确地说明 $f^{-1}$ 的定义域是什么样子。"
+        },
+        {
+          "id": "p235-b3",
+          "source": "Suppose first that $f$ is a continuous increasing function on the closed interval $[a,b]$. Then, by the Intermediate Value Theorem, $f$ takes on every value between $f(a)$ and $f(b)$. Therefore, the domain of $f^{-1}$ is the closed interval $[f(a),f(b)]$. Similarly, if $f$ is continuous and decreasing on $[a,b]$, then the domain of $f^{-1}$ is $[f(b),f(a)]$.",
+          "sourceSha256": "5c8ddcd930b02c28deab3f592bf8639f0913573f84abb1980a02bcbc140c515c",
+          "translation": "先假设 $f$ 是闭区间 $[a,b]$ 上的连续递增函数。那么由介值定理，$f$ 取遍 $f(a)$ 与 $f(b)$ 之间的所有值。因此，$f^{-1}$ 的定义域就是闭区间 $[f(a),f(b)]$。同样，若 $f$ 在 $[a,b]$ 上连续且递减，则 $f^{-1}$ 的定义域是 $[f(b),f(a)]$。"
+        },
+        {
+          "id": "p235-b4",
+          "source": "If $f$ is a continuous increasing function on an *open* interval $(a,b)$ the analysis becomes a bit more difficult. To begin with, let us choose some point $c$ in $(a,b)$. We will first decide which values $>f(c)$ are taken on by $f$. One possibility is that $f$ takes on arbitrarily large values (Figure 9). In this case $f$ takes on all values $>f(c)$, by the Intermediate Value Theorem. If, on the other hand, $f$ does not take on arbitrarily large values, then $A=\\{f(x):c\\le x<b\\}$ is bounded above, so $A$ has a least upper bound $\\alpha$ (Figure 10). Now suppose $y$ is any number with $f(c)<y<\\alpha$. Then $f$ takes on some value $f(x)>y$ (because $\\alpha$ is the least upper bound of $A$). By the Intermediate Value Theorem, $f$ actually takes on the value $y$. Notice that $f$ cannot take on the value $\\alpha$ itself; for if $\\alpha=f(x)$ for $a<x<b$ and we choose $t$ with $x<t<b$, then $f(t)>\\alpha$, which is impossible.",
+          "sourceSha256": "e864f5640dc3df728d8daa41bd4ac3cc918e33293d05a63d3fd578b72de7c6ba",
+          "translation": "如果 $f$ 是*开*区间 $(a,b)$ 上的连续递增函数，分析就稍微困难一些。首先，在 $(a,b)$ 中选取一点 $c$。我们先来判断，$f$ 会取到哪些 $>f(c)$ 的值。一种可能是，$f$ 取到任意大的值（图 9）。这时由介值定理，$f$ 取遍所有 $>f(c)$ 的值。另一方面，如果 $f$ 不取到任意大的值，那么 $A=\\{f(x):c\\le x<b\\}$ 有上界，所以 $A$ 有最小上界 $\\alpha$（图 10）。现在设 $y$ 是满足 $f(c)<y<\\alpha$ 的任意一个数。那么 $f$ 会取到某个值 $f(x)>y$（因为 $\\alpha$ 是 $A$ 的最小上界）。由介值定理，$f$ 实际上会取到值 $y$。注意，$f$ 不可能取到 $\\alpha$ 本身；因为，若对某个 $a<x<b$ 有 $\\alpha=f(x)$，再选取满足 $x<t<b$ 的 $t$，便会有 $f(t)>\\alpha$，这是不可能的。"
+        },
+        {
+          "id": "p235-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:227px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 214 227 228\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0254.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 9</figcaption>\n</figure>",
+          "sourceSha256": "2938c3dfb9bd7ff6834a4ef2c17f4fc915f0012653e4dea796d493c7163eb61c"
+        },
+        {
+          "id": "p235-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:240px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 543 240 231\" role=\"img\" aria-label=\"Figure 10\"><image href=\"pages/book/0254.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 10</figcaption>\n</figure>",
+          "sourceSha256": "12ca7dae8894e94824f7da6e62df9c1e3842e091795e8e13e481ef8e48adeda5"
+        },
+        {
+          "id": "p235-b7",
+          "source": "Precisely the same arguments work for values less than $f(c)$; either $f$ takes on all values less than $f(c)$ or there is a number $\\beta<f(c)$ such that $f$ takes on all values between $\\beta$ and $f(c)$, but not $\\beta$ itself.",
+          "sourceSha256": "bbb4ccad0ffd5feb196a7233230568f71569a64583fc8dc3cbe141ccc52e4f5a",
+          "translation": "对小于 $f(c)$ 的值，完全相同的论证也适用：或者 $f$ 取遍所有小于 $f(c)$ 的值，或者存在一个数 $\\beta<f(c)$，使得 $f$ 取遍 $\\beta$ 和 $f(c)$ 之间的所有值，却不取到 $\\beta$ 本身。"
+        },
+        {
+          "id": "p235-b8",
+          "source": "This entire argument can be repeated if $f$ is decreasing, and if the domain of $f$ is $\\mathbf R$ or $(a,\\infty)$ or $(-\\infty,a)$. Summarizing: if $f$ is a continuous increasing, or decreasing, function whose domain is an interval having one of the forms $(a,b)$, $(-\\infty,b)$, $(a,\\infty)$, or $\\mathbf R$, then the domain of $f^{-1}$ is also an interval which has one of these four forms, and we can easily fit the remaining types of intervals, $(a,b]$, $[a,b]$, $(-\\infty,b]$, and $[a,\\infty)$, into this discussion also.",
+          "sourceSha256": "e35ab72a0a35a021328425d7788786bdea96fc45502932db33568a32463d6273",
+          "translation": "如果 $f$ 递减，或者 $f$ 的定义域是 $\\mathbf R$、$(a,\\infty)$ 或 $(-\\infty,a)$，整个论证都可以重复。概括起来：如果 $f$ 是连续递增函数或连续递减函数，其定义域是形如 $(a,b)$、$(-\\infty,b)$、$(a,\\infty)$ 或 $\\mathbf R$ 的区间，那么 $f^{-1}$ 的定义域也具有这四种形式之一；其余类型的区间 $(a,b]$、$[a,b]$、$(-\\infty,b]$ 和 $[a,\\infty)$，也很容易纳入这一讨论。"
+        },
+        {
+          "id": "p235-b9",
+          "source": "Now that we have completed this preliminary analysis of continuous one-one functions, it is possible to begin asking which important properties of a one-one function are inherited by its inverse. For continuity there is no problem.",
+          "sourceSha256": "469935dee8594a9b78c70145a1750257911330ab554907fc3acc1ab380a5aebd",
+          "translation": "对连续一一函数的初步分析已经完成，现在可以开始追问：一一函数的哪些重要性质会被它的反函数继承？对于连续性，毫无问题。"
+        },
+        {
+          "id": "p235-b10",
+          "source": "**THEOREM 3**",
+          "sourceSha256": "144f2b1c919e3eccfd2f2d3b52b3a51686b023b4bc55f5d83f53928650fda205",
+          "translation": "**定理 3**"
+        },
+        {
+          "id": "p235-b11",
+          "source": "If $f$ is continuous and one-one on an interval, then $f^{-1}$ is also continuous.",
+          "sourceSha256": "c63d8ba513463249005e92aae4ade28b18e90fa509482f66ff8733e04be0446f",
+          "translation": "如果 $f$ 在一个区间上连续且一一，那么 $f^{-1}$ 也连续。"
+        },
+        {
+          "id": "p235-b12",
+          "source": "**PROOF** We know by Theorem 2 that $f$ is either increasing or decreasing. We might as well assume that $f$ is increasing, since we can then take care of the other case by applying the usual trick of considering $-f$. We might as well assume our interval is open, since it is easy to see that a continuous increasing or decreasing function on any interval can be extended to one on a larger open interval.",
+          "sourceSha256": "0007e5ce7b7553f192c02fe39d739879352f3485ad67a78c0cf8fc0a5fb87da4",
+          "translation": "**证明** 由定理 2，我们知道 $f$ 不是递增就是递减。不妨假设 $f$ 递增，因为对另一种情形，可以用惯常的技巧，转而考虑 $-f$。也不妨假设这个区间是开区间，因为容易看出：任意区间上的连续递增或递减函数，都可以延拓成更大的开区间上的连续递增或递减函数。"
+        },
+        {
+          "id": "p235-b13",
+          "source": "We must show that",
+          "sourceSha256": "5af2aef60350be15c977d839c49f4e29f8cb7ab1fc7e3a5589202e2a631cef1d",
+          "translation": "我们必须证明"
+        },
+        {
+          "id": "p235-b14",
+          "source": "$$\\lim_{x\\to b}f^{-1}(x)=f^{-1}(b)$$",
+          "sourceSha256": "51f70efdd698e06713cfa71834edb00a64c2acdb29c4734aaa950fea1c7751aa"
+        }
+      ]
+    },
+    {
+      "printed": 236,
+      "sourceSha256": "8d9cf1d4b62b4568c1150e05609776be4bc8080fba73f0fa4398bc0c3cc1912a",
+      "blocks": [
+        {
+          "id": "p236-b1",
+          "source": "for each $b$ in the domain of $f^{-1}$. Such a number $b$ is of the form $f(a)$ for some $a$ in the domain of $f$. For any $\\varepsilon>0$, we want to find a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "72d22cc98db8392d34af55e2731af71eeefc0f73998a992237493ab7c9fa40cb",
+          "translation": "对 $f^{-1}$ 定义域中的每个 $b$ 都成立。这样的数 $b$ 具有形式 $f(a)$，其中 $a$ 在 $f$ 的定义域内。对于任意 $\\varepsilon>0$，我们要找到一个 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p236-b2",
+          "source": "$$\\text{if }f(a)-\\delta<x<f(a)+\\delta,\\text{ then }a-\\varepsilon<f^{-1}(x)<a+\\varepsilon.$$",
+          "sourceSha256": "438ea9045769f73abeab12b59b764a7c317ca75dc0208a8ea2537f6ef3fd7f21"
+        },
+        {
+          "id": "p236-b3",
+          "source": "Figure 11 suggests the way of finding $\\delta$ (remember that by looking sideways you see the graph of $f^{-1}$): since",
+          "sourceSha256": "7e945d2c5c59546e49cbdc161e1eb60ee4c5c4543a52f50a3ec27aedb8387d8c",
+          "translation": "图 11 提示了寻找 $\\delta$ 的办法（记住，侧过来看，你看到的就是 $f^{-1}$ 的图像）：由于"
+        },
+        {
+          "id": "p236-b4",
+          "source": "$$a-\\varepsilon<a<a+\\varepsilon,$$",
+          "sourceSha256": "1427dc2362c3c3460ef4e1ed6b69672708591f6794e27deb08c4bc8ad7a3f078"
+        },
+        {
+          "id": "p236-b5",
+          "source": "it follows that",
+          "sourceSha256": "d65e00e35bf8747723cc3719e603f3217426b49946d42d0ac5cc5c3ad2d04dbb",
+          "translation": "所以"
+        },
+        {
+          "id": "p236-b6",
+          "source": "$$f(a-\\varepsilon)<f(a)<f(a+\\varepsilon);$$",
+          "sourceSha256": "35123426e5f82de44ae3453c292e0b20c837921574abdc12ef07579127e4ab77"
+        },
+        {
+          "id": "p236-b7",
+          "source": "we let $\\delta$ be the smaller of $f(a+\\varepsilon)-f(a)$ and $f(a)-f(a-\\varepsilon)$. Figure 11 contains the entire proof that this $\\delta$ works, and what follows is simply a verbal account of the information contained in this picture.",
+          "sourceSha256": "b79df09adf1ac74e638b9e2a0601bb6d1a573da6265b47f820fa9eb7f0a3cf28",
+          "translation": "我们取 $\\delta$ 为 $f(a+\\varepsilon)-f(a)$ 和 $f(a)-f(a-\\varepsilon)$ 中较小的一个。图 11 已经包含了这个 $\\delta$ 确实可行的全部证明，下面所写的，只是对图中信息的文字说明。"
+        },
+        {
+          "id": "p236-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:360px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 420 360 321\" role=\"img\" aria-label=\"Figure 11\"><image href=\"pages/book/0255.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 11</figcaption>\n</figure>",
+          "sourceSha256": "9c09603c2950c90dd78f2e157b10d895631a209f3cf5d90cd54d06e9d41add97"
+        },
+        {
+          "id": "p236-b9",
+          "source": "Our choice of $\\delta$ ensures that",
+          "sourceSha256": "dad33a10f5715afdfcc788caa28f4e1a57c0285a835ae7ecafcf1692f413f77a",
+          "translation": "我们对 $\\delta$ 的选取保证了"
+        },
+        {
+          "id": "p236-b10",
+          "source": "$$f(a-\\varepsilon)\\le f(a)-\\delta\\text{ and }f(a)+\\delta\\le f(a+\\varepsilon).$$",
+          "sourceSha256": "d9d373b1c2f59837763fc617ba1462f266a9d8efa010bb54e4c74a411d9bfa2a"
+        },
+        {
+          "id": "p236-b11",
+          "source": "Consequently, if",
+          "sourceSha256": "309a1ee189bcede5430b7d6d4527787421d0d551a3baaf90be88b15f26adc7d7",
+          "translation": "因此，如果"
+        },
+        {
+          "id": "p236-b12",
+          "source": "$$f(a)-\\delta<x<f(a)+\\delta,$$",
+          "sourceSha256": "1903ac3c1c69d7289390a2d60f26dcdb411527f154195f84f7dbe74161f7dcea"
+        },
+        {
+          "id": "p236-b13",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p236-b14",
+          "source": "$$f(a-\\varepsilon)<x<f(a+\\varepsilon).$$",
+          "sourceSha256": "9a3945c5c72e8674005b27b2d2f1444b626ddf5ea8f9ea4c791cc10d3bd9d848"
+        },
+        {
+          "id": "p236-b15",
+          "source": "Since $f$ is increasing, $f^{-1}$ is also increasing, and we obtain",
+          "sourceSha256": "fef40e4c3495e59a1d6b5953f6be56851e8028dd7818028528c9cfe115e26d60",
+          "translation": "由于 $f$ 递增，$f^{-1}$ 也递增，于是得到"
+        },
+        {
+          "id": "p236-b16",
+          "source": "$$f^{-1}(f(a-\\varepsilon))<f^{-1}(x)<f^{-1}(f(a+\\varepsilon)),$$",
+          "sourceSha256": "6419b6e0f5afe3f277e17b7614ad03bffefbb5492ca6d7fc52f352f65bde2dfe"
+        },
+        {
+          "id": "p236-b17",
+          "source": "i.e.,",
+          "sourceSha256": "7afac3e48b42674568e5de80efa6b7b8e5d301a2ca93042d0e70bb18a9c890e3",
+          "translation": "即"
+        },
+        {
+          "id": "p236-b18",
+          "source": "$$a-\\varepsilon<f^{-1}(x)<a+\\varepsilon,$$",
+          "sourceSha256": "878f3f764c0bbf04895f56fa5ce6ef7f0d0f9eaffe50a4fcefb713fffe32ff01"
+        },
+        {
+          "id": "p236-b19",
+          "source": "which is precisely what we want. $\\blacksquare$",
+          "sourceSha256": "41ba4ced5b2983f29d09f1ae766d8a37fcf09789ae7f5bcf09a9368c90196cf6",
+          "translation": "这恰好就是我们所要证明的。$\\blacksquare$"
+        },
+        {
+          "id": "p236-b20",
+          "source": "Having successfully investigated continuity of $f^{-1}$, it is only reasonable to tackle differentiability. Again, a picture indicates just what result ought to be true. Figure 12 shows the graph of a one-one function $f$ with a tangent line $L$ through $(a,f(a))$. If this entire picture is reflected through the diagonal, it shows the graph of $f^{-1}$ and the tangent line $L'$ through $(f(a),a)$. The slope of $L'$ is the reciprocal of the slope of $L$. In other words, it appears that",
+          "sourceSha256": "bcecae6b6554cd5089f1976fd383f500daccd39bc44491bdf2422c93a220304f",
+          "translation": "已经成功地考察了 $f^{-1}$ 的连续性，接下来处理可微性再自然不过了。图像又一次指出了应当成立的结论。图 12 画出了一个一一函数 $f$ 的图像，以及经过 $(a,f(a))$ 的切线 $L$。把整幅图关于对角线反射，就得到 $f^{-1}$ 的图像以及经过 $(f(a),a)$ 的切线 $L'$。$L'$ 的斜率是 $L$ 的斜率的倒数。换句话说，似乎有"
+        },
+        {
+          "id": "p236-b21",
+          "source": "$$(f^{-1})'(f(a))=\\frac1{f'(a)}.$$",
+          "sourceSha256": "9044e92c8adeda6c5a8822b693a69f3764fdb8a698ed44bc6494531b643ed42a"
+        },
+        {
+          "id": "p236-b22",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:321px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 1084 321 273\" role=\"img\" aria-label=\"Figure 12\"><image href=\"pages/book/0255.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 12</figcaption>\n</figure>",
+          "sourceSha256": "a92f049b4998257f6d3f56233f83f40109b413dcef4f00a155888e622dd0f5eb"
+        },
+        {
+          "id": "p236-b23",
+          "source": "This formula can equally well be written in a way which expresses $(f^{-1})'(b)$ directly, for each $b$ in the domain of $f^{-1}$:",
+          "sourceSha256": "bf447cd639ae93ead83e7ef7efb2d937da9d8d59889fade382d91332999c8dd9",
+          "translation": "这个公式也可以写成直接给出 $(f^{-1})'(b)$ 的形式，适用于 $f^{-1}$ 定义域中的每个 $b$："
+        },
+        {
+          "id": "p236-b24",
+          "source": "$$(f^{-1})'(b)=\\frac1{f'(f^{-1}(b))}.$$",
+          "sourceSha256": "c117b45afa6c0912b15f139cb6b1c84324ce47cca53552b62b75df8e6dfd6068"
+        },
+        {
+          "id": "p236-b25",
+          "source": "Unlike the argument for continuity, this pictorial “proof” becomes somewhat involved when formulated analytically. There is another approach which might",
+          "sourceSha256": "c952be931d3c063621d7a5715abccf0a63b295af3c5eec0588ffa136616db18d",
+          "translation": "与连续性的论证不同，这个图示“证明”一旦用分析语言表述，就会变得有些复杂。还有另一条思路，也许"
+        }
+      ]
+    },
+    {
+      "printed": 237,
+      "sourceSha256": "0e974db3103bdee4c80aa55692ce7ace15165bdd4950195367ba10ca2fedbe9e",
+      "blocks": [
+        {
+          "id": "p237-b1",
+          "source": "be tried. Since we know that",
+          "sourceSha256": "8e40140a23d33cfc119cedae12c1c1e59e22c8d2254d8da7e093919f8ae2abe5",
+          "translation": "值得一试。由于我们知道"
+        },
+        {
+          "id": "p237-b2",
+          "source": "$$f(f^{-1}(x))=x,$$",
+          "sourceSha256": "be894b33324c8643d59ac9c18074833fa345f067d17f4a01583e1fcafaff4cd8"
+        },
+        {
+          "id": "p237-b3",
+          "source": "it is tempting to prove the desired formula by applying the Chain Rule:",
+          "sourceSha256": "8fe37f8a5730d48175cb0010496c1edaf1e512112c3a1f18d1968b2f5be1109e",
+          "translation": "很容易想到用链式法则证明所需的公式："
+        },
+        {
+          "id": "p237-b4",
+          "source": "$$f'(f^{-1}(x))\\cdot(f^{-1})'(x)=1,$$",
+          "sourceSha256": "2a9bf5e34b6f454d64b6a1b7db016f88dcbc60cc0a4e767e4e949255374b44af"
+        },
+        {
+          "id": "p237-b5",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p237-b6",
+          "source": "$$(f^{-1})'(x)=\\frac1{f'(f^{-1}(x))}.$$",
+          "sourceSha256": "876382d2382720ffe373b1cc0643e3991c2b07705ab2cd86f09abc008e0b59e9"
+        },
+        {
+          "id": "p237-b7",
+          "source": "Unfortunately, this is not a proof that $f^{-1}$ is differentiable, since the Chain Rule cannot be applied unless $f^{-1}$ is already known to be differentiable. But this argument does show what $(f^{-1})'(x)$ will have to be *if* $f^{-1}$ is differentiable, and it can also be used to obtain some important preliminary information.",
+          "sourceSha256": "2633890f1e28e96b4333f3a0747ac63020880f8aec1e9fc310aa3cb6a1545acb",
+          "translation": "可惜，这并没有证明 $f^{-1}$ 可微，因为只有已经知道 $f^{-1}$ 可微，才能应用链式法则。不过，这个论证确实说明了，*如果* $f^{-1}$ 可微，$(f^{-1})'(x)$ 就必须是什么；而且，我们还可以用它获得一些重要的初步信息。"
+        },
+        {
+          "id": "p237-b8",
+          "source": "**THEOREM 4**",
+          "sourceSha256": "d16fba7a917c9c15e4b51d223329530c5a111ff7400a22ca7cd56f0d249dc764",
+          "translation": "**定理 4**"
+        },
+        {
+          "id": "p237-b9",
+          "source": "If $f$ is a continuous one-one function defined on an interval and $f'(f^{-1}(a))=0$, then $f^{-1}$ is not differentiable at $a$.",
+          "sourceSha256": "3f1d446e6e2bf75f343561c39912dbbd5bc2956f2aa8c23f021b300a2210e544",
+          "translation": "如果 $f$ 是定义在一个区间上的连续一一函数，并且 $f'(f^{-1}(a))=0$，那么 $f^{-1}$ 在 $a$ 处不可微。"
+        },
+        {
+          "id": "p237-b10",
+          "source": "**PROOF** We have",
+          "sourceSha256": "72b44c4b3d4ef8472a92e13884c229cd8fb9ef395001cc7fc0b87bd64db2d4a1",
+          "translation": "**证明** 我们有"
+        },
+        {
+          "id": "p237-b11",
+          "source": "$$f(f^{-1}(x))=x.$$",
+          "sourceSha256": "b12b4a398c1942bf135d964e3e3c3dde4e040ea6ba214724090e8d5a2363bcdd"
+        },
+        {
+          "id": "p237-b12",
+          "source": "If $f^{-1}$ *were* differentiable at $a$, the Chain Rule would imply that",
+          "sourceSha256": "c8eddb452367b06ef8095f3b0c9ca40844b23569b57326acf1ba9d13d0327594",
+          "translation": "如果 $f^{-1}$ 在 $a$ 处*可微*，那么链式法则就会给出"
+        },
+        {
+          "id": "p237-b13",
+          "source": "$$f'(f^{-1}(a))\\cdot(f^{-1})'(a)=1,$$",
+          "sourceSha256": "0ed212429a19badf9e9d433d3d2663a784d83635aa4501b9271900a2513c4b38"
+        },
+        {
+          "id": "p237-b14",
+          "source": "hence",
+          "sourceSha256": "44a53f8fca870ba0619e906ef46b93e16600dc8809574d7b324abe69b2ac1460",
+          "translation": "因此"
+        },
+        {
+          "id": "p237-b15",
+          "source": "$$0\\cdot(f^{-1})'(a)=1,$$",
+          "sourceSha256": "7878bb85221d5c0cc3dc127a1c3c3522d5623b1af10c67d9035fde76b73442bc"
+        },
+        {
+          "id": "p237-b16",
+          "source": "which is absurd. $\\blacksquare$",
+          "sourceSha256": "06bed8e35df8681b29b88c59c3e62a2a9028c06043cea7be1b6521f02169b951",
+          "translation": "这是荒谬的。$\\blacksquare$"
+        },
+        {
+          "id": "p237-b17",
+          "source": "A simple example to which Theorem 4 applies is the function $f(x)=x^3$. Since $f'(0)=0$ and $0=f^{-1}(0)$, the function $f^{-1}$ is not differentiable at $0$ (Figure 13).",
+          "sourceSha256": "0df936f79109f554989f732e65e4b6477de04e6fe15b27e41b7e6d1ddb532e49",
+          "translation": "定理 4 的一个简单应用例子是函数 $f(x)=x^3$。由于 $f'(0)=0$ 且 $0=f^{-1}(0)$，函数 $f^{-1}$ 在 $0$ 处不可微（图 13）。"
+        },
+        {
+          "id": "p237-b18",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:330px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 476 330 630\" role=\"img\" aria-label=\"Figure 13\"><defs><clipPath id=\"ch12-fig13-crop\"><path d=\"M44 476H305V850H374V1106H44Z\"/></clipPath></defs><image href=\"pages/book/0256.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\" clip-path=\"url(#ch12-fig13-crop)\"/></svg>\n<figcaption>FIGURE 13</figcaption>\n</figure>",
+          "sourceSha256": "16e21c9b713b35cc9fe9cf34865da3c41569765bbd0c30a4682c43c826d6d500"
+        },
+        {
+          "id": "p237-b19",
+          "source": "Having decided where an inverse function cannot be differentiable, we are now ready for the rigorous proof that in all other cases the derivative is given by the formula which we have already “derived” in two different ways. Notice that the following argument uses *continuity* of $f^{-1}$, which we have already proved.",
+          "sourceSha256": "212dae87736d71a05f6ef150926b109d04df136b8be64b76d3b3bf1b4ebfc4aa",
+          "translation": "已经弄清了反函数在哪些地方不可能可微，现在可以严格证明：在其余情形，导数都由我们已经用两种方式“推导”过的公式给出。注意，下面的论证用到了我们已经证明的 $f^{-1}$ 的*连续性*。"
+        },
+        {
+          "id": "p237-b20",
+          "source": "**THEOREM 5**",
+          "sourceSha256": "5dcab1f06cc18ed0ab06225f9f74060299a70e7a835b1c96d623fc00518f1048",
+          "translation": "**定理 5**"
+        },
+        {
+          "id": "p237-b21",
+          "source": "Let $f$ be a continuous one-one function defined on an interval, and suppose that $f$ is differentiable at $f^{-1}(b)$, with derivative $f'(f^{-1}(b))\\ne0$. Then $f^{-1}$ is differentiable at $b$, and",
+          "sourceSha256": "14a3f37bb925285e22c83cf0bb518ad82962ea0c195402f007f5f095f6fc5e64",
+          "translation": "设 $f$ 是定义在一个区间上的连续一一函数，并且 $f$ 在 $f^{-1}(b)$ 处可微，导数 $f'(f^{-1}(b))\\ne0$。那么 $f^{-1}$ 在 $b$ 处可微，并且"
+        },
+        {
+          "id": "p237-b22",
+          "source": "$$(f^{-1})'(b)=\\frac1{f'(f^{-1}(b))}.$$",
+          "sourceSha256": "c117b45afa6c0912b15f139cb6b1c84324ce47cca53552b62b75df8e6dfd6068"
+        },
+        {
+          "id": "p237-b23",
+          "source": "**PROOF** Let $b=f(a)$. Then",
+          "sourceSha256": "e82e04181f6a1e1e9dde6fcf37fda887cfb6d977c3b6b1cbe44d7b95a29fb016",
+          "translation": "**证明** 设 $b=f(a)$。那么"
+        },
+        {
+          "id": "p237-b24",
+          "source": "$$\\begin{aligned}\\lim_{h\\to0}\\frac{f^{-1}(b+h)-f^{-1}(b)}h&\\\\&=\\lim_{h\\to0}\\frac{f^{-1}(b+h)-a}h.\\end{aligned}$$",
+          "sourceSha256": "4805ffe146558ea47b4a4e822005521e9e4d57ddc0806e55d9b8e46c8ba6e0cc"
+        }
+      ]
+    },
+    {
+      "printed": 238,
+      "sourceSha256": "97414313aeb3319010ae4f11767461577109761b49226442c334d4e078fab625",
+      "blocks": [
+        {
+          "id": "p238-b1",
+          "source": "Now every number $b+h$ in the domain of $f^{-1}$ can be written in the form",
+          "sourceSha256": "578002664b55038c7ab34104c4ae4312b5a75c5da01a3167726b4ada3c4d50d3",
+          "translation": "现在，$f^{-1}$ 定义域中的每个数 $b+h$ 都可以写成"
+        },
+        {
+          "id": "p238-b2",
+          "source": "$$b+h=f(a+k)$$",
+          "sourceSha256": "99f33b25604c7901da0e719af714ac0f22a2786f4056791b88a88d0d61b49f1c"
+        },
+        {
+          "id": "p238-b3",
+          "source": "for a unique $k$ (we should really write $k(h)$, but we will stick with $k$ for simplicity). Then",
+          "sourceSha256": "edc48b71c757566fef7392d6b91c5636e7296a3783c1b6adc546ec135424a761",
+          "translation": "其中 $k$ 唯一确定（严格来说应写成 $k(h)$，不过为简单起见，我们仍写成 $k$）。于是"
+        },
+        {
+          "id": "p238-b4",
+          "source": "$$\\begin{aligned}\\lim_{h\\to0}\\frac{f^{-1}(b+h)-a}h&\\\\&=\\lim_{h\\to0}\\frac{f^{-1}(f(a+k))-a}{f(a+k)-b}\\\\&=\\lim_{h\\to0}\\frac{k}{f(a+k)-f(a)}.\\end{aligned}$$",
+          "sourceSha256": "20da39e42e437783c9c82642364914aa57dc521ccde375d763c52a236d478902"
+        },
+        {
+          "id": "p238-b5",
+          "source": "We are clearly on the right track! It is not hard to get an explicit expression for $k$: since",
+          "sourceSha256": "a0b55aef9ae6a40c236c4549c11f6c6c439ef3df533f4f856f598a1c9da868ab",
+          "translation": "显然，我们已经找对了方向！求出 $k$ 的显式表达式并不难：因为"
+        },
+        {
+          "id": "p238-b6",
+          "source": "$$b+h=f(a+k)$$",
+          "sourceSha256": "99f33b25604c7901da0e719af714ac0f22a2786f4056791b88a88d0d61b49f1c"
+        },
+        {
+          "id": "p238-b7",
+          "source": "we have",
+          "sourceSha256": "311eecafbfec5e428b3e652becbcd18bf9c9670e490734d5811c85e6a7623ab4",
+          "translation": "所以"
+        },
+        {
+          "id": "p238-b8",
+          "source": "$$f^{-1}(b+h)=a+k$$",
+          "sourceSha256": "f7779426a792e01025ca0d9a3a0f18c54c12668ed226f7e8dd691d36f0296e22"
+        },
+        {
+          "id": "p238-b9",
+          "source": "or",
+          "sourceSha256": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+          "translation": "或者"
+        },
+        {
+          "id": "p238-b10",
+          "source": "$$k=f^{-1}(b+h)-f^{-1}(b).$$",
+          "sourceSha256": "20dd5987629b06cdfaf8d1a443841cd895ab88f7f19e7b79d87605df6c46ec8f"
+        },
+        {
+          "id": "p238-b11",
+          "source": "Now by Theorem 3, the function $f^{-1}$ is continuous at $b$. This means that $k$ approaches $0$ as $h$ approaches $0$. Since",
+          "sourceSha256": "d89dbbe69573b66e1331ad9b0cb120004ea0af8f6bfb2e10572e84a20a36de6d",
+          "translation": "现在由定理 3，函数 $f^{-1}$ 在 $b$ 处连续。这意味着当 $h$ 趋于 $0$ 时，$k$ 趋于 $0$。由于"
+        },
+        {
+          "id": "p238-b12",
+          "source": "$$\\lim_{k\\to0}\\frac{f(a+k)-f(a)}k=f'(a)=f'(f^{-1}(b))\\ne0,$$",
+          "sourceSha256": "e9f4a2399b17ec3db48a9b9162e7bce71866f06c7a6c7f52e4da2e044443cca9"
+        },
+        {
+          "id": "p238-b13",
+          "source": "this implies that",
+          "sourceSha256": "0956e985c55bb3fa0c71570dff04b722957b8f64d9c8dbcc5fc9580563741984",
+          "translation": "这就说明"
+        },
+        {
+          "id": "p238-b14",
+          "source": "$$(f^{-1})'(b)=\\frac1{f'(f^{-1}(b))}.\\quad\\blacksquare$$",
+          "sourceSha256": "77f942182b3b151195e3d96b4a107eb7cd04809f1407a2c5845c4d9ae5ad65a7"
+        },
+        {
+          "id": "p238-b15",
+          "source": "The work we have done on inverse functions will be amply repaid later, but here is an immediate dividend. For $n$ odd, let",
+          "sourceSha256": "1e362a8c1659b7432f80ea33846688c98dfde3d0fda2b4b390b786883b02ecce",
+          "translation": "我们在反函数上所做的工作，日后会得到丰厚的回报；这里先得到一项立竿见影的收益。对于奇数 $n$，令"
+        },
+        {
+          "id": "p238-b16",
+          "source": "$$f_n(x)=x^n\\quad\\text{for all }x;$$",
+          "sourceSha256": "c2ce54449f8e4275937517b4024c45452a47d1055e3520f497c5f3844c210991"
+        },
+        {
+          "id": "p238-b17",
+          "source": "for $n$ even, let",
+          "sourceSha256": "b456f4ec0038532271554973d806f9385d881abd5c6a09750de66931b1488eb2",
+          "translation": "对于偶数 $n$，令"
+        },
+        {
+          "id": "p238-b18",
+          "source": "$$f_n(x)=x^n,\\qquad x\\ge0.$$",
+          "sourceSha256": "fa226293dd1dc42c9bbf58af3b46d47fa96507b3da27f4e1aebd5eba4bf14350"
+        },
+        {
+          "id": "p238-b19",
+          "source": "Then $f_n$ is a continuous one-one function, whose inverse function is",
+          "sourceSha256": "0a1f0336f566e5cbceeef228c140f223d325d3716038c913ab21ae13de7af504",
+          "translation": "那么 $f_n$ 是连续一一函数，其反函数为"
+        },
+        {
+          "id": "p238-b20",
+          "source": "$$g_n(x)=\\sqrt[n]{x}=x^{1/n}.$$",
+          "sourceSha256": "361ca61a073058356a9dd91b4104da314da5afbcf6463e8bc8e50c8ae855a07f"
+        }
+      ]
+    },
+    {
+      "printed": 239,
+      "sourceSha256": "850d439689f4c892837ca538911cd99f936bedc655c06c029d35a81cc5200082",
+      "blocks": [
+        {
+          "id": "p239-b1",
+          "source": "By Theorem 5 we have, for $x\\ne0$,",
+          "sourceSha256": "782b25316bc23dbed24604e2100926f205cfb76d1735913700cd287afc077cf2",
+          "translation": "由定理 5，当 $x\\ne0$ 时，有"
+        },
+        {
+          "id": "p239-b2",
+          "source": "$$\\begin{aligned}g_n'(x)&=\\frac1{f_n'(f_n^{-1}(x))}\\\\&=\\frac1{n(f_n^{-1}(x))^{n-1}}\\\\&=\\frac1{n(x^{1/n})^{n-1}}\\\\&=\\frac1n\\cdot\\frac1{x^{1-(1/n)}}\\\\&=\\frac1n\\cdot x^{(1/n)-1}.\\end{aligned}$$",
+          "sourceSha256": "99eece3ee46d09ada890a48794246795690e1d01688115cc276f09cc1ea2d6e1"
+        },
+        {
+          "id": "p239-b3",
+          "source": "Thus, if $f(x)=x^a$, and $a$ is an integer or the reciprocal of a natural number, then $f'(x)=ax^{a-1}$. It is now easy to check that this formula is true if $a$ is any rational number: Let $a=m/n$, where $m$ is an integer, and $n$ is a natural number; if",
+          "sourceSha256": "6963413521140562789f9ad5816aa903d542f8c45f0d62819c9eb230cdb78c41",
+          "translation": "因此，如果 $f(x)=x^a$，而且 $a$ 是整数或自然数的倒数，那么 $f'(x)=ax^{a-1}$。现在很容易验证，对任意有理数 $a$，这个公式都成立：设 $a=m/n$，其中 $m$ 为整数，$n$ 为自然数；如果"
+        },
+        {
+          "id": "p239-b4",
+          "source": "$$f(x)=x^{m/n}=(x^{1/n})^m,$$",
+          "sourceSha256": "615798d38655a89564e3859ba931e2dce27753b4b53e2b960a019525912fbda2"
+        },
+        {
+          "id": "p239-b5",
+          "source": "then, by the Chain Rule,",
+          "sourceSha256": "a203b1f58dc547989d400272aebb73798d99b4ee6a9b99eb58b659bf88ed9dbc",
+          "translation": "那么，由链式法则，"
+        },
+        {
+          "id": "p239-b6",
+          "source": "$$\\begin{aligned}f'(x)&=m(x^{1/n})^{m-1}\\cdot\\frac1n\\cdot x^{(1/n)-1}\\\\&=\\frac mn\\cdot x^{[(m/n)-(1/n)]+[(1/n)-1]}\\\\&=\\frac mn x^{(m/n)-1}.\\end{aligned}$$",
+          "sourceSha256": "2a324e416782092352b0c8c4a084ec0bd2f62679c1d2ae0abf2969c705d529d3"
+        },
+        {
+          "id": "p239-b7",
+          "source": "Although we now have a formula for $f'(x)$ when $f(x)=x^a$ and $a$ is rational, the treatment of the function $f(x)=x^a$ for irrational $a$ will have to be saved for later—at the moment we do not even know the meaning of a symbol like $x^{\\sqrt2}$. Actually, inverse functions will be involved crucially in the definition of $x^a$ for irrational $a$. Indeed, in the next few chapters several important functions will be defined in terms of their inverse functions.",
+          "sourceSha256": "dedf93af75b5bff342e809de249266bf2874f58c46a0bb0abcf635bad99bb883",
+          "translation": "虽然当 $f(x)=x^a$ 且 $a$ 为有理数时，我们现在已经得到了 $f'(x)$ 的公式，但对于无理数 $a$，函数 $f(x)=x^a$ 的处理还得留到以后——此刻，我们甚至还不知道像 $x^{\\sqrt2}$ 这样的符号意味着什么。事实上，在定义无理数 $a$ 所对应的 $x^a$ 时，反函数将起到关键作用。接下来的几章中，几个重要函数确实都将通过它们的反函数来定义。"
+        },
+        {
+          "id": "p239-b8",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p239-b9",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p239-b10",
+          "source": "Find $f^{-1}$ for each of the following $f$.",
+          "sourceSha256": "3c02bcc5778280cfceb3dde1771468494ec98cde1f3abc1a2b6ba0a338b70114",
+          "translation": "对下面每个 $f$，求 $f^{-1}$。"
+        },
+        {
+          "id": "p239-b11",
+          "source": "(i) $f(x)=x^3+1$.",
+          "sourceSha256": "55dffd60c8169cd1196409f238a6493343b4d1ce298d7ab55290f1cb66314e8b"
+        },
+        {
+          "id": "p239-b12",
+          "source": "(ii) $f(x)=(x-1)^3$.",
+          "sourceSha256": "f468ea03d90977f14aac242d7017542a0a7ea6be43989def3eced5e0bbb67497"
+        },
+        {
+          "id": "p239-b13",
+          "source": "(iii) $f(x)=\\begin{cases}x,&x\\text{ rational}\\\\-x,&x\\text{ irrational}.\\end{cases}$",
+          "sourceSha256": "b363cb62ade2d19b4f8c578df0868f161520bf49a058b0581f076b1549ea518f"
+        },
+        {
+          "id": "p239-b14",
+          "source": "(iv) $f(x)=\\begin{cases}-x^2,&x\\ge0\\\\1-x^3,&x<0.\\end{cases}$",
+          "sourceSha256": "1d1ce4649c4f3f413f97310eeaba04080f6380f0adeed58cff2c4c9162f841fa"
+        },
+        {
+          "id": "p239-b15",
+          "source": "(v) $f(x)=\\begin{cases}x,&x\\ne a_1,\\ldots,a_n\\\\a_{i+1},&x=a_i,\\quad i=1,\\ldots,n-1\\\\a_1,&x=a_n.\\end{cases}$",
+          "sourceSha256": "8088abc5480fceb5f26792b61f65b3b8e0dfb6f6071841c85d67b0a43573bef5"
+        },
+        {
+          "id": "p239-b16",
+          "source": "(vi) $f(x)=x+[x]$.",
+          "sourceSha256": "8e5b441c40a35ce67e91f63af09f3080d62dd9680486060bcb1f10babd0ca9b8"
+        }
+      ]
+    },
+    {
+      "printed": 240,
+      "sourceSha256": "f4d0cecd23f91cd3daa17b71406b2e090abb2e0b02c7688dcc51361912d6d7d0",
+      "blocks": [
+        {
+          "id": "p240-b1",
+          "source": "(vii) $f(0.a_1a_2a_3\\ldots)=0.a_2a_1a_3\\ldots$. (Decimal representation is being used.)",
+          "sourceSha256": "2d2757a107b01b87253b1eb56f3523d9ec9d9a39924e30a3044d10b3afb5fdce",
+          "translation": "(vii) $f(0.a_1a_2a_3\\ldots)=0.a_2a_1a_3\\ldots$。（这里使用十进制表示。）"
+        },
+        {
+          "id": "p240-b2",
+          "source": "(viii) $f(x)=\\dfrac{x}{1-x^2}$, $-1<x<1$.",
+          "sourceSha256": "bec8379522decb9dd28f40389740f5960cb7fc6df13dcc4336aaf5d65169ab92"
+        },
+        {
+          "id": "p240-b3",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p240-b4",
+          "source": "Describe the graph of $f^{-1}$ when",
+          "sourceSha256": "5b84a432ea6ba7b9f60b6f8d1f47a8f0c194cd696d133b25d8c1a91311720f0c",
+          "translation": "在下列情形中，描述 $f^{-1}$ 的图像："
+        },
+        {
+          "id": "p240-b5",
+          "source": "(i) $f$ is increasing and always positive.",
+          "sourceSha256": "6912dc99c93aade84e41bd165d5aa4ab3df861e5c5964254253567bfb7942b3f",
+          "translation": "(i) $f$ 递增且始终为正。"
+        },
+        {
+          "id": "p240-b6",
+          "source": "(ii) $f$ is increasing and always negative.",
+          "sourceSha256": "5da888bd2205b6dab7aa3b51c21f1de1f16a126fbad7a97466fe609b9382aa5e",
+          "translation": "(ii) $f$ 递增且始终为负。"
+        },
+        {
+          "id": "p240-b7",
+          "source": "(iii) $f$ is decreasing and always positive.",
+          "sourceSha256": "5b4981b2efc700073ca0a22ebaf5e46be4e1166cf03efd42b355378481c933ea",
+          "translation": "(iii) $f$ 递减且始终为正。"
+        },
+        {
+          "id": "p240-b8",
+          "source": "(iv) $f$ is decreasing and always negative.",
+          "sourceSha256": "f8fce7b4ea8537a2082a2dbfcdedc0e6c4f181598d10f7478932e6d3ac332f44",
+          "translation": "(iv) $f$ 递减且始终为负。"
+        },
+        {
+          "id": "p240-b9",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p240-b10",
+          "source": "Prove that if $f$ is increasing, then so is $f^{-1}$, and similarly for decreasing functions.",
+          "sourceSha256": "0312b362587ce0c65f1bc3f36ff4df198b5f451d16be0f58a048e4945a3fa894",
+          "translation": "证明：若 $f$ 递增，则 $f^{-1}$ 也递增；对递减函数也有类似结论。"
+        },
+        {
+          "id": "p240-b11",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p240-b12",
+          "source": "If $f$ and $g$ are increasing, is $f+g$? Or $f\\cdot g$? Or $f\\circ g$?",
+          "sourceSha256": "d6f45699514c92b6561a207b99b32767c949bee698c0962e6e0d57b3f273b27d",
+          "translation": "如果 $f$ 和 $g$ 递增，那么 $f+g$ 呢？$f\\cdot g$ 呢？$f\\circ g$ 呢？"
+        },
+        {
+          "id": "p240-b13",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p240-b14",
+          "source": "(a) Prove that if $f$ and $g$ are one-one, then $f\\circ g$ is also one-one. Find $(f\\circ g)^{-1}$ in terms of $f^{-1}$ and $g^{-1}$. Hint: The answer is *not* $f^{-1}\\circ g^{-1}$.",
+          "sourceSha256": "d5e7e72315a4aa9411b314524444f74111f5538e43b18554f8ae849005d68479",
+          "translation": "(a) 证明：若 $f$ 和 $g$ 是一一的，则 $f\\circ g$ 也是一一的。用 $f^{-1}$ 和 $g^{-1}$ 表示 $(f\\circ g)^{-1}$。提示：答案*不是* $f^{-1}\\circ g^{-1}$。"
+        },
+        {
+          "id": "p240-b15",
+          "source": "(b) Find $g^{-1}$ in terms of $f^{-1}$ if $g(x)=1+f(x)$.",
+          "sourceSha256": "78bc794b5eaa1b89d4bd0cd1c1a568904b3d0f65496174b57cf5074696f3f76e",
+          "translation": "(b) 若 $g(x)=1+f(x)$，用 $f^{-1}$ 表示 $g^{-1}$。"
+        },
+        {
+          "id": "p240-b16",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p240-b17",
+          "source": "Show that $f(x)=\\dfrac{ax+b}{cx+d}$ is one-one if and only if $ad-bc\\ne0$, and find $f^{-1}$ in this case.",
+          "sourceSha256": "008a62870318cb616510acbcf0b2aea737c95dad7e3cec35c2ec8c53cc5f1a7c",
+          "translation": "证明：$f(x)=\\dfrac{ax+b}{cx+d}$ 是一一的，当且仅当 $ad-bc\\ne0$；并求出此时的 $f^{-1}$。"
+        },
+        {
+          "id": "p240-b18",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p240-b19",
+          "source": "On which intervals $[a,b]$ will the following functions be one-one?",
+          "sourceSha256": "6f3e30556446a4e1328740caad338c76fee41e89f7e0eaf9df73ae3ba15f0357",
+          "translation": "下面这些函数在哪些区间 $[a,b]$ 上是一一的？"
+        },
+        {
+          "id": "p240-b20",
+          "source": "(i) $f(x)=x^3-3x^2$.",
+          "sourceSha256": "f1ef6d8146663ff7b0c585e95caa49a2960699dcdd9fff2004fd8723b540c0b1"
+        },
+        {
+          "id": "p240-b21",
+          "source": "(ii) $f(x)=x^5+x$.",
+          "sourceSha256": "6befe967c3289512eaf1152b0137dc3945351dfaaf4aaea33d7d425df3f70413"
+        },
+        {
+          "id": "p240-b22",
+          "source": "(iii) $f(x)=(1+x^2)^{-1}$.",
+          "sourceSha256": "6b139a506e9d5774ed944f110c3b4b4dcd39b3c6fa08ac3a09a0a30d8c3f9c78"
+        },
+        {
+          "id": "p240-b23",
+          "source": "(iv) $f(x)=\\dfrac{x+1}{x^2+1}$.",
+          "sourceSha256": "ed5c8ccaedbe70c58687c9c228e25058f3deb55d89bebb160057a3312ef8e635"
+        },
+        {
+          "id": "p240-b24",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p240-b25",
+          "source": "Suppose that $f$ is differentiable with derivative $f'(x)=(1+x^3)^{-1/2}$. Show that $g=f^{-1}$ satisfies $g''(x)=\\frac32g(x)^2$.",
+          "sourceSha256": "428f2308e85b48ba48c1135eb458048913ddb23422cc874e8a9f32508902f121",
+          "translation": "设 $f$ 可微，其导数为 $f'(x)=(1+x^3)^{-1/2}$。证明 $g=f^{-1}$ 满足 $g''(x)=\\frac32g(x)^2$。"
+        },
+        {
+          "id": "p240-b26",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p240-b27",
+          "source": "Suppose that $f$ is a one-one function and that $f^{-1}$ has a derivative which is nowhere $0$. Prove that $f$ is differentiable. Hint: There is a one-step proof.",
+          "sourceSha256": "294bd455c198fea65d296eaffdf95bc47fd81a53ac2c9c71799acddbd096ee23",
+          "translation": "设 $f$ 是一一函数，且 $f^{-1}$ 的导数处处不为 $0$。证明 $f$ 可微。提示：有一个只需一步的证明。"
+        },
+        {
+          "id": "p240-b28",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p240-b29",
+          "source": "As a follow up to Problem 10-17, what additional condition on $g$ will insure that $f$ is differentiable?",
+          "sourceSha256": "4ed77d253c4d894ece547e093e7967ff654a43d9b1463b429b5137f87c9d08f9",
+          "translation": "接着习题 10-17，要保证 $f$ 可微，还须对 $g$ 加上什么条件？"
+        },
+        {
+          "id": "p240-b30",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p240-b31",
+          "source": "Find a formula for $(f^{-1})''(x)$.",
+          "sourceSha256": "ea6fa446ab4a75beabbf2cb62faaa235058ceec59dd0100c1fe96056bc110aad",
+          "translation": "求 $(f^{-1})''(x)$ 的公式。"
+        },
+        {
+          "id": "p240-b32",
+          "source": "### \\*12.",
+          "sourceSha256": "22fa584303267407e32d4a1d9b6645b6ac6017506a77572da538b1d330be92ac"
+        },
+        {
+          "id": "p240-b33",
+          "source": "Prove that if $f'(f^{-1}(x))\\ne0$ and $f^{(k)}(f^{-1}(x))$ exists, then $(f^{-1})^{(k)}(x)$ exists.",
+          "sourceSha256": "4da500687279a8c9941810f9f8e4947ed40c44ac0a977c7b040264978706f114",
+          "translation": "证明：如果 $f'(f^{-1}(x))\\ne0$ 且 $f^{(k)}(f^{-1}(x))$ 存在，那么 $(f^{-1})^{(k)}(x)$ 存在。"
+        },
+        {
+          "id": "p240-b34",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p240-b35",
+          "source": "The Schwarzian derivative $\\mathcal D f$ was defined in Problem 10-19.",
+          "sourceSha256": "279b8b5d9d87a375f9dc8889ba9c974ea576d6970cbad9bc3d53aa91584ef069",
+          "translation": "施瓦茨导数 $\\mathcal D f$ 已在习题 10-19 中定义。"
+        },
+        {
+          "id": "p240-b36",
+          "source": "(a) Prove that if $\\mathcal D f(x)$ exists for all $x$, then $\\mathcal D f^{-1}(x)$ also exists for all $x$ in the domain of $f^{-1}$.",
+          "sourceSha256": "2777c1bcd3cd649dea8510cb0832f29dcd7c5c496d283bad8c987c31c3bd7123",
+          "translation": "(a) 证明：如果对所有 $x$，$\\mathcal D f(x)$ 都存在，那么对 $f^{-1}$ 定义域中的所有 $x$，$\\mathcal D f^{-1}(x)$ 也都存在。"
+        },
+        {
+          "id": "p240-b37",
+          "source": "(b) Find a formula for $\\mathcal D f^{-1}(x)$.",
+          "sourceSha256": "506faa36602c69ee25abb9737f738e1410f809c5f87b0e05e8ecb8a654fddb4a",
+          "translation": "(b) 求 $\\mathcal D f^{-1}(x)$ 的公式。"
+        }
+      ]
+    },
+    {
+      "printed": 241,
+      "sourceSha256": "7db8dbbc266a4f05c61ea2207a6302153fe8245522a2a13b3e6593136a7293e2",
+      "blocks": [
+        {
+          "id": "p241-b1",
+          "source": "### \\*14.",
+          "sourceSha256": "463c766427059d789ab0ea2e8f3a0bc18c139e0a5a9c7fba25a813764d30e5a0"
+        },
+        {
+          "id": "p241-b2",
+          "source": "(a) Prove that there is a differentiable function $f$ such that $[f(x)]^5+f(x)+x=0$ for all $x$. Hint: Show that $f$ can be expressed as an inverse function. The easiest way to do this is to find $f^{-1}$. And the easiest way to do this is to set $x=f^{-1}(y)$.",
+          "sourceSha256": "80ab3fcc3590cf2a9d7d0d4c314b77b87921a877f167a730547d5321cf2b1781",
+          "translation": "(a) 证明：存在一个可微函数 $f$，使得对所有 $x$ 都有 $[f(x)]^5+f(x)+x=0$。提示：证明 $f$ 可以表示成一个反函数。最简单的办法是求 $f^{-1}$。而求它最简单的办法是令 $x=f^{-1}(y)$。"
+        },
+        {
+          "id": "p241-b3",
+          "source": "(b) Find $f'$ in terms of $f$, using an appropriate theorem of this chapter.",
+          "sourceSha256": "0840d23cc295b3e5c4e65113ddeb319fdc931da14d230abf666e785282508477",
+          "translation": "(b) 利用本章中适当的定理，用 $f$ 表示 $f'$。"
+        },
+        {
+          "id": "p241-b4",
+          "source": "(c) Find $f'$ in another way, by simply differentiating the equation defining $f$.",
+          "sourceSha256": "1f8a52772bcde78db83314ab36c325f4e03fd5703b4d4763b8c5797be3ecae5e",
+          "translation": "(c) 直接对定义 $f$ 的等式求导，用另一种方法求 $f'$。"
+        },
+        {
+          "id": "p241-b5",
+          "source": "The function in Problem 14 is often said to be **defined implicitly** by the equation $y^5+y+x=0$. The situation for this equation is quite special, however. As the next problem shows, an equation does not usually define a function implicitly on the whole line, and in some regions more than one function may be defined implicitly.",
+          "sourceSha256": "00be436dd8220eca1a1e6d59dafe453e49f39061e2f7e274672a23b474d01090",
+          "translation": "习题 14 中的函数，通常称为由方程 $y^5+y+x=0$ **隐式定义**的函数。不过，这个方程的情形相当特殊。下一题将表明：一个方程通常不会在整条实数轴上隐式定义一个函数；而在某些区域内，又可能隐式定义不止一个函数。"
+        },
+        {
+          "id": "p241-b6",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p241-b7",
+          "source": "(a) What are the two differentiable functions $f$ which are defined implicitly on $(-1,1)$ by the equation $x^2+y^2=1$, i.e., which satisfy $x^2+[f(x)]^2=1$ for all $x$ in $(-1,1)$? Notice that there are solutions defined outside $[-1,1]$.",
+          "sourceSha256": "4cebe6634444e2f2e2019413aaff96c10524bae7285328a21e1071262009ab44",
+          "translation": "(a) 在 $(-1,1)$ 上，由方程 $x^2+y^2=1$ 隐式定义的两个可微函数 $f$ 是什么？也就是说，对 $(-1,1)$ 中所有 $x$ 都满足 $x^2+[f(x)]^2=1$ 的函数是什么？注意，存在定义在 $[-1,1]$ 以外的解。"
+        },
+        {
+          "id": "p241-b8",
+          "source": "(b) Which functions $f$ satisfy $x^2+[f(x)]^2=-1$?",
+          "sourceSha256": "bc006de5234169724532b4de094ff118bbd3cbf6bc136f6ccb04476a6210254f",
+          "translation": "(b) 哪些函数 $f$ 满足 $x^2+[f(x)]^2=-1$？"
+        },
+        {
+          "id": "p241-b9",
+          "source": "\\*(c) Which differentiable functions $f$ satisfy $[f(x)]^3-3f(x)=x$? Hint: It will help to first draw the graph of the function $g(x)=x^3-3x$.",
+          "sourceSha256": "552bff2ae4936f21919338b6ced066ca68ca0ed38923901d3c2a9acd87de75e7",
+          "translation": "\\*(c) 哪些可微函数 $f$ 满足 $[f(x)]^3-3f(x)=x$？提示：先画出函数 $g(x)=x^3-3x$ 的图像会有帮助。"
+        },
+        {
+          "id": "p241-b10",
+          "source": "In general, determining on what intervals a differentiable function is defined implicitly by a particular equation may be a delicate affair, and is best discussed in the context of advanced calculus. If we *assume* that $f$ is such a differentiable solution, however, then a formula for $f'(x)$ can be derived, exactly as in Problem 14(c), by differentiating both sides of the equation defining $f$ (a process known as “implicit differentiation”):",
+          "sourceSha256": "ab90f8e4ce798a9fd46681413f883089f981a4daf28da8571c4920b6ac9ab35f",
+          "translation": "一般来说，判断一个特定方程在哪些区间上隐式定义了一个可微函数，可能是一件微妙的事，最好放到高等微积分的背景中讨论。不过，如果我们*假设* $f$ 就是这样一个可微的解，那么便可以像习题 14(c) 那样，对定义 $f$ 的方程两边求导，推导出 $f'(x)$ 的公式（这个过程称为“隐式求导”）："
+        },
+        {
+          "id": "p241-b11",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p241-b12",
+          "source": "(a) Apply this method to the equation $[f(x)]^2+x^2=1$. Notice that your answer will involve $f(x)$; this is only to be expected, since there is more than one function defined implicitly by the equation $y^2+x^2=1$.",
+          "sourceSha256": "780b663505d1b34f3bce2e054dced001ff99fa7c4c4418bcdce6c130c4f910c4",
+          "translation": "(a) 对方程 $[f(x)]^2+x^2=1$ 使用这个方法。注意，答案会包含 $f(x)$；这本来就是意料之中的，因为方程 $y^2+x^2=1$ 隐式定义的函数不止一个。"
+        },
+        {
+          "id": "p241-b13",
+          "source": "(b) But check that your answer works for both of the functions $f$ found in Problem 15(a).",
+          "sourceSha256": "88274194998307d2f6660518804fc9bc1de984a7e2b594e4391c47cbde327201",
+          "translation": "(b) 不过，请验证你的答案对习题 15(a) 中找到的两个函数 $f$ 都成立。"
+        },
+        {
+          "id": "p241-b14",
+          "source": "(c) Apply this same method to $[f(x)]^3-3f(x)=x$.",
+          "sourceSha256": "7d57e3afb9ad9932c2c507cd68b02551cd2b983424b61e67db2ef2de451eeef3",
+          "translation": "(c) 对 $[f(x)]^3-3f(x)=x$ 使用同样的方法。"
+        },
+        {
+          "id": "p241-b15",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p241-b16",
+          "source": "(a) Use implicit differentiation to find $f'(x)$ and $f''(x)$ for the functions $f$ defined implicitly by the equation $x^3+y^3=7$.",
+          "sourceSha256": "cbe751dff9643b616295513048614dccfda1e69970a7625e52fe9b00743de877",
+          "translation": "(a) 利用隐式求导，求由方程 $x^3+y^3=7$ 隐式定义的函数 $f$ 的 $f'(x)$ 和 $f''(x)$。"
+        },
+        {
+          "id": "p241-b17",
+          "source": "(b) One of these functions $f$ satisfies $f(-1)=2$. Find $f'(-1)$ and $f''(-1)$ for this $f$.",
+          "sourceSha256": "f6986597ab34d6071eaed955a397a8eb669406396cd79488259659fae9fbafdc",
+          "translation": "(b) 其中一个函数 $f$ 满足 $f(-1)=2$。求这个 $f$ 的 $f'(-1)$ 和 $f''(-1)$。"
+        },
+        {
+          "id": "p241-b18",
+          "source": "### 18.",
+          "sourceSha256": "ea685e12aa5506177e8354425cc5ef641b0955faf096533840903cb00fca83d4"
+        },
+        {
+          "id": "p241-b19",
+          "source": "The collection of all points $(x,y)$ such that $3x^3+4x^2y-xy^2+2y^3=4$ forms a certain curve in the plane. Find the equation of the tangent line to this curve at the point $(-1,1)$.",
+          "sourceSha256": "d45d8ca462c579ce5ccc1c7292a412aa64a7dfe3ccddc0521fc97fd5502297e4",
+          "translation": "所有满足 $3x^3+4x^2y-xy^2+2y^3=4$ 的点 $(x,y)$ 组成平面上的一条曲线。求这条曲线在点 $(-1,1)$ 处的切线方程。"
+        },
+        {
+          "id": "p241-b20",
+          "source": "### 19.",
+          "sourceSha256": "8b09a7bace93d37dfe88ea4c6c08a187efc4b2a287262ba51ada7accf660adbf"
+        },
+        {
+          "id": "p241-b21",
+          "source": "Leibnizian notation is particularly convenient for implicit differentiation. Because $y$ is so consistently used as an abbreviation for $f(x)$, the equation in $x$ and $y$ which defines $f$ implicitly will automatically stand for the equation",
+          "sourceSha256": "d94baa922e13fa277fcb1daf400d84be9e00eb119bc5b42efb8bac8b9f622cb7",
+          "translation": "莱布尼茨记号对于隐式求导尤其方便。由于我们一贯用 $y$ 作为 $f(x)$ 的简写，隐式定义 $f$ 的关于 $x$ 和 $y$ 的方程，就会自动表示"
+        }
+      ]
+    },
+    {
+      "printed": 242,
+      "sourceSha256": "729340137ae2b288f678ed06111717b3018c741a5ec09817ec6524777b90cb39",
+      "blocks": [
+        {
+          "id": "p242-b1",
+          "source": "which $f$ is supposed to satisfy. How would the following computation be written in our notation?",
+          "sourceSha256": "ad8757bb8042c4290e8376784c8cd2de7dc9cfb3c2fdc4ef33f65b964bae1c07",
+          "translation": "$f$ 应当满足的方程。下面的计算，用我们的记号应当怎样写？"
+        },
+        {
+          "id": "p242-b2",
+          "source": "$$\\begin{gathered}y^4+y^3+xy=1,\\\\4y^3\\frac{dy}{dx}+3y^2\\frac{dy}{dx}+y+x\\frac{dy}{dx}=0,\\\\\\frac{dy}{dx}=\\frac{-y}{4y^3+3y^2+x}.\\end{gathered}$$",
+          "sourceSha256": "d1f1e45eb17ae51d78cfe5ef81a5f07ce35136c7175f143c9a6b405c72c98916"
+        },
+        {
+          "id": "p242-b3",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p242-b4",
+          "source": "As long as Leibnizian notation has entered the picture, the Leibnizian notation for derivatives of inverse functions should be mentioned. If $dy/dx$ denotes the derivative of $f$, then the derivative of $f^{-1}$ is denoted by $dx/dy$. Write out Theorem 5 in this notation. The resulting equation will show you another reason why Leibnizian notation has such a large following. It will also explain at which point $(f^{-1})'$ is to be calculated when using the $dx/dy$ notation. What is the significance of the following computation?",
+          "sourceSha256": "35f47c2d9c79d55845d1dc899ff4a0738e6d6c5d7d4b823c3a2828c3b1b08d93",
+          "translation": "既然已经用到了莱布尼茨记号，也该提一下反函数导数的莱布尼茨记号。如果用 $dy/dx$ 表示 $f$ 的导数，那么 $f^{-1}$ 的导数就记作 $dx/dy$。用这种记号写出定理 5。所得等式会向你展示，为什么莱布尼茨记号有那么多拥护者；它也会解释，在使用 $dx/dy$ 记号时，$(f^{-1})'$ 应在哪一点计算。下面的计算有什么意义？"
+        },
+        {
+          "id": "p242-b5",
+          "source": "$$\\begin{gathered}x=y^n,\\\\y=x^{1/n},\\\\\\frac{dx^{1/n}}{dx}=\\frac{dy}{dx}=\\frac1{\\dfrac{dx}{dy}}=\\frac1{ny^{n-1}}.\\end{gathered}$$",
+          "sourceSha256": "a33f5788902824dbacdc1a7d93425bd3cab0607c9fbcde9e66b90d65cd29d261"
+        },
+        {
+          "id": "p242-b6",
+          "source": "### 21.",
+          "sourceSha256": "d908d228d4604b1dd2f9729637ede6c5eb59c7f91a5ba1fe1a64623fe814b30d"
+        },
+        {
+          "id": "p242-b7",
+          "source": "Suppose that $f$ is a differentiable one-one function with a nowhere zero derivative and that $f=F'$. Let $G(x)=xf^{-1}(x)-F(f^{-1}(x))$. Prove that $G'(x)=f^{-1}(x)$. (Disregarding details, this problem tells us a very interesting fact: if we know a function whose derivative is $f$, then we also know one whose derivative is $f^{-1}$. But how could anyone ever guess the function $G$? Two different ways are outlined in Problems 14-14 and 19-16.)",
+          "sourceSha256": "944a237f4e11b282ad215150a8627fbea0bea30e0b5cc4242d5234fa5d5f0067",
+          "translation": "设 $f$ 是可微的一一函数，导数处处非零，并且 $f=F'$。令 $G(x)=xf^{-1}(x)-F(f^{-1}(x))$。证明 $G'(x)=f^{-1}(x)$。（略去细节不看，这道题告诉我们一个非常有趣的事实：如果已知一个导数为 $f$ 的函数，就也知道了一个导数为 $f^{-1}$ 的函数。但怎么可能猜到函数 $G$ 呢？习题 14-14 和 19-16 概述了两种不同的方法。）"
+        },
+        {
+          "id": "p242-b8",
+          "source": "### 22.",
+          "sourceSha256": "ce146eae8f2fb4609bfd66abfe5008807912c8203d51e87d6ba4e238e91e9395"
+        },
+        {
+          "id": "p242-b9",
+          "source": "Suppose $h$ is a function such that $h'(x)=\\sin^2(\\sin(x+1))$ and $h(0)=3$. Find",
+          "sourceSha256": "3953a974994109dbeb213c5aabade08ca9b035b6d794f28ff10f00055f93d738",
+          "translation": "设 $h$ 是满足 $h'(x)=\\sin^2(\\sin(x+1))$ 且 $h(0)=3$ 的函数。求"
+        },
+        {
+          "id": "p242-b10",
+          "source": "(i) $(h^{-1})'(3)$.",
+          "sourceSha256": "052232be415fee763993fce677b99459404a121ad1f20603732b23ae4eef246a"
+        },
+        {
+          "id": "p242-b11",
+          "source": "(ii) $(\\beta^{-1})'(3)$, where $\\beta(x)=h(x+1)$.",
+          "sourceSha256": "d942a814b3d736457dc1877bd55c32c467f280e9bbde4f46c6bbeb729f31771b",
+          "translation": "(ii) $(\\beta^{-1})'(3)$，其中 $\\beta(x)=h(x+1)$。"
+        },
+        {
+          "id": "p242-b12",
+          "source": "### 23.",
+          "sourceSha256": "fcb56ced3fb587a05b1e3f24ccfaee441ca9356f2d715d9e8ba59a341ae068ec"
+        },
+        {
+          "id": "p242-b13",
+          "source": "(a) Prove that an increasing and a decreasing function intersect at most once.",
+          "sourceSha256": "19ae7f5e26099108c3c80e69d34506aec47a3fbe01806197717acf3ff12c3b3a",
+          "translation": "(a) 证明：一个递增函数和一个递减函数的图像至多相交一次。"
+        },
+        {
+          "id": "p242-b14",
+          "source": "(b) Find two continuous increasing functions $f$ and $g$ such that $f(x)=g(x)$ precisely when $x$ is an integer.",
+          "sourceSha256": "3b2d87fb840217aaa3c6e4cef96a2f385856d60005053f75c8dcfaba73b9b95f",
+          "translation": "(b) 找出两个连续递增函数 $f$ 和 $g$，使得 $f(x)=g(x)$ 当且仅当 $x$ 是整数。"
+        },
+        {
+          "id": "p242-b15",
+          "source": "(c) Find a continuous increasing function $f$ and a continuous decreasing function $g$, defined on $\\mathbf R$, which do not intersect at all.",
+          "sourceSha256": "f515b8c4779a5cd0e998185621b72639279b24b66cf069c65f1b8b171dc5b75f",
+          "translation": "(c) 找出定义在 $\\mathbf R$ 上的连续递增函数 $f$ 和连续递减函数 $g$，使它们的图像完全不相交。"
+        },
+        {
+          "id": "p242-b16",
+          "source": "### \\*24.",
+          "sourceSha256": "f798979970ec1033ba5cf3589df2a8d645141a228b89e4b7b95827882426bad3"
+        },
+        {
+          "id": "p242-b17",
+          "source": "(a) If $f$ is a continuous function on $\\mathbf R$ and $f=f^{-1}$, prove that there is at least one $x$ such that $f(x)=x$. (What does the condition $f=f^{-1}$ mean geometrically?)",
+          "sourceSha256": "87d24fd442f1d81ced43a82cccba6a07e926bc6fac608a94da78aa574f71fb51",
+          "translation": "(a) 如果 $f$ 是 $\\mathbf R$ 上的连续函数，且 $f=f^{-1}$，证明至少存在一个 $x$ 使得 $f(x)=x$。（条件 $f=f^{-1}$ 在几何上意味着什么？）"
+        },
+        {
+          "id": "p242-b18",
+          "source": "(b) Give several examples of continuous $f$ such that $f=f^{-1}$ and $f(x)=x$ for exactly one $x$. Hint: Try decreasing $f$, and remember the geometric interpretation. One possibility is $f(x)=-x$.",
+          "sourceSha256": "97b04d3dec061f798f6b4d53e9ea61fa627c961c3218dce02da3f2ce04bde745",
+          "translation": "(b) 举出几个连续函数 $f$ 的例子，使得 $f=f^{-1}$，而且恰好只有一个 $x$ 满足 $f(x)=x$。提示：试试递减的 $f$，并记住几何解释。一种可能是 $f(x)=-x$。"
+        }
+      ]
+    },
+    {
+      "printed": 243,
+      "sourceSha256": "691105dc3424383a1437d00bd92071034936bcf2e1be92d44348a45c2394aa17",
+      "blocks": [
+        {
+          "id": "p243-b1",
+          "source": "(c) Prove that if $f$ is an increasing function such that $f=f^{-1}$, then $f(x)=x$ for all $x$. Hint: Although the geometric interpretation will be immediately convincing, the simplest proof (about 2 lines) is to rule out the possibilities $f(x)<x$ and $f(x)>x$.",
+          "sourceSha256": "afb204d47456d40fce8d3209ac4681901dd3a93dc99cb357b3467edd993a283e",
+          "translation": "(c) 证明：如果 $f$ 是满足 $f=f^{-1}$ 的递增函数，那么对所有 $x$ 都有 $f(x)=x$。提示：虽然几何解释立即就令人信服，但最简单的证明（大约两行）是排除 $f(x)<x$ 和 $f(x)>x$ 这两种可能。"
+        },
+        {
+          "id": "p243-b2",
+          "source": "### \\*25.",
+          "sourceSha256": "969c41a169f709c47ceb17d5f16e689e573277d9f86816baa730264f8820a0b5"
+        },
+        {
+          "id": "p243-b3",
+          "source": "Which functions have the property that the graph is still the graph of a function when reflected through the graph of $-I$ (the “antidiagonal”)?",
+          "sourceSha256": "8d7010a7d510043c0e9a2679a17ccfc95a149b68eaeeda85badcf29401ac87e5",
+          "translation": "哪些函数具有以下性质：将其图像关于 $-I$ 的图像（“反对角线”）作反射后，仍是某个函数的图像？"
+        },
+        {
+          "id": "p243-b4",
+          "source": "### 26.",
+          "sourceSha256": "e0a0eda9f4171fbdc2f78618f10a33fea6c704a744eb8323db3535cb65310a23"
+        },
+        {
+          "id": "p243-b5",
+          "source": "A function $f$ is **nondecreasing** if $f(x)\\le f(y)$ whenever $x<y$. (To be more precise we should stipulate that the domain of $f$ be an interval.) A **nonincreasing** function is defined similarly. Caution: Some writers use “increasing” instead of “nondecreasing,” and “strictly increasing” for our “increasing.”",
+          "sourceSha256": "bde4b57b47197f4770780d9dc3f668b65406acea9912d9784bf2e015fe7a6004",
+          "translation": "如果每当 $x<y$ 时都有 $f(x)\\le f(y)$，则称函数 $f$ **非递减**。（更精确地说，还应规定 $f$ 的定义域是一个区间。）**非递增**函数的定义类似。注意：有些作者用“递增”表示“非递减”，而用“严格递增”表示我们所说的“递增”。"
+        },
+        {
+          "id": "p243-b6",
+          "source": "(a) Prove that if $f$ is nondecreasing, but not increasing, then $f$ is constant on some interval. (Beware of unintentional puns: “not increasing” is not the same as “nonincreasing.”)",
+          "sourceSha256": "a9636b6313a0bcacfc57c741adc4b0716b184a0a2e9c774608a9814c6dbcd265",
+          "translation": "(a) 证明：若 $f$ 非递减，但不是递增的，那么 $f$ 在某个区间上是常数。（谨防无意间混淆字义：“不是递增的”和“非递增”并不是一回事。）"
+        },
+        {
+          "id": "p243-b7",
+          "source": "(b) Prove that if $f$ is differentiable and nondecreasing, then $f'(x)\\ge0$ for all $x$.",
+          "sourceSha256": "99aa47bbafb2ada5d4b616fd9e0f2cf0fa75600d0963d02a34e15fc91e0a5e0f",
+          "translation": "(b) 证明：若 $f$ 可微且非递减，那么对所有 $x$ 都有 $f'(x)\\ge0$。"
+        },
+        {
+          "id": "p243-b8",
+          "source": "(c) Prove that if $f'(x)\\ge0$ for all $x$, then $f$ is nondecreasing.",
+          "sourceSha256": "2786b680bad3ee7653279e2126ebfa437bc943c2eb5723d4b4739c3d40dc1842",
+          "translation": "(c) 证明：若对所有 $x$ 都有 $f'(x)\\ge0$，那么 $f$ 非递减。"
+        },
+        {
+          "id": "p243-b9",
+          "source": "### \\*27.",
+          "sourceSha256": "26de0ce1e7ad858f81f9c81ab5d29403d87bf41e4b56bb2220f8102c9a138242"
+        },
+        {
+          "id": "p243-b10",
+          "source": "(a) Suppose that $f(x)>0$ for all $x$, and that $f$ is decreasing. Prove that there is a *continuous* decreasing function $g$ such that $0<g(x)\\le f(x)$ for all $x$.",
+          "sourceSha256": "09ef108399899acd57cb3a5f28303fdc2066f9323dd9a2fe7fe718af545c9e2f",
+          "translation": "(a) 设对所有 $x$ 都有 $f(x)>0$，且 $f$ 递减。证明：存在一个*连续*递减函数 $g$，使得对所有 $x$ 都有 $0<g(x)\\le f(x)$。"
+        },
+        {
+          "id": "p243-b11",
+          "source": "(b) Show that we can even arrange that $g$ will satisfy $\\displaystyle\\lim_{x\\to\\infty}g(x)/f(x)=0$.",
+          "sourceSha256": "97383d2f32f449c615eb4ff70085325140bae068cd4c5e480efea35b7d533525",
+          "translation": "(b) 证明：甚至还可以使 $g$ 满足 $\\displaystyle\\lim_{x\\to\\infty}g(x)/f(x)=0$。"
+        }
+      ]
+    },
+    {
+      "printed": 244,
+      "sourceSha256": "1d6418a2859ec154cc570c63913e29e2e46b9dfd6aa1f91c972721aa11c3f8ea",
+      "blocks": [
+        {
+          "id": "p244-b1",
+          "source": "## APPENDIX. PARAMETRIC REPRESENTATION OF CURVES",
+          "sourceSha256": "47d2bb0a6e04b39ae45b5dd56357926dd8fa695804536fdb7b85072843f69868",
+          "translation": "## 附录　曲线的参数表示"
+        },
+        {
+          "id": "p244-b2",
+          "source": "The material in this chapter serves to emphasize something that we noticed a long time ago—a perfectly nice looking curve need not be the graph of a function (Figure 1). In other words, we may not be able to describe it as the set of all points $(x,f(x))$. Of course, we might be able to describe the curve as the set of all points $(f(x),x)$; for example, the curve in Figure 1 is the set of all points $(x^2,x)$. But even this trick doesn’t work in most cases. It won’t allow us to describe the circle, consisting of all points $(x,y)$ with $x^2+y^2=1$, or an ellipse, and it can’t be used to describe a curve like the one in Figure 2.",
+          "sourceSha256": "0e30ef7666c671a46462fb11c30371c052cf30b768b6ebc672267b7d1f7581a7",
+          "translation": "本章的内容强调了我们很早就注意到的一点——一条看起来十分规整的曲线，不一定是某个函数的图像（图 1）。换句话说，我们也许无法将它描述为所有点 $(x,f(x))$ 组成的集合。当然，也许可以将曲线描述为所有点 $(f(x),x)$ 组成的集合；例如，图 1 中的曲线就是所有点 $(x^2,x)$ 的集合。但多数情况下，连这个技巧也行不通。它无法描述由所有满足 $x^2+y^2=1$ 的点 $(x,y)$ 组成的圆，也无法描述椭圆，更不能用来描述图 2 那样的曲线。"
+        },
+        {
+          "id": "p244-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:335px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 150 335 337\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0263.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "17544a001714b7a70e1f4d3bd7c4de4a0f7728b34da9fe1a9179222fc6782c42"
+        },
+        {
+          "id": "p244-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:406px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 570 406 339\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0263.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "a23612273f179626d9f433b92f4d097408fab84e9d6dc08c015a32cd4d60dfb4"
+        },
+        {
+          "id": "p244-b5",
+          "source": "The simplest way of describing curves in the plane in general harks back to the physical conception of a curve as the path of a particle moving in the plane. At each time $t$, the particle is at a certain point, which has two coordinates; to indicate the dependence of these coordinates on the time $t$, we can call them $u(t)$ and $v(t)$. Thus, we end up with *two* functions. Conversely, given two functions $u$ and $v$, we can consider the curve consisting of all points $(u(t),v(t))$. This curve is said to be represented *parametrically* by $u$ and $v$, and the pair of functions $u$, $v$ is called a parametric representation of the curve. The curve represented parametrically by $u$ and $v$ thus consists of all pairs $(x,y)$ with $x=u(t)$ and $y=v(t)$. It is often described briefly as “the curve $x=u(t)$, $y=v(t)$.” Notice that the graph of a function $f$ can always be described parametrically, as the curve $x=t$, $y=f(t)$.",
+          "sourceSha256": "443622d1158a55e88084120519dfc078cbb358b28a9ce01bb019fbea8c7b4ebb",
+          "translation": "一般地描述平面曲线，最简单的办法是回到物理上的曲线概念：把它看作平面内运动质点的轨迹。每个时刻 $t$，质点都位于某一点，该点有两个坐标；为了表明这两个坐标依赖于时间 $t$，我们可以称它们为 $u(t)$ 和 $v(t)$。于是最终得到的是*两个*函数。反过来，给定两个函数 $u$ 和 $v$，就可以考虑由所有点 $(u(t),v(t))$ 组成的曲线。我们称这条曲线由 $u$ 和 $v$ 作*参数表示*，并称这一对函数 $u$、$v$ 为曲线的一个参数表示。因此，由 $u$ 和 $v$ 作参数表示的曲线，由所有满足 $x=u(t)$ 和 $y=v(t)$ 的数对 $(x,y)$ 组成。它常被简写为“曲线 $x=u(t)$，$y=v(t)$”。注意，函数 $f$ 的图像总能表示为参数曲线 $x=t$、$y=f(t)$。"
+        },
+        {
+          "id": "p244-b6",
+          "source": "Instead of considering a curve in the plane as defined by two functions, we can obtain a conceptually simpler picture if we broaden our original definition of function somewhat. Instead of considering a rule which associates a number with another number, we can consider a “function $c$ from real numbers to the plane,” i.e., a rule $c$ that associates, to each number $t$, a *point in the plane*, which we can denote by $c(t)$. With this notion, a curve is just a function from some interval of real numbers to the plane.",
+          "sourceSha256": "b8261221114f5c5662184ebb2a41b4db7a5a81a9e94c0be55c82b0760a8ef387",
+          "translation": "我们不必把平面曲线看成由两个函数定义的对象；只要稍微拓宽最初的函数定义，就能得到概念上更简单的图景。我们可以不再只考虑把一个数对应到另一个数的规则，而是考虑“从实数到平面的函数 $c$”，也就是一个规则 $c$，它把每个数 $t$ 对应到*平面上的一个点*，记作 $c(t)$。按照这种看法，曲线就是从某个实数区间到平面的函数。"
+        },
+        {
+          "id": "p244-b7",
+          "source": "Of course, these two different descriptions of a curve are essentially the same: A pair of (ordinary) functions $u$ and $v$ determines a single function $c$ from the real numbers to the plane by the rule",
+          "sourceSha256": "40bd73836423e702cc0df4d43847e69ea757988a1c18b12252c84ca30142e4e4",
+          "translation": "当然，曲线的这两种描述本质上是相同的：一对（通常意义下的）函数 $u$ 和 $v$，按照下面的规则，确定了一个从实数到平面的函数 $c$："
+        },
+        {
+          "id": "p244-b8",
+          "source": "$$c(t)=(u(t),v(t)),$$",
+          "sourceSha256": "6543bb0a9b22b9771447db201ba63f3bafa1ff3a35bf4bc0ec21a69b67c8fe25"
+        },
+        {
+          "id": "p244-b9",
+          "source": "and, conversely, given a function $c$ from the real numbers to the plane, each $c(t)$ is a point in the plane, so it is a pair of numbers, which we can call $u(t)$ and $v(t)$, so that we have unique functions $u$ and $v$ satisfying this equation.",
+          "sourceSha256": "f225f408658bf7817845f410678bad1f4c7ee580a2b3b192825782a0a45bed72",
+          "translation": "反过来，给定从实数到平面的函数 $c$，每个 $c(t)$ 都是平面上的一点，因此是一个数对，我们可以把其中的两个数称为 $u(t)$ 和 $v(t)$；于是得到唯一的一对函数 $u$ 和 $v$，满足这个等式。"
+        },
+        {
+          "id": "p244-b10",
+          "source": "In Appendix 1 to Chapter 4, we used the term “vector” to describe a point in the plane. In conformity with this usage, a curve in the plane may also be called a “vector-valued function.” The conventions of that Appendix would lead us to write $c(t)=(c_1(t),c_2(t))$, but in this Appendix we will continue to use notation like $c(t)=(u(t),v(t))$ to minimize the use of subscripts.",
+          "sourceSha256": "0ff0b882b0aae64210edc24f5b721af8abbe91046db77d6bd46ed834ee1f6944",
+          "translation": "在第 4 章附录 1 中，我们用“向量”这个词来描述平面上的点。按照这种用法，平面曲线也可以称为“向量值函数”。遵循那个附录的约定，我们本应写成 $c(t)=(c_1(t),c_2(t))$；不过，在本附录中，我们继续使用 $c(t)=(u(t),v(t))$ 这样的记号，以尽量少用下标。"
+        },
+        {
+          "id": "p244-b11",
+          "source": "A simple example of a vector-valued function that is quite useful is",
+          "sourceSha256": "c26160c75b6b130e0f67616168bdd2cacbc5f8d7e93d6d94f112142f756cc3f1",
+          "translation": "一个非常有用的向量值函数的简单例子是"
+        },
+        {
+          "id": "p244-b12",
+          "source": "$$\\mathbf e(t)=(\\cos t,\\sin t),$$",
+          "sourceSha256": "657910c658aecf87fe481a4689e26f69fbac79e3a29cdee9bb2973a587e2bb02"
+        },
+        {
+          "id": "p244-b13",
+          "source": "which goes round and round the unit circle (Figure 3).",
+          "sourceSha256": "f2fb24534700df0ffa2c30590e391f307c37fc9350e644c50190056ba9f7df88",
+          "translation": "它沿着单位圆一圈又一圈地运动（图 3）。"
+        },
+        {
+          "id": "p244-b14",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:266px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 1260 266 235\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0263.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "c45fb0861d5ca8a73fa0cbd29a3d2ae9c68556516dba0034c7fd3089ebe3ba3a"
+        }
+      ]
+    },
+    {
+      "printed": 245,
+      "sourceSha256": "de40a18421d6fa1c9c9deb0ee5c7b2bb1252a73c65c0c900cbd21d5cee82f02a",
+      "blocks": [
+        {
+          "id": "p245-b1",
+          "source": "For two (ordinary) functions $f$ and $g$, we defined new functions $f+g$ and $f\\cdot g$ by the rules",
+          "sourceSha256": "a15e1dd4624905484753422948419d417c289b9a1896174a5538bc9e498c5811",
+          "translation": "对于两个（通常的）函数 $f$ 和 $g$，我们用以下规则定义了新函数 $f+g$ 和 $f\\cdot g$："
+        },
+        {
+          "id": "p245-b2",
+          "source": "$$\\begin{aligned}\\text{(1)}\\qquad(f+g)(x)&=f(x)+g(x),\\\\\\text{(2)}\\qquad(f\\cdot g)(x)&=f(x)\\cdot g(x).\\end{aligned}$$",
+          "sourceSha256": "d0d6fd689669262fadcc91b56d66e032112d12995161d11f8b8436adb4edadf0"
+        },
+        {
+          "id": "p245-b3",
+          "source": "Since we have defined a way of adding vectors, we can imitate the first of these definitions for vector-valued functions $c$ and $d$: we define the vector-valued function $c+d$ by",
+          "sourceSha256": "041fd4cae6cfd34dff152216c27380c47d3badc6dcdebbeb400cf53882b3cda3",
+          "translation": "既然已经定义了向量相加的方法，就可以对向量值函数 $c$ 和 $d$ 仿照第一个定义：我们这样定义向量值函数 $c+d$："
+        },
+        {
+          "id": "p245-b4",
+          "source": "$$(c+d)(t)=c(t)+d(t),$$",
+          "sourceSha256": "decefabf5ae4d454c90d0359ea201dbfec9db843bbf0f587de6c9e649ea948ca"
+        },
+        {
+          "id": "p245-b5",
+          "source": "where the $+$ on the right-hand side is now *the sum of vectors*. This simply amounts to saying that if",
+          "sourceSha256": "deee971941ada317c076bf12f7f07413842fa7619ec88f6484905113a54622c2",
+          "translation": "这里，右边的 $+$ 现在表示*向量相加*。这其实就是说，如果"
+        },
+        {
+          "id": "p245-b6",
+          "source": "$$\\begin{aligned}c(t)&=(u(t),v(t)),\\\\d(t)&=(w(t),z(t)),\\end{aligned}$$",
+          "sourceSha256": "19e5ee8455a9514279925a418caca80ce8d695461a1c6c414f01c53fef49b5f9"
+        },
+        {
+          "id": "p245-b7",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p245-b8",
+          "source": "$$(c+d)(t)=(u(t),v(t))+(w(t),z(t))=(u(t)+w(t),v(t)+z(t)).$$",
+          "sourceSha256": "2ff783044cb62f372dfdc4617f9bba8d70689a91cda19ec6c74772c6cbea17c1"
+        },
+        {
+          "id": "p245-b9",
+          "source": "Recall that we have also defined $a\\cdot v$ for a number $a$ and a vector $v$. To extend this to vector-valued functions, we want to consider an ordinary function $\\alpha$ and a vector-valued function $c$, so that for each $t$ we have a number $\\alpha(t)$ and a vector $c(t)$. Then we can define a new vector-valued function $\\alpha\\cdot c$ by",
+          "sourceSha256": "107e1951ab0ae23950a6461c3278c3d4e4e4d8a9c4d288f8373358a6d9465672",
+          "translation": "回想我们还定义了一个数 $a$ 与一个向量 $v$ 的乘积 $a\\cdot v$。为了将其推广到向量值函数，我们要考虑一个普通函数 $\\alpha$ 和一个向量值函数 $c$，这样对每个 $t$，就有一个数 $\\alpha(t)$ 和一个向量 $c(t)$。于是，可以这样定义一个新的向量值函数 $\\alpha\\cdot c$："
+        },
+        {
+          "id": "p245-b10",
+          "source": "$$(\\alpha\\cdot c)(t)=\\alpha(t)\\cdot c(t),$$",
+          "sourceSha256": "1d0a56d2472fad09d1b2654e1c5b731163789bc59d72d5880bcd1a555499373c"
+        },
+        {
+          "id": "p245-b11",
+          "source": "where the $\\cdot$ on the right-hand side is the product of a number and a vector. This simply amounts to saying that",
+          "sourceSha256": "133a590e3dbc688b124716dc6820f36d5d3ad3904bb3f6a0cfed20a558d77ac3",
+          "translation": "这里，右边的 $\\cdot$ 表示数与向量的乘积。这其实就是说"
+        },
+        {
+          "id": "p245-b12",
+          "source": "$$(\\alpha\\cdot c)(t)=\\alpha(t)\\cdot(u(t),v(t))=(\\alpha(t)\\cdot u(t),\\alpha(t)\\cdot v(t)).$$",
+          "sourceSha256": "19c21a593b5f1e328927de3d4261d9efbc7ffc7ec1b1acb5c3aad798b14d32cb"
+        },
+        {
+          "id": "p245-b13",
+          "source": "Notice that the curve $\\alpha\\cdot\\mathbf e$,",
+          "sourceSha256": "4cb8d6dc842506c7f1bced403ef268e4e6a196f64700cd4b4baa2a63f83bd2fa",
+          "translation": "注意，曲线 $\\alpha\\cdot\\mathbf e$，"
+        },
+        {
+          "id": "p245-b14",
+          "source": "$$(\\alpha\\cdot\\mathbf e)(t)=(\\alpha(t)\\cos t,\\alpha(t)\\sin t),$$",
+          "sourceSha256": "9c33c7d08bddecd420fdc5c11c53a18ac21e525bd63dda7813e165c7e2c2976b"
+        },
+        {
+          "id": "p245-b15",
+          "source": "is already quite general (Figure 4). In the notation of Appendix 3 to Chapter 4, the point $(\\alpha\\cdot\\mathbf e)(t)$ has polar coordinates $\\alpha(t)$ and $t$, so that $(\\alpha\\cdot\\mathbf e)(t)$ is the “graph of $\\alpha$ in polar coordinates.”",
+          "sourceSha256": "a32e18e81ec74609aacceef311d7132deb01cde085537213bdb5c013db987e9a",
+          "translation": "已经相当一般了（图 4）。采用第 4 章附录 3 的记号，点 $(\\alpha\\cdot\\mathbf e)(t)$ 的极坐标是 $\\alpha(t)$ 和 $t$，因此 $(\\alpha\\cdot\\mathbf e)(t)$ 就是“$\\alpha$ 在极坐标下的图像”。"
+        },
+        {
+          "id": "p245-b16",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:306px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 1140 306 269\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0264.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "8e94822946a9cfad07b2128524112f0a36974f788269e5d389d6882c9020abbe"
+        },
+        {
+          "id": "p245-b17",
+          "source": "Even more generally, given any vector-valued function $c$, we can define new functions $r$ and $\\theta$ by",
+          "sourceSha256": "b440466e5004f3e2b74ef52efd64e8dfaa7a306e06934ef578667afd55018e60",
+          "translation": "更一般地，给定任意向量值函数 $c$，可以通过下式定义新函数 $r$ 和 $\\theta$："
+        },
+        {
+          "id": "p245-b18",
+          "source": "$$c(t)=r(t)\\cdot\\mathbf e(\\theta(t)),$$",
+          "sourceSha256": "fd3b252c4a968acce4bbd8828e6cbce738b83fc2f531f31fd6eee77ac9e389bd"
+        },
+        {
+          "id": "p245-b19",
+          "source": "where $r(t)$ is just the distance from the origin to $c(t)$, and $\\theta(t)$ is some choice of the angle of $c(t)$ (as usual, the function $\\theta$ isn’t defined unambiguously, so one has to be careful when using this way of writing an arbitrary curve $c$).",
+          "sourceSha256": "102889a84f19ae54a35c9520b33d511ed5b4c02329b273653c679d1990fd9c7c",
+          "translation": "其中 $r(t)$ 就是原点到 $c(t)$ 的距离，而 $\\theta(t)$ 是 $c(t)$ 的角度的某一种选取（和往常一样，函数 $\\theta$ 的定义不是唯一明确的，因此，用这种方式表示任意曲线 $c$ 时必须小心）。"
+        },
+        {
+          "id": "p245-b20",
+          "source": "We aren’t in a position to extend (2) to vector-valued functions in general, since we haven’t defined the product of two vectors. However, Problems 2 and 4 of Appendix 1 to Chapter 4 define two *real-valued* products $v\\cdot w$ and $\\det(v,w)$. It",
+          "sourceSha256": "bb6918fa411d47ab0c43cdc14250dcd064d9db06439210976d8aebbab3f72dcc",
+          "translation": "我们目前还不能将 (2) 推广到一般的向量值函数，因为尚未定义两个向量的乘积。不过，第 4 章附录 1 的习题 2 和 4 定义了两个*实值*乘积 $v\\cdot w$ 和 $\\det(v,w)$。这"
+        }
+      ]
+    },
+    {
+      "printed": 246,
+      "sourceSha256": "fccb239a0fa59c5707ead0aa666d9ed5e4e9b77f2f21d82c99a2b49b1281375a",
+      "blocks": [
+        {
+          "id": "p246-b1",
+          "source": "should be clear, given vector-valued functions $c$ and $d$, how we would define two ordinary (real-valued) functions",
+          "sourceSha256": "5a8134a61ccd7a79b3f316c39b6174cf792ca92431f661a073b642aa7cbc02aa",
+          "translation": "应当很清楚：给定向量值函数 $c$ 和 $d$，可以怎样定义两个普通的（实值）函数"
+        },
+        {
+          "id": "p246-b2",
+          "source": "$$c\\cdot d\\qquad\\text{and}\\qquad\\det(c,d).$$",
+          "sourceSha256": "982c7524463f62b5f80f1d5e84b61ba5d0263e437ef862280e8e3afd87a4438c"
+        },
+        {
+          "id": "p246-b3",
+          "source": "Beyond imitating simple arithmetic operations on functions, we can consider more interesting problems, like limits. For $c(t)=(u(t),v(t))$, we can define",
+          "sourceSha256": "8dde22dfd8541a02d154630a2a772e65593326a330cfb8325d136260e0c7a3d9",
+          "translation": "除了模仿函数的简单算术运算，还可以考虑更有意思的问题，比如极限。对于 $c(t)=(u(t),v(t))$，我们可以定义"
+        },
+        {
+          "id": "p246-b4",
+          "source": "$$\\text{(*)}\\qquad\\lim_{t\\to a}c(t)=\\lim_{t\\to a}(u(t),v(t))\\quad\\text{to be}\\quad\\left(\\lim_{t\\to a}u(t),\\lim_{t\\to a}v(t)\\right).$$",
+          "sourceSha256": "b64f66ee6d10679b20da13b129890e1c3ef44d2d4727c32011214e6a85f502c5"
+        },
+        {
+          "id": "p246-b5",
+          "source": "Rules like",
+          "sourceSha256": "b79c2ed5b3539f922e2109a96f05060e8e86cb7cb23ce5931064ce858dc64119",
+          "translation": "像下面这样的法则"
+        },
+        {
+          "id": "p246-b6",
+          "source": "$$\\begin{aligned}\\lim_{t\\to a}c+d&=\\lim_{t\\to a}c+\\lim_{t\\to a}d,\\\\\\lim_{t\\to a}\\alpha\\cdot c&=\\lim_{t\\to a}\\alpha(t)\\cdot\\lim_{t\\to a}c\\end{aligned}$$",
+          "sourceSha256": "96e6888d1915de92a45e5514e90f67f18d3dbf062525dfeaa9d086cf1ad6873b"
+        },
+        {
+          "id": "p246-b7",
+          "source": "follow immediately. Problem 10 shows how to give an equivalent definition that imitates the basic definition of limits directly.",
+          "sourceSha256": "be0b1d8bb745192d27b9788e85f5f7c03f154bbee647e9c036d01ad580a4f7fe",
+          "translation": "立即就能得到。习题 10 将说明，怎样直接模仿极限的基本定义，给出一个等价定义。"
+        },
+        {
+          "id": "p246-b8",
+          "source": "Limits lead us of course to derivatives. For",
+          "sourceSha256": "96f5c93f8a0517e821a494376a67ecbc336844873d3433e2b77179e2ca3f0941",
+          "translation": "极限当然会把我们引向导数。对于"
+        },
+        {
+          "id": "p246-b9",
+          "source": "$$c(t)=(u(t),v(t))$$",
+          "sourceSha256": "45e0c6d614dc9dd2f4b516129c1e001eb1fe34aa56cb2d7e3727dc42febfa070"
+        },
+        {
+          "id": "p246-b10",
+          "source": "we can define $c'$ by the straightforward definition",
+          "sourceSha256": "a5f672baf01c2c89ac7e08789b83e8a1df8b6861dc74ed3cb197ca1946879458",
+          "translation": "可以用一个直截了当的定义来定义 $c'$："
+        },
+        {
+          "id": "p246-b11",
+          "source": "$$c'(a)=(u'(a),v'(a)).$$",
+          "sourceSha256": "468d66f8253f0b74b7b003072cd4c37ccfbab4e45d1e15f6207946c331ca97a0"
+        },
+        {
+          "id": "p246-b12",
+          "source": "We could also try to imitate the basic definition:",
+          "sourceSha256": "c1d1badb5eae3970597474de2384da68e1c3fdf0f77829021d351a899ca4cd45",
+          "translation": "我们也可以尝试模仿基本定义："
+        },
+        {
+          "id": "p246-b13",
+          "source": "$$c'(a)=\\lim_{h\\to0}\\frac{c(a+h)-c(a)}h,$$",
+          "sourceSha256": "db49ef5e64b9eb4229b2523e0fe3f1d650cf5284ef5d5799685eebfb0d439f43"
+        },
+        {
+          "id": "p246-b14",
+          "source": "where the fraction on the right-hand side is understood to mean",
+          "sourceSha256": "aae0cab5ba81bbdf40fc2637d544f454d4a8be6654b93b920d09321622ec96f6",
+          "translation": "其中右边的分式理解为"
+        },
+        {
+          "id": "p246-b15",
+          "source": "$$\\frac1h\\cdot[c(a+h)-c(a)].$$",
+          "sourceSha256": "8025742a9a5d2b75e2d67bb39dc081e59b784e72d4a47e5e07cd6efa11e0dbb6"
+        },
+        {
+          "id": "p246-b16",
+          "source": "As a matter of fact, these two definitions are equivalent, because",
+          "sourceSha256": "3f53e9d74a3cc594461af08892f541b01cc5b50a1315da5a402c2525cdb8b73e",
+          "translation": "事实上，这两个定义等价，因为"
+        },
+        {
+          "id": "p246-b17",
+          "source": "$$\\begin{aligned}\\lim_{h\\to0}\\frac{c(a+h)-c(a)}h&=\\lim_{h\\to0}\\left(\\frac{u(a+h)-u(a)}h,\\frac{v(a+h)-v(a)}h\\right)\\\\&=\\left(\\lim_{h\\to0}\\frac{u(a+h)-u(a)}h,\\lim_{h\\to0}\\frac{v(a+h)-v(a)}h\\right)\\\\&\\qquad\\text{by our definition (*) of limits}\\\\&=(u'(a),v'(a)).\\end{aligned}$$",
+          "sourceSha256": "66f816d4cd1c56d9474b9d328b820603ded7ff9e3bc358cae695df35a732587d"
+        },
+        {
+          "id": "p246-b18",
+          "source": "Figure 5 shows $c(a+h)$ and $c(a)$, as well as the arrow from $c(a)$ to $c(a+h)$; as we showed in Appendix 1 to Chapter 4, this arrow is $c(a+h)-c(a)$, except moved over so that it starts at $c(a)$. As $h\\to0$, this arrow would appear to move closer and closer to the tangent of our curve, so it seems reasonable to *define* the tangent line of $c$ at $c(a)$ to be the straight line along $c'(a)$, when $c'(a)$ is moved over so that it starts at $c(a)$. In other words, we define the tangent line of $c$ at $c(a)$ as the set of all points",
+          "sourceSha256": "fab3f1e9baead72de8bc3cd51c3c79a725cc582f25810a5619eb0e3290efeccd",
+          "translation": "图 5 画出了 $c(a+h)$ 和 $c(a)$，以及从 $c(a)$ 指向 $c(a+h)$ 的箭头；正如第 4 章附录 1 中所说明的，这个箭头就是 $c(a+h)-c(a)$，只是平移到了以 $c(a)$ 为起点的位置。当 $h\\to0$ 时，这个箭头似乎越来越接近曲线的切线，因此，把 $c$ 在 $c(a)$ 处的切线*定义*成沿着 $c'(a)$ 方向的直线，看来是合理的；这里要先将 $c'(a)$ 平移到以 $c(a)$ 为起点。换句话说，我们把 $c$ 在 $c(a)$ 处的切线定义为所有下列点的集合："
+        },
+        {
+          "id": "p246-b19",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:352px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 1024 352 358\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0265.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "4d4212fc7038073d28754c66913688f7f3ee202d1abe1703bf2d4c48add31082"
+        },
+        {
+          "id": "p246-b20",
+          "source": "$$c(a)+s\\cdot c'(a);$$",
+          "sourceSha256": "37f1d559a085f5bfca403269796796e111023e47afa807fdeea25f07c8f8fccd"
+        }
+      ]
+    },
+    {
+      "printed": 247,
+      "sourceSha256": "8a7ce123c53f3e2c7ad011ab42567b947feead7b0626beeec21b960a3227a42a",
+      "blocks": [
+        {
+          "id": "p247-b1",
+          "source": "for $s=0$ we get the point $c(a)$ itself, for $s=1$ we get $c(a)+c'(a)$, etc. (Note, however, that this definition does not make sense when $c'(a)=(0,0)$.) Problem 1 shows that this definition agrees with the old one when our curve $c$ is defined by",
+          "sourceSha256": "6a2fb44aad15147657fe7c4ad368e1c6f8ca938c1b81d844cbe19d52c223d137",
+          "translation": "当 $s=0$ 时，得到点 $c(a)$ 本身；当 $s=1$ 时，得到 $c(a)+c'(a)$，等等。（不过要注意，当 $c'(a)=(0,0)$ 时，这个定义没有意义。）习题 1 表明，如果曲线 $c$ 定义为"
+        },
+        {
+          "id": "p247-b2",
+          "source": "$$c(t)=(t,f(t)),$$",
+          "sourceSha256": "791e7dc4a1a903fe275a1b23b7961f8dfa521b9f266dc54e3808bd08c0e663b6"
+        },
+        {
+          "id": "p247-b3",
+          "source": "so that we simply have the graph of $f$.",
+          "sourceSha256": "d4e7998a33422f060e6ad038e447a6800905b67b5f09f8f98d534cb9e04d0d3a",
+          "translation": "也就是说，曲线就是 $f$ 的图像，那么这个定义与原来的定义一致。"
+        },
+        {
+          "id": "p247-b4",
+          "source": "Once again, various old formulas have analogues. For example,",
+          "sourceSha256": "55c8c5221b499cb527ff3c1496ed85adca37742a52b3fffc124517c26ebf864e",
+          "translation": "各种旧公式又一次有了对应的形式。例如，"
+        },
+        {
+          "id": "p247-b5",
+          "source": "$$\\begin{aligned}(c+d)'(a)&=c'(a)+d'(a),\\\\(\\alpha\\cdot c)'(a)&=\\alpha'(a)\\cdot c(a)+\\alpha(a)\\cdot c'(a),\\end{aligned}$$",
+          "sourceSha256": "b5cf9f1f6e4805cf4668184bff0bacbf5af50e8f8dae3b4e3e86c7122285eb13"
+        },
+        {
+          "id": "p247-b6",
+          "source": "or, as equations involving functions,",
+          "sourceSha256": "d63e1fb5c3c163a06f67893ae06a086659b7b0fb627a08cba67ff0bc0a89fc34",
+          "translation": "或者，写成函数之间的等式，"
+        },
+        {
+          "id": "p247-b7",
+          "source": "$$\\begin{aligned}(c+d)'&=c'+d',\\\\(\\alpha\\cdot c)'&=\\alpha'\\cdot c+\\alpha\\cdot c'.\\end{aligned}$$",
+          "sourceSha256": "0d5922aa1e2fdad35c9bdbea172b4667be77e320a01fbce52d7abcb34ac4b76e"
+        },
+        {
+          "id": "p247-b8",
+          "source": "These formulas can be derived immediately from the definition in terms of the component functions. They can also be derived from the definition as a limit, by imitating previous proofs; for the second, we would of course use the standard trick of writing",
+          "sourceSha256": "07be30e5c23ef331e2d5d4dc78b0b336292ba4a3c2246f1b952608be2c37576d",
+          "translation": "从用分量函数表述的定义中，可以立即推得这些公式。也可以仿照前面的证明，从极限定义推导它们；对于第二个公式，当然要使用惯常的技巧，将它写成"
+        },
+        {
+          "id": "p247-b9",
+          "source": "$$\\begin{aligned}&\\alpha(a+h)c(a+h)-\\alpha(a)c(a)=\\\\&\\qquad\\alpha(a+h)\\cdot[c(a+h)-c(a)]+[\\alpha(a+h)-\\alpha(a)]\\cdot c(a).\\end{aligned}$$",
+          "sourceSha256": "8ccb8cdb7085250d17aeb5dd677431c7e4a46a1e190a2391f11f105059430627"
+        },
+        {
+          "id": "p247-b10",
+          "source": "We can also consider the function",
+          "sourceSha256": "a44a23ceaf44b828abd762cca3c4d9071bbc7932d37e8ce6f83c088d19f2df28",
+          "translation": "还可以考虑函数"
+        },
+        {
+          "id": "p247-b11",
+          "source": "$$d(t)=c(p(t))=(c\\circ p)(t),$$",
+          "sourceSha256": "29862809e5015b9f84062edfb4308d450239f239209288e477eb59a9e1b4a6bb"
+        },
+        {
+          "id": "p247-b12",
+          "source": "where $p$ is now an ordinary function, from numbers to numbers. The new curve $d$ passes through the same points as $c$, except at different times; thus $p$ corresponds to a “reparameterization” of $c$. For",
+          "sourceSha256": "dfa161118e100e2e0dd61c3524a2b2318550c3ee28ed03ff272d6e4dd50d9a4a",
+          "translation": "其中 $p$ 现在是一个从数到数的普通函数。新曲线 $d$ 经过的点与 $c$ 相同，只是经过的时刻不同；因此 $p$ 对应于 $c$ 的一次“重新参数化”。对于"
+        },
+        {
+          "id": "p247-b13",
+          "source": "$$\\begin{aligned}c&=(u,v),\\\\d&=(u\\circ p,v\\circ p),\\end{aligned}$$",
+          "sourceSha256": "d37b5adbac5cb08047018ce9ea56a0839ffa3b456a68677f70453d33e07eb589"
+        },
+        {
+          "id": "p247-b14",
+          "source": "we obtain",
+          "sourceSha256": "bf31204fc693cd38b319bf1ebfac21f1d5da8ec271c36b120452d72baea81372",
+          "translation": "我们得到"
+        },
+        {
+          "id": "p247-b15",
+          "source": "$$\\begin{aligned}d'(a)&=((u\\circ p)'(a),(v\\circ p)'(a))\\\\&=(p'(a)u'(p(a)),p'(a)v'(p(a)))\\\\&=p'(a)\\cdot(u'(p(a)),v'(p(a)))\\\\&=p'(a)\\cdot c'(p(a)),\\end{aligned}$$",
+          "sourceSha256": "b8e92dff2918c070336115fb086e4b584d0b58a5de8c4b8960159d83a33feef2"
+        },
+        {
+          "id": "p247-b16",
+          "source": "or simply",
+          "sourceSha256": "968c3bf7f7536aba9d08a8964e9ccaa1c30d1ad1fed1c0f504b1b6c004447493",
+          "translation": "或者简写成"
+        },
+        {
+          "id": "p247-b17",
+          "source": "$$d'=p'\\cdot(c'\\circ p).$$",
+          "sourceSha256": "e7acfa0182e75da42726a57712bde237a14563c588297954d61bb7765703fa7a"
+        },
+        {
+          "id": "p247-b18",
+          "source": "Notice that if $p(a)=a$, so that $d$ and $c$ actually pass through the same point at time $a$, then $d'(a)=p'(a)\\cdot c'(a)$, so that the tangent vector $d'(a)$ is just a multiple of $c'(a)$. This means that the tangent line to $c$ at $c(a)$ is the same as the tangent line to the reparameterized curve $d$ at $d(a)=c(a)$. The one exception occurs",
+          "sourceSha256": "51c942f3eb38519af77a607767362225719bac623c6974bae3f2371589e1dcbe",
+          "translation": "注意，如果 $p(a)=a$，那么 $d$ 和 $c$ 在时刻 $a$ 实际上经过同一个点，此时 $d'(a)=p'(a)\\cdot c'(a)$，所以切向量 $d'(a)$ 只是 $c'(a)$ 的一个倍数。这意味着，$c$ 在 $c(a)$ 处的切线，与重新参数化后的曲线 $d$ 在 $d(a)=c(a)$ 处的切线相同。唯一的例外发生在"
+        }
+      ]
+    },
+    {
+      "printed": 248,
+      "sourceSha256": "3b11970dbe0348bb5934a3c8416d91076bc3e5e1c8cd507783f39e77f01e9db8",
+      "blocks": [
+        {
+          "id": "p248-b1",
+          "source": "when $p'(a)=0$, since the tangent line for $d$ is then undefined, even though the tangent line for $c$ may be defined. For example, $d(t)=c(t^3)$ won’t have a tangent line defined at $t=0$, even though it’s merely a reparameterization of $c$.",
+          "sourceSha256": "49353b130b0f34fa884bebc856e36c42e1e9a4288d944583103c6bff9a4bd2d0",
+          "translation": "$p'(a)=0$ 时，因为这时 $d$ 的切线没有定义，尽管 $c$ 的切线可能有定义。例如，$d(t)=c(t^3)$ 在 $t=0$ 处不会有按上述方式定义的切线，尽管它不过是 $c$ 的一次重新参数化。"
+        },
+        {
+          "id": "p248-b2",
+          "source": "Finally, since we can define real-valued functions",
+          "sourceSha256": "afc7a1b607b2d9c5082c3d56bede81866581610b6eb5d17f69a83154750fc8f3",
+          "translation": "最后，既然可以定义实值函数"
+        },
+        {
+          "id": "p248-b3",
+          "source": "$$\\begin{aligned}(c\\cdot d)(t)&=c(t)\\cdot d(t),\\\\\\det(c,d)(t)&=\\det(c(t),d(t)),\\end{aligned}$$",
+          "sourceSha256": "2b7cfab307b596ed44d50678b348834a7278cd481e980cf7a76cc8ebddbe0f82"
+        },
+        {
+          "id": "p248-b4",
+          "source": "we ought to have formulas for the derivatives of these new functions. As you might guess, the proper formulas are",
+          "sourceSha256": "54f2a7ce9b55f076e62ad6634090253ac85c2d15647a8ab4905b13e6cd2bc3cd",
+          "translation": "就应该有这些新函数的导数公式。正如你可能猜到的，正确的公式是"
+        },
+        {
+          "id": "p248-b5",
+          "source": "$$\\begin{aligned}(c\\cdot d)'(a)&=c(a)\\cdot d'(a)+c'(a)\\cdot d(a),\\\\{}[\\det(c,d)]'(a)&=\\det(c',d)(a)+\\det(c,d')(a).\\end{aligned}$$",
+          "sourceSha256": "9f4e2fe413fb72ed4247f22b93d0b179e6920e5242744d4cb2be267f190c9332"
+        },
+        {
+          "id": "p248-b6",
+          "source": "These can be derived by straightforward calculations from the definitions in terms of the component functions. But it is more elegant to imitate the proof of the ordinary product rule, using the simple formulas in Problems 2 and 4 of Appendix 1 to Chapter 4, and, of course, the “standard trick” referred to above.",
+          "sourceSha256": "321226bcfc67dad293c56cfa047faac6a1c4609157aba1e10505fe942d3c0613",
+          "translation": "根据用分量函数表述的定义，直接计算就能推得这些公式。但更漂亮的办法是仿照普通乘积法则的证明，使用第 4 章附录 1 的习题 2 和 4 中的简单公式，当然也要用到上面提到的“惯常技巧”。"
+        },
+        {
+          "id": "p248-b7",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p248-b8",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p248-b9",
+          "source": "(a) For a function $f$, the “point-slope form” (Problem 4-6) of the tangent line at $(a,f(a))$ can be written as $y-f(a)=(x-a)f'(a)$, so that the tangent line consists of all points of the form",
+          "sourceSha256": "4fb54bc5b424aa2ddfb8e0aac4d73fd79fcca8924cfd94d9abba7be1ef5eba89",
+          "translation": "(a) 对于函数 $f$，它在 $(a,f(a))$ 处的切线的“点斜式”（习题 4-6）可以写成 $y-f(a)=(x-a)f'(a)$，所以切线由所有形如下式的点组成："
+        },
+        {
+          "id": "p248-b10",
+          "source": "$$(x,f(a)+(x-a)f'(a)).$$",
+          "sourceSha256": "ac3faca052dd959f1d433cb869008606f3f794c587702783c3c18b51665df587"
+        },
+        {
+          "id": "p248-b11",
+          "source": "Conclude that the tangent line consists of all points of the form",
+          "sourceSha256": "e34a75ea45a0236ffe0c6d6f04fb54bb9a43e3b257e3c03080ec886a76ccab77",
+          "translation": "由此得出，切线由所有形如下式的点组成："
+        },
+        {
+          "id": "p248-b12",
+          "source": "$$(a+s,f(a)+sf'(a)).$$",
+          "sourceSha256": "aa68852b61eae11e5dafa944213db1f52ed94085a5730e7f1cf6439f81f01cae"
+        },
+        {
+          "id": "p248-b13",
+          "source": "(b) If $c$ is the curve $c(t)=(t,f(t))$, conclude that the tangent line of $c$ at $(a,f(a))$ [using our new definition] is the same as the tangent line of $f$ at $(a,f(a))$.",
+          "sourceSha256": "49c2aa20748d0633a985ec0c144579ba6f2b24cb3f8d01f3eb5bf949cc5bbd93",
+          "translation": "(b) 如果 $c$ 是曲线 $c(t)=(t,f(t))$，由此得出：$c$ 在 $(a,f(a))$ 处的切线［使用我们的新定义］，与 $f$ 在 $(a,f(a))$ 处的切线相同。"
+        },
+        {
+          "id": "p248-b14",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p248-b15",
+          "source": "Let $c(t)=(f(t),t^2)$, where $f$ is the function shown in Figure 21 of Chapter 9. Show that $c$ lies along the graph of the non-differentiable function $h(x)=|x|$, but that $c'(0)=(0,0)$. In other words, a reparameterization can “hide” a corner. For this reason, we are usually only interested in curves $c$ with $c'$ never equal to $(0,0)$.",
+          "sourceSha256": "8af0759d9137881222df41c20f21c5cb25ca52399ef6c30888346693c284d229",
+          "translation": "设 $c(t)=(f(t),t^2)$，其中 $f$ 是第 9 章图 21 中的函数。证明：$c$ 沿着不可微函数 $h(x)=|x|$ 的图像运动，但 $c'(0)=(0,0)$。换句话说，重新参数化可以把一个角点“藏起来”。因此，我们通常只关心满足 $c'$ 从不等于 $(0,0)$ 的曲线 $c$。"
+        },
+        {
+          "id": "p248-b16",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p248-b17",
+          "source": "Suppose that $x=u(t)$, $y=v(t)$ is a parametric representation of a curve, and that $u$ is one-one on some interval.",
+          "sourceSha256": "5640db998573d48670d7325fa169d01df379656c63a7511d5ee680d47bfe5e6a",
+          "translation": "设 $x=u(t)$、$y=v(t)$ 是一条曲线的参数表示，并且 $u$ 在某个区间上一一。"
+        },
+        {
+          "id": "p248-b18",
+          "source": "(a) Show that on this interval the curve lies along the graph of $f=v\\circ u^{-1}$.",
+          "sourceSha256": "6829923ea21ad99e38520bbb63eeb126afb5879bd84f8273fbdff75795972b3d",
+          "translation": "(a) 证明：在这个区间上，曲线沿着 $f=v\\circ u^{-1}$ 的图像运动。"
+        },
+        {
+          "id": "p248-b19",
+          "source": "(b) If $u$ is differentiable on this interval and $u'(t)\\ne0$, show that at the point $x=u(t)$ we have",
+          "sourceSha256": "a2fe2edbf1c4511f1489bd25607396a81372bb9523b70d55c1fa9bec5c1afd3f",
+          "translation": "(b) 如果 $u$ 在这个区间上可微，且 $u'(t)\\ne0$，证明在点 $x=u(t)$ 处有"
+        },
+        {
+          "id": "p248-b20",
+          "source": "$$f'(x)=\\frac{v'(t)}{u'(t)}.$$",
+          "sourceSha256": "2fb04065cc6d9b1d6cc9d8f40905f23d97f957cbe1946c29787d4da350162c79"
+        }
+      ]
+    },
+    {
+      "printed": 249,
+      "sourceSha256": "893ef18503ff9782b91c10e4b247dd75cbf48fe448391a41bb71188628926b35",
+      "blocks": [
+        {
+          "id": "p249-b1",
+          "source": "In Leibnizian notation this is often written suggestively as",
+          "sourceSha256": "1ac97a3f6c755d61b31faf3c3470674b4aea8a50740f8f7dc59a0de86d7875e1",
+          "translation": "用莱布尼茨记号，这常常被写成富有启发性的形式"
+        },
+        {
+          "id": "p249-b2",
+          "source": "$$\\frac{dy}{dx}=\\frac{\\dfrac{dy}{dt}}{\\dfrac{dx}{dt}}.$$",
+          "sourceSha256": "e3843b0ddca1d56239ffab4a336a3830d8eb37626923141b25fc9ebd535db780"
+        },
+        {
+          "id": "p249-b3",
+          "source": "(c) We also have",
+          "sourceSha256": "fcbdd9504082c5d516d05f8c02402e848deac86f8c9b5966dc8d3b05de2edee8",
+          "translation": "(c) 我们还有"
+        },
+        {
+          "id": "p249-b4",
+          "source": "$$f''(x)=\\frac{u'(t)v''(t)-v'(t)u''(t)}{(u'(t))^3}.$$",
+          "sourceSha256": "004977f5b52bc5b58d5ded2a78e1a3a5deb04152713eb9b6a3512fd63d3baec6"
+        },
+        {
+          "id": "p249-b5",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p249-b6",
+          "source": "Consider a function $f$ defined implicitly by the equation $x^{2/3}+y^{2/3}=1$. Compute $f'(x)$ in two ways:",
+          "sourceSha256": "9fd33c8cb5ca13f68bbc63fb8a74837e589f911536d36a20e98e228951189358",
+          "translation": "考虑由方程 $x^{2/3}+y^{2/3}=1$ 隐式定义的函数 $f$。用两种方法计算 $f'(x)$："
+        },
+        {
+          "id": "p249-b7",
+          "source": "(i) By implicit differentiation.",
+          "sourceSha256": "35b7e157a8c012e20f918b6b0251b5b2f432aba93359d02563c3ecc6f4fd9514",
+          "translation": "(i) 用隐式求导。"
+        },
+        {
+          "id": "p249-b8",
+          "source": "(ii) By considering the parametric representation $x=\\cos^3 t$, $y=\\sin^3 t$.",
+          "sourceSha256": "83e56b8239b8d4e85b82782b35fbcb373b95158d64e0e19fd6800d604d47e62c",
+          "translation": "(ii) 考虑参数表示 $x=\\cos^3 t$、$y=\\sin^3 t$。"
+        },
+        {
+          "id": "p249-b9",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p249-b10",
+          "source": "Let $x=u(t)$, $y=v(t)$ be the parametric representation of a curve, with $u$ and $v$ differentiable, and let $P=(x_0,y_0)$ be a point in the plane. Prove that if the point $Q=(u(\\bar t),v(\\bar t))$ on the curve is closest to $(x_0,y_0)$, and $u'(\\bar t)$ and $v'(\\bar t)$ are not both $0$, then the line from $P$ to $Q$ is perpendicular to the tangent line of the curve at $Q$ (Figure 6). The same result holds if $Q$ is furthest from $(x_0,y_0)$.",
+          "sourceSha256": "c6bb64c486654085c88d1db3318b894b1f2478893ce8473a050b7129087db2fa",
+          "translation": "设 $x=u(t)$、$y=v(t)$ 是一条曲线的参数表示，$u$ 和 $v$ 都可微，$P=(x_0,y_0)$ 是平面上一点。证明：如果曲线上的点 $Q=(u(\\bar t),v(\\bar t))$ 距离 $(x_0,y_0)$ 最近，而且 $u'(\\bar t)$ 和 $v'(\\bar t)$ 不同时为 $0$，那么从 $P$ 到 $Q$ 的直线，垂直于曲线在 $Q$ 处的切线（图 6）。如果 $Q$ 距离 $(x_0,y_0)$ 最远，也有同样的结论。"
+        },
+        {
+          "id": "p249-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:363px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 479 363 271\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0268.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 6</figcaption>\n</figure>",
+          "sourceSha256": "8da11446f1e0716088bc866b1fb8d5d5b22393452ca248b69b3929a5913c8282"
+        },
+        {
+          "id": "p249-b12",
+          "source": "We’ve seen that the “graph of $f$ in polar coordinates” is the curve",
+          "sourceSha256": "d0a8b72d20527c079847fde91e11d6222542edc64bb5ea9afc8ee578b4565711",
+          "translation": "我们已经看到，“$f$ 在极坐标下的图像”就是曲线"
+        },
+        {
+          "id": "p249-b13",
+          "source": "$$(f\\cdot\\mathbf e)(t)=(f(t)\\cos t,f(t)\\sin t);$$",
+          "sourceSha256": "4bd1f4db6c1160f49ceb9efca0c7f702f5d6e44bea0d7585199e1183617bc504"
+        },
+        {
+          "id": "p249-b14",
+          "source": "in other words, the graph of $f$ in polar coordinates is the curve with the parametric representation",
+          "sourceSha256": "b78055c25976857708264d836c57157bd403a18bdd6de8287e6efc640d308c05",
+          "translation": "换句话说，$f$ 在极坐标下的图像，是具有如下参数表示的曲线："
+        },
+        {
+          "id": "p249-b15",
+          "source": "$$x=f(\\theta)\\cos\\theta,\\qquad y=f(\\theta)\\sin\\theta.$$",
+          "sourceSha256": "0baaeb66418c9fa150d3a9fb146f367a6ed14d851a6f2af1a2a4a448130c7ccf"
+        },
+        {
+          "id": "p249-b16",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p249-b17",
+          "source": "(a) Show that for the graph of $f$ in polar coordinates the slope of the tangent line at the point with polar coordinates $(f(\\theta),\\theta)$ is",
+          "sourceSha256": "6fd0abfdc0a267719aab455d9549089cff645f645c68d8278ca73d7f200830e7",
+          "translation": "(a) 证明：对于 $f$ 在极坐标下的图像，它在极坐标为 $(f(\\theta),\\theta)$ 的点处的切线斜率为"
+        },
+        {
+          "id": "p249-b18",
+          "source": "$$\\frac{f(\\theta)\\cos\\theta+f'(\\theta)\\sin\\theta}{-f(\\theta)\\sin\\theta+f'(\\theta)\\cos\\theta}.$$",
+          "sourceSha256": "d36488ebc7bfb8242068f16d02c255f44b010e43d57b7d1e43fa837a20ebb9f9"
+        },
+        {
+          "id": "p249-b19",
+          "source": "(b) Show that if $f(\\theta)=0$ and $f$ is differentiable at $\\theta$, then the line through the origin making an angle of $\\theta$ with the positive horizontal axis is a tangent line of the graph of $f$ in polar coordinates. Use this result to add some details to the graph of the Archimedean spiral in Appendix 3 of Chapter 4, and to the graphs in Problems 3 and 10 of that Appendix as well.",
+          "sourceSha256": "a95f077db1fbbe03fcffc530c7278f580bedd4a5378371c609fb59abe662a388",
+          "translation": "(b) 证明：如果 $f(\\theta)=0$ 且 $f$ 在 $\\theta$ 处可微，那么过原点且与水平正半轴成 $\\theta$ 角的直线，是 $f$ 在极坐标下的图像的一条切线。利用这一结果，为第 4 章附录 3 中的阿基米德螺线图像补充一些细节，也为该附录习题 3 和 10 中的图像补充细节。"
+        },
+        {
+          "id": "p249-b20",
+          "source": "(c) Suppose that the point with polar coordinates $(f(\\theta),\\theta)$ is further from the origin $O$ than any other point on the graph of $f$. What can you say about the tangent line to the graph at this point? Compare with Problem 5.",
+          "sourceSha256": "b08d8aed16050df1f099d6c8747e2f27a7b54a27e28039fd6895fb4e0f48c67e",
+          "translation": "(c) 设极坐标为 $(f(\\theta),\\theta)$ 的点，到原点 $O$ 的距离，比 $f$ 图像上的任何其他点都远。对于图像在该点处的切线，你能说出什么？与习题 5 比较。"
+        }
+      ]
+    },
+    {
+      "printed": 250,
+      "sourceSha256": "7afafbad6a3992c0216079b1f4230e9360d33916361df358dc94cc765688de5d",
+      "blocks": [
+        {
+          "id": "p250-b1",
+          "source": "(d) Suppose that the tangent line to the graph of $f$ at the point with polar coordinates $(f(\\theta),\\theta)$ makes an angle of $\\alpha$ with the horizontal axis (Figure 7), so that $\\alpha-\\theta$ is the angle between the tangent line and the ray from $O$ to the point. Show that",
+          "sourceSha256": "e51e6a3174a38a17d5fe279e41bd67f8c5002625529a2124f4825a636f11c277",
+          "translation": "(d) 设 $f$ 的图像在极坐标为 $(f(\\theta),\\theta)$ 的点处的切线，与水平轴成 $\\alpha$ 角（图 7），于是 $\\alpha-\\theta$ 就是切线与从 $O$ 指向该点的射线之间的夹角。证明"
+        },
+        {
+          "id": "p250-b2",
+          "source": "$$\\tan(\\alpha-\\theta)=\\frac{f(\\theta)}{f'(\\theta)}.$$",
+          "sourceSha256": "70715c6e99b6856f82070fc9f5c605876df54a77f2acec423b3ec8e5bada181a"
+        },
+        {
+          "id": "p250-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:375px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 244 375 335\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0269.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 7</figcaption>\n</figure>",
+          "sourceSha256": "b9f9a1462f7e306a2e0835242cd505954a4c2ab2673f875d9cbd72ffd544d7ae"
+        },
+        {
+          "id": "p250-b4",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p250-b5",
+          "source": "(a) In Problem 8 of Appendix 3 to Chapter 4 we found that the cardioid $r=1-\\sin\\theta$ is also described by the equation $(x^2+y^2+y)^2=x^2+y^2$. Find the slope of the tangent line at a point on the cardioid in two ways:",
+          "sourceSha256": "742cb2cc0e75ef14533efdb7f2bf75a2c79c93e8e147634a61afb40efab05c57",
+          "translation": "(a) 在第 4 章附录 3 的习题 8 中，我们发现心形线 $r=1-\\sin\\theta$ 也可由方程 $(x^2+y^2+y)^2=x^2+y^2$ 描述。用两种方法求心形线上一点处的切线斜率："
+        },
+        {
+          "id": "p250-b6",
+          "source": "(i) By implicit differentiation.",
+          "sourceSha256": "35b7e157a8c012e20f918b6b0251b5b2f432aba93359d02563c3ecc6f4fd9514",
+          "translation": "(i) 用隐式求导。"
+        },
+        {
+          "id": "p250-b7",
+          "source": "(ii) By using the previous problem.",
+          "sourceSha256": "5f50af6a96828517938960a6ba8d50d9eb67add6c452434fe0753bdbd2c31628",
+          "translation": "(ii) 利用上一题。"
+        },
+        {
+          "id": "p250-b8",
+          "source": "(b) Check that at the origin the tangent lines are vertical, as they appear to be in Figure 8.",
+          "sourceSha256": "c1493ee264250f81938e696ae6df0342cad7df57c7ed18b746d4b5537c789fc7",
+          "translation": "(b) 验证：在原点处，切线确实如图 8 所示，是竖直的。"
+        },
+        {
+          "id": "p250-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:350px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"577 626 350 352\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0269.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 8</figcaption>\n</figure>",
+          "sourceSha256": "59cc1b7f771be3cec801fd2fb5067dcdb3e421a52d21b6b63aca39ba6306b2db"
+        },
+        {
+          "id": "p250-b10",
+          "source": "The next problem uses the material from Chapter 15, in particular, radian measure, and the inverse trigonometric functions and their properties.",
+          "sourceSha256": "841a0f3ed5268b204a1e5687012a424b1ba1a034e732fe49401e3df926d4fe22",
+          "translation": "下一题要用到第 15 章的内容，特别是弧度制、反三角函数及其性质。"
+        },
+        {
+          "id": "p250-b11",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p250-b12",
+          "source": "A *cycloid* is defined as the path traced out by a point on the rim of a rolling wheel of radius $a$. You can see a beautiful cycloid by pasting a reflector on the edge of a bicycle wheel and having a friend ride slowly in front of the headlights of your car at night. Lacking a car, bicycle, or trusting friend, you can settle instead for Figure 9.",
+          "sourceSha256": "0412468cfd1690ad173b4764c800ad77ada748e4bb0ff5588d4c190b773d0633",
+          "translation": "*摆线*定义为：一个半径为 $a$ 的轮子滚动时，轮缘上一点所描出的轨迹。把一个反光片贴在自行车轮缘上，夜间让一位朋友骑着车，缓缓经过你的汽车前灯前方，你就能看到一条美丽的摆线。如果缺少汽车、自行车，或者一位信任你的朋友，那就将就看看图 9 吧。"
+        },
+        {
+          "id": "p250-b13",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:521px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"641 1333 521 150\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0269.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 9</figcaption>\n</figure>",
+          "sourceSha256": "5069bdab9069e99e5f6ccf4391c3adea8c624e7586ce5c14ce0712db97f96af9"
+        }
+      ]
+    },
+    {
+      "printed": 251,
+      "sourceSha256": "5be78c85f0ac09237d451a4389ceecadefc6c28b59597f05831886ac23fd2d8c",
+      "blocks": [
+        {
+          "id": "p251-b1",
+          "source": "(a) Let $u(t)$ and $v(t)$ be the coordinates of the point on the rim after the wheel has rotated through an angle of $t$ (radians). This means that the arc of the wheel rim from $P$ to $Q$ in Figure 10 has length $at$. Since the wheel is rolling, $at$ is also the distance from $O$ to $Q$. Show that we have the parametric representation of the cycloid",
+          "sourceSha256": "508427d1f9bfb3918d55b33e78c07dff4901967db26adbb48cb5a8685e9aba06",
+          "translation": "(a) 设轮子转过 $t$（弧度）角后，轮缘上该点的坐标为 $u(t)$ 和 $v(t)$。这意味着，图 10 中从 $P$ 到 $Q$ 的轮缘圆弧长度为 $at$。由于轮子在滚动，$at$ 也就是从 $O$ 到 $Q$ 的距离。证明，摆线具有如下参数表示："
+        },
+        {
+          "id": "p251-b2",
+          "source": "$$\\begin{aligned}u(t)&=a(t-\\sin t)\\\\v(t)&=a(1-\\cos t).\\end{aligned}$$",
+          "sourceSha256": "7d677b21b4fdfa8cb6bc30da6936f2802a584ac85f8a2c381b7cd14d10a9e2f5"
+        },
+        {
+          "id": "p251-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:355px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 225 355 268\" role=\"img\" aria-label=\"Figure 10\"><image href=\"pages/book/0270.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 10</figcaption>\n</figure>",
+          "sourceSha256": "0292d0c66b7644d390e36efa9ae046ed32ee7c0b57e63748c711c50e98b90677"
+        },
+        {
+          "id": "p251-b4",
+          "source": "Figure 11 shows the curves we obtain if the distance from the point to the center of the wheel is (a) less than the radius or (b) greater than the radius. In the latter case, the curve is not the graph of a function; at certain times the point is moving backwards, even though the wheel is moving forwards!",
+          "sourceSha256": "0da2b512ff9685173e095d30d4785edcb6d0e801f52ad68d466dc69ebca6bb6a",
+          "translation": "图 11 画出了点到轮心的距离 (a) 小于半径或 (b) 大于半径时得到的曲线。在后一种情形中，曲线不是函数的图像；尽管轮子一直向前运动，该点在某些时刻却在向后运动！"
+        },
+        {
+          "id": "p251-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:447px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"576 558 447 496\" role=\"img\" aria-label=\"Figure 11\"><image href=\"pages/book/0270.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 11</figcaption>\n</figure>",
+          "sourceSha256": "2cac027c150830f4654d18c006a15f3d92ecbe00f4d57f5b55c52a22e13eaf45"
+        },
+        {
+          "id": "p251-b6",
+          "source": "In Figure 9 we drew the cycloid as the graph of a function, but we really need to check that this is the case:",
+          "sourceSha256": "2233bd3e41af65ddb60913ee329807d3e68de6670e8dc3c61a27bb65614fd0cc",
+          "translation": "在图 9 中，我们把摆线画成了一个函数的图像，但确实还需要验证这一点："
+        },
+        {
+          "id": "p251-b7",
+          "source": "(b) Compute $u'(t)$ and conclude that $u$ is increasing. Problem 3 then shows that the cycloid is the graph of $f=v\\circ u^{-1}$, and allows us to compute $f'(t)$.",
+          "sourceSha256": "03f2f747c7fc4a19966404203eafb7aba48fed8ab723ebd80b88cb46d72b9170",
+          "translation": "(b) 计算 $u'(t)$，并得出 $u$ 递增。于是习题 3 表明，摆线是 $f=v\\circ u^{-1}$ 的图像，还让我们能够计算 $f'(t)$。"
+        },
+        {
+          "id": "p251-b8",
+          "source": "(c) Show that the tangent lines of the cycloid at the “vertices” are vertical.",
+          "sourceSha256": "00f8b2992429acec20c25488cfc502bc94cee6455bde1120590b2b37ead1f623",
+          "translation": "(c) 证明：摆线在各个“顶点”处的切线是竖直的。"
+        },
+        {
+          "id": "p251-b9",
+          "source": "It isn’t possible to get an explicit formula for $f$, but we can come close.",
+          "sourceSha256": "abf7434032b45b95a396e1334117dc36d364322a9e2df99cbb24b4b4fb695206",
+          "translation": "无法得到 $f$ 的显式公式，但可以接近这个目标。"
+        },
+        {
+          "id": "p251-b10",
+          "source": "(d) Show that",
+          "sourceSha256": "af7c180bb24e9a0cdc7a59dfb485b26151d8053d24332199d377571d5e7ca270",
+          "translation": "(d) 证明"
+        },
+        {
+          "id": "p251-b11",
+          "source": "$$u(t)=a\\arccos\\frac{a-v(t)}a\\pm\\sqrt{[2a-v(t)]v(t)}.$$",
+          "sourceSha256": "58a3bc7642e82cb8b1765023e5c22836cc8ed9ff0b715ff80dba8a841b624c4c"
+        },
+        {
+          "id": "p251-b12",
+          "source": "Hint: first solve for $t$ in terms of $v(t)$.",
+          "sourceSha256": "c2c48cea4e79072d7334bdaffd34b12b4e44a61c96ce7c2a2428763daa4cf345",
+          "translation": "提示：先用 $v(t)$ 表示 $t$。"
+        }
+      ]
+    },
+    {
+      "printed": 252,
+      "sourceSha256": "fea1751e12bfad0a3dd56aea45c6470e8195729533ba2f18f05c5b7fdd2d55f9",
+      "blocks": [
+        {
+          "id": "p252-b1",
+          "source": "(e) The first half of the first arch of the cycloid is the graph of $g^{-1}$, where",
+          "sourceSha256": "e511635275d473aa49cb95a489f185346e1835e23b53469fe2f0d711035fb2e2",
+          "translation": "(e) 摆线第一拱的前半段是 $g^{-1}$ 的图像，其中"
+        },
+        {
+          "id": "p252-b2",
+          "source": "$$g(y)=a\\arccos\\frac{a-y}a-\\sqrt{(2a-y)y}.$$",
+          "sourceSha256": "a0557927d6971608b83e06d29a9c82d22f13dbd9f011105498c8425021d38bb0"
+        },
+        {
+          "id": "p252-b3",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p252-b4",
+          "source": "Let $u$ and $v$ be continuous on $[a,b]$ and differentiable on $(a,b)$; then $u$ and $v$ give a parametric representation of a curve from $P=(u(a),v(a))$ to $Q=(u(b),v(b))$. Geometrically, it seems clear (Figure 12) that at some point on the curve the tangent line is parallel to the line segment from $P$ to $Q$. Prove this analytically. Hint: This problem will give a geometric interpretation for one of the theorems in Chapter 11. You will also need to assume that we don’t have $u'(x)=v'(x)=0$ for any $x$ in $(a,b)$ (compare Problem 2).",
+          "sourceSha256": "574d8428c0b785823ccdbd4d477ea816864d054015078fe20dc10e05a01e0e9f",
+          "translation": "设 $u$ 和 $v$ 在 $[a,b]$ 上连续，在 $(a,b)$ 上可微；那么 $u$ 和 $v$ 给出了一条从 $P=(u(a),v(a))$ 到 $Q=(u(b),v(b))$ 的曲线的参数表示。从几何上看，似乎很明显（图 12）：曲线上某一点处的切线，平行于从 $P$ 到 $Q$ 的线段。用分析方法证明这一点。提示：这道题将给出第 11 章某个定理的几何解释。你还需要假设，对 $(a,b)$ 中任何 $x$，都没有 $u'(x)=v'(x)=0$（比较习题 2）。"
+        },
+        {
+          "id": "p252-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:392px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 180 392 296\" role=\"img\" aria-label=\"Figure 12\"><image href=\"pages/book/0271.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 12</figcaption>\n</figure>",
+          "sourceSha256": "9b16f5cecf1c441c31e5f1aab62c8133a33f7f57be921af637ce0b42a59b9cf7"
+        },
+        {
+          "id": "p252-b6",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p252-b7",
+          "source": "The following definition of a limit for a vector-valued function is the direct analogue of the definition for ordinary functions:",
+          "sourceSha256": "60d2a250e53ebcbe485efa124cedff709f62db72976456f7f367d516accbbf2a",
+          "translation": "下面这个向量值函数极限的定义，是普通函数极限定义的直接类比："
+        },
+        {
+          "id": "p252-b8",
+          "source": "$\\displaystyle\\lim_{t\\to a}c(t)=l$ means that for every $\\varepsilon>0$ there is some $\\delta>0$ such that, for all $t$, if $0<|t-a|<\\delta$, then $\\|c(t)-l\\|<\\varepsilon$.",
+          "sourceSha256": "aad9ac31827fe54914f7818bd8ca17138f01e3bf31fd11a12ac90c58884fe35d",
+          "translation": "$\\displaystyle\\lim_{t\\to a}c(t)=l$ 意味着，对于每个 $\\varepsilon>0$，都存在某个 $\\delta>0$，使得对所有 $t$，如果 $0<|t-a|<\\delta$，就有 $\\|c(t)-l\\|<\\varepsilon$。"
+        },
+        {
+          "id": "p252-b9",
+          "source": "Here $\\|\\ \\|$ is the *norm*, defined in Problem 2 of Appendix 1 to Chapter 4. If $l=(l_1,l_2)$, then",
+          "sourceSha256": "60a2975ce22d93008a297cf46806acfb33dfde251bb5eb3a0489e5504fe0a361",
+          "translation": "这里的 $\\|\\ \\|$ 是第 4 章附录 1 的习题 2 中定义的*范数*。如果 $l=(l_1,l_2)$，那么"
+        },
+        {
+          "id": "p252-b10",
+          "source": "$$\\|c(t)-l\\|^2=|u(t)-l_1|^2+|v(t)-l_2|^2.$$",
+          "sourceSha256": "0b6622e91a16b02d077e40afad9ee9ae80801e3f668b1320859b9a058ae13e72"
+        },
+        {
+          "id": "p252-b11",
+          "source": "(a) Conclude that",
+          "sourceSha256": "e19e02d82fb4f06e6e67999904027455d4f8304a3365fa5760230e154790abdb",
+          "translation": "(a) 由此得出"
+        },
+        {
+          "id": "p252-b12",
+          "source": "$$|u(t)-l_1|\\le\\|c(t)-l\\|\\quad\\text{and}\\quad|v(t)-l_2|\\le\\|c(t)-l\\|,$$",
+          "sourceSha256": "71dcc06dbee0e549b8d36e65c612e812b50c791356b0c4bdb33d03bce74a1af7"
+        },
+        {
+          "id": "p252-b13",
+          "source": "and show that if $\\displaystyle\\lim_{t\\to a}c(t)=l$ according to the above definition, then we also have",
+          "sourceSha256": "e1d3a642f57ef5bd969a564c48a5172af67140423312f6c7edb4404f2822df5a",
+          "translation": "并证明：如果按照上述定义有 $\\displaystyle\\lim_{t\\to a}c(t)=l$，那么也有"
+        },
+        {
+          "id": "p252-b14",
+          "source": "$$\\lim_{t\\to a}u(t)=l_1\\quad\\text{and}\\quad\\lim_{t\\to a}v(t)=l_2,$$",
+          "sourceSha256": "fafc016e90d879f25bd86b9a0a93bc76e672e67e004a14ecd7f5016afe9ed62d"
+        },
+        {
+          "id": "p252-b15",
+          "source": "so that $\\displaystyle\\lim_{t\\to a}c(t)=l$ according to our definition (*) in terms of component functions, on page 246.",
+          "sourceSha256": "0ba159ddec7e9b103d4413afb6181507cd7e91e8d0687d1b50a9d949c4119bf5",
+          "translation": "因此，按照第 246 页用分量函数表述的定义 (*)，也有 $\\displaystyle\\lim_{t\\to a}c(t)=l$。"
+        },
+        {
+          "id": "p252-b16",
+          "source": "(b) Conversely, show that if $\\displaystyle\\lim_{t\\to a}c(t)=l$ according to the definition in terms of component functions, then also $\\displaystyle\\lim_{t\\to a}c(t)=l$ according to the above definition.",
+          "sourceSha256": "39300ec92cd90f4e737cd029ffc7a2ae573364a43a7d6d5f17fb453ced04c9e3",
+          "translation": "(b) 反过来，证明：如果按照用分量函数表述的定义有 $\\displaystyle\\lim_{t\\to a}c(t)=l$，那么按照上述定义也有 $\\displaystyle\\lim_{t\\to a}c(t)=l$。"
+        }
+      ]
+    }
+  ]
+}

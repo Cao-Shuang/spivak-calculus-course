@@ -1,0 +1,1756 @@
+{
+  "chapter": 9,
+  "language": "zh-CN",
+  "sourceSha256": "64065d470219b1d8a85cdb0d837fc9444a9d32849b33c8224ab03eeb73ef3b8d",
+  "paragraphCount": 164,
+  "pages": [
+    {
+      "printed": 149,
+      "sourceSha256": "b01779219b0c6e1383b54e2440fcf4b1a4717c38c7ac7ae4b994ba887149fac0",
+      "blocks": [
+        {
+          "id": "p149-b1",
+          "source": "# CHAPTER 9  DERIVATIVES",
+          "sourceSha256": "703e92ba4ea555c20c7ad3eae52475f6d82e641c64fe43895523470c73c3df5e",
+          "translation": "# 第 9 章　导数"
+        },
+        {
+          "id": "p149-b2",
+          "source": "The derivative of a function is the first of the two major concepts of this section. Together with the integral, it constitutes the source from which calculus derives its particular flavor. While it is true that the concept of a function is fundamental, that you cannot do anything without limits or continuity, and that least upper bounds are essential, everything we have done until now has been preparation—if adequate, this section will be easier than the preceding ones—for the really exciting ideas to come, the powerful concepts that are truly characteristic of calculus.",
+          "sourceSha256": "510dea4f0c90e10a8a4fb2794a632851a847d87c6f516b5bb738a5191726fd13",
+          "translation": "函数的导数是本篇两个主要概念中的第一个。它与积分一道，构成了微积分独特韵味的源泉。函数的概念的确是根本，没有极限或连续性就什么也做不了，最小上界也确实不可或缺；然而，我们到目前为止所做的一切，都只是为即将到来的那些真正激动人心的思想、那些真正体现微积分特色的强有力的概念作准备。如果准备充分，本篇将比前几篇更容易。"
+        },
+        {
+          "id": "p149-b3",
+          "source": "Perhaps (some would say “certainly”) the interest of the ideas to be introduced in this section stems from the intimate connection between the mathematical concepts and certain physical ideas. Many definitions, and even some theorems, may be described in terms of physical problems, often in a revealing way. In fact, the demands of physics were the original inspiration for these fundamental ideas of calculus, and we shall frequently mention the physical interpretations. But we shall always first define the ideas in precise mathematical form, and discuss their significance in terms of mathematical problems.",
+          "sourceSha256": "98015763d692305c5d41ec6c8c4a31bcc4cfbd9d351e19c0ddb586009fe6775a",
+          "translation": "本篇将要介绍的思想之所以引人入胜，或许（有些人会说“肯定”）源于数学概念与某些物理思想之间的密切联系。许多定义，甚至一些定理，都可以用物理问题来描述，而且往往能借此揭示其意义。事实上，物理学的需要正是微积分这些基本思想最初的灵感来源，我们也会经常提及它们的物理解释。不过，我们总会先用精确的数学形式定义这些思想，并从数学问题的角度讨论它们的意义。"
+        },
+        {
+          "id": "p149-b4",
+          "source": "The collection of all functions exhibits such diversity that there is almost no hope of discovering any interesting general properties pertaining to all. Because continuous functions form such a restricted class, we might expect to find some nontrivial theorems pertaining to them, and the sudden abundance of theorems after Chapter 6 shows that this expectation is justified. But the most interesting and most powerful results about functions will be obtained only when we restrict our attention even further, to functions which have even greater claim to be called “reasonable,” which are even better behaved than most continuous functions.",
+          "sourceSha256": "0192c4b5c588ce8bcd402d04dfc9f7dee1f34de2e1342c42565b884b8a7ef8c5",
+          "translation": "全体函数所表现出的多样性如此之大，以至于几乎没有希望发现适用于所有函数的任何有趣的一般性质。连续函数形成了一个受到相当限制的类别，因此我们可以期望找到一些关于它们的非平凡定理；第 6 章以后定理突然大量出现，表明这一期望是有根据的。然而，只有进一步缩小研究范围，考察那些更有资格被称为“合理的”、比大多数连续函数表现得还要好的函数，我们才能获得关于函数的最有趣、最有力的结果。"
+        },
+        {
+          "id": "p149-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"480 1052 803 305\" role=\"img\" aria-label=\"Figure 1\"><defs><clipPath id=\"ch9-fig1-crop\"><path d=\"M480 1052H1283V1357H582V1332H480Z\"/></clipPath></defs><image href=\"pages/book/0168.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\" clip-path=\"url(#ch9-fig1-crop)\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "e8ffe3b3f8ad5bd687f593b884e50248ef35e9d065d06eafa047c97a636781dd"
+        },
+        {
+          "id": "p149-b6",
+          "source": "Figure 1 illustrates certain types of misbehavior which continuous functions can display. The graphs of these functions are “bent” at $(0,0)$, unlike the graph of Figure 2, where it is possible to draw a “tangent line” at each point. The quotation marks have been used to avoid the suggestion that we have defined “bent” or",
+          "sourceSha256": "e9833e4856f929ab066fa2e27fbf5bf112994614e2fd509bca75f3b6fdb25641",
+          "translation": "图 1 展示了连续函数可能表现出的几种不良行为。这些函数的图像在 $(0,0)$ 处是“弯折的”，与图 2 的图像不同；在图 2 中，每一点处都可以画出一条“切线”。这里使用引号，是为了避免让人以为我们已经定义了“弯折的”或"
+        },
+        {
+          "id": "p149-b7",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:346px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 1273 346 211\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0168.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "baa9093d83989974e69889b1ebfac3e195534962b23fd239d3ca30f3ecc6d9fa"
+        }
+      ]
+    },
+    {
+      "printed": 150,
+      "sourceSha256": "7adf8ab65077fed035cc813119e0d2c6d2b1693f4fb337413ec07ef187993935",
+      "blocks": [
+        {
+          "id": "p150-b1",
+          "source": "“tangent line,” although we are suggesting that the graph might be “bent” at a point where a “tangent line” cannot be drawn. You have probably already noticed that a tangent line cannot be defined as a line which intersects the graph only once—such a definition would be both too restrictive and too permissive. With such a definition, the straight line shown in Figure 3 would not be a tangent line to the graph in that picture, while the parabola would have two tangent lines at each point (Figure 4), and the three functions in Figure 5 would have more than one tangent line at the points where they are “bent.”",
+          "sourceSha256": "adf6e978688ee9733297e4d86cdb7b395149326ff9037babbb7ff0aa45c90a03",
+          "translation": "“切线”，尽管我们是在暗示：在无法画出“切线”的点处，图像可能是“弯折的”。你大概已经注意到，不能把切线定义为只与图像相交一次的直线——这样的定义既过于严格，又过于宽松。按这样的定义，图 3 中画出的直线就不是该图像的切线，而抛物线在每一点处都会有两条切线（图 4），图 5 中的三个函数也会在它们“弯折”的点处有不止一条切线。"
+        },
+        {
+          "id": "p150-b2",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:369px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 115 369 264\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0169.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "ecb0d2b955f6d81e0b25514815ce7905089c98db1a7f0fa93e839b1c8c67aaa5"
+        },
+        {
+          "id": "p150-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:309px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 528 309 268\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0169.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "a30a8b8cc6ed03b481838179cc63443bd34bb3fc9b678668b6adf88c8a15ebf1"
+        },
+        {
+          "id": "p150-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"479 446 729 235\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0169.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "3efbc14bb48e0da0da7561853d076c26aab0fffdf7ab5ceb7dee9972f1c65bae"
+        },
+        {
+          "id": "p150-b5",
+          "source": "A more promising approach to the definition of a tangent line might start with “secant lines,” and use the notion of limits. If $h\\ne0$, then the two distinct points $(a,f(a))$ and $(a+h,f(a+h))$ determine, as in Figure 6, a straight line whose slope is",
+          "sourceSha256": "def3bdcfb0d9c77d288b69ab67d10e483a15f7bc697f0b16d0feea8f2b320afa",
+          "translation": "定义切线的一种更有希望的办法，是从“割线”出发，运用极限的概念。如果 $h\\ne0$，那么两个不同的点 $(a,f(a))$ 和 $(a+h,f(a+h))$ 就确定一条直线，如图 6 所示，其斜率为"
+        },
+        {
+          "id": "p150-b6",
+          "source": "$$\\frac{f(a+h)-f(a)}h.$$",
+          "sourceSha256": "c515a61644764e3e2b4f95858866f3b321152237f4f562ae4198da15c6575ebe"
+        },
+        {
+          "id": "p150-b7",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:541px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"480 1017 541 357\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0169.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 6</figcaption>\n</figure>",
+          "sourceSha256": "9c36d06901dff1ea2096e198570006a4ed166a334af3e76971271712bb25d582"
+        },
+        {
+          "id": "p150-b8",
+          "source": "As Figure 7 illustrates, the “tangent line” at $(a,f(a))$ seems to be the limit, in some sense, of these “secant lines,” as $h$ approaches $0$. We have never before talked about a “limit” of lines, but we can talk about the limit of their slopes: the",
+          "sourceSha256": "9428ae3870adf5ece147f0b9d7580d8c9e1b98e6c4a1200bf389447b0aedd144",
+          "translation": "如图 7 所示，$(a,f(a))$ 处的“切线”似乎是在 $h$ 趋于 $0$ 时，这些“割线”在某种意义下的极限。我们以前从未谈过直线的“极限”，但可以谈论它们斜率的极限：经过"
+        }
+      ]
+    },
+    {
+      "printed": 151,
+      "sourceSha256": "c09afe2ded9fe5d3fbffae6778e22e0400cb78abfaa8dee440b201625e5c1626",
+      "blocks": [
+        {
+          "id": "p151-b1",
+          "source": "slope of the tangent line through $(a,f(a))$ should be",
+          "sourceSha256": "3f01365413dcbac60004725f4f592aa31252cabd36271989469cf9e91260ac36",
+          "translation": "$(a,f(a))$ 的切线，其斜率应该是"
+        },
+        {
+          "id": "p151-b2",
+          "source": "$$\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h.$$",
+          "sourceSha256": "a7d3e1abd255a7e50f9123fd2c39a899c7842165385db2c1d76f728b132dd6a8"
+        },
+        {
+          "id": "p151-b3",
+          "source": "We are ready for a definition, and some comments.",
+          "sourceSha256": "734ef605b7955d719766bca24d1668bf387bb15b43271d3f69ba5306a8672617",
+          "translation": "现在可以给出一个定义，并作几点说明了。"
+        },
+        {
+          "id": "p151-b4",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p151-b5",
+          "source": "The function $f$ is **differentiable at** $a$ if",
+          "sourceSha256": "ed0e7ccbb151758d7d5b61ae4935c880e70704db52d5a3aa6bb8c7a04e8ba974",
+          "translation": "如果下述极限存在，就称函数 $f$ **在 $a$ 处可微**："
+        },
+        {
+          "id": "p151-b6",
+          "source": "$$\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h\\text{ exists.}$$",
+          "sourceSha256": "d89a9586dd3f4f908319677406f080922f14ffd6975e9b8bf167a3551c1f5c78"
+        },
+        {
+          "id": "p151-b7",
+          "source": "In this case the limit is denoted by **$f'(a)$** and is called the **derivative of $f$ at $a$**. (We also say that $f$ is **differentiable** if $f$ is differentiable at $a$ for every $a$ in the domain of $f$.)",
+          "sourceSha256": "bc2adb3f511700d7e084886b9d0cdec010361c2b48fc688b0ae244f8b47fe8c3",
+          "translation": "在这种情形下，把该极限记作 **$f'(a)$**，称为 **$f$ 在 $a$ 处的导数**。（如果 $f$ 的定义域中的每一个 $a$ 都满足 $f$ 在 $a$ 处可微，我们也称 $f$ 是**可微的**。）"
+        },
+        {
+          "id": "p151-b8",
+          "source": "The first comment on our definition is really an addendum; we define the **tangent line** to the graph of $f$ at $(a,f(a))$ to be the line through $(a,f(a))$ with slope $f'(a)$. This means that the tangent line at $(a,f(a))$ is defined only if $f$ is differentiable at $a$.",
+          "sourceSha256": "83478c058ab0fda0da763f005a41be582bd410605cb201212898714b7061c0fa",
+          "translation": "关于定义的第一点说明，其实是一个补充定义：我们把函数 $f$ 的图像在 $(a,f(a))$ 处的**切线**定义为经过 $(a,f(a))$、斜率为 $f'(a)$ 的直线。这意味着，只有在 $f$ 于 $a$ 处可微时，才定义 $(a,f(a))$ 处的切线。"
+        },
+        {
+          "id": "p151-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:399px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 443 399 363\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0170.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 7</figcaption>\n</figure>",
+          "sourceSha256": "dac637603a6ef048b329797a9359eaf822f4ddd0cad312360b3127cefe1d9b4e"
+        },
+        {
+          "id": "p151-b10",
+          "source": "The second comment refers to notation. The symbol $f'(a)$ is certainly reminiscent of functional notation. In fact, for any function $f$, we denote by $f'$ the function whose domain is the set of all numbers $a$ such that $f$ is differentiable at $a$, and whose value at such a number $a$ is",
+          "sourceSha256": "c1a9cffabeaa8c500b0857bbaebb0284d95879caff725ed3082de060e5626a89",
+          "translation": "第二点说明涉及记号。符号 $f'(a)$ 显然让人联想到函数记号。事实上，对于任意函数 $f$，我们用 $f'$ 表示这样一个函数：它的定义域是所有使 $f$ 在 $a$ 处可微的数 $a$ 所组成的集合，它在这样的数 $a$ 处的值为"
+        },
+        {
+          "id": "p151-b11",
+          "source": "$$\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h.$$",
+          "sourceSha256": "a7d3e1abd255a7e50f9123fd2c39a899c7842165385db2c1d76f728b132dd6a8"
+        },
+        {
+          "id": "p151-b12",
+          "source": "(To be very precise: $f'$ is the collection of all pairs",
+          "sourceSha256": "117cb0b50d06741796c2b81937cd7d8453f0e2d50d25703b2582c239823b4c8c",
+          "translation": "（说得十分精确些：$f'$ 是所有如下数对组成的集合，"
+        },
+        {
+          "id": "p151-b13",
+          "source": "$$\\left(a,\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h\\right)$$",
+          "sourceSha256": "cb6ba7558b51e95edd26ad0d65765ff2af36b40dba547896228c2912cf1aeb35"
+        },
+        {
+          "id": "p151-b14",
+          "source": "for which $\\lim_{h\\to0}[f(a+h)-f(a)]/h$ exists.) The function $f'$ is called the **derivative** of $f$.",
+          "sourceSha256": "1116a630a13843b881c19cd9f8c8d7753af7220ce0fa99a8d2a7fa1782df5b58",
+          "translation": "其中 $\\lim_{h\\to0}[f(a+h)-f(a)]/h$ 存在。）函数 $f'$ 称为 $f$ 的**导函数**。"
+        },
+        {
+          "id": "p151-b15",
+          "source": "Our third comment, somewhat longer than the previous two, refers to the physical interpretation of the derivative. Consider a particle which is moving along a straight line (Figure 8(a)) on which we have chosen an “origin” point $O$, and a direction in which distances from $O$ shall be written as positive numbers, the distance from $O$ of points in the other direction being written as negative numbers. Let $s(t)$ denote the distance of the particle from $O$, at time $t$. The suggestive notation $s(t)$ has been chosen purposely; since a distance $s(t)$ is determined for each",
+          "sourceSha256": "a01211300d076935838df80a00cfcbae9803992f642bd8d08d4ce196c3a26b2d",
+          "translation": "第三点说明比前两点稍长，涉及导数的物理解释。考虑一个沿直线运动的质点（图 8(a)）。在这条直线上，我们选定一个“原点” $O$，并选定一个方向，把该方向上各点到 $O$ 的距离记为正数，而把另一方向上各点到 $O$ 的距离记为负数。令 $s(t)$ 表示时刻 $t$ 质点到 $O$ 的距离。我们有意选择了富有暗示性的记号 $s(t)$；因为距离 $s(t)$ 对于每一个"
+        },
+        {
+          "id": "p151-b16",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:558px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"620 1336 558 169\" role=\"img\" aria-label=\"Figure 8(a)\"><image href=\"pages/book/0170.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 8(a)</figcaption>\n</figure>",
+          "sourceSha256": "d4fe567664ab2caf104269edae7715ee3427788b6ca8c3aae5d88a1754d59943"
+        }
+      ]
+    },
+    {
+      "printed": 152,
+      "sourceSha256": "b04e82f87cb2088f28559bfdab4a4b3debb83292c24c86150636edb534c08fdf",
+      "blocks": [
+        {
+          "id": "p152-b1",
+          "source": "number $t$, the physical situation automatically supplies us with a certain function $s$. The graph of $s$ indicates the distance of the particle from $O$, on the vertical axis, in terms of the time, indicated on the horizontal axis (Figure 8(b)).",
+          "sourceSha256": "64a20a0f5dfaca759bc82b7fc0be5796a1379a4def0c61e58eea712bb3e9f16e",
+          "translation": "数 $t$ 都是确定的，所以这个物理情境自动给出了一个函数 $s$。$s$ 的图像用纵轴表示质点到 $O$ 的距离，用横轴表示时间，展示距离与时间的关系（图 8(b)）。"
+        },
+        {
+          "id": "p152-b2",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:397px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 154 397 263\" role=\"img\" aria-label=\"Figure 8(b)\"><image href=\"pages/book/0171.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 8(b)</figcaption>\n</figure>",
+          "sourceSha256": "1c70b2944400c341ebdb0baf261049021983f556e0aa8a33740e4dd05141b278"
+        },
+        {
+          "id": "p152-b3",
+          "source": "The quotient",
+          "sourceSha256": "2fab36385843386b9237487c3eb463f05b877da01b3787b41c10feed285fcf46",
+          "translation": "商"
+        },
+        {
+          "id": "p152-b4",
+          "source": "$$\\frac{s(a+h)-s(a)}h$$",
+          "sourceSha256": "650d3e360e2c261f3e0018eeac2fa816c2cb801ccaef070d0796fc2799893f26"
+        },
+        {
+          "id": "p152-b5",
+          "source": "has a natural physical interpretation. It is the “average velocity” of the particle during the time interval from $a$ to $a+h$. For any particular $a$, this average speed depends on $h$, of course. On the other hand, the limit",
+          "sourceSha256": "8799696fa9ac4be7ae5e76ee901e2d638681d6edd481fbcb6586c9bc4625d53c",
+          "translation": "有一个自然的物理解释。它是质点在从 $a$ 到 $a+h$ 这段时间内的“平均速度”。当然，对于任意给定的 $a$，这个平均速度依赖于 $h$。另一方面，极限"
+        },
+        {
+          "id": "p152-b6",
+          "source": "$$\\lim_{h\\to0}\\frac{s(a+h)-s(a)}h$$",
+          "sourceSha256": "ba5cb1acb370b537e3e387c8834dc03bc55ecbeb01a65c3c1277f4164c841ed1"
+        },
+        {
+          "id": "p152-b7",
+          "source": "depends only on $a$ (as well as the particular function $s$) and there are important physical reasons for considering this limit. We would like to speak of the “velocity of the particle at time $a$,” but the usual definition of velocity is really a definition of average velocity; the only reasonable definition of “velocity at time $a$” (so-called “instantaneous velocity”) is the limit",
+          "sourceSha256": "551842b71d80ae2d59b39a8987ee96b2a0291a1f2d66d5f7035a921e74ef7ac4",
+          "translation": "只依赖于 $a$（当然还依赖于特定的函数 $s$），而且考虑这个极限有重要的物理理由。我们希望谈论“质点在时刻 $a$ 的速度”，但通常的速度定义实际上定义的是平均速度；“时刻 $a$ 的速度”（所谓“瞬时速度”）唯一合理的定义，就是极限"
+        },
+        {
+          "id": "p152-b8",
+          "source": "$$\\lim_{h\\to0}\\frac{s(a+h)-s(a)}h.$$",
+          "sourceSha256": "65b5fed4141482ecc4cda0844a42660953133a5d1f917879bc43611b93ad783a"
+        },
+        {
+          "id": "p152-b9",
+          "source": "Thus we *define* the **(instantaneous) velocity** of the particle at $a$ to be $s'(a)$. Notice that $s'(a)$ could easily be negative; the absolute value $|s'(a)|$ is sometimes called the **(instantaneous) speed**.",
+          "sourceSha256": "c3a8bfcbec586fa221ce7bda73b77a489323daa44d967c7bf2d0fa83bf26970c",
+          "translation": "因此，我们把质点在 $a$ 时刻的**（瞬时）速度** *定义*为 $s'(a)$。注意，$s'(a)$ 完全可能是负数；其绝对值 $|s'(a)|$ 有时称为**（瞬时）速率**。"
+        },
+        {
+          "id": "p152-b10",
+          "source": "It is important to realize that instantaneous velocity is a theoretical concept, an abstraction which does not correspond precisely to any observable quantity. While it would not be fair to say that instantaneous velocity has nothing to do with average velocity, remember that $s'(t)$ is not",
+          "sourceSha256": "b5b7e0465d55157adc0838fbd6c295dacf8823bb570c11b6e8f49851070dc546",
+          "translation": "必须认识到，瞬时速度是一个理论概念，是一种抽象，并不精确对应于任何可观测的量。虽然说瞬时速度与平均速度毫无关系并不公允，但请记住，$s'(t)$ 并不等于"
+        },
+        {
+          "id": "p152-b11",
+          "source": "$$\\frac{s(t+h)-s(t)}h$$",
+          "sourceSha256": "4fcac94957b7a3131f0a50a4766ff0f3a2904fc914070391c801936846d7ff88"
+        },
+        {
+          "id": "p152-b12",
+          "source": "for any particular $h$, but merely the limit of these average velocities as $h$ approaches $0$. Thus, when velocities are measured in physics, what a physicist really measures is an average velocity over some (very small) time interval; such a procedure cannot be expected to give an exact answer, but this is really no defect, because physical measurements can never be exact anyway.",
+          "sourceSha256": "ec60299d3bc32b7f02e3b6561a8e5854dd8e7413cd6fad11dbaf28e721101631",
+          "translation": "上述商在任何某个 $h$ 处的值，它只是这些平均速度在 $h$ 趋于 $0$ 时的极限。因此，物理学家测量速度时，实际测得的是某个（很小的）时间间隔内的平均速度；不能指望这样的过程给出精确答案，但这其实并不是缺陷，因为物理测量本来就不可能精确。"
+        },
+        {
+          "id": "p152-b13",
+          "source": "The velocity of a particle is often called the “rate of change of its position.” This notion of the derivative, as a rate of change, applies to any other physical situation in which some quantity varies with time. For example, the “rate of change of mass” of a growing object means the derivative of the function $m$, where $m(t)$ is the mass at time $t$.",
+          "sourceSha256": "725fa651994068df75308bc0666c4f06b6de16df1f5e0489c547675c7c762af8",
+          "translation": "质点的速度常被称为它的“位置的变化率”。把导数看作变化率的这一观念，也适用于任何某个量随时间变化的其他物理情境。例如，一个生长着的物体的“质量变化率”，指的是函数 $m$ 的导数，其中 $m(t)$ 是时刻 $t$ 的质量。"
+        },
+        {
+          "id": "p152-b14",
+          "source": "In order to become familiar with the basic definitions of this chapter, we will spend quite some time examining the derivatives of particular functions. Before proving the important theoretical results of Chapter 11, we want to have a good idea of what the derivative of a function looks like. The next chapter is devoted exclusively to one aspect of this problem—calculating the derivative of complicated functions. In this chapter we will emphasize the concepts, rather than the",
+          "sourceSha256": "2cb1a65d40e5e4bd99e373c867b606cd6ec3cc1a729c38a23974fb42911102ed",
+          "translation": "为了熟悉本章的基本定义，我们将花相当多的时间考察一些具体函数的导数。在证明第 11 章的重要理论结果之前，我们希望对函数的导数是什么样子有充分的了解。下一章将专门讨论这个问题的一个方面——计算复杂函数的导数。本章则通过考察几个简单例子，侧重于概念，而不是"
+        }
+      ]
+    },
+    {
+      "printed": 153,
+      "sourceSha256": "1fec7ff85c8c95c1e2e4f49ae2f03b0870f671aa680ca5b30a2abf1348ef63ff",
+      "blocks": [
+        {
+          "id": "p153-b1",
+          "source": "calculations, by considering a few simple examples. Simplest of all is a constant function, $f(x)=c$. In this case",
+          "sourceSha256": "e907025e23467a2d0760a467ccea947ea154eaa60882571004e438f7109c63b7",
+          "translation": "计算。最简单的是常数函数 $f(x)=c$。在这种情况下，"
+        },
+        {
+          "id": "p153-b2",
+          "source": "$$\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h=\\lim_{h\\to0}\\frac{c-c}h=0.$$",
+          "sourceSha256": "b62d72760d3a835f04b8885e3d723c58d3a75d7dc2856f10c9bdef8b0ce06c48"
+        },
+        {
+          "id": "p153-b3",
+          "source": "Thus $f$ is differentiable at $a$ for every number $a$, and $f'(a)=0$. This means that the tangent line to the graph of $f$ always has slope $0$, so the tangent line always coincides with the graph.",
+          "sourceSha256": "9d35924fbfd29bad7e64278ca228f2e0c08c6734cc8be8db0845092521dd22eb",
+          "translation": "因此，对每个数 $a$，$f$ 都在 $a$ 处可微，并且 $f'(a)=0$。这意味着，$f$ 的图像的切线斜率总是 $0$，所以切线总与图像重合。"
+        },
+        {
+          "id": "p153-b4",
+          "source": "Constant functions are not the only ones whose graphs coincide with their tangent lines—this happens for any linear function $f(x)=cx+d$. Indeed",
+          "sourceSha256": "eb8bee073553a0bf479d288f32cc103c1f747e75d45e1afcf7df4254247f9d3f",
+          "translation": "图像与其切线重合的函数并不只有常数函数——任何线性函数 $f(x)=cx+d$ 都如此。事实上，"
+        },
+        {
+          "id": "p153-b5",
+          "source": "$$\\begin{aligned}\nf'(a)&=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h\\\\\n&=\\lim_{h\\to0}\\frac{c(a+h)+d-[ca+d]}h\\\\\n&=\\lim_{h\\to0}\\frac{ch}h=c;\n\\end{aligned}$$",
+          "sourceSha256": "587fa9d68b827ce40538eb5ce58d296ed6c5d7b8ef38e08f5a585541b4c76a69"
+        },
+        {
+          "id": "p153-b6",
+          "source": "the slope of the tangent line is $c$, the same as the slope of the graph of $f$.",
+          "sourceSha256": "207466f361039ba24ffa31f8d0d8378e75cba8e9d6e88e3d5b1e96edd446c107",
+          "translation": "切线的斜率是 $c$，与 $f$ 的图像的斜率相同。"
+        },
+        {
+          "id": "p153-b7",
+          "source": "A refreshing difference occurs for $f(x)=x^2$. Here",
+          "sourceSha256": "7c6183d4f72f0afee178b7d2f0764eb14def29cefbc69eae9e3f4b525f511f8f",
+          "translation": "对于 $f(x)=x^2$，情况终于有了令人耳目一新的变化。此时，"
+        },
+        {
+          "id": "p153-b8",
+          "source": "$$\\begin{aligned}\nf'(a)&=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h\\\\\n&=\\lim_{h\\to0}\\frac{(a+h)^2-a^2}h\\\\\n&=\\lim_{h\\to0}\\frac{a^2+2ah+h^2-a^2}h\\\\\n&=\\lim_{h\\to0}2a+h\\\\\n&=2a.\n\\end{aligned}$$",
+          "sourceSha256": "8cb8c968750e6a7737c3db6bd44423af24f67d969558c4ea04889b056cd3c986"
+        },
+        {
+          "id": "p153-b9",
+          "source": "Some of the tangent lines to the graph of $f$ are shown in Figure 9. In this picture each tangent line appears to intersect the graph only once, and this fact can be checked fairly easily: Since the tangent line through $(a,a^2)$ has slope $2a$, it is the graph of the function",
+          "sourceSha256": "0e86c3975ce68709aabefad4d16c1042ce9f8e8df5cca1067552f7a7dfeb64cc",
+          "translation": "图 9 画出了 $f$ 的图像的几条切线。在这幅图中，每条切线似乎都只与图像相交一次，这一事实也很容易验证：经过 $(a,a^2)$ 的切线斜率为 $2a$，因此它是下列函数的图像："
+        },
+        {
+          "id": "p153-b10",
+          "source": "$$\\begin{aligned}g(x)&=2a(x-a)+a^2\\\\&=2ax-a^2.\\end{aligned}$$",
+          "sourceSha256": "1ef87e48846c511cab2fc47940760ba472f900064c19bf0773197054756f2460"
+        },
+        {
+          "id": "p153-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:406px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 787 406 375\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0172.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 9</figcaption>\n</figure>",
+          "sourceSha256": "15b69f43d1d666b63cbd455e8a506deab6fc914501db53d1b2bca3241a23a387"
+        },
+        {
+          "id": "p153-b12",
+          "source": "Now, if the graphs of $f$ and $g$ intersect at a point $(x,f(x))=(x,g(x))$, then",
+          "sourceSha256": "98d414b292687bea4a87972a3d5e8242e479d3090d140076744c2a3a259c87db",
+          "translation": "现在，如果 $f$ 和 $g$ 的图像在点 $(x,f(x))=(x,g(x))$ 处相交，那么"
+        },
+        {
+          "id": "p153-b13",
+          "source": "$$\\begin{aligned}\n&x^2=2ax-a^2\\\\\n\\text{or}\\quad &x^2-2ax+a^2=0;\\\\\n\\text{so}\\quad &(x-a)^2=0\\\\\n\\text{or}\\quad &x=a.\n\\end{aligned}$$",
+          "sourceSha256": "6d5352c36194a9b585fbf900d0c2552cc624760024e785111a7bdd26541dfed5"
+        },
+        {
+          "id": "p153-b14",
+          "source": "In other words, $(a,a^2)$ is the only point of intersection.",
+          "sourceSha256": "b6e4028cd9b60d4f0ed7197e30aeea9bb89b25667cfd228b34679b1580b61c99",
+          "translation": "换句话说，$(a,a^2)$ 是唯一的交点。"
+        }
+      ]
+    },
+    {
+      "printed": 154,
+      "sourceSha256": "0d62e3b20ba01ef7bb63e4fe988cbbe14b833d6b0d10db5214948eac2bcb348c",
+      "blocks": [
+        {
+          "id": "p154-b1",
+          "source": "The function $f(x)=x^2$ happens to be quite special in this regard; usually a tangent line will intersect the graph more than once. Consider, for example, the function $f(x)=x^3$. In this case",
+          "sourceSha256": "f77ee2078ffd3473fef8fc62c809bdbfdba785ec27f193b2b682c03479a524ff",
+          "translation": "函数 $f(x)=x^2$ 在这一点上碰巧很特殊；通常，一条切线会与图像相交不止一次。例如，考虑函数 $f(x)=x^3$。此时，"
+        },
+        {
+          "id": "p154-b2",
+          "source": "$$\\begin{aligned}\nf'(a)&=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h\\\\\n&=\\lim_{h\\to0}\\frac{(a+h)^3-a^3}h\\\\\n&=\\lim_{h\\to0}\\frac{a^3+3a^2h+3ah^2+h^3-a^3}h\\\\\n&=\\lim_{h\\to0}\\frac{3a^2h+3ah^2+h^3}h\\\\\n&=\\lim_{h\\to0}3a^2+3ah+h^2\\\\\n&=3a^2.\n\\end{aligned}$$",
+          "sourceSha256": "18d35fb08042a57124ea3a417987e5f5a69816bc2a57f6d19f60c6dfd8613567"
+        },
+        {
+          "id": "p154-b3",
+          "source": "Thus the tangent line to the graph of $f$ at $(a,a^3)$ has slope $3a^2$. This means that the tangent line is the graph of",
+          "sourceSha256": "c7aa2eae8958589157cd20c1233c93ac68ba7e1bdbbc77e465e7d31dc227ce5e",
+          "translation": "因此，$f$ 的图像在 $(a,a^3)$ 处的切线斜率为 $3a^2$。这意味着，该切线是下列函数的图像："
+        },
+        {
+          "id": "p154-b4",
+          "source": "$$\\begin{aligned}g(x)&=3a^2(x-a)+a^3\\\\&=3a^2x-2a^3.\\end{aligned}$$",
+          "sourceSha256": "1446c2642642fe902505c8ee7123296f4a04e97e1268f2d0a82b330d1533c495"
+        },
+        {
+          "id": "p154-b5",
+          "source": "The graphs of $f$ and $g$ intersect at the point $(x,f(x))=(x,g(x))$ when",
+          "sourceSha256": "e5ae8a45b820948764cddd41844b130d4462220c98a0e06a2fab929893667802",
+          "translation": "$f$ 和 $g$ 的图像在点 $(x,f(x))=(x,g(x))$ 处相交，当且仅当"
+        },
+        {
+          "id": "p154-b6",
+          "source": "$$\\begin{aligned}&x^3=3a^2x-2a^3\\\\\\text{or}\\quad&x^3-3a^2x+2a^3=0.\\end{aligned}$$",
+          "sourceSha256": "04445df2f42e1249f003326637ebd0affd83b50749e935101b317fa77dec1f5c"
+        },
+        {
+          "id": "p154-b7",
+          "source": "This equation is easily solved if we remember that one solution of the equation has got to be $x=a$, so that $(x-a)$ is a factor of the left side; the other factor can then be found by dividing. We obtain",
+          "sourceSha256": "b27cd170ed4399f02b23295a6dacdb72cc571e502c85e4e76d8ddee8f531411b",
+          "translation": "只要记住，这个方程必定有一个解 $x=a$，因而 $(x-a)$ 是左边的一个因子，就很容易解出这个方程；另一个因子可以用除法求得。于是得到"
+        },
+        {
+          "id": "p154-b8",
+          "source": "$$(x-a)(x^2+ax-2a^2)=0.$$",
+          "sourceSha256": "99b98dd9312df20706917aeb69a95431915444db8f83deb16805b48f3c29bf7c"
+        },
+        {
+          "id": "p154-b9",
+          "source": "It so happens that $x^2+ax-2a^2$ also has $x-a$ as a factor; we obtain finally",
+          "sourceSha256": "6de91127fd0c08e11aebe43af5811d2298ffa4460e6fc8295574e5984f866409",
+          "translation": "恰好 $x^2+ax-2a^2$ 也有因子 $x-a$；最终得到"
+        },
+        {
+          "id": "p154-b10",
+          "source": "$$(x-a)(x-a)(x+2a)=0.$$",
+          "sourceSha256": "8d5eef20a679000a4abf49d02f41462655fd782ce1a2421368716c2ee210f7fb"
+        },
+        {
+          "id": "p154-b11",
+          "source": "Thus, as illustrated in Figure 10, the tangent line through $(a,a^3)$ also intersects the graph at the point $(-2a,-8a^3)$. These two points are always distinct, except when $a=0$.",
+          "sourceSha256": "b331587bda8ec7cba985f28453db477dec3a93770109390676954dbc9bb4e743",
+          "translation": "因此，如图 10 所示，经过 $(a,a^3)$ 的切线还在点 $(-2a,-8a^3)$ 处与图像相交。除 $a=0$ 的情形外，这两个点总是不同的。"
+        },
+        {
+          "id": "p154-b12",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:415px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 1037 415 401\" role=\"img\" aria-label=\"Figure 10\"><image href=\"pages/book/0174.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 10</figcaption>\n</figure>",
+          "sourceSha256": "14012a9a53147a9a2fec93459f372c47cbfb45eb1ad7ea8918c6804272dd47d3"
+        },
+        {
+          "id": "p154-b13",
+          "source": "We have already found the derivative of sufficiently many functions to illustrate the classical, and still very popular, notation for derivatives. For a given function $f$, the derivative $f'$ is often denoted by",
+          "sourceSha256": "046e57b77f9d44d34f1a56cb86dcf28ce9a1c90bafe2cc2993acb3d4b075ffb6",
+          "translation": "我们已经求出了足够多的函数的导数，可以用来说明一种经典的、至今仍很流行的导数记号。对于给定的函数 $f$，其导函数 $f'$ 常记为"
+        },
+        {
+          "id": "p154-b14",
+          "source": "$$\\frac{df(x)}{dx}.$$",
+          "sourceSha256": "8976931e1c08cd3f92fa9164268fed809c3999100f83a3c1571ce1f1186fe8ba"
+        },
+        {
+          "id": "p154-b15",
+          "source": "For example, the symbol",
+          "sourceSha256": "717c1dffed6de36c7a91f6104aff3baf0cf54dd3b65811bf93ad36521b977ac0",
+          "translation": "例如，符号"
+        },
+        {
+          "id": "p154-b16",
+          "source": "$$\\frac{dx^2}{dx}$$",
+          "sourceSha256": "f36a8583e8812c509181828fd420c91a227b71bac14a7b3a9bfe933421f6ba62"
+        }
+      ]
+    },
+    {
+      "printed": 155,
+      "sourceSha256": "b4366584c58f0180fd5beec4f4547b107c826ad10915d1ec6cf34826f0129455",
+      "blocks": [
+        {
+          "id": "p155-b1",
+          "source": "denotes the derivative of the function $f(x)=x^2$. Needless to say, the separate parts of the expression",
+          "sourceSha256": "e481e03d68dd97130e4e26e338718e777cc7d3f019e63748403b98aad34a8bc5",
+          "translation": "表示函数 $f(x)=x^2$ 的导函数。不用说，表达式"
+        },
+        {
+          "id": "p155-b2",
+          "source": "$$\\frac{df(x)}{dx}$$",
+          "sourceSha256": "584155d69983b7cf211bb7a1986531157f97f8ceccf680f9ee50e57a3990efac"
+        },
+        {
+          "id": "p155-b3",
+          "source": "are not supposed to have any sort of independent existence—the $d$’s are *not* numbers, they *cannot* be canceled, and the entire expression is *not* the quotient of two other numbers “$df(x)$” and “$dx$.” This notation is due to Leibniz (generally considered an independent co-discoverer of calculus, along with Newton), and is affectionately referred to as Leibnizian notation.<sup>*</sup> Although the notation $df(x)/dx$ seems very complicated, in concrete cases it may be shorter; after all, the symbol $dx^2/dx$ is actually more concise than the phrase “the derivative of the function $f(x)=x^2$.”",
+          "sourceSha256": "77cca05a3d94fa5c76b24f694fc80384d89ca4e98539d46303427a0dfcdc2278",
+          "translation": "中的各个部分不应被认为具有任何独立的含义——其中的 $d$ *不是*数，*不能*约去，整个表达式也*不是*另外两个数“$df(x)$”与“$dx$”的商。这套记号出自莱布尼茨（通常认为他与牛顿各自独立发现了微积分），并被亲切地称为莱布尼茨记号。<sup>*</sup> 虽然 $df(x)/dx$ 这个记号看起来很复杂，但在具体情形中反而可能更简短；毕竟，符号 $dx^2/dx$ 确实比“函数 $f(x)=x^2$ 的导函数”这句话更简洁。"
+        },
+        {
+          "id": "p155-b4",
+          "source": "The following formulas state in standard Leibnizian notation all the information that we have found so far:",
+          "sourceSha256": "df8c1b3deec22846f924bca64793cb8f02f87a1e825ef0abceaab14dc193fe41",
+          "translation": "下面这些公式用标准的莱布尼茨记号表述了我们迄今得到的全部结果："
+        },
+        {
+          "id": "p155-b5",
+          "source": "$$\\begin{aligned}\n\\frac{dc}{dx}&=0,\\\\\n\\frac{d(ax+b)}{dx}&=a,\\\\\n\\frac{dx^2}{dx}&=2x,\\\\\n\\frac{dx^3}{dx}&=3x^2.\n\\end{aligned}$$",
+          "sourceSha256": "368d8635df390c81ba0fe4c0ab86dbd47b9e861f24e7b9e3a28b5e1659eab64c"
+        },
+        {
+          "id": "p155-b6",
+          "source": "Although the meaning of these formulas is clear enough, attempts at literal interpretation are hindered by the reasonable stricture that an equation should not contain a function on one side and a number on the other. For example, if the third equation is to be true, then either $df(x)/dx$ must denote $f'(x)$, rather than $f'$, or else $2x$ must denote, not a number, but the function whose value at $x$ is $2x$. It is really impossible to assert that one or the other of these alternatives is intended; in practice $df(x)/dx$ sometimes means $f'$ and sometimes means $f'(x)$, while $2x$ may denote either a number or a function. Because of this ambiguity, most authors are reluctant to denote $f'(a)$ by",
+          "sourceSha256": "d64bdf943e173689783db2c967682bbd9352f13d4910cb6382e146abbd75f417",
+          "translation": "虽然这些公式的意思足够清楚，但若想逐字理解，就会碰到一个合理要求带来的障碍：等式不应一边是函数，另一边却是数。例如，要使第三个等式成立，要么 $df(x)/dx$ 必须表示 $f'(x)$，而不是 $f'$；要么 $2x$ 必须表示一个函数，而不是一个数，这个函数在 $x$ 处的值为 $2x$。实际上，无法断言这里究竟采用了哪一种理解；在使用中，$df(x)/dx$ 有时表示 $f'$，有时表示 $f'(x)$，而 $2x$ 既可能表示一个数，也可能表示一个函数。由于这种歧义，大多数作者不愿把 $f'(a)$ 记为"
+        },
+        {
+          "id": "p155-b7",
+          "source": "$$\\frac{df(x)}{dx}(a);$$",
+          "sourceSha256": "2ccde7ec4119d50f5df4feefce82e0b9d7784b53ca84aa75d7addd08ef282373"
+        },
+        {
+          "id": "p155-b8",
+          "source": "instead $f'(a)$ is usually denoted by the barbaric, but unambiguous, symbol",
+          "sourceSha256": "623148f4f2b0598822f12d353f80c770fa2bb0285aa74117c1ab8f0a4fe07eb6",
+          "translation": "而通常把 $f'(a)$ 记为下面这个粗野、但毫无歧义的符号："
+        },
+        {
+          "id": "p155-b9",
+          "source": "$$\\left.\\frac{df(x)}{dx}\\right|_{x=a}.$$",
+          "sourceSha256": "b989920142a3f1804a34215fc27df42d5553067cd784e21bd70dd876047442fc"
+        },
+        {
+          "id": "p155-b10",
+          "source": "<aside class=\"original-footnote\">",
+          "sourceSha256": "a988ce88c87a15fb3986b485f02072e557038b84df66813596e575c7dd6a397f"
+        },
+        {
+          "id": "p155-b11",
+          "source": "* Leibniz was led to this symbol by his intuitive notion of the derivative, which he considered to be, not the limit of quotients $[f(x+h)-f(x)]/h$, but the “value” of this quotient when $h$ is an “infinitely small” number. This “infinitely small” quantity was denoted by $dx$ and the corresponding “infinitely small” difference $f(x+dx)-f(x)$ by $df(x)$. Although this point of view is impossible to reconcile with properties (P1)–(P13) of the real numbers, some people find this notion of the derivative congenial.",
+          "sourceSha256": "129c6656a16929a04ba7fc4eea488d136c66b7cc9dfc3cbfafee9969f729fbe3",
+          "translation": "* 莱布尼茨之所以采用这个符号，是受他对导数的直观理解所引导。他认为导数不是商 $[f(x+h)-f(x)]/h$ 的极限，而是当 $h$ 为一个“无穷小”数时，这个商的“值”。这个“无穷小”量记作 $dx$，相应的“无穷小”差 $f(x+dx)-f(x)$ 记作 $df(x)$。尽管这种观点无法与实数的性质 (P1)–(P13) 相容，仍有些人觉得这种导数观念很合心意。"
+        },
+        {
+          "id": "p155-b12",
+          "source": "</aside>",
+          "sourceSha256": "0ba5ea9cb632c899daab77879064f3273ebba6af8945f2dfeff764c05af0602a"
+        }
+      ]
+    },
+    {
+      "printed": 156,
+      "sourceSha256": "75d64edcbbacd5598830bfb6254b46bf80c1126eb1b49a239ca9d087728ff962",
+      "blocks": [
+        {
+          "id": "p156-b1",
+          "source": "In addition to these difficulties, Leibnizian notation is associated with one more ambiguity. Although the notation $dx^2/dx$ is absolutely standard, the notation $df(x)/dx$ is often replaced by $df/dx$. This, of course, is in conformity with the practice of confusing a function with its value at $x$. So strong is this tendency that functions are often indicated by a phrase like the following: “consider the function $y=x^2$.” We will sometimes follow classical practice to the extent of using $y$ as the name of a function, but we will nevertheless carefully distinguish between the function and its values—thus we will always say something like “consider the function (defined by) $y(x)=x^2$.”",
+          "sourceSha256": "527c56b861783215a18e14f9138aed61efac398fd6ac6fec803cbaa223d58350",
+          "translation": "除了上述困难，莱布尼茨记号还伴随着另一种歧义。虽然记号 $dx^2/dx$ 是完全标准的，但记号 $df(x)/dx$ 却经常被 $df/dx$ 代替。当然，这与把函数同它在 $x$ 处的值混淆的惯例是一致的。这种倾向如此强烈，以至于人们经常用这样的话来表示函数：“考虑函数 $y=x^2$。”我们有时会沿用传统做法，用 $y$ 作函数的名称，但仍会仔细区分函数与它的值——因此，我们总会说类似“考虑（由）$y(x)=x^2$（定义的）函数”这样的话。"
+        },
+        {
+          "id": "p156-b2",
+          "source": "Despite the many ambiguities of Leibnizian notation, it is used almost exclusively in older mathematical writing, and is still used very frequently today. The staunchest opponents of Leibnizian notation admit that it will be around for quite some time, while its most ardent admirers would say that it will be around forever, and a good thing too! In any case, Leibnizian notation cannot be ignored completely.",
+          "sourceSha256": "d8ab8150bd0799fb2bf656ddaa2bb4f514f3033b8127a76d5f420305965a6569",
+          "translation": "尽管莱布尼茨记号存在许多歧义，较早的数学著作几乎完全使用这套记号，今天也仍然经常使用。即使是它最坚定的反对者，也承认它还会存在相当长的时间；而它最热情的拥护者则会说，它将永远存在，而且这是件好事！无论如何，莱布尼茨记号不能被完全忽略。"
+        },
+        {
+          "id": "p156-b3",
+          "source": "The policy adopted in this book is to disallow Leibnizian notation within the text, but to include it in the Problems; several chapters contain a few (immediately recognizable) problems which are expressly designed to illustrate the vagaries of Leibnizian notation. Trusting that these problems will provide ample practice in this notation, we return to our basic task of examining some simple examples of derivatives.",
+          "sourceSha256": "63416c2da6766fe00a6c4047a0f7214cba6c109576d0c1d26a571721c98d55a2",
+          "translation": "本书采取的方针是：正文不用莱布尼茨记号，但习题中会用；有几章包含一些（一眼就能认出的）习题，专门展示莱布尼茨记号的种种变幻。相信这些习题能让你充分练习这套记号之后，我们回到基本任务：考察导数的几个简单例子。"
+        },
+        {
+          "id": "p156-b4",
+          "source": "The few functions examined so far have all been differentiable. To fully appreciate the significance of the derivative it is equally important to know some examples of functions which are *not* differentiable. The obvious candidates are the three functions first discussed in this chapter, and illustrated in Figure 1; if they turn out to be differentiable at $0$ something has clearly gone wrong.",
+          "sourceSha256": "a8bb2f526dff810c8449ef9078a1e9318f93d9c533752a189f489e269b341fd1",
+          "translation": "到目前为止考察过的几个函数都是可微的。要充分理解导数的意义，了解一些*不可微*函数的例子同样重要。显而易见的候选者，就是本章最初讨论、并在图 1 中画出的那三个函数；如果它们在 $0$ 处竟然可微，那么显然有什么地方出了问题。"
+        },
+        {
+          "id": "p156-b5",
+          "source": "Consider first $f(x)=|x|$. In this case",
+          "sourceSha256": "496fd7690608673d5648cb967ce0d7220b02d0c1a2c7a362f0348b66735d7663",
+          "translation": "先考虑 $f(x)=|x|$。此时，"
+        },
+        {
+          "id": "p156-b6",
+          "source": "$$\\frac{f(0+h)-f(0)}h=\\frac{|h|}h.$$",
+          "sourceSha256": "8c808a3e1f6ea8823d0abbae45f52f3035e1e7ac542b4fbb9a929f3bcd52c914"
+        },
+        {
+          "id": "p156-b7",
+          "source": "Now $|h|/h=1$ for $h>0$, and $|h|/h=-1$ for $h<0$. This shows that",
+          "sourceSha256": "a9d033f705cecf70e3fe5514cc9ce4d4351cd2a06ad624802ebbea654e142f73",
+          "translation": "当 $h>0$ 时，$|h|/h=1$；当 $h<0$ 时，$|h|/h=-1$。这说明"
+        },
+        {
+          "id": "p156-b8",
+          "source": "$$\\lim_{h\\to0}\\frac{f(h)-f(0)}h\\text{ does not exist.}$$",
+          "sourceSha256": "e723bf145e5c0b389a20b9f585e0ad8b02c8f0d8b7b776e7cf1ba95faa3a64ce"
+        },
+        {
+          "id": "p156-b9",
+          "source": "In fact,",
+          "sourceSha256": "90ced0fe770d15d08b7f5ae0c4b0d8f2948a47d8b05ba3d298a98775f273c8eb",
+          "translation": "事实上，"
+        },
+        {
+          "id": "p156-b10",
+          "source": "$$\\begin{aligned}\n&\\lim_{h\\to0^+}\\frac{f(h)-f(0)}h=1\\\\\n\\text{and}\\quad&\\lim_{h\\to0^-}\\frac{f(h)-f(0)}h=-1.\n\\end{aligned}$$",
+          "sourceSha256": "22fa7a6b7aba11eeab662b7574d22ae2a6cf060f8097ebd643d7c5051621ebc7"
+        },
+        {
+          "id": "p156-b11",
+          "source": "(These two limits are sometimes called the **right-hand derivative** and the **left-hand derivative**, respectively, of $f$ at $0$.)",
+          "sourceSha256": "6727b767d5063015ae40f7e54824089957229d8ac08ded62f098bcef8ecce939",
+          "translation": "（这两个极限有时分别称为 $f$ 在 $0$ 处的**右导数**和**左导数**。）"
+        }
+      ]
+    },
+    {
+      "printed": 157,
+      "sourceSha256": "8a7f6de7589f8e0c98490dd5b4958d704ba38bd7c32567bd312033b5c57ff2d8",
+      "blocks": [
+        {
+          "id": "p157-b1",
+          "source": "If $a\\ne0$, then $f'(a)$ does exist. In fact,",
+          "sourceSha256": "758aff5174348f0332650115d81758b8eb4e58a0e6fb466f69116b9190d51ebc",
+          "translation": "如果 $a\\ne0$，那么 $f'(a)$ 确实存在。事实上，"
+        },
+        {
+          "id": "p157-b2",
+          "source": "$$\\begin{aligned}f'(x)&=1&&\\text{if }x>0,\\\\f'(x)&=-1&&\\text{if }x<0.\\end{aligned}$$",
+          "sourceSha256": "63ad37caa8330e0afbf52082ec95246fb706b2f2689d9977805622e3d21309fc"
+        },
+        {
+          "id": "p157-b3",
+          "source": "The proof of this fact is left to you (it is easy if you remember the derivative of a linear function). The graphs of $f$ and of $f'$ are shown in Figure 11.",
+          "sourceSha256": "bbb2d53aa45b5fc74b36843ef15e6b8b1d40261ce9b8ca6668b7a6f28f8c8c1d",
+          "translation": "这一事实的证明留给你完成（只要记得线性函数的导数，就很容易）。图 11 画出了 $f$ 和 $f'$ 的图像。"
+        },
+        {
+          "id": "p157-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:250px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"40 132 250 401\" role=\"img\" aria-label=\"Figure 11\"><image href=\"pages/book/0176.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 11</figcaption>\n</figure>",
+          "sourceSha256": "7f8d22f4aa89ef41483d3e38a315814ad52ee308747e9982757862c5a2f2fbf9"
+        },
+        {
+          "id": "p157-b5",
+          "source": "For the function",
+          "sourceSha256": "41eb1abb4c37506f531376b11b14cc9d8d819a1972d36c8eaca77b06968e707f",
+          "translation": "对于函数"
+        },
+        {
+          "id": "p157-b6",
+          "source": "$$f(x)=\\begin{cases}x^2,&x\\le0\\\\x,&x\\ge0,\\end{cases}$$",
+          "sourceSha256": "c8dc0c1b41d997af1ac27fd39fe51d4a7d24b543da892121116e77b0b0a2ef66"
+        },
+        {
+          "id": "p157-b7",
+          "source": "a similar difficulty arises in connection with $f'(0)$. We have",
+          "sourceSha256": "94e51ad5da81bcf4aea3c0a7a17f41a36449555bc48e31b3862ac2c78b17625e",
+          "translation": "在考察 $f'(0)$ 时会遇到类似的困难。我们有"
+        },
+        {
+          "id": "p157-b8",
+          "source": "$$\\frac{f(h)-f(0)}h=\\begin{cases}\\dfrac{h^2}h=h,&h<0\\\\[6pt]\\dfrac hh=1,&h>0.\\end{cases}$$",
+          "sourceSha256": "6a70bbef1f38e1dfcfe162ff2a6efec00888c0c0480be18615cb51ad5ae89c2c"
+        },
+        {
+          "id": "p157-b9",
+          "source": "Therefore,",
+          "sourceSha256": "875038257bcbbe2d6a85dec6e2757ab7635b070911bbef2968c8d33cc9d8b01d",
+          "translation": "因此，"
+        },
+        {
+          "id": "p157-b10",
+          "source": "$$\\begin{aligned}&\\lim_{h\\to0^-}\\frac{f(h)-f(0)}h=0,\\\\\\text{but}\\quad&\\lim_{h\\to0^+}\\frac{f(h)-f(0)}h=1.\\end{aligned}$$",
+          "sourceSha256": "952769926ba8786f807f084992fc255b174ea858558784f7521b7de0f5a1a3f2"
+        },
+        {
+          "id": "p157-b11",
+          "source": "Thus $f'(0)$ does not exist; $f$ is not differentiable at $0$. Once again, however, $f'(x)$ exists for $x\\ne0$—it is easy to see that",
+          "sourceSha256": "9450c120b176d85cb13804fc70882ad8ebca7e3bd6586a15d998410bb952c217",
+          "translation": "所以 $f'(0)$ 不存在；$f$ 在 $0$ 处不可微。不过，$x\\ne0$ 时 $f'(x)$ 仍然存在——很容易看出"
+        },
+        {
+          "id": "p157-b12",
+          "source": "$$f'(x)=\\begin{cases}2x,&x<0\\\\1,&x>0.\\end{cases}$$",
+          "sourceSha256": "930f3184fda15a58057d28d9c6519a874cb60253f402cc3834191cfb1039e572"
+        },
+        {
+          "id": "p157-b13",
+          "source": "The graphs of $f$ and $f'$ are shown in Figure 12.",
+          "sourceSha256": "bdd1f3db712eb49372005ed1dae398bd01c2cc1728d60e0c36e1db174ad22eee",
+          "translation": "图 12 画出了 $f$ 和 $f'$ 的图像。"
+        },
+        {
+          "id": "p157-b14",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:239px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 592 239 544\" role=\"img\" aria-label=\"Figure 12\"><image href=\"pages/book/0176.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 12</figcaption>\n</figure>",
+          "sourceSha256": "02d43b23f0b9bdf0c03bab8758fcf3cc851ea1b2d37b38aabbaccc051c5afa63"
+        },
+        {
+          "id": "p157-b15",
+          "source": "Even worse things happen for $f(x)=\\sqrt{|x|}$. For this function",
+          "sourceSha256": "27d39961dbea705a6e107734bcaeb7e65e38424819724149c596f3e6251a25c5",
+          "translation": "对于 $f(x)=\\sqrt{|x|}$，情况更加糟糕。对于这个函数，"
+        },
+        {
+          "id": "p157-b16",
+          "source": "$$\\frac{f(h)-f(0)}h=\\begin{cases}\\dfrac{\\sqrt h}h=\\dfrac1{\\sqrt h},&h>0\\\\[6pt]\\dfrac{\\sqrt{-h}}h=-\\dfrac1{\\sqrt{-h}},&h<0.\\end{cases}$$",
+          "sourceSha256": "b87e0bdac769a148a9f88a636090790b4d5fb7aad96a1d30147ec41ba4f693b8"
+        },
+        {
+          "id": "p157-b17",
+          "source": "In this case the right-hand limit",
+          "sourceSha256": "f081db31a77979dab8bebda0cc6ffd1937b4b99ae00338c3ef6aba2b0eaede79",
+          "translation": "此时右侧极限"
+        },
+        {
+          "id": "p157-b18",
+          "source": "$$\\lim_{h\\to0^+}\\frac{f(h)-f(0)}h=\\lim_{h\\to0^+}\\frac1{\\sqrt h}$$",
+          "sourceSha256": "f2665767c8b6565eb8043473376f9922fb7d79967ad1d8d062746ce69991770a"
+        },
+        {
+          "id": "p157-b19",
+          "source": "does not exist; instead $1/\\sqrt h$ becomes arbitrarily large as $h$ approaches $0$. And, what’s more, $-1/\\sqrt{-h}$ becomes arbitrarily large in absolute value, but *negative* (Figure 13).",
+          "sourceSha256": "421aaf38f373ae260cb93aee2d6344a065ea8c5de9191274cd22f8d182cc61b3",
+          "translation": "不存在；相反，当 $h$ 趋于 $0$ 时，$1/\\sqrt h$ 会任意增大。而且，$-1/\\sqrt{-h}$ 的绝对值也会任意增大，但它是*负的*（图 13）。"
+        },
+        {
+          "id": "p157-b20",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:459px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"32 1237 459 289\" role=\"img\" aria-label=\"Figure 13\"><image href=\"pages/book/0176.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 13</figcaption>\n</figure>",
+          "sourceSha256": "607810e25dda4253f7068730d52456f6db312b642e75882264bb94a6b5af59b0"
+        }
+      ]
+    },
+    {
+      "printed": 158,
+      "sourceSha256": "4b78705cbfce7456c4bcd53600f9cbe1c505bb629f1cb171072cb4f328257e4f",
+      "blocks": [
+        {
+          "id": "p158-b1",
+          "source": "The function $f(x)=\\sqrt[3]x$, although not differentiable at $0$, is at least a little better behaved than this. The quotient",
+          "sourceSha256": "85985f5fe1877861b696c0e9725a55fad63ec73da3792c9f5249c93d94bdee0d",
+          "translation": "函数 $f(x)=\\sqrt[3]x$ 虽然在 $0$ 处不可微，但至少表现得稍好一些。商"
+        },
+        {
+          "id": "p158-b2",
+          "source": "$$\\frac{f(h)-f(0)}h=\\frac{\\sqrt[3]h}h=\\frac{h^{1/3}}h=\\frac1{h^{2/3}}=\\frac1{(\\sqrt[3]h)^2}$$",
+          "sourceSha256": "d36a13a448ecf1a3750347d167bfa5dfa71e1fd05ca2b3c1c95e75c088083e9a"
+        },
+        {
+          "id": "p158-b3",
+          "source": "simply becomes arbitrarily large as $h$ goes to $0$. Sometimes one says that $f$ has an “infinite” derivative at $0$. Geometrically this means that the graph of $f$ has a “tangent line” which is parallel to the vertical axis (Figure 14). Of course, $f(x)=-\\sqrt[3]x$ has the same geometric property, but one would say that $f$ has a derivative of “negative infinity” at $0$.",
+          "sourceSha256": "3b125b5647db1588a9a41dbcb11b502de6198961a630d524f4aa7b7d25174149",
+          "translation": "只是在 $h$ 趋于 $0$ 时任意增大。有时我们说，$f$ 在 $0$ 处有一个“无穷大”的导数。从几何上说，这意味着 $f$ 的图像有一条平行于纵轴的“切线”（图 14）。当然，$f(x)=-\\sqrt[3]x$ 具有相同的几何性质，但我们会说，$f$ 在 $0$ 处的导数为“负无穷大”。"
+        },
+        {
+          "id": "p158-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:457px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"31 107 457 366\" role=\"img\" aria-label=\"Figure 14\"><image href=\"pages/book/0177.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 14</figcaption>\n</figure>",
+          "sourceSha256": "e390a38d0fd0d1bb7b5008b86734c3f6d654dcaf6678ab9e5581c9f214c2db06"
+        },
+        {
+          "id": "p158-b5",
+          "source": "Remember that differentiability is supposed to be an improvement over mere continuity. This idea is supported by the many examples of functions which are continuous, but not differentiable; however, one important point remains to be noted:",
+          "sourceSha256": "11285bc59cd9b37fffcaa5e562db01719c55bc8fc01e71c5861efc2e84202e13",
+          "translation": "请记住，可微性应该是对单纯连续性的进一步加强。许多连续但不可微的函数例子支持了这一想法；不过，还有一个重要之处需要指出："
+        },
+        {
+          "id": "p158-b6",
+          "source": "**THEOREM 1**",
+          "sourceSha256": "2b6c6f1cd8500f04785734eb53e38fae29cf7651dd2ba301e21cef75e224df22",
+          "translation": "**定理 1**"
+        },
+        {
+          "id": "p158-b7",
+          "source": "If $f$ is differentiable at $a$, then $f$ is continuous at $a$.",
+          "sourceSha256": "eca7fa1820bcf7095506681c0bf3548bd36a6577683fbfe8cdcf763cf1efd109",
+          "translation": "如果 $f$ 在 $a$ 处可微，那么 $f$ 在 $a$ 处连续。"
+        },
+        {
+          "id": "p158-b8",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p158-b9",
+          "source": "$$\\begin{aligned}\n\\lim_{h\\to0}f(a+h)-f(a)&=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h\\cdot h\\\\\n&=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h\\cdot\\lim_{h\\to0}h\\\\\n&=f'(a)\\cdot0\\\\\n&=0.\n\\end{aligned}$$",
+          "sourceSha256": "d4bacd7003ca7a4d7e52d28834ea8a6275b8a71a9f221a8b4cd307701e1c83e0"
+        },
+        {
+          "id": "p158-b10",
+          "source": "As we pointed out in Chapter 5, the equation $\\lim_{h\\to0}f(a+h)-f(a)=0$ is equivalent to $\\lim_{x\\to a}f(x)=f(a)$; thus $f$ is continuous at $a$. $\\blacksquare$",
+          "sourceSha256": "cc808bcf4bdbca11a47605cc5e3a2bfa4e310306379da13f06153aef69beed93",
+          "translation": "正如我们在第 5 章中指出的，等式 $\\lim_{h\\to0}f(a+h)-f(a)=0$ 等价于 $\\lim_{x\\to a}f(x)=f(a)$；因此 $f$ 在 $a$ 处连续。$\\blacksquare$"
+        },
+        {
+          "id": "p158-b11",
+          "source": "It is very important to remember Theorem 1, and just as important to remember that the converse is not true. A differentiable function is continuous, but a continuous function need not be differentiable (keep in mind the function $f(x)=|x|$, and you will never forget which statement is true and which false).",
+          "sourceSha256": "905217b02b13abc36a1b2b8f0c856941a6d2cd1952ee6e62c64f9dfa8916e4e4",
+          "translation": "牢记定理 1 非常重要；同样重要的是，要记住其逆命题不成立。可微函数是连续的，但连续函数未必可微（记住函数 $f(x)=|x|$，你就永远不会弄错哪一个命题为真、哪一个为假）。"
+        },
+        {
+          "id": "p158-b12",
+          "source": "The continuous functions examined so far have been differentiable at all points with at most one exception, but it is easy to give examples of continuous functions which are not differentiable at several points, even an infinite number (Figure 15). Actually, one can do much worse than this. There is a function which is *continuous*",
+          "sourceSha256": "1f7e62320705ffff023647d6e5e903f13501f24c11fdfc88db4285bffb1ab9fc",
+          "translation": "到目前为止考察过的连续函数，除至多一个点之外，在所有点处都可微；但很容易举出在几个点、甚至无穷多个点处不可微的连续函数（图 15）。实际上，情况还可能糟糕得多：存在一个函数，它*处处连续，*"
+        },
+        {
+          "id": "p158-b13",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"491 1271 792 185\" role=\"img\" aria-label=\"Figure 15\"><image href=\"pages/book/0177.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n</figure>",
+          "sourceSha256": "4078c45924f109be0236dd980f8d279cf353efdcba74900644b07773cd400092"
+        }
+      ]
+    },
+    {
+      "printed": 159,
+      "sourceSha256": "abb6d581cae5db469553cc5b70e290fbe783175575b47b6c0bfc9e9885bac485",
+      "blocks": [
+        {
+          "id": "p159-b1",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"340 159 865 777\" role=\"img\" aria-label=\"Figure 16\"><image href=\"pages/book/0178.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 16</figcaption>\n</figure>",
+          "sourceSha256": "25a8cf8136f67632cc138a5ef88c7b8a3fcf519627b17fefd9c9f8d2200c1d98"
+        },
+        {
+          "id": "p159-b2",
+          "source": "*everywhere and differentiable nowhere!* Unfortunately, the definition of this function will be inaccessible to us until Chapter 24, and I have been unable to persuade the artist to draw it (consider carefully what the graph should look like and you will sympathize with her point of view). It is possible to draw some rough approximations to the graph, however; several successively better approximations are shown in Figure 16.",
+          "sourceSha256": "2f0bd9384932752d52d61e218dcdaaeacedb695ea5deb37bddfa80718fbf0496",
+          "translation": "*却处处不可微！*遗憾的是，直到第 24 章我们才能接触这个函数的定义；而我一直没能说服绘图师把它画出来（仔细想想这个图像应该是什么样子，你就会同情她的立场）。不过，还是可以画出这个图像的一些粗略近似；图 16 给出了几个依次越来越好的近似图像。"
+        },
+        {
+          "id": "p159-b3",
+          "source": "Although such spectacular examples of nondifferentiability must be postponed, we can, with a little ingenuity, find a continuous function which is not differentiable at infinitely many points, *all of which are in* $[0,1]$. One such function is illustrated in Figure 17. The reader is given the problem of defining it precisely; it is a straight line version of the function",
+          "sourceSha256": "6b7accddaac047e66c7904b6fd0c6b7fd5125a3f2f7655a02e7c97f0e0e33018",
+          "translation": "尽管这样惊人的不可微例子必须推迟讨论，只要稍微动点脑筋，我们仍能找到一个在无穷多个点处不可微、而且*这些点全都在* $[0,1]$ *内*的连续函数。图 17 展示了一个这样的函数。把它精确定义出来的问题留给读者；它是下面这个函数的折线版本："
+        },
+        {
+          "id": "p159-b4",
+          "source": "$$f(x)=\\begin{cases}x\\sin\\dfrac1x,&x\\ne0\\\\[4pt]0,&x=0.\\end{cases}$$",
+          "sourceSha256": "732aa9cd3ddc09824449e8bf4ef8b013cc74da35115ab480e67fa7db19077629"
+        },
+        {
+          "id": "p159-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:400px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 1133 400 362\" role=\"img\" aria-label=\"Figure 17\"><image href=\"pages/book/0178.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 17</figcaption>\n</figure>",
+          "sourceSha256": "bfd1ab8bfd5bec7488891e42edfe89747741ca1ce41e326ee839394d7877a729"
+        },
+        {
+          "id": "p159-b6",
+          "source": "This particular function $f$ is itself quite sensitive to the question of differentiability. Indeed, for $h\\ne0$ we have",
+          "sourceSha256": "cece04978a7f51a11e3a4a1dc13ffde3fe88e54de6da246da726f94e1ffc009f",
+          "translation": "这个具体的函数 $f$ 本身，在可微性问题上也颇为微妙。事实上，当 $h\\ne0$ 时，我们有"
+        }
+      ]
+    },
+    {
+      "printed": 160,
+      "sourceSha256": "e1e05f5b799ec6497dfc4a0048f98f8376f2f09b39ba8b3a6a4b3d99acee5f5f",
+      "blocks": [
+        {
+          "id": "p160-b1",
+          "source": "$$\\frac{f(h)-f(0)}h=\\frac{h\\sin\\dfrac1h-0}h=\\sin\\frac1h.$$",
+          "sourceSha256": "a6ea2bc839b7201eecde3eca8a5d979b789f7cc949dd96f9e26f9269c7c669ca"
+        },
+        {
+          "id": "p160-b2",
+          "source": "Long ago we proved that $\\lim_{h\\to0}\\sin1/h$ does not exist, so $f$ is not differentiable at $0$. Geometrically, one can see that a tangent line cannot exist, by noting that the secant line through $(0,0)$ and $(h,f(h))$ in Figure 18 can have any slope between $-1$ and $1$, no matter how small we require $h$ to be.",
+          "sourceSha256": "9f8eb44e04236ebd410179a4d26a8930611248edfcd681a962287559789309a7",
+          "translation": "很久以前我们就证明过，$\\lim_{h\\to0}\\sin1/h$ 不存在，所以 $f$ 在 $0$ 处不可微。从几何上也能看出切线不可能存在：图 18 中经过 $(0,0)$ 和 $(h,f(h))$ 的割线，无论把 $h$ 限制得多么小，其斜率都可以取 $-1$ 与 $1$ 之间的任何值。"
+        },
+        {
+          "id": "p160-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:618px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"479 435 618 352\" role=\"img\" aria-label=\"Figure 18\"><image href=\"pages/book/0179.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 18</figcaption>\n</figure>",
+          "sourceSha256": "a0afd201b75583f6f676a1b9b4b1a675c134b70e497aec77fdd33b18ff0d2a85"
+        },
+        {
+          "id": "p160-b4",
+          "source": "This finding represents something of a triumph; although continuous, the function $f$ seems somehow quite unreasonable, and we can now enunciate one mathematically undesirable feature of this function—it is not differentiable at $0$. Nevertheless, one should not become too enthusiastic about the criterion of differentiability. For example, the function",
+          "sourceSha256": "a84023a22f16d977d34474cf7f43142c4c350a45be9d19a93874f12fb86586a2",
+          "translation": "这个发现多少算得上一个胜利；函数 $f$ 虽然连续，却总显得很不合理，而现在我们能够明确说出它在数学上的一个不良特征——它在 $0$ 处不可微。不过，对可微性这一标准也不应过于热衷。例如，函数"
+        },
+        {
+          "id": "p160-b5",
+          "source": "$$g(x)=\\begin{cases}x^2\\sin\\dfrac1x,&x\\ne0\\\\[4pt]0,&x=0\\end{cases}$$",
+          "sourceSha256": "605cc48d8134936460bf3a443c359b2b3bdb0bdac2fd3712979b5063e715ea5a"
+        },
+        {
+          "id": "p160-b6",
+          "source": "*is* differentiable at $0$; in fact $g'(0)=0$:",
+          "sourceSha256": "8f6f521bab75f935430e45c7297dd6539a4f8301ed35a68bc5481190f0d1006d",
+          "translation": "在 $0$ 处*确实*可微；事实上，$g'(0)=0$："
+        },
+        {
+          "id": "p160-b7",
+          "source": "$$\\begin{aligned}\n\\lim_{h\\to0}\\frac{g(h)-g(0)}h&=\\lim_{h\\to0}\\frac{h^2\\sin\\dfrac1h}h\\\\\n&=\\lim_{h\\to0}h\\sin\\frac1h\\\\\n&=0.\n\\end{aligned}$$",
+          "sourceSha256": "020d51dc8ffe7f60b8b42bdebc1c403bc9ce46be038877c562840057300be3ab"
+        },
+        {
+          "id": "p160-b8",
+          "source": "The tangent line to the graph of $g$ at $(0,0)$ is therefore the horizontal axis (Figure 19).",
+          "sourceSha256": "eaff76b8c467d9909c7f1659afa4d59fbda777840af1571ca98d66e5ae52b7db",
+          "translation": "因此，$g$ 的图像在 $(0,0)$ 处的切线就是横轴（图 19）。"
+        },
+        {
+          "id": "p160-b9",
+          "source": "This example suggests that we should seek even more restrictive conditions on a function than mere differentiability. We can actually use the derivative to formulate such conditions if we introduce other definitions, the last ones in this chapter.",
+          "sourceSha256": "376414c3f3765b2d18e268b80acb0a45f5d626c3b49c4d24adb480c5883baa1b",
+          "translation": "这个例子表明，我们应当为函数寻找比单纯可微更严格的条件。只要引入另外几个定义——本章最后的几个定义——我们实际上就能用导数来表述这样的条件。"
+        }
+      ]
+    },
+    {
+      "printed": 161,
+      "sourceSha256": "d8cc39363eb8e4e9c306334abb11203519f1c96e793ce7749df2744910d02581",
+      "blocks": [
+        {
+          "id": "p161-b1",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:509px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"456 146 509 319\" role=\"img\" aria-label=\"Figure 19\"><image href=\"pages/book/0180.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 19</figcaption>\n</figure>",
+          "sourceSha256": "7e5680b57a2fb53b4aa52b66fb4aba085c35ec5a5d8df7078655e7b09459df47"
+        },
+        {
+          "id": "p161-b2",
+          "source": "For any function $f$, we obtain, by taking the derivative, a new function $f'$ (whose domain may be considerably smaller than that of $f$). The notion of differentiability can be applied to the function $f'$, of course, yielding another function $(f')'$, whose domain consists of all points $a$ such that $f'$ is differentiable at $a$. The function $(f')'$ is usually written simply $f''$ and is called the **second derivative** of $f$. If $f''(a)$ exists, then $f$ is said to be $2$-times differentiable at $a$, and the number $f''(a)$ is called the **second derivative of $f$ at $a$**.",
+          "sourceSha256": "5031d226f1caa38cf4ab5fdee26e7b2313542e300041b53dc258d507111ec8df",
+          "translation": "对于任意函数 $f$，求导会得到一个新函数 $f'$（它的定义域可能比 $f$ 的定义域小得多）。当然，可微性的概念也可以应用于函数 $f'$，从而得到另一个函数 $(f')'$；它的定义域由所有满足 $f'$ 在 $a$ 处可微的点 $a$ 组成。函数 $(f')'$ 通常简记为 $f''$，称为 $f$ 的**二阶导函数**。如果 $f''(a)$ 存在，就说 $f$ 在 $a$ 处 $2$ 次可微，并把数 $f''(a)$ 称为 **$f$ 在 $a$ 处的二阶导数**。"
+        },
+        {
+          "id": "p161-b3",
+          "source": "In physics the second derivative is particularly important. If $s(t)$ is the position at time $t$ of a particle moving along a straight line, then $s''(t)$ is called the **acceleration** at time $t$. Acceleration plays a special role in physics, because, as stated in Newton’s laws of motion, the force on a particle is the product of its mass and its acceleration. Consequently you can feel the second derivative when you sit in an accelerating car.",
+          "sourceSha256": "3c64aaeada9ded03405a0cc41275ff586e56aacc5beed7c9e8b66faac0b3ae51",
+          "translation": "二阶导数在物理学中特别重要。如果 $s(t)$ 是沿直线运动的质点在时刻 $t$ 的位置，那么 $s''(t)$ 就称为时刻 $t$ 的**加速度**。加速度在物理学中具有特殊地位，因为牛顿运动定律指出，质点所受的力等于它的质量与加速度的乘积。因此，当你坐在一辆正在加速的汽车里时，你可以感受到二阶导数。"
+        },
+        {
+          "id": "p161-b4",
+          "source": "There is no reason to stop at the second derivative—we can define $f'''=(f'')'$, $f''''=(f''')'$, etc. This notation rapidly becomes unwieldy, so the following abbreviation is usually adopted (it is really a recursive definition):",
+          "sourceSha256": "5616df2b03bd632dec9e035a4e79852a13e07423859ce79a2a5b0aed3f6bed9c",
+          "translation": "没有理由止步于二阶导数——我们还可以定义 $f'''=(f'')'$、$f''''=(f''')'$ 等等。这套记号很快就会变得难以使用，因此通常采用下述简写（它实际上是一个递归定义）："
+        },
+        {
+          "id": "p161-b5",
+          "source": "$$\\begin{aligned}f^{(1)}&=f',\\\\f^{(k+1)}&=(f^{(k)})'.\\end{aligned}$$",
+          "sourceSha256": "b25af2904c0d809efd5399531b803f19c8d53c6d4bf4f069c16704b6c9dc3dd5"
+        },
+        {
+          "id": "p161-b6",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "因此，"
+        },
+        {
+          "id": "p161-b7",
+          "source": "$$\\begin{aligned}\nf^{(1)}&=f'\\\\\nf^{(2)}&=f''=(f')',\\\\\nf^{(3)}&=f'''=(f'')',\\\\\nf^{(4)}&=f''''=(f''')',\\\\\n&\\text{etc.}\n\\end{aligned}$$",
+          "sourceSha256": "ef2a308a894b2fa4b8d2951147071c0754aaeed80c4a58bfb000f747a9ab6664"
+        },
+        {
+          "id": "p161-b8",
+          "source": "The various functions $f^{(k)}$, for $k\\ge2$, are sometimes called **higher-order derivatives** of $f$.",
+          "sourceSha256": "44f2152eb8195821414844eaf328cb9d50eaf3c17c7c9c89072e30a7feff8f95",
+          "translation": "当 $k\\ge2$ 时，各个函数 $f^{(k)}$ 有时称为 $f$ 的**高阶导函数**。"
+        },
+        {
+          "id": "p161-b9",
+          "source": "Usually, we resort to the notation $f^{(k)}$ only for $k\\ge4$, but it is convenient to have $f^{(k)}$ defined for smaller $k$ also. In fact, a reasonable definition can be made for $f^{(0)}$, namely,",
+          "sourceSha256": "83fd421df514dce5542f4015adf0355ccee720ebbc3c31e0b1eb2ef1db2768ca",
+          "translation": "通常只有在 $k\\ge4$ 时，我们才使用记号 $f^{(k)}$；不过，对较小的 $k$ 也定义 $f^{(k)}$，会很方便。事实上，还可以对 $f^{(0)}$ 给出一个合理的定义，即"
+        },
+        {
+          "id": "p161-b10",
+          "source": "$$f^{(0)}=f.$$",
+          "sourceSha256": "931259c884ced0f465fee8c86b7b340e7b1383f74f1b490f18c0e235c520c9b8"
+        }
+      ]
+    },
+    {
+      "printed": 162,
+      "sourceSha256": "fbdaba90ccbd2209a1caf04cc7f7606547902cb70edbeb522765bd879c125382",
+      "blocks": [
+        {
+          "id": "p162-b1",
+          "source": "Leibnizian notation for higher-order derivatives should also be mentioned. The natural Leibnizian symbol for $f''(x)$, namely,",
+          "sourceSha256": "2c23019b5b38ea54c03ce8d10e6634da13a93d9e37ddb0b6e29283e022dc3e92",
+          "translation": "也应当提及高阶导数的莱布尼茨记号。表示 $f''(x)$ 的自然的莱布尼茨符号，即"
+        },
+        {
+          "id": "p162-b2",
+          "source": "$$\\frac{d\\left(\\dfrac{df(x)}{dx}\\right)}{dx},$$",
+          "sourceSha256": "614fbb9e94b3f411eaaf07aea12f9996f58691e60e0f197bbe63b2680f2fe377"
+        },
+        {
+          "id": "p162-b3",
+          "source": "is abbreviated to",
+          "sourceSha256": "a0a0969ee2c02b84655fda5f3b4c1cde22a252f97eea8b14f4c4255c7140bf08",
+          "translation": "被简写为"
+        },
+        {
+          "id": "p162-b4",
+          "source": "$$\\frac{d^2f(x)}{(dx)^2},\\qquad\\text{or more frequently to}\\qquad\\frac{d^2f(x)}{dx^2}.$$",
+          "sourceSha256": "9997e0020bbb612fb3ece1ae7cf71aadf71ca6ae0b4b519f7a2763a70601db10"
+        },
+        {
+          "id": "p162-b5",
+          "source": "Similar notation is used for $f^{(k)}(x)$.",
+          "sourceSha256": "bdf0b5d24d09f3c8546a2acd8b50eababa00d1726d5929cdafe90807891954ac",
+          "translation": "对 $f^{(k)}(x)$ 也使用类似的记号。"
+        },
+        {
+          "id": "p162-b6",
+          "source": "The following example illustrates the notation $f^{(k)}$, and also shows, in one very simple case, how various higher-order derivatives are related to the original function. Let $f(x)=x^2$. Then, as we have already checked,",
+          "sourceSha256": "903e256e3e439bf5dc1bc77a5eb151ed03d8a26b80a6833a98700df9e5ea2734",
+          "translation": "下面的例子说明记号 $f^{(k)}$ 的用法，同时也在一个极简单的情形中展示各阶导函数与原函数的关系。令 $f(x)=x^2$。那么，正如我们已经验证过的，"
+        },
+        {
+          "id": "p162-b7",
+          "source": "$$\\begin{aligned}\nf'(x)&=2x,\\\\\nf''(x)&=2,\\\\\nf'''(x)&=0,\\\\\nf^{(k)}(x)&=0,\\quad\\text{if }k\\ge3.\n\\end{aligned}$$",
+          "sourceSha256": "131fffbd4048792dcf7b967634489dee817c01c623df618d408b27a107d7b6e5"
+        },
+        {
+          "id": "p162-b8",
+          "source": "Figure 20 shows the function $f$, together with its various derivatives.",
+          "sourceSha256": "af7fcef4e3ea975268e5fe43aeaa563582c00921ebd65342aec6efacdb16c219",
+          "translation": "图 20 画出了函数 $f$ 及其各阶导函数。"
+        },
+        {
+          "id": "p162-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:299px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 303 299 1051\" role=\"img\" aria-label=\"Figure 20\"><image href=\"pages/book/0181.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 20</figcaption>\n</figure>",
+          "sourceSha256": "50d416952c6975ce442872f0901a5d916b410339a7e7dac9b7cddbbe085e0107"
+        },
+        {
+          "id": "p162-b10",
+          "source": "A rather more illuminating example is presented by the following function, whose graph is shown in Figure 21(a):",
+          "sourceSha256": "b29992c8ff914eb83d86496c0f785a89fa5916628edcb9fbb280966bdea883d9",
+          "translation": "下面这个函数提供了一个更有启发性的例子，其图像见图 21(a)："
+        },
+        {
+          "id": "p162-b11",
+          "source": "$$f(x)=\\begin{cases}x^2,&x\\ge0\\\\-x^2,&x\\le0.\\end{cases}$$",
+          "sourceSha256": "1ac13993bcb4cfa162c90a37b4fdc1fdb9bc722c3f386324b3aa9512b9d7f6a0"
+        },
+        {
+          "id": "p162-b12",
+          "source": "It is easy to see that",
+          "sourceSha256": "3e61141e188c523c99545880b131cb297ddc559b720330be11d3ba889d57a298",
+          "translation": "很容易看出，"
+        },
+        {
+          "id": "p162-b13",
+          "source": "$$\\begin{aligned}f'(a)&=2a&&\\text{if }a>0,\\\\f'(a)&=-2a&&\\text{if }a<0.\\end{aligned}$$",
+          "sourceSha256": "78340939c1614dfe68bd4bf463d21bbba7473dc3e98d316453d131aa03dd4d56"
+        },
+        {
+          "id": "p162-b14",
+          "source": "Moreover,",
+          "sourceSha256": "e94a545b030ad40d2be07529f588ec2f28b72216234f9c8c6947c48f779a7d2c",
+          "translation": "而且，"
+        },
+        {
+          "id": "p162-b15",
+          "source": "$$\\begin{aligned}f'(0)&=\\lim_{h\\to0}\\frac{f(h)-f(0)}h\\\\&=\\lim_{h\\to0}\\frac{f(h)}h.\\end{aligned}$$",
+          "sourceSha256": "aedc956de7df74e69b83315a424c6badcf8b105139589864944600ed75d02534"
+        },
+        {
+          "id": "p162-b16",
+          "source": "Now",
+          "sourceSha256": "fe18013d93d22f4f2a70344d30c00fe62d2ef29189ae5d25ccbda81fbd9c92b0",
+          "translation": "现在，"
+        },
+        {
+          "id": "p162-b17",
+          "source": "$$\\begin{aligned}\n&\\lim_{h\\to0^+}\\frac{f(h)}h=\\lim_{h\\to0^+}\\frac{h^2}h=0\\\\\n\\text{and}\\quad&\\lim_{h\\to0^-}\\frac{f(h)}h=\\lim_{h\\to0^-}\\frac{-h^2}h=0,\n\\end{aligned}$$",
+          "sourceSha256": "4204fca44b9558cc1d43f17251ffac5d060e809bd5f56318c9551b367608aee4"
+        },
+        {
+          "id": "p162-b18",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p162-b19",
+          "source": "$$f'(0)=\\lim_{h\\to0}\\frac{f(h)}h=0.$$",
+          "sourceSha256": "4f4c2615b6789ca6574962f83f745ea254d43f68e900186d49b1e831e2daa1df"
+        },
+        {
+          "id": "p162-b20",
+          "source": "This information can all be summarized as follows:",
+          "sourceSha256": "83e0c54f11e871b09fc1b1e953d4d853b25993741dcc0b1e05f20cd0e1e3e1c7",
+          "translation": "所有这些结果可以概括如下："
+        },
+        {
+          "id": "p162-b21",
+          "source": "$$f'(x)=2|x|.$$",
+          "sourceSha256": "4b88afab42994b1bc56f0f22f16a2e2a7c2318c15351fc1b3493815986d7bc52"
+        }
+      ]
+    },
+    {
+      "printed": 163,
+      "sourceSha256": "87863009a12bbee0127f8cdf19dbae0e7d2a7aaa91e7309ecbc5a40dbadaade8",
+      "blocks": [
+        {
+          "id": "p163-b1",
+          "source": "It follows that $f''(0)$ does not exist! Existence of the second derivative is thus a rather strong criterion for a function to satisfy. Even a “smooth looking” function like $f$ reveals some irregularity when examined with the second derivative. This suggests that the irregular behavior of the function",
+          "sourceSha256": "3d3ab6ae66f5e0585335a1a67b09c72f9e67929da290c6c19cad9f4248513168",
+          "translation": "由此可见，$f''(0)$ 不存在！因此，二阶导数的存在性是一个相当强的要求。即使像 $f$ 这样“看上去光滑”的函数，用二阶导数考察时也会显露某种不规则性。这提示我们，函数"
+        },
+        {
+          "id": "p163-b2",
+          "source": "$$g(x)=\\begin{cases}x^2\\sin\\dfrac1x,&x\\ne0\\\\[4pt]0,&x=0\\end{cases}$$",
+          "sourceSha256": "605cc48d8134936460bf3a443c359b2b3bdb0bdac2fd3712979b5063e715ea5a"
+        },
+        {
+          "id": "p163-b3",
+          "source": "might also be revealed by the second derivative. At the moment we know that $g'(0)=0$, but we do not know $g'(a)$ for any $a\\ne0$, so it is hopeless to begin computing $g''(0)$. We will return to this question at the end of the next chapter, after we have perfected the technique of finding derivatives.",
+          "sourceSha256": "39dc7e23fb1f57dc9b88676dd0e6a2ca8ffc405adab95ac00d39cc103114168a",
+          "translation": "的不规则行为，也可能通过二阶导数显露出来。目前我们知道 $g'(0)=0$，但对于任何 $a\\ne0$，都还不知道 $g'(a)$，所以根本无从着手计算 $g''(0)$。在下一章末尾，完善求导技巧以后，我们会回到这个问题。"
+        },
+        {
+          "id": "p163-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:367px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 222 367 894\" role=\"img\" aria-label=\"Figure 21\"><image href=\"pages/book/0182.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 21</figcaption>\n</figure>",
+          "sourceSha256": "e2a0e1e47fd4dd57826993ee575eb28070cee69f63242866eb3fb2bafe1a0e95"
+        },
+        {
+          "id": "p163-b5",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p163-b6",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p163-b7",
+          "source": "(a) Prove, working directly from the definition, that if $f(x)=1/x$, then $f'(a)=-1/a^2$, for $a\\ne0$.",
+          "sourceSha256": "ed280e70e268106f33fac3f724375f9533f01cf0e9f7d4130827834badce9a95",
+          "translation": "(a) 直接从定义出发证明：如果 $f(x)=1/x$，那么当 $a\\ne0$ 时，$f'(a)=-1/a^2$。"
+        },
+        {
+          "id": "p163-b8",
+          "source": "(b) Prove that the tangent line to the graph of $f$ at $(a,1/a)$ does not intersect the graph of $f$, except at $(a,1/a)$.",
+          "sourceSha256": "8265414517aa419fabf6454cd70dcf3a88b77b91f87663293b83f06f1efd3389",
+          "translation": "(b) 证明：$f$ 的图像在 $(a,1/a)$ 处的切线，除 $(a,1/a)$ 外不与 $f$ 的图像相交。"
+        },
+        {
+          "id": "p163-b9",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p163-b10",
+          "source": "(a) Prove that if $f(x)=1/x^2$, then $f'(a)=-2/a^3$ for $a\\ne0$.",
+          "sourceSha256": "05478c9075496e223edaf73b1d1f36c696ce03a71d18c4771c4126002ee9391b",
+          "translation": "(a) 证明：如果 $f(x)=1/x^2$，那么当 $a\\ne0$ 时，$f'(a)=-2/a^3$。"
+        },
+        {
+          "id": "p163-b11",
+          "source": "(b) Prove that the tangent line to $f$ at $(a,1/a^2)$ intersects $f$ at one other point, which lies on the opposite side of the vertical axis.",
+          "sourceSha256": "f2109f7584ea2a48d9b6bc365fee0f425dcd278099c9a9a0254366776737f950",
+          "translation": "(b) 证明：$f$ 在 $(a,1/a^2)$ 处的切线还与 $f$ 相交于另一点，该点位于纵轴的另一侧。"
+        },
+        {
+          "id": "p163-b12",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p163-b13",
+          "source": "Prove that if $f(x)=\\sqrt x$, then $f'(a)=1/(2\\sqrt a)$, for $a>0$. (The expression you obtain for $[f(a+h)-f(a)]/h$ will require some algebraic face lifting, but the answer should suggest the right trick.)",
+          "sourceSha256": "8510558970777bc4c51b060bc5cb2db4e373766971df4fbfe5140795f3def1d2",
+          "translation": "证明：如果 $f(x)=\\sqrt x$，那么当 $a>0$ 时，$f'(a)=1/(2\\sqrt a)$。（你得到的 $[f(a+h)-f(a)]/h$ 的表达式需要作些代数上的修饰，但答案应该能提示你该使用什么技巧。）"
+        },
+        {
+          "id": "p163-b14",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p163-b15",
+          "source": "For each natural number $n$, let $S_n(x)=x^n$. Remembering that $S_1'(x)=1$, $S_2'(x)=2x$, and $S_3'(x)=3x^2$, conjecture a formula for $S_n'(x)$. Prove your conjecture. (The expression $(x+h)^n$ may be expanded by the binomial theorem.)",
+          "sourceSha256": "9f1e7995157ee2c5820592d705c1d1be858561665c25010bdaffa27584a2123b",
+          "translation": "对每个自然数 $n$，令 $S_n(x)=x^n$。已知 $S_1'(x)=1$、$S_2'(x)=2x$ 和 $S_3'(x)=3x^2$，请猜想 $S_n'(x)$ 的一个公式，并证明你的猜想。（可以用二项式定理展开表达式 $(x+h)^n$。）"
+        },
+        {
+          "id": "p163-b16",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p163-b17",
+          "source": "Find $f'$ if $f(x)=[x]$.",
+          "sourceSha256": "37d8583a2fb30b5a79697e2d9faa72eae881391f5567791a223ec2860ecbb6fe",
+          "translation": "如果 $f(x)=[x]$，求 $f'$。"
+        },
+        {
+          "id": "p163-b18",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p163-b19",
+          "source": "Prove, starting from the definition (and drawing a picture to illustrate):",
+          "sourceSha256": "4cd2ddfe625cf2eb3e19afb52112ed9482ed883bd28187c402de15b1e4e0a224",
+          "translation": "从定义出发证明（并画图说明）："
+        },
+        {
+          "id": "p163-b20",
+          "source": "(a) if $g(x)=f(x)+c$, then $g'(x)=f'(x)$;",
+          "sourceSha256": "02aac804be89db735bf693d947f722bb1e63160faa2d8fec0f48e3327527d835",
+          "translation": "(a) 如果 $g(x)=f(x)+c$，那么 $g'(x)=f'(x)$；"
+        },
+        {
+          "id": "p163-b21",
+          "source": "(b) if $g(x)=cf(x)$, then $g'(x)=cf'(x)$.",
+          "sourceSha256": "36b3512bc7dd7581a4e4cfa8f1406611ea3265acadd5d991c48c12cbb6c14690",
+          "translation": "(b) 如果 $g(x)=cf(x)$，那么 $g'(x)=cf'(x)$。"
+        },
+        {
+          "id": "p163-b22",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p163-b23",
+          "source": "Suppose that $f(x)=x^3$.",
+          "sourceSha256": "d8def323a3825fb36d2a4fddf92f45ddbe2610a9daf9d0e45716e1646996fefe",
+          "translation": "假设 $f(x)=x^3$。"
+        },
+        {
+          "id": "p163-b24",
+          "source": "(a) What is $f'(9)$, $f'(25)$, $f'(36)$?",
+          "sourceSha256": "6d924332985fd9b2373777c2638a6590fc11e7bd13f9825f13d8cab5d752ef4f",
+          "translation": "(a) $f'(9)$、$f'(25)$、$f'(36)$ 分别是多少？"
+        },
+        {
+          "id": "p163-b25",
+          "source": "(b) What is $f'(3^2)$, $f'(5^2)$, $f'(6^2)$?",
+          "sourceSha256": "b3e39ffe7223b3846a7e2ba512011fe80808f70e971e7961fc5f7c0893e92654",
+          "translation": "(b) $f'(3^2)$、$f'(5^2)$、$f'(6^2)$ 分别是多少？"
+        },
+        {
+          "id": "p163-b26",
+          "source": "(c) What is $f'(a^2)$, $f'(x^2)$?",
+          "sourceSha256": "7721cd9685495a7f274dc054fa28bb8ab8121443800ed9a7a4498714b6570573",
+          "translation": "(c) $f'(a^2)$、$f'(x^2)$ 分别是多少？"
+        },
+        {
+          "id": "p163-b27",
+          "source": "If you do not find this problem silly, you are missing a very important point: $f'(x^2)$ means the derivative of $f$ at the number which we happen to be calling $x^2$; it is *not* the derivative at $x$ of the function $g(x)=f(x^2)$. Just to drive the point home:",
+          "sourceSha256": "c6bd403aca5bd2b8726abd07020403f9606defb4449f17bf00cac930f7818f16",
+          "translation": "如果你不觉得这道题很傻，那么你就漏掉了一个非常重要的要点：$f'(x^2)$ 指的是 $f$ 在那个恰好被我们记作 $x^2$ 的数处的导数；它*不是*函数 $g(x)=f(x^2)$ 在 $x$ 处的导数。为把这一点说透，再问："
+        },
+        {
+          "id": "p163-b28",
+          "source": "(d) For $f(x)=x^3$, compare $f'(x^2)$ and $g'(x)$ where $g(x)=f(x^2)$.",
+          "sourceSha256": "23a9c083e97dc4137f3a3df014b6d5127fd9e3a3f9ef8485de2e9d40469d080d",
+          "translation": "(d) 对于 $f(x)=x^3$，比较 $f'(x^2)$ 与 $g'(x)$，其中 $g(x)=f(x^2)$。"
+        }
+      ]
+    },
+    {
+      "printed": 164,
+      "sourceSha256": "267d0f5724da9cdc594834c5fc3a6dcdfa43ffed9d83c3ff051d4434032832e1",
+      "blocks": [
+        {
+          "id": "p164-b1",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p164-b2",
+          "source": "(a) Suppose $g(x)=f(x+c)$. Prove (starting from the definition) that $g'(x)=f'(x+c)$. Draw a picture to illustrate this. To do this problem you must write out the definitions of $g'(x)$ and $f'(x+c)$ correctly. The purpose of Problem 7 was to convince you that although this problem is easy, it is not an utter triviality, and there is something to prove: you cannot simply put prime marks into the equation $g(x)=f(x+c)$. To emphasize this point:",
+          "sourceSha256": "143b3ca8ea4cb3aa040c8a0d2b7988fb797211ab7e1027c34d62dcdc9a19cd1e",
+          "translation": "(a) 假设 $g(x)=f(x+c)$。从定义出发证明 $g'(x)=f'(x+c)$，并画图说明。要做这道题，你必须正确写出 $g'(x)$ 和 $f'(x+c)$ 的定义。习题 7 的目的，就是使你确信：这道题虽然容易，却并非完全不言自明，仍有东西需要证明；你不能简单地在等式 $g(x)=f(x+c)$ 中添上撇号。为强调这一点，再问："
+        },
+        {
+          "id": "p164-b3",
+          "source": "(b) Prove that if $g(x)=f(cx)$, then $g'(x)=c\\cdot f'(cx)$. Try to see pictorially why this should be true, also.",
+          "sourceSha256": "1ee3a5fe88a76a7b945aa4d23b8bacd979b4dd9555e6722d84d508adddf2c116",
+          "translation": "(b) 证明：如果 $g(x)=f(cx)$，那么 $g'(x)=c\\cdot f'(cx)$。也试着从图像上看出，为什么这个结论应该成立。"
+        },
+        {
+          "id": "p164-b4",
+          "source": "(c) Suppose that $f$ is differentiable and periodic, with period $a$ (i.e., $f(x+a)=f(x)$ for all $x$). Prove that $f'$ is also periodic.",
+          "sourceSha256": "4f9bcfe87cff828b2d7fe893d601398a44c03d771699696c8bda665bf564c406",
+          "translation": "(c) 假设 $f$ 可微且具有周期 $a$（即对所有 $x$，都有 $f(x+a)=f(x)$）。证明 $f'$ 也是周期函数。"
+        },
+        {
+          "id": "p164-b5",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p164-b6",
+          "source": "Find $f'(x)$ and also $f'(x+3)$ in the following cases. Be very methodical, or you will surely slip up somewhere. Consult the answers (after you do the problem, naturally).",
+          "sourceSha256": "b4be62185a150f554573a2049eafc295dc5bbcbbc470427093156c5d82e0b791",
+          "translation": "在下列各情形中，求 $f'(x)$ 和 $f'(x+3)$。务必有条不紊，否则你一定会在某处出错。可以查阅答案（当然是在做完以后）。"
+        },
+        {
+          "id": "p164-b7",
+          "source": "(i) $f(x)=(x+3)^5$.",
+          "sourceSha256": "dfc3dfbd061ddc81cb3589a1b784fc91085e629abb54acdca40b111c850b734e"
+        },
+        {
+          "id": "p164-b8",
+          "source": "(ii) $f(x+3)=x^5$.",
+          "sourceSha256": "eb314c4e1a90fd89e7db6f53f3bc513a98ad718e9f0b91f6501ae14cb1aaf2cc"
+        },
+        {
+          "id": "p164-b9",
+          "source": "(iii) $f(x+3)=(x+5)^7$.",
+          "sourceSha256": "b2c353f8eeaacebd9f97b234e580ac351d7b9929e00fc2361d2c89e95c3a5fdf"
+        },
+        {
+          "id": "p164-b10",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p164-b11",
+          "source": "Find $f'(x)$ if $f(x)=g(t+x)$, and if $f(t)=g(t+x)$. The answers will *not* be the same.",
+          "sourceSha256": "be3723abfecb29f0f67c54406d696544c907f861d1a1120c6dd28322b8917f80",
+          "translation": "分别在 $f(x)=g(t+x)$ 和 $f(t)=g(t+x)$ 的情形下求 $f'(x)$。答案*不会*相同。"
+        },
+        {
+          "id": "p164-b12",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p164-b13",
+          "source": "(a) Prove that Galileo was wrong: if a body falls a distance $s(t)$ in $t$ seconds, and $s'$ is proportional to $s$, then $s$ cannot be a function of the form $s(t)=ct^2$.",
+          "sourceSha256": "ef7c8d7239a940e209d38404843b8ecb8a45b3c667a0bd0c0f0209f2b45ec984",
+          "translation": "(a) 证明伽利略错了：如果一个物体在 $t$ 秒内下落的距离为 $s(t)$，而且 $s'$ 与 $s$ 成正比，那么 $s$ 不可能是形如 $s(t)=ct^2$ 的函数。"
+        },
+        {
+          "id": "p164-b14",
+          "source": "(b) Prove that the following facts are true about $s$ if $s(t)=(a/2)t^2$ (the first fact will show why we switched from $c$ to $a/2$):",
+          "sourceSha256": "ccc026777e8ee10fffa09c180ab8f2e2357be749ff6ee86bd48357cf141db46d",
+          "translation": "(b) 若 $s(t)=(a/2)t^2$，证明关于 $s$ 的下列事实成立（第一条将说明，为什么我们把 $c$ 换成了 $a/2$）："
+        },
+        {
+          "id": "p164-b15",
+          "source": "(i) $s''(t)=a$ (the acceleration is constant).",
+          "sourceSha256": "c9d11eee163e13911bdd0497656164cef992c83531b17f44dd6325dd5f8edaa7",
+          "translation": "(i) $s''(t)=a$（加速度是常数）。"
+        },
+        {
+          "id": "p164-b16",
+          "source": "(ii) $[s'(t)]^2=2as(t)$.",
+          "sourceSha256": "8e85009afb91a5a29c0bcec382adbbde8614c1938147c431270574467fcd2b4f"
+        },
+        {
+          "id": "p164-b17",
+          "source": "(c) If $s$ is measured in feet, the value of $a$ is $32$. How many seconds do you have to get out of the way of a chandelier which falls from a $400$-foot ceiling? If you don’t make it, how fast will the chandelier be going when it hits you? Where was the chandelier when it was moving with half that speed?",
+          "sourceSha256": "b5aad72cd40409e9c2bf2a340b07aa9f348c75c07ea0ce2a255129b54d1aebd1",
+          "translation": "(c) 如果 $s$ 以英尺计量，则 $a$ 的值为 $32$。从 $400$ 英尺高的天花板上掉下一盏吊灯，你有多少秒可以躲开？如果没能躲开，吊灯击中你时的速度有多大？当吊灯以这个速度的一半运动时，它在哪里？"
+        },
+        {
+          "id": "p164-b18",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p164-b19",
+          "source": "Imagine a road on which the speed limit is specified at every single point. In other words, there is a certain function $L$ such that the speed limit $x$ miles from the beginning of the road is $L(x)$. Two cars, $A$ and $B$, are driving along this road; car $A$’s position at time $t$ is $a(t)$, and car $B$’s is $b(t)$.",
+          "sourceSha256": "6654d9d49497c7031d13ff80dd47a00f5dea14e36a984644110da9fd705e0cbc",
+          "translation": "设想一条道路，在其每一个点都规定了限速。换句话说，存在一个函数 $L$，使得距道路起点 $x$ 英里处的限速为 $L(x)$。两辆汽车 $A$ 和 $B$ 沿这条道路行驶；汽车 $A$ 在时刻 $t$ 的位置是 $a(t)$，而汽车 $B$ 的位置是 $b(t)$。"
+        },
+        {
+          "id": "p164-b20",
+          "source": "(a) What equation expresses the fact that car $A$ always travels at the speed limit? (The answer is *not* $a'(t)=L(t)$.)",
+          "sourceSha256": "191d1ce7f36ea74530e536265ddbf31ecc7f84f9d19057009cc05fd7a9545939",
+          "translation": "(a) 用什么方程表示汽车 $A$ 始终按限速行驶？（答案*不是* $a'(t)=L(t)$。）"
+        },
+        {
+          "id": "p164-b21",
+          "source": "(b) Suppose that $A$ always goes at the speed limit, and that $B$’s position at time $t$ is $A$’s position at time $t-1$. Show that $B$ is also going at the speed limit at all times.",
+          "sourceSha256": "39371a52888c8047edc32adba805934ed228f4eb40477178a87354a9e26cffeb",
+          "translation": "(b) 假设 $A$ 始终按限速行驶，而且 $B$ 在时刻 $t$ 的位置，就是 $A$ 在时刻 $t-1$ 的位置。证明 $B$ 也始终按限速行驶。"
+        },
+        {
+          "id": "p164-b22",
+          "source": "(c) Suppose, instead, that $B$ always stays a constant distance behind $A$. Under what conditions will $B$ still always travel at the speed limit?",
+          "sourceSha256": "84b92cae13ee47cf748f92a61b1db65102414545750e5effafea08e0280c8b8a",
+          "translation": "(c) 改为假设 $B$ 始终落后 $A$ 一个固定的距离。在什么条件下，$B$ 仍会始终按限速行驶？"
+        }
+      ]
+    },
+    {
+      "printed": 165,
+      "sourceSha256": "87aff33faa66eefbf7a36939ac1eb7980a9a3cd3df6049c9acf44985dd0783c8",
+      "blocks": [
+        {
+          "id": "p165-b1",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p165-b2",
+          "source": "Suppose that $f(a)=g(a)$ and that the left-hand derivative of $f$ at $a$ equals the right-hand derivative of $g$ at $a$. Define $h(x)=f(x)$ for $x\\le a$, and $h(x)=g(x)$ for $x\\ge a$. Prove that $h$ is differentiable at $a$.",
+          "sourceSha256": "e9bfe6b905ab7b54c4e2641ffe5c2ca2efbbea9e0a3726c3d1adf4c9f16bb24c",
+          "translation": "假设 $f(a)=g(a)$，并且 $f$ 在 $a$ 处的左导数等于 $g$ 在 $a$ 处的右导数。对 $x\\le a$ 定义 $h(x)=f(x)$，对 $x\\ge a$ 定义 $h(x)=g(x)$。证明 $h$ 在 $a$ 处可微。"
+        },
+        {
+          "id": "p165-b3",
+          "source": "### 14.",
+          "sourceSha256": "403ab02ff780c6eeb37433629002bd49dcd9a5ecae0f1b03e94b53ba9db9fa12"
+        },
+        {
+          "id": "p165-b4",
+          "source": "Let $f(x)=x^2$ if $x$ is rational, and $f(x)=0$ if $x$ is irrational. Prove that $f$ is differentiable at $0$. (Don’t be scared by this function. Just write out the definition of $f'(0)$.)",
+          "sourceSha256": "1d9244562e03acc89ebf7907a2ab201d07cfffc9f4fb8fbdbfcc1971d7e2ff9f",
+          "translation": "当 $x$ 为有理数时令 $f(x)=x^2$，当 $x$ 为无理数时令 $f(x)=0$。证明 $f$ 在 $0$ 处可微。（不要被这个函数吓倒。只管写出 $f'(0)$ 的定义。）"
+        },
+        {
+          "id": "p165-b5",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p165-b6",
+          "source": "(a) Let $f$ be a function such at $|f(x)|\\le x^2$ for all $x$. Prove that $f$ is differentiable at $0$. (If you have done Problem 14 you should be able to do this.)",
+          "sourceSha256": "6bb9b1bc2176fffbf294e368bbefb66939b6b9a1c241483aa66013b14262916d",
+          "translation": "(a) 设函数 $f$ 对所有 $x$ 都满足 $|f(x)|\\le x^2$。证明 $f$ 在 $0$ 处可微。（如果你已经做了习题 14，应该就能做出这道题。）"
+        },
+        {
+          "id": "p165-b7",
+          "source": "(b) This result can be generalized if $x^2$ is replaced by $|g(x)|$, where $g$ has what property?",
+          "sourceSha256": "6a3bbf77660b8f663bf5028aede4e260ece3c820f54a08f9160b6c7ecec7ae0d",
+          "translation": "(b) 若将 $x^2$ 换成 $|g(x)|$，这个结果还可以推广；此时 $g$ 应具有什么性质？"
+        },
+        {
+          "id": "p165-b8",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p165-b9",
+          "source": "Let $\\alpha>1$. If $f$ satisfies $|f(x)|\\le|x|^\\alpha$, prove that $f$ is differentiable at $0$.",
+          "sourceSha256": "5f559fb2cc8a7b4148c904c26bc4379d6c335e3eff993488b480cf614fc1f208",
+          "translation": "设 $\\alpha>1$。若 $f$ 满足 $|f(x)|\\le|x|^\\alpha$，证明 $f$ 在 $0$ 处可微。"
+        },
+        {
+          "id": "p165-b10",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p165-b11",
+          "source": "Let $0<\\beta<1$. Prove that if $f$ satisfies $|f(x)|\\ge|x|^\\beta$ and $f(0)=0$, then $f$ is not differentiable at $0$.",
+          "sourceSha256": "0fb4c7aa121f0452648bd177e122699bae95db72e7991762959459e7e8668ae6",
+          "translation": "设 $0<\\beta<1$。证明：如果 $f$ 满足 $|f(x)|\\ge|x|^\\beta$ 且 $f(0)=0$，那么 $f$ 在 $0$ 处不可微。"
+        },
+        {
+          "id": "p165-b12",
+          "source": "### \\*18.",
+          "sourceSha256": "dc9f11a962e705d50490c24f8b3e71f51b22675236704438ef4ec0936298a65c"
+        },
+        {
+          "id": "p165-b13",
+          "source": "Let $f(x)=0$ for irrational $x$, and $1/q$ for $x=p/q$ in lowest terms. Prove that $f$ is not differentiable at $a$ for any $a$. Hint: It obviously suffices to prove this for irrational $a$. Why? If $a=m.a_1a_2a_3\\ldots$ is the decimal expansion of $a$, consider $[f(a+h)-f(a)]/h$ for $h$ rational, and also for",
+          "sourceSha256": "d3f09b3bf7aa5f9d06fbce486020485188a3ca3ed8ff9b6f1d92b3941b917346",
+          "translation": "对于无理数 $x$，令 $f(x)=0$；对于既约分数 $x=p/q$，令函数值为 $1/q$。证明：对任何 $a$，$f$ 在 $a$ 处都不可微。提示：显然，只需对无理数 $a$ 证明即可。为什么？如果 $a=m.a_1a_2a_3\\ldots$ 是 $a$ 的十进制展开，请考察 $h$ 为有理数时的 $[f(a+h)-f(a)]/h$，以及下列情形："
+        },
+        {
+          "id": "p165-b14",
+          "source": "$$h=-0.00\\ldots0a_{n+1}a_{n+2}\\ldots.$$",
+          "sourceSha256": "1cbb39c23b98e880c9c63e344620da49dca475d659b422000d1c5256b280acb6"
+        },
+        {
+          "id": "p165-b15",
+          "source": "### 19.",
+          "sourceSha256": "8b09a7bace93d37dfe88ea4c6c08a187efc4b2a287262ba51ada7accf660adbf"
+        },
+        {
+          "id": "p165-b16",
+          "source": "(a) Suppose that $f(a)=g(a)=h(a)$, that $f(x)\\le g(x)\\le h(x)$ for all $x$, and that $f'(a)=h'(a)$. Prove that $g$ is differentiable at $a$, and that $f'(a)=g'(a)=h'(a)$. (Begin with the definition of $g'(a)$.)",
+          "sourceSha256": "473ea526601bd7a1ab15ffca37fb18af7ff6ef9256fd30d313583f8ad0a936af",
+          "translation": "(a) 假设 $f(a)=g(a)=h(a)$，对所有 $x$ 都有 $f(x)\\le g(x)\\le h(x)$，并且 $f'(a)=h'(a)$。证明 $g$ 在 $a$ 处可微，且 $f'(a)=g'(a)=h'(a)$。（从 $g'(a)$ 的定义出发。）"
+        },
+        {
+          "id": "p165-b17",
+          "source": "(b) Show that the conclusion does not follow if we omit the hypothesis $f(a)=g(a)=h(a)$.",
+          "sourceSha256": "4ad3cf1530ebc0853c7a02d66e44c613453c2452e65ba2f335be1bd4af356b35",
+          "translation": "(b) 说明：如果去掉假设 $f(a)=g(a)=h(a)$，结论就不再成立。"
+        },
+        {
+          "id": "p165-b18",
+          "source": "### 20.",
+          "sourceSha256": "db5be0e1b914e1b74b5c87882adefd72b7c040358122af487f736f5e43f86648"
+        },
+        {
+          "id": "p165-b19",
+          "source": "Let $f$ be any polynomial function; we will see in the next chapter that $f$ is differentiable. The tangent line to $f$ at $(a,f(a))$ is the graph of $g(x)=f'(a)(x-a)+f(a)$. Thus $f(x)-g(x)$ is the polynomial function $d(x)=f(x)-f'(a)(x-a)-f(a)$. We have already seen that if $f(x)=x^2$, then $d(x)=(x-a)^2$, and if $f(x)=x^3$, then $d(x)=(x-a)^2(x+2a)$.",
+          "sourceSha256": "6bc3699de7b401f05fd6543d84fb2b9d7e7f84f326bda5b854d36814d0aae01c",
+          "translation": "设 $f$ 是任意一个多项式函数；下一章我们将看到，$f$ 可微。$f$ 在 $(a,f(a))$ 处的切线，是 $g(x)=f'(a)(x-a)+f(a)$ 的图像。因此，$f(x)-g(x)$ 就是多项式函数 $d(x)=f(x)-f'(a)(x-a)-f(a)$。我们已经看到，如果 $f(x)=x^2$，那么 $d(x)=(x-a)^2$；如果 $f(x)=x^3$，那么 $d(x)=(x-a)^2(x+2a)$。"
+        },
+        {
+          "id": "p165-b20",
+          "source": "(a) Find $d(x)$ when $f(x)=x^4$, and show that it is divisible by $(x-a)^2$.",
+          "sourceSha256": "ae268781ac045d463de655aad9bcab3de9f53bd06eb67659161705039fa4d9fa",
+          "translation": "(a) 当 $f(x)=x^4$ 时，求 $d(x)$，并说明它能被 $(x-a)^2$ 整除。"
+        },
+        {
+          "id": "p165-b21",
+          "source": "(b) There certainly seems to be some evidence that $d(x)$ is always divisible by $(x-a)^2$. Figure 22 provides an intuitive argument: usually, lines parallel to the tangent line will intersect the graph at two points; the tangent line intersects the graph only once near the point, so the intersection should be a “double intersection.” To give a rigorous proof, first note that",
+          "sourceSha256": "6ac468334f659be7e5187f0940366d682e75a0eac23947975a9f79a7daaa9af6",
+          "translation": "(b) 看来确实有一些证据表明，$d(x)$ 总能被 $(x-a)^2$ 整除。图 22 提供了一个直观论证：通常，平行于切线的直线会在两点与图像相交；切线在该点附近只与图像相交一次，所以这个交点应当是一个“二重交点”。为了给出严格证明，先注意到"
+        },
+        {
+          "id": "p165-b22",
+          "source": "$$\\frac{d(x)}{x-a}=\\frac{f(x)-f(a)}{x-a}-f'(a).$$",
+          "sourceSha256": "748ceae8e41c640c015567c03d08c6d95e7c7e33f69280672ec37ac069e9ed7f"
+        },
+        {
+          "id": "p165-b23",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:420px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 984 420 347\" role=\"img\" aria-label=\"Figure 22\"><image href=\"pages/book/0184.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 22</figcaption>\n</figure>",
+          "sourceSha256": "494818f7862680a00e9669b4c94f7143bb26eb507d1008165d7743607ec7085c"
+        },
+        {
+          "id": "p165-b24",
+          "source": "Now answer the following questions. Why is $f(x)-f(a)$ divisible by $(x-a)$? Why is there a polynomial function $h$ such that $h(x)=$",
+          "sourceSha256": "da93e6840289b5fe53c3c69dd2937b827867e1fa33002744e5dd66a4097b9fd0",
+          "translation": "现在回答下列问题。为什么 $f(x)-f(a)$ 能被 $(x-a)$ 整除？为什么存在一个多项式函数 $h$，使得 $h(x)=$"
+        }
+      ]
+    },
+    {
+      "printed": 166,
+      "sourceSha256": "1d7ad3b182daca2a1bb06a34dca0ad0365fffd9fdf76d3a4c9eb2e50f48f0ddd",
+      "blocks": [
+        {
+          "id": "p166-b1",
+          "source": "$d(x)/(x-a)$ for $x\\ne a$? Why is $\\lim_{x\\to a}h(x)=0$? Why is $h(a)=0$? Why does this solve the problem?",
+          "sourceSha256": "2991bce95cf1673606849ceb02b6aa1df1dee9f457d03708417bffe9febd61a5",
+          "translation": "$d(x)/(x-a)$ 对 $x\\ne a$ 成立？为什么 $\\lim_{x\\to a}h(x)=0$？为什么 $h(a)=0$？为什么这就解决了问题？"
+        },
+        {
+          "id": "p166-b2",
+          "source": "### 21.",
+          "sourceSha256": "d908d228d4604b1dd2f9729637ede6c5eb59c7f91a5ba1fe1a64623fe814b30d"
+        },
+        {
+          "id": "p166-b3",
+          "source": "(a) Show that $f'(a)=\\lim_{x\\to a}[f(x)-f(a)]/(x-a)$. (Nothing deep here.)",
+          "sourceSha256": "f9e822b15384df4a0c328a04e90d45b884fb0da677625ad349a0e7b38962e3d2",
+          "translation": "(a) 说明 $f'(a)=\\lim_{x\\to a}[f(x)-f(a)]/(x-a)$。（这里没有什么深奥之处。）"
+        },
+        {
+          "id": "p166-b4",
+          "source": "(b) Show that derivatives are a “local property”: if $f(x)=g(x)$ for all $x$ in some open interval containing $a$, then $f'(a)=g'(a)$. (This means that in computing $f'(a)$, you can ignore $f(x)$ for any particular $x\\ne a$. Of course you can’t ignore $f(x)$ for all such $x$ at once!)",
+          "sourceSha256": "95bd7d656d46be35a6b38a09f5a09152c0cdb0c4b4e51e1786e1544bba8b473b",
+          "translation": "(b) 说明导数是一种“局部性质”：如果在某个包含 $a$ 的开区间中，对所有 $x$ 都有 $f(x)=g(x)$，那么 $f'(a)=g'(a)$。（这意味着，在计算 $f'(a)$ 时，对于任何特定的 $x\\ne a$，你都可以忽略 $f(x)$。当然，你不能同时忽略所有这样的 $x$ 所对应的 $f(x)$！）"
+        },
+        {
+          "id": "p166-b5",
+          "source": "### 22.",
+          "sourceSha256": "ce146eae8f2fb4609bfd66abfe5008807912c8203d51e87d6ba4e238e91e9395"
+        },
+        {
+          "id": "p166-b6",
+          "source": "(a) Suppose that $f$ is differentiable at $x$. Prove that",
+          "sourceSha256": "6ecfc6cb16d6581fdfe31b2efab2c256dd4e6ef2c6b1bfe22a00d071d49a9550",
+          "translation": "(a) 假设 $f$ 在 $x$ 处可微。证明"
+        },
+        {
+          "id": "p166-b7",
+          "source": "$$f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x-h)}{2h}.$$",
+          "sourceSha256": "4d7c99267c2a97af0c600f21fea02955c5612b37e470e51a523368d8b969b1f0"
+        },
+        {
+          "id": "p166-b8",
+          "source": "Hint: Remember an old algebraic trick—a number is not changed if the same quantity is added to and then subtracted from it.",
+          "sourceSha256": "fb0fa8a7e08ac568142a21e989b773a04fed8d73010a6e3ecaa5591b8d006119",
+          "translation": "提示：记起一个老的代数技巧——给一个数加上某个量，再减去同一个量，这个数就没有改变。"
+        },
+        {
+          "id": "p166-b9",
+          "source": "\\*\\*(b) Prove, more generally, that",
+          "sourceSha256": "3a1028b10b27cd6a79f0940a1c537d1a768a3cf4da3d25b53c641d93870f5fc3",
+          "translation": "\\*\\*(b) 更一般地，证明"
+        },
+        {
+          "id": "p166-b10",
+          "source": "$$f'(x)=\\lim_{h,k\\to0^+}\\frac{f(x+h)-f(x-k)}{h+k}.$$",
+          "sourceSha256": "5c1c1d74b736aa6b5ed02bc505c7f2d42e4d7e02a48730051107cec3f15556f7"
+        },
+        {
+          "id": "p166-b11",
+          "source": "Although we haven’t encountered something like $\\lim_{h,k\\to0}$ before, its meaning should be clear, and you should be able to make an appropriate $\\varepsilon$-$\\delta$ definition. The important thing here is that we actually have $\\lim_{h,k\\to0^+}$, so that we are only considering positive $h$ and $k$.",
+          "sourceSha256": "51a6522088747cc621f9bf05a4dc0651c3dee8e0aaeca0a6a0db9170e3c92e50",
+          "translation": "虽然我们以前没见过 $\\lim_{h,k\\to0}$ 这样的表达式，但它的意思应该很清楚，你也应当能够给出一个适当的 $\\varepsilon$-$\\delta$ 定义。这里重要的是，我们实际用的是 $\\lim_{h,k\\to0^+}$，所以只考虑正的 $h$ 和 $k$。"
+        },
+        {
+          "id": "p166-b12",
+          "source": "### 23.",
+          "sourceSha256": "fcb56ced3fb587a05b1e3f24ccfaee441ca9356f2d715d9e8ba59a341ae068ec"
+        },
+        {
+          "id": "p166-b13",
+          "source": "Prove that if $f$ is even, then $f'(x)=-f'(-x)$. (In order to minimize confusion, let $g(x)=f(-x)$; find $g'(x)$ and then remember what other thing $g$ is.) Draw a picture!",
+          "sourceSha256": "5c6424f7c461e290d516f8b20d23b2576c74e2b0b69f2c0b17fcd7503f0bc675",
+          "translation": "证明：如果 $f$ 是偶函数，那么 $f'(x)=-f'(-x)$。（为尽量避免混淆，令 $g(x)=f(-x)$；求出 $g'(x)$，然后记住 $g$ 还等于什么。）画一幅图！"
+        },
+        {
+          "id": "p166-b14",
+          "source": "### 24.",
+          "sourceSha256": "1fb8b304cd861a73c12374de97d67ebaec8b5558d02cf56f4db6adadfe75d8aa"
+        },
+        {
+          "id": "p166-b15",
+          "source": "Prove that if $f$ is odd, then $f'(x)=f'(-x)$. Once again, draw a picture.",
+          "sourceSha256": "9a7ec6630e92fdb8ec983c08278f8d5244c4f2df8fd1149dffe0cf1f38d79ef2",
+          "translation": "证明：如果 $f$ 是奇函数，那么 $f'(x)=f'(-x)$。同样，画一幅图。"
+        },
+        {
+          "id": "p166-b16",
+          "source": "### 25.",
+          "sourceSha256": "e243042975caa2efce0a7385b48b4be10d7c1f2cfeac6357090078c2f5eb5e34"
+        },
+        {
+          "id": "p166-b17",
+          "source": "Problems 23 and 24 say that $f'$ is even if $f$ is odd, and odd if $f$ is even. What can therefore be said about $f^{(k)}$?",
+          "sourceSha256": "4d55eba07d6efb686bf2d070418d7b884a1340bbbf603199d4f9bb8dcebe658f",
+          "translation": "习题 23 和 24 说明：如果 $f$ 是奇函数，$f'$ 就是偶函数；如果 $f$ 是偶函数，导函数就是奇函数。那么，对于 $f^{(k)}$ 可以得出什么结论？"
+        },
+        {
+          "id": "p166-b18",
+          "source": "### 26.",
+          "sourceSha256": "e0a0eda9f4171fbdc2f78618f10a33fea6c704a744eb8323db3535cb65310a23"
+        },
+        {
+          "id": "p166-b19",
+          "source": "Find $f''(x)$ if",
+          "sourceSha256": "6bf2f12aa13d415647f68bb06a463755171fcffc317288157ab69e43a3c613eb",
+          "translation": "在下列情形中求 $f''(x)$："
+        },
+        {
+          "id": "p166-b20",
+          "source": "(i) $f(x)=x^3$.",
+          "sourceSha256": "e87ca4b7e6701dc826427b2f865cdf7d89f864bb9ffce6b724e9cbd92a8f58e8"
+        },
+        {
+          "id": "p166-b21",
+          "source": "(ii) $f(x)=x^5$.",
+          "sourceSha256": "4f429a1d8898e0ec3bf60449113a8483233fd7656d30146e3672f747745fbf62"
+        },
+        {
+          "id": "p166-b22",
+          "source": "(iii) $f'(x)=x^4$.",
+          "sourceSha256": "213b71fc3859d1beb22ef606e61b92db8df5fe0677c4781a2d161012f169b8db"
+        },
+        {
+          "id": "p166-b23",
+          "source": "(iv) $f(x+3)=x^5$.",
+          "sourceSha256": "af72acf2b12d5d5cf58df1b229adfc1788337f1c2de162d7e443ebf6ba06fcf5"
+        },
+        {
+          "id": "p166-b24",
+          "source": "### 27.",
+          "sourceSha256": "01de3c63fd790d0deac18299d79a16ecfff7727c478f7c8964568f07245d3eec"
+        },
+        {
+          "id": "p166-b25",
+          "source": "If $S_n(x)=x^n$, and $0\\le k\\le n$, prove that",
+          "sourceSha256": "a6440bc5dbf8434b883b2086442ab1a5e562313695cd3557d112b84d3e192bb5",
+          "translation": "如果 $S_n(x)=x^n$，且 $0\\le k\\le n$，证明"
+        },
+        {
+          "id": "p166-b26",
+          "source": "$$\\begin{aligned}S_n^{(k)}(x)&=\\frac{n!}{(n-k)!}x^{n-k}\\\\&=k!\\binom nk x^{n-k}.\\end{aligned}$$",
+          "sourceSha256": "7adb131fb1b2ad345882b9624314cd6ab5d28cc60649d3f8e3ea7ab48a3d12d3"
+        },
+        {
+          "id": "p166-b27",
+          "source": "### 28.",
+          "sourceSha256": "99710235075939b06c843e9bd945573c4f9f13f6f1481388af7da8a53884193f"
+        },
+        {
+          "id": "p166-b28",
+          "source": "(a) Find $f'(x)$ if $f(x)=|x|^3$. Find $f''(x)$. Does $f'''(x)$ exist for all $x$?",
+          "sourceSha256": "79a77b697b3af46e5a4303329098d79f958f392b7d8269ca75793aa258be63ca",
+          "translation": "(a) 如果 $f(x)=|x|^3$，求 $f'(x)$。再求 $f''(x)$。是否对所有 $x$，$f'''(x)$ 都存在？"
+        },
+        {
+          "id": "p166-b29",
+          "source": "(b) Analyze $f$ similarly if $f(x)=x^4$ for $x\\ge0$, and $f(x)=-x^4$ for $x\\le0$.",
+          "sourceSha256": "01e9dba1c31f8e123c260ae1b71004cc26db2711bcaabbe61c012b9b11a5aab8",
+          "translation": "(b) 当 $x\\ge0$ 时 $f(x)=x^4$、当 $x\\le0$ 时 $f(x)=-x^4$，对函数 $f$ 作类似的分析。"
+        }
+      ]
+    },
+    {
+      "printed": 167,
+      "sourceSha256": "c4b4ab38edd74cc9f881668f5caaf2d299b6589aa06fba733f586386536aefaa",
+      "blocks": [
+        {
+          "id": "p167-b1",
+          "source": "### 29.",
+          "sourceSha256": "2b03e98fafcd40e8fdba5086d1753ea10425470a6703dc5959a8d997b5c69ba4"
+        },
+        {
+          "id": "p167-b2",
+          "source": "Let $f(x)=x^n$ for $x\\ge0$ and let $f(x)=0$ for $x\\le0$. Prove that $f^{(n-1)}$ exists (and find a formula for it), but that $f^{(n)}(0)$ does not exist.",
+          "sourceSha256": "38b6e0f9a84f3179e0e2d0143ee859af2111af02a322b21025d87dd878baac35",
+          "translation": "当 $x\\ge0$ 时令 $f(x)=x^n$，当 $x\\le0$ 时令 $f(x)=0$。证明 $f^{(n-1)}$ 存在（并求出它的公式），而 $f^{(n)}(0)$ 不存在。"
+        },
+        {
+          "id": "p167-b3",
+          "source": "### 30.",
+          "sourceSha256": "3af8d9cda2244caa10c3e85da41840dc8c8c907907fa1a17e47f6da23b5d7ba1"
+        },
+        {
+          "id": "p167-b4",
+          "source": "Interpret the following specimens of Leibnizian notation; each is a restatement of some fact occurring in a previous problem.",
+          "sourceSha256": "650bdfae89ad80280381497a76148833bb5f8004cc846b0aa59401f447544e99",
+          "translation": "解释下列莱布尼茨记号的例子；每一个都是前面某道习题中某个事实的重新表述。"
+        },
+        {
+          "id": "p167-b5",
+          "source": "(i) $\\dfrac{dx^n}{dx}=nx^{n-1}$.",
+          "sourceSha256": "5efde08118f6a2dc6327db96127a0517fc487a5caf9284708499d57b57686115"
+        },
+        {
+          "id": "p167-b6",
+          "source": "(ii) $\\dfrac{dz}{dy}=-\\dfrac1{y^2}$ if $z=\\dfrac1y$.",
+          "sourceSha256": "facc29492e6cf7da5e220f100951abccaf0644e824a6fd35802df3d8f794cb2d",
+          "translation": "(ii) 如果 $z=\\dfrac1y$，那么 $\\dfrac{dz}{dy}=-\\dfrac1{y^2}$。"
+        },
+        {
+          "id": "p167-b7",
+          "source": "(iii) $\\dfrac{d[f(x)+c]}{dx}=\\dfrac{df(x)}{dx}$.",
+          "sourceSha256": "a43b3979d03ded568e7c714d7484a090ef8c03772091722bf27061468d590cd6"
+        },
+        {
+          "id": "p167-b8",
+          "source": "(iv) $\\dfrac{d[cf(x)]}{dx}=c\\dfrac{df(x)}{dx}$.",
+          "sourceSha256": "7f2fb3351001ef6a154b005b95f997e05bd392dd913a327189964525b1b194b9"
+        },
+        {
+          "id": "p167-b9",
+          "source": "(v) $\\dfrac{dz}{dx}=\\dfrac{dy}{dx}$ if $z=y+c$.",
+          "sourceSha256": "16ca9572ed698d28f0ecae816f2d091b9b6a03e22f504d27401b26fae4c53039",
+          "translation": "(v) 如果 $z=y+c$，那么 $\\dfrac{dz}{dx}=\\dfrac{dy}{dx}$。"
+        },
+        {
+          "id": "p167-b10",
+          "source": "(vi) $\\left.\\dfrac{dx^3}{dx}\\right|_{x=a^2}=3a^4$.",
+          "sourceSha256": "389ed156ad748d48c4885bba5e72ba557f577f0f4f637ceafa38a0ec2ccc203b"
+        },
+        {
+          "id": "p167-b11",
+          "source": "(vii) $\\left.\\dfrac{df(x+a)}{dx}\\right|_{x=b}=\\left.\\dfrac{df(x)}{dx}\\right|_{x=b+a}$.",
+          "sourceSha256": "3136cff4bd413a827041de2ba3649bf7456a947fce509266a9ad7ce49902d326"
+        },
+        {
+          "id": "p167-b12",
+          "source": "(viii) $\\left.\\dfrac{df(cx)}{dx}\\right|_{x=b}=c\\cdot\\left.\\dfrac{df(x)}{dx}\\right|_{x=cb}$.",
+          "sourceSha256": "888f2b22fc0b9440b0aa3885e52ed6b9ff6d5151eb527eb86ac4c749fd89f51e"
+        },
+        {
+          "id": "p167-b13",
+          "source": "(ix) $\\dfrac{df(cx)}{dx}=c\\cdot\\left.\\dfrac{df(y)}{dy}\\right|_{y=cx}$.",
+          "sourceSha256": "e834ff66c55666a354d4a9b67835d529ff200eaa6813ceec2028740e5c5468be"
+        },
+        {
+          "id": "p167-b14",
+          "source": "(x) $\\dfrac{d^kx^n}{dx^k}=k!\\binom nk x^{n-k}$.",
+          "sourceSha256": "c7b95c9ce9bf2ffc722ccd3af88164b50337c87b254267813c945a10189cc177"
+        }
+      ]
+    }
+  ]
+}

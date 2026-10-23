@@ -1,0 +1,888 @@
+{
+  "chapter": 21,
+  "language": "zh-CN",
+  "sourceSha256": "1852f4fffa740828f9f783a90868c212d96ec433ec713e9365c9d93685c622c4",
+  "paragraphCount": 90,
+  "pages": [
+    {
+      "printed": 442,
+      "sourceSha256": "85db23b013ecf892ce7e1a005776d303d76f45c3f56aba51c9587f84cec7882f",
+      "blocks": [
+        {
+          "id": "p442-b1",
+          "source": "# \\*CHAPTER 21\n# $e$ IS TRANSCENDENTAL",
+          "sourceSha256": "c9691f0a09321c87ec98aef7ea68c13d49f76664c4b13a809a30965f9516c2f3",
+          "translation": "# \\*第 21 章\n# $e$ 是超越数"
+        },
+        {
+          "id": "p442-b2",
+          "source": "The irrationality of $e$ was so easy to prove that in this optional chapter we will attempt a more difficult feat, and prove that the number $e$ is not merely irrational, but actually much worse. Just how a number might be even worse than irrational is suggested by a slight rewording of definitions. A number $x$ is irrational if it is not possible to write $x=a/b$ for any integers $a$ and $b$, with $b\\ne0$. This is the same as saying that $x$ does not satisfy any equation",
+          "sourceSha256": "fa827767baa55d35ca1a6e4c50cc4b6c740482b7b29a0c986c17d0b8b1f32bca",
+          "translation": "$e$ 的无理性如此容易证明，因此在这可选的一章中，我们将尝试一项更困难的任务，证明数 $e$ 不仅是无理数，而且实际上还要“糟糕”得多。只要稍微改写一下定义，就能看出一个数究竟怎样才能比无理数还要糟糕。如果对于任何满足 $b\\ne0$ 的整数 $a$ 和 $b$，都不可能写出 $x=a/b$，那么数 $x$ 就是无理数。这等价于说，$x$ 不满足任何方程"
+        },
+        {
+          "id": "p442-b3",
+          "source": "$$bx-a=0$$",
+          "sourceSha256": "26674a7c40176bc6e10e10f17cb28d882ea304817895a91cd54eb6ae8cc13544"
+        },
+        {
+          "id": "p442-b4",
+          "source": "for integers $a$ and $b$, except for $a=0$, $b=0$. Viewed in this light, the irrationality of $\\sqrt2$ does not seem to be such a terrible deficiency; rather, it appears that $\\sqrt2$ just barely manages to be irrational—although $\\sqrt2$ is not the solution of an equation",
+          "sourceSha256": "5ccd58985887de0be9cc2bbaf2991b2f01c4171c2fa5e5e194b2c9d69726a0aa",
+          "translation": "其中 $a$ 和 $b$ 是整数，除非 $a=0$、$b=0$。这样看来，$\\sqrt2$ 的无理性似乎并不是什么可怕的缺陷；相反，$\\sqrt2$ 看起来只是勉强算得上无理数——虽然 $\\sqrt2$ 不是方程"
+        },
+        {
+          "id": "p442-b5",
+          "source": "$$a_1x+a_0=0,$$",
+          "sourceSha256": "ecec8d637c0553cf2aac22a16e7372ad037f8a43e670f209d411d492b9170fdd"
+        },
+        {
+          "id": "p442-b6",
+          "source": "it is the solution of the equation",
+          "sourceSha256": "b2293d3177e9cda8d9a90a944fa60ef698480e213931030a8695bfec7d7adb5c",
+          "translation": "的解，但它是方程"
+        },
+        {
+          "id": "p442-b7",
+          "source": "$$x^2-2=0,$$",
+          "sourceSha256": "a78cdf322a8baca08cbf3ae4bd333e026e50fa18acedf1926365fcd40acd542b"
+        },
+        {
+          "id": "p442-b8",
+          "source": "of one higher degree. Problem 2-18 shows how to produce many irrational numbers $x$ which satisfy higher-degree equations",
+          "sourceSha256": "bb304babe9d3a5f5527fd4ed196459d6e89e545af56996c500378d1834ba113a",
+          "translation": "次数只比前者高一次。习题 2-18 说明了如何构造许多满足更高次方程的无理数 $x$："
+        },
+        {
+          "id": "p442-b9",
+          "source": "$$a_nx^n+a_{n-1}x^{n-1}+\\cdots+a_0=0,$$",
+          "sourceSha256": "cff4b587c4b736d9fc8945c21b12a0a6631d9d2ed796343eb642ff55df9fa119"
+        },
+        {
+          "id": "p442-b10",
+          "source": "where the $a_i$ are integers not all 0. A number which satisfies an “algebraic” equation of this sort is called an **algebraic number**, and practically every number we have ever encountered is defined in terms of solutions of algebraic equations ($\\pi$ and $e$ are the great exceptions in our limited mathematical experience). All roots, such as",
+          "sourceSha256": "a16254cc3f849cb82b18d97c3f737412f5cc0792df6c2ab785615cd02ef75d2c",
+          "translation": "其中 $a_i$ 是不全为 0 的整数。满足这种“代数”方程的数称为**代数数**；实际上，我们迄今遇到的数几乎都是通过代数方程的解来定义的（在我们有限的数学经历中，$\\pi$ 和 $e$ 是两个重大的例外）。所有根式，例如"
+        },
+        {
+          "id": "p442-b11",
+          "source": "$$\\sqrt2,\\quad\\sqrt[10]3,\\quad\\sqrt[4]7,$$",
+          "sourceSha256": "83bb5b94adc9f656d74cb5d8462c42a42eafd56454ecc929bfc7e00dad94797c"
+        },
+        {
+          "id": "p442-b12",
+          "source": "are clearly algebraic numbers, and even complicated combinations, like",
+          "sourceSha256": "5b252f7d5f4915d862636e0528ccf6a34d59c673a365cb1d2fd0ac2ab5a175b5",
+          "translation": "显然都是代数数，甚至复杂的组合，例如"
+        },
+        {
+          "id": "p442-b13",
+          "source": "$$\\sqrt[3]{3+\\sqrt5+\\sqrt[4]{1+\\sqrt2}}+\\sqrt[5]6$$",
+          "sourceSha256": "6f8c7353b0515ed59b6793d5f1d0e84f685599764d46418f757931667ed49158"
+        },
+        {
+          "id": "p442-b14",
+          "source": "are algebraic (although we will not try to prove this). Numbers which cannot be obtained by the process of solving algebraic equations are called **transcendental**; the main result of this chapter states that $e$ is a number of this anomalous sort.",
+          "sourceSha256": "2c4a3da31d334274aa73a004590fb9ae40225737a45fa4e5a6ddac970d66288d",
+          "translation": "也是代数数（不过，我们不打算证明这一点）。不能通过求解代数方程而得到的数称为**超越数**；本章的主要结果指出，$e$ 就是这种不同寻常的数。"
+        },
+        {
+          "id": "p442-b15",
+          "source": "The proof that $e$ is transcendental is well within our grasp, and was theoretically possible even before Chapter 20. Nevertheless, with the inclusion of this proof, we can justifiably classify ourselves as something more than novices in the study of higher mathematics; while many irrationality proofs depend only on elementary properties of numbers, the proof that a number is transcendental usually involves",
+          "sourceSha256": "a2bbd4e8844ed7f2c56161831bdb82b25089ee3a2e6e65fe304df695ea2515f9",
+          "translation": "证明 $e$ 是超越数完全在我们的能力范围之内，而且理论上在第 20 章之前就已经能够做到。尽管如此，在掌握了这个证明之后，我们就有充分理由认为自己在高等数学的学习中已经不再只是初学者了；许多无理性的证明只依赖数的初等性质，而证明一个数是超越数，通常会涉及"
+        }
+      ]
+    },
+    {
+      "printed": 443,
+      "sourceSha256": "ce681ae81abe86dfbd47e1a522416a22a35845ef4e4f10cdcfaddd2537da2706",
+      "blocks": [
+        {
+          "id": "p443-b1",
+          "source": "some really high-powered mathematics. Even the dates connected with the transcendence of $e$ are impressively recent—the first proof that $e$ is transcendental, due to Hermite, dates from 1873. The proof that we will give is a simplification, due to Hilbert.",
+          "sourceSha256": "88d9e61ffa969b150f0d83b5847e298d6db1d61c6709ed095a7c2230da5fe887",
+          "translation": "一些威力相当强大的数学。甚至与 $e$ 的超越性有关的年代，也近得令人印象深刻——$e$ 是超越数的第一个证明由埃尔米特于 1873 年给出。我们将给出的证明是希尔伯特所作的简化。"
+        },
+        {
+          "id": "p443-b2",
+          "source": "Before tackling the proof itself, it is a good idea to map out the strategy, which depends on an idea used even in the proof that $e$ is irrational. Two features of the expression",
+          "sourceSha256": "a89c7d50c335bf2318ed3d9ba7c989390fac2092d7ab5f4495302abc8c7cbd70",
+          "translation": "在动手证明之前，最好先勾画一下策略；它依赖的一个想法，在证明 $e$ 是无理数时就已使用过。表达式"
+        },
+        {
+          "id": "p443-b3",
+          "source": "$$e=1+\\frac1{1!}+\\frac1{2!}+\\cdots+\\frac1{n!}+R_n$$",
+          "sourceSha256": "e92e8ec1b9debc2530a69d597b476b6158154f13236beaf1f1a874f37ef4d452"
+        },
+        {
+          "id": "p443-b4",
+          "source": "were important for the proof that $e$ is irrational: On the one hand, the number",
+          "sourceSha256": "a555b7343148a43c1ceaed492754b45ac51f9748568633778335624edc7bb7f1",
+          "translation": "的两个特点，对证明 $e$ 是无理数十分重要：一方面，数"
+        },
+        {
+          "id": "p443-b5",
+          "source": "$$1+\\frac1{1!}+\\cdots+\\frac1{n!}$$",
+          "sourceSha256": "0af2be9c271fc467eaa3925b2bf1a8288d097b2eb8e8444d7f2f86c055c1eb01"
+        },
+        {
+          "id": "p443-b6",
+          "source": "can be written as a fraction $p/q$ with $q\\le n!$ (so that $n!(p/q)$ is an integer); on the other hand, $0<R_n<3/(n+1)!$ (so $n!R_n$ is not an integer). These two facts show that $e$ can be approximated particularly well by rational numbers. Of course, every number $x$ can be approximated arbitrarily closely by rational numbers—if $\\varepsilon>0$ there is a rational number $r$ with $|x-r|<\\varepsilon$; the catch, however, is that it may be necessary to allow a very large denominator for $r$, as large as $1/\\varepsilon$ perhaps. For $e$ we are assured that this is not the case: there is a fraction $p/q$ within $3/(n+1)!$ of $e$, whose denominator $q$ is at most $n!$. If you look carefully at the proof that $e$ is irrational, you will see that only this fact about $e$ is ever used. The number $e$ is by no means unique in this respect: generally speaking, the better a number can be approximated by rational numbers, the *worse* it is (some evidence for this assertion is presented in Problem 3). The proof that $e$ is transcendental depends on a natural extension of this idea: not only $e$, but any finite number of powers $e,e^2,\\ldots,e^n$, can be simultaneously approximated especially well by rational numbers. In our proof we will begin by assuming that $e$ is algebraic, so that",
+          "sourceSha256": "fda0c2675ac5f4576378da8a2d6f1ff54720160e65979e015561705d0232e4a7",
+          "translation": "可以写成分数 $p/q$，其中 $q\\le n!$（所以 $n!(p/q)$ 是整数）；另一方面，$0<R_n<3/(n+1)!$（所以 $n!R_n$ 不是整数）。这两个事实说明，有理数能够特别好地逼近 $e$。当然，每个数 $x$ 都可以用有理数任意精确地逼近——如果 $\\varepsilon>0$，就存在满足 $|x-r|<\\varepsilon$ 的有理数 $r$；然而，问题在于，我们可能不得不允许 $r$ 有一个非常大的分母，也许大到 $1/\\varepsilon$。对于 $e$，我们可以保证不会出现这种情况：存在一个分数 $p/q$，它与 $e$ 的距离小于 $3/(n+1)!$，而它的分母 $q$ 至多为 $n!$。如果仔细查看 $e$ 的无理性证明，你会发现整个证明用到的只是关于 $e$ 的这一个事实。$e$ 在这方面绝非独一无二：一般而言，一个数越能被有理数良好地逼近，它就越*糟糕*（习题 3 为这一断言提供了一些证据）。$e$ 是超越数的证明依赖于这一想法的自然推广：不仅 $e$，而且任意有限多个幂 $e,e^2,\\ldots,e^n$，都能同时被有理数特别好地逼近。在证明中，我们首先假设 $e$ 是代数数，于是"
+        },
+        {
+          "id": "p443-b7",
+          "source": "$$a_ne^n+\\cdots+a_1e+a_0=0,\\quad a_0\\ne0\\tag{*}$$",
+          "sourceSha256": "e27e29027044bbb150d260e732ee25fc5b1ed7dd9f0099c38046089b9c1540e4"
+        },
+        {
+          "id": "p443-b8",
+          "source": "for some integers $a_0,\\ldots,a_n$. In order to reach a contradiction we will than find certain integers $M,M_1,\\ldots,M_n$ and certain “small” numbers $\\varepsilon_1,\\ldots,\\varepsilon_n$ such that",
+          "sourceSha256": "b8f9694f2d8b2e3104c91036a2e554e9986addde867091e2de0d0ac1c8f9c96f",
+          "translation": "其中 $a_0,\\ldots,a_n$ 是某些整数。为了得出矛盾，我们接着要找到某些整数 $M,M_1,\\ldots,M_n$ 和某些“小”数 $\\varepsilon_1,\\ldots,\\varepsilon_n$，使得"
+        },
+        {
+          "id": "p443-b9",
+          "source": "$$\\begin{aligned}e^1&=\\frac{M_1+\\varepsilon_1}M,\\\\e^2&=\\frac{M_2+\\varepsilon_2}M,\\\\&\\vdots\\\\e^n&=\\frac{M_n+\\varepsilon_n}M.\\end{aligned}$$",
+          "sourceSha256": "987771dd492a1f3802887eab3954c843977f7e1047f08e7f5b14e0f97a93f4d2"
+        },
+        {
+          "id": "p443-b10",
+          "source": "Just how small the $\\varepsilon$’s must be will appear when these expressions are substituted into the assumed equation $(*)$. After multiplying through by $M$ we obtain",
+          "sourceSha256": "812734b2d7a14bba8ad2aba459b507b58d65693727ddbb6772a91a62a48f5a1e",
+          "translation": "这些 $\\varepsilon$ 究竟需要多小，在把这些表达式代入所假设的方程 $(*)$ 时就会显现出来。两边同乘 $M$，得到"
+        },
+        {
+          "id": "p443-b11",
+          "source": "$$[a_0M+a_1M_1+\\cdots+a_nM_n]+[\\varepsilon_1a_1+\\cdots+\\varepsilon_na_n]=0.$$",
+          "sourceSha256": "c0bc65722a11fd97e6e721e3aeb9547ba8e2f38b19282f549d6b8933327c8d31"
+        }
+      ]
+    },
+    {
+      "printed": 444,
+      "sourceSha256": "661e70ee00eeb7ddd74619d30a034dc4c5463829c1bdb5f6404c62610c2df414",
+      "blocks": [
+        {
+          "id": "p444-b1",
+          "source": "The first term in brackets is an integer, and we will choose the $M$’s so that it will necessarily be a *nonzero* integer. We will also manage to find $\\varepsilon$’s so small that",
+          "sourceSha256": "f4c37560069b20db8019f449cdc29b4db946c290fd05a7571a419224a94c245e",
+          "translation": "第一个方括号中的项是一个整数，我们将选择这些 $M$，使它必定是一个*非零*整数。我们还要设法找到足够小的 $\\varepsilon$，使得"
+        },
+        {
+          "id": "p444-b2",
+          "source": "$$|\\varepsilon_1a_1+\\cdots+\\varepsilon_na_n|<\\tfrac12;$$",
+          "sourceSha256": "cb85ba18f7f6524941cc02dc924bf3007f1b9a1c744ee1866ce1c29dcd00deef"
+        },
+        {
+          "id": "p444-b3",
+          "source": "this will lead to the desired contradiction—the sum of a nonzero integer and a number of absolute value less than $\\tfrac12$ cannot be zero!",
+          "sourceSha256": "7526812ad7a90f234939dff940b74426583f13955209f357ad80aad7b201cc2c",
+          "translation": "这就会给出所需的矛盾——一个非零整数与一个绝对值小于 $\\tfrac12$ 的数之和不可能为零！"
+        },
+        {
+          "id": "p444-b4",
+          "source": "As a basic strategy this is all very reasonable and quite straightforward. The remarkable part of the proof will be the way that the $M$’s and $\\varepsilon$’s are defined. In order to read the proof you will need to know about the gamma function! (This function was introduced in Problem 19-40.)",
+          "sourceSha256": "afd7fb16a8d3e647ba72b4c3ce169a75218254f34f4160beebf2c8043bdd1e63",
+          "translation": "作为基本策略，这一切都很合理，也相当直接。证明中精彩的部分，将在于如何定义这些 $M$ 和 $\\varepsilon$。要读懂这个证明，你需要了解伽马函数！（这个函数在习题 19-40 中引入。）"
+        },
+        {
+          "id": "p444-b5",
+          "source": "**THEOREM 1** $e$ is transcendental.",
+          "sourceSha256": "d35e5163ff2e8d0f6a666f4a6657d1d8c60f20b9a9e68653cc5bc1e1b4e3bcb0",
+          "translation": "**定理 1** $e$ 是超越数。"
+        },
+        {
+          "id": "p444-b6",
+          "source": "**PROOF** Suppose there were integers $a_0,\\ldots,a_n$, with $a_0\\ne0$, such that",
+          "sourceSha256": "18824d2e28e3d9c9bf0bcf0823411b48997d5aa87c481d8ba5793e79dae25625",
+          "translation": "**证明** 假设存在满足 $a_0\\ne0$ 的整数 $a_0,\\ldots,a_n$，使得"
+        },
+        {
+          "id": "p444-b7",
+          "source": "$$a_ne^n+a_{n-1}e^{n-1}+\\cdots+a_0=0.\\tag{*}$$",
+          "sourceSha256": "08609cea641c59fd24a93145295a7afa223d35d65d5c3889d4446e278b6d9988"
+        },
+        {
+          "id": "p444-b8",
+          "source": "Define numbers $M,M_1,\\ldots,M_n$ and $\\varepsilon_1,\\ldots,\\varepsilon_n$ as follows:",
+          "sourceSha256": "a56258999e5ebc82250e6f6f6d25f36be6b9e01282766ca70cd0536b84cca242",
+          "translation": "如下定义数 $M,M_1,\\ldots,M_n$ 和 $\\varepsilon_1,\\ldots,\\varepsilon_n$："
+        },
+        {
+          "id": "p444-b9",
+          "source": "$$\\begin{aligned}\nM&=\\int_0^\\infty\\frac{x^{p-1}[(x-1)\\cdot\\ldots\\cdot(x-n)]^pe^{-x}}{(p-1)!}\\,dx,\\\\\nM_k&=e^k\\int_k^\\infty\\frac{x^{p-1}[(x-1)\\cdot\\ldots\\cdot(x-n)]^pe^{-x}}{(p-1)!}\\,dx,\\\\\n\\varepsilon_k&=e^k\\int_0^k\\frac{x^{p-1}[(x-1)\\cdot\\ldots\\cdot(x-n)]^pe^{-x}}{(p-1)!}\\,dx.\n\\end{aligned}$$",
+          "sourceSha256": "c7da2cb69cbd54d0490dba12d566e2a76a3b76ebaa2c3b0e239b92eb1bf42230"
+        },
+        {
+          "id": "p444-b10",
+          "source": "The unspecified number $p$ represents a prime number<sup>*</sup> which we will choose later. Despite the forbidding aspect of these three expressions, with a little work they will appear much more reasonable. We concentrate on $M$ first. If the expression in brackets,",
+          "sourceSha256": "d48aa2e7239751f71b3a1ee539750ddd9512d96fc03d84dbaa81828a53eaa340",
+          "translation": "尚未指定的数 $p$ 代表一个素数<sup>*</sup>，我们稍后再选择它。尽管这三个表达式看起来令人生畏，但稍加处理，就会发现它们合理得多。我们先集中考察 $M$。如果把方括号中的表达式"
+        },
+        {
+          "id": "p444-b11",
+          "source": "$$[(x-1)\\cdot\\ldots\\cdot(x-n)],$$",
+          "sourceSha256": "4dcfdaf903dd3d372fe1a7ee0229114bdeb69e85f7057be2468ce528add8520a"
+        },
+        {
+          "id": "p444-b12",
+          "source": "is actually multiplied out, we obtain a polynomial",
+          "sourceSha256": "9eca852677c9cf10c85ad0194f828901b3b671958a9dc2ee92e80319d0f32cb9",
+          "translation": "实际乘开，就得到一个多项式"
+        },
+        {
+          "id": "p444-b13",
+          "source": "$$x^n+\\cdots\\pm n!$$",
+          "sourceSha256": "bab96355b2901984db5d70a85b74b7def79e831bd6a4aad975cc20e96f06966c"
+        },
+        {
+          "id": "p444-b14",
+          "source": "<aside class=\"original-footnote\">",
+          "sourceSha256": "a988ce88c87a15fb3986b485f02072e557038b84df66813596e575c7dd6a397f"
+        },
+        {
+          "id": "p444-b15",
+          "source": "*The term “prime number” was defined in Problem 2-17. An important fact about prime numbers will be used in the proof, although it is not proved in this book: If $p$ is a prime number which does not divide the integer $a$, and which does not divide the integer $b$, then $p$ also does not divide $ab$. The Suggested Reading mentions references for this theorem (which is crucial in proving that the factorization of an integer into primes is unique). We will also use the result of Problem 2-17(d), that there are infinitely many primes—the reader is asked to determine at precisely which points this information is required.",
+          "sourceSha256": "cc77ce826445e0c2341649b8d6e46dee4e463f4d63a183bc9e0b484e82b2c5da",
+          "translation": "*“素数”一词在习题 2-17 中已经定义。证明中将用到一个关于素数的重要事实，虽然本书没有证明它：如果 $p$ 是一个素数，既不整除整数 $a$，也不整除整数 $b$，那么 $p$ 也不整除 $ab$。“推荐阅读”中列出了介绍这一定理的参考书（这一定理对于证明整数分解成素因子的唯一性至关重要）。我们还将用到习题 2-17(d) 的结果，即素数有无穷多个——请读者确定，论证中究竟哪些地方需要这一事实。"
+        },
+        {
+          "id": "p444-b16",
+          "source": "</aside>",
+          "sourceSha256": "0ba5ea9cb632c899daab77879064f3273ebba6af8945f2dfeff764c05af0602a"
+        }
+      ]
+    },
+    {
+      "printed": 445,
+      "sourceSha256": "83f547389a224cf1dac0992b4daae89dca2f53bd50cc4708b731ab28672b7f24",
+      "blocks": [
+        {
+          "id": "p445-b1",
+          "source": "with integer coefficients. When raised to the $p$th power this becomes an even more complicated polynomial",
+          "sourceSha256": "67d7c962ce6834be9f459ff2126be119e5ac20e0dd7aeabfa5296278ae0bb23f",
+          "translation": "其系数都是整数。将它取 $p$ 次幂，就得到一个更复杂的多项式"
+        },
+        {
+          "id": "p445-b2",
+          "source": "$$x^{np}+\\cdots\\pm(n!)^p.$$",
+          "sourceSha256": "365f82404d6583cd23ea636394ed639e8b12cac7b8ac8af5bf0f7d4de52d8eea"
+        },
+        {
+          "id": "p445-b3",
+          "source": "Thus $M$ can be written in the form",
+          "sourceSha256": "1271caa7242d827ddd0e80880dcc5b3acd76ba90365f729afc5f3c757a6e988d",
+          "translation": "因此，$M$ 可以写成"
+        },
+        {
+          "id": "p445-b4",
+          "source": "$$M=\\sum_{\\alpha=0}^{np}\\frac1{(p-1)!}C_\\alpha\\int_0^\\infty x^{p-1+\\alpha}e^{-x}\\,dx,$$",
+          "sourceSha256": "c3fd11b13f09c273818016c795e7c29d053a72e411c3d6885e84a570335e36a1"
+        },
+        {
+          "id": "p445-b5",
+          "source": "where the $C_\\alpha$ are certain integers, and $C_0=\\pm(n!)^p$. But",
+          "sourceSha256": "d1312c534ec625dad2003c62aa8a9e86488f645a3a10a454c616c1a2e4dc3d6c",
+          "translation": "其中 $C_\\alpha$ 是某些整数，并且 $C_0=\\pm(n!)^p$。但是"
+        },
+        {
+          "id": "p445-b6",
+          "source": "$$\\int_0^\\infty x^ke^{-x}\\,dx=k!.$$",
+          "sourceSha256": "a2c5f4cff20a04404fb9d63e606598fb4dd3fe89d2e89510e956d9eb8d26db4b"
+        },
+        {
+          "id": "p445-b7",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "因此"
+        },
+        {
+          "id": "p445-b8",
+          "source": "$$M=\\sum_{\\alpha=0}^{np}C_\\alpha\\frac{(p-1+\\alpha)!}{(p-1)!}.$$",
+          "sourceSha256": "eb4a4d0d4a7002cea8321ed59fd283572ffad90fbd91cd452f5151a3a28d2135"
+        },
+        {
+          "id": "p445-b9",
+          "source": "Now, for $\\alpha=0$ we obtain the term",
+          "sourceSha256": "46e9d3f56be9fe96467579fc7abdbf9c0370523fc5696b09c011dda4fe4a2278",
+          "translation": "现在，当 $\\alpha=0$ 时，我们得到的项为"
+        },
+        {
+          "id": "p445-b10",
+          "source": "$$\\pm(n!)^p\\frac{(p-1)!}{(p-1)!}=\\pm(n!)^p.$$",
+          "sourceSha256": "6cec4e7b46661c57c57816a2dc7b0ff35d2a0651ac22fc4f26790f2c2ac4bccb"
+        },
+        {
+          "id": "p445-b11",
+          "source": "We will now consider only primes $p>n$; then this term is an integer which is *not* divisible by $p$. On the other hand, if $\\alpha>0$, then",
+          "sourceSha256": "5457bda65a783ebb378d7c669e7c82d6d732da361c6269126cbcef34b315d94c",
+          "translation": "现在我们只考虑素数 $p>n$；于是这一项是一个*不能*被 $p$ 整除的整数。另一方面，如果 $\\alpha>0$，那么"
+        },
+        {
+          "id": "p445-b12",
+          "source": "$$C_\\alpha\\frac{(p-1+\\alpha)!}{(p-1)!}=C_\\alpha(p+\\alpha-1)(p+\\alpha-2)\\cdot\\ldots\\cdot p,$$",
+          "sourceSha256": "3a42e986668db2ed1fbc82f3f85d66f0f3d605cc0f3387308cccb2e959af49ca"
+        },
+        {
+          "id": "p445-b13",
+          "source": "which is divisible by $p$. Therefore $M$ itself is an integer which is *not* divisible by $p$.",
+          "sourceSha256": "475308a96d00af303aecf38aad0f75c64b1af26efbc39c39575950373b84d0e5",
+          "translation": "它可以被 $p$ 整除。因此，$M$ 本身是一个*不能*被 $p$ 整除的整数。"
+        },
+        {
+          "id": "p445-b14",
+          "source": "Now consider $M_k$. We have",
+          "sourceSha256": "bb2d05c0dd426d9041cb5adbbdacc2c3e7edd7ab5be718903763bf54132cff91",
+          "translation": "现在考虑 $M_k$。我们有"
+        },
+        {
+          "id": "p445-b15",
+          "source": "$$\\begin{aligned}\nM_k&=e^k\\int_k^\\infty\\frac{x^{p-1}[(x-1)\\cdot\\ldots\\cdot(x-n)]^pe^{-x}}{(p-1)!}\\,dx\\\\\n&=\\int_k^\\infty\\frac{x^{p-1}[(x-1)\\cdot\\ldots\\cdot(x-n)]^pe^{-(x-k)}}{(p-1)!}\\,dx.\n\\end{aligned}$$",
+          "sourceSha256": "d857145ed2bd6dfe8990f53b60304a331d2c2987084a8ee9823f7c6bd73697c6"
+        },
+        {
+          "id": "p445-b16",
+          "source": "This can be transformed into an expression looking very much like $M$ by the substitution",
+          "sourceSha256": "d1770cdf1f6db555df12668ec47a89ebf90b1d5ae7cc5b49ffa2c9e35e930456",
+          "translation": "通过代换，可以把它变成一个与 $M$ 十分相似的表达式："
+        },
+        {
+          "id": "p445-b17",
+          "source": "$$\\begin{aligned}u&=x-k\\\\du&=dx.\\end{aligned}$$",
+          "sourceSha256": "6e054ac57ee9dcbde2e11b3b5395850258203da5dffa45bf20d976ef6b609c23"
+        },
+        {
+          "id": "p445-b18",
+          "source": "The limits of integration are changed to 0 and $\\infty$, and",
+          "sourceSha256": "b1d7039a0ffa34b58876d0ae1d4655c4dff5d21c7542e3144e4f0a4ecf419813",
+          "translation": "积分限变成 0 和 $\\infty$，并且"
+        },
+        {
+          "id": "p445-b19",
+          "source": "$$M_k=\\int_0^\\infty\\frac{(u+k)^{p-1}[(u+k-1)\\cdot\\ldots\\cdot u\\cdot\\ldots\\cdot(u+k-n)]^pe^{-u}}{(p-1)!}\\,du.$$",
+          "sourceSha256": "124d94f65d2674683fb35e207878451580fdac236f386d8a3c4fccd1d933efef"
+        },
+        {
+          "id": "p445-b20",
+          "source": "There is one very significant difference between this expression and that for $M$. The term in brackets contains the factor $u$ in the $k$th place. Thus the $p$th power contains the factor $u^p$. This means that the entire expression",
+          "sourceSha256": "bd56b6bb203317fce71bdf8c812a9ec2b984e2b7c3127840c30753bc51ee4519",
+          "translation": "这个表达式与 $M$ 的表达式之间，有一个极其重要的区别。方括号中的项在第 $k$ 个位置含有因子 $u$。因此，取 $p$ 次幂后就含有因子 $u^p$。这意味着整个表达式"
+        },
+        {
+          "id": "p445-b21",
+          "source": "$$ (u+k)^{p-1}[(u+k-1)\\cdot\\ldots\\cdot(u+k-n)]^p$$",
+          "sourceSha256": "79de1f36062ecc81556613b96d75c9bdd9606b5a05799c2c2139b4b603c8e487"
+        }
+      ]
+    },
+    {
+      "printed": 446,
+      "sourceSha256": "5a870f282972a350a24ea43400e31e74f9d513b9c2a510f58046b77f3d216a85",
+      "blocks": [
+        {
+          "id": "p446-b1",
+          "source": "is a polynomial with integer coefficients, *every term of which* has degree at least $p$. Thus",
+          "sourceSha256": "1ae1d716e224011698a1aa82e667f3ec3d73b4246075bce5efa10168544db210",
+          "translation": "是一个整系数多项式，*其中每一项*的次数都至少为 $p$。因此"
+        },
+        {
+          "id": "p446-b2",
+          "source": "$$M_k=\\sum_{\\alpha=1}^{np}\\frac1{(p-1)!}D_\\alpha\\int_0^\\infty u^{p-1+\\alpha}e^{-u}\\,du=\\sum_{\\alpha=1}^{np}D_\\alpha\\frac{(p-1+\\alpha)!}{(p-1)!},$$",
+          "sourceSha256": "eb9a0e035c09cb05f1e6cc2c58a00d50ac6214fb0feaea666888b787aaa2e693"
+        },
+        {
+          "id": "p446-b3",
+          "source": "where the $D_\\alpha$ are certain integers. Notice that the summation begins with $\\alpha=1$; in this case *every* term in the sum is divisible by $p$. Thus each $M_k$ is an integer which *is* divisible by $p$.",
+          "sourceSha256": "7ab9f36049e1e895751af6b83a4d7eb5f80c189f909b5fef5357655791e2b5ec",
+          "translation": "其中 $D_\\alpha$ 是某些整数。注意，求和从 $\\alpha=1$ 开始；在这种情况下，和式中的*每一项*都能被 $p$ 整除。因此，每个 $M_k$ 都是一个*能*被 $p$ 整除的整数。"
+        },
+        {
+          "id": "p446-b4",
+          "source": "Now it is clear that",
+          "sourceSha256": "042e5a43ad305e0a75ea0b390241b5a34379ecc083847e2e7a52945f070b4c06",
+          "translation": "现在显然有"
+        },
+        {
+          "id": "p446-b5",
+          "source": "$$e^k=\\frac{M_k+\\varepsilon_k}M,\\quad k=1,\\ldots,n.$$",
+          "sourceSha256": "ff139764067bd7c73bb5739457a86f0d461b38079c890528bd4008526d5d8cfd"
+        },
+        {
+          "id": "p446-b6",
+          "source": "Substituting into $(*)$ and multiplying by $M$ we obtain",
+          "sourceSha256": "ebf7aa5cb41fc9e7faab4b66b7e48331b8c2120cc545d90179f0a287c5f41b9a",
+          "translation": "代入 $(*)$，再乘以 $M$，得到"
+        },
+        {
+          "id": "p446-b7",
+          "source": "$$[a_0M+a_1M_1+\\cdots+a_nM_n]+[a_1\\varepsilon_1+\\cdots+a_n\\varepsilon_n]=0.$$",
+          "sourceSha256": "92def82af3b4c09846076bcb02c4dbea9003d590616634132f6386ac0d15e1f5"
+        },
+        {
+          "id": "p446-b8",
+          "source": "In addition to requiring that $p>n$ let us also stipulate that $p>|a_0|$. This means that both $M$ and $a_0$ are not divisible by $p$, so $a_0M$ is also not divisible by $p$. Since each $M_k$ is divisible by $p$, it follows that",
+          "sourceSha256": "76023b7df67a2f5845420737366592faac6a7cded78dede32b4363c805a66dd9",
+          "translation": "除了要求 $p>n$，我们再规定 $p>|a_0|$。这意味着 $M$ 和 $a_0$ 都不能被 $p$ 整除，所以 $a_0M$ 也不能被 $p$ 整除。由于每个 $M_k$ 都能被 $p$ 整除，因此"
+        },
+        {
+          "id": "p446-b9",
+          "source": "$$a_0M+a_1M_1+\\cdots+a_nM_n$$",
+          "sourceSha256": "e45d8429e3b1bbfd2142a8cdc97b43a8a813589f0584f59df9b0860a955e6f07"
+        },
+        {
+          "id": "p446-b10",
+          "source": "is *not* divisible by $p$. In particular it is a *nonzero* integer.",
+          "sourceSha256": "d911023e4c209bedb254647b88e45cc9c1040c3664a705d73f8eaec60eba8862",
+          "translation": "*不能*被 $p$ 整除。特别地，它是一个*非零*整数。"
+        },
+        {
+          "id": "p446-b11",
+          "source": "In order to obtain a contradiction to the assumed equation $(*)$, and thereby prove that $e$ is transcendental, it is only necessary to show that",
+          "sourceSha256": "e891e25a77183bf2be6a117e0a0050792bf3a95aafa1b422608b3588a12d845c",
+          "translation": "为了与所假设的方程 $(*)$ 得出矛盾，从而证明 $e$ 是超越数，只需证明"
+        },
+        {
+          "id": "p446-b12",
+          "source": "$$|a_1\\varepsilon_1+\\cdots+a_n\\varepsilon_n|$$",
+          "sourceSha256": "636062d9ca7f611c6437ce2751328415fb3a56e3907aae8af7d893003d57e89a"
+        },
+        {
+          "id": "p446-b13",
+          "source": "can be made as small as desired, by choosing $p$ large enough; it is clearly sufficient to show that each $|\\varepsilon_k|$ can be made as small as desired. This requires nothing more than some simple estimates; for the remainder of the argument remember that $n$ is a certain fixed number (the degree of the assumed polynomial equation $(*)$). To begin with, if $1\\le k\\le n$, then",
+          "sourceSha256": "9c11ce9c85704ee03022f53fe4c9a1ad953f86b482b508fc1a62f11efe3b43b4",
+          "translation": "可以通过选择充分大的 $p$ 而任意小；显然，只需证明每个 $|\\varepsilon_k|$ 都能任意小。这只需要几个简单的估计；在剩下的论证中，请记住 $n$ 是某个固定的数（即所假设的多项式方程 $(*)$ 的次数）。首先，如果 $1\\le k\\le n$，那么"
+        },
+        {
+          "id": "p446-b14",
+          "source": "$$\\begin{aligned}\n|\\varepsilon_k|&\\le e^k\\int_0^k\\frac{|x^{p-1}[(x-1)\\cdot\\ldots\\cdot(x-n)]^p|e^{-x}}{(p-1)!}\\,dx\\\\\n&\\le e^n\\int_0^n\\frac{n^{p-1}|(x-1)\\cdot\\ldots\\cdot(x-n)|^pe^{-x}}{(p-1)!}\\,dx.\n\\end{aligned}$$",
+          "sourceSha256": "49bc821fda55a21e3793308df7d29904e84eecd3f1da8cad4c24b639b2eef9af"
+        },
+        {
+          "id": "p446-b15",
+          "source": "Now let $A$ be the maximum of $|(x-1)\\cdot\\ldots\\cdot(x-n)|$ for $x$ in $[0,n]$. Then",
+          "sourceSha256": "b76b467e3f989ebcd96671989e4145f70d234601fe38a1050709bb42d36e316e",
+          "translation": "现在，令 $A$ 为 $x$ 在 $[0,n]$ 中变化时 $|(x-1)\\cdot\\ldots\\cdot(x-n)|$ 的最大值。那么"
+        },
+        {
+          "id": "p446-b16",
+          "source": "$$\\begin{aligned}\n|\\varepsilon_k|&\\le\\frac{e^nn^{p-1}A^p}{(p-1)!}\\int_0^ne^{-x}\\,dx\\\\\n&\\le\\frac{e^nn^{p-1}A^p}{(p-1)!}\\int_0^\\infty e^{-x}\\,dx\\\\\n&=\\frac{e^nn^{p-1}A^p}{(p-1)!}\\\\\n&\\le\\frac{e^nn^pA^p}{(p-1)!}=\\frac{e^n(nA)^p}{(p-1)!}.\n\\end{aligned}$$",
+          "sourceSha256": "4042ee7299517e8008a2f42db97858254a4d21fa607c90364d72ab89d18f2493"
+        }
+      ]
+    },
+    {
+      "printed": 447,
+      "sourceSha256": "d38f058e9c601c6820fffeabf5e356c1bc67dbbe72c2d3934b697578ddf66496",
+      "blocks": [
+        {
+          "id": "p447-b1",
+          "source": "But $n$ and $A$ are fixed; thus $(nA)^p/(p-1)!$ can be made as small as desired by making $p$ sufficiently large. ▮",
+          "sourceSha256": "99e96cfdb4207a40e2519c8ffb4905e8a60dc4d6acae32c8da4e7d750f2f8ba4",
+          "translation": "但是 $n$ 和 $A$ 都是固定的；因此，只要使 $p$ 充分大，就能使 $(nA)^p/(p-1)!$ 任意小。▮"
+        },
+        {
+          "id": "p447-b2",
+          "source": "This proof, like the proof that $\\pi$ is irrational, deserves some philosophic afterthoughts. At first sight, the argument seems quite “advanced”—after all, we use integrals, and integrals from 0 to $\\infty$ at that. Actually, as many mathematicians have observed, integrals can be eliminated from the argument completely; the only integrals essential to the proof are of the form",
+          "sourceSha256": "0d6eea2ab6e958ce1b7066ccf410a8a3ceae5fcfd2f9e1c917915d8a2ff4cfbf",
+          "translation": "这个证明与 $\\pi$ 的无理性证明一样，值得作一些哲学层面的回顾。乍看之下，这个论证似乎相当“高深”——毕竟，我们用到了积分，而且还是从 0 到 $\\infty$ 的积分。实际上，正如许多数学家指出的那样，完全可以把积分从论证中消除；证明中真正必需的积分只有如下形式："
+        },
+        {
+          "id": "p447-b3",
+          "source": "$$\\int_0^\\infty x^ke^{-x}\\,dx$$",
+          "sourceSha256": "cd7d29b5975ec7d2a0b8d756a032fd6863fdfa78962bce1c750dac7170db149e"
+        },
+        {
+          "id": "p447-b4",
+          "source": "for integral $k$, and these integrals can be replaced by $k!$ whenever they occur. Thus $M$, for example, could have been defined initially as",
+          "sourceSha256": "bd4b18c3978c24f07f0c67f9abb93bb7035a0329280b413fe47d4cdeac80b7b1",
+          "translation": "其中 $k$ 为整数；每当这种积分出现时，都可以用 $k!$ 代替。因此，例如 $M$，一开始就可以定义为"
+        },
+        {
+          "id": "p447-b5",
+          "source": "$$M=\\sum_{\\alpha=0}^{np}C_\\alpha\\frac{(p-1+\\alpha)!}{(p-1)!},$$",
+          "sourceSha256": "abec817311dcda7347d0ca81125f877790b6bb325ed356a73e6e19aeb93db640"
+        },
+        {
+          "id": "p447-b6",
+          "source": "where $C_\\alpha$ are the coefficients of the polynomial",
+          "sourceSha256": "52bc09ea3e69c57e125dcb487b97280ebd166716f8a54d1039dd39361e4f8133",
+          "translation": "其中 $C_\\alpha$ 是多项式"
+        },
+        {
+          "id": "p447-b7",
+          "source": "$$[(x-1)\\cdot\\ldots\\cdot(x-n)]^p.$$",
+          "sourceSha256": "90e8c2fe089a951c69050484cfe398e13582e012a88aa8cafc2146c432239eab"
+        },
+        {
+          "id": "p447-b8",
+          "source": "If this idea is developed consistently, one obtains a “completely elementary” proof that $e$ is transcendental, depending only on the fact that",
+          "sourceSha256": "f22c036f5d29a06cee67adee48e58297f21280d4e3ecd9567ead1b0edc72f21f",
+          "translation": "的系数。如果把这一想法贯彻到底，就能得到一个证明 $e$ 是超越数的“完全初等”的证明，它只依赖于这样一个事实："
+        },
+        {
+          "id": "p447-b9",
+          "source": "$$e=1+\\frac1{1!}+\\frac1{2!}+\\frac1{3!}+\\cdots.$$",
+          "sourceSha256": "9a7fdcd5e10514d6223bd8ad9a268835eb4a5781fe247c3850fe2ce41c62e3b2"
+        },
+        {
+          "id": "p447-b10",
+          "source": "Unfortunately, this “elementary” proof is harder to understand than the original one—the whole structure of the proof must be hidden just to eliminate a few integral signs! This situation is by no means peculiar to this specific theorem—“elementary” arguments are frequently more difficult than “advanced” ones. Our proof that $\\pi$ is irrational is a case in point. You probably remember nothing about this proof except that it involves quite a few complicated functions. There is actually a more advanced, but much more conceptual proof, which shows that $\\pi$ is *transcendental*, a fact which is of great historical, as well as intrinsic, interest. One of the classical problems of Greek mathematics was to construct, with compass and straightedge alone, a square whose area is that of a circle of radius 1. This requires the construction of a line segment whose length is $\\sqrt\\pi$, which can be accomplished if a line segment of length $\\pi$ is constructible. The Greeks were totally unable to decide whether such a line segment could be constructed, and even the full resources of modern mathematics were unable to settle this question until 1882. In that year Lindemann proved that $\\pi$ is transcendental; since the length of any segment that can be constructed with straightedge and compass can be written in terms of $+$, $\\cdot$, $-$, $\\div$, and $\\sqrt{\\phantom{x}}$, and is therefore algebraic, this proves that a line segment of length $\\pi$ cannot be constructed.",
+          "sourceSha256": "e6effe3a2e06c18be168987a6bedc4c55109c29725f6307928c795c2c336a8bd",
+          "translation": "不幸的是，这个“初等”证明比原来的证明更难理解——仅仅为了消除几个积分号，就必须把整个证明的结构隐藏起来！这种情形绝不是这一个特定定理所独有的——“初等”论证常常比“高等”论证更困难。我们对 $\\pi$ 无理性的证明就是一个例子。你也许已经不记得这个证明的内容，只记得其中用到了好几个复杂的函数。实际上，有一个更高等、却在概念上清晰得多的证明，它说明 $\\pi$ 是*超越数*；这个事实本身很有趣，在历史上也有重大意义。古希腊数学的一个经典问题是：只用圆规和直尺，作出一个与半径为 1 的圆面积相等的正方形。这需要作出一条长度为 $\\sqrt\\pi$ 的线段，而只要长度为 $\\pi$ 的线段可以作出，这件事就能做到。希腊人完全无法判定这样的线段是否可以作出；即便动用现代数学的全部力量，也直到 1882 年才解决这一问题。那一年，林德曼证明了 $\\pi$ 是超越数；而任何能用直尺和圆规作出的线段，其长度都可以用 $+$、$\\cdot$、$-$、$\\div$ 和 $\\sqrt{\\phantom{x}}$ 表示，因而必定是代数数，所以这就证明了长度为 $\\pi$ 的线段不可能作出。"
+        },
+        {
+          "id": "p447-b11",
+          "source": "The proof that $\\pi$ is transcendental requires a sizable amount of mathematics which is too advanced to be reached in this book. Nevertheless, the proof is not much more difficult than the proof that $e$ is transcendental. In fact, the proof",
+          "sourceSha256": "000ccfe2730de83a16c9a735d08613e3c63926cc67bc90606f95bb0b93b7fcd0",
+          "translation": "证明 $\\pi$ 是超越数，需要相当多本书无法深入到的高等数学。不过，这个证明并不比 $e$ 是超越数的证明难多少。实际上，"
+        }
+      ]
+    },
+    {
+      "printed": 448,
+      "sourceSha256": "5ccd6ea1b574176b9e0a6bae151fa408db68da1eb3dd23af08a9d0b6510a83ac",
+      "blocks": [
+        {
+          "id": "p448-b1",
+          "source": "for $\\pi$ is practically the same as the proof for $e$. This last statement should certainly surprise you. The proof that $e$ is transcendental seems to depend so thoroughly on particular properties of $e$ that it is almost inconceivable how any modifications could ever be used for $\\pi$; after all, what does $e$ have to do with $\\pi$? Just wait and see!",
+          "sourceSha256": "487bdb5705272bc999dcd901c7d7149aa1471410a7b49ed652424d8a94227f7e",
+          "translation": "关于 $\\pi$ 的证明与关于 $e$ 的证明几乎完全相同。最后这句话一定会让你吃惊。$e$ 是超越数的证明似乎如此彻底地依赖 $e$ 的特殊性质，以至于几乎难以想象，通过怎样的修改才能把它用于 $\\pi$；毕竟，$e$ 与 $\\pi$ 又有什么关系呢？且等着看吧！"
+        },
+        {
+          "id": "p448-b2",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p448-b3",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p448-b4",
+          "source": "(a) Prove that if $\\alpha>0$ is algebraic, then $\\sqrt\\alpha$ is algebraic.",
+          "sourceSha256": "075f1d616ff8a238303d9950090062301e6b8988a58494c8c7f07ed7a8a93c10",
+          "translation": "(a) 证明：如果 $\\alpha>0$ 是代数数，那么 $\\sqrt\\alpha$ 也是代数数。"
+        },
+        {
+          "id": "p448-b5",
+          "source": "(b) Prove that if $\\alpha$ is algebraic and $r$ is rational, then $\\alpha+r$ and $\\alpha r$ are algebraic.",
+          "sourceSha256": "16013a6154614100245a6ea982492600baa5e9c2d9dd4289bc1331c2f9f7f5fa",
+          "translation": "(b) 证明：如果 $\\alpha$ 是代数数，$r$ 是有理数，那么 $\\alpha+r$ 和 $\\alpha r$ 都是代数数。"
+        },
+        {
+          "id": "p448-b6",
+          "source": "Part (b) can actually be strengthened considerably: the sum, product, and quotient of algebraic numbers is algebraic. This fact is too difficult for us to prove here, but some special cases can be examined:",
+          "sourceSha256": "16fd43d5fbaf1386e108feb0e5ed022c50847a370c11c0ff81169ef09c0c53d6",
+          "translation": "(b) 的结论实际上可以大大加强：代数数的和、积及商都是代数数。这个事实太难，我们无法在这里证明，不过可以考察几个特殊情形："
+        },
+        {
+          "id": "p448-b7",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p448-b8",
+          "source": "Prove that $\\sqrt2+\\sqrt3$ and $\\sqrt2(1+\\sqrt3)$ are algebraic, by actually finding algebraic equations which they satisfy. (You will need equations of degree 4.)",
+          "sourceSha256": "52a2c43a4d95d955c06300b6df9a6276ef598b27abc17d05e547db823ad74f2e",
+          "translation": "通过实际找出 $\\sqrt2+\\sqrt3$ 和 $\\sqrt2(1+\\sqrt3)$ 所满足的代数方程，证明它们是代数数。（你将需要四次方程。）"
+        },
+        {
+          "id": "p448-b9",
+          "source": "### \\*3.",
+          "sourceSha256": "fd626844e7912de9afe30dfc8a7f361ceaa6cab4555f5e7d3535390c74d22964"
+        },
+        {
+          "id": "p448-b10",
+          "source": "(a) Let $\\alpha$ be an algebraic number which is not rational. Suppose that $\\alpha$ satisfies the polynomial equation",
+          "sourceSha256": "88e679caf041b8be2c0115a1adf61bdb6d065c93d311d1850acee5ccc382f7e9",
+          "translation": "(a) 设 $\\alpha$ 是一个不是有理数的代数数。假设 $\\alpha$ 满足多项式方程"
+        },
+        {
+          "id": "p448-b11",
+          "source": "$$f(x)=a_nx^n+a_{n-1}x^{n-1}+\\cdots+a_0=0,$$",
+          "sourceSha256": "0b987492cbb25c5cb010e429ce670d742b0aff0b99433a3db78b0ff1824bb5e1"
+        },
+        {
+          "id": "p448-b12",
+          "source": "and that no polynomial function of lower degree has this property. Show that $f(p/q)\\ne0$ for any rational number $p/q$. Hint: Use Problem 3-7(b).",
+          "sourceSha256": "98c416710ac417fa67192af31b81bd662a23cbf085599875c3c601766145dbb6",
+          "translation": "并且没有次数更低的多项式函数具有这个性质。证明：对于任意有理数 $p/q$，都有 $f(p/q)\\ne0$。提示：使用习题 3-7(b)。"
+        },
+        {
+          "id": "p448-b13",
+          "source": "(b) Now show that $|f(p/q)|\\ge1/q^n$ for all rational numbers $p/q$ with $q>0$. Hint: Write $f(p/q)$ as a fraction over the common denominator $q^n$.",
+          "sourceSha256": "1ee8052b9aec6befa1a32c11dacf2121d9727dde70dd10b42892362c22184d1f",
+          "translation": "(b) 现在证明：对于所有满足 $q>0$ 的有理数 $p/q$，都有 $|f(p/q)|\\ge1/q^n$。提示：把 $f(p/q)$ 写成以 $q^n$ 为公分母的分数。"
+        },
+        {
+          "id": "p448-b14",
+          "source": "(c) Let $M=\\sup\\{|f'(x)|:|x-\\alpha|<1\\}$. Use the Mean Value Theorem to prove that if $p/q$ is a rational number with $|\\alpha-p/q|<1$, then $|\\alpha-p/q|>1/Mq^n$. (It follows that for $c=\\min(1,1/M)$ we have $|\\alpha-p/q|>c/q^n$ for all rational $p/q$.)",
+          "sourceSha256": "747f15b57374579687d3bc43ced459d924bef5ebaf747fc98b344a612b9775ec",
+          "translation": "(c) 令 $M=\\sup\\{|f'(x)|:|x-\\alpha|<1\\}$。利用中值定理证明：如果 $p/q$ 是满足 $|\\alpha-p/q|<1$ 的有理数，那么 $|\\alpha-p/q|>1/Mq^n$。（由此可知，取 $c=\\min(1,1/M)$ 时，对于所有有理数 $p/q$，都有 $|\\alpha-p/q|>c/q^n$。）"
+        },
+        {
+          "id": "p448-b15",
+          "source": "### \\*4.",
+          "sourceSha256": "a3712dafdc31ab29cac3b70126b5e8ef50ff5fde77ff1963c3d7c8263afac800"
+        },
+        {
+          "id": "p448-b16",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "令"
+        },
+        {
+          "id": "p448-b17",
+          "source": "$$\\alpha=0.110001000000000000000001000\\ldots,$$",
+          "sourceSha256": "f15a3d294bd3ee7430e93671d89175a231be3c314478b39c793d235975ccf87e"
+        },
+        {
+          "id": "p448-b18",
+          "source": "where the 1’s occur in the $n!$ place, for each $n$. Use Problem 3 to prove that $\\alpha$ is transcendental. (For each $n$, show that $\\alpha$ is not the root of an equation of degree $n$.)",
+          "sourceSha256": "1a1ce0542721677388e829f52fe15cb1477609b02432dd4dc441076474086a26",
+          "translation": "其中，对于每个 $n$，数字 1 出现在第 $n!$ 位。利用习题 3 证明 $\\alpha$ 是超越数。（对于每个 $n$，证明 $\\alpha$ 不是任何 $n$ 次方程的根。）"
+        },
+        {
+          "id": "p448-b19",
+          "source": "Although Problem 4 mentions only one specific transcendental number, it should be clear that one can easily construct infinitely many other numbers $\\alpha$ which do not satisfy $|\\alpha-p/q|>c/q^n$ for any $c$ and $n$. Such numbers were first considered by Liouville (1809–1882), and the inequality in Problem 3 is often called *Liouville’s inequality*. None of the transcendental numbers constructed in this way happens to be particularly interesting, but for a long time Liouville’s transcendental numbers were the only ones known. This situation was changed quite radically by the work of Cantor (1845–1918), who showed, without exhibiting a single transcendental",
+          "sourceSha256": "0bc1d085c9eafc333ed5796893d3b23f934e32637df51f12f1549b255579c1aa",
+          "translation": "虽然习题 4 只提到了一个具体的超越数，但显然，我们可以轻易构造出无穷多个其他的数 $\\alpha$，使得无论怎样取 $c$ 和 $n$，都不能满足 $|\\alpha-p/q|>c/q^n$。这种数最早由刘维尔（1809—1882）考察，习题 3 中的不等式通常称为*刘维尔不等式*。以这种方式构造出的超越数，碰巧没有一个特别有趣；然而，很长一段时间里，刘维尔的超越数是人们仅知的超越数。康托尔（1845—1918）的工作彻底改变了这种状况；他没有具体展示任何一个超越数，却证明了"
+        }
+      ]
+    },
+    {
+      "printed": 449,
+      "sourceSha256": "25378560940aad17287f4f6a61bd9dafae5e376d339ad665b085eef26140c6bb",
+      "blocks": [
+        {
+          "id": "p449-b1",
+          "source": "number, that *most* numbers are transcendental. The next two problems provide an introduction to the ideas that allow us to make sense of such statements. The basic definition with which we must work is the following: A set $A$ is called **countable** if its elements can be arranged in a sequence",
+          "sourceSha256": "2b2e8996f38034add196c6df12c6d9644139e70dea5a4707b952f631470c95d7",
+          "translation": "*大多数*数都是超越数。接下来两道习题将初步介绍那些使这类说法具有确切意义的思想。我们需要使用的基本定义如下：如果集合 $A$ 的元素可以排成一个序列，就称这个集合为**可数的**："
+        },
+        {
+          "id": "p449-b2",
+          "source": "$$a_1,a_2,a_3,a_4,\\ldots.$$",
+          "sourceSha256": "9e3076dff2d7ee77d5c3391c39f789c7066ca387dc608345ad480bc3309dc1e3"
+        },
+        {
+          "id": "p449-b3",
+          "source": "The obvious example (in fact, more or less the Platonic ideal of) a countable set is $\\mathbf N$, the set of natural numbers; clearly the set of even natural numbers is also countable:",
+          "sourceSha256": "6174e61e494717f9503bfde6d1fa6e435f46149571a6f1aff480eb9503eb78c1",
+          "translation": "一个显而易见的可数集合例子（实际上，多少可以说是可数集合的柏拉图式理想原型）就是自然数集 $\\mathbf N$；显然，偶自然数的集合也是可数的："
+        },
+        {
+          "id": "p449-b4",
+          "source": "$$2,4,6,8,\\ldots.$$",
+          "sourceSha256": "b9b1f67e746dcb3afdaa6e62a7f4bb199c5e4109c9c844a2490c5220c6fafc84"
+        },
+        {
+          "id": "p449-b5",
+          "source": "It is a little more surprising to learn that $\\mathbf Z$, the set of all integers (positive, negative and 0) is also countable, but seeing is believing:",
+          "sourceSha256": "e505f29fac32a756d2c872c14f7c09530613b97a3349b587d2a8f2d4cb6b635b",
+          "translation": "稍微出人意料的是，全体整数（正整数、负整数和 0）的集合 $\\mathbf Z$ 也是可数的，不过眼见为实："
+        },
+        {
+          "id": "p449-b6",
+          "source": "$$0,1,-1,2,-2,3,-3,\\ldots.$$",
+          "sourceSha256": "9c3eb36f743341b30185d2fe8822459653913be880daecff6639d2816339881b"
+        },
+        {
+          "id": "p449-b7",
+          "source": "The next two problems, which outline the basic features of countable sets, are really a series of examples to show that (1) a lot more sets are countable than one might think and (2) nevertheless, some sets are not countable.",
+          "sourceSha256": "f0b0ef90ab1a037943c87e8ae258ffb451e8f19761bcb7b2a3ba0729d40e3e31",
+          "translation": "接下来两道题概括了可数集合的基本特点，实际上是一系列例子，表明：(1) 可数集合比我们想象的多得多；(2) 尽管如此，有些集合仍然不是可数的。"
+        },
+        {
+          "id": "p449-b8",
+          "source": "### \\*5.",
+          "sourceSha256": "e3d6f6f84b1f496f75eae3b58ba1ea193dfc481f889a3fe6a0fb00f97a63563c"
+        },
+        {
+          "id": "p449-b9",
+          "source": "(a) Show that if $A$ and $B$ are countable, then so is $A\\cup B=\\{x:x\\text{ is in }A\\text{ or }x\\text{ is in }B\\}$. Hint: Use the same trick that worked for $\\mathbf Z$.",
+          "sourceSha256": "c5176c4db6189c941f55cb55de3c87523eeaa5ee01ea440a75ba12b3c7635d98",
+          "translation": "(a) 证明：如果 $A$ 和 $B$ 是可数的，那么 $A\\cup B=\\{x:x\\text{ is in }A\\text{ or }x\\text{ is in }B\\}$ 也是可数的。提示：使用对 $\\mathbf Z$ 奏效的同一个技巧。"
+        },
+        {
+          "id": "p449-b10",
+          "source": "(b) Show that the set of positive rational numbers is countable. (This is really quite startling, but the figure below indicates the path to enlightenment.)",
+          "sourceSha256": "9cd2f106c0ca5579bece9d6bb56c691502f095ac8dd2fc183e58bd596f8a85de",
+          "translation": "(b) 证明正有理数集是可数的。（这实在相当惊人，不过下图指出了通向理解的道路。）"
+        },
+        {
+          "id": "p449-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:329px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"681 879 329 226\" role=\"img\" aria-label=\"Diagonal enumeration of positive rational numbers\"><image href=\"pages/book/0468.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n</figure>",
+          "sourceSha256": "3c4d7fcf9d08bf21f79eb6748fd5c346ba2f6b4eb589f3854ea0b50b8111b4e9"
+        },
+        {
+          "id": "p449-b12",
+          "source": "(c) Show that the set of all pairs $(m,n)$ of integers is countable. (This is practically the same as part (b).)",
+          "sourceSha256": "9e91c3c7853749509bae9e9311870e52eec4002682dc16d008b117e6e7df22c7",
+          "translation": "(c) 证明所有整数对 $(m,n)$ 构成的集合是可数的。（这与 (b) 几乎完全一样。）"
+        },
+        {
+          "id": "p449-b13",
+          "source": "(d) If $A_1,A_2,A_3,\\ldots$ are each countable, prove that",
+          "sourceSha256": "c73fe479a706daac09877c5b1533d7539f5ba79f9ca3c9d31d55a4b168783817",
+          "translation": "(d) 如果 $A_1,A_2,A_3,\\ldots$ 都是可数的，证明"
+        },
+        {
+          "id": "p449-b14",
+          "source": "$$A_1\\cup A_2\\cup A_3\\cup\\cdots$$",
+          "sourceSha256": "7bf47b397006a179c22aca78a0f8c9ff0cf35433bce2496cf5089fca60bbabfa"
+        },
+        {
+          "id": "p449-b15",
+          "source": "is also countable. (Again use the same trick as in part (b).)",
+          "sourceSha256": "88a9e17e6146330edaafb85ff480d208dfb4a4bf9fed964e6f2b77c410b57bca",
+          "translation": "也是可数的。（再次使用与 (b) 相同的技巧。）"
+        },
+        {
+          "id": "p449-b16",
+          "source": "(e) Prove that the set of all triples $(l,m,n)$ of integers is countable. (A triple $(l,m,n)$ can be described by a pair $(l,m)$ and a number $n$.)",
+          "sourceSha256": "b82f10cd48cf33d5ee427e329ae718119d148ecb81357d05e4f46249e9fcdfbf",
+          "translation": "(e) 证明所有整数三元组 $(l,m,n)$ 构成的集合是可数的。（一个三元组 $(l,m,n)$ 可以用一个数对 $(l,m)$ 和一个数 $n$ 来描述。）"
+        },
+        {
+          "id": "p449-b17",
+          "source": "(f) Prove that the set of all $n$-tuples $(a_1,a_2,\\ldots,a_n)$ is countable. (If you have done part (e), you can do this, using induction.)",
+          "sourceSha256": "57349bf2024ba5e8e3e893277652442cf650e694d960e56cef5734b1c4c84a4c",
+          "translation": "(f) 证明所有 $n$ 元组 $(a_1,a_2,\\ldots,a_n)$ 构成的集合是可数的。（如果你已经做出了 (e)，就可以用归纳法完成这一问。）"
+        },
+        {
+          "id": "p449-b18",
+          "source": "(g) Prove that the set of all roots of polynomial functions of degree $n$ with integer coefficients is countable. (Part (f) shows that the set of all these",
+          "sourceSha256": "bf8e60424e142e424f2a66321f94bd2e9a7c96093803752b46761401b0021646",
+          "translation": "(g) 证明所有整系数 $n$ 次多项式函数的根构成的集合是可数的。（(f) 表明，所有这些"
+        }
+      ]
+    },
+    {
+      "printed": 450,
+      "sourceSha256": "8b459c34a421eeeb74bb540ee58ec3988683cefc0def4f827d6de43f4b8a4d5f",
+      "blocks": [
+        {
+          "id": "p450-b1",
+          "source": "polynomial functions can be arranged in a sequence, and each has at most $n$ roots.)",
+          "sourceSha256": "f0f91126d0d3feb640e4ea010c705941032f373f09796b424b3a92689c953c85",
+          "translation": "多项式函数可以排成一个序列，而每个函数至多有 $n$ 个根。）"
+        },
+        {
+          "id": "p450-b2",
+          "source": "(h) Now use parts (d) and (g) to prove that the set of all algebraic numbers is countable.",
+          "sourceSha256": "49adc4094036e01ea5b69532b5eafd4811f9783b81ff5b4714500e526227a527",
+          "translation": "(h) 现在利用 (d) 和 (g)，证明全体代数数构成的集合是可数的。"
+        },
+        {
+          "id": "p450-b3",
+          "source": "### \\*6.",
+          "sourceSha256": "16dbb09f3ea3b891672f7582e4080489688794641f917b2e318807321f1b62cd"
+        },
+        {
+          "id": "p450-b4",
+          "source": "Since so many sets turn out to be countable, it is important to note that the set of all real numbers between 0 and 1 is not countable. In other words, there is no way of listing all these real numbers in a sequence",
+          "sourceSha256": "ad21b3fa1da0852ac09a00a16eabf6908beda9b28b2817828cae6a9bcf30fde1",
+          "translation": "既然如此多的集合都是可数的，那么指出 0 与 1 之间的全体实数所成的集合不可数，就显得十分重要。换句话说，不可能把这些实数全部列成一个序列"
+        },
+        {
+          "id": "p450-b5",
+          "source": "$$\\begin{aligned}\\alpha_1&=0.a_{11}a_{12}a_{13}a_{14}\\ldots\\\\\\alpha_2&=0.a_{21}a_{22}a_{23}a_{24}\\ldots\\\\\\alpha_3&=0.a_{31}a_{32}a_{33}a_{34}\\ldots\\end{aligned}$$",
+          "sourceSha256": "6145ddbdb65ab962d515ac08e1a5b75378a27ae37ea9d509d1fef442901c1c85"
+        },
+        {
+          "id": "p450-b6",
+          "source": "(decimal notation is being used on the right). To prove that this is so, suppose such a list were possible and consider the decimal",
+          "sourceSha256": "032d61790b16c95bf4433df583fc5c5621e802b66865a933234c93056c145d47",
+          "translation": "（右边使用了十进制记法）。为了证明这一点，假设这样的排列是可能的，并考虑小数"
+        },
+        {
+          "id": "p450-b7",
+          "source": "$$0.\\bar a_{11}\\bar a_{22}\\bar a_{33}\\bar a_{44}\\ldots,$$",
+          "sourceSha256": "c1c99dfb2651297e40f5d78a151e32a2bfb6b35f60fe22d52457cea789fbb36f"
+        },
+        {
+          "id": "p450-b8",
+          "source": "where $\\bar a_{nn}=5$ if $a_{nn}\\ne5$ and $\\bar a_{nn}=6$ if $a_{nn}=5$. Show that this number cannot possibly be in the list, thus obtaining a contradiction.",
+          "sourceSha256": "430cafac737a44ff84c277ac3b0a6ff36319b0e25857801fc503934d691ea120",
+          "translation": "其中，$a_{nn}\\ne5$ 时取 $\\bar a_{nn}=5$，$a_{nn}=5$ 时取 $\\bar a_{nn}=6$。证明这个数不可能出现在上述列表中，从而得出矛盾。"
+        },
+        {
+          "id": "p450-b9",
+          "source": "Problems 5 and 6 can be summed up as follows. The set of algebraic numbers is countable. If the set of transcendental numbers were also countable, then the set of all real numbers would be countable, by Problem 5(a), and consequently the set of real numbers between 0 and 1 would be countable. But this is false. Thus, the set of algebraic numbers is countable and the set of transcendental numbers is not (“there are more transcendental numbers than algebraic numbers”). The remaining two problems illustrate further how important it can be to distinguish between sets which are countable and sets which are not.",
+          "sourceSha256": "42f1160a95603ac9de35db32d4cbd1d31eb31927ab5c91849e2bb47c14723758",
+          "translation": "习题 5 和 6 可以概括如下。代数数集是可数的。如果超越数集也可数，那么由习题 5(a)，全体实数集就可数，从而 0 与 1 之间的实数集也可数。但这是错误的。因此，代数数集可数，而超越数集不可数（“超越数比代数数多”）。剩下的两道习题进一步说明，区分可数集合与不可数集合有多么重要。"
+        },
+        {
+          "id": "p450-b10",
+          "source": "### \\*7.",
+          "sourceSha256": "a3c250175ef75f686231ad7cfb8bf0b67173c35dcca3c526cf8732f53542b144"
+        },
+        {
+          "id": "p450-b11",
+          "source": "Let $f$ be a nondecreasing function on $[0,1]$. Recall (Problem 8-8) that $\\lim\\limits_{x\\to a^+}f(x)$ and $\\lim\\limits_{x\\to a^-}f(x)$ both exist.",
+          "sourceSha256": "e509938f22a48ce5061457830076395c94f74f8ad9d29aa58ae5c2e533f2595e",
+          "translation": "设 $f$ 是 $[0,1]$ 上的非减函数。回忆一下（习题 8-8），$\\lim\\limits_{x\\to a^+}f(x)$ 和 $\\lim\\limits_{x\\to a^-}f(x)$ 都存在。"
+        },
+        {
+          "id": "p450-b12",
+          "source": "(a) For any $\\varepsilon>0$ prove that there are only finitely many numbers $a$ in $[0,1]$ with $\\lim\\limits_{x\\to a^+}f(x)-\\lim\\limits_{x\\to a^-}f(x)>\\varepsilon$. Hint: There are, in fact, at most $[f(1)-f(0)]/\\varepsilon$ of them.",
+          "sourceSha256": "f787851c4d02afa851e151a29bae2a9e116fbaf2ca5ebb4a7d29ac6c3d694bab",
+          "translation": "(a) 对于任意 $\\varepsilon>0$，证明 $[0,1]$ 中只有有限多个数 $a$ 满足 $\\lim\\limits_{x\\to a^+}f(x)-\\lim\\limits_{x\\to a^-}f(x)>\\varepsilon$。提示：事实上，这样的数至多有 $[f(1)-f(0)]/\\varepsilon$ 个。"
+        },
+        {
+          "id": "p450-b13",
+          "source": "(b) Prove that the set of points at which $f$ is discontinuous is countable. Hint: If $\\lim\\limits_{x\\to a^+}f(x)-\\lim\\limits_{x\\to a^-}f(x)>0$, then it is $>1/n$ for some natural number $n$.",
+          "sourceSha256": "4a40c5873de97d80285372eba3b0d78859a0893b40c7d3d1baa47c34e8440f28",
+          "translation": "(b) 证明 $f$ 的不连续点集是可数的。提示：如果 $\\lim\\limits_{x\\to a^+}f(x)-\\lim\\limits_{x\\to a^-}f(x)>0$，那么对于某个自然数 $n$，它就 $>1/n$。"
+        },
+        {
+          "id": "p450-b14",
+          "source": "This problem shows that a nondecreasing function is automatically continuous at most points. For differentiability the situation is more difficult to analyze and also more interesting. A nondecreasing function can fail to be differentiable at a set of points which is not countable, but it is still true that nondecreasing functions are differentiable at most points (in a different sense of the word “most”). Reference [38] of the Suggested Reading gives a proof using the Rising Sun Lemma of Problem 8-20.",
+          "sourceSha256": "601c8de6dffb97ee02a7e342451326d7a6138b5863d89bbd542cd816bbacf1b1",
+          "translation": "这道题表明，一个非减函数必然在大多数点连续。对于可导性，情形更难分析，也更有趣。一个非减函数可以在一个不可数的点集上不可导；然而，非减函数在大多数点可导这一说法仍然成立（这里“大多数”具有另一种意义）。“推荐阅读”中的参考文献 [38] 利用习题 8-20 的旭日引理给出了一个证明。"
+        }
+      ]
+    },
+    {
+      "printed": 451,
+      "sourceSha256": "6d16baa4fd753ea0c5fd348a415fea2427463a475ec89b73f148952f615247bb",
+      "blocks": [
+        {
+          "id": "p451-b1",
+          "source": "For those who have done Problem 9 of the Appendix to Chapter 11, it is possible to provide at least one application to differentiability of the ideas already developed in this problem set: If $f$ is convex, then $f$ is differentiable except at those points where its right-hand derivative $f_+'$ is discontinuous; but the function $f_+'$ is increasing, so a convex function is automatically differentiable except at a countable set of points.",
+          "sourceSha256": "6bd565c7bac1cfc3220108d125151f620da5605829b1b9bebc310bebe91d48ee",
+          "translation": "对于做过第 11 章附录习题 9 的读者，可以把这组习题中已经建立的思想至少应用一次于可导性：如果 $f$ 是凸函数，那么除了它的右导数 $f_+'$ 不连续的那些点之外，$f$ 处处可导；但函数 $f_+'$ 是递增的，所以凸函数除了一个可数点集之外必然处处可导。"
+        },
+        {
+          "id": "p451-b2",
+          "source": "### \\*8.",
+          "sourceSha256": "d046b6272046f9db72fedfb9f8db16ad72fddcddd800a82b94978c5025a77c5d"
+        },
+        {
+          "id": "p451-b3",
+          "source": "(a) Problem 11-70 showed that if every point is a local maximum point for a continuous function $f$, then $f$ is a constant function. Suppose now that the hypothesis of continuity is dropped. Prove that $f$ takes on only a countable set of values. Hint: For each $x$ choose rational numbers $a_x$ and $b_x$ such that $a_x<x<b_x$ and $x$ is a maximum point for $f$ on $(a_x,b_x)$. Then every value $f(x)$ is the maximum value of $f$ on some interval $(a_x,b_x)$. How many such intervals are there?",
+          "sourceSha256": "c6348882c50b092b08e5bf55f9f010f8628c7805cd5c83f1e100ba984b8c8374",
+          "translation": "(a) 习题 11-70 表明：如果每个点都是连续函数 $f$ 的局部最大值点，那么 $f$ 是常函数。现在去掉连续性假设。证明 $f$ 的取值构成一个可数集合。提示：对于每个 $x$，选取有理数 $a_x$ 和 $b_x$，使得 $a_x<x<b_x$，并且 $x$ 是 $f$ 在 $(a_x,b_x)$ 上的最大值点。于是，每个值 $f(x)$ 都是 $f$ 在某个区间 $(a_x,b_x)$ 上的最大值。这样的区间有多少个？"
+        },
+        {
+          "id": "p451-b4",
+          "source": "(b) Deduce Problem 11-70(a) as a corollary.",
+          "sourceSha256": "7afcb6b657d0450e75692b2a7522d5f2738e20e4e305118650dba9b39fb038ef",
+          "translation": "(b) 将习题 11-70(a) 的结论作为推论得出。"
+        },
+        {
+          "id": "p451-b5",
+          "source": "(c) Prove the result of Problem 11-70(b) similarly.",
+          "sourceSha256": "7c665e35fb9b19ea4e3128ea7e438b621b3336873696a3058c1aed5f4dad559e",
+          "translation": "(c) 类似地证明习题 11-70(b) 的结论。"
+        }
+      ]
+    }
+  ]
+}

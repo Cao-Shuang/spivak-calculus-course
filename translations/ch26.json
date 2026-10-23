@@ -1,0 +1,1193 @@
+{
+  "chapter": 26,
+  "language": "zh-CN",
+  "sourceSha256": "f4a7e1c73d5b37372b8ea5bb392d24510f41e189fa4f44bd5b9822ba9f3ed63f",
+  "paragraphCount": 116,
+  "pages": [
+    {
+      "printed": 541,
+      "sourceSha256": "ea2b3ea6a51abee3ea7a39110e2d6f89ff28f3c3e57390f53e7b265d4679f8f3",
+      "blocks": [
+        {
+          "id": "p541-b1",
+          "source": "# CHAPTER 26\n# COMPLEX FUNCTIONS",
+          "sourceSha256": "9526dd07b23735141f6837cf22358e027c1cd761a9c4173aec8fa3d7caa5e422",
+          "translation": "# 第 26 章\n# 复函数"
+        },
+        {
+          "id": "p541-b2",
+          "source": "You will probably not be surprised to learn that a deeper investigation of complex numbers depends on the notion of functions. Until now a function was (intuitively) a rule which assigned real numbers to certain other real numbers. But there is no reason why this concept should not be extended; we might just as well consider a rule which assigns complex numbers to certain other complex numbers. A rigorous definition presents no problems (we will not even accord it the full honors of a formal definition): a function is a collection of pairs of complex numbers which does not contain two distinct pairs with the same first element. Since we consider real numbers to be certain complex numbers, the old definition is really a special case of the new one. Nevertheless, we will sometimes resort to special terminology in order to clarify the context in which a function is being considered. A function $f$ is called **real-valued** if $f(z)$ is a real number for all $z$ in the domain of $f$, and **complex-valued** to emphasize that it is not necessarily real-valued. Similarly, we will usually state explicitly that a function $f$ is defined on [a subset of] $\\mathbf R$ in those cases where the domain of $f$ is [a subset of] $\\mathbf R$; in other cases we sometimes mention that $f$ is defined on [a subset of] $\\mathbf C$ to emphasize that $f(z)$ is defined for complex $z$ as well as real $z$.",
+          "sourceSha256": "8252b2230271b3aee96dbd723569eec829941913365436868e02dd85d193b19b",
+          "translation": "更深入地研究复数，要依赖函数的概念，这大概不会令你惊讶。直到现在，函数（直观上）都是给某些实数指定另一些实数的规则。但没有理由不把这个概念推广；同样可以考虑给某些复数指定另一些复数的规则。严格定义没有困难（我们甚至不必给予它正式定义的全套礼遇）：函数是一个由复数对构成的集合，其中不存在第一元素相同的两个不同数对。由于我们把实数看作某些复数，旧定义实际上就是新定义的特殊情形。不过，我们有时仍会借助专门术语，来说明讨论函数时所处的背景。如果对于 $f$ 定义域中的所有 $z$，$f(z)$ 都是实数，就称函数 $f$ 为**实值函数**；称它为**复值函数**，则是为了强调它未必是实值的。类似地，当 $f$ 的定义域是 $\\mathbf R$［的子集］时，我们通常明确说明函数 $f$ 定义在 $\\mathbf R$［的某个子集］上；其他情况下，有时会说 $f$ 定义在 $\\mathbf C$［的某个子集］上，以强调 $f(z)$ 不仅对实数 $z$，也对复数 $z$ 有定义。"
+        },
+        {
+          "id": "p541-b3",
+          "source": "Among the multitude of functions defined on $\\mathbf C$, certain ones are particularly important. Foremost among these are the functions of the form",
+          "sourceSha256": "de60d28a9a9cd278030954109f7699b91566174a19dc690915a8c0c62f13cabe",
+          "translation": "在定义于 $\\mathbf C$ 上的众多函数中，有些特别重要。首先是形如"
+        },
+        {
+          "id": "p541-b4",
+          "source": "$$f(z)=a_nz^n+a_{n-1}z^{n-1}+\\cdots+a_0,$$",
+          "sourceSha256": "d0b28f760499f4ec77100e5a0f69fb4ccc5fbb34c5e381953c954fab1f767278"
+        },
+        {
+          "id": "p541-b5",
+          "source": "where $a_0,\\ldots,a_n$ are complex numbers. These functions are called, as in the real case, polynomial functions; they include the function $f(z)=z$ (the “identity function”) and functions of the form $f(z)=a$ for some complex number $a$ (“constant functions”). Another important generalization of a familiar function is the “absolute value function” $f(z)=|z|$ for all $z$ in $\\mathbf C$.",
+          "sourceSha256": "41f5e20c29a4589d7d4f0aac18bc2483df3ec67443d9b841ae1c33dfda6b247b",
+          "translation": "的函数，其中 $a_0,\\ldots,a_n$ 是复数。与实数情形一样，这些函数称为多项式函数；它们包括函数 $f(z)=z$（“恒等函数”），以及对于某个复数 $a$ 具有 $f(z)=a$ 形式的函数（“常函数”）。另一个对熟悉函数的重要推广，是对 $\\mathbf C$ 中所有 $z$ 定义的“绝对值函数”$f(z)=|z|$。"
+        },
+        {
+          "id": "p541-b6",
+          "source": "Two functions of particular importance for complex numbers are Re (the “real part function”) and Im (the “imaginary part function”), defined by",
+          "sourceSha256": "117ff5a59efef48aa7573883afd795f27c1ad09bfa255890467e7c4ad8ff8aba",
+          "translation": "对于复数特别重要的两个函数是 Re（“实部函数”）和 Im（“虚部函数”），定义为"
+        },
+        {
+          "id": "p541-b7",
+          "source": "$$\\begin{aligned}\\operatorname{Re}(x+iy)&=x,\\\\\\operatorname{Im}(x+iy)&=y,\\end{aligned}\\quad\\text{for }x\\text{ and }y\\text{ real.}$$",
+          "sourceSha256": "a68a998b9d90e14054841773eaa24da1d89ad3bdbb266cbb32b2e8a9daeb4af5"
+        },
+        {
+          "id": "p541-b8",
+          "source": "The “conjugate function” is defined by",
+          "sourceSha256": "7f98362f3b67da87311a4dfe5ecc6d35b87780c74764513ed04bc8d0516ba24d",
+          "translation": "“共轭函数”定义为"
+        },
+        {
+          "id": "p541-b9",
+          "source": "$$f(z)=\\bar z=\\operatorname{Re}(z)-i\\operatorname{Im}(z).$$",
+          "sourceSha256": "0c04f26ba86492edd19d16dbabf9767226f453631c0611fc8bbdb1a605fc5255"
+        },
+        {
+          "id": "p541-b10",
+          "source": "Familiar real-valued functions defined on $\\mathbf R$ may be combined in many ways to produce new complex-valued functions defined on $\\mathbf C$—an example is the function",
+          "sourceSha256": "8139440873ecde5a0cb429624e16093b9c7b669cc44cf73bdaca422402f516a9",
+          "translation": "定义在 $\\mathbf R$ 上的熟悉的实值函数，可以用许多方式组合，产生定义在 $\\mathbf C$ 上的新复值函数——例如函数"
+        },
+        {
+          "id": "p541-b11",
+          "source": "$$f(x+iy)=e^y\\sin(x-y)+ix^3\\cos y.$$",
+          "sourceSha256": "564345a0f0fc04f0be82d8eca3d2a32c34607b5ffeb1eaeffb4cf5dae17ed9f3"
+        }
+      ]
+    },
+    {
+      "printed": 542,
+      "sourceSha256": "f0fddc70b45d0829a21204bef6f1744ae5af8064e8de7bfc7a6954241963e44f",
+      "blocks": [
+        {
+          "id": "p542-b1",
+          "source": "The formula for this particular function illustrates a decomposition which is always possible. Any complex-valued function $f$ can be written in the form",
+          "sourceSha256": "1c37ab58fc6368e1e3e1b36fa65c9d5523ed55426417a7d6e2cc338338255c1a",
+          "translation": "这个特定函数的公式，展示了一种始终可以作出的分解。任意复值函数 $f$ 都可以写成"
+        },
+        {
+          "id": "p542-b2",
+          "source": "$$f=u+iv$$",
+          "sourceSha256": "ad388a75b621a6e318708425e6fb359fc58654cbb021815b901063c53f3c797a"
+        },
+        {
+          "id": "p542-b3",
+          "source": "for some real-valued functions $u$ and $v$—simply define $u(z)$ as the real part of $f(z)$, and $v(z)$ as the imaginary part. This decomposition is often very useful, but not always; for example, it would be inconvenient to describe a polynomial function in this way.",
+          "sourceSha256": "356642d8aa0de1511a770310e55aff06f28b17e90fcd395234d36beda9707198",
+          "translation": "其中 $u$ 和 $v$ 是某两个实值函数——只需把 $u(z)$ 定义为 $f(z)$ 的实部，把 $v(z)$ 定义为其虚部。这种分解往往非常有用，但并非总是如此；例如，用这种方式描述多项式函数就不方便。"
+        },
+        {
+          "id": "p542-b4",
+          "source": "One other function will play an important role in this chapter. Recall that an *argument* of a nonzero complex number $z$ is a (real) number $\\theta$ such that",
+          "sourceSha256": "ce129469f294a2fb0ffb098fbb86027d75b67f34daa18a577afba91dc5fb27a6",
+          "translation": "本章还将有另一个函数发挥重要作用。回忆一下，非零复数 $z$ 的一个*辐角*，就是满足下式的一个（实）数 $\\theta$："
+        },
+        {
+          "id": "p542-b5",
+          "source": "$$z=|z|(\\cos\\theta+i\\sin\\theta).$$",
+          "sourceSha256": "2d4f0f4299e0ed6587e55c86e16f473221764cfb6898c21b49d12aefc8ff90c8"
+        },
+        {
+          "id": "p542-b6",
+          "source": "There are infinitely many arguments for $z$, but just one which satisfies $0\\le\\theta<2\\pi$. If we call this unique argument $\\theta(z)$, then $\\theta$ is a (real-valued) function (the “argument function”) on $\\{z\\text{ in }\\mathbf C:z\\ne0\\}$.",
+          "sourceSha256": "71c2c967b220cdb7891850ad42d3c4fa7ee8dd821621d2413f4800b593a069ee",
+          "translation": "$z$ 有无穷多个辐角，但其中只有一个满足 $0\\le\\theta<2\\pi$。如果把这个唯一的辐角记为 $\\theta(z)$，那么 $\\theta$ 就是定义在 $\\{z\\text{ in }\\mathbf C:z\\ne0\\}$ 上的一个（实值）函数（“辐角函数”）。"
+        },
+        {
+          "id": "p542-b7",
+          "source": "“Graphs” of complex-valued functions defined on $\\mathbf C$, since they lie in $4$-dimensional space, are presumably not very useful for visualization. The alternative picture of a function mentioned in Chapter 4 can be used instead: we draw two copies of $\\mathbf C$, and arrows from $z$ in one copy, to $f(z)$ in the other (Figure 1).",
+          "sourceSha256": "b80397e35c208835843879f6a35351fc28a6b9a40941905a27537309339b6551",
+          "translation": "定义在 $\\mathbf C$ 上的复值函数的“图像”位于 $4$ 维空间中，大概不太有助于直观呈现。可以改用第 4 章提到的另一种函数图示：画出两个 $\\mathbf C$ 的副本，并从一个副本中的 $z$ 向另一个副本中的 $f(z)$ 画箭头（图 1）。"
+        },
+        {
+          "id": "p542-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:494px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"633 811 498 163\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0561.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 1</figcaption></figure>",
+          "sourceSha256": "50a521c46168c3f7b0d4fa3fcb032e4d6f1fc5995599ec383a14748963ebbba0"
+        },
+        {
+          "id": "p542-b9",
+          "source": "The most common pictorial representation of a complex-valued function is produced by labeling a point in the plane with the value $f(z)$, instead of with $z$ (which can be estimated from the position of the point in the picture). Figure 2 shows this sort of picture for several different functions. Certain features of the function are illustrated very clearly by such a “graph.” For example, the absolute value function is constant on concentric circles around $0$, the functions Re and Im are constant on the vertical and horizontal lines, respectively, and the function $f(z)=z^2$ wraps the circle of radius $r$ twice around the circle of radius $r^2$.",
+          "sourceSha256": "50748f223fa8974bb34ef7b77d3afd490f285eb9b4a312efab97ff4e35aa1319",
+          "translation": "复值函数最常用的图示，是在平面上的点旁标出值 $f(z)$，而不是标出 $z$（后者可以从点在图中的位置估计出来）。图 2 对几个不同函数给出了这种图示。这样的“图像”能够非常清楚地展示函数的某些特点。例如，绝对值函数在以 $0$ 为中心的同心圆上取常值，函数 Re 和 Im 分别在竖直线和水平线上取常值，而函数 $f(z)=z^2$ 把半径为 $r$ 的圆绕半径为 $r^2$ 的圆卷了两圈。"
+        },
+        {
+          "id": "p542-b10",
+          "source": "Despite the problems involved in visualizing complex-valued functions in general, it is still possible to define analogues of important properties previously defined for real-valued functions on $\\mathbf R$, and in some cases these properties may be easier to visualize in the complex case. For example, the notion of limit can be defined as follows:",
+          "sourceSha256": "3def037cf8bf3db1471ec223a353e806d80b998837fd54f3268d6e15138277ca",
+          "translation": "尽管一般的复值函数难以直观呈现，我们仍然可以为先前在 $\\mathbf R$ 上的实值函数所定义的重要性质，定义相应的推广；在某些情况下，这些性质在复数情形反而更容易直观理解。例如，极限概念可以定义如下："
+        },
+        {
+          "id": "p542-b11",
+          "source": "$\\displaystyle\\lim_{z\\to a}f(z)=l$ means that for every (real) number $\\varepsilon>0$ there is a (real) number $\\delta>0$ such that, for all $z$, if $0<|z-a|<\\delta$, then $|f(z)-l|<\\varepsilon$.",
+          "sourceSha256": "c52b25e20344536f7e267a895d5d55abf8a77f9d5c456823dec10775e8a603e2",
+          "translation": "$\\displaystyle\\lim_{z\\to a}f(z)=l$ 意味着：对于每个（实）数 $\\varepsilon>0$，都存在一个（实）数 $\\delta>0$，使得对于所有 $z$，如果 $0<|z-a|<\\delta$，那么 $|f(z)-l|<\\varepsilon$。"
+        }
+      ]
+    },
+    {
+      "printed": 543,
+      "sourceSha256": "acd60d937ef2ec639427888653e30a20a44132974355f11326c2d786a05cf23d",
+      "blocks": [
+        {
+          "id": "p543-b1",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:980px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"225 151 988 1330\" role=\"img\" aria-label=\"Figure 2, panels a through e: absolute value, real part, imaginary part, square, and argument functions\"><image href=\"pages/book/0562.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 2</figcaption></figure>",
+          "sourceSha256": "acd60d937ef2ec639427888653e30a20a44132974355f11326c2d786a05cf23d"
+        }
+      ]
+    },
+    {
+      "printed": 544,
+      "sourceSha256": "47f776245f4085285a7f81ef05ff09d4798e97213e0bb35317c6d884fec86465",
+      "blocks": [
+        {
+          "id": "p544-b1",
+          "source": "Although the definition reads precisely as before, the interpretation is slightly different. Since $|z-w|$ is the distance between the complex numbers $z$ and $w$, the equation $\\lim_{z\\to a}f(z)=l$ means that the values of $f(z)$ can be made to lie inside any given circle around $l$, provided that $z$ is restricted to lie inside a sufficiently small circle around $a$. This assertion is particularly easy to visualize using the “two copy” picture of a function (Figure 3).",
+          "sourceSha256": "a915f94f5207aee449a5346c48820ae2930eaa3e9262ba796bff29d7f39a3b5e",
+          "translation": "虽然定义的文字与从前完全相同，解释却略有不同。由于 $|z-w|$ 是复数 $z$ 与 $w$ 之间的距离，等式 $\\lim_{z\\to a}f(z)=l$ 意味着：只要把 $z$ 限制在 $a$ 周围一个充分小的圆内，就可以使 $f(z)$ 的值落在 $l$ 周围任意给定的圆内。使用函数的“两个副本”图示，特别容易直观理解这一陈述（图 3）。"
+        },
+        {
+          "id": "p544-b2",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:590px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"480 368 596 186\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0563.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 3</figcaption></figure>",
+          "sourceSha256": "f95e7796da6fa15a3019a67e3ba450a536bdb6a250bd742c66e9c04bc9d35b93"
+        },
+        {
+          "id": "p544-b3",
+          "source": "Certain facts about limits can be proved exactly as in the real case. In particular,",
+          "sourceSha256": "e3e2c35a4381d139c74f05b8e99dc40834210f7e69c363b64d40bb9f667814b1",
+          "translation": "关于极限的某些事实，可以完全按照实数情形来证明。特别地，"
+        },
+        {
+          "id": "p544-b4",
+          "source": "$$\\lim_{z\\to a}c=c,$$",
+          "sourceSha256": "c7a8f91596886e03b37b3dc975e328283085e3174debddc49d840c545a0e43b5"
+        },
+        {
+          "id": "p544-b5",
+          "source": "$$\\lim_{z\\to a}z=a,$$",
+          "sourceSha256": "f6f7eccb49b245bd51a7eb96a0eeedc5dbc9d5a8fdb5498248aef48758169ab2"
+        },
+        {
+          "id": "p544-b6",
+          "source": "$$\\lim_{z\\to a}[f(z)+g(z)]=\\lim_{z\\to a}f(z)+\\lim_{z\\to a}g(z),$$",
+          "sourceSha256": "2748b7a9207ef59fb578501f8b089e55c2137cc910dd2fcb0fea43d4baf0660d"
+        },
+        {
+          "id": "p544-b7",
+          "source": "$$\\lim_{z\\to a}f(z)\\cdot g(z)=\\lim_{z\\to a}f(z)\\cdot\\lim_{z\\to a}g(z),$$",
+          "sourceSha256": "2c32e932ac723129dc5fd30f1b1575024572ed0054081b463e4dbeafa59a7938"
+        },
+        {
+          "id": "p544-b8",
+          "source": "$$\\lim_{z\\to a}\\frac1{g(z)}=\\frac1{\\lim_{z\\to a}g(z)},\\quad\\text{if }\\lim_{z\\to a}g(z)\\ne0.$$",
+          "sourceSha256": "fe6f34b9fc8770defeb8ba96a7582eeec97d80dea92329d3ebef3817e6e4df02"
+        },
+        {
+          "id": "p544-b9",
+          "source": "The essential property of absolute values upon which these results are based is the inequality $|z+w|\\le|z|+|w|$, and this inequality holds for complex numbers as well as for real numbers. These facts already provide quite a few limits, but many more can be obtained from the following theorem.",
+          "sourceSha256": "a5d2389ef13c0ab0b96b9fe555b91d408a12eaa68091b8f325f9de69f536b0d0",
+          "translation": "这些结果所依赖的绝对值的关键性质，是不等式 $|z+w|\\le|z|+|w|$；这个不等式对复数与实数都成立。这些事实已经给出了相当多的极限，而从下面的定理还能得到更多。"
+        },
+        {
+          "id": "p544-b10",
+          "source": "## THEOREM 1",
+          "sourceSha256": "53fac1876c9bcfd6bbc4adffba3ffd8cf1b717338f29618152217c60c4746f5f",
+          "translation": "## 定理 1"
+        },
+        {
+          "id": "p544-b11",
+          "source": "Let $f(z)=u(z)+iv(z)$ for real-valued functions $u$ and $v$, and let $l=\\alpha+i\\beta$ for real numbers $\\alpha$ and $\\beta$. Then $\\lim_{z\\to a}f(z)=l$ if and only if",
+          "sourceSha256": "d9538fe3fc951dff6e12d7968146784f3db0fad50c205ef88c2c526c5f99b51a",
+          "translation": "设 $f(z)=u(z)+iv(z)$，其中 $u$ 和 $v$ 为实值函数；又设 $l=\\alpha+i\\beta$，其中 $\\alpha$ 和 $\\beta$ 为实数。那么 $\\lim_{z\\to a}f(z)=l$ 当且仅当"
+        },
+        {
+          "id": "p544-b12",
+          "source": "$$\\lim_{z\\to a}u(z)=\\alpha,$$",
+          "sourceSha256": "77ca1a70786fd648a6215d8692def26a28ab20ef6a77a45ede8c03f5bc5a152e"
+        },
+        {
+          "id": "p544-b13",
+          "source": "$$\\lim_{z\\to a}v(z)=\\beta.$$",
+          "sourceSha256": "37b20b4187a42fb820a5b2efd2e36f005ce7389fe5c436db129b83d15a8b51d2"
+        },
+        {
+          "id": "p544-b14",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p544-b15",
+          "source": "Suppose first that $\\lim_{z\\to a}f(z)=l$. If $\\varepsilon>0$, there is $\\delta>0$ such that, for all $z$,",
+          "sourceSha256": "f2a553f360c361aa982428ded6d4bd3c2144c355d18d37856b8d6042b637e837",
+          "translation": "先假设 $\\lim_{z\\to a}f(z)=l$。如果 $\\varepsilon>0$，就存在 $\\delta>0$，使得对于所有 $z$，"
+        },
+        {
+          "id": "p544-b16",
+          "source": "$$\\text{if }0<|z-a|<\\delta,\\text{ then }|f(z)-l|<\\varepsilon.$$",
+          "sourceSha256": "867e3e6152a50c9851ec727b4dc71c2b75eb67d3263b391effc7b6ccbffdf588"
+        },
+        {
+          "id": "p544-b17",
+          "source": "The second inequality can be written",
+          "sourceSha256": "42c2e433360046e06f687525b0f3cb87bfdd8a55d6ce64c305c005c6a2998ddb",
+          "translation": "第二个不等式可以写成"
+        },
+        {
+          "id": "p544-b18",
+          "source": "$$|[u(z)-\\alpha]+i[v(z)-\\beta]|<\\varepsilon,$$",
+          "sourceSha256": "b9f2da8dab3bcd91fa03f84ec1c62b378def804e3739e9aa4cb05c190504101f"
+        }
+      ]
+    },
+    {
+      "printed": 545,
+      "sourceSha256": "fd6b1199ff235e1231be470389c8a7b5798197ea30e0e8620bc39355cbfd57e6",
+      "blocks": [
+        {
+          "id": "p545-b1",
+          "source": "or",
+          "sourceSha256": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+          "translation": "或者"
+        },
+        {
+          "id": "p545-b2",
+          "source": "$$[u(z)-\\alpha]^2+[v(z)-\\beta]^2<\\varepsilon^2.$$",
+          "sourceSha256": "90349ebd6cdc91c0170d1725d6ac09ee973dc8ffb61819b8a546834adb277e59"
+        },
+        {
+          "id": "p545-b3",
+          "source": "Since $u(z)-\\alpha$ and $v(z)-\\beta$ are both real numbers, their squares are positive; this inequality therefore implies that",
+          "sourceSha256": "c2989f3b7ea1e5bdba4664b21759bbae024a359635daa5954683e22e70f6afa2",
+          "translation": "由于 $u(z)-\\alpha$ 和 $v(z)-\\beta$ 都是实数，它们的平方为非负数；因此，这个不等式蕴含"
+        },
+        {
+          "id": "p545-b4",
+          "source": "$$[u(z)-\\alpha]^2<\\varepsilon^2\\quad\\text{and}\\quad[v(z)-\\beta]^2<\\varepsilon^2,$$",
+          "sourceSha256": "e41be33862e489050b5f5f61ea14fcbd51ecb0d88fe6cf422bf30c81cfb31929"
+        },
+        {
+          "id": "p545-b5",
+          "source": "which implies that",
+          "sourceSha256": "1a85e30aee335a1d59cfb329d51927347d38ace1d3438e2ccbbde37eb9bf1403",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p545-b6",
+          "source": "$$|u(z)-\\alpha|<\\varepsilon\\quad\\text{and}\\quad|v(z)-\\beta|<\\varepsilon.$$",
+          "sourceSha256": "8b79b251ffa72c38d44c93fabe287f77bf745e2431328d46a321a82e0ea4c97f"
+        },
+        {
+          "id": "p545-b7",
+          "source": "Since this is true for all $\\varepsilon>0$, it follows that",
+          "sourceSha256": "9a838457fbcb1ae8adb8141dc3b17b9e4c5353bb3702f91bc5dd025105a4dae8",
+          "translation": "由于这对所有 $\\varepsilon>0$ 都成立，因此"
+        },
+        {
+          "id": "p545-b8",
+          "source": "$$\\lim_{z\\to a}u(z)=\\alpha\\quad\\text{and}\\quad\\lim_{z\\to a}v(z)=\\beta.$$",
+          "sourceSha256": "fd0bdc2b807fa10b41b99883e10a330ce7a99ead6b58037b7386015748d16c5c"
+        },
+        {
+          "id": "p545-b9",
+          "source": "Now suppose that these two equations hold. If $\\varepsilon>0$, there is a $\\delta>0$ such that, for all $z$, if $0<|z-a|<\\delta$, then",
+          "sourceSha256": "fa7f40c28739e56e2fd98ec668ce70490f4ae10f835f3ef680d52713b53665c9",
+          "translation": "现在假设这两个等式成立。如果 $\\varepsilon>0$，就存在一个 $\\delta>0$，使得对于所有 $z$，只要 $0<|z-a|<\\delta$，就有"
+        },
+        {
+          "id": "p545-b10",
+          "source": "$$|u(z)-\\alpha|<\\frac\\varepsilon2\\quad\\text{and}\\quad|v(z)-\\alpha|<\\frac\\varepsilon2,$$",
+          "sourceSha256": "f386e44b0cdf55fbac9da3d28b45fae3d48a0338071b86e80de8c1c3c37ecc67"
+        },
+        {
+          "id": "p545-b11",
+          "source": "which implies that",
+          "sourceSha256": "1a85e30aee335a1d59cfb329d51927347d38ace1d3438e2ccbbde37eb9bf1403",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p545-b12",
+          "source": "$$\\begin{aligned}|f(z)-l|&=|[u(z)-\\alpha]+i[v(z)-\\beta]|\\\\&\\le|u(z)-\\alpha|+|i|\\cdot|v(z)-\\beta|\\\\&<\\frac\\varepsilon2+\\frac\\varepsilon2=\\varepsilon.\\end{aligned}$$",
+          "sourceSha256": "0e851e792909b2f2ba655c556b3b33800daa0617bf0c387744910d2871188e4f"
+        },
+        {
+          "id": "p545-b13",
+          "source": "This proves that $\\lim_{z\\to a}f(z)=l$. ■",
+          "sourceSha256": "ab8a9c948c12f924693f62b7a9a45d79120c026266ea3f0f494af1a32c207211",
+          "translation": "这就证明了 $\\lim_{z\\to a}f(z)=l$。■"
+        },
+        {
+          "id": "p545-b14",
+          "source": "In order to apply Theorem 1 fruitfully, notice that since we already know the limit $\\lim_{z\\to a}z=a$, we can conclude that",
+          "sourceSha256": "1981be03c9039213810dff91ccdb4f39aba826dcf8f8670af7f904447c7ba750",
+          "translation": "为了有效地应用定理 1，注意：由于我们已经知道极限 $\\lim_{z\\to a}z=a$，所以可以得出"
+        },
+        {
+          "id": "p545-b15",
+          "source": "$$\\lim_{z\\to a}\\operatorname{Re}(z)=\\operatorname{Re}(a),$$",
+          "sourceSha256": "81abd21f3b31d64ddb7354d8ec662381bc293db88e1d0bd5c0268fad632e9751"
+        },
+        {
+          "id": "p545-b16",
+          "source": "$$\\lim_{z\\to a}\\operatorname{Im}(z)=\\operatorname{Im}(a).$$",
+          "sourceSha256": "55e9ce6846b0a84afd3aa2841eeb2d32cd8cd21a699596d681a4da91628bc181"
+        },
+        {
+          "id": "p545-b17",
+          "source": "A limit like",
+          "sourceSha256": "0573dcab308c0434c7d2dabc6cb9db52b646f31cbf2b18d10a073903a3f75931",
+          "translation": "像下面这样的极限"
+        },
+        {
+          "id": "p545-b18",
+          "source": "$$\\lim_{z\\to a}\\sin(\\operatorname{Re}(z))=\\sin(\\operatorname{Re}(a))$$",
+          "sourceSha256": "958bddae77618f90d70d20677ed6bc8befe981dcd7e5670cb0562e8f80893e13"
+        },
+        {
+          "id": "p545-b19",
+          "source": "follows easily, using continuity of $\\sin$. Many applications of these principles prove such limits as the following:",
+          "sourceSha256": "d6e4ee2b225279c7cc478c1d42e257ec341c3206ecbf652f1e96c5b20e8d253a",
+          "translation": "很容易利用 $\\sin$ 的连续性得到。多次应用这些原则，就能证明如下极限："
+        },
+        {
+          "id": "p545-b20",
+          "source": "$$\\lim_{z\\to a}\\bar z=\\bar a,$$",
+          "sourceSha256": "66ca0a63435b09cd3a711dacb2f80c01b1b89a22e3edbc900819f262faf1723c"
+        },
+        {
+          "id": "p545-b21",
+          "source": "$$\\lim_{z\\to a}|z|=|a|,$$",
+          "sourceSha256": "2c6b8dec1d52271d4ffb0d713aa7eb636d1dffce281b3608cc749ed6cc9c808e"
+        },
+        {
+          "id": "p545-b22",
+          "source": "$$\\lim_{(x+iy)\\to a+bi}e^y\\sin x+ix^3\\cos y=e^b\\sin a+ia^3\\cos b.$$",
+          "sourceSha256": "af6a1c6370d91bf5d46ed6fbac9fb95ff5922cee0004d544fc7c75b55f6814cd"
+        },
+        {
+          "id": "p545-b23",
+          "source": "Now that the notion of limit has been extended to complex functions, the notion of continuity can also be extended: $f$ is **continuous at $a$** if $\\lim_{z\\to a}f(z)=f(a)$, and",
+          "sourceSha256": "200e3f6f5b6cc1ca37e6982cded60ae056903f68f6958c8d87cfce6f4b282c1a",
+          "translation": "既然极限概念已经推广到复函数，连续性概念也可以推广：如果 $\\lim_{z\\to a}f(z)=f(a)$，就称 $f$ **在 $a$ 处连续**；而"
+        }
+      ]
+    },
+    {
+      "printed": 546,
+      "sourceSha256": "129c30d01c5528b17fcce00ce38504dbe72cea29147aef5610e7bb64c4fd9969",
+      "blocks": [
+        {
+          "id": "p546-b1",
+          "source": "$f$ is **continuous** if $f$ is continuous at $a$ for all $a$ in the domain of $f$. The previous work on limits shows that all the following functions are continuous:",
+          "sourceSha256": "559aea03b30d26c4438456bb36f9b1ccabce4d15e7da7c27e9b56b60b76b425e",
+          "translation": "如果对于 $f$ 定义域中的所有 $a$，$f$ 都在 $a$ 处连续，就称 $f$ **连续**。前面对极限的研究表明，下面所有函数都连续："
+        },
+        {
+          "id": "p546-b2",
+          "source": "$$\\begin{aligned}f(z)&=a_nz^n+a_{n-1}z^{n-1}+\\cdots+a_0,\\\\f(z)&=\\bar z,\\\\f(z)&=|z|,\\\\f(x+iy)&=e^y\\sin x+ix^3\\cos y.\\end{aligned}$$",
+          "sourceSha256": "138af7016e5e90fe69c7584c6cf54a451321a6a9da37e30084933f8e7f22edf4"
+        },
+        {
+          "id": "p546-b3",
+          "source": "Examples of discontinuous functions are easy to produce, and certain ones come up very naturally. One particularly frustrating example is the “argument function” $\\theta$, which is discontinuous at all nonnegative real numbers (see the “graph” in Figure 2). By suitably redefining $\\theta$ it is possible to change the discontinuities; for example (Figure 4), if $\\theta'(z)$ denotes the unique argument of $z$ with $\\pi/2\\le\\theta'(z)<5\\pi/2$, then $\\theta'$ is discontinuous at $ai$ for every nonnegative real number $a$. But, no matter how $\\theta$ is redefined, some discontinuities will always occur.",
+          "sourceSha256": "9e1f56476aa5cffd0a7e6be7b043ab947d9824fca94428be30190ba3c797555d",
+          "translation": "不连续函数的例子很容易构造，而且有些会非常自然地出现。其中一个特别令人沮丧的例子，就是“辐角函数”$\\theta$，它在所有非负实数处都不连续（见图 2 中的“图像”）。适当地重新定义 $\\theta$，可以改变不连续的位置；例如（图 4），如果 $\\theta'(z)$ 表示 $z$ 满足 $\\pi/2\\le\\theta'(z)<5\\pi/2$ 的唯一辐角，那么对于每个非负实数 $a$，$\\theta'$ 都在 $ai$ 处不连续。但是，无论怎样重新定义 $\\theta$，总会有某些不连续的地方。"
+        },
+        {
+          "id": "p546-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"480 627 680 665\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0565.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg></figure>",
+          "sourceSha256": "56ed560dfa5b0ce5319a90dc087d99d7be798269333cc649d87c8c935a52fc27"
+        },
+        {
+          "id": "p546-b5",
+          "source": "The discontinuity of $\\theta$ has an important bearing on the problem of defining a “square-root function,” that is, a function $f$ such that $(f(z))^2=z$ for all $z$. For real numbers the function $\\sqrt{\\phantom{x}}$ had as domain only the nonnegative real numbers. If complex numbers are allowed, then every number has two square roots (except $0$, which has only one). Although this situation may seem better, it is in some ways worse; since the square roots of $z$ are complex numbers, there is no clear criterion for selecting one root to be $f(z)$, in preference to the other.",
+          "sourceSha256": "a7e6f22db43fdea8082432171b8ae159b54cf15d5a9f0ab040d822c6557dbb9a",
+          "translation": "$\\theta$ 的不连续性，对定义“平方根函数”的问题有重要影响；所谓平方根函数，是指一个对所有 $z$ 都满足 $(f(z))^2=z$ 的函数 $f$。对于实数，函数 $\\sqrt{\\phantom{x}}$ 的定义域只包含非负实数。如果允许复数，那么每个数都有两个平方根（除了 $0$，它只有一个）。虽然这种情形看起来更好，但在某些方面反而更糟；由于 $z$ 的平方根是复数，没有明确的准则，能使我们优先选择其中一个根作为 $f(z)$，而舍弃另一个。"
+        }
+      ]
+    },
+    {
+      "printed": 547,
+      "sourceSha256": "bfa8395e4546f31baaf9a68b70326c6939c22890bcbebcd00d5b0fb619f01bbc",
+      "blocks": [
+        {
+          "id": "p547-b1",
+          "source": "One way to define $f$ is the following. We set $f(0)=0$, and for $z\\ne0$ we set",
+          "sourceSha256": "99d7e93b4dc43c698a5867b5340e18df87be8c167d7619f7836097f5a6cb8447",
+          "translation": "定义 $f$ 的一种方法如下。令 $f(0)=0$，而对于 $z\\ne0$，令"
+        },
+        {
+          "id": "p547-b2",
+          "source": "$$f(z)=\\sqrt{|z|}\\left(\\cos\\frac{\\theta(z)}2+i\\sin\\frac{\\theta(z)}2\\right).$$",
+          "sourceSha256": "6d0ede2b0206f7f8fd25d38834f50ca8e17d08d8e06af48659c2e7759828a92d"
+        },
+        {
+          "id": "p547-b3",
+          "source": "Clearly $(f(z))^2=z$, but the function $f$ is discontinuous, since $\\theta$ is discontinuous. As a matter of fact, it is impossible to find a continuous $f$ such that $(f(z))^2=z$ for all $z$. In fact, it is even impossible for $f(z)$ to be defined for all $z$ with $|z|=1$. To prove this by contradiction, we can assume that $f(1)=1$ (since we could always replace $f$ by $-f$). Then we claim that for all $\\theta$ with $0\\le\\theta<2\\pi$ we have",
+          "sourceSha256": "bc097d6d4ed26b82103ec1a4c73421b11b66ae8f057efd7ea04956132dbae13f",
+          "translation": "显然 $(f(z))^2=z$，但函数 $f$ 不连续，因为 $\\theta$ 不连续。事实上，不可能找到一个连续函数 $f$，使得对所有 $z$ 都有 $(f(z))^2=z$。甚至要求这样的 $f(z)$ 对所有满足 $|z|=1$ 的 $z$ 有定义，也不可能。为了用反证法证明这一点，可以假设 $f(1)=1$（因为随时可以把 $f$ 换成 $-f$）。那么，我们断言，对于所有满足 $0\\le\\theta<2\\pi$ 的 $\\theta$，都有"
+        },
+        {
+          "id": "p547-b4",
+          "source": "$$f(\\cos\\theta+i\\sin\\theta)=\\cos\\frac\\theta2+i\\sin\\frac\\theta2.\\tag{*}$$",
+          "sourceSha256": "33c1a8481f6537ab35bb0cb9856df1f414e577f7bfa5084babb48bc09aa6b661"
+        },
+        {
+          "id": "p547-b5",
+          "source": "The argument for this is left to you (it is a standard type of least upper bound argument). But (*) implies that",
+          "sourceSha256": "82bdd98ce8adc11f530fc7d8bd036243eddaadae0851291d1fe61dd28ef96b4e",
+          "translation": "这一步的论证留给你（它是一种标准的最小上界论证）。但是，(*) 蕴含"
+        },
+        {
+          "id": "p547-b6",
+          "source": "$$\\begin{aligned}\\lim_{\\theta\\to2\\pi}f(\\cos\\theta+i\\sin\\theta)&=\\cos\\pi+i\\sin\\pi\\\\&=-1\\\\&\\ne f(1),\\end{aligned}$$",
+          "sourceSha256": "1a76a769e49c9de5d7000240aabeb459c8042b3ac6a4bccfcdb9f8df717c1652"
+        },
+        {
+          "id": "p547-b7",
+          "source": "even though $\\cos\\theta+i\\sin\\theta\\to1$ as $\\theta\\to2\\pi$. Thus, we have our contradiction. A similar argument shows that it is impossible to define continuous “$n$th-root functions” for any $n\\ge2$.",
+          "sourceSha256": "fe641dcb32805046da4e1d6e60de1ea1a89efcc6b95a58a3432c81ce9caee89f",
+          "translation": "尽管当 $\\theta\\to2\\pi$ 时，有 $\\cos\\theta+i\\sin\\theta\\to1$。于是得到了矛盾。类似的论证说明，对于任何 $n\\ge2$，都不可能定义连续的“$n$ 次方根函数”。"
+        },
+        {
+          "id": "p547-b8",
+          "source": "For continuous complex functions there are important analogues of certain theorems which describe the behavior of real-valued functions on closed intervals. A natural analogue of the interval $[a,b]$ is the set of all complex numbers $z=x+iy$ with $a\\le x\\le b$ and $c\\le y\\le d$ (Figure 5). This set is called a **closed rectangle**, and is denoted by $[a,b]\\times[c,d]$.",
+          "sourceSha256": "0ddf01800ab44332ed9f9a56a299049a4735b966ad688e2f4ae0edfc0251ea57",
+          "translation": "对于连续复函数，有一些重要结果，对应于描述闭区间上实值函数行为的某些定理。区间 $[a,b]$ 的一个自然对应物，就是所有满足 $a\\le x\\le b$ 和 $c\\le y\\le d$ 的复数 $z=x+iy$ 所成的集合（图 5）。这个集合称为**闭矩形**，记为 $[a,b]\\times[c,d]$。"
+        },
+        {
+          "id": "p547-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:355px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 775 356 232\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0566.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 5</figcaption></figure>",
+          "sourceSha256": "d757ab7c269f0be14b069b1a5ce7719643f4f8d441fbd99f663e91bc6b87fd1d"
+        },
+        {
+          "id": "p547-b10",
+          "source": "If $f$ is a continuous complex-valued function whose domain is $[a,b]\\times[c,d]$, then it seems reasonable, and is indeed true, that $f$ is bounded on $[a,b]\\times[c,d]$. That is, there is some real number $M$ such that",
+          "sourceSha256": "6c1c113406acf8a2a6efa9f7a2453204fdcf6a5008e24c4adb1335f5cf97b800",
+          "translation": "如果 $f$ 是定义域为 $[a,b]\\times[c,d]$ 的连续复值函数，那么 $f$ 在 $[a,b]\\times[c,d]$ 上有界，这看起来合理，而且确实成立。也就是说，存在某个实数 $M$，使得"
+        },
+        {
+          "id": "p547-b11",
+          "source": "$$|f(z)|\\le M\\quad\\text{for all }z\\text{ in }[a,b]\\times[c,d].$$",
+          "sourceSha256": "7ebe053029b381c4bd603f7425fb936159878ad8c2b7b0f43131e1bb9fb50b9d"
+        },
+        {
+          "id": "p547-b12",
+          "source": "It does not make sense to say that $f$ has a maximum and a minimum value on $[a,b]\\times[c,d]$, since there is no notion of order for complex numbers. If $f$ is a real-valued function, however, then this assertion does make sense, and is true. In particular, if $f$ is any complex-valued continuous function on $[a,b]\\times[c,d]$, then $|f|$ is also continuous, so there is some $z_0$ in $[a,b]\\times[c,d]$ such that",
+          "sourceSha256": "3202fda7a3815e86ba3cf5e090cfcd0564749b779eec1135ea91434ef5921091",
+          "translation": "说 $f$ 在 $[a,b]\\times[c,d]$ 上有最大值和最小值是没有意义的，因为复数没有次序概念。但是，如果 $f$ 是实值函数，这个断言就有意义，而且成立。特别地，如果 $f$ 是 $[a,b]\\times[c,d]$ 上任意一个连续复值函数，那么 $|f|$ 也连续，所以在 $[a,b]\\times[c,d]$ 中存在某个 $z_0$，使得"
+        },
+        {
+          "id": "p547-b13",
+          "source": "$$|f(z_0)|\\le|f(z)|\\quad\\text{for all }z\\text{ in }[a,b]\\times[c,d];$$",
+          "sourceSha256": "27031cd6c4fd6c190359129efe08e82ef23f5b85a0429d78c1b5924f548fd7f6"
+        },
+        {
+          "id": "p547-b14",
+          "source": "a similar statement is true with the inequality reversed. It is sometimes said that “$f$ attains its maximum and minimum modulus on $[a,b]\\times[c,d]$.”",
+          "sourceSha256": "cc4cae0ffbcdf8c1ff4de0657f262afe1ad9a26e63e3cfaaabd420f325d7145a",
+          "translation": "把不等号反向，也有类似的陈述。有时这被说成“$f$ 在 $[a,b]\\times[c,d]$ 上取得最大模和最小模”。"
+        },
+        {
+          "id": "p547-b15",
+          "source": "The various facts listed in the previous paragraph will not be proved here, although proofs are outlined in Problem 5. Assuming these facts, however, we can",
+          "sourceSha256": "7a346d18c4bcacc4750700c94b07c6704a93267333875041ce7a01cf64dcc666",
+          "translation": "前一段列出的各个事实，这里不予证明，不过习题 5 概述了证明。假定这些事实成立，我们就可以"
+        }
+      ]
+    },
+    {
+      "printed": 548,
+      "sourceSha256": "a6a2ecdfe66d38a7fc3079a5b482020a1ecc24776851a3afafeab0c1c266ddf2",
+      "blocks": [
+        {
+          "id": "p548-b1",
+          "source": "now give a proof of the Fundamental Theorem of Algebra, which is really quite surprising, since we have not yet said much to distinguish polynomial functions from other continuous functions.",
+          "sourceSha256": "de383814e94f649ce15156f9efa26de42cf4758db10574bce4b16accbdb28c3c",
+          "translation": "给出代数基本定理的一个证明。这实在相当出人意料，因为我们迄今还没有说明多少能够把多项式函数与其他连续函数区别开来的性质。"
+        },
+        {
+          "id": "p548-b2",
+          "source": "## THEOREM 2 (THE FUNDAMENTAL THEOREM OF ALGEBRA)",
+          "sourceSha256": "c48d933570b030f51bbc8aed36311402f6b0fc949e2e81f54015d16ff5ce2b4f",
+          "translation": "## 定理 2（代数基本定理）"
+        },
+        {
+          "id": "p548-b3",
+          "source": "Let $a_0,\\ldots,a_{n-1}$ be any complex numbers. Then there is a complex number $z$ such that",
+          "sourceSha256": "8b589b31cfc9299c2307e3f6c718880ee737ee1d3dbad195a10bdfe61ef2d3c4",
+          "translation": "设 $a_0,\\ldots,a_{n-1}$ 是任意复数。那么存在一个复数 $z$，使得"
+        },
+        {
+          "id": "p548-b4",
+          "source": "$$z^n+a_{n-1}z^{n-1}+a_{n-2}z^{n-2}+\\cdots+a_0=0.$$",
+          "sourceSha256": "51b8a10337e5997e1f0491ec927382269f49ebd76b0d92aae60e010bbbcb5cfb"
+        },
+        {
+          "id": "p548-b5",
+          "source": "## PROOF",
+          "sourceSha256": "53991994d7d38517dbe2d9da24518101c05d5dd6c2069dccf64270f2f524353b",
+          "translation": "## 证明"
+        },
+        {
+          "id": "p548-b6",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "令"
+        },
+        {
+          "id": "p548-b7",
+          "source": "$$f(z)=z^n+a_{n-1}z^{n-1}+\\cdots+a_0.$$",
+          "sourceSha256": "0c92b61f1f115b297dc7fb5495d7807ea5df91c60b240fad91aa584834a4f6f7"
+        },
+        {
+          "id": "p548-b8",
+          "source": "Then $f$ is continuous, and so is the function $|f|$ defined by",
+          "sourceSha256": "d93dd54eb8bb83ea4fcaa231190f1945f75b6d61c4a6808935fd50dd7846dd7c",
+          "translation": "那么 $f$ 连续，由下式定义的函数 $|f|$ 也连续："
+        },
+        {
+          "id": "p548-b9",
+          "source": "$$|f|(z)=|f(z)|=|z^n+a_{n-1}z^{n-1}+\\cdots+a_0|.$$",
+          "sourceSha256": "c0fa2c73a0da50d9ab8e379a51ce57131cbd8c9efedbc934c73940b1c6703ba3"
+        },
+        {
+          "id": "p548-b10",
+          "source": "Our proof is based on the observation that a point $z_0$ with $f(z_0)=0$ would clearly be a minimum point for $|f|$. To prove the theorem we will first show that $|f|$ does indeed have a smallest value on the *whole complex plane*. The proof will be almost identical to the proof, in Chapter 7, that a polynomial function of even degree (with real coefficients) has a smallest value on all of $\\mathbf R$; both proofs depend on the fact that if $|z|$ is large, then $|f(z)|$ is large.",
+          "sourceSha256": "03e2a2afe0c955a8df48efa38e29e76373feb6c892671927d94e6c9a0edf4d49",
+          "translation": "我们的证明基于以下观察：一个满足 $f(z_0)=0$ 的点 $z_0$，显然是 $|f|$ 的最小值点。为了证明定理，我们先说明，$|f|$ 在*整个复平面*上确实有最小值。这个证明将与第 7 章中证明实系数偶数次多项式函数在整个 $\\mathbf R$ 上有最小值的证明几乎相同；两个证明都依赖这一事实：如果 $|z|$ 很大，那么 $|f(z)|$ 也很大。"
+        },
+        {
+          "id": "p548-b11",
+          "source": "We begin by writing, for $z\\ne0$,",
+          "sourceSha256": "8765b092916c7f7bd6a34ad367e9d646ff4d166acedf52aeed66aa68735f7a03",
+          "translation": "首先，对于 $z\\ne0$，写成"
+        },
+        {
+          "id": "p548-b12",
+          "source": "$$f(z)=z^n\\left(1+\\frac{a_{n-1}}z+\\cdots+\\frac{a_0}{z^n}\\right),$$",
+          "sourceSha256": "88f5b81954e5b19e5fc9d43a0fd39f5434be5914e45a6c366e295d06a7832eda"
+        },
+        {
+          "id": "p548-b13",
+          "source": "so that",
+          "sourceSha256": "ab6b7abe5e492f9b6d750de7961c627380f376d321fccbb8be082915be4cdf03",
+          "translation": "所以"
+        },
+        {
+          "id": "p548-b14",
+          "source": "$$|f(z)|=|z|^n\\cdot\\left|1+\\frac{a_{n-1}}z+\\cdots+\\frac{a_0}{z^n}\\right|.$$",
+          "sourceSha256": "f682be314b35809d6adafd2ad08226bfa74f1c4641bfac51057bee66e68e2ce9"
+        },
+        {
+          "id": "p548-b15",
+          "source": "Let",
+          "sourceSha256": "e947a3d4f4a1b23611f8aa204b2bb149785cfb02f5ccc687d1eb10b059e0d5aa",
+          "translation": "令"
+        },
+        {
+          "id": "p548-b16",
+          "source": "$$M=\\max(1,2n|a_{n-1}|,\\ldots,2n|a_0|).$$",
+          "sourceSha256": "f6e4c07a42c70d7fe86ce29a48a5df39979d5d254dff576d69769292331b4ced"
+        },
+        {
+          "id": "p548-b17",
+          "source": "Then for all $z$ with $|z|\\ge M$, we have $|z^k|\\ge|z|$ and",
+          "sourceSha256": "3745c7fbcc1af54d1d265f6a403991ea765ab165e4ffb8a8b2fd9e2ba93bd054",
+          "translation": "那么，对于所有满足 $|z|\\ge M$ 的 $z$，都有 $|z^k|\\ge|z|$，并且"
+        },
+        {
+          "id": "p548-b18",
+          "source": "$$\\frac{|a_{n-k}|}{|z^k|}\\le\\frac{|a_{n-k}|}{|z|}\\le\\frac{|a_{n-k}|}{2n|a_{n-k}|}=\\frac1{2n},$$",
+          "sourceSha256": "d4498b145f83f32d9c4aeaa31b38accc7a9bb5e9c3a722e921c6f25c24a47c29"
+        },
+        {
+          "id": "p548-b19",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "所以"
+        },
+        {
+          "id": "p548-b20",
+          "source": "$$\\left|\\frac{a_{n-1}}z+\\cdots+\\frac{a_0}{z^n}\\right|\\le\\left|\\frac{a_{n-1}}z\\right|+\\cdots+\\left|\\frac{a_0}{z^n}\\right|\\le\\frac12,$$",
+          "sourceSha256": "fba4400a8a1725fc4bc71b6a40b7b5fcdafe3c6e8601c3bf6855c052d44b496d"
+        },
+        {
+          "id": "p548-b21",
+          "source": "which implies that",
+          "sourceSha256": "1a85e30aee335a1d59cfb329d51927347d38ace1d3438e2ccbbde37eb9bf1403",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p548-b22",
+          "source": "$$\\left|1+\\frac{a_{n-1}}z+\\cdots+\\frac{a_0}{z^n}\\right|\\ge1-\\left|\\frac{a_{n-1}}z+\\cdots+\\frac{a_0}{z^n}\\right|\\ge\\frac12.$$",
+          "sourceSha256": "af450fd76fe600de5958736dc30efb0c7e66f6c4e2b8042e13cf3aa6b2d2b08a"
+        },
+        {
+          "id": "p548-b23",
+          "source": "This means that",
+          "sourceSha256": "041259ea12f12eb18f933aa1e8d8e689e381c18f1f462e7a4542e2bc357126de",
+          "translation": "也就是说，"
+        },
+        {
+          "id": "p548-b24",
+          "source": "$$|f(z)|\\ge\\frac{|z|^n}2\\quad\\text{for }|z|\\ge M.$$",
+          "sourceSha256": "4d0249aa5af0f00b84ab91cc33eeedb5bf3455906c505ef1ba9e0b9865267339"
+        },
+        {
+          "id": "p548-b25",
+          "source": "In particular, if $|z|\\ge M$ and also $|z|\\ge\\sqrt[n]{2|f(0)|}$, then",
+          "sourceSha256": "f5bef887234f893e331516f0b9ec6210ead277b15d063b20f055c0a9d61378fe",
+          "translation": "特别地，如果 $|z|\\ge M$，并且 $|z|\\ge\\sqrt[n]{2|f(0)|}$，那么"
+        },
+        {
+          "id": "p548-b26",
+          "source": "$$|f(z)|\\ge|f(0)|.$$",
+          "sourceSha256": "d0948164894470aaf98b922e1751d279277017451b95e9d82832a58b64d42430"
+        }
+      ]
+    },
+    {
+      "printed": 549,
+      "sourceSha256": "3e38690a9ceb28acbee39298dcf2e95371428c0f461607b0bb9c1d77777c6265",
+      "blocks": [
+        {
+          "id": "p549-b1",
+          "source": "Now let $[a,b]\\times[c,d]$ be a closed rectangle (Figure 6) which contains $\\{z:|z|\\le\\max(M,\\sqrt[n]{2|f(0)|})\\}$, and suppose that the minimum of $|f|$ on $[a,b]\\times[c,d]$ is attained at $z_0$, so that",
+          "sourceSha256": "ac61fea89205df8873624b5e8ed47f8a760b1a3d02b0f1ed6f23fd7671f0124c",
+          "translation": "现在，设 $[a,b]\\times[c,d]$ 是一个包含 $\\{z:|z|\\le\\max(M,\\sqrt[n]{2|f(0)|})\\}$ 的闭矩形（图 6），并假设 $|f|$ 在 $[a,b]\\times[c,d]$ 上的最小值于 $z_0$ 处取得，于是"
+        },
+        {
+          "id": "p549-b2",
+          "source": "$$|f(z_0)|\\le|f(z)|\\quad\\text{for }z\\text{ in }[a,b]\\times[c,d].\\tag{1}$$",
+          "sourceSha256": "e788903d1d1123cc436a08bab2ef00c53003de6c258d14ab7a0584dabd38c270"
+        },
+        {
+          "id": "p549-b3",
+          "source": "It follows, in particular, that $|f(z_0)|\\le|f(0)|$. Thus",
+          "sourceSha256": "398915033826470c83fc58b7e2e5d9678c12364de63b75d997f729d4ac6cf03f",
+          "translation": "特别地，由此可知 $|f(z_0)|\\le|f(0)|$。因此"
+        },
+        {
+          "id": "p549-b4",
+          "source": "$$\\text{if }|z|\\ge\\max(M,\\sqrt[n]{2|f(0)|}),\\text{ then }|f(z)|\\ge|f(0)|\\ge|f(z_0)|.\\tag{2}$$",
+          "sourceSha256": "b9ac0a6f9078d43f48c81800b66ede3f2ce9f41d71d170cd6b022738345ffe13"
+        },
+        {
+          "id": "p549-b5",
+          "source": "Combining (1) and (2) we see that $|f(z_0)|\\le|f(z)|$ for all $z$, so that $|f|$ attains its minimum value on the whole complex plane at $z_0$.",
+          "sourceSha256": "2b49356d6995dc6fd85859a0dc6dfc317df8136d59f5054bedc01e6ecf0ab99b",
+          "translation": "结合 (1) 和 (2)，可见对于所有 $z$，都有 $|f(z_0)|\\le|f(z)|$，所以 $|f|$ 在 $z_0$ 处取得整个复平面上的最小值。"
+        },
+        {
+          "id": "p549-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:655px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"466 537 657 464\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0568.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 6</figcaption></figure>",
+          "sourceSha256": "9b1453a653ec3c8fa6d829b13ee2a5d778d4dc93407c3d2a77f3ff6b1f5ef83d"
+        },
+        {
+          "id": "p549-b7",
+          "source": "To complete the proof of the theorem we now show that $f(z_0)=0$. It is convenient to introduce the function $g$ defined by",
+          "sourceSha256": "931d55baaf8c3e86975867cb4890bdf47befaf25063a3f0d3c7e2f45c7161acc",
+          "translation": "为了完成定理的证明，现在说明 $f(z_0)=0$。引入如下定义的函数 $g$，会比较方便："
+        },
+        {
+          "id": "p549-b8",
+          "source": "$$g(z)=f(z+z_0).$$",
+          "sourceSha256": "d314c4f0087e992fa3de37f48d5cc9889c7e21200df4293780d0e7617e6966b0"
+        },
+        {
+          "id": "p549-b9",
+          "source": "Then $g$ is a polynomial function of degree $n$, whose minimum absolute value occurs at $0$. We want to show that $g(0)=0$.",
+          "sourceSha256": "be6b50a76fe2852467aac4119421445d5453149a5771381e9728de0871668070",
+          "translation": "那么 $g$ 是一个 $n$ 次多项式函数，其绝对值的最小值在 $0$ 处取得。我们希望证明 $g(0)=0$。"
+        },
+        {
+          "id": "p549-b10",
+          "source": "Suppose instead that $g(0)=\\alpha\\ne0$. If $m$ is the smallest positive power of $z$ which occurs in the expression for $g$, we can write",
+          "sourceSha256": "0d608040d100255c24873a8a705695b74a0f8c35310ab6bfbee6e95eb9e96a7f",
+          "translation": "反而假设 $g(0)=\\alpha\\ne0$。如果 $m$ 是 $g$ 的表达式中出现的 $z$ 的最小正幂次，那么可以写成"
+        },
+        {
+          "id": "p549-b11",
+          "source": "$$g(z)=\\alpha+\\beta z^m+c_{m+1}z^{m+1}+\\cdots+c_nz^n,$$",
+          "sourceSha256": "11765c6f5235e21979dfbba0cb5a781949543c4292a343a00f335d4a4305fc8c"
+        },
+        {
+          "id": "p549-b12",
+          "source": "where $\\beta\\ne0$. Now, according to Theorem 25-2 there is a complex number $\\gamma$ such that",
+          "sourceSha256": "87c608573ff5b717e6ee78dcefd9b7d3a2ab321bbb8c07f083611eec55940b65",
+          "translation": "其中 $\\beta\\ne0$。现在，根据定理 25-2，存在一个复数 $\\gamma$，使得"
+        },
+        {
+          "id": "p549-b13",
+          "source": "$$\\gamma^m=-\\frac\\alpha\\beta.$$",
+          "sourceSha256": "b62db2703c6d5cac55d3a6ec52c46ae9a5fcf10055beeeedcb106910e4ea16ca"
+        }
+      ]
+    },
+    {
+      "printed": 550,
+      "sourceSha256": "1aefccc2388f62cd1ee7a5cb0835233be933d2a2a50e339483d96ce95ab32b99",
+      "blocks": [
+        {
+          "id": "p550-b1",
+          "source": "Then, setting $d_k=c_k\\gamma^k$, we have",
+          "sourceSha256": "db373af4a6d34383a19f9f534f038f5f5de134cb72a125eb1619b80f9dc9d571",
+          "translation": "于是，令 $d_k=c_k\\gamma^k$，有"
+        },
+        {
+          "id": "p550-b2",
+          "source": "$$\\begin{aligned}|g(\\gamma z)|&=|\\alpha+\\beta\\gamma^mz^m+d_{m+1}z^{m+1}+\\cdots+d_nz^n|\\\\&=|\\alpha-\\alpha z^m+d_{m+1}z^{m+1}+\\cdots|\\\\&=\\left|\\alpha\\left(1-z^m+\\frac{d_{m+1}}\\alpha z^{m+1}+\\cdots\\right)\\right|\\\\&=\\left|\\alpha\\left(1-z^m+z^m\\left[\\frac{d_{m+1}}\\alpha z+\\cdots\\right]\\right)\\right|\\\\&=|\\alpha|\\cdot\\left|1-z^m+z^m\\left[\\frac{d_{m+1}}\\alpha z+\\cdots\\right]\\right|.\\end{aligned}$$",
+          "sourceSha256": "b813e7e22debf6773d3378dca1e95aeafb94ba88437c3cf0a87230c1b2580150"
+        },
+        {
+          "id": "p550-b3",
+          "source": "This expression, so tortuously arrived at, will enable us to reach a quick contradiction. Notice first that if $|z|$ is chosen small enough, we will have",
+          "sourceSha256": "a74f056fddc2ce3c80192f770c798c4bd04f3932948b68bdf0c12d8a3ec3dff6",
+          "translation": "这个经过如此曲折才得到的表达式，将使我们很快得出矛盾。首先注意，只要把 $|z|$ 选得足够小，就有"
+        },
+        {
+          "id": "p550-b4",
+          "source": "$$\\left|\\frac{d_{m+1}}\\alpha z+\\cdots\\right|<1.$$",
+          "sourceSha256": "2d85fccde73a28eeea2bff35fe6ac63e4f0e30e79b0c14b3c4dacc46e3d35e4a"
+        },
+        {
+          "id": "p550-b5",
+          "source": "If we choose, from among all $z$ for which this inequality holds, some $z$ which is *real and positive*, then",
+          "sourceSha256": "8a9efd66dfa8dd558eaa3a0ebdb4aa4ec458000fedb85fa7cedbd28ccabb2526",
+          "translation": "如果从满足这个不等式的所有 $z$ 中，选取一个*正实数* $z$，那么"
+        },
+        {
+          "id": "p550-b6",
+          "source": "$$\\left|z^m\\left[\\frac{d_{m+1}}\\alpha z+\\cdots\\right]\\right|<|z^m|=z^m.$$",
+          "sourceSha256": "2ccf28137df720e434928b6caf16fe7791866b77b7ecad2d769b08598ff9a900"
+        },
+        {
+          "id": "p550-b7",
+          "source": "Consequently, if $0<z<1$ we have",
+          "sourceSha256": "37bf2640be584273ed39240f97e9bef31946da8776471852124c71e7abcccfec",
+          "translation": "因此，如果 $0<z<1$，有"
+        },
+        {
+          "id": "p550-b8",
+          "source": "$$\\begin{aligned}\\left|1-z^m+z^m\\left[\\frac{d_{m+1}}\\alpha z+\\cdots\\right]\\right|&\\le|1-z^m|+\\left|z^m\\left[\\frac{d_{m+1}}\\alpha z+\\cdots\\right]\\right|\\\\&=1-z^m+\\left|z^m\\left[\\frac{d_{m+1}}\\alpha z+\\cdots\\right]\\right|\\\\&<1-z^m+z^m\\\\&=1.\\end{aligned}$$",
+          "sourceSha256": "e7f029b85f2d3c90b34664da8781b855d6f765827afc88dff284cc50ec48379a"
+        },
+        {
+          "id": "p550-b9",
+          "source": "This is the desired contradiction: for such a number $z$ we have",
+          "sourceSha256": "363078738fa8f216028fe8288e227078b23ac4b8febb212075854d2c90ad1525",
+          "translation": "这就是所需的矛盾：对于这样的数 $z$，有"
+        },
+        {
+          "id": "p550-b10",
+          "source": "$$|g(\\gamma z)|<|\\alpha|,$$",
+          "sourceSha256": "4a1003e707bfb32eea35a1dc40a55f521d47f1634b82af45b95e5c3ebf2873a9"
+        },
+        {
+          "id": "p550-b11",
+          "source": "contradicting the fact that $|\\alpha|$ is the minimum of $|g|$ on the whole plane. Hence, the original assumption must be incorrect, and $g(0)=0$. This implies, finally, that $f(z_0)=0$. ■",
+          "sourceSha256": "82cd99b5e99e6a947007bb507104d2f3c18276cecff71327c14af04b95b1b758",
+          "translation": "这与 $|\\alpha|$ 是 $|g|$ 在整个平面上的最小值矛盾。因此，原来的假设必定错误，故 $g(0)=0$。最后，这意味着 $f(z_0)=0$。■"
+        },
+        {
+          "id": "p550-b12",
+          "source": "Even taking into account our omission of the proofs for the basic facts about continuous complex functions, this proof verified a deep fact with surprisingly little work. It is only natural to hope that other interesting developments will arise if we pursue further the analogues of properties of real functions. The next obvious step is to define derivatives: a function $f$ is **differentiable at $a$** if",
+          "sourceSha256": "d88f05bfbe80430c571c801f308500ccc4c961ccc35f91aa73a541dce4e9c1d4",
+          "translation": "即便考虑到我们省略了关于连续复函数的基本事实的证明，这个证明仍然用少得惊人的工作，验证了一个深刻的事实。如果继续研究实函数性质在复数情形中的对应物，自然有理由期待其他有趣的进展。接下来显然应当定义导数：如果下面的极限存在，就称函数 $f$ **在 $a$ 处可导**："
+        },
+        {
+          "id": "p550-b13",
+          "source": "$$\\lim_{z\\to0}\\frac{f(a+z)-f(a)}z\\text{ exists.}$$",
+          "sourceSha256": "cc343f38a04e5ca73832afb98b2ea2c1d871b597b0afbf5a9fa6ebe12ba6d9c4"
+        }
+      ]
+    },
+    {
+      "printed": 551,
+      "sourceSha256": "0c54c9256ca7bb774ce6bea28432b8288d8de395410e3141bf692542ae72fc37",
+      "blocks": [
+        {
+          "id": "p551-b1",
+          "source": "in which case the limit is denoted by $f'(a)$. It is easy to prove that",
+          "sourceSha256": "ef93807eda4f36fe122911b9eac42122e1cdef979bb9b7d9417c7dac005f6fc5",
+          "translation": "此时，这个极限记为 $f'(a)$。很容易证明"
+        },
+        {
+          "id": "p551-b2",
+          "source": "$$\\begin{aligned}f'(a)&=0&\\text{if }f(z)&=c,\\\\f'(a)&=1&\\text{if }f(z)&=z,\\\\(f+g)'(a)&=f'(a)+g'(a),\\\\(f\\cdot g)'(a)&=f'(a)g(a)+f(a)g'(a),\\\\\\left(\\frac1g\\right)'(a)&=\\frac{-g'(a)}{[g(a)]^2}&\\text{if }g(a)&\\ne0,\\\\(f\\circ g)'(a)&=f'(g(a))\\cdot g'(a);\\end{aligned}$$",
+          "sourceSha256": "ce4b83f4c523e26d296a7d7398ffd14ef51c821ff394ba72f9779e2a8e80102f"
+        },
+        {
+          "id": "p551-b3",
+          "source": "the proofs of all these formulas are exactly the same as before. It follows, in particular, that if $f(z)=z^n$, then $f'(z)=nz^{n-1}$. These formulas only prove the differentiability of rational functions however. Many other obvious candidates are *not* differentiable. Suppose, for example, that",
+          "sourceSha256": "88a9fadbafc3d294968324b41a3469a54ffb2ff11fc09f8991d910ddba259296",
+          "translation": "这些公式的证明与以前完全相同。特别地，如果 $f(z)=z^n$，那么 $f'(z)=nz^{n-1}$。不过，这些公式只证明了有理函数的可导性。许多其他显而易见的候选函数却*不可导*。例如，假设"
+        },
+        {
+          "id": "p551-b4",
+          "source": "$$f(x+iy)=x-iy\\quad(\\text{i.e., }f(z)=\\bar z).$$",
+          "sourceSha256": "a55136398308ce04731491a8b0cffa0e8fd507ecfefee5a78c585dc0460fc049"
+        },
+        {
+          "id": "p551-b5",
+          "source": "If $f$ is to be differentiable at $0$, then the limit",
+          "sourceSha256": "5f8af37a9369501740d8b18218d5ce6d62d1ec27a91b6898433a2c3e249041b0",
+          "translation": "如果 $f$ 要在 $0$ 处可导，那么极限"
+        },
+        {
+          "id": "p551-b6",
+          "source": "$$\\lim_{(x+iy)\\to0}\\frac{f(x+iy)-f(0)}{x+iy}=\\lim_{(x+iy)\\to0}\\frac{x-iy}{x+iy}$$",
+          "sourceSha256": "3c69cb4adf679ab5ab6a1d845e2ce784bfbeedcf449e7b0d13c3506b2a07d389"
+        },
+        {
+          "id": "p551-b7",
+          "source": "must exist. Notice however, that",
+          "sourceSha256": "0c33c7228a910fd16820f5ad1562084066aa32072e3b4d31a7684052986acd26",
+          "translation": "必须存在。不过请注意，"
+        },
+        {
+          "id": "p551-b8",
+          "source": "$$\\text{if }y=0,\\text{ then }\\frac{x-iy}{x+iy}=1,$$",
+          "sourceSha256": "31bd855cce529eb9ed373820c2403801693cd6fcfaba70404a55adfcd0150055"
+        },
+        {
+          "id": "p551-b9",
+          "source": "and",
+          "sourceSha256": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+          "translation": "以及"
+        },
+        {
+          "id": "p551-b10",
+          "source": "$$\\text{if }x=0,\\text{ then }\\frac{x-iy}{x+iy}=-1;$$",
+          "sourceSha256": "43c5adc5a244c67dd9b9298174266fcb6d765192157c99128d1b828368a5a24f"
+        },
+        {
+          "id": "p551-b11",
+          "source": "therefore this limit cannot possibly exist, since the quotient has both the values $1$ and $-1$ for $x+iy$ arbitrarily close to $0$.",
+          "sourceSha256": "12929a4d2f60821256666949aba18fcfc8400af6a69cf327aa72bdbe02a45d99",
+          "translation": "因此，这个极限不可能存在，因为对于任意接近 $0$ 的 $x+iy$，这个商既能取到值 $1$，也能取到值 $-1$。"
+        },
+        {
+          "id": "p551-b12",
+          "source": "In view of this example, it is not at all clear where other differentiable functions are to come from. If you recall the definitions of $\\sin$ and $\\exp$, you will see that there is no hope at all of generalizing these definitions to complex numbers. At the moment the outlook is bleak, but all our problems will soon be solved.",
+          "sourceSha256": "cb71ff9b7a029d839dc8f3e8c82643e9b5b2096ebf55ea8c89011a6ebe0356a3",
+          "translation": "鉴于这个例子，其他可导函数究竟从哪里来，一点也不清楚。如果回忆 $\\sin$ 和 $\\exp$ 的定义，就会发现，根本没有希望把这些定义推广到复数。目前前景黯淡，但所有问题很快都会得到解决。"
+        },
+        {
+          "id": "p551-b13",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p551-b14",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p551-b15",
+          "source": "(a) For any real number $y$, define $\\alpha(x)=x+iy$ (so that $\\alpha$ is a complex-valued function defined on $\\mathbf R$). Show that $\\alpha$ is continuous. (This follows immediately from a theorem in this chapter.) Show similarly that $\\beta(y)=x+iy$ is continuous.",
+          "sourceSha256": "0bbb5f16a35ee33a7c4285b1f11eb21673c22ec6f540b45ed8c6443516ccb4c0",
+          "translation": "(a) 对任意实数 $y$，定义 $\\alpha(x)=x+iy$（于是 $\\alpha$ 是定义在 $\\mathbf R$ 上的复值函数）。证明 $\\alpha$ 连续。（这可以由本章的一个定理立即得到。）类似地，证明 $\\beta(y)=x+iy$ 连续。"
+        },
+        {
+          "id": "p551-b16",
+          "source": "(b) Let $f$ be a continuous function defined on $\\mathbf C$. For fixed $y$, let $g(x)=f(x+iy)$. Show that $g$ is a continuous function (defined on $\\mathbf R$). Show similarly that $h(y)=f(x+iy)$ is continuous. Hint: Use part (a).",
+          "sourceSha256": "25255ff2cdb4b4354cfe0c44c2cfef3489a3a0a5c94987b208c88eb565ceca0a",
+          "translation": "(b) 设 $f$ 是定义在 $\\mathbf C$ 上的连续函数。对于固定的 $y$，令 $g(x)=f(x+iy)$。证明 $g$ 是一个连续函数（定义在 $\\mathbf R$ 上）。类似地，证明 $h(y)=f(x+iy)$ 连续。提示：使用 (a)。"
+        },
+        {
+          "id": "p551-b17",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p551-b18",
+          "source": "(a) Suppose that $f$ is a continuous real-valued function defined on a closed rectangle $[a,b]\\times[c,d]$. Prove that if $f$ takes on the values $f(z)$ and $f(w)$",
+          "sourceSha256": "183a6a0f687a2674ec52af38e7a18411fc8c0ca2021a0cd45ea81577b0d6fd03",
+          "translation": "(a) 假设 $f$ 是定义在闭矩形 $[a,b]\\times[c,d]$ 上的连续实值函数。证明：如果 $f$ 取到值 $f(z)$ 和 $f(w)$"
+        }
+      ]
+    },
+    {
+      "printed": 552,
+      "sourceSha256": "02a6ce6c68d122df7b2a0b9d92808641447250ab043c674d956606418ad9377d",
+      "blocks": [
+        {
+          "id": "p552-b1",
+          "source": "for $z$ and $w$ in $[a,b]\\times[c,d]$, then $f$ also takes all values between $f(z)$ and $f(w)$. Hint: Consider $g(t)=f(tz+(1-t)w)$ for $t$ in $[0,1]$.",
+          "sourceSha256": "f847c7dfb9176581930432e21fa856a264c0c19f77d60d6438f1a80aba1febe1",
+          "translation": "其中 $z$ 和 $w$ 属于 $[a,b]\\times[c,d]$，那么 $f$ 也取到 $f(z)$ 与 $f(w)$ 之间的所有值。提示：考虑 $g(t)=f(tz+(1-t)w)$，其中 $t$ 属于 $[0,1]$。"
+        },
+        {
+          "id": "p552-b2",
+          "source": "\\*(b) If $f$ is a continuous complex-valued function defined on $[a,b]\\times[c,d]$, the assertion in part (a) no longer makes sense, since we cannot talk of complex numbers between $f(z)$ and $f(w)$. We might conjecture that $f$ takes on all values on the line segment between $f(z)$ and $f(w)$, but even this is false. Find an example which shows this.",
+          "sourceSha256": "0a4226c3c27567f1fed890203f545f72991fb808e997c4f4f20cd9755638c76b",
+          "translation": "\\*(b) 如果 $f$ 是定义在 $[a,b]\\times[c,d]$ 上的连续复值函数，(a) 中的断言就不再有意义，因为我们不能谈论 $f(z)$ 与 $f(w)$ 之间的复数。我们也许会猜测，$f$ 取到 $f(z)$ 与 $f(w)$ 之间线段上的所有值，但连这一点也是错的。找一个例子说明这一点。"
+        },
+        {
+          "id": "p552-b3",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p552-b4",
+          "source": "(a) Prove that if $a_0,\\ldots,a_{n-1}$ are any complex numbers, then there are complex numbers $z_1,\\ldots,z_n$ (not necessarily distinct) such that",
+          "sourceSha256": "782ddd614d33485c4b6ca5e3beb0718e33ff21bde738f3726a981130b5e6bff7",
+          "translation": "(a) 证明：如果 $a_0,\\ldots,a_{n-1}$ 是任意复数，那么存在复数 $z_1,\\ldots,z_n$（未必互不相同），使得"
+        },
+        {
+          "id": "p552-b5",
+          "source": "$$z^n+a_{n-1}z^{n-1}+\\cdots+a_0=\\prod_{i=1}^n(z-z_i).$$",
+          "sourceSha256": "ab54b0fb82272a554852853552f85675f5d8259e4a9a2424e0e2ccddb17d3317"
+        },
+        {
+          "id": "p552-b6",
+          "source": "(b) Prove that if $a_0,\\ldots,a_{n-1}$ are *real*, then $z^n+a_{n-1}z^{n-1}+\\cdots+a_0$ can be written as a product of linear factors $z+a$ and quadratic factors $z^2+az+b$ all of whose coefficients are real. (Use Problem 25-7.)",
+          "sourceSha256": "27afef1319000e40deff88b2814d9a815d36e7b6433096ef2435a912a7e3a5b1",
+          "translation": "(b) 证明：如果 $a_0,\\ldots,a_{n-1}$ 都是*实数*，那么 $z^n+a_{n-1}z^{n-1}+\\cdots+a_0$ 可以写成一次因子 $z+a$ 和二次因子 $z^2+az+b$ 的乘积，其中所有系数都是实数。（使用习题 25-7。）"
+        },
+        {
+          "id": "p552-b7",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p552-b8",
+          "source": "In this problem we will consider only polynomials with real coefficients. Such a polynomial is called a **sum of squares** if it can be written as $h_1^2+\\cdots+h_n^2$ for polynomials $h_i$ with real coefficients.",
+          "sourceSha256": "53b4e69d71bdc6bed29bba3bc9541194b6bf1ad97d37431e455bdf74b7f27fd5",
+          "translation": "本题只考虑实系数多项式。如果一个这样的多项式可以写成 $h_1^2+\\cdots+h_n^2$，其中 $h_i$ 都是实系数多项式，就称它为一个**平方和**。"
+        },
+        {
+          "id": "p552-b9",
+          "source": "(a) Prove that if $f$ is a sum of squares, then $f(x)\\ge0$ for all $x$.",
+          "sourceSha256": "dfae3943828163e8b9c8841982ef092842320c4f8154dfecfd238bc343e2f485",
+          "translation": "(a) 证明：如果 $f$ 是平方和，那么对于所有 $x$，都有 $f(x)\\ge0$。"
+        },
+        {
+          "id": "p552-b10",
+          "source": "(b) Prove that if $f$ and $g$ are sums of squares, then so is $f\\cdot g$.",
+          "sourceSha256": "367728d6dee155bbe724ce8a047d73988d85daa706f8b57571c1caa2b8bb54ce",
+          "translation": "(b) 证明：如果 $f$ 和 $g$ 都是平方和，那么 $f\\cdot g$ 也是平方和。"
+        },
+        {
+          "id": "p552-b11",
+          "source": "(c) Suppose that $f(x)\\ge0$ for all $x$. Show that $f$ is a sum of squares. Hint: First write $f(x)=\\displaystyle\\prod_{i=1}^k(x-a_i)^2g(x)$, where $g(x)>0$ for all $x$. Then use Problem 3(b).",
+          "sourceSha256": "3908baeb2a2807f296226616cacf305bdea2f1db08f072909b13536ad6f0c548",
+          "translation": "(c) 假设对所有 $x$ 都有 $f(x)\\ge0$。证明 $f$ 是平方和。提示：先写成 $f(x)=\\displaystyle\\prod_{i=1}^k(x-a_i)^2g(x)$，其中对于所有 $x$ 都有 $g(x)>0$。然后使用习题 3(b)。"
+        },
+        {
+          "id": "p552-b12",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p552-b13",
+          "source": "(a) Let $A$ be a set of complex numbers. A number $z$ is called, as in the real case, a **limit point** of the set $A$ if for every (real) $\\varepsilon>0$, there is a point $a$ in $A$ with $|z-a|<\\varepsilon$ but $z\\ne a$. Prove the two-dimensional version of the Bolzano-Weierstrass Theorem: If $A$ is an infinite subset of $[a,b]\\times[c,d]$, then $A$ has a limit point in $[a,b]\\times[c,d]$. Hint: First divide $[a,b]\\times[c,d]$ in half by a vertical line as in Figure 7(a). Since $A$ is infinite, at least one half contains infinitely many points of $A$. Divide this in half by a horizontal line, as in Figure 7(b). Continue in this way, alternately dividing by vertical and horizontal lines.",
+          "sourceSha256": "bb10fddde1fda5d5a144ca27b16286255e1adcbab76102a574fd6dcd71dad683",
+          "translation": "(a) 设 $A$ 是复数的一个集合。与实数情形一样，如果对于每个（实数）$\\varepsilon>0$，在 $A$ 中都存在一点 $a$，满足 $|z-a|<\\varepsilon$ 但 $z\\ne a$，就称数 $z$ 是集合 $A$ 的一个**极限点**。证明二维版本的博尔查诺–魏尔斯特拉斯定理：如果 $A$ 是 $[a,b]\\times[c,d]$ 的无穷子集，那么 $A$ 在 $[a,b]\\times[c,d]$ 中有一个极限点。提示：先像图 7(a) 那样，用一条竖直线把 $[a,b]\\times[c,d]$ 分成两半。由于 $A$ 是无穷集，至少有一半包含 $A$ 中无穷多个点。再像图 7(b) 那样，用一条水平线把这一半再分成两半。如此继续，交替使用竖直线和水平线进行二等分。"
+        },
+        {
+          "id": "p552-b14",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:210px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 811 211 379\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0571.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 7</figcaption></figure>",
+          "sourceSha256": "f8a54d136bb4090922d94a2777960900a65311dfd2274b4dcf5cff150ae856af"
+        },
+        {
+          "id": "p552-b15",
+          "source": "(The two-dimensional bisection argument outlined in this hint is so standard that the title “Bolzano-Weierstrass” often serves to describe the method of proof, in addition to the theorem itself. See, for example, H. Petard, “A Contribution to the Mathematical Theory of Big Game Hunting,” *Amer. Math. Monthly*, **45** (1938), 446–447.)",
+          "sourceSha256": "4bff46a9322c462a41de69b88cdb195793c20a27ab87b60ddbf21ea608a5fcae",
+          "translation": "（这个提示中概述的二维二分论证如此标准，以至于“博尔查诺–魏尔斯特拉斯”这个名称，除了指代定理本身之外，也常常用来描述这种证明方法。例如，可参看 H. Petard 的《对大型猎物狩猎数学理论的一点贡献》，《美国数学月刊》**45**（1938），446—447 页。）"
+        },
+        {
+          "id": "p552-b16",
+          "source": "(b) Prove that a continuous (complex-valued) function on $[a,b]\\times[c,d]$ is bounded on $[a,b]\\times[c,d]$. (Imitate Problem 22-31.)",
+          "sourceSha256": "4f3ec838af09d3ae436b573a822cf2c0d24ecfa51b432457ebddcbd97d0835d9",
+          "translation": "(b) 证明 $[a,b]\\times[c,d]$ 上的连续（复值）函数在 $[a,b]\\times[c,d]$ 上有界。（仿照习题 22-31。）"
+        },
+        {
+          "id": "p552-b17",
+          "source": "(c) Prove that if $f$ is a real-valued continuous function on $[a,b]\\times[c,d]$, then $f$ takes on a maximum and minimum value on $[a,b]\\times[c,d]$. (You can use the same trick that works for Theorem 7-3.)",
+          "sourceSha256": "023a47627add3cf587225fb98851c78ba1716da662eb6dde2058e5d3c654e4e5",
+          "translation": "(c) 证明：如果 $f$ 是 $[a,b]\\times[c,d]$ 上的连续实值函数，那么 $f$ 在 $[a,b]\\times[c,d]$ 上取得最大值和最小值。（可以使用证明定理 7-3 时奏效的同一个技巧。）"
+        }
+      ]
+    },
+    {
+      "printed": 553,
+      "sourceSha256": "b15bf655cb53f879bd1a2ab01a01be9559baf158cbac6d5b0b4ca1c08d75a42a",
+      "blocks": [
+        {
+          "id": "p553-b1",
+          "source": "### \\*6.",
+          "sourceSha256": "16dbb09f3ea3b891672f7582e4080489688794641f917b2e318807321f1b62cd"
+        },
+        {
+          "id": "p553-b2",
+          "source": "The proof of Theorem 2 cannot be considered to be completely elementary, because the possibility of choosing $\\gamma$ with $\\gamma^m=-\\alpha/\\beta$ depends on Theorem 25-2, and thus on the trigonometric functions. It is therefore of some interest to provide an elementary proof that there is a solution for the equation $z^n-c=0$.",
+          "sourceSha256": "e750fe5625e282a824ef6812411bb0c51b6c0ef45aeee1f776686b16d8def45b",
+          "translation": "定理 2 的证明不能算完全初等，因为能够选取满足 $\\gamma^m=-\\alpha/\\beta$ 的 $\\gamma$，依赖于定理 25-2，因而依赖三角函数。因此，给出方程 $z^n-c=0$ 有解的一个初等证明，是有意义的。"
+        },
+        {
+          "id": "p553-b3",
+          "source": "(a) Make an explicit computation to show that solutions of $z^2-c=0$ can be found for any complex number $c$.",
+          "sourceSha256": "892e8f5382f3e6b5a03fc2b2226f0db420b67868369539481f01d69dec5e22d6",
+          "translation": "(a) 通过显式计算说明，对于任意复数 $c$，都可以找到 $z^2-c=0$ 的解。"
+        },
+        {
+          "id": "p553-b4",
+          "source": "(b) Explain why the solution of $z^n-c=0$ can be reduced to the case where $n$ is odd.",
+          "sourceSha256": "70d7f4fe19a2b32c3a73c6c0d4de7289ee7fca4d5d0f0dbcc51471dce0f0255d",
+          "translation": "(b) 解释为什么 $z^n-c=0$ 的求解可以化归为 $n$ 是奇数的情形。"
+        },
+        {
+          "id": "p553-b5",
+          "source": "(c) Let $z_0$ be the point where the function $f(z)=z^n-c$ has its minimum absolute value. If $z_0\\ne0$, show that the integer $m$ in the proof of Theorem 2 is equal to $1$; since we can certainly find $\\gamma$ with $\\gamma^1=-\\alpha/\\beta$, the remainder of the proof works for $f$. It therefore suffices to show that the minimum absolute value of $f$ does not occur at $0$.",
+          "sourceSha256": "a86f9091ff2c70ca2c83f26e1746521ef79e790025987c1fc6c1e1f857aaafe1",
+          "translation": "(c) 设 $z_0$ 是函数 $f(z)=z^n-c$ 的绝对值取得最小值的点。如果 $z_0\\ne0$，证明定理 2 的证明中的整数 $m$ 等于 $1$；由于我们当然可以找到满足 $\\gamma^1=-\\alpha/\\beta$ 的 $\\gamma$，证明的其余部分就适用于 $f$。因此，只需说明 $f$ 的绝对值的最小值不是在 $0$ 处取得。"
+        },
+        {
+          "id": "p553-b6",
+          "source": "(d) Suppose instead that $f$ has its minimum absolute value at $0$. Since $n$ is odd, the points $\\pm\\delta,\\pm\\delta i$ go under $f$ into $-c\\pm\\delta^n,-c\\pm\\delta^ni$. Show that for small $\\delta$ at least one of these points has smaller absolute value than $-c$, thereby obtaining a contradiction.",
+          "sourceSha256": "c83c150372e96fbf8b3597e683c866b6e23ccf6c526b3195fe3311a46b8af99f",
+          "translation": "(d) 反而假设 $f$ 的绝对值在 $0$ 处取得最小值。由于 $n$ 是奇数，点 $\\pm\\delta,\\pm\\delta i$ 经过 $f$ 映到 $-c\\pm\\delta^n,-c\\pm\\delta^ni$。证明：对于较小的 $\\delta$，这些点中至少有一个的绝对值小于 $-c$，从而得出矛盾。"
+        },
+        {
+          "id": "p553-b7",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p553-b8",
+          "source": "Let $f(z)=(z-z_1)^{m_1}\\cdot\\ldots\\cdot(z-z_k)^{m_k}$ for $m_1,\\ldots,m_k>0$.",
+          "sourceSha256": "a9f671f9bc51791c138ccc93a33be5c5fd2567a7c792c6fd550833c5b8bdf75f",
+          "translation": "令 $f(z)=(z-z_1)^{m_1}\\cdot\\ldots\\cdot(z-z_k)^{m_k}$，其中 $m_1,\\ldots,m_k>0$。"
+        },
+        {
+          "id": "p553-b9",
+          "source": "(a) Show that $f'(z)=(z-z_1)^{m_1}\\cdot\\ldots\\cdot(z-z_k)^{m_k}\\cdot\\displaystyle\\sum_{\\alpha=1}^k m_\\alpha(z-z_\\alpha)^{-1}$.",
+          "sourceSha256": "44101d1c75df61185a700d8fd191a3714ad933516c7af683329048d839db3df8",
+          "translation": "(a) 证明 $f'(z)=(z-z_1)^{m_1}\\cdot\\ldots\\cdot(z-z_k)^{m_k}\\cdot\\displaystyle\\sum_{\\alpha=1}^k m_\\alpha(z-z_\\alpha)^{-1}$。"
+        },
+        {
+          "id": "p553-b10",
+          "source": "(b) Let $g(z)=\\displaystyle\\sum_{\\alpha=1}^k m_\\alpha(z-z_\\alpha)^{-1}$. Show that if $g(z)=0$, then $z_1,\\ldots,z_k$ cannot all lie on the same side of a straight line through $z$. Hint: Use Problem 25-11.",
+          "sourceSha256": "e239696588bafb9dbb560e2e93e2eb56778ef8ec113b7f39ac21818539f9df5c",
+          "translation": "(b) 令 $g(z)=\\displaystyle\\sum_{\\alpha=1}^k m_\\alpha(z-z_\\alpha)^{-1}$。证明：如果 $g(z)=0$，那么 $z_1,\\ldots,z_k$ 不可能都位于过 $z$ 的某条直线的同一侧。提示：使用习题 25-11。"
+        },
+        {
+          "id": "p553-b11",
+          "source": "(c) A subset $K$ of the plane is **convex** if $K$ contains the line segment joining any two points in it (Figure 8). For any set $A$, there is a smallest convex set containing it, which is called the **convex hull** of $A$ (Figure 9); if a",
+          "sourceSha256": "8f08ed1b87fd14e6805f53a374c4cae9c23b56ae79bb8146222a0eba11b2d5b0",
+          "translation": "(c) 如果平面的子集 $K$ 包含连接其中任意两点的线段，就称 $K$ 是**凸集**（图 8）。对于任意集合 $A$，都存在一个包含它的最小凸集，称为 $A$ 的**凸包**（图 9）；如果一个"
+        },
+        {
+          "id": "p553-b12",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:365px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 158 366 589\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0572.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg><figcaption>FIGURE 8</figcaption></figure>",
+          "sourceSha256": "953b8c12894a5c7e77b1e51b4979a540c2fc78a94d60b15e80f85306ec993268"
+        },
+        {
+          "id": "p553-b13",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:661px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"481 1156 662 367\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0572.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg></figure>",
+          "sourceSha256": "7d7fabaf71809f64b088bd859b1f97e8ba8a94763943363e4c829da285754b11"
+        }
+      ]
+    },
+    {
+      "printed": 554,
+      "sourceSha256": "f2ceaf70719e167a06040492abb982a4035fda0c21f643b9e9563fd1a0b5dc7e",
+      "blocks": [
+        {
+          "id": "p554-b1",
+          "source": "point $P$ is not in the convex hull of $A$, then all of $A$ is contained on one side of some straight line through $P$. Using this information, prove that the roots of $f'(z)=0$ lie within the convex hull of the set $\\{z_1,\\ldots,z_k\\}$. Further information on convex sets will be found in reference [18] of the Suggested Reading.",
+          "sourceSha256": "35c1d72d33601a181e1640451a92970fa332db82f9d0e3198c98a5b64064a75f",
+          "translation": "点 $P$ 不在 $A$ 的凸包中，那么整个 $A$ 都位于过 $P$ 的某条直线的同一侧。利用这个事实，证明 $f'(z)=0$ 的根位于集合 $\\{z_1,\\ldots,z_k\\}$ 的凸包之内。关于凸集的更多内容，可以在“推荐阅读”中的参考文献 [18] 找到。"
+        },
+        {
+          "id": "p554-b2",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p554-b3",
+          "source": "Prove that if $f$ is differentiable at $z$, then $f$ is continuous at $z$.",
+          "sourceSha256": "5e9c5bfee670ebb300072401a9b1e719b41496c7a645c87dc6426028e112f95c",
+          "translation": "证明：如果 $f$ 在 $z$ 处可导，那么 $f$ 在 $z$ 处连续。"
+        },
+        {
+          "id": "p554-b4",
+          "source": "### \\*9.",
+          "sourceSha256": "bf3173b380cbf1bab4e4d448d2721becc344282eae7b7eeb038dcaa18ba93954"
+        },
+        {
+          "id": "p554-b5",
+          "source": "Suppose that $f=u+iv$ where $u$ and $v$ are real-valued functions.",
+          "sourceSha256": "313cdad90e9006726761431cd83b4be981b53c92b404d566e9319a880b596fce",
+          "translation": "假设 $f=u+iv$，其中 $u$ 和 $v$ 是实值函数。"
+        },
+        {
+          "id": "p554-b6",
+          "source": "(a) For fixed $y_0$ let $g(x)=u(x+iy_0)$ and $h(x)=v(x+iy_0)$. Show that if $f'(x_0+iy_0)=\\alpha+i\\beta$ for real $\\alpha$ and $\\beta$, then $g'(x_0)=\\alpha$ and $h'(x_0)=\\beta$.",
+          "sourceSha256": "330c4a05ef40a058ba4e91cc30c3a7bf3bc30688ccceb863589517ea7209bd08",
+          "translation": "(a) 对于固定的 $y_0$，令 $g(x)=u(x+iy_0)$、$h(x)=v(x+iy_0)$。证明：如果 $f'(x_0+iy_0)=\\alpha+i\\beta$，其中 $\\alpha$ 和 $\\beta$ 为实数，那么 $g'(x_0)=\\alpha$ 且 $h'(x_0)=\\beta$。"
+        },
+        {
+          "id": "p554-b7",
+          "source": "(b) On the other hand, suppose that $k(y)=u(x_0+iy)$ and $l(y)=v(x_0+iy)$. Show that $l'(y_0)=\\alpha$ and $k'(y_0)=-\\beta$.",
+          "sourceSha256": "f1a84837d96c0e627caeedbe72bc493dd7dd32df9839b52ec5ba7bcbf8411c3a",
+          "translation": "(b) 另一方面，假设 $k(y)=u(x_0+iy)$、$l(y)=v(x_0+iy)$。证明 $l'(y_0)=\\alpha$ 且 $k'(y_0)=-\\beta$。"
+        },
+        {
+          "id": "p554-b8",
+          "source": "(c) Suppose that $f'(z)=0$ for all $z$. Show that $f$ is a constant function.",
+          "sourceSha256": "029129ca66859ec3b8dc3ba4dd30c8780b1619f33f5c8f407082dcf8f14b5328",
+          "translation": "(c) 假设对于所有 $z$ 都有 $f'(z)=0$。证明 $f$ 是常函数。"
+        },
+        {
+          "id": "p554-b9",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p554-b10",
+          "source": "(a) Using the expression",
+          "sourceSha256": "19baa2d78e4f33c60e296200eb5c0fde20032ebee219c417a065c758711da1ea",
+          "translation": "(a) 利用表达式"
+        },
+        {
+          "id": "p554-b11",
+          "source": "$$f(x)=\\frac1{1+x^2}=\\frac1{2i}\\left(\\frac1{x-i}-\\frac1{x+i}\\right),$$",
+          "sourceSha256": "a5d1c0247fe300007080d04cff1352e847b7f456b5c5861935520f3de0f5f41f"
+        },
+        {
+          "id": "p554-b12",
+          "source": "find $f^{(k)}(x)$ for all $k$.",
+          "sourceSha256": "d4198429ebe728da236af4fd1d5000f652f9b982ca4ec18ee89a56d61a365d20",
+          "translation": "求所有 $k$ 对应的 $f^{(k)}(x)$。"
+        },
+        {
+          "id": "p554-b13",
+          "source": "(b) Use this result to find $\\arctan^{(k)}(0)$ for all $k$.",
+          "sourceSha256": "7f5fc19dddcac6b089a80728493bbdf0e32c3554dc942e10cd63d1d3c29175c2",
+          "translation": "(b) 利用这个结果，求所有 $k$ 对应的 $\\arctan^{(k)}(0)$。"
+        }
+      ]
+    }
+  ]
+}

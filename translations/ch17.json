@@ -1,0 +1,985 @@
+{
+  "chapter": 17,
+  "language": "zh-CN",
+  "sourceSha256": "a3ccae24dfb28cc980be8ec0decd76e5885c48a6c9dc8cb3c0a438322ffdc257",
+  "paragraphCount": 98,
+  "pages": [
+    {
+      "printed": 330,
+      "sourceSha256": "bc72fd9e9dc38d487f27b8926e8888837ab5a186387c28164513db6d2e5b6edd",
+      "blocks": [
+        {
+          "id": "p330-b1",
+          "source": "# \\*CHAPTER 17\n# PLANETARY MOTION",
+          "sourceSha256": "ac6858dba21e3303b65db3f79d180f25221cc139d2a47c4af0eef4cebd28cf18",
+          "translation": "# \\*第 17 章\n# 行星运动"
+        },
+        {
+          "id": "p330-b2",
+          "source": "> Nature and Nature’s Laws lay hid in night  \n> God said “Let Newton be,” and all was light.",
+          "sourceSha256": "591bc09d9276f527c0300a80ff9a3f38f41a27a7e7777631c4327ba9b0241075",
+          "translation": "> 自然与自然的法则，隐没在黑夜；  \n> 上帝说：“让牛顿出现吧”，于是一切光明。"
+        },
+        {
+          "id": "p330-b3",
+          "source": "*Alexander Pope*",
+          "sourceSha256": "620c2ed5dfad3111fb485edb16ee131fefed33da514a7e6a731ab94166ffadc1",
+          "translation": "*亚历山大·蒲柏*"
+        },
+        {
+          "id": "p330-b4",
+          "source": "Unlike Chapter 16, a short chapter diverging from the main stream of the book, this long chapter diverges from the main stream of the book to demonstrate that we are already in a position to do some real physics.",
+          "sourceSha256": "327633cb92fc871b60c51b8f0667fd9681cd3ea67408d28441a79df542031f03",
+          "translation": "与第 16 章那个偏离本书主线的短章不同，这个长章也要暂离主线，目的是表明：我们已经能够做一些真正的物理研究了。"
+        },
+        {
+          "id": "p330-b5",
+          "source": "In 1609 Kepler published his first two laws of planetary motion. The first law describes the shape of planetary orbits:",
+          "sourceSha256": "7a1183ca3309dab8c65f390e07eb6f52702c6c03ddd1aab002565693b17c7ba2",
+          "translation": "1609 年，开普勒发表了他的前两条行星运动定律。第一定律描述行星轨道的形状："
+        },
+        {
+          "id": "p330-b6",
+          "source": "*The planets move in ellipses, with the sun at one focus.*",
+          "sourceSha256": "0b831b5b8edf1390c0a24e477ee17c5ced86271cd6fff8efd1f2c305ae29e7a5",
+          "translation": "*行星沿椭圆运动，太阳位于一个焦点。*"
+        },
+        {
+          "id": "p330-b7",
+          "source": "The second law involves the area swept out by the segment from the sun to the planet (the ‘radius vector from the sun to the planet’) in various time intervals (Figure 1):",
+          "sourceSha256": "1cff046a19da35c0ea504238607f99c0eba3515e593b8f106b0d9124030525c3",
+          "translation": "第二定律涉及在不同时间区间内，从太阳到行星的线段（“从太阳指向行星的向径”）所扫过的面积（图 1）："
+        },
+        {
+          "id": "p330-b8",
+          "source": "*Equal areas are swept out by the radius vector in equal times. (Equivalently, the area swept out in time $t$ is proportional to $t$.)*",
+          "sourceSha256": "cf368692219ee3f764aa11413f6eabe188c6e5f592e3cf0944415eb44d5f96e0",
+          "translation": "*在相等的时间内，向径扫过相等的面积。（等价地，时间 $t$ 内扫过的面积与 $t$ 成正比。）*"
+        },
+        {
+          "id": "p330-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:326px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"48 811 326 153\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0349.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "217ec56ec8a34c74c2aca59489c17d9707638d286c51b7df389365530ceecb5e"
+        },
+        {
+          "id": "p330-b10",
+          "source": "Kepler’s third law, published in 1619, relates the motions of different planets. If $a$ is the major axis of a planet’s elliptical orbit and $T$ is its period, the time it takes the planet to return to a given position, then:",
+          "sourceSha256": "d751c44c8494aa5e3a70e31cfa59db00608b91a043e6ec39497ee91902be0589",
+          "translation": "开普勒于 1619 年发表的第三定律，将不同行星的运动联系起来。如果 $a$ 是行星椭圆轨道的长轴，$T$ 是其周期，即行星回到某个给定位置所需的时间，那么："
+        },
+        {
+          "id": "p330-b11",
+          "source": "*The ratio $a^3/T^2$ is the same for all planets.*",
+          "sourceSha256": "237ca9f03c0c370fbb9826108375396a5f43398aa32e15585639decba286eb04",
+          "translation": "*比值 $a^3/T^2$ 对所有行星都相同。*"
+        },
+        {
+          "id": "p330-b12",
+          "source": "Newton’s great accomplishment was to show (using his general law that the force on a body is its mass times its acceleration) that Kepler’s laws follow from the assumption that the planets are attracted to the sun by a force (the gravitational force of the sun) always directed toward the sun, proportional to the mass of the planet, and satisfying an **inverse square law**; that is, by a force directed toward the sun whose magnitude varies inversely with the square of the distance from the sun to the planet and directly with the mass of the planet. Since force is mass times acceleration, this is equivalent simply to saying that the magnitude of the acceleration is a constant divided by the square of the distance from the sun.",
+          "sourceSha256": "eac41de2e7ff4c35f9a0e94d8a1a35d6cec40782b7fb0876b60e75b8abf572c9",
+          "translation": "牛顿的伟大成就是（利用他关于物体受力等于质量乘以加速度的一般定律）证明：开普勒定律可以从以下假设推出——行星受到太阳的吸引力（太阳的引力），该力始终指向太阳，与行星质量成正比，并满足**平方反比定律**；也就是说，这个指向太阳的力，其大小与日星距离的平方成反比，与行星质量成正比。由于力等于质量乘以加速度，这就等价于说：加速度的大小等于某个常数除以日星距离的平方。"
+        },
+        {
+          "id": "p330-b13",
+          "source": "Newton’s analysis actually established three results that correlate with Kepler’s individual laws. The first of Newton’s results concerns Kepler’s second law (which was actually discovered first, nicely preserving the symmetry of the situation):",
+          "sourceSha256": "8095ad7cbe9703d564cc975bf28098964a509ef553bd227111f955d67fe1cda9",
+          "translation": "牛顿的分析实际上建立了三个结果，分别与开普勒的三条定律相对应。牛顿的第一个结果涉及开普勒第二定律（实际上，这条定律也是先被发现的，恰好保持了两者之间的对称）："
+        }
+      ]
+    },
+    {
+      "printed": 331,
+      "sourceSha256": "9f0fd256b55c5dff1c18ccbacbf1d9be95e92d092ec3de159bc5ec22391edb07",
+      "blocks": [
+        {
+          "id": "p331-b1",
+          "source": "*Kepler’s second law is true precisely for ‘central forces’, i.e., if and only the force between the sun and the planet always lies along the line between the sun and the planet.*",
+          "sourceSha256": "2a4db6e1306a15f22e4cb813dcdc255ccd01536ba05af96f4f4a8bdd118e32f7",
+          "translation": "*开普勒第二定律恰好对于“有心力”成立，也就是说，当且仅当太阳与行星之间的力始终沿着太阳与行星的连线。*"
+        },
+        {
+          "id": "p331-b2",
+          "source": "Although Newton is revered as the discoverer of calculus, and indeed invented calculus precisely in order to treat such problems, his derivation hardly seems to use calculus at all. Instead of considering a force that varies continuously as the planet moves, Newton first considers short equal time intervals and assumes that a momentary force is exerted at the ends of each of these intervals.",
+          "sourceSha256": "45c500016dbe794a03702f64316369eeede97ed07ba357354d252d4f58f1dc83",
+          "translation": "虽然牛顿因发现微积分而备受尊崇，而且确实正是为处理这类问题才发明微积分，他的推导看起来却几乎没有使用微积分。牛顿没有直接考虑行星运动时连续变化的力，而是先考虑若干短暂且相等的时间间隔，并假设在每个间隔结束时施加一个瞬时的力。"
+        },
+        {
+          "id": "p331-b3",
+          "source": "To be specific, let us imagine that during the first time interval the planet moves along the line $P_1P_2$, with uniform velocity (Figure 2a). If, during the next equal time interval, the planet continued to move along this line, it would end up at $P_3$, where the length of $P_1P_2$ equals the length of $P_2P_3$. This would imply that the triangle $SP_1P_2$ has the same area as the triangle $SP_2P_3$ (since they have equal bases, and the same height)—this just says that Kepler’s law holds in the special case where the force is $0$.",
+          "sourceSha256": "26f874f2a9a3b1073f95702025aa844cd3172f748beac8c684dc41905fa20c73",
+          "translation": "具体来说，设想在第一个时间间隔内，行星以匀速沿直线 $P_1P_2$ 运动（图 2a）。如果在下一个相等的时间间隔内，行星继续沿这条直线运动，它就会到达 $P_3$，其中 $P_1P_2$ 的长度等于 $P_2P_3$ 的长度。这就意味着三角形 $SP_1P_2$ 与三角形 $SP_2P_3$ 的面积相同（因为它们等底等高）——这只是说明，在力为 $0$ 这一特殊情形中，开普勒定律成立。"
+        },
+        {
+          "id": "p331-b4",
+          "source": "Now suppose (Figure 2b) that at the moment the planet arrives at $P_2$ it experiences a force exerted *along the line from $S$ to $P_2$*, which by itself would cause the planet to move to the point $Q$. Combined with the motion that the planet already has, this causes the planet to move to $R$, the vertex opposite $P_2$ in the parallelogram whose sides are $P_2P_3$ and $P_2Q$.",
+          "sourceSha256": "4958b58d7d8aee6a2cec0f532047c38938c5db7936f0dedec486102ba4ce9f5b",
+          "translation": "现在假设（图 2b），行星到达 $P_2$ 的瞬间，受到一个*沿着从 $S$ 到 $P_2$ 的直线*施加的力，单独由这个力引起的运动会使行星到达点 $Q$。它与行星原有的运动结合起来，就会使行星到达 $R$，这是以 $P_2P_3$ 和 $P_2Q$ 为边的平行四边形中，与 $P_2$ 相对的顶点。"
+        },
+        {
+          "id": "p331-b5",
+          "source": "Thus, the area swept out in the second time interval is actually the triangle $SP_2R$. But the area of triangle $SP_2R$ is equal to the area of triangle $SP_3P_2$, since they have the same base $SP_2$, and the same heights (since $RP_3$ is parallel to $SP_2$). Hence, finally, the area of triangle $SP_2R$ is the same as the area of the original triangle $SP_1P_2$! Conversely, if the triangle $SRP_2$ has the same area as $SP_1P_2$, and hence the same area as $SP_3P_2$, then $RP_3$ must be parallel to $SP_2$, and this implies that $Q$ must lie along $SP_2$.",
+          "sourceSha256": "51699f100c1b76b617dbec0d882d91b085e38ac72da83edac9505a4f2ca4dce4",
+          "translation": "因此，在第二个时间间隔内实际扫过的是三角形 $SP_2R$ 的面积。但三角形 $SP_2R$ 的面积等于三角形 $SP_3P_2$ 的面积，因为它们有相同的底 $SP_2$，而且高度相同（因为 $RP_3$ 平行于 $SP_2$）。所以最终，三角形 $SP_2R$ 的面积与原来的三角形 $SP_1P_2$ 相同！反过来，如果三角形 $SRP_2$ 与 $SP_1P_2$ 面积相同，因而也与 $SP_3P_2$ 面积相同，那么 $RP_3$ 必须平行于 $SP_2$，这就意味着 $Q$ 必须位于 $SP_2$ 上。"
+        },
+        {
+          "id": "p331-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:215px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 296 215 643\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0350.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "5649b34ee1b738277c097d1074a6a7fd767d6a1566b07d3911470348530d6f66"
+        },
+        {
+          "id": "p331-b7",
+          "source": "Of course, this isn’t quite the sort of argument one would expect to find in a modern book, but in its own charming way it shows physically *just why* the result should be true.",
+          "sourceSha256": "d6669d42dca6b74eeee851751f232ada4bdb40901f94eee666d92d8f0377b358",
+          "translation": "当然，这不太像现代书籍中通常会见到的论证，但它以一种独具魅力的方式，从物理上说明了这个结果*究竟为什么*应当成立。"
+        },
+        {
+          "id": "p331-b8",
+          "source": "To analyze planetary motion we will be using the material in the Appendix to Chapter 12, and the “determinant” det defined in Problem 4 of Appendix 1 to Chapter 4. We describe the motion of the planet by the parameterized curve",
+          "sourceSha256": "326b51ddbe20bcd17fad2e4b71c64333bd8fa2443b5636c7c1bcb1c21aeed87c",
+          "translation": "为了分析行星运动，我们将使用第 12 章附录的内容，以及第 4 章附录 1 的习题 4 中定义的“行列式” det。用参数曲线来描述行星运动："
+        },
+        {
+          "id": "p331-b9",
+          "source": "$$c(t)=r(t)(\\cos\\theta(t),\\sin\\theta(t)),$$",
+          "sourceSha256": "86d14293222b1036c8ef3e9ab376e826a33c46b45670f327fbf453480b3e01c3"
+        },
+        {
+          "id": "p331-b10",
+          "source": "so that $r$ always gives the length of the line from the sun to the planet, while $\\theta$ gives the angle, which we will assume is increasing (the case where $\\theta$ is decreasing then follows easily). It will be convenient to write this also as",
+          "sourceSha256": "59f8a4f775d99469b2dc1e0763b73fcdb659e2221c47c00e12f8556b58189a96",
+          "translation": "其中 $r$ 始终给出太阳到行星的连线长度，而 $\\theta$ 给出角度，我们假设它递增（$\\theta$ 递减的情形随后很容易得到）。也可以方便地将其写成"
+        },
+        {
+          "id": "p331-b11",
+          "source": "$$\\tag{1}c(t)=r(t)\\cdot\\mathbf e(\\theta(t)),$$",
+          "sourceSha256": "8da14da42cdc18c6202158ae65701866afd58c38e5d989c16ded91575fc67d69"
+        },
+        {
+          "id": "p331-b12",
+          "source": "where",
+          "sourceSha256": "b48111c10c65fc119368edafb19f97451759ee90b3f44647368135ca47aa4753",
+          "translation": "其中"
+        },
+        {
+          "id": "p331-b13",
+          "source": "$$\\mathbf e(t)=(\\cos t,\\sin t)$$",
+          "sourceSha256": "2b6e1091e699f6b126de568038e3cbe546b72f81c83ecd0ad52546a21e3d27e3"
+        },
+        {
+          "id": "p331-b14",
+          "source": "is just the parameterized curve that runs along the unit circle. Note that",
+          "sourceSha256": "bece6a8357a81bcebe867e391f5cbccdd320c51b2e74eaf127353caa0476f188",
+          "translation": "就是沿单位圆运动的参数曲线。注意"
+        },
+        {
+          "id": "p331-b15",
+          "source": "$$\\mathbf e'(t)=(-\\sin t,\\cos t)$$",
+          "sourceSha256": "0ef4af48146ac25547142e364c95fd934323de03689a5518ce6b559b1250ba7e"
+        }
+      ]
+    },
+    {
+      "printed": 332,
+      "sourceSha256": "2fa72778ae80fac98bea6da7d2fb4104785882d24540f8f58f8f32fbbadac3be",
+      "blocks": [
+        {
+          "id": "p332-b1",
+          "source": "is also a vector of unit length, but perpendicular to $\\mathbf e(t)$, and that we also have",
+          "sourceSha256": "eb818ca2e8279e4e4938d90e13ee04b0b79f3a97eb879abc326303231615d76b",
+          "translation": "也是一个单位长度的向量，但与 $\\mathbf e(t)$ 垂直，而且还有"
+        },
+        {
+          "id": "p332-b2",
+          "source": "$$\\tag{2}\\det(\\mathbf e(t),\\mathbf e'(t))=1.$$",
+          "sourceSha256": "237fafa90e8e1772a62ecbf872d3c01e1dc1627576593539c54a6ca73d95b69e"
+        },
+        {
+          "id": "p332-b3",
+          "source": "Differentiating (1), using the formulas on page 247, we obtain",
+          "sourceSha256": "01e301660b542a797fe48325123bbee5e1ff2faa7eb061b69f9d7b6fa4537448",
+          "translation": "利用第 247 页的公式，对 (1) 求导，得到"
+        },
+        {
+          "id": "p332-b4",
+          "source": "$$\\tag{3}c'(t)=r'(t)\\cdot\\mathbf e(\\theta(t))+r(t)\\theta'(t)\\cdot\\mathbf e'(\\theta(t)),$$",
+          "sourceSha256": "ee32e38cb12c9eaeec50074b042a2336c8afaa32cecf96acc1bca168c91df1e7"
+        },
+        {
+          "id": "p332-b5",
+          "source": "and combining with (1), together with the formulas in Problem 6 of Appendix 1 to Chapter 4, we get",
+          "sourceSha256": "69108b8ef89b53e834a81b84d2aaaf34e135d2381b8053750bdc768a00d92019",
+          "translation": "再结合 (1) 以及第 4 章附录 1 的习题 6 中的公式，得到"
+        },
+        {
+          "id": "p332-b6",
+          "source": "$$\\begin{aligned}\n\\det(c(t),c'(t))&=r(t)r'(t)\\det(\\mathbf e(\\theta(t)),\\mathbf e(\\theta(t)))+r(t)^2\\theta'(t)\\det(\\mathbf e(\\theta(t)),\\mathbf e'(\\theta(t)))\\\\\n&=r(t)^2\\theta'(t)\\det(\\mathbf e(\\theta(t)),\\mathbf e'(\\theta(t))),\n\\end{aligned}$$",
+          "sourceSha256": "d1f6a35a111ee761a88bbba8ed6beb97b1b163486668404376a819d2975760f1"
+        },
+        {
+          "id": "p332-b7",
+          "source": "since $\\det(v,v)$ is always $0$. Using (2) we then get",
+          "sourceSha256": "01e9842d1fd645f71fa688ef29e10e3d9d017b762ca9af8bf0ede4679fc1baa1",
+          "translation": "因为 $\\det(v,v)$ 始终为 $0$。再使用 (2)，得到"
+        },
+        {
+          "id": "p332-b8",
+          "source": "$$\\tag{4}\\det(c,c')=r^2\\theta'.$$",
+          "sourceSha256": "3062be85243ee778746c8cda7f5367e4d054efa7a4195b484a9159de4e7c3adb"
+        },
+        {
+          "id": "p332-b9",
+          "source": "As we will see, $r^2\\theta'$ turns out to have another important interpretation.",
+          "sourceSha256": "307c8fea3693bbd8bad1c1941de2a09f9bde939b0eb31c126c6d77e6db108a1a",
+          "translation": "我们将看到，$r^2\\theta'$ 还有另一个重要的解释。"
+        },
+        {
+          "id": "p332-b10",
+          "source": "Suppose that $A(t)$ is the area swept out from time $0$ to $t$ (Figure 3). We want to get a formula for $A'(t)$, and, in the spirit of Newton, we’ll begin by making an educated guess. Figure 4 shows $A(t+h)-A(t)$, together with a straight line segment between $c(t)$ and $c(t+h)$. It is easy to write down a formula for the area of the triangle $\\Delta(h)$ with vertices $O$, $c(t)$, and $c(t+h)$: according to Problems 4 and 5 of Appendix 1 to Chapter 4, the area is",
+          "sourceSha256": "4c09af83c5bf063031cdd220d1416e25e5adc4243905d7753075c9ac3ac1ee09",
+          "translation": "设 $A(t)$ 是从时刻 $0$ 到 $t$ 扫过的面积（图 3）。我们想求出 $A'(t)$ 的公式；秉承牛顿的精神，先作一个有根据的猜测。图 4 画出了 $A(t+h)-A(t)$，以及连接 $c(t)$ 和 $c(t+h)$ 的直线段。对于顶点为 $O$、$c(t)$ 和 $c(t+h)$ 的三角形 $\\Delta(h)$，很容易写出面积公式：根据第 4 章附录 1 的习题 4 和 5，面积为"
+        },
+        {
+          "id": "p332-b11",
+          "source": "$$\\operatorname{area}(\\Delta(h))=\\tfrac12\\det(c(t),c(t+h)-c(t)).$$",
+          "sourceSha256": "05cecb8ad07bb44eaa76a33d394b5f13ccd9ae0a513086883716b5da7e443280"
+        },
+        {
+          "id": "p332-b12",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:310px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 444 310 301\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0351.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>",
+          "sourceSha256": "8757a572d9fc75181d54191c9a630eb55cb0850986f5feee02bbce03842ae57c"
+        },
+        {
+          "id": "p332-b13",
+          "source": "Since the triangle $\\Delta(h)$ has practically the same area as the region $A(t+h)-A(t)$, this shows (or practically shows) that",
+          "sourceSha256": "97fdb173a39fe54d31fb3531cbbc5841d0c66311508469101373f5dd05a3ba3f",
+          "translation": "由于三角形 $\\Delta(h)$ 的面积与区域 $A(t+h)-A(t)$ 的面积几乎相同，这就说明（或者差不多说明）"
+        },
+        {
+          "id": "p332-b14",
+          "source": "$$\\begin{aligned}\nA'(t)&=\\lim_{h\\to0}\\frac{A(t+h)-A(t)}h\\\\\n&=\\lim_{h\\to0}\\frac{\\operatorname{area}\\Delta(h)}h\\\\\n&=\\tfrac12\\det\\left(c(t),\\lim_{h\\to0}\\frac{c(t+h)-c(t)}h\\right)\\\\\n&=\\tfrac12\\det(c(t),c'(t)).\n\\end{aligned}$$",
+          "sourceSha256": "82fecedf6cd31610bb55be4609cbc90a4db53ff820abcc14d369178249bc3568"
+        },
+        {
+          "id": "p332-b15",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:294px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 1008 294 245\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0351.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "9e5bba842e09b65bc7b88070a91b3c50e0122492daf0d811fcca8232b5cdd729"
+        },
+        {
+          "id": "p332-b16",
+          "source": "A rigorous derivation, establishing more in the process, can be made using Problem 13-24, which gives a formula for the area of a region determined by the graph of a function in polar coordinates. According to this Problem, we can write",
+          "sourceSha256": "29a90eef89a1ad4835cead517aa5e23bbd249a6b576ef7ce0b717b065aa48061",
+          "translation": "利用习题 13-24，可以作出严格的推导，并在过程中得到更多结论；该题给出了由极坐标下函数图像所确定区域的面积公式。根据该题，可以写成"
+        },
+        {
+          "id": "p332-b17",
+          "source": "$$\\tag{*}A(t)=\\frac12\\int_{\\theta(0)}^{\\theta(t)}\\rho(\\phi)^2\\,d\\phi$$",
+          "sourceSha256": "156d99c5b16ff6de857c92cf43cfe35563ce855b311ea41fab4f882701794158"
+        },
+        {
+          "id": "p332-b18",
+          "source": "if our parameterized curve $c(t)=r(t)\\cdot\\mathbf e(\\theta(t))$ is the graph of the function $\\rho$ in polar coordinates (here we’ve used $\\phi$ for the angular polar coordinate, to avoid confusion with the function $\\theta$ used to describe the curve $c$).",
+          "sourceSha256": "c3cb805bc9f8075d9b816a9c4520a6a2338bd28d4aa240d8f9e84e0312942c82",
+          "translation": "前提是我们的参数曲线 $c(t)=r(t)\\cdot\\mathbf e(\\theta(t))$ 是函数 $\\rho$ 在极坐标下的图像（这里用 $\\phi$ 表示极角坐标，以免与描述曲线 $c$ 时使用的函数 $\\theta$ 混淆）。"
+        }
+      ]
+    },
+    {
+      "printed": 333,
+      "sourceSha256": "bb4f5644858d52268945a8138a9ea8f9447f970c6419acab45ac86587a29aefd",
+      "blocks": [
+        {
+          "id": "p333-b1",
+          "source": "Now the function $\\rho$ is just",
+          "sourceSha256": "59d7283367f33322c4e760c6069547e84e683a528164fe4510a1f955e3dbb3f1",
+          "translation": "现在，函数 $\\rho$ 就是"
+        },
+        {
+          "id": "p333-b2",
+          "source": "$$\\rho=r\\circ\\theta^{-1}$$",
+          "sourceSha256": "69b67c8c86b2d83fef086862a5e8fb40e77b48607ca89f528b771622ad3919ce"
+        },
+        {
+          "id": "p333-b3",
+          "source": "[for any particular angle $\\phi$, $\\theta^{-1}(\\phi)$ is the time at which the curve $c$ has angular polar coordinate $\\phi$, so $r(\\theta^{-1}(t))$ is the radius coordinate corresponding to $\\phi$]. Although the presence of the inverse function might look a bit forbidding, it’s actually quite innocent: Applying the First Fundamental Theorem of Calculus and the Chain Rule to (*) we immediately get",
+          "sourceSha256": "775f5edbb57adebc3a4300cbe94d7774f7c6348f591a14d8fac84d2f3f4da5d3",
+          "translation": "［对于任意一个固定角度 $\\phi$，$\\theta^{-1}(\\phi)$ 是曲线 $c$ 的极角坐标为 $\\phi$ 时的时刻，因此 $r(\\theta^{-1}(t))$ 是与 $\\phi$ 对应的极径坐标］。虽然反函数的出现看起来有点吓人，但实际上并没有什么麻烦：对 (*) 应用微积分第一基本定理和链式法则，立即得到"
+        },
+        {
+          "id": "p333-b4",
+          "source": "$$\\begin{aligned}\nA'(t)&=\\tfrac12\\rho(\\theta(t))^2\\cdot\\theta'(t)\\\\\n&=\\tfrac12 r(t)^2\\theta'(t),\\qquad\\text{since }\\rho=r\\circ\\theta^{-1}.\n\\end{aligned}$$",
+          "sourceSha256": "620bf1cb154e7a81fc7b4e887b596584aa5c8c82c4eb934e3688d9f66f500303"
+        },
+        {
+          "id": "p333-b5",
+          "source": "Briefly,",
+          "sourceSha256": "0737b2cafb2d496c8b5276f20d4988e9a5904f79eb19de8f96a2333c6f8168d5",
+          "translation": "简写为"
+        },
+        {
+          "id": "p333-b6",
+          "source": "$$A'=\\tfrac12r^2\\theta'.$$",
+          "sourceSha256": "56363af35ed957ef074c8dad910cbb4b17239d16f0cc4658ded69c97a3408be2"
+        },
+        {
+          "id": "p333-b7",
+          "source": "Combining with (4), we thus have",
+          "sourceSha256": "058fc56109b54a27c4d740cdcae29b804fee4ba483772150ab94c0d9658dfae1",
+          "translation": "结合 (4)，于是有"
+        },
+        {
+          "id": "p333-b8",
+          "source": "$$\\tag{5}\\boxed{A'=\\tfrac12\\det(c,c')=\\tfrac12r^2\\theta'.}$$",
+          "sourceSha256": "d08a5e163d3eb65a73bae82ecf5c453a004b32b7dc6546a2fd7b3d0e86d917dc"
+        },
+        {
+          "id": "p333-b9",
+          "source": "Now we’re ready to consider Kepler’s second law. Notice that *Kepler’s second law is equivalent to saying that $A'$ is constant*, and thus it is equivalent to $A''=0$. But",
+          "sourceSha256": "8502f9256c49735e0b1c9082b9e2e5666c55d6a5d6968861a99017861857f5dc",
+          "translation": "现在已经准备好讨论开普勒第二定律。注意，*开普勒第二定律等价于说 $A'$ 是常数*，因而等价于 $A''=0$。但是"
+        },
+        {
+          "id": "p333-b10",
+          "source": "$$\\begin{aligned}\nA''&=\\tfrac12[\\det(c,c')]'=\\tfrac12\\det(c',c')+\\tfrac12\\det(c,c'')\\qquad\\text{(see page 248)}\\\\\n&=\\tfrac12\\det(c,c'').\n\\end{aligned}$$",
+          "sourceSha256": "9b07c945f48c6d48fe2cf875a8ad9f6b90d6a854163ef626a976ca6ab21d0838"
+        },
+        {
+          "id": "p333-b11",
+          "source": "So",
+          "sourceSha256": "fb1df1a24e3f6a12ee1fcb639a5c6d61d7919dc10ccb363b7ed75303b0391798",
+          "translation": "所以"
+        },
+        {
+          "id": "p333-b12",
+          "source": "$$\\boxed{\\text{Kepler’s second law is equivalent to }\\det(c,c'')=0.}$$",
+          "sourceSha256": "daa7ffdc45f9da9433ca510eefb3d1f6295894364d6de981b84c06d3c6f97a7e"
+        },
+        {
+          "id": "p333-b13",
+          "source": "Putting this all together we have:",
+          "sourceSha256": "7a42bab16d837363604d0e56a0bf5d8af2f167d17959f7d78b975c99e977caa7",
+          "translation": "综合以上结果，得到："
+        },
+        {
+          "id": "p333-b14",
+          "source": "**THEOREM 1** Kepler’s second law is true if and only if the force is central, and in this case each planetary path $c(t)=r(t)\\cdot\\mathbf e(\\theta(t))$ satisfies the equation",
+          "sourceSha256": "080e08f911ab0db895f059fa960bb0a47b6057fac334a913abd3f6ab88587e8a",
+          "translation": "**定理 1** 开普勒第二定律成立，当且仅当力是有心力；在这种情形中，每条行星轨道 $c(t)=r(t)\\cdot\\mathbf e(\\theta(t))$ 都满足方程"
+        },
+        {
+          "id": "p333-b15",
+          "source": "$$\\tag{\\(K_2\\)}r^2\\theta'=\\det(c,c')=\\text{constant}.$$",
+          "sourceSha256": "c5642504f127e09f8243e6998b8083d1ed773c35604cbd3311468b148e9ffa10"
+        },
+        {
+          "id": "p333-b16",
+          "source": "**PROOF** Saying that the force is central just means that it always points along $c(t)$. Since $c''(t)$ is in the direction of the force, that is equivalent to saying that $c''(t)$ always points along $c(t)$. And this is equivalent to saying that we always have",
+          "sourceSha256": "85a26ec0cb5f52d4c46bd2f551b37423290ea21f0267c3f174b78ef4ac8ca830",
+          "translation": "**证明** 力是有心力，意思就是它始终沿着 $c(t)$。由于 $c''(t)$ 与力同向，这等价于说，$c''(t)$ 始终沿着 $c(t)$。而这又等价于始终有"
+        },
+        {
+          "id": "p333-b17",
+          "source": "$$\\det(c,c'')=0.$$",
+          "sourceSha256": "67e6781c4b4657d14db862f65a1f8f3d2cf94b4f112cce4755eed82c7205a9dc"
+        },
+        {
+          "id": "p333-b18",
+          "source": "We’ve just seen that this is equivalent to Kepler’s second law.",
+          "sourceSha256": "00efdf489acba500ddc81e90568160b5dbb938a984846660b29e9dcbb1b9f7e2",
+          "translation": "刚才已经看到，这等价于开普勒第二定律。"
+        },
+        {
+          "id": "p333-b19",
+          "source": "Moreover, this equation implies that $[\\det(c,c')]'=0$, which by (5) gives ($K_2$). ▮",
+          "sourceSha256": "e812b8b5c7017f2aed9c272bc7877852e3fbed3f71e75871b4b7593b737ae4db",
+          "translation": "此外，这个等式意味着 $[\\det(c,c')]'=0$，由 (5) 得到 ($K_2$)。▮"
+        }
+      ]
+    },
+    {
+      "printed": 334,
+      "sourceSha256": "4eef1bcae4c4ec00c0d24957c423379ef228400f2e242250bb33c750aa41a6a1",
+      "blocks": [
+        {
+          "id": "p334-b1",
+          "source": "Newton next showed that if the gravitational force of the sun is a central force and also satisfies an inverse square law, then the path of any object in it will be a conic section having the sun at one focus. Planets, of course, correspond to the case where the conic section is an ellipse, and this is also true for comets that visit the sun periodically; parabolas and hyperbolas represent objects that come from outside the solar system, and eventually continue on their merry way back outside the system.",
+          "sourceSha256": "96f077f2bf1b8ad9e782a0257486171f36fb25c22c8d9830be9ea0cbb5bfbeef",
+          "translation": "牛顿接着证明：如果太阳的引力是有心力，并且满足平方反比定律，那么处于该引力中的任何物体的轨道，都是以太阳为一个焦点的圆锥曲线。当然，行星对应于圆锥曲线为椭圆的情形，定期造访太阳的彗星也是如此；抛物线和双曲线则对应于来自太阳系外、最终又继续悠然离开太阳系的物体。"
+        },
+        {
+          "id": "p334-b2",
+          "source": "**THEOREM 2** If the gravitational force of the sun is a central force that satisfies an inverse square law, then the path of any body in it will be a conic section having the sun at one focus (more precisely, either an ellipse, parabola, or one branch of an hyperbola).",
+          "sourceSha256": "b55eac6263fb64d181ff227abb5f9dab907d8b0bbed42c7c2e6cc565eca2b8b4",
+          "translation": "**定理 2** 如果太阳的引力是满足平方反比定律的有心力，那么处于该引力中的任何物体的轨道，都是以太阳为一个焦点的圆锥曲线（更精确地说，是椭圆、抛物线，或双曲线的一支）。"
+        },
+        {
+          "id": "p334-b3",
+          "source": "**PROOF** Notice that our conclusion specifies the shape of the path, not a particular parameterization. But this parameterization is essentially determined by Theorem 1: the hypothesis of a central force implies that the area $A(t)$ (Figure 5) is proportional to $t$, so determining $c(t)$ is essentially equivalent to determining $A$ for arbitrary points on the ellipse. Unfortunately, the areas of such segments cannot be determined explicitly.* This means that we have to determine the shape of the path $c(t)=r(t)\\cdot\\mathbf e(\\theta(t))$ without finding its parameterization! Since it is the function $r\\circ\\theta^{-1}$ which actually describes the shape of the path in polar coordinates, we shouldn’t be surprised to find $\\theta^{-1}$ entering into the proof.",
+          "sourceSha256": "2df748bfd0316f29ae04fa6bcda3e2646136b83db27cd741c51ee15b02200816",
+          "translation": "**证明** 注意，结论规定的是轨道的形状，而不是某个特定的参数表示。不过，这个参数表示本质上已经由定理 1 确定：有心力的假设意味着面积 $A(t)$（图 5）与 $t$ 成正比，所以确定 $c(t)$，本质上就等价于为椭圆上的任意点确定 $A$。可惜，这些部分的面积无法显式确定。*这意味着，必须在不求出参数表示的情况下，确定轨道 $c(t)=r(t)\\cdot\\mathbf e(\\theta(t))$ 的形状！由于真正描述极坐标下轨道形状的是函数 $r\\circ\\theta^{-1}$，因此证明中出现 $\\theta^{-1}$，就不应让我们惊讶。"
+        },
+        {
+          "id": "p334-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:324px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 603 324 182\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0353.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "0214bbbf7a555900c5d8514b8cec607d3474ea5bcc793c1cf30393acf7451326"
+        },
+        {
+          "id": "p334-b5",
+          "source": "By Theorem 1, the hypothesis of a central force implies that",
+          "sourceSha256": "8564f0a48927ba55f63a1a5e166b3d9c91fcf08140b3de3d77403f7f18ef0c59",
+          "translation": "由定理 1，有心力的假设意味着"
+        },
+        {
+          "id": "p334-b6",
+          "source": "$$\\tag{\\(K_2\\)}r^2\\theta'=\\det(c,c')=M$$",
+          "sourceSha256": "97c636e6d0b706b050881ba25cb0730ca4616ab6302506020ce5e87d4df2fa25"
+        },
+        {
+          "id": "p334-b7",
+          "source": "for some constant $M$. The hypothesis of an inverse square law can be written",
+          "sourceSha256": "ecd929f4f6559720c016b314716aaf2be185c030da86583bed3729a40659e346",
+          "translation": "其中 $M$ 是某个常数。平方反比定律的假设可以写成"
+        },
+        {
+          "id": "p334-b8",
+          "source": "$$\\tag{*}c''(t)=-\\frac{H}{r(t)^2}\\mathbf e(\\theta(t))$$",
+          "sourceSha256": "c8d1eda35748ea660c721690c6b77070f744dd4e3f4f9323a3dec00e205b8a15"
+        },
+        {
+          "id": "p334-b9",
+          "source": "for some constant $H$. Using ($K_2$), this can be written",
+          "sourceSha256": "2033556bbb45eb0b7f4921d8bb24a9c5df46803ae252cc0755ae69742fead59e",
+          "translation": "其中 $H$ 是某个常数。利用 ($K_2$)，可以写成"
+        },
+        {
+          "id": "p334-b10",
+          "source": "$$\\frac{c''(t)}{\\theta'(t)}=-\\frac HM\\mathbf e(\\theta(t)).$$",
+          "sourceSha256": "23deda8325d9e9949910948e4ffd7bfa1432daae305a099ba289eccb561d6ed3"
+        },
+        {
+          "id": "p334-b11",
+          "source": "Notice that the left-hand side of this equation is",
+          "sourceSha256": "1ffe9e954e7c6aa9419ba5f6c67135ec33eadea59c612837a8f0fb82c27a8c8a",
+          "translation": "注意，这个等式的左边是"
+        },
+        {
+          "id": "p334-b12",
+          "source": "$$[c'\\circ\\theta^{-1}]'(\\theta(t)).$$",
+          "sourceSha256": "2e66e7ba35cc08f1724e3b814406a2b3dd9049e8358587cc6a6ce327a54f61dc"
+        },
+        {
+          "id": "p334-b13",
+          "source": "So if we let",
+          "sourceSha256": "7b7e94b2ec8fceb8b193fa7d63c0b782fecd2a50e5f89102611c015428d8b1d2",
+          "translation": "所以，如果令"
+        },
+        {
+          "id": "p334-b14",
+          "source": "$$D=c'\\circ\\theta^{-1}$$",
+          "sourceSha256": "4613931bbbb728f8f5c28b9ab42503f02e192ec6227cb54921de3d0171366652"
+        },
+        {
+          "id": "p334-b15",
+          "source": "(this is the main trick—“we consider $c'$ as a function of $\\theta$”), then the equation can be written as",
+          "sourceSha256": "556651ccfecf3ad4efec66606fc4633eff0be4cf2967f0e8bf35c3893908644e",
+          "translation": "（这是主要技巧——“把 $c'$ 看作 $\\theta$ 的函数”），那么等式就可以写成"
+        },
+        {
+          "id": "p334-b16",
+          "source": "$$D'(\\theta(t))=-\\frac HM\\mathbf e(\\theta(t))=-\\frac HM(\\cos\\theta(t),\\sin\\theta(t)),$$",
+          "sourceSha256": "8d52cc3b3c4d37df9381c27d88fa28aef9ab9351b28d252e2885babb19904e3e"
+        },
+        {
+          "id": "p334-b17",
+          "source": "<aside class=\"original-footnote\">* More precisely, we can’t write down a solution in terms of familiar “standard functions,” like sin, arcsin, etc.</aside>",
+          "sourceSha256": "9e6d0cb697d12328f857bf3b79a882c0dd5f5dd765c1039b141d5363e88b6ec1",
+          "translation": "<aside class=\"original-footnote\">* 更精确地说，我们无法用熟悉的“标准函数”，如 sin、arcsin 等，写出一个解。</aside>"
+        }
+      ]
+    },
+    {
+      "printed": 335,
+      "sourceSha256": "3542ec473d736d9c9d5d16323d45a1ada97177b25e37a85059d5cb0699fc9c53",
+      "blocks": [
+        {
+          "id": "p335-b1",
+          "source": "and we can write this simply as",
+          "sourceSha256": "3ee15a2f585e312fe32868549f9a24530340df7d1bfdc9debda3358618a8ef69",
+          "translation": "而这又可以简单写成"
+        },
+        {
+          "id": "p335-b2",
+          "source": "$$D'(u)=-\\frac HM(\\cos u,\\sin u)=\\left(-\\frac HM\\cos u,-\\frac HM\\sin u\\right)$$",
+          "sourceSha256": "f751833af6bd58a5e209601c8cdf9ddf60f4e2ca8ff8efccef572970ccae71ff"
+        },
+        {
+          "id": "p335-b3",
+          "source": "[for all $u$ of the form $\\theta(t)$ for some $t$], completely eliminating $\\theta$.",
+          "sourceSha256": "9d0afb385e926663470ad47af186f8ffde7853503d6492125d9d7b9e116ff20a",
+          "translation": "［对所有能写成某个 $t$ 所对应的 $\\theta(t)$ 的 $u$ 都成立］，从而完全消去了 $\\theta$。"
+        },
+        {
+          "id": "p335-b4",
+          "source": "The equation that we have just obtained is simply a pair of equations, for the components of $D$, each of which we can easily solve individually; we thus find that",
+          "sourceSha256": "8134e965b88dc28170604c402c0947183c5d742058edee45c4e5eca18e8068af",
+          "translation": "刚刚得到的等式，其实就是关于 $D$ 的两个分量的一对方程，每个方程都很容易单独求解；于是得到"
+        },
+        {
+          "id": "p335-b5",
+          "source": "$$D(u)=\\left(\\frac{H\\cdot\\sin u}{-M}+A,\\frac{H\\cdot\\cos u}{M}+B\\right)$$",
+          "sourceSha256": "a58377f041b7449a700617fbef247d53a9cf19ff2b7f7e70b3deee74569e6555"
+        },
+        {
+          "id": "p335-b6",
+          "source": "for two constants $A$ and $B$. Letting $u=\\theta(t)$ again we thus have an explicit formula for $c'$:",
+          "sourceSha256": "bfbaba8d7c971baea17dbf9ff7f9bc457822cf06fb2ecbbb2255f3eec2d553f4",
+          "translation": "其中 $A$ 和 $B$ 是两个常数。再次令 $u=\\theta(t)$，便得到了 $c'$ 的显式公式："
+        },
+        {
+          "id": "p335-b7",
+          "source": "$$c'=\\left(\\frac{H\\cdot\\sin\\theta}{-M}+A,\\frac{H\\cdot\\cos\\theta}{M}+B\\right).$$",
+          "sourceSha256": "a2b08a9bb742a4afd6f06efad6c1a62553f2b560a1990bc9066d198df16a87fb"
+        },
+        {
+          "id": "p335-b8",
+          "source": "[Here $\\sin\\theta$ really stands for $\\sin\\circ\\theta$, etc., abbreviations that we will use throughout.]",
+          "sourceSha256": "62401eb02ca83daf6d1ec77ab09b73b9d2e28b063c5602e245312f179f3acc96",
+          "translation": "［这里 $\\sin\\theta$ 实际上代表 $\\sin\\circ\\theta$，等等；这种简写将在全文中使用。］"
+        },
+        {
+          "id": "p335-b9",
+          "source": "Although we can’t get an explicit formula for $c$ itself, if we substitute this equation, together with $c=r(\\cos\\theta,\\sin\\theta)$, into the equation",
+          "sourceSha256": "c31a11792d659d3f3e32200115c8e1abca90be089f4aceeed97cccf56ad210b8",
+          "translation": "虽然无法得到 $c$ 本身的显式公式，但如果把这个等式连同 $c=r(\\cos\\theta,\\sin\\theta)$ 一起代入方程"
+        },
+        {
+          "id": "p335-b10",
+          "source": "$$\\det(c,c')=M\\qquad\\text{(equation }(K_2)\\text{)},$$",
+          "sourceSha256": "58cda03f4e7c28a5c07f2994a5a64a58f931ed391128ff34b73deccc0ed63ed3"
+        },
+        {
+          "id": "p335-b11",
+          "source": "we get",
+          "sourceSha256": "f59160e0d660b95f3d941664b9ed5146d1661406c4db6f4d3c59bb3f4cf51674",
+          "translation": "就得到"
+        },
+        {
+          "id": "p335-b12",
+          "source": "$$r\\left[\\frac HM\\cos^2\\theta+B\\cos\\theta+\\frac HM\\sin^2\\theta-A\\sin\\theta\\right]=M,$$",
+          "sourceSha256": "7cee43b36980c2a5a10e0ecafbfcab5574abd374a690139277fff85dff6f23d0"
+        },
+        {
+          "id": "p335-b13",
+          "source": "which simplifies to",
+          "sourceSha256": "3df85f250aaf0f7d917a31b27696184707de77aee3bf54e6b6b6649d8539f9e9",
+          "translation": "化简后为"
+        },
+        {
+          "id": "p335-b14",
+          "source": "$$r\\left[\\frac H{M^2}+\\frac BM\\cos\\theta-\\frac AM\\sin\\theta\\right]=1.$$",
+          "sourceSha256": "de34de2a90fcbaa2856f0a27216836bd5dc5410afc7a6314234baf685842368c"
+        },
+        {
+          "id": "p335-b15",
+          "source": "Problem 15-8 shows that this can be written in the form",
+          "sourceSha256": "9cf55d43bba76cf52c265a71cf9da04fd65027ef3afd71bd73521ac4fad0b5ad",
+          "translation": "习题 15-8 表明，这可以写成"
+        },
+        {
+          "id": "p335-b16",
+          "source": "$$r(t)\\left[\\frac H{M^2}+C\\cos(\\theta(t)+D)\\right]=1,$$",
+          "sourceSha256": "5ee23c8619e5e3fffacab3f2a4869850b1ec2f8e97ab91f7fd02119e9fe3cfb7"
+        },
+        {
+          "id": "p335-b17",
+          "source": "for some constants $C$ and $D$. We can let $D=0$, since this simply amounts to rotating our polar coordinate system (choosing which ray corresponds to $\\theta=0$), so we can write, finally,",
+          "sourceSha256": "f589fb2c1a947625553b5c088bae189fad17199e2fbf2802e9b531796b5a0f7d",
+          "translation": "其中 $C$ 和 $D$ 是某两个常数。我们可以令 $D=0$，因为这只相当于旋转极坐标系（选择哪条射线对应于 $\\theta=0$），因此最终可以写成"
+        },
+        {
+          "id": "p335-b18",
+          "source": "$$r[1+\\varepsilon\\cos\\theta]=\\frac{M^2}H=\\Lambda.$$",
+          "sourceSha256": "e8df34d8ad145bec68b1ce046d97c646d6eea175edfc4e124791eee561af2a3e"
+        },
+        {
+          "id": "p335-b19",
+          "source": "But this is the formula for a conic section derived in Appendix 3 of Chapter 4 (together with Problems 5, 6, and 7 of that Appendix). ▮",
+          "sourceSha256": "d4bed8384b6186aa7bbf99d7077ae59881eee1ddd7b12f93d86ebf50e4f68f51",
+          "translation": "但这正是第 4 章附录 3（连同该附录的习题 5、6 和 7）中推导出的圆锥曲线公式。▮"
+        },
+        {
+          "id": "p335-b20",
+          "source": "In terms of the constant $M$ in the equation",
+          "sourceSha256": "da433d9f689b39a31fea0f2b8a668ffb0b01a954df283257a29273ff0ca66897",
+          "translation": "对于下列方程中的常数 $M$"
+        },
+        {
+          "id": "p335-b21",
+          "source": "$$r^2\\theta'=M$$",
+          "sourceSha256": "660471b3d6ac83ac2da61371e23124b9064bbda59356dfbb545de4456e495571"
+        },
+        {
+          "id": "p335-b22",
+          "source": "and the constant $\\Lambda$ in the equation of the orbit",
+          "sourceSha256": "c300337c8268120679cc95b41b0741b9f7f21048cb8109f3a2c6c982db098df2",
+          "translation": "以及下列轨道方程中的常数 $\\Lambda$"
+        },
+        {
+          "id": "p335-b23",
+          "source": "$$r[1+\\varepsilon\\cos\\theta]=\\Lambda$$",
+          "sourceSha256": "5352585121d128a184e76c76ea37fc08dffa2ac6538d008dd557744fb9a19331"
+        }
+      ]
+    },
+    {
+      "printed": 336,
+      "sourceSha256": "d08c3c06be9b8b230bc54ed2cb038881fb259e21960015ff41ffff9715c9b310",
+      "blocks": [
+        {
+          "id": "p336-b1",
+          "source": "the last equation in our proof shows that we can rewrite (*) as",
+          "sourceSha256": "19078052c923e2273938ba67ee0d637d1721fe2af29511ec19b6f6ca36030a56",
+          "translation": "证明中的最后一个等式表明，我们可以把 (*) 改写为"
+        },
+        {
+          "id": "p336-b2",
+          "source": "$$\\tag{**}c''(t)=-\\frac{M^2}{\\Lambda}\\cdot\\frac1{r(t)^2}\\mathbf e(\\theta(t)).$$",
+          "sourceSha256": "33d6c3ed18f4bb8b000a526ffcf738508602ce290b34b6bbe0d26c3f2d468a02"
+        },
+        {
+          "id": "p336-b3",
+          "source": "Recall (page 87) that the major axis $a$ of the ellipse is given by",
+          "sourceSha256": "d38b7fd2faa516b598f2b26754916a7bbebe26db4a5da2776f16dad57d729102",
+          "translation": "回想（第 87 页），椭圆的长轴 $a$ 由下式给出："
+        },
+        {
+          "id": "p336-b4",
+          "source": "$$\\tag{a}a=\\frac{\\Lambda}{1-\\varepsilon^2},$$",
+          "sourceSha256": "bac8bacc3034a7778f8bf42cfc1ee29edff879cb169c2cc8e0286bf07203c827"
+        },
+        {
+          "id": "p336-b5",
+          "source": "while the minor axis $b$ is given by",
+          "sourceSha256": "f989d5a338e57a166f1b725cd8bbdf434f3828ddb6be851f9d4309f5d576eee1",
+          "translation": "而短轴 $b$ 由下式给出："
+        },
+        {
+          "id": "p336-b6",
+          "source": "$$\\tag{b}b=\\frac{\\Lambda}{\\sqrt{1-\\varepsilon^2}}.$$",
+          "sourceSha256": "5d3960ee72470771563bb8cb4086c3aceb1ee006d4d47a21ed3ce99e1190d14f"
+        },
+        {
+          "id": "p336-b7",
+          "source": "Consequently,",
+          "sourceSha256": "25837488c62c9eb55760f3ec62697b2c46f8988775e0626d641e0c728d8a4558",
+          "translation": "因此，"
+        },
+        {
+          "id": "p336-b8",
+          "source": "$$\\tag{c}\\frac{b^2}{\\Lambda}=a.$$",
+          "sourceSha256": "d4a7e778df65150463092e5caf6ee0089dae75b8f669b735552168824925e324"
+        },
+        {
+          "id": "p336-b9",
+          "source": "Remember that equation (5) gives",
+          "sourceSha256": "1f4fe07a41cd7a12dbbcbf2967d9b7bf28168dda3584c69f503fed85a8d7f81d",
+          "translation": "记住，等式 (5) 给出了"
+        },
+        {
+          "id": "p336-b10",
+          "source": "$$A'(t)=\\tfrac12r^2\\theta'=\\tfrac12M,$$",
+          "sourceSha256": "af63d011c1c3a11103d69ebdeb38ff07420d95a707295648bf3cfe59eb066d71"
+        },
+        {
+          "id": "p336-b11",
+          "source": "and thus",
+          "sourceSha256": "64107daf7210711c9efb4b3eeb38f4b48675bca9178a17a2acfdfd85230613e3",
+          "translation": "因此"
+        },
+        {
+          "id": "p336-b12",
+          "source": "$$A(t)=\\tfrac12Mt.$$",
+          "sourceSha256": "e6c57b7c0d4f8ed86f557f3a76ea3a93f96d77e8a2ed45728b887ba843bdcb11"
+        },
+        {
+          "id": "p336-b13",
+          "source": "We can therefore interpret $M$ in terms of the period $T$ of the orbit. This period $T$ is, by definition, the value of $t$ for which we have $\\theta(t)=2\\pi$, so that we obtain the complete ellipse. Hence",
+          "sourceSha256": "11b76ca7cedd5b69b69db45e9405a25360dfeec231f4ebd561e7249d492d03e8",
+          "translation": "所以，可以用轨道的周期 $T$ 来解释 $M$。按照定义，这个周期 $T$ 就是使 $\\theta(t)=2\\pi$ 成立的 $t$ 值，此时得到完整的椭圆。因此"
+        },
+        {
+          "id": "p336-b14",
+          "source": "$$\\text{area of the ellipse}=A(T)=\\tfrac12MT,$$",
+          "sourceSha256": "bb6c2ab98d70757177f19d0bb87a90e086a5abe5fea5eb773f179afa6917af1a"
+        },
+        {
+          "id": "p336-b15",
+          "source": "or",
+          "sourceSha256": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+          "translation": "或者"
+        },
+        {
+          "id": "p336-b16",
+          "source": "$$M=\\frac{2(\\text{area of the ellipse})}{T}=\\frac{2\\pi ab}{T}\\qquad\\text{by Problem 13-17.}$$",
+          "sourceSha256": "80dc048654c91604661ae1b288309ae1abc06eb70dedb9774ccf33fbf33ce6eb"
+        },
+        {
+          "id": "p336-b17",
+          "source": "Hence the constant $M^2/\\Lambda$ in (**) is",
+          "sourceSha256": "e70f4970818e67931c0f224dcac9f837ae84907b5774225032e0bff453a4e503",
+          "translation": "所以，(**) 中的常数 $M^2/\\Lambda$ 为"
+        },
+        {
+          "id": "p336-b18",
+          "source": "$$\\begin{aligned}\n\\frac{M^2}{\\Lambda}&=\\frac{4\\pi^2a^2b^2}{T^2\\Lambda}\\\\\n&=\\frac{4\\pi^2a^3}{T^2},\\qquad\\text{using (c).}\n\\end{aligned}$$",
+          "sourceSha256": "be9b9e1bb0c9eb1d32ac1831572736f6ce3c51bef2ca62ce0f7c2b8038d4df75"
+        },
+        {
+          "id": "p336-b19",
+          "source": "This completes the final step of Newton’s analysis:",
+          "sourceSha256": "69fd7b54bb6afca1053e6bc0866c5632981c72557de3a91349fa69acbb9e3126",
+          "translation": "这就完成了牛顿分析的最后一步："
+        },
+        {
+          "id": "p336-b20",
+          "source": "**THEOREM 3** Kepler’s third law is true if and only if the accelerations $c''(t)$ of the various planets, moving on ellipses, satisfy",
+          "sourceSha256": "5f2d5f60f1ee6b3b1095a86f375dd705ebaa394796a872a3422fca9e7e7f2298",
+          "translation": "**定理 3** 开普勒第三定律成立，当且仅当沿椭圆运动的各行星的加速度 $c''(t)$ 满足"
+        },
+        {
+          "id": "p336-b21",
+          "source": "$$c''(t)=-G\\cdot\\frac1{r^2}\\mathbf e(\\theta(t))$$",
+          "sourceSha256": "dc838d3c1128b4c975e4168059b80e7ed20ec148ca880fa58b809f9bdf34dc00"
+        },
+        {
+          "id": "p336-b22",
+          "source": "for a constant $G$ that does not depend on the planet.",
+          "sourceSha256": "50050af5b62fbec4508f435b86b962cf5d58a5e2efc9e98b215f75b347e49411",
+          "translation": "其中常数 $G$ 不依赖于行星。"
+        }
+      ]
+    },
+    {
+      "printed": 337,
+      "sourceSha256": "e427e87321f85b139ec82057ba106ac18008636800a9d676d85e736bc6fd9862",
+      "blocks": [
+        {
+          "id": "p337-b1",
+          "source": "It should be mentioned that the converse of Theorem 2 is also true. To prove this, we first want to establish one further consequence of Kepler’s second law. Recall that for",
+          "sourceSha256": "0e765fd37fe752b8ead65d5ca58bb215e211ea7e2eff32ca945f32b20a8d4445",
+          "translation": "应该提到，定理 2 的逆命题也成立。为了证明这一点，先要建立开普勒第二定律的另一个推论。回想，对于"
+        },
+        {
+          "id": "p337-b2",
+          "source": "$$\\mathbf e(t)=(\\cos t,\\sin t)$$",
+          "sourceSha256": "2b6e1091e699f6b126de568038e3cbe546b72f81c83ecd0ad52546a21e3d27e3"
+        },
+        {
+          "id": "p337-b3",
+          "source": "we have",
+          "sourceSha256": "311eecafbfec5e428b3e652becbcd18bf9c9670e490734d5811c85e6a7623ab4",
+          "translation": "有"
+        },
+        {
+          "id": "p337-b4",
+          "source": "$$\\mathbf e'(t)=(-\\sin t,\\cos t).$$",
+          "sourceSha256": "27b55fed09593d3aa9c03f463efdc0d766047d53b7868492b70c365b9da61d0e"
+        },
+        {
+          "id": "p337-b5",
+          "source": "Consequently,",
+          "sourceSha256": "25837488c62c9eb55760f3ec62697b2c46f8988775e0626d641e0c728d8a4558",
+          "translation": "因此，"
+        },
+        {
+          "id": "p337-b6",
+          "source": "$$\\mathbf e''(t)=(-\\cos t,-\\sin t)=-\\mathbf e(t).$$",
+          "sourceSha256": "d1e3ec46a4662be434e6ca2e97e2a283951689aabf263cf9012a60f86dbb80f8"
+        },
+        {
+          "id": "p337-b7",
+          "source": "Now differentiating (3) gives",
+          "sourceSha256": "24e317e01fdecfe64f8305f10184830374a9039f440177d6115ac83b3cfa1a5f",
+          "translation": "现在对 (3) 求导，得到"
+        },
+        {
+          "id": "p337-b8",
+          "source": "$$\\begin{aligned}\nc''(t)={}&r''(t)\\cdot\\mathbf e(\\theta(t))+r'(t)\\theta'(t)\\cdot\\mathbf e'(\\theta(t))\\\\\n&+r'(t)\\theta'(t)\\cdot\\mathbf e'(\\theta(t))+r(t)\\theta''(t)\\cdot\\mathbf e'(\\theta(t))+r(t)\\theta'(t)\\theta'(t)\\cdot\\mathbf e''(\\theta(t)).\n\\end{aligned}$$",
+          "sourceSha256": "0972e70e33820a188c7144ed2820a0ada1517a8ca5ba3ab28bef5a32d4c290b9"
+        },
+        {
+          "id": "p337-b9",
+          "source": "Using $\\mathbf e''(t)=-\\mathbf e(t)$ we get",
+          "sourceSha256": "e105f35e833ff77b332e8f1a4072bcba7aab0f0c3126f7b8d49c8b5dc4854e6e",
+          "translation": "利用 $\\mathbf e''(t)=-\\mathbf e(t)$，得到"
+        },
+        {
+          "id": "p337-b10",
+          "source": "$$c''(t)=[r''(t)-r(t)\\theta'(t)^2]\\cdot\\mathbf e(\\theta(t))+[2r'(t)\\theta'(t)+r(t)\\theta''(t)]\\cdot\\mathbf e'(\\theta(t)).$$",
+          "sourceSha256": "9838cee306d2dd0b157d1a10fe2228c9f5b4d389566c1b3526981e3cb21cb992"
+        },
+        {
+          "id": "p337-b11",
+          "source": "Since Kepler’s second law implies central forces, hence that $c''(t)$ is always a multiple of $c(t)$, and thus always a multiple of $\\mathbf e(\\theta(t))$, the coefficient of $\\mathbf e'(\\theta(t))$ must be $0$ [as a matter of fact, we can see this directly by taking the derivative of formula ($K_2$)]. Thus Kepler’s second law implies that",
+          "sourceSha256": "8429e8a6db995879f772315dee652b08fa83a284b378362cf909906824e537d2",
+          "translation": "由于开普勒第二定律意味着力是有心力，因而 $c''(t)$ 始终是 $c(t)$ 的倍数，也就始终是 $\\mathbf e(\\theta(t))$ 的倍数，所以 $\\mathbf e'(\\theta(t))$ 的系数必须为 $0$［事实上，对公式 ($K_2$) 求导，就可以直接看出这一点］。因此，开普勒第二定律意味着"
+        },
+        {
+          "id": "p337-b12",
+          "source": "$$\\tag{6}c''(t)=[r''(t)-r(t)\\theta'(t)^2]\\cdot\\mathbf e(\\theta(t)).$$",
+          "sourceSha256": "0215a08d8dee92c3171ee6e6d4271ef2962d507e3d8f75a0518c4e49cc068d0d"
+        },
+        {
+          "id": "p337-b13",
+          "source": "**THEOREM 4** If the path of a planet moving under a central gravitational force lies on a conic section with the sun as focus, then the force must satisfy an inverse square law.",
+          "sourceSha256": "bb17d8224a7ea6828bd655b47cbfe80a56e7ad246d9d6662b296de2793bdaea6",
+          "translation": "**定理 4** 如果在有心引力作用下运动的行星，其轨道位于以太阳为焦点的圆锥曲线上，那么这个力必定满足平方反比定律。"
+        },
+        {
+          "id": "p337-b14",
+          "source": "**PROOF** As in Theorem 2, notice that the hypothesis on the shape of the path, together with the hypothesis of a central force, which is equivalent to Kepler’s second law, essentially determines the parameterization. But we can’t write down an explicit solution, so we have to obtain information about the acceleration without actually knowing what it is.",
+          "sourceSha256": "1e988bce97c84344725238381242110cea4cdc40bb2638b02efeb38861f8471e",
+          "translation": "**证明** 与定理 2 一样，注意：关于轨道形状的假设，加上有心力的假设（等价于开普勒第二定律），本质上确定了参数表示。但我们无法写出显式解，所以必须在并不知道加速度具体是什么的情况下，获得有关它的信息。"
+        },
+        {
+          "id": "p337-b15",
+          "source": "Once again, the hypothesis of a central force implies that",
+          "sourceSha256": "4d38f0454100767b1da2a06c909ec714ce97b9ecdab14b7f920af98d7055189b",
+          "translation": "再一次，有心力的假设意味着"
+        },
+        {
+          "id": "p337-b16",
+          "source": "$$\\tag{\\(K_2\\)}r^2\\theta'=M,$$",
+          "sourceSha256": "f651adf3830a77ebc3204c52579d7882c649ec01e72828f5ba892f1d2efe18a8"
+        },
+        {
+          "id": "p337-b17",
+          "source": "for some constant $M$, and the hypothesis that the path lies on a conic section with the sun as focus implies that it satisfies the equation",
+          "sourceSha256": "a6728190bf5da774afdd8d63c3308c01d50dfc1a4090446741798da4cf4541cc",
+          "translation": "其中 $M$ 是某个常数；而轨道位于以太阳为焦点的圆锥曲线上的假设，意味着它满足方程"
+        },
+        {
+          "id": "p337-b18",
+          "source": "$$\\tag{A}r[1+\\varepsilon\\cos\\theta]=\\Lambda,$$",
+          "sourceSha256": "5c1e09b09fc35719464ce4c13c78b237fae1ce0c8393b404c567ae1e02a9aac5"
+        },
+        {
+          "id": "p337-b19",
+          "source": "for some $\\varepsilon$ and $\\Lambda$. For our (not especially illuminating) proof, we will keep differentiating and substituting from these two equations.",
+          "sourceSha256": "b2ce5c0da8e8e2f08143f7526d59fb755074fd841a500c82c5e665e043a45c34",
+          "translation": "其中 $\\varepsilon$ 和 $\\Lambda$ 是某两个数。在我们的这个（并不特别有启发性）证明中，将不断对这两个方程求导并代入。"
+        },
+        {
+          "id": "p337-b20",
+          "source": "First we differentiate (A) to obtain",
+          "sourceSha256": "2f61d118010dd4af915bc4ec0492d282f2a55d8ce44823af37543b77b896469b",
+          "translation": "首先，对 (A) 求导，得到"
+        },
+        {
+          "id": "p337-b21",
+          "source": "$$r'[1+\\varepsilon\\cos\\theta]-\\varepsilon r\\theta'\\sin\\theta=0.$$",
+          "sourceSha256": "cb82deffd60b918c68b052f4bc44662b8f952ff3f07ad31f711f126ae968e4cd"
+        },
+        {
+          "id": "p337-b22",
+          "source": "Multiplying by $r$ this becomes",
+          "sourceSha256": "668d1c63d5f24c67752cdf2568564cd5a67c1edbbc1039431d7efaba40ce59bc",
+          "translation": "乘以 $r$，变成"
+        },
+        {
+          "id": "p337-b23",
+          "source": "$$rr'[1+\\varepsilon\\cos\\theta]-\\varepsilon r^2\\theta'\\sin\\theta=0.$$",
+          "sourceSha256": "398faca4e01fbc227893268db5907cc8c245e85cfc2d083d5aec3e39eef67867"
+        }
+      ]
+    },
+    {
+      "printed": 338,
+      "sourceSha256": "80d27f079abf68e2ab4d4c321d003291467899587c9b6dc483acfe6600ed42c0",
+      "blocks": [
+        {
+          "id": "p338-b1",
+          "source": "Using both (A) and ($K_2$), this becomes",
+          "sourceSha256": "701dfa469804b98e205c7659079e5640744ef669fa7408e45136432ea030948f",
+          "translation": "同时利用 (A) 和 ($K_2$)，变成"
+        },
+        {
+          "id": "p338-b2",
+          "source": "$$\\Lambda r'-\\varepsilon M\\sin\\theta=0.$$",
+          "sourceSha256": "fb024acb88777fc5de5c73d2ca0102b89086bed03d8f9ba3c1c4a6ae470e97b1"
+        },
+        {
+          "id": "p338-b3",
+          "source": "Differentiating again, we get",
+          "sourceSha256": "ff6c10bdd728de6fca72bff7785131fae6f478724acea9a7bd67a006f784aa43",
+          "translation": "再次求导，得到"
+        },
+        {
+          "id": "p338-b4",
+          "source": "$$\\Lambda r''-\\varepsilon M\\theta'\\cos\\theta=0.$$",
+          "sourceSha256": "019e9a1accb7789665fc4a66624af4ec2ab1ce62fe8cf51a2663b8081bcf28ee"
+        },
+        {
+          "id": "p338-b5",
+          "source": "Using ($K_2$) we get",
+          "sourceSha256": "e024de5de92970d721ef9be833087456466ed9558dc2c0fc658bba73f8585da9",
+          "translation": "利用 ($K_2$)，得到"
+        },
+        {
+          "id": "p338-b6",
+          "source": "$$\\Lambda r''-\\frac{\\varepsilon M^2}{r^2}\\cos\\theta=0,$$",
+          "sourceSha256": "f30022ebb02418f9f6c965a1b7274dca3900a228a66c3d7771b9f78949e6f6eb"
+        },
+        {
+          "id": "p338-b7",
+          "source": "and then using (A) we get",
+          "sourceSha256": "66ff14c078ed5da1d429ce8771adc4a05237326a956022efab8a11e1cc0315be",
+          "translation": "再利用 (A)，得到"
+        },
+        {
+          "id": "p338-b8",
+          "source": "$$\\Lambda r''-\\frac{M^2}{r^2}\\left[\\frac{\\Lambda}r-1\\right]=0.$$",
+          "sourceSha256": "b88c6760d63d099bd296073620024f2293f39d0e4d0cf740ba8a9d3193406701"
+        },
+        {
+          "id": "p338-b9",
+          "source": "Substituting from ($K_2$) yet again, we get",
+          "sourceSha256": "5c0e910c0bb046efde7c506c2b11a0853100a81ed1b921d8ece038dc7951a32e",
+          "translation": "又一次由 ($K_2$) 代入，得到"
+        },
+        {
+          "id": "p338-b10",
+          "source": "$$\\Lambda[r''-r(\\theta')^2]+\\frac{M^2}{r^2}=0,$$",
+          "sourceSha256": "5e49f3c5acabb8b1e5069a53664a8477ae6a2ef0d409393f82a9bfd0e5e6b7f8"
+        },
+        {
+          "id": "p338-b11",
+          "source": "or",
+          "sourceSha256": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+          "translation": "或者"
+        },
+        {
+          "id": "p338-b12",
+          "source": "$$r''-r(\\theta')^2=-\\frac{M^2}{\\Lambda r^2}.$$",
+          "sourceSha256": "616aad34df3e727bfccfe7ebbd1f2d9cdf12d11f4af8cf68f56c0980d8a8c05a"
+        },
+        {
+          "id": "p338-b13",
+          "source": "Comparing with (6), we obtain",
+          "sourceSha256": "d94998a1e1f19b477d1c3b5ee285afbae46e6285ae704afaf37b5ba5e2d45bdf",
+          "translation": "与 (6) 比较，得到"
+        },
+        {
+          "id": "p338-b14",
+          "source": "$$c''(t)=-\\frac{M^2}{\\Lambda r^2}\\mathbf e(\\theta(t)),$$",
+          "sourceSha256": "31245c1def69f668bd9e4e7bb9cd875112eb3e68cf379f9555d3eb6c84737aeb"
+        },
+        {
+          "id": "p338-b15",
+          "source": "which is precisely what we wanted to show: the force is inversely proportional to the square of the distance from the sun to the planet. ▮",
+          "sourceSha256": "3afe247e46300846f4375a28886974b8561728c9e99ba17ca48b58d28c01be0b",
+          "translation": "这正是我们要证明的：力与太阳到行星的距离的平方成反比。▮"
+        }
+      ]
+    }
+  ]
+}

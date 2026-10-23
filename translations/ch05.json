@@ -1,0 +1,2618 @@
+{
+  "chapter": 5,
+  "language": "zh-CN",
+  "sourceSha256": "cc25ae2518ccc2c63c640704a8af29edd233a807af278bccfa581d75d753914b",
+  "paragraphCount": 245,
+  "pages": [
+    {
+      "printed": 90,
+      "sourceSha256": "958f6a71d46c5556eac4c24a61b0eed34fa58b9c02f368702af78c60637b9469",
+      "blocks": [
+        {
+          "id": "p90-b1",
+          "source": "# CHAPTER 5  LIMITS",
+          "sourceSha256": "47ccf97c16477b581381fb89c87c7a4bb8ac7fe42cc2c7731c6e48562f646909",
+          "translation": "# 第 5 章　极限"
+        },
+        {
+          "id": "p90-b2",
+          "source": "The concept of a limit is surely the most important, and probably the most difficult one in all of calculus. The goal of this chapter is the definition of limits, but we are, once more, going to begin with a provisional definition; what we shall define is not the word “limit” but the notion of a function approaching a limit.",
+          "sourceSha256": "e19afc052168f9fdde6e34250ff474d6e7afd38784076675df2ff2a66d75e654",
+          "translation": "极限概念无疑是整个微积分中最重要的概念，而且大概也是最困难的概念。本章的目标是给出极限的定义，但我们又将从一个暂定定义开始；要定义的不是“极限”这个词，而是函数趋近于一个极限的概念。"
+        },
+        {
+          "id": "p90-b3",
+          "source": "**PROVISIONAL DEFINITION**",
+          "sourceSha256": "96c23deb6bd8f2a089880faa7293f5e102678d6aa95cf39159657b22bbf5a52f",
+          "translation": "**暂定定义**"
+        },
+        {
+          "id": "p90-b4",
+          "source": "The function $f$ approaches the limit $l$ near $a$, if we can make $f(x)$ as close as we like to $l$ by requiring that $x$ be sufficiently close to, but unequal to, $a$.",
+          "sourceSha256": "572cff53d56c76df79d73f200940cebdca937e374bd52e32ff59ac1f05593af4",
+          "translation": "如果通过要求 $x$ 充分接近但不等于 $a$，就能使 $f(x)$ 任意接近 $l$，那么称函数 $f$ 在 $a$ 附近趋近极限 $l$。"
+        },
+        {
+          "id": "p90-b5",
+          "source": "Of the six functions graphed in Figure 1, only the first three approach $l$ at $a$. Notice that although $g(a)$ is not defined, and $h(a)$ is defined “the wrong way,” it is still true that $g$ and $h$ approach $l$ near $a$. This is because we explicitly ruled out, in our definition, the necessity of ever considering the value of the function at $a$—it is only necessary that $f(x)$ should be close to $l$ for $x$ close to $a$, but *unequal* to $a$. We are simply not interested in the value of $f(a)$, or even in the question of whether $f(a)$ is defined.",
+          "sourceSha256": "f5f0090f380a3c1599faf0a9d29d92dcbd46bd5b9f9e466fb7e916026777df5d",
+          "translation": "图 1 中画出的六个函数，只有前三个在 $a$ 处趋近 $l$。注意，虽然 $g(a)$ 没有定义，而 $h(a)$ 被定义得“不对”，但 $g$ 和 $h$ 在 $a$ 附近仍趋近 $l$。这是因为，在定义中，我们已经明确排除了必须考虑函数在 $a$ 处的值这一要求；只需要当 $x$ 接近 $a$，但*不等于* $a$ 时，$f(x)$ 接近 $l$。我们根本不关心 $f(a)$ 的值，甚至不关心 $f(a)$ 是否有定义。"
+        },
+        {
+          "id": "p90-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"477 886 682 414\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0109.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "d46b76a9462655d6bf79e6e49403b438997e663ef5ddecb6e4364c63d06da87a"
+        },
+        {
+          "id": "p90-b7",
+          "source": "One convenient way of picturing the assertion that $f$ approaches $l$ near $a$ is provided by a method of drawing functions that was not mentioned in Chapter 4. In this method, we draw two straight lines, each representing $\\mathbf R$, and arrows from a point $x$ in one, to $f(x)$ in the other. Figure 2 illustrates such a picture for two different functions.",
+          "sourceSha256": "96bfc91b350b31c7f612703d9dfc3bcbfed3d0093109eed797dfa225e5ab8183",
+          "translation": "有一种第 4 章未曾提到的画函数的方法，可以方便地直观表示“$f$ 在 $a$ 附近趋近 $l$”这一断言。用这种方法，我们画两条直线，每条都表示 $\\mathbf R$，然后从其中一条直线上的点 $x$ 画箭头指向另一条直线上的 $f(x)$。图 2 用这种画法给出了两个不同的函数。"
+        }
+      ]
+    },
+    {
+      "printed": 91,
+      "sourceSha256": "9461a2557310fa9d05e9e8e53c7e6e72579eb7c70b6fd7282111666097e7c579",
+      "blocks": [
+        {
+          "id": "p91-b1",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"452 138 844 198\" role=\"img\" aria-label=\"Figure 2\"><image href=\"pages/book/0110.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 2</figcaption>\n</figure>",
+          "sourceSha256": "1809550b044620e49456cd68482ebac5677451df703bfbe064f23b91082e8298"
+        },
+        {
+          "id": "p91-b2",
+          "source": "Now consider a function $f$ whose drawing looks like Figure 3. Suppose we ask that $f(x)$ be close to $l$, say within the open interval $B$ which has been drawn in Figure 3. This can be guaranteed if we consider only the numbers $x$ in the interval $A$ of Figure 3. (In this diagram we have chosen the largest interval which will work; any smaller interval containing $a$ could have been chosen instead.) If we",
+          "sourceSha256": "712fc91e84d32c0cc5ea3bd9f8ab8d37650da617daf514f469fa56afdb62c145",
+          "translation": "现在考虑一个图示如图 3 的函数 $f$。假设要求 $f(x)$ 接近 $l$，例如落在图 3 所画出的开区间 $B$ 内。那么，只要考虑图 3 中区间 $A$ 内的数 $x$，就能保证这一点。（图中选取了可行的最大区间；也可以改取任何一个包含 $a$ 的更小区间。）如果我们"
+        },
+        {
+          "id": "p91-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:337px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"481 547 337 225\" role=\"img\" aria-label=\"Figure 3\"><image href=\"pages/book/0110.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 3</figcaption>\n</figure>\n<figure class=\"original-source-figure\" style=\"max-width:337px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"927 542 337 229\" role=\"img\" aria-label=\"Figure 4\"><image href=\"pages/book/0110.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 4</figcaption>\n</figure>",
+          "sourceSha256": "3430bfd41219146cddd4ba52a67b83f0ce54621333c8a1396acecf3d1ed6a24a"
+        },
+        {
+          "id": "p91-b4",
+          "source": "choose a smaller interval $B'$ (Figure 4) we will, usually, have to choose a smaller $A'$, but no matter how small we choose the open interval $B$, there is always supposed to be some open interval $A$ which works.",
+          "sourceSha256": "48da788f85da8f36e264ea537c326f9c78ec9e1b3ef8f6cd3ea5c898246a1dfe",
+          "translation": "选择一个更小的区间 $B'$（图 4），通常就必须选择更小的 $A'$；不过，无论把开区间 $B$ 选得多小，总应当存在某个可行的开区间 $A$。"
+        },
+        {
+          "id": "p91-b5",
+          "source": "A similar pictorial interpretation is possible in terms of the graph of $f$, but in this case the interval $B$ must be drawn on the vertical axis, and the set $A$ on the horizontal axis. The fact that $f(x)$ is in $B$ when $x$ is in $A$ means that the part of the graph lying over $A$ is contained in the region which is bounded by the horizontal lines through the end points of $B$; compare Figure 5(a), where a valid interval $A$ has been chosen, with Figure 5(b), where $A$ is too large.",
+          "sourceSha256": "a5946eb730ceca8511a7ac4a6a8c3a6193d21bce720985f7b45efb71b7be1c2f",
+          "translation": "借助 $f$ 的图像，也可以作出类似的直观解释，不过此时区间 $B$ 必须画在竖直轴上，集合 $A$ 必须画在水平轴上。“$x$ 属于 $A$ 时，$f(x)$ 属于 $B$”意味着：位于 $A$ 上方的那部分图像，包含在由经过 $B$ 两端点的水平直线所围出的区域内。比较图 5(a) 与图 5(b)：前者所选的区间 $A$ 有效，后者中的 $A$ 则太大。"
+        },
+        {
+          "id": "p91-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"452 1106 729 373\" role=\"img\" aria-label=\"Figure 5\"><image href=\"pages/book/0110.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 5</figcaption>\n</figure>",
+          "sourceSha256": "6b9a805ef20935aa1161d7e01a2d3627f494503d6d818530d1666692134e5490"
+        }
+      ]
+    },
+    {
+      "printed": 92,
+      "sourceSha256": "06025608ad57a3ea456f477e63c3e7227d0bf23259bcf7da81d1669079c3bec9",
+      "blocks": [
+        {
+          "id": "p92-b1",
+          "source": "To take a specific simple example, let’s consider the function $f(x)=3x$ with $a=5$ (Figure 6). Presumably $f$ should approach the limit $15$ near $5$—we ought to be able to get $f(x)$ as close to $15$ as we like if we require that $x$ be sufficiently close to $5$. To be specific, suppose we want to make sure that $3x$ is within $\\frac1{10}$ of $15$. This means that we want to have",
+          "sourceSha256": "8afcdd79bc9fba759759a28b3699690fe4526c7fc5f35c59425da2679bb4d679",
+          "translation": "举一个具体而简单的例子，考虑函数 $f(x)=3x$，取 $a=5$（图 6）。想来，$f$ 应当在 $5$ 附近趋近极限 $15$：只要要求 $x$ 充分接近 $5$，就应能使 $f(x)$ 任意接近 $15$。具体说来，假设要确保 $3x$ 与 $15$ 的差距小于 $\\frac1{10}$。这意味着我们希望有"
+        },
+        {
+          "id": "p92-b2",
+          "source": "$$15-\\frac1{10}<3x<15+\\frac1{10},$$",
+          "sourceSha256": "f68e5da89ee400bde444e23acc6b12d9af80b619ada2c9147462f30e310e1b2f"
+        },
+        {
+          "id": "p92-b3",
+          "source": "which we can also write as",
+          "sourceSha256": "66d335e336ff7060385654675739c750a0e126b060f04656832766409d28d2fc",
+          "translation": "也可以写成"
+        },
+        {
+          "id": "p92-b4",
+          "source": "$$-\\frac1{10}<3x-15<\\frac1{10}.$$",
+          "sourceSha256": "7230612888eeaa922c159b201760f3e75e744b46b0b762020b0577ee07b7ee20"
+        },
+        {
+          "id": "p92-b5",
+          "source": "To do this we just have to require that",
+          "sourceSha256": "aedf90f9c10061a028c7adac6ee573c574d39c9550651f5abd024ee55e512c68",
+          "translation": "为此，只需要求"
+        },
+        {
+          "id": "p92-b6",
+          "source": "$$-\\frac1{30}<x-5<\\frac1{30},$$",
+          "sourceSha256": "ca0912c2603b2e348d04e9e4af95bd4a3c48f25f55a0bd5a306c7ed044c9f34a"
+        },
+        {
+          "id": "p92-b7",
+          "source": "or simply $|x-5|<\\frac1{30}$; There is nothing special about the number $\\frac1{10}$. It is just as easy to guarantee that $|3x-15|<\\frac1{100}$; simply require that $|x-5|<\\frac1{300}$. In fact, if we take any positive number $\\varepsilon$ we can make $|3x-15|<\\varepsilon$ simply by requiring that $|x-5|<\\varepsilon/3$.",
+          "sourceSha256": "49116fb485b02eb995503bc74fc0c5a1f3c7bacc3b972d2306c5cc0cf1b9dcab",
+          "translation": "也就是 $|x-5|<\\frac1{30}$。数 $\\frac1{10}$ 并没有什么特殊。要保证 $|3x-15|<\\frac1{100}$ 同样容易：只需要求 $|x-5|<\\frac1{300}$。事实上，任取一个正数 $\\varepsilon$，只需要求 $|x-5|<\\varepsilon/3$，就可以使 $|3x-15|<\\varepsilon$。"
+        },
+        {
+          "id": "p92-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:252px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"37 277 252 315\" role=\"img\" aria-label=\"Figure 6\"><image href=\"pages/book/0111.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 6</figcaption>\n</figure>",
+          "sourceSha256": "dca9b1e9bb555187bef6e192b37a0fdcf2e223e1152483da87f8ea51d43b2561"
+        },
+        {
+          "id": "p92-b9",
+          "source": "There’s also nothing special about the choice $a=5$. It’s just as easy to see that $f$ approaches the limit $3a$ at $a$ for any $a$: To ensure that",
+          "sourceSha256": "8913d800c16c66b5f8e4dd16b1c34c7bac70e33f107c7ed014d96f5200ce32c5",
+          "translation": "选取 $a=5$ 也没有什么特殊。对于任意 $a$，同样容易看出，$f$ 在 $a$ 处趋近极限 $3a$：要确保"
+        },
+        {
+          "id": "p92-b10",
+          "source": "$$|3x-3a|<\\varepsilon$$",
+          "sourceSha256": "e7399001d778fb55bccdbba1c61ac862689f8d63a2cf11bbb25712ad31d38095"
+        },
+        {
+          "id": "p92-b11",
+          "source": "we just have to require that",
+          "sourceSha256": "1b8a6149e9bf63acddc2edf73fe42f894b8ad7d014090fd373f2d709b3284955",
+          "translation": "只需要求"
+        },
+        {
+          "id": "p92-b12",
+          "source": "$$|x-a|<\\frac\\varepsilon3.$$",
+          "sourceSha256": "ba57ac7bdeeb92ea67939f6e0db15ec5689dce1fb6a8ce6721295398b0df16b8"
+        },
+        {
+          "id": "p92-b13",
+          "source": "Naturally, the same sort of argument works for the function $f(x)=3,000,000x$. We just have to be $1,000,000$ times as careful, choosing $|x-a|<\\varepsilon/3,000,000$ in order to ensure that $|f(x)-a|<\\varepsilon$.",
+          "sourceSha256": "5ca96e815814ee2a38f778316649aa728f36758d2a1840ce5d4e30058eb6decb",
+          "translation": "自然，同样的论证也适用于函数 $f(x)=3,000,000x$。只是我们必须仔细 $1,000,000$ 倍，选取 $|x-a|<\\varepsilon/3,000,000$，以确保 $|f(x)-a|<\\varepsilon$。"
+        },
+        {
+          "id": "p92-b14",
+          "source": "The function $f(x)=x^2$ is a little more interesting. Presumably, we should be able to show that $f(x)$ approaches $9$ near $3$. This means that we need to show how to ensure the inequality",
+          "sourceSha256": "33bd290584f46c7e0ab59ef264a841a548a8b7c94750542e904cac592f85ff91",
+          "translation": "函数 $f(x)=x^2$ 稍微有趣一些。想来，我们应当能证明 $f(x)$ 在 $3$ 附近趋近 $9$。这意味着，需要说明如何确保不等式"
+        },
+        {
+          "id": "p92-b15",
+          "source": "$$|x^2-9|<\\varepsilon$$",
+          "sourceSha256": "3aa1584af67b3083adf44b7caddc5d8edae6ae0f4c85a60a4e0bc84038f5b6a1"
+        },
+        {
+          "id": "p92-b16",
+          "source": "for any given positive number $\\varepsilon$ by requiring $|x-3|$ to be small enough. The obvious first step is to write",
+          "sourceSha256": "5da4559e070e0025715de6d795d4741260bd2f70a523ffd4dc06e8bf95cd8f73",
+          "translation": "对于任意给定的正数 $\\varepsilon$ 成立，办法是要求 $|x-3|$ 足够小。显然，第一步是写出"
+        },
+        {
+          "id": "p92-b17",
+          "source": "$$|x^2-9|=|x-3|\\cdot|x+3|,$$",
+          "sourceSha256": "45e7abf9ee37ee5db2e8d4ad73ed3583eaf15b1147759670d1d58a4879118e39"
+        },
+        {
+          "id": "p92-b18",
+          "source": "which gives us the useful $|x-3|$ factor. Unlike the situation with the previous examples, however, the extra factor here is $|x+3|$, which isn’t a convenient constant like $3$ or $3,000,000$. But the only crucial thing is to make sure that we can say *something* about how big $|x+3|$ is. So the first thing we’ll do is to require that $|x-3|<1$. Once we’ve specified that $|x-3|<1$, or $2<x<4$, we have $5<x+3<7$ and we’ve guaranteed that $|x+3|<7$. So we now have",
+          "sourceSha256": "f2839cb28378696d6cf78f3babca44688077b4b2222a3c060248e489dd80575a",
+          "translation": "这给了我们一个有用的因子 $|x-3|$。不过，与前面的例子不同，这里多出的因子是 $|x+3|$，并非 $3$ 或 $3,000,000$ 那样方便的常数。但关键只是：必须确保我们能对 $|x+3|$ 的大小作出*某种*判断。因此，首先要求 $|x-3|<1$。一旦规定 $|x-3|<1$，即 $2<x<4$，就有 $5<x+3<7$，从而保证 $|x+3|<7$。于是有"
+        },
+        {
+          "id": "p92-b19",
+          "source": "$$|x^2-9|=|x-3|\\cdot|x+3|<7|x-3|,$$",
+          "sourceSha256": "06e039b9e332caa11bf36c23999cc3ed5dbfabf14d4cc533e5f29668ac8d8990"
+        }
+      ]
+    },
+    {
+      "printed": 93,
+      "sourceSha256": "90765e7fba0c0e98ba0974a90b4502eeb56953482262ab13dbbf49cbb942cae2",
+      "blocks": [
+        {
+          "id": "p93-b1",
+          "source": "which shows that we have $|x^2-9|<\\varepsilon$ for $|x-3|<\\varepsilon/7$, provided that we’ve also required that $|x-3|<1$. Or, to make it look more official: we require that $|x-3|<\\min(\\varepsilon/7,1)$.",
+          "sourceSha256": "c5329d45cb99776c4cf05ae57e25dd6889a9bf83e7cae51bb088e8df7661c5a2",
+          "translation": "这说明，只要也要求 $|x-3|<1$，那么当 $|x-3|<\\varepsilon/7$ 时，就有 $|x^2-9|<\\varepsilon$。或者，写得更正式一些：我们要求 $|x-3|<\\min(\\varepsilon/7,1)$。"
+        },
+        {
+          "id": "p93-b2",
+          "source": "The initial specification $|x-3|<1$ was simply made for convenience. We could just as well have specified that $|x-3|<\\frac1{10}$ or $|x-3|<10$ or any other convenient number. To make sure you understand the reasoning in the previous paragraph, it is a good exercise to figure out how the argument would read if we chose $|x-3|<10$.",
+          "sourceSha256": "31921ef44a961c1fd421d5053d3c1b92ba17dbd204eb2371e8ccf6abe77f0d55",
+          "translation": "起初规定 $|x-3|<1$，只是为了方便。完全可以改为规定 $|x-3|<\\frac1{10}$、$|x-3|<10$，或者其他任何方便的数。要检验自己是否理解了上一段的推理，一个好练习是：想一想，如果选择 $|x-3|<10$，论证应当怎样写。"
+        },
+        {
+          "id": "p93-b3",
+          "source": "Our argument to show that $f$ approaches $9$ near $3$ will basically work to show that $f$ approaches $a^2$ near $a$ for any $a$, except that we need to worry a bit more about getting the proper inequality for $|x+a|$. We first require that $|x-a|<1$, again with the expectation that this will ensure that $|x+a|$ is not too large. In fact, Problem 1-12 shows that",
+          "sourceSha256": "c12102f2f05cc3f41d15b277d02a6b8a5c904619743092f836b46188e0c6e9d8",
+          "translation": "证明 $f$ 在 $3$ 附近趋近 $9$ 的论证，基本上也适用于证明：对任意 $a$，$f$ 都在 $a$ 附近趋近 $a^2$；只是我们要更小心地为 $|x+a|$ 找到合适的不等式。首先要求 $|x-a|<1$，同样希望这能确保 $|x+a|$ 不会太大。事实上，习题 1-12 表明"
+        },
+        {
+          "id": "p93-b4",
+          "source": "$$|x|-|a|\\le|x-a|<1,$$",
+          "sourceSha256": "367d1da568fbd9869f181134d42714ca42326ec1f4449eae30585e37d5e1bdd4"
+        },
+        {
+          "id": "p93-b5",
+          "source": "so",
+          "sourceSha256": "a1d9890884c1b4b960c279cfe7554a900d169422d6cec980beef67761487d3b9",
+          "translation": "因此"
+        },
+        {
+          "id": "p93-b6",
+          "source": "$$|x|<1+|a|,$$",
+          "sourceSha256": "2230cc108b39e6b3efb1c4efbbb43cc195a08f16912303a1a94c75e1114292f3"
+        },
+        {
+          "id": "p93-b7",
+          "source": "and consequently",
+          "sourceSha256": "4f557be1fe4f17902dc2211a1ce9ebd395cd9f4b09367b93cfa7ecf4b4066894",
+          "translation": "从而"
+        },
+        {
+          "id": "p93-b8",
+          "source": "$$|x+a|\\le|x|+|a|<2|a|+1,$$",
+          "sourceSha256": "36ad65d05ac6b4219144bb97c5be39fbdbe27a970af937af1d92b0e130d76756"
+        },
+        {
+          "id": "p93-b9",
+          "source": "so that we then have",
+          "sourceSha256": "b727aa56ff14f03ad1600e39e742ba18bdd21b0a5a4466ad0610753b601b572c",
+          "translation": "于是得到"
+        },
+        {
+          "id": "p93-b10",
+          "source": "$$\\begin{aligned}|x^2-a^2|&=|x-a|\\cdot|x+a|\\\\&<|x-a|\\cdot(2|a|+1),\\end{aligned}$$",
+          "sourceSha256": "2091e15e25420d57e689dddae76fb74a666c7a45edb5802b48e29341af7a4e29"
+        },
+        {
+          "id": "p93-b11",
+          "source": "which shows that we have $|x^2-a^2|<\\varepsilon$ for $|x-a|<\\varepsilon/(2|a|+1)$, provided that we also have $|x-a|<1$. Officially: we require that $|x-a|<\\min(\\varepsilon/(2|a|+1),1)$.",
+          "sourceSha256": "11ca5ac041d3d82460957c643f81ba72e5dc1e1d0ff7803444fd59e1ae587b4e",
+          "translation": "这说明，只要同时有 $|x-a|<1$，那么当 $|x-a|<\\varepsilon/(2|a|+1)$ 时，就有 $|x^2-a^2|<\\varepsilon$。正式地说：我们要求 $|x-a|<\\min(\\varepsilon/(2|a|+1),1)$。"
+        },
+        {
+          "id": "p93-b12",
+          "source": "In contrast to this example, we’ll now consider the function $f(x)=1/x$ (for $x\\ne0$), and try to show that $f$ approaches $1/3$ near $3$. This means that we need to show how to guarantee the inequality",
+          "sourceSha256": "89d6330c3b72e9a8d28508b5364bdfbeb77c344758f574f409757400d42c88c9",
+          "translation": "与这个例子相比较，现在考虑函数 $f(x)=1/x$（$x\\ne0$），尝试证明 $f$ 在 $3$ 附近趋近 $1/3$。这意味着，需要说明如何保证不等式"
+        },
+        {
+          "id": "p93-b13",
+          "source": "$$\\left|\\frac1x-\\frac13\\right|<\\varepsilon$$",
+          "sourceSha256": "ce576c49d5c8b618d2a75e2b7805e4dab914eb4cd81213358dd999d0ee0da92c"
+        },
+        {
+          "id": "p93-b14",
+          "source": "for any given positive number $\\varepsilon$ by requiring $|x-3|$ to be small enough. We begin by writing",
+          "sourceSha256": "0fddde58a8fb25d5f73f63291977004b2598dc58d8cb3fb5b89ee6be54f4cbc7",
+          "translation": "对于任意给定的正数 $\\varepsilon$ 成立，办法是要求 $|x-3|$ 足够小。先写出"
+        },
+        {
+          "id": "p93-b15",
+          "source": "$$\\left|\\frac1x-\\frac13\\right|=\\left|\\frac{3-x}{3x}\\right|=\\frac13\\cdot\\frac1{|x|}\\cdot|x-3|,$$",
+          "sourceSha256": "c98f258919ffae970a125dd999d04c4a52259dba2769dd45ebb12f7971b59a07"
+        },
+        {
+          "id": "p93-b16",
+          "source": "giving us the nice factor $|x-3|$, and even an extra $\\frac13$ for good measure, along with the problem factor $1/|x|$. In this case, we first need to make sure that $|x|$ isn’t too *small*, so that $1/|x|$ won’t be too large.",
+          "sourceSha256": "e6a99e9ec588776e5ce618ab7d53362bfb28d4a883bfbd9177b75e609604479a",
+          "translation": "这给了我们一个很好的因子 $|x-3|$，甚至还额外附送一个 $\\frac13$，但同时也带来了麻烦的因子 $1/|x|$。这次必须先确保 $|x|$ 不会太*小*，这样 $1/|x|$ 才不会太大。"
+        },
+        {
+          "id": "p93-b17",
+          "source": "We can first require that $|x-3|<1$, because this gives $2<x<4$, so that",
+          "sourceSha256": "38a5bc64dc4f5a482d72c23768b1b0987369abaeeb03855491f78dd1276c3755",
+          "translation": "可以先要求 $|x-3|<1$，因为这给出 $2<x<4$，从而"
+        },
+        {
+          "id": "p93-b18",
+          "source": "$$\\frac14<\\frac1x<\\frac12,$$",
+          "sourceSha256": "7a95c14d97fb9bd62eff1b9b717555cbab1077f2ad63d5cbe196854cec5446ea"
+        }
+      ]
+    },
+    {
+      "printed": 94,
+      "sourceSha256": "623f7743af4aee9881ccba80ac8969f323ad9f669ef6f3c173c564c5b970237c",
+      "blocks": [
+        {
+          "id": "p94-b1",
+          "source": "which not only tells us that $\\dfrac1x<\\dfrac12$, but also that $x>0$, which is important in order to conclude that $\\dfrac1{|x|}<\\dfrac12$. We now have",
+          "sourceSha256": "40fb51760b2a6cc4feaa8607c75ec62419d4fcb8bcb1e1e695afcdc5799dae64",
+          "translation": "这不仅告诉我们 $\\dfrac1x<\\dfrac12$，还告诉我们 $x>0$，后者对于推出 $\\dfrac1{|x|}<\\dfrac12$ 很重要。现在有"
+        },
+        {
+          "id": "p94-b2",
+          "source": "$$\\left|\\frac1x-\\frac13\\right|=\\frac13\\cdot\\frac1{|x|}\\cdot|x-3|<\\frac16|x-3|,$$",
+          "sourceSha256": "fbed22332c11f3501fe1e137d351747fecc325dcc0d79bcdc1fef49d1ddf2fb5"
+        },
+        {
+          "id": "p94-b3",
+          "source": "which shows that we have $|1/x-1/3|<\\varepsilon$ for $|x-3|<6\\varepsilon$, provided that we’ve also required that $|x-3|<1$. Or, to make it look official again: we require that $|x-3|<\\min(6\\varepsilon,1)$.",
+          "sourceSha256": "4f5118c4bdcaff475d8fc25ccc83e767f90a32efa8d183f1ceb815266bc42962",
+          "translation": "这说明，只要也要求 $|x-3|<1$，那么当 $|x-3|<6\\varepsilon$ 时，就有 $|1/x-1/3|<\\varepsilon$。再写得正式一些：要求 $|x-3|<\\min(6\\varepsilon,1)$。"
+        },
+        {
+          "id": "p94-b4",
+          "source": "If we instead wanted to show that $f$ approaches $-1/3$ near $-3$, we would begin by stipulating that $|x-(-3)|<1$, giving $-4<x<-2$, once again implying that $|1/x|<1/2$, so that everything works as before.",
+          "sourceSha256": "23c3979ad23f4512c7e7344495d47122fd39d30df930087ef3b8643e76c115c9",
+          "translation": "如果改为证明 $f$ 在 $-3$ 附近趋近 $-1/3$，就先规定 $|x-(-3)|<1$，得到 $-4<x<-2$，这同样蕴含 $|1/x|<1/2$，所以一切仍像刚才那样成立。"
+        },
+        {
+          "id": "p94-b5",
+          "source": "To show in general that $f$ approaches $1/a$ near $a$ for any $a$ we proceed in basically the same way, except that, again, we have to be a little more careful in formulating our initial stipulation. It’s not good enough simply to require that $|x-a|$ should be less than $1$, or any other particular number, because if $a$ is close to $0$ this would allow values of $x$ that are negative (not to mention the embarrassing possibility that $x=0$, so that $f(x)$ isn’t even defined!).",
+          "sourceSha256": "3f9d23b816aea0f07f076358a7d6fa33df5df1d54a77a15912fe34a1b849ec17",
+          "translation": "要一般地证明：对任意 $a$，$f$ 在 $a$ 附近趋近 $1/a$，基本上仍采用相同方法，只是在提出最初的限制时，又需要更小心一些。单纯要求 $|x-a|$ 小于 $1$ 或其他某个固定的数，并不够；因为如果 $a$ 接近 $0$，这就会允许 $x$ 取负值（更不用说还可能出现令人尴尬的 $x=0$，此时 $f(x)$ 甚至没有定义！）。"
+        },
+        {
+          "id": "p94-b6",
+          "source": "The trick in this case is to first require that",
+          "sourceSha256": "38d477aaa7e91e3a41f0f8a81d5a1ae4bfc04dae290b3cab6677f745929fa1ba",
+          "translation": "这里的技巧是先要求"
+        },
+        {
+          "id": "p94-b7",
+          "source": "$$|x-a|<\\frac{|a|}2;$$",
+          "sourceSha256": "70c7d31fbbdfc9c7892c7ba4f624d3b5e1545c89a1827c4e8fff894ce9af6863"
+        },
+        {
+          "id": "p94-b8",
+          "source": "in other words, we require that $x$ be less than half as far from $0$ as $a$ (Figure 7). You should be able to check first that $x\\ne0$ and that $1/|x|<2/|a|$, and then work out the rest of the argument.",
+          "sourceSha256": "e0dbd5679b79d6c157d0c79302baabb6b47fcf9d146c9cda5bc5908e7bcb081f",
+          "translation": "换句话说，我们要求 $x$ 到 $0$ 的距离，小于 $a$ 到该点距离的一半（图 7）。你应当能先验证 $x\\ne0$ 和 $1/|x|<2/|a|$，然后完成其余论证。"
+        },
+        {
+          "id": "p94-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:427px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"55 682 427 177\" role=\"img\" aria-label=\"Figure 7\"><image href=\"pages/book/0113.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 7</figcaption>\n</figure>",
+          "sourceSha256": "b9e4d2a4fec8281d82d9ad1cfd24b9c4006aa3229a00881907535d443fd98f83"
+        },
+        {
+          "id": "p94-b10",
+          "source": "With all the work required for these simple examples, you may have begun to quail at the prospect of tackling even more complicated functions. But that won’t really be necessary, since we will eventually have some basic theorems that we can rely on. Instead of worrying about the unpleasant algebra that might be involved in functions like $f(x)=x^3$ or $f(x)=1/x^3$, we’ll turn our attention to some examples that might appear to be even more frightening.",
+          "sourceSha256": "09afc5f5137ebfdb4ed26e731b0d89fd7968cac6352a32f9d291236f6ff202f4",
+          "translation": "仅仅这些简单例子就需要如此多的工作，一想到还要处理更复杂的函数，你也许已经有些退缩。不过，实际上并不需要如此，因为最终我们会有一些基本定理可供依靠。与其担心 $f(x)=x^3$ 或 $f(x)=1/x^3$ 这样的函数可能带来的繁琐代数运算，不如把注意力转向几个看起来也许更可怕的例子。"
+        },
+        {
+          "id": "p94-b11",
+          "source": "Consider first the function $f(x)=x\\sin1/x$ (Figure 8). Despite the erratic behavior of this function near $0$ it is clear, at least intuitively, that $f$ approaches $l=0$ near $a=0$ (remember that our provisional definition specifically exempts $x=a$ from consideration, so it doesn’t matter that this function isn’t even defined at $0$). We want to show that we can get $f(x)=x\\sin1/x$ as close to $0$ as desired if we require that $x$ be sufficiently close to $0$, but $\\ne0$. In other words, for any number $\\varepsilon>0$, we want to show that we can ensure that",
+          "sourceSha256": "17152fd43cf7b0d2579550238a6bf6f1482cae939cb85b7944cba25eee52af6b",
+          "translation": "先考虑函数 $f(x)=x\\sin1/x$（图 8）。尽管这个函数在 $0$ 附近的行为很不规则，至少从直觉上看，$f$ 在 $a=0$ 附近趋近 $l=0$，却是清楚的（记住，暂定定义明确把 $x=a$ 排除在考虑之外，所以这个函数在 $0$ 处甚至没有定义，也无关紧要）。我们想证明：如果要求 $x$ 充分接近 $0$，但 $\\ne0$，就可以使 $f(x)=x\\sin1/x$ 任意接近 $0$。换句话说，对于任意数 $\\varepsilon>0$，我们希望证明可以保证"
+        },
+        {
+          "id": "p94-b12",
+          "source": "$$|f(x)-0|=\\left|x\\sin\\frac1x\\right|<\\varepsilon$$",
+          "sourceSha256": "ca9f77c3d83a64d8b174e5cbf91d69aeb9833ac37e42f96da88b9551f9e27927"
+        },
+        {
+          "id": "p94-b13",
+          "source": "by requiring that $|x|=|x-0|$ is sufficiently small (but $\\ne0$). But this is easy. Since",
+          "sourceSha256": "e0572d7280e65a8229c81ca8fd03a022049c7f58a67ed761362dbe61ffa40db2",
+          "translation": "只需要求 $|x|=|x-0|$ 充分小（但 $\\ne0$）。这很容易。因为"
+        },
+        {
+          "id": "p94-b14",
+          "source": "$$\\left|\\sin\\frac1x\\right|\\le1,\\qquad\\text{for all }x\\ne0,$$",
+          "sourceSha256": "a5f463f4d9c9278aeaf1d39030d58ae8ee9c9fb7ad14177dfc8abce6b353dc61"
+        },
+        {
+          "id": "p94-b15",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:437px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"29 1102 437 281\" role=\"img\" aria-label=\"Figure 8\"><image href=\"pages/book/0113.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 8</figcaption>\n</figure>",
+          "sourceSha256": "8bdad1492ae922cb9a74e5785620c23296de457b814b4caf3ab51ee05d10bbb8"
+        }
+      ]
+    },
+    {
+      "printed": 95,
+      "sourceSha256": "8d05e9bd7b6609c324c538edf5f2606664328b5a658af1344e316d1f9e6d0fe3",
+      "blocks": [
+        {
+          "id": "p95-b1",
+          "source": "we have",
+          "sourceSha256": "311eecafbfec5e428b3e652becbcd18bf9c9670e490734d5811c85e6a7623ab4",
+          "translation": "所以有"
+        },
+        {
+          "id": "p95-b2",
+          "source": "$$\\left|x\\sin\\frac1x\\right|\\le|x|,\\qquad\\text{for all }x\\ne0,$$",
+          "sourceSha256": "602b29cd40f60ab5c4f4c63d7f30393878fc3bbba6dd5ae98624df0bd7a9acee"
+        },
+        {
+          "id": "p95-b3",
+          "source": "so we can make $|x\\sin1/x|<\\varepsilon$ simply by requiring that $|x|<\\varepsilon$ and $\\ne0$.",
+          "sourceSha256": "01e66816154af7df5be913d37123fd912a423089740b6a6a776c2a0d96e67aa5",
+          "translation": "因此，只需要求 $|x|<\\varepsilon$ 且 $\\ne0$，就能使 $|x\\sin1/x|<\\varepsilon$。"
+        },
+        {
+          "id": "p95-b4",
+          "source": "For the function $f(x)=x^2\\sin1/x$ (Figure 9) it seems even clearer that $f$ approaches $0$ near $0$. If, for example, we want",
+          "sourceSha256": "071f0c522adeaef832a275102e1e0f78c51510bf4b9ee241c23be7dc8904ec79",
+          "translation": "对于函数 $f(x)=x^2\\sin1/x$（图 9），$f$ 在 $0$ 附近趋近 $0$ 似乎更加明显。例如，如果希望"
+        },
+        {
+          "id": "p95-b5",
+          "source": "$$\\left|x^2\\sin\\frac1x\\right|<\\frac1{10},$$",
+          "sourceSha256": "e6d774167c9dec3f35f80df0bb2c3ef484a2a2a6ad0811d23f54dbadc9291e36"
+        },
+        {
+          "id": "p95-b6",
+          "source": "then we certainly need only require that $|x|<\\frac1{10}$ and $x\\ne0$, since this implies that $|x^2|<\\frac1{100}$ and consequently",
+          "sourceSha256": "f27de4b5e8e5ade443e4064d4b4f104c16ace3ec300cefdd4bdd352d8ef8cdde",
+          "translation": "那么当然只需要求 $|x|<\\frac1{10}$ 且 $x\\ne0$，因为这意味着 $|x^2|<\\frac1{100}$，从而"
+        },
+        {
+          "id": "p95-b7",
+          "source": "$$\\left|x^2\\sin\\frac1x\\right|\\le|x^2|<\\frac1{100}<\\frac1{10}.$$",
+          "sourceSha256": "d265bc2d53d5025261445251204dd4dc4094cb73ad46a505c8a15643b8fb954c"
+        },
+        {
+          "id": "p95-b8",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:407px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 568 407 478\" role=\"img\" aria-label=\"Figure 9\"><image href=\"pages/book/0114.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 9</figcaption>\n</figure>",
+          "sourceSha256": "917f3a17783a224ff8b6581ca95237799818a14383243428f950e50e34f614fa"
+        },
+        {
+          "id": "p95-b9",
+          "source": "(We could do even better, and allow $|x|<1/\\sqrt{10}$ and $x\\ne0$, but there is no particular virtue in being as economical as possible.) In general, if $\\varepsilon>0$, to ensure that",
+          "sourceSha256": "c8c21d4cb9476fece0a724f88c46c6b535c89d55072477e98b98f0f8455d2d3c",
+          "translation": "（还可以做得更好，允许 $|x|<1/\\sqrt{10}$ 且 $x\\ne0$；不过，尽可能放宽限制并没有什么特别的好处。）一般地，如果 $\\varepsilon>0$，要保证"
+        },
+        {
+          "id": "p95-b10",
+          "source": "$$\\left|x^2\\sin\\frac1x\\right|<\\varepsilon,$$",
+          "sourceSha256": "a86bfda90472f38a542092ebb03fb4026caf117e338357907ad2790fa8fafbe1"
+        },
+        {
+          "id": "p95-b11",
+          "source": "we need only require that",
+          "sourceSha256": "e7ae0924c9f957cfb8d68a3fdf1aa27be4da3d76efc3f26d657d38158f870e75",
+          "translation": "只需要求"
+        },
+        {
+          "id": "p95-b12",
+          "source": "$$|x|<\\varepsilon\\quad\\text{and}\\quad x\\ne0,$$",
+          "sourceSha256": "efce454650a5bd377bc1f52cd71c976cb2b3b0280fe69f56636ea7a5f7a1e058"
+        },
+        {
+          "id": "p95-b13",
+          "source": "provided that $\\varepsilon\\le1$. If we are given an $\\varepsilon$ which is greater than $1$ (it might be, even though it is “small” $\\varepsilon$’s which are of interest), then it does not suffice to require that $|x|<\\varepsilon$, but it certainly suffices to require that $|x|<1$ and $x\\ne0$.",
+          "sourceSha256": "09932cab0b3f88d76b5ec8c54817cb254b529d01148d52daec0a02c578bbd633",
+          "translation": "前提是 $\\varepsilon\\le1$。如果给定的 $\\varepsilon$ 大于 $1$（虽然我们关心的是“小”的 $\\varepsilon$，但这种情况也可能出现），那么仅要求 $|x|<\\varepsilon$ 就不够了，不过要求 $|x|<1$ 且 $x\\ne0$ 肯定足够。"
+        },
+        {
+          "id": "p95-b14",
+          "source": "As a third example, consider the function $f(x)=\\sqrt{|x|}\\sin1/x$ (Figure 10). In order to make $|\\sqrt{|x|}\\sin1/x|<\\varepsilon$ we can require that",
+          "sourceSha256": "cd5fe9972d8813e7cfb7f57ea464d7c1e35dc08c1272355317e512122cd4a58e",
+          "translation": "第三个例子，考虑函数 $f(x)=\\sqrt{|x|}\\sin1/x$（图 10）。为了使 $|\\sqrt{|x|}\\sin1/x|<\\varepsilon$，可以要求"
+        },
+        {
+          "id": "p95-b15",
+          "source": "$$|x|<\\varepsilon^2\\quad\\text{and}\\quad x\\ne0$$",
+          "sourceSha256": "18792b0d66cbcb747a287ddcf672db69f8d4e37e17940aed489ae5405775f7dc"
+        },
+        {
+          "id": "p95-b16",
+          "source": "(the algebra is left to you).",
+          "sourceSha256": "24e3750587bd5f607fed1477e3c48725c581c1a379a3df4e2d229b9b884d36a6",
+          "translation": "（代数计算留给你完成）。"
+        },
+        {
+          "id": "p95-b17",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:407px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"47 1287 407 210\" role=\"img\" aria-label=\"Figure 10\"><image href=\"pages/book/0114.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 10</figcaption>\n</figure>",
+          "sourceSha256": "6acd8312be7bdd23ae9a25cb651c86fd2d392a85ee642709db96e7d472281197"
+        }
+      ]
+    },
+    {
+      "printed": 96,
+      "sourceSha256": "672616329db81f3ec58bb9387c865c4f63f8e3cd8201d9319b4fd78794a69494",
+      "blocks": [
+        {
+          "id": "p96-b1",
+          "source": "Finally, let us consider the function $f(x)=\\sin1/x$ (Figure 11). For this function it is *false* that $f$ approaches $0$ near $0$. This amounts to saying that it is not true for every number $\\varepsilon>0$ that we can get $|f(x)-0|<\\varepsilon$ by choosing $x$ sufficiently small, and $\\ne0$. To show this we simply have to find *one* $\\varepsilon>0$ for which the condition $|f(x)-0|<\\varepsilon$ cannot be guaranteed, no matter how small we require $|x|$ to be. In fact, $\\varepsilon=\\frac12$ will do: it is impossible to ensure that $|f(x)|<\\frac12$ no matter how small we require $|x|$ to be; for if $A$ is any interval containing $0$, there is some number $x=1/(\\frac12\\pi+2n\\pi)$ which is in this interval, and for this $x$ we have $f(x)=1$.",
+          "sourceSha256": "6dd4044f3c3d0fa66b61fe80d5cf55cb55eb021e61addcb54f3d1ab1f166c020",
+          "translation": "最后，考虑函数 $f(x)=\\sin1/x$（图 11）。对于这个函数，“$f$ 在 $0$ 附近趋近 $0$”是*错误的*。这就是说：并非对每个数 $\\varepsilon>0$，都能通过选取充分小且 $\\ne0$ 的 $x$，来使 $|f(x)-0|<\\varepsilon$。要说明这一点，只需找出*一个* $\\varepsilon>0$，使得无论要求 $|x|$ 多小，都不能保证条件 $|f(x)-0|<\\varepsilon$。事实上，$\\varepsilon=\\frac12$ 就行：无论要求 $|x|$ 多小，都无法确保 $|f(x)|<\\frac12$；因为如果 $A$ 是任意包含 $0$ 的区间，那么总有某个数 $x=1/(\\frac12\\pi+2n\\pi)$ 落在这个区间内，而对这个 $x$，有 $f(x)=1$。"
+        },
+        {
+          "id": "p96-b2",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"477 472 766 344\" role=\"img\" aria-label=\"Figure 11\"><image href=\"pages/book/0115.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 11</figcaption>\n</figure>",
+          "sourceSha256": "e853058023e375d5c291b538b28384b9746fb604917e6082788ca3809ce8454c"
+        },
+        {
+          "id": "p96-b3",
+          "source": "This same argument can be used (Figure 12) to show that $f$ does not approach *any* number near $0$. To show this we must again find, for any particular number $l$, some number $\\varepsilon>0$ so that $|f(x)-l|<\\varepsilon$ is not true, no matter how small $x$ is required to be. The choice $\\varepsilon=\\frac12$ works for any number $l$; that is, no matter how small we require $|x|$ to be, we cannot ensure that $|f(x)-l|<\\frac12$. The reason is, that for any interval $A$ containing $0$ we can find both $x_1$ and $x_2$ in this interval with",
+          "sourceSha256": "4879f9c04d288757efc98a2d0307455c042463693517f22b960918ac3dc1f92c",
+          "translation": "同样的论证也可以用来说明（图 12）：$f$ 在 $0$ 附近并不趋近*任何*数。为此，对任意特定的数 $l$，仍须找出某个数 $\\varepsilon>0$，使得无论要求 $x$ 多小，$|f(x)-l|<\\varepsilon$ 都不一定成立。选取 $\\varepsilon=\\frac12$ 对任何数 $l$ 都有效；也就是说，无论要求 $|x|$ 多小，都无法保证 $|f(x)-l|<\\frac12$。原因是：对任何包含 $0$ 的区间 $A$，都能在其中找到 $x_1$ 和 $x_2$，满足"
+        },
+        {
+          "id": "p96-b4",
+          "source": "$$f(x_1)=1\\quad\\text{and}\\quad f(x_2)=-1,$$",
+          "sourceSha256": "267e5fa99fcf2711d98ed96aa9e95a74b14570c8be963f18e2ff94571b3549f1"
+        },
+        {
+          "id": "p96-b5",
+          "source": "namely",
+          "sourceSha256": "faa94f91ef29ae1609373e0086bb5d3858f25d327ee733a7722ee954cf3c8cee",
+          "translation": "具体地，取"
+        },
+        {
+          "id": "p96-b6",
+          "source": "$$x_1=\\frac1{\\frac12\\pi+2n\\pi}\\quad\\text{and}\\quad x_2=\\frac1{\\frac32\\pi+2m\\pi}$$",
+          "sourceSha256": "db7b688c7ecea295ba4633afcc1da038e71798b863a19c18aae3da68ac43563f"
+        },
+        {
+          "id": "p96-b7",
+          "source": "for large enough $n$ and $m$. But the interval from $l-\\frac12$ to $l+\\frac12$ cannot contain both $-1$ and $1$, since its total length is only $1$; so we cannot have",
+          "sourceSha256": "264c1ee9d8687354945009584f9fefe035fad6fc57106fb6489e86aac7e74c45",
+          "translation": "其中 $n$ 和 $m$ 足够大。但从 $l-\\frac12$ 到 $l+\\frac12$ 的区间不能同时包含 $-1$ 和 $1$，因为其总长度只有 $1$；所以不可能同时有"
+        },
+        {
+          "id": "p96-b8",
+          "source": "$$|1-l|<\\tfrac12\\quad\\text{and also}\\quad|-1-l|<\\tfrac12,$$",
+          "sourceSha256": "e1d4e32df2f1b3db1d206b86a27af71b3db8b3462cd5ffc7dbddb9ba94352190"
+        },
+        {
+          "id": "p96-b9",
+          "source": "no matter what $l$ is.",
+          "sourceSha256": "161d1f57d7a07fe5a20c71ad50c1f4374081f8b484b14dd841c6c009d5dab8d5",
+          "translation": "无论 $l$ 是什么。"
+        },
+        {
+          "id": "p96-b10",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:414px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"43 851 414 237\" role=\"img\" aria-label=\"Figure 12\"><image href=\"pages/book/0115.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 12</figcaption>\n</figure>",
+          "sourceSha256": "852d227db4f20bb9c43140058a55faf92a33e6a029921c349943ac5b68914a86"
+        },
+        {
+          "id": "p96-b11",
+          "source": "The phenomenon exhibited by $f(x)=\\sin1/x$ near $0$ can occur in many ways. If we consider the function",
+          "sourceSha256": "6e1f2d591996db6dba35a44ae3142b65f4ded19d6c5a19761b25ff88cdc35d5d",
+          "translation": "$f(x)=\\sin1/x$ 在 $0$ 附近展现的现象，可以以许多方式出现。如果考虑函数"
+        },
+        {
+          "id": "p96-b12",
+          "source": "$$f(x)=\\begin{cases}0,&x\\text{ irrational}\\\\1,&x\\text{ rational,}\\end{cases}$$",
+          "sourceSha256": "b33b59fd4bbe5600029f1eecf15cd25a4d79e64d8f2e3ed65cd6a81f8cfa864b"
+        }
+      ]
+    },
+    {
+      "printed": 97,
+      "sourceSha256": "7f06a7063f1c3b7d9fdd1163f8bbb5517f5ceef48c451497b5282d35e52de5c7",
+      "blocks": [
+        {
+          "id": "p97-b1",
+          "source": "then, no matter what $a$ is, $f$ does not approach any number $l$ near $a$. In fact, we cannot make $|f(x)-l|<\\frac14$ no matter how close we bring $x$ to $a$, because in any interval around $a$ there are numbers $x$ with $f(x)=0$, and also numbers $x$ with $f(x)=1$, so that we would need $|0-l|<\\frac14$ and also $|1-l|<\\frac14$.",
+          "sourceSha256": "a036117a6288a66d0b61520bcc0c8d42173090a7d54980753c5afb18f2dd31b2",
+          "translation": "那么无论 $a$ 是什么，$f$ 在 $a$ 附近都不趋近任何数 $l$。事实上，无论使 $x$ 多么接近 $a$，都不能保证 $|f(x)-l|<\\frac14$，因为在 $a$ 周围的任何区间内，既有满足 $f(x)=0$ 的数 $x$，又有满足 $f(x)=1$ 的数 $x$，于是就需要同时有 $|0-l|<\\frac14$ 和 $|1-l|<\\frac14$。"
+        },
+        {
+          "id": "p97-b2",
+          "source": "An amusing variation on this behavior is presented by the function shown in Figure 13:",
+          "sourceSha256": "1c8c4c3a56c039575b88f73086f73593b78eb9650d0eb00f99171836d7f90185",
+          "translation": "图 13 中的函数给出了这种行为的一种有趣变式："
+        },
+        {
+          "id": "p97-b3",
+          "source": "$$f(x)=\\begin{cases}x,&x\\text{ rational}\\\\0,&x\\text{ irrational.}\\end{cases}$$",
+          "sourceSha256": "b6072f01b2a74d25496daf3b86ea845ece7bef00e5c146a3ea81578074074cef"
+        },
+        {
+          "id": "p97-b4",
+          "source": "The behavior of this function is “opposite” to that of $g(x)=\\sin1/x$; it approaches $0$ at $0$, but does not approach any number at $a$, if $a\\ne0$. By now you should have no difficulty convincing yourself that this is true.",
+          "sourceSha256": "1f89df4d882228e18af7df8dde6013aff6779dc38837f2a8de518680f8e9aa28",
+          "translation": "这个函数的行为与 $g(x)=\\sin1/x$ “相反”：它在 $0$ 处趋近 $0$，但在 $a\\ne0$ 时，它在 $a$ 处不趋近任何数。到现在为止，你应该很容易使自己相信这一点。"
+        },
+        {
+          "id": "p97-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:383px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"45 249 383 297\" role=\"img\" aria-label=\"Figure 13\"><image href=\"pages/book/0116.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 13</figcaption>\n</figure>",
+          "sourceSha256": "015308592ce5b9a8783274f585baa18210dc974c7f148cab1ec9dd1527400363"
+        },
+        {
+          "id": "p97-b6",
+          "source": "We conclude with a very simple example (Figure 14):",
+          "sourceSha256": "17eeed203678270c4716c96330a8499461e5d1bec849dc02a86b3a4c740757d7",
+          "translation": "最后来看一个非常简单的例子（图 14）："
+        },
+        {
+          "id": "p97-b7",
+          "source": "$$f(x)=\\begin{cases}-1,&x<0\\\\1,&x>0.\\end{cases}$$",
+          "sourceSha256": "957292825ab740557144de4cd21098c11a52ae4db6e54ca6740fc407b60e08b3"
+        },
+        {
+          "id": "p97-b8",
+          "source": "If $a>0$, then $f$ approaches $1$ near $a$: indeed, to ensure that $|f(x)-1|<\\varepsilon$ it certainly suffices to require that $|x-a|<a$, since this implies",
+          "sourceSha256": "0884b31a080f597d35222ff4c7636b29b94748fca2992d9868fd99db8895b4e3",
+          "translation": "若 $a>0$，那么 $f$ 在 $a$ 附近趋近 $1$：确实，要保证 $|f(x)-1|<\\varepsilon$，只需要求 $|x-a|<a$，因为这蕴含"
+        },
+        {
+          "id": "p97-b9",
+          "source": "$$\\begin{aligned}-a&<x-a\\\\\\text{or}\\qquad0&<x\\end{aligned}$$",
+          "sourceSha256": "418ccf4da4377c57f2c0ad5548c9d67e4dc3132c0c1a88d3f27bf521f93bc14d"
+        },
+        {
+          "id": "p97-b10",
+          "source": "so that $f(x)=1$. Similarly, if $b<0$, then $f$ approaches $-1$ near $b$: to ensure that $|f(x)-(-1)|<\\varepsilon$ it suffices to require that $|x-b|<-b$. Finally, as you may easily check, $f$ does not approach any number near $0$.",
+          "sourceSha256": "0c83bf2270d783c57f019f77a2c29ad754b21bf52ac43daec9470d27753956cc",
+          "translation": "所以 $f(x)=1$。类似地，若 $b<0$，那么 $f$ 在 $b$ 附近趋近 $-1$：要保证 $|f(x)-(-1)|<\\varepsilon$，只需要求 $|x-b|<-b$。最后，你可以很容易地验证，$f$ 在 $0$ 附近不趋近任何数。"
+        },
+        {
+          "id": "p97-b11",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:404px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"45 629 404 269\" role=\"img\" aria-label=\"Figure 14\"><image href=\"pages/book/0116.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 14</figcaption>\n</figure>",
+          "sourceSha256": "8fb0e75891a8f604274f3f8a11c9764cf0f0d67e3eb4ea39893d533fb5619bdf"
+        },
+        {
+          "id": "p97-b12",
+          "source": "The time has now come to point out that of the many demonstrations about limits which we have given, not one has been a real proof. The fault lies not with our reasoning, but with our definition. If our provisional definition of a function was open to criticism, our provisional definition of approaching a limit is even more vulnerable. This definition is simply not sufficiently precise to be used in proofs. It is hardly clear how one “makes” $f(x)$ close to $l$ (whatever “close” means) by “requiring” $x$ to be sufficiently close to $a$ (however close “sufficiently” close is supposed to be). Despite the criticisms of our definition you may feel (I certainly hope you do) that our arguments were nevertheless quite convincing. In order to present any sort of argument at all, we have been practically forced to invent the real definition. It is possible to arrive at this definition in several steps, each one clarifying some obscure phrase which still remains. Let us begin, once again, with the provisional definition:",
+          "sourceSha256": "ac2c632f2d20c513691e385b30ac4761c7cd7d6526b943d77eaefd9d31337d36",
+          "translation": "现在该指出了：我们给出的许多关于极限的论证，没有一个是真正的证明。问题不在推理，而在定义。如果说暂定的函数定义容易受到批评，那么暂定的趋近极限定义就更加站不住脚。这个定义根本不够精确，无法用于证明。如何通过“要求”$x$ 充分接近 $a$（“充分”接近到底有多近），来“使”$f(x)$ 接近 $l$（无论“接近”究竟是什么意思），实在很不清楚。尽管定义受到这些批评，你也许仍觉得我们的论证很有说服力（我当然希望你有这样的感觉）。事实上，为了给出任何一种论证，我们几乎已经被迫发明了真正的定义。通过若干步骤，每一步澄清一个尚存的含糊说法，就可以得到这个定义。让我们再次从暂定定义开始："
+        },
+        {
+          "id": "p97-b13",
+          "source": "The function $f$ approaches the limit $l$ near $a$, if we can make $f(x)$ as close as we like to $l$ by requiring that $x$ be sufficiently close to, but unequal to, $a$.",
+          "sourceSha256": "572cff53d56c76df79d73f200940cebdca937e374bd52e32ff59ac1f05593af4",
+          "translation": "如果通过要求 $x$ 充分接近但不等于 $a$，就能使 $f(x)$ 任意接近 $l$，那么称函数 $f$ 在 $a$ 附近趋近极限 $l$。"
+        },
+        {
+          "id": "p97-b14",
+          "source": "The very first change which we made in this definition was to note that making $f(x)$ close to $l$ means making $|f(x)-l|$ small, and similarly for $x$ and $a$:",
+          "sourceSha256": "ab448f5edd1b1986a38de5993a10866e399f74a93e7662bc12354ce6b4d5065f",
+          "translation": "我们对这个定义所作的第一个改变，是注意到：使 $f(x)$ 接近 $l$，就是使 $|f(x)-l|$ 很小；对于 $x$ 和 $a$ 也一样："
+        }
+      ]
+    },
+    {
+      "printed": 98,
+      "sourceSha256": "c588237efbfb54d21e63afd72f4b69a936150d2fc438db7ad029a6bc8ee22000",
+      "blocks": [
+        {
+          "id": "p98-b1",
+          "source": "The function $f$ approaches the limit $l$ near $a$, if we can make $|f(x)-l|$ as small as we like by requiring that $|x-a|$ be sufficiently small, and $x\\ne a$.",
+          "sourceSha256": "fddcb16ab24ce1585a2c7529b1876f1b24555601fc218955f8a48e6678525c47",
+          "translation": "如果通过要求 $|x-a|$ 充分小，且 $x\\ne a$，就能使 $|f(x)-l|$ 任意小，那么称函数 $f$ 在 $a$ 附近趋近极限 $l$。"
+        },
+        {
+          "id": "p98-b2",
+          "source": "The second, more crucial, change was to note that making $|f(x)-l|$ “as small as we like” means making $|f(x)-l|<\\varepsilon$ for any $\\varepsilon>0$ that happens to be given us:",
+          "sourceSha256": "5fc299bfa8d9f479115f451f8415161606679c31fcc5293a8370a56c8df7ed3b",
+          "translation": "第二个、更关键的改变，是注意到，使 $|f(x)-l|$ “任意小”，就是对于任意给定的 $\\varepsilon>0$，使 $|f(x)-l|<\\varepsilon$："
+        },
+        {
+          "id": "p98-b3",
+          "source": "The function $f$ approaches the limit $l$ near $a$, if for every number $\\varepsilon>0$ we can make $|f(x)-l|<\\varepsilon$ by requiring that $|x-a|$ be sufficiently small, and $x\\ne a$.",
+          "sourceSha256": "76219ec864fef2f04ce1a7ec5033c3e08e4f638f38f67fbab801270f71c732b3",
+          "translation": "如果对于每个数 $\\varepsilon>0$，都能通过要求 $|x-a|$ 充分小且 $x\\ne a$，来使 $|f(x)-l|<\\varepsilon$，那么称函数 $f$ 在 $a$ 附近趋近极限 $l$。"
+        },
+        {
+          "id": "p98-b4",
+          "source": "There is a common pattern to all the demonstrations about limits which we have given. For each number $\\varepsilon>0$ we found some other positive number, $\\delta$ say, with the property that if $x\\ne a$ and $|x-a|<\\delta$, then $|f(x)-l|<\\varepsilon$. For the function $f(x)=x\\sin1/x$ (with $a=0$, $l=0$), the number $\\delta$ was just the number $\\varepsilon$; for $f(x)=\\sqrt{|x|}\\sin1/x$, it was $\\varepsilon^2$; for $f(x)=x^2$ it was the minimum of $1$ and $\\varepsilon/(2|a|+1)$. In general, it may not be at all clear how to find the number $\\delta$, given $\\varepsilon$, but it is the condition $|x-a|<\\delta$ which expresses how small “sufficiently” small must be:",
+          "sourceSha256": "d6c8f30f9e1893bef27b3d1a3d7fa0ceb65c692b36fb85a845f5d72478dea48e",
+          "translation": "我们给出的所有极限论证，都有一个共同模式。对每个数 $\\varepsilon>0$，都找到另一个正数，记作 $\\delta$，使得如果 $x\\ne a$ 且 $|x-a|<\\delta$，那么 $|f(x)-l|<\\varepsilon$。对于函数 $f(x)=x\\sin1/x$（$a=0$、$l=0$），数 $\\delta$ 就是 $\\varepsilon$；对于 $f(x)=\\sqrt{|x|}\\sin1/x$，它是 $\\varepsilon^2$；对于 $f(x)=x^2$，它是 $1$ 和 $\\varepsilon/(2|a|+1)$ 中较小的一个。一般而言，给定 $\\varepsilon$ 后如何找到数 $\\delta$，可能完全不清楚；但正是条件 $|x-a|<\\delta$，说明了“充分”小到底要小到什么程度："
+        },
+        {
+          "id": "p98-b5",
+          "source": "The function $f$ approaches the limit $l$ near $a$, if for every $\\varepsilon>0$ there is some $\\delta>0$ such that, for all $x$, if $|x-a|<\\delta$ and $x\\ne a$, then $|f(x)-l|<\\varepsilon$.",
+          "sourceSha256": "632418cab666354efd257b732892bb9fa1735db7cb7ad1dcd6562d1f1edd9c6f",
+          "translation": "如果对于每个 $\\varepsilon>0$，都存在某个 $\\delta>0$，使得对所有 $x$，若 $|x-a|<\\delta$ 且 $x\\ne a$，就有 $|f(x)-l|<\\varepsilon$，那么称函数 $f$ 在 $a$ 附近趋近极限 $l$。"
+        },
+        {
+          "id": "p98-b6",
+          "source": "This is practically the definition we will adopt. We will make only one trivial change, noting that “$|x-a|<\\delta$ and $x\\ne a$” can just as well be expressed “$0<|x-a|<\\delta$.”",
+          "sourceSha256": "c0ef0f60e0cfaf1e9603d16b6b43ee3a83e063e2dc4561d56c52f846daf85583",
+          "translation": "这几乎就是我们将采用的定义。只作一个微小的改动：注意，“$|x-a|<\\delta$ 且 $x\\ne a$”也可以表示为“$0<|x-a|<\\delta$”。"
+        },
+        {
+          "id": "p98-b7",
+          "source": "**DEFINITION**",
+          "sourceSha256": "971bc150a1b522e5e09b7407e99a526132e1a647eba59f7b1e6e159e67bb4d14",
+          "translation": "**定义**"
+        },
+        {
+          "id": "p98-b8",
+          "source": "The function **$f$ approaches the limit $l$ near $a$** means: for every $\\varepsilon>0$ there is some $\\delta>0$ such that, for all $x$, if $0<|x-a|<\\delta$, then $|f(x)-l|<\\varepsilon$.",
+          "sourceSha256": "0268ca4e2ca55a6dab8dc2150bcf28ea5c8c1fbb6c07f8cccd75cb2e4ed06703",
+          "translation": "函数 **$f$ 在 $a$ 附近趋近极限 $l$**，是指：对于每个 $\\varepsilon>0$，都存在某个 $\\delta>0$，使得对于所有 $x$，如果 $0<|x-a|<\\delta$，那么 $|f(x)-l|<\\varepsilon$。"
+        },
+        {
+          "id": "p98-b9",
+          "source": "This definition is so important (*everything* we do from now on depends on it) that proceeding any further without knowing it is hopeless. If necessary, memorize it, like a poem! That, at least, is better than stating it incorrectly; if you do this you are doomed to give incorrect proofs. A good exercise in giving correct proofs is to review every fact already demonstrated about functions approaching limits, giving formal proofs of each. In most cases, this will merely involve a bit of rewording to make the arguments conform to our formal definition—all the algebraic work has been done already. When proving that $f$ does *not* approach $l$ at $a$, be sure to negate the definition correctly:",
+          "sourceSha256": "319a5e1a7a4661872dd189650cd448f9eedd55a20c4f71b2c1a2b0ac5e5d6aad",
+          "translation": "这个定义如此重要（从现在起，我们做的*一切*都依赖它），不知道它就继续往下学，是没有希望的。必要时，像背诗一样把它背下来！这至少比把它说错要好；一旦说错，你就注定会写出错误的证明。练习正确证明的一个好方法，是回顾前面已经论证过的每一个关于函数趋近极限的事实，逐一给出正式证明。在大多数情况下，只需稍改措辞，使论证符合正式定义即可——代数工作早已完成。证明 $f$ 在 $a$ 处*不*趋近 $l$ 时，一定要正确地否定定义："
+        },
+        {
+          "id": "p98-b10",
+          "source": "If it is *not* true that",
+          "sourceSha256": "ee733f2f0f9d86e5d854bbffde9bce8503ffdb61bf0eb39ee1f0f1b7a75e7bfa",
+          "translation": "如果下面的说法*不*成立："
+        },
+        {
+          "id": "p98-b11",
+          "source": "for every $\\varepsilon>0$ there is some $\\delta>0$ such that, for all $x$, if $0<|x-a|<\\delta$, then $|f(x)-l|<\\varepsilon$,",
+          "sourceSha256": "fa823623aecbde979b0faff6a4e7e17c10e856b7856217f3abcfe78c09ee2614",
+          "translation": "对于每个 $\\varepsilon>0$，存在某个 $\\delta>0$，使得对所有 $x$，若 $0<|x-a|<\\delta$，则 $|f(x)-l|<\\varepsilon$，"
+        },
+        {
+          "id": "p98-b12",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        }
+      ]
+    },
+    {
+      "printed": 99,
+      "sourceSha256": "91f119c91d55eb123c830863e594b6f11aa7b057cf82e2b141a22cc814fc8334",
+      "blocks": [
+        {
+          "id": "p99-b1",
+          "source": "there is *some* $\\varepsilon>0$ such that for *every* $\\delta>0$ there is *some* $x$ which satisfies $0<|x-a|<\\delta$ but not $|f(x)-l|<\\varepsilon$.",
+          "sourceSha256": "62c18ff38fb4e5655b2fd872890e11f705f3c7ae0335d1f43bc53173d03d5b1f",
+          "translation": "存在*某个* $\\varepsilon>0$，使得对*每个* $\\delta>0$，都存在*某个* $x$，它满足 $0<|x-a|<\\delta$，却不满足 $|f(x)-l|<\\varepsilon$。"
+        },
+        {
+          "id": "p99-b2",
+          "source": "Thus, to show that the function $f(x)=\\sin1/x$ does not approach $0$ near $0$, we consider $\\varepsilon=\\frac12$ and note that for every $\\delta>0$ there is some $x$ with $0<|x-0|<\\delta$ but not $|\\sin1/x-0|<\\frac12$—namely, an $x$ of the form $1/(\\pi/2+2n\\pi)$, where $n$ is so large that $1/(\\pi/2+2n\\pi)<\\delta$.",
+          "sourceSha256": "fc552b71c412d122c9c1997c27df63f654fce62d93e2e569e11ee320a0228c5c",
+          "translation": "因此，要说明函数 $f(x)=\\sin1/x$ 在 $0$ 附近不趋近 $0$，就取 $\\varepsilon=\\frac12$，并注意到：对于每个 $\\delta>0$，都存在某个 $x$，满足 $0<|x-0|<\\delta$，却不满足 $|\\sin1/x-0|<\\frac12$；具体说，取形如 $1/(\\pi/2+2n\\pi)$ 的 $x$，其中 $n$ 足够大，使得 $1/(\\pi/2+2n\\pi)<\\delta$。"
+        },
+        {
+          "id": "p99-b3",
+          "source": "As a final illustration of the use of the definition of a function approaching a limit, we have reserved the function shown in Figure 15, a standard example, but one of the most complicated:",
+          "sourceSha256": "fc7675143973cb3db2ed21e978cfc4dc35d41cd3e0bae4774cf4fd9e2f0288f1",
+          "translation": "我们把图 15 所示的函数留作最后一个例子，说明怎样使用函数趋近极限的定义；它是一个标准例子，也是最复杂的例子之一："
+        },
+        {
+          "id": "p99-b4",
+          "source": "$$f(x)=\\begin{cases}\n0,&x\\text{ irrational},\\ 0<x<1\\\\\n1/q,&x=p/q\\text{ in lowest terms},\\ 0<x<1.\n\\end{cases}$$",
+          "sourceSha256": "34dc78274f1e7dc755434a2ba5f33d607874a26185a1c86e2b8971c4ed9b0158"
+        },
+        {
+          "id": "p99-b5",
+          "source": "(Recall that $p/q$ is in lowest terms if $p$ and $q$ are integers with no common factor and $q>0$.)",
+          "sourceSha256": "5b6bc89f46394cad29c70b9b840417896237fe7484f817ed7d87dcd944edda71",
+          "translation": "（回想一下，如果 $p$ 和 $q$ 是没有公因子的整数，且 $q>0$，那么 $p/q$ 就是最简分数。）"
+        },
+        {
+          "id": "p99-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"442 644 780 387\" role=\"img\" aria-label=\"Figure 15\"><image href=\"pages/book/0118.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 15</figcaption>\n</figure>",
+          "sourceSha256": "4fa171db7b8adcb7b8cc85229b0abea83ecb2545b62182c019d248584ac53d30"
+        },
+        {
+          "id": "p99-b7",
+          "source": "For any number $a$, with $0<a<1$, the function $f$ approaches $0$ at $a$. To prove this, consider any $\\varepsilon>0$. Let $n$ be a natural number so large that $1/n\\le\\varepsilon$. Notice that the only numbers $x$ for which $|f(x)-0|<\\varepsilon$ could be false are:",
+          "sourceSha256": "9be87c89a2253489736bde9f71729e422b68f4c9eabbc6485a7457d36953deb1",
+          "translation": "对于任何满足 $0<a<1$ 的数 $a$，函数 $f$ 在 $a$ 处都趋近 $0$。为证明这一点，任取 $\\varepsilon>0$。取自然数 $n$ 足够大，使 $1/n\\le\\varepsilon$。注意，只有下列数 $x$ 才可能使 $|f(x)-0|<\\varepsilon$ 不成立："
+        },
+        {
+          "id": "p99-b8",
+          "source": "$$\\frac12;\\ \\frac13,\\frac23;\\ \\frac14,\\frac24,\\frac34;\\ \\frac15,\\frac25,\\frac35,\\frac45;\\ \\ldots;\\ \\frac1n,\\ldots,\\frac{n-1}n.$$",
+          "sourceSha256": "fb829d3f9907f5c8471ab1fe1217d659281d5b9eff1455ce2b595255e16d46fa"
+        },
+        {
+          "id": "p99-b9",
+          "source": "(If $a$ is rational, then $a$ might be one of these numbers.) However many of these numbers there may be, there are, at any rate, only finitely many. Therefore, of all these numbers, one is closest to $a$; that is, $|p/q-a|$ is smallest for one $p/q$ among these numbers. (If $a$ happens to be one of these numbers, then consider only the values $|p/q-a|$ for $p/q\\ne a$.) This closest distance may be chosen as the $\\delta$. For if $0<|x-a|<\\delta$, then $x$ is *not* one of",
+          "sourceSha256": "33cf6f56ab27b5a9c508c3545fd9d923b8e582c857d045d1e5899163b1e03ec1",
+          "translation": "（如果 $a$ 是有理数，那么 $a$ 也可能是这些数之一。）无论这些数有多少，它们终究只有有限个。因此，这些数中必有一个离 $a$ 最近；也就是说，其中某个 $p/q$ 使 $|p/q-a|$ 最小。（如果 $a$ 恰好就是这些数之一，那么只考虑 $p/q\\ne a$ 时的 $|p/q-a|$。）可以把这个最近距离取作 $\\delta$。因为若 $0<|x-a|<\\delta$，那么 $x$ 就*不是*下列数之一："
+        },
+        {
+          "id": "p99-b10",
+          "source": "$$\\frac12,\\ldots,\\frac{n-1}n,$$",
+          "sourceSha256": "79452c01a1eb1d9b299ef1a9b4e441aef26bdc915d3775fddf027fddc0da85c9"
+        }
+      ]
+    },
+    {
+      "printed": 100,
+      "sourceSha256": "23fcd62ab27aa380f8013bfc3dc2fe66cc15f491a96179afaf9e77e7229862f3",
+      "blocks": [
+        {
+          "id": "p100-b1",
+          "source": "and therefore $|f(x)-0|<\\varepsilon$ is true. This completes the proof. Note that our description of the $\\delta$ which works for a given $\\varepsilon$ is completely adequate—there is no reason why we must give a formula for $\\delta$ in terms of $\\varepsilon$.",
+          "sourceSha256": "621a99263293b4e52657617dff8815a2f3f585575fff8a45f09fedb68f1f1795",
+          "translation": "因此 $|f(x)-0|<\\varepsilon$ 成立。证明完毕。注意，我们对给定 $\\varepsilon$ 所适用的 $\\delta$ 的描述，已经完全充分；没有任何理由要求我们必须给出用 $\\varepsilon$ 表示 $\\delta$ 的公式。"
+        },
+        {
+          "id": "p100-b2",
+          "source": "Armed with our definition, we are now prepared to prove our first theorem; you have probably assumed the result all along, which is a very reasonable thing to do. This theorem is really a test case for our definition: if the theorem could not be proved, our definition would be useless.",
+          "sourceSha256": "24a34dfbf1b2eaeff11f16404b164b4538342d1bf54f18fe3a991f6e41221b22",
+          "translation": "有了定义这个工具，现在可以证明第一个定理了；你大概一直把这个结论当作理所当然，而这样做也很合理。这个定理实际上是对定义的一次检验：如果它无法证明，那么我们的定义就毫无用处。"
+        },
+        {
+          "id": "p100-b3",
+          "source": "**THEOREM 1**",
+          "sourceSha256": "2b6c6f1cd8500f04785734eb53e38fae29cf7651dd2ba301e21cef75e224df22",
+          "translation": "**定理 1**"
+        },
+        {
+          "id": "p100-b4",
+          "source": "A function cannot approach two different limits near $a$. In other words, if $f$ approaches $l$ near $a$, and $f$ approaches $m$ near $a$, then $l=m$.",
+          "sourceSha256": "0c4013c18a5d1242b1ae24473a3d595283b18176517e41b4d32908d48b11eea9",
+          "translation": "一个函数在 $a$ 附近不可能趋近两个不同的极限。换句话说，如果 $f$ 在 $a$ 附近趋近 $l$，而 $f$ 在 $a$ 附近趋近 $m$，那么 $l=m$。"
+        },
+        {
+          "id": "p100-b5",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p100-b6",
+          "source": "Since this is our first theorem about limits it will certainly be necessary to translate the hypotheses according to the definition.",
+          "sourceSha256": "e3f270ad4f0731931cbe3674c0f7269f9be6a3bd2a81d8421c8ac5d537182a99",
+          "translation": "这是第一个关于极限的定理，因此当然需要按照定义把假设展开。"
+        },
+        {
+          "id": "p100-b7",
+          "source": "Since $f$ approaches $l$ near $a$, we know that for any $\\varepsilon>0$ there is some number $\\delta_1>0$ such that, for all $x$,",
+          "sourceSha256": "4bb58a775cd21e9a9f278e4a5f11b0a2a6cf8017579515b67140f45b8eae564c",
+          "translation": "由于 $f$ 在 $a$ 附近趋近 $l$，所以对于任意 $\\varepsilon>0$，都存在某个数 $\\delta_1>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p100-b8",
+          "source": "$$\\text{if }0<|x-a|<\\delta_1,\\text{ then }|f(x)-l|<\\varepsilon.$$",
+          "sourceSha256": "f5c15889782d16df08eb226958653018d28925b4c01008330bd634cbb5ebf08e"
+        },
+        {
+          "id": "p100-b9",
+          "source": "We also know, since $f$ approaches $m$ near $a$, that there is some $\\delta_2>0$ such that, for all $x$,",
+          "sourceSha256": "dd96cb08effca7852da04bdc1adf3be133dc96ce31ec0680eae2cabbd885f268",
+          "translation": "同样，由于 $f$ 在 $a$ 附近趋近 $m$，我们知道存在某个 $\\delta_2>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p100-b10",
+          "source": "$$\\text{if }0<|x-a|<\\delta_2,\\text{ then }|f(x)-m|<\\varepsilon.$$",
+          "sourceSha256": "4b69fef4a3a9a6befb4fa3f364fb1a0951edf024868aee8d0b1b1da40067e1a9"
+        },
+        {
+          "id": "p100-b11",
+          "source": "We have had to use two numbers, $\\delta_1$ and $\\delta_2$, since there is no guarantee that the $\\delta$ which works in one definition will work in the other. But, in fact, it is now easy to conclude that for any $\\varepsilon>0$ there is some $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "57557c23a8ef6e7521508478b4d5b35a506c4fccf8bd9a1a8e544b8a8cfc2e8a",
+          "translation": "这里不得不使用 $\\delta_1$ 和 $\\delta_2$ 两个数，因为不能保证一个定义中适用的 $\\delta$ 在另一个定义中也适用。不过，现在很容易推出：对于任意 $\\varepsilon>0$，存在某个 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p100-b12",
+          "source": "$$\\text{if }0<|x-a|<\\delta,\\text{ then }|f(x)-l|<\\varepsilon\\text{ and }|f(x)-m|<\\varepsilon;$$",
+          "sourceSha256": "cd9b798fd0ca73a8430b3a142ae15dbeb8b3a003ea7fcef06af98fbbcff4e8f0"
+        },
+        {
+          "id": "p100-b13",
+          "source": "we simply choose $\\delta=\\min(\\delta_1,\\delta_2)$.",
+          "sourceSha256": "683c34e5c81351ee8261af9ed65e88e8a98adcbaf6126fbf52e9e049c0318be3",
+          "translation": "只需选择 $\\delta=\\min(\\delta_1,\\delta_2)$。"
+        },
+        {
+          "id": "p100-b14",
+          "source": "To complete the proof we just have to pick a particular $\\varepsilon>0$ for which the two conditions",
+          "sourceSha256": "123839d6a9183bc2066e30c7277efd9959ca8132f59d441ab05859871767cc7b",
+          "translation": "要完成证明，只需选出一个特定的 $\\varepsilon>0$，使以下两个条件"
+        },
+        {
+          "id": "p100-b15",
+          "source": "$$|f(x)-l|<\\varepsilon\\quad\\text{and}\\quad|f(x)-m|<\\varepsilon$$",
+          "sourceSha256": "fc9e110c3ed7f248ba74b8af2b4d7f4bb276baf41f34d761657dd74f46e8881b"
+        },
+        {
+          "id": "p100-b16",
+          "source": "cannot both hold, if $l\\ne m$. The proper choice is suggested by Figure 16. If $l\\ne m$, so that $|l-m|>0$, we can choose $|l-m|/2$ as our $\\varepsilon$. It follows that there is a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "0c1bfe2a464ed43030249dd14641730c80fa1e763f748f36cc1944a74c77b265",
+          "translation": "在 $l\\ne m$ 时不可能同时成立。图 16 提示了合适的选择。如果 $l\\ne m$，则 $|l-m|>0$，可以把 $|l-m|/2$ 取作 $\\varepsilon$。于是存在 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p100-b17",
+          "source": "$$\\begin{aligned}\n\\text{if }0<|x-a|<\\delta,\\text{ then }|f(x)-l|&<\\frac{|l-m|}2\\\\\n\\text{and }|f(x)-m|&<\\frac{|l-m|}2.\n\\end{aligned}$$",
+          "sourceSha256": "dd121417ffb07c478239f0f2605ef8e0f968dca29c9c05fcc636ceed1ec6be10"
+        },
+        {
+          "id": "p100-b18",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:443px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"42 1217 443 101\" role=\"img\" aria-label=\"Figure 16\"><image href=\"pages/book/0119.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 16</figcaption>\n</figure>",
+          "sourceSha256": "c2b6ef8a7e249593f481e8d7b56872d7e5090df745629adf79f28c7f08dc882a"
+        },
+        {
+          "id": "p100-b19",
+          "source": "This implies that for $0<|x-a|<\\delta$ we have",
+          "sourceSha256": "1c31bb78da1a0d1f7939bfde3da8978e42300f15881b903b2e851a667e6a692a",
+          "translation": "这意味着，当 $0<|x-a|<\\delta$ 时，有"
+        },
+        {
+          "id": "p100-b20",
+          "source": "$$\\begin{aligned}\n|l-m|=|l-f(x)+f(x)-m|&\\le|l-f(x)|+|f(x)-m|\\\\\n&<\\frac{|l-m|}2+\\frac{|l-m|}2\\\\\n&=|l-m|,\n\\end{aligned}$$",
+          "sourceSha256": "254c4a2b9800a2d60e7f1168aa2734625bc465f0dbf23860299bd9891eceb4a3"
+        },
+        {
+          "id": "p100-b21",
+          "source": "a contradiction. $\\blacksquare$",
+          "sourceSha256": "b4339147e90c0b18091e8d45e772a12794f12dda6833e9c67ad655cb9b6da968",
+          "translation": "矛盾。$\\blacksquare$"
+        }
+      ]
+    },
+    {
+      "printed": 101,
+      "sourceSha256": "c266b8a20b227da0b4e5215652c86bbd6ec4efc4117e055dd0b71d4aa73fe24a",
+      "blocks": [
+        {
+          "id": "p101-b1",
+          "source": "The number $l$ which $f$ approaches near $a$ is denoted by $\\displaystyle\\lim_{x\\to a}f(x)$ (read: the limit of $f(x)$ as $x$ approaches $a$). This definition is possible only because of Theorem 1, which ensures that $\\displaystyle\\lim_{x\\to a}f(x)$ never has to stand for two different numbers. The equation",
+          "sourceSha256": "b889c7c0735424f96c2d42bbc6a7510a5005d1d942cbb83b6bfe407a550ef275",
+          "translation": "$f$ 在 $a$ 附近所趋近的数 $l$，记作 $\\displaystyle\\lim_{x\\to a}f(x)$（读作：当 $x$ 趋近 $a$ 时，$f(x)$ 的极限）。只有借助定理 1，这一定义才成立，因为定理 1 保证 $\\displaystyle\\lim_{x\\to a}f(x)$ 绝不需要表示两个不同的数。等式"
+        },
+        {
+          "id": "p101-b2",
+          "source": "$$\\lim_{x\\to a}f(x)=l$$",
+          "sourceSha256": "5b43819cd1dcfcc2ba6a8bc98140c825da7b160d757ec496357a6a5a8ad746ce"
+        },
+        {
+          "id": "p101-b3",
+          "source": "has exactly the same meaning as the phrase",
+          "sourceSha256": "30bc73dea45356e691c5215dd485a70175051b6d73279df9a6acca3440215c34",
+          "translation": "与下面这句话含义完全相同："
+        },
+        {
+          "id": "p101-b4",
+          "source": "$$f\\text{ approaches }l\\text{ near }a.$$",
+          "sourceSha256": "906794d7ed178cd2b830354a4d596ec9feda9b514361d7f5897b1633b7f1da77"
+        },
+        {
+          "id": "p101-b5",
+          "source": "The possibility still remains that $f$ does not approach $l$ near $a$, for any $l$, so that $\\displaystyle\\lim_{x\\to a}f(x)=l$ is false for every number $l$. This is usually expressed by saying that “$\\displaystyle\\lim_{x\\to a}f(x)$ does not exist.”",
+          "sourceSha256": "74b2ab9a3601a438530f5ccd85a758e90b8592ea0806bf7978cd6d3f82edc8be",
+          "translation": "仍然可能出现这样的情况：对于任何 $l$，$f$ 在 $a$ 附近都不趋近 $l$，因而 $\\displaystyle\\lim_{x\\to a}f(x)=l$ 对每个数 $l$ 都不成立。这通常表述为“$\\displaystyle\\lim_{x\\to a}f(x)$ 不存在”。"
+        },
+        {
+          "id": "p101-b6",
+          "source": "Notice that our new notation introduces an extra, utterly irrelevant letter $x$, which could be replaced by $t$, $y$, or any other letter which does not already appear—the symbols",
+          "sourceSha256": "6de18fb716969fc26926c69463cab147284e9ab0b53d5964cb67b88f2de8a90b",
+          "translation": "注意，新记号引入了一个额外的、完全无关紧要的字母 $x$，可以把它换成 $t$、$y$ 或任何尚未出现的字母；下列符号"
+        },
+        {
+          "id": "p101-b7",
+          "source": "$$\\lim_{x\\to a}f(x),\\qquad\\lim_{t\\to a}f(t),\\qquad\\lim_{y\\to a}f(y),$$",
+          "sourceSha256": "decf6ddaa9401d97e00e617dfa34633451213e1d712e4041c5360129f4f0704e"
+        },
+        {
+          "id": "p101-b8",
+          "source": "all denote precisely the same number, which depends on $f$ and $a$, and has nothing to do with $x$, $t$, or $y$ (these letters, in fact, do not denote anything at all). A more logical symbol would be something like $\\displaystyle\\lim_a f$, but this notation, despite its brevity, is so infuriatingly rigid that almost no one has seriously tried to use it. The notation $\\displaystyle\\lim_{x\\to a}f(x)$ is much more useful because a function $f$ often has no simple name, even though it might be possible to express $f(x)$ by a simple formula involving $x$. Thus, the short symbol",
+          "sourceSha256": "e7d66860eb0f28c4e226d2e5423fb99ee5ec25b8272278402d8dd2802663889b",
+          "translation": "全都表示完全相同的数，它取决于 $f$ 和 $a$，与 $x$、$t$、$y$ 毫无关系（事实上，这几个字母根本不指代任何东西）。更合乎逻辑的符号，也许是 $\\displaystyle\\lim_a f$ 这样的写法；但这种记号虽简短，却僵硬得令人恼火，以至于几乎没人认真尝试使用它。记号 $\\displaystyle\\lim_{x\\to a}f(x)$ 有用得多，因为函数 $f$ 常常没有简单的名称，尽管 $f(x)$ 可能用一个包含 $x$ 的简单公式来表示。因此，简短的符号"
+        },
+        {
+          "id": "p101-b9",
+          "source": "$$\\lim_{x\\to a}(x^2+\\sin x)$$",
+          "sourceSha256": "814b623f95a128382bc26c68a7f3ca3b93f0fd40532f20bce35863712b9e30ad"
+        },
+        {
+          "id": "p101-b10",
+          "source": "could be paraphrased only by the awkward expression",
+          "sourceSha256": "4ec8964fa43764eca4e66bcc51680b9a90597ae933b73026f9d4fbdb8ab2639a",
+          "translation": "只能用如下笨拙的说法来改述："
+        },
+        {
+          "id": "p101-b11",
+          "source": "$$\\lim_a f,\\text{ where }f(x)=x^2+\\sin x.$$",
+          "sourceSha256": "009dccb7447b3d0390552b81eb47ef7517a9fffc89a2debd5dc0ee2371c1492e"
+        },
+        {
+          "id": "p101-b12",
+          "source": "Another advantage of the standard symbolism is illustrated by the expressions",
+          "sourceSha256": "2a69a18ae18dd8ab51e635db4e1a36e61ac2d3d64603899e4f97fc4d596157ae",
+          "translation": "标准符号的另一个优点，可由下列表达式说明："
+        },
+        {
+          "id": "p101-b13",
+          "source": "$$\\begin{aligned}&\\lim_{x\\to a}x+t^3,\\\\&\\lim_{t\\to a}x+t^3.\\end{aligned}$$",
+          "sourceSha256": "2a4e233b832e587fdfc6a320421b4098be1f4798486b7705470180d0cd78b807"
+        },
+        {
+          "id": "p101-b14",
+          "source": "The first means the number which $f$ approaches near $a$ when",
+          "sourceSha256": "e16acf1e28752e73433f66ca84f01e805e7726ebf7cd77356c0fb14868f06e84",
+          "translation": "第一个表示 $f$ 在 $a$ 附近所趋近的数，其中"
+        },
+        {
+          "id": "p101-b15",
+          "source": "$$f(x)=x+t^3,\\quad\\text{for all }x;$$",
+          "sourceSha256": "ee3e756843d62aeda56415e3e4e2a1605780ae3d663717092b855f74d1686046"
+        },
+        {
+          "id": "p101-b16",
+          "source": "the second means the number which $f$ approaches near $a$ when",
+          "sourceSha256": "3974d13017de8a19edda63c51e0323f44a8719402a43be3a0d6228d788d7f52c",
+          "translation": "第二个表示 $f$ 在 $a$ 附近所趋近的数，其中"
+        },
+        {
+          "id": "p101-b17",
+          "source": "$$f(t)=x+t^3,\\quad\\text{for all }t.$$",
+          "sourceSha256": "3d79200cdbdce8f44002843e93b65d151bde0a798658fda1680901f052a5140f"
+        },
+        {
+          "id": "p101-b18",
+          "source": "You should have little difficulty (especially if you consult Theorem 2) proving that",
+          "sourceSha256": "ece516ed704d3adba838a06dc1efe26eef2ac8389b344ee1d1253dd976af5be6",
+          "translation": "你应当很容易（尤其是参考定理 2 后）证明"
+        },
+        {
+          "id": "p101-b19",
+          "source": "$$\\begin{aligned}&\\lim_{x\\to a}x+t^3=a+t^3,\\\\&\\lim_{t\\to a}x+t^3=x+a^3.\\end{aligned}$$",
+          "sourceSha256": "0422f061f505655535959f4a3a6b53c5a2c656f83205820643377953d620fe97"
+        }
+      ]
+    },
+    {
+      "printed": 102,
+      "sourceSha256": "43e8e68d8abdce8f896f5e80c13a614bf90992726806f2df1db792024516e083",
+      "blocks": [
+        {
+          "id": "p102-b1",
+          "source": "These examples illustrate the main advantage of our notation, which is its flexibility. In fact, the notation $\\displaystyle\\lim_{x\\to a}f(x)$ is so flexible that there is some danger of forgetting what it really means. Here is a simple exercise in the use of this notation, which will be important later: first interpret precisely, and then prove the equality of the expressions",
+          "sourceSha256": "b8cb6933cd22023625fce0e71f69645ea2ab3f4d573d0d482dcb2772ce357937",
+          "translation": "这些例子说明了这一记号的主要优点，也就是灵活性。事实上，记号 $\\displaystyle\\lim_{x\\to a}f(x)$ 太灵活了，甚至有让人忘记它真正含义的危险。下面是一道简单的符号使用练习，之后将很重要：先精确解释下列表达式，再证明它们相等："
+        },
+        {
+          "id": "p102-b2",
+          "source": "$$\\lim_{x\\to a}f(x)\\quad\\text{and}\\quad\\lim_{h\\to0}f(a+h).$$",
+          "sourceSha256": "49251ba1e996e08dca67d760490e920afda043ba4465bc679558c6d2da7c75c6"
+        },
+        {
+          "id": "p102-b3",
+          "source": "An important part of this chapter is the proof of a theorem which will make it easy to find many limits, as we promised long ago. The proof depends upon certain properties of inequalities and absolute values, hardly surprising when one considers the definition of limit. Although these facts have already been stated in Problems 1-20, 1-21, and 1-22, because of their importance they will be presented once again, in the form of a lemma (a lemma is an auxiliary theorem, a result that justifies its existence only by virtue of its prominent role in the proof of another theorem). The lemma says, roughly, that if $x$ is close to $x_0$, and $y$ is close to $y_0$, then $x+y$ will be close to $x_0+y_0$, and $xy$ will be close to $x_0y_0$, and $1/y$ will be close to $1/y_0$. This intuitive statement is much easier to remember than the precise estimates of the lemma, and it is not unreasonable to read the proof of Theorem 2 first, in order to see just how these estimates are used.",
+          "sourceSha256": "d879865c2de9e1a1dcfb0c04f55e9cbdce301ebf637d6f16928a8db0e69db0f7",
+          "translation": "本章的一个重要部分，是证明一个定理，让许多极限很容易求出，兑现我们早先的承诺。证明依赖于不等式和绝对值的一些性质；考虑到极限的定义，这一点并不令人惊讶。虽然这些事实已经在习题 1-20、1-21、1-22 中给出过，但由于十分重要，我们将以引理的形式再陈述一次（引理是一个辅助定理，只有凭借它在另一个定理的证明中所起的重要作用，它的存在才有价值）。粗略地说，引理断言：如果 $x$ 接近 $x_0$，$y$ 接近 $y_0$，那么 $x+y$ 就接近 $x_0+y_0$，$xy$ 接近 $x_0y_0$，$1/y$ 接近 $1/y_0$。这一直观陈述，比引理中的精确估计容易记忆得多；先读定理 2 的证明，看看这些估计究竟如何使用，也完全合理。"
+        },
+        {
+          "id": "p102-b4",
+          "source": "**LEMMA**",
+          "sourceSha256": "44f358400cb73f1e27f99455755141a3f33fd3e42a33a3b22e88b040e733449d",
+          "translation": "**引理**"
+        },
+        {
+          "id": "p102-b5",
+          "source": "(1) If",
+          "sourceSha256": "25317eb555a0fd591f82d0545eb76ea1447ef77e85d34c469e398a53b42d9464",
+          "translation": "(1) 如果"
+        },
+        {
+          "id": "p102-b6",
+          "source": "$$|x-x_0|<\\frac\\varepsilon2\\quad\\text{and}\\quad|y-y_0|<\\frac\\varepsilon2,$$",
+          "sourceSha256": "2bbb04d66323fac78bfd3a092e9e95207bb112ba23ec6524170a259b46849625"
+        },
+        {
+          "id": "p102-b7",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p102-b8",
+          "source": "$$|(x+y)-(x_0+y_0)|<\\varepsilon.$$",
+          "sourceSha256": "bfaa5d339fb80786052e33f2a80beaa6bd1473e974137a004177c0ebe5ae80c3"
+        },
+        {
+          "id": "p102-b9",
+          "source": "(2) If",
+          "sourceSha256": "557e2674e6cca27bc0b5093e13e68ee03bf6aabe164ac5291adc08c3ebaf3699",
+          "translation": "(2) 如果"
+        },
+        {
+          "id": "p102-b10",
+          "source": "$$|x-x_0|<\\min\\left(1,\\frac{\\varepsilon}{2(|y_0|+1)}\\right)\\quad\\text{and}\\quad|y-y_0|<\\frac{\\varepsilon}{2(|x_0|+1)},$$",
+          "sourceSha256": "573fe1f74093eff71f8d6cf8fc41bdc577e7304c070838f93f984bb46ca4327c"
+        },
+        {
+          "id": "p102-b11",
+          "source": "then",
+          "sourceSha256": "21af6f1260f927f5b9b3ff5ca4a5d19493a1a47a5977240d8dca31bc47a63527",
+          "translation": "那么"
+        },
+        {
+          "id": "p102-b12",
+          "source": "$$|xy-x_0y_0|<\\varepsilon.$$",
+          "sourceSha256": "b50d011d1607699132a34b20ff347b51ae0d6686bdd3024778d405b875f7b906"
+        },
+        {
+          "id": "p102-b13",
+          "source": "(3) If $y_0\\ne0$ and",
+          "sourceSha256": "44667c961ed2f7c94b0833cd1b87c809ab71d59ffc7d5ef512962a72e3bbb54d",
+          "translation": "(3) 如果 $y_0\\ne0$，并且"
+        },
+        {
+          "id": "p102-b14",
+          "source": "$$|y-y_0|<\\min\\left(\\frac{|y_0|}2,\\frac{\\varepsilon|y_0|^2}2\\right),$$",
+          "sourceSha256": "ba3b5147a89a73202918c25dc8f494b2ff22e5ce94e5859b0e10fc89536381c9"
+        },
+        {
+          "id": "p102-b15",
+          "source": "then $y\\ne0$ and",
+          "sourceSha256": "a5fe324ba0643c78c058f4a73da4653e56888f55b80aa792a75b6fc3ac55cab3",
+          "translation": "那么 $y\\ne0$，并且"
+        },
+        {
+          "id": "p102-b16",
+          "source": "$$\\left|\\frac1y-\\frac1{y_0}\\right|<\\varepsilon.$$",
+          "sourceSha256": "09a6d57af0a6b2fe5cbe52112d14a25c608db6ed0a5fc33150a94c0443c129a4"
+        },
+        {
+          "id": "p102-b17",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p102-b18",
+          "source": "(1)",
+          "sourceSha256": "fd0ad9026eee596b7072a762941f60bef57e760a230edd450b3a634825685c2a"
+        },
+        {
+          "id": "p102-b19",
+          "source": "$$\\begin{aligned}\n|(x+y)-(x_0+y_0)|&=|(x-x_0)+(y-y_0)|\\\\\n&\\le|x-x_0|+|y-y_0|<\\frac\\varepsilon2+\\frac\\varepsilon2=\\varepsilon.\n\\end{aligned}$$",
+          "sourceSha256": "c8d9e230a181a818eaee5f77a3ea5a8f9518fe06b8d777ffac2a9e1995db0bd0"
+        },
+        {
+          "id": "p102-b20",
+          "source": "(2) Since $|x-x_0|<1$ we have",
+          "sourceSha256": "590b993ecd6fa89db9a56e903741e21ddece12a82182021483ddb2296b60fec3",
+          "translation": "(2) 因为 $|x-x_0|<1$，所以有"
+        },
+        {
+          "id": "p102-b21",
+          "source": "$$|x|-|x_0|\\le|x-x_0|<1,$$",
+          "sourceSha256": "7f3c6b3204412b7e9c5d92a57e179f114db0e1edb541891e497365611c99700e"
+        }
+      ]
+    },
+    {
+      "printed": 103,
+      "sourceSha256": "db5c50b58b98ca54126a71ef36f8ff31939e32f97324072ddd801a6746bbb95f",
+      "blocks": [
+        {
+          "id": "p103-b1",
+          "source": "so that",
+          "sourceSha256": "ab6b7abe5e492f9b6d750de7961c627380f376d321fccbb8be082915be4cdf03",
+          "translation": "从而"
+        },
+        {
+          "id": "p103-b2",
+          "source": "$$|x|<1+|x_0|.$$",
+          "sourceSha256": "fa55ab37baeaafd26c938e2491fa274f1ef12b80e8d9900c10c0542eea202b6f"
+        },
+        {
+          "id": "p103-b3",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "因此"
+        },
+        {
+          "id": "p103-b4",
+          "source": "$$\\begin{aligned}\n|xy-x_0y_0|&=|x(y-y_0)+y_0(x-x_0)|\\\\\n&\\le|x|\\cdot|y-y_0|+|y_0|\\cdot|x-x_0|\\\\\n&<(1+|x_0|)\\cdot\\frac{\\varepsilon}{2(|x_0|+1)}\n+|y_0|\\cdot\\frac{\\varepsilon}{2(|y_0|+1)}\\\\\n&<\\frac\\varepsilon2+\\frac\\varepsilon2=\\varepsilon.\n\\end{aligned}$$",
+          "sourceSha256": "a5bb9ac7b03aa75f6bd741fbd28dd1f9edad3138821199961ab66e1d0e705371"
+        },
+        {
+          "id": "p103-b5",
+          "source": "(3) We have",
+          "sourceSha256": "91319f69764b8c9ec77dc980ed0c435717feb588947f38113c5a5a4554ba15f8",
+          "translation": "(3) 有"
+        },
+        {
+          "id": "p103-b6",
+          "source": "$$|y_0|-|y|\\le|y-y_0|<\\frac{|y_0|}2,$$",
+          "sourceSha256": "331b755f550480c82b76d62e54c9b3dc25053efa59c84826100e885fb2c1e037"
+        },
+        {
+          "id": "p103-b7",
+          "source": "so $|y|>|y_0|/2$. In particular, $y\\ne0$, and",
+          "sourceSha256": "9dec15d67dc08181d09213f88335431780f7a01f7de2cdf275facab774c1d42b",
+          "translation": "所以 $|y|>|y_0|/2$。特别地，$y\\ne0$，并且"
+        },
+        {
+          "id": "p103-b8",
+          "source": "$$\\frac1{|y|}<\\frac2{|y_0|}.$$",
+          "sourceSha256": "092e1361e101dabec26c173529ce75e724956fbaff2076c08f187e503db89752"
+        },
+        {
+          "id": "p103-b9",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "因此"
+        },
+        {
+          "id": "p103-b10",
+          "source": "$$\\left|\\frac1y-\\frac1{y_0}\\right|=\\frac{|y_0-y|}{|y|\\cdot|y_0|}<\\frac2{|y_0|}\\cdot\\frac1{|y_0|}\\cdot\\frac{\\varepsilon|y_0|^2}2=\\varepsilon.\\quad\\blacksquare$$",
+          "sourceSha256": "14a70eec8d0b15a2494f6825421d525f5bd2d4cf9c5b506c1b6ae40abb37d267"
+        },
+        {
+          "id": "p103-b11",
+          "source": "**THEOREM 2**",
+          "sourceSha256": "59bd15153c31a53f3eec003199c59649639a3b3a6b854407f90576e04346c1a4",
+          "translation": "**定理 2**"
+        },
+        {
+          "id": "p103-b12",
+          "source": "If $\\displaystyle\\lim_{x\\to a}f(x)=l$ and $\\displaystyle\\lim_{x\\to a}g(x)=m$, then",
+          "sourceSha256": "68c81ea1b0c03a27e3e3eaef335a24fde489e2ebd3cf3439b23890553f8e1ede",
+          "translation": "如果 $\\displaystyle\\lim_{x\\to a}f(x)=l$ 且 $\\displaystyle\\lim_{x\\to a}g(x)=m$，那么"
+        },
+        {
+          "id": "p103-b13",
+          "source": "$$(1)\\qquad\\lim_{x\\to a}(f+g)(x)=l+m;$$",
+          "sourceSha256": "0aafd8e51b82a337066037abb52d00151fe14cd2f56c9dd30c7e944516125a87"
+        },
+        {
+          "id": "p103-b14",
+          "source": "$$(2)\\qquad\\lim_{x\\to a}(f\\cdot g)(x)=l\\cdot m.$$",
+          "sourceSha256": "b412ff6a3bce8f4479600b22a6d9dc46cb453a57412cb936385404967d4e64c6"
+        },
+        {
+          "id": "p103-b15",
+          "source": "Moreover, if $m\\ne0$, then",
+          "sourceSha256": "128088cb848902143bb743d3507ad5013e0461b6bd8a689abc3f1aefab48d894",
+          "translation": "此外，若 $m\\ne0$，那么"
+        },
+        {
+          "id": "p103-b16",
+          "source": "$$(3)\\qquad\\lim_{x\\to a}\\left(\\frac1g\\right)(x)=\\frac1m.$$",
+          "sourceSha256": "cd301f9e7bd2c159cc919c6e40ac3f03f63c0297ea62f3d9d6f80057588eec6a"
+        },
+        {
+          "id": "p103-b17",
+          "source": "**PROOF**",
+          "sourceSha256": "646d3a53cb2d2f138b59bc942b7504a203b1840887a712bb03dd28dc8d995409",
+          "translation": "**证明**"
+        },
+        {
+          "id": "p103-b18",
+          "source": "The hypothesis means that for every $\\varepsilon>0$ there are $\\delta_1,\\delta_2>0$ such that, for all $x$,",
+          "sourceSha256": "4e2d01398c7db7e82e9291a2dd939721e8a5de4dca0e9d62cd1d6b71ce11b0b6",
+          "translation": "假设意味着：对于每个 $\\varepsilon>0$，都存在 $\\delta_1,\\delta_2>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p103-b19",
+          "source": "$$\\begin{aligned}\n\\text{if }0<|x-a|<\\delta_1,&\\text{ then }|f(x)-l|<\\varepsilon,\\\\\n\\text{and}\\quad\\text{if }0<|x-a|<\\delta_2,&\\text{ then }|g(x)-m|<\\varepsilon.\n\\end{aligned}$$",
+          "sourceSha256": "bdca1c40bb51ddaf3bdb5817239e095ba3ff40bcda7545a1cc0f5625fc2fb44b"
+        },
+        {
+          "id": "p103-b20",
+          "source": "This means (since, after all, $\\varepsilon/2$ is also a positive number) that there are $\\delta_1,\\delta_2>0$ such that, for all $x$,",
+          "sourceSha256": "4d13e69132df2b54706663c6b1a6fa24a2b1e1443e4527e75b899580f39ae7c5",
+          "translation": "这意味着（毕竟 $\\varepsilon/2$ 也是正数），存在 $\\delta_1,\\delta_2>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p103-b21",
+          "source": "$$\\begin{aligned}\n\\text{if }0<|x-a|<\\delta_1,&\\text{ then }|f(x)-l|<\\frac\\varepsilon2,\\\\\n\\text{and}\\quad\\text{if }0<|x-a|<\\delta_2,&\\text{ then }|g(x)-m|<\\frac\\varepsilon2.\n\\end{aligned}$$",
+          "sourceSha256": "9b645165b7bd2c253cf59e169f0cae2ae00a3fce657f89f24ea48ce54ec03682"
+        },
+        {
+          "id": "p103-b22",
+          "source": "Now let $\\delta=\\min(\\delta_1,\\delta_2)$. If $0<|x-a|<\\delta$ then $0<|x-a|<\\delta_1$ and $0<|x-a|<\\delta_2$ are both true, so both",
+          "sourceSha256": "77c2418eca8af8dbbdaac036e6d30787dd09eda9cf8f616ba69a60573af1bfec",
+          "translation": "现在取 $\\delta=\\min(\\delta_1,\\delta_2)$。如果 $0<|x-a|<\\delta$，那么 $0<|x-a|<\\delta_1$ 和 $0<|x-a|<\\delta_2$ 都成立，所以以下两个不等式"
+        },
+        {
+          "id": "p103-b23",
+          "source": "$$|f(x)-l|<\\frac\\varepsilon2\\quad\\text{and}\\quad|g(x)-m|<\\frac\\varepsilon2$$",
+          "sourceSha256": "d31fef75b25704c89ded14c5e61b1b6f677939e052b95f47b744a43a504bc962"
+        }
+      ]
+    },
+    {
+      "printed": 104,
+      "sourceSha256": "4dc92b6a6e6d91105748fdc27731c74f3d14db10297fa1ba151be7fc83b09b30",
+      "blocks": [
+        {
+          "id": "p104-b1",
+          "source": "are true. But by part (1) of the lemma this implies that $|(f+g)(x)-(l+m)|<\\varepsilon$. This proves (1).",
+          "sourceSha256": "fe4ef727c6817b89a5b9a3cacd62331cb6aadac1ace04e33a5d27f710bd59dd3",
+          "translation": "都成立。但由引理的 (1)，这蕴含 $|(f+g)(x)-(l+m)|<\\varepsilon$。于是证明了 (1)。"
+        },
+        {
+          "id": "p104-b2",
+          "source": "To prove (2) we proceed similarly, after consulting part (2) of the lemma. If $\\varepsilon>0$ there are $\\delta_1,\\delta_2>0$ such that, for all $x$,",
+          "sourceSha256": "64b63a9a70013c093c406242902d937a977d80327350cc50ff8f60e93cb877ed",
+          "translation": "证明 (2) 时，参考引理的 (2)，采取类似的方法。若 $\\varepsilon>0$，则存在 $\\delta_1,\\delta_2>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p104-b3",
+          "source": "$$\\text{if }0<|x-a|<\\delta_1,\\text{ then }|f(x)-l|<\\min\\left(1,\\frac{\\varepsilon}{2(|m|+1)}\\right),$$",
+          "sourceSha256": "908e92df55bcb5927d203958967c480ceb83e21e66c7c45e22c9bf21b443c2cf"
+        },
+        {
+          "id": "p104-b4",
+          "source": "$$\\text{and}\\quad\\text{if }0<|x-a|<\\delta_2,\\text{ then }|g(x)-m|<\\frac{\\varepsilon}{2(|l|+1)}.$$",
+          "sourceSha256": "c295c6d7bb5acb2d023f5e256b0f03f8cc2f79157f20ccc7d6084500caba5615"
+        },
+        {
+          "id": "p104-b5",
+          "source": "Again let $\\delta=\\min(\\delta_1,\\delta_2)$. If $0<|x-a|<\\delta$, then",
+          "sourceSha256": "f8d8da562c918b75631bfcf2c2fc64f8e7ec0c6c12c63efd8bcd53fca7cc875d",
+          "translation": "再次取 $\\delta=\\min(\\delta_1,\\delta_2)$。如果 $0<|x-a|<\\delta$，那么"
+        },
+        {
+          "id": "p104-b6",
+          "source": "$$|f(x)-l|<\\min\\left(1,\\frac{\\varepsilon}{2(|m|+1)}\\right)\\quad\\text{and}\\quad|g(x)-m|<\\frac{\\varepsilon}{2(|l|+1)}.$$",
+          "sourceSha256": "0a8664d72791b68fd02bf4f323e4a4a7ff089d0859f2a5fd826d09fb01bb3b1b"
+        },
+        {
+          "id": "p104-b7",
+          "source": "So, by the lemma, $|(f\\cdot g)(x)-l\\cdot m|<\\varepsilon$, and this proves (2).",
+          "sourceSha256": "b82956be5d3468b73e0a49256f503e6d44b957b6298b096345fabd239e044359",
+          "translation": "因此，由引理得到 $|(f\\cdot g)(x)-l\\cdot m|<\\varepsilon$，这就证明了 (2)。"
+        },
+        {
+          "id": "p104-b8",
+          "source": "Finally, if $\\varepsilon>0$ there is a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "a9dda70abb322f8680e11867e97a8153fb8bdb602a5e040aed6d10112389ef41",
+          "translation": "最后，若 $\\varepsilon>0$，则存在 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p104-b9",
+          "source": "$$\\text{if }0<|x-a|<\\delta,\\text{ then }|g(x)-m|<\\min\\left(\\frac{|m|}2,\\frac{\\varepsilon|m|^2}2\\right).$$",
+          "sourceSha256": "00bc90c6a1db08939f9b24b9f7fc8d8536d7bf981400ee32b25afeb14d08581d"
+        },
+        {
+          "id": "p104-b10",
+          "source": "But according to part (3) of the lemma this means, first, that $g(x)\\ne0$, so $(1/g)(x)$ makes sense, and second that",
+          "sourceSha256": "bf5466946e94967e23f8186f121933ed2b4d59c07ee0887f04afbb7a2b83e3f8",
+          "translation": "但由引理的 (3)，这首先意味着 $g(x)\\ne0$，所以 $(1/g)(x)$ 有意义；其次意味着"
+        },
+        {
+          "id": "p104-b11",
+          "source": "$$\\left|\\left(\\frac1g\\right)(x)-\\frac1m\\right|<\\varepsilon.$$",
+          "sourceSha256": "6fbfdfc8cf00019078b9e0b1f3fc24b7217595120ab1571112b1d0b87bf80945"
+        },
+        {
+          "id": "p104-b12",
+          "source": "This proves (3). $\\blacksquare$",
+          "sourceSha256": "de0e3d66ec2ba4d9b57e1d9885bb0a4457d1bd58aa5b6ef67f2ebae28e369dd6",
+          "translation": "于是证明了 (3)。$\\blacksquare$"
+        },
+        {
+          "id": "p104-b13",
+          "source": "Using Theorem 2 we can prove, trivially, such facts as",
+          "sourceSha256": "6eb0479438f9c8a1a5086460bc9177773df550ae462a22bd0cc6fe770b4548d2",
+          "translation": "利用定理 2，可以轻而易举地证明如下事实："
+        },
+        {
+          "id": "p104-b14",
+          "source": "$$\\lim_{x\\to a}\\frac{x^3+7x^5}{x^2+1}=\\frac{a^3+7a^5}{a^2+1},$$",
+          "sourceSha256": "18ec152ac772b659b020bf489908fed3506e44e6470d3fa12035f5c27a09ec08"
+        },
+        {
+          "id": "p104-b15",
+          "source": "without going through the laborious process of finding a $\\delta$, given an $\\varepsilon$. We must begin with",
+          "sourceSha256": "c152b011d9f9b316efb8942f091cd53355b5546703872e974c6e175d24cb431d",
+          "translation": "不必再经历给定 $\\varepsilon$ 后费力寻找 $\\delta$ 的过程。我们必须从以下事实出发："
+        },
+        {
+          "id": "p104-b16",
+          "source": "$$\\begin{aligned}&\\lim_{x\\to a}7=7,\\\\&\\lim_{x\\to a}1=1,\\\\&\\lim_{x\\to a}x=a,\\end{aligned}$$",
+          "sourceSha256": "b7fb25c057a589d72d19de8fa35370f393e40eb79cd447c4015981c4e3d732db"
+        },
+        {
+          "id": "p104-b17",
+          "source": "but these are easy to prove directly. If we *want* to find the $\\delta$, however, the proof of Theorem 2 amounts to a prescription for doing this. Suppose, to take a simpler example, that we want to find a $\\delta$ such that, for all $x$,",
+          "sourceSha256": "34797a5d2bf7c30a907c216d3e40fd9d510167685c6eaa788fc183bf84166921",
+          "translation": "但这些很容易直接证明。不过，如果我们*想*找到 $\\delta$，定理 2 的证明实际上提供了做法。举一个更简单的例子，假设想找一个 $\\delta$，使得对所有 $x$，"
+        },
+        {
+          "id": "p104-b18",
+          "source": "$$\\text{if }0<|x-a|<\\delta,\\text{ then }|x^2+x-(a^2+a)|<\\varepsilon.$$",
+          "sourceSha256": "561c302d61233c7ffc6658ebb6af97a81d06ca1edec69d7f15e04c3c53ccaed9"
+        }
+      ]
+    },
+    {
+      "printed": 105,
+      "sourceSha256": "71dd19fa98da529954ab3d98397bb2c69e4d01291a01ff87ace20ffade8ebc00",
+      "blocks": [
+        {
+          "id": "p105-b1",
+          "source": "Consulting the proof of Theorem 2(1), we see that we must first find $\\delta_1$ and $\\delta_2>0$ such that, for all $x$,",
+          "sourceSha256": "ae6c953b4db97c9db413efa957bdb7805a25af7d8ee76bef5a2a9c066cb21c6f",
+          "translation": "参考定理 2(1) 的证明，可知必须先找出 $\\delta_1$ 和 $\\delta_2>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p105-b2",
+          "source": "$$\\begin{aligned}\n\\text{if }0<|x-a|<\\delta_1,&\\text{ then }|x^2-a^2|<\\frac\\varepsilon2\\\\\n\\text{and}\\quad\\text{if }0<|x-a|<\\delta_2,&\\text{ then }|x-a|<\\frac\\varepsilon2.\n\\end{aligned}$$",
+          "sourceSha256": "c394d05136fe52ae76934d84015241d3a4154f48dcda44c7dbd9cd38675a37c7"
+        },
+        {
+          "id": "p105-b3",
+          "source": "Since we have already given proofs that $\\displaystyle\\lim_{x\\to a}x^2=a^2$ and $\\displaystyle\\lim_{x\\to a}x=a$, we know how to do this:",
+          "sourceSha256": "49247eaf0c7f07bf8a3cd6f4270a67380430a42620f0e959471be4dfebc68b7f",
+          "translation": "由于已经给出了 $\\displaystyle\\lim_{x\\to a}x^2=a^2$ 和 $\\displaystyle\\lim_{x\\to a}x=a$ 的证明，我们知道该如何做："
+        },
+        {
+          "id": "p105-b4",
+          "source": "$$\\begin{aligned}\n\\delta_1&=\\min\\left(1,\\frac{\\frac\\varepsilon2}{2|a|+1}\\right),\\\\\n\\delta_2&=\\frac\\varepsilon2.\n\\end{aligned}$$",
+          "sourceSha256": "dd875c1e90da65d15725c84229e30f8bbc47a7e522600702718284090db12444"
+        },
+        {
+          "id": "p105-b5",
+          "source": "Thus we can take",
+          "sourceSha256": "ccc2a6b201cab516dc71fddc26c7dec5b73ece99947ffb280f19e8d0217c7b9d",
+          "translation": "因此可以取"
+        },
+        {
+          "id": "p105-b6",
+          "source": "$$\\delta=\\min(\\delta_1,\\delta_2)=\\min\\left(\\min\\left(1,\\frac{\\frac\\varepsilon2}{2|a|+1}\\right),\\frac\\varepsilon2\\right).$$",
+          "sourceSha256": "2bf29e95adfeab4496ce8410e298e2ae4801e40bb2c69074b92363e58d3a4a6d"
+        },
+        {
+          "id": "p105-b7",
+          "source": "If $a\\ne0$, the same method can be used to find a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "f5aa8b5aa0b06f3ee5cfa5e14ca9b629c7b25fc36a760ff51e79f7ec7bc16c12",
+          "translation": "如果 $a\\ne0$，同样的方法可以用来寻找 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p105-b8",
+          "source": "$$\\text{if }0<|x-a|<\\delta,\\text{ then }\\left|\\frac1{x^2}-\\frac1{a^2}\\right|<\\varepsilon.$$",
+          "sourceSha256": "6c9fb532b14c3786e168bd2805a4745163aa251370e90bdb1ea1d171c4ce4b57"
+        },
+        {
+          "id": "p105-b9",
+          "source": "The proof of Theorem 2(3) shows that the second condition will follow if we find a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "3e8da1cecb21909148d748b98ada908dde344b8d9ef0a2ea9b7ad0379a2e9cd8",
+          "translation": "定理 2(3) 的证明表明，只要找到 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p105-b10",
+          "source": "$$\\text{if }0<|x-a|<\\delta,\\text{ then }|x^2-a^2|<\\min\\left(\\frac{|a|^2}2,\\frac{\\varepsilon|a|^4}2\\right).$$",
+          "sourceSha256": "8d9595cb639ea0e8aef07a484b8e70f564c0118a4ad95d0e76afed7b019cefe2"
+        },
+        {
+          "id": "p105-b11",
+          "source": "Thus we can take",
+          "sourceSha256": "ccc2a6b201cab516dc71fddc26c7dec5b73ece99947ffb280f19e8d0217c7b9d",
+          "translation": "就能推出第二个条件。因此可以取"
+        },
+        {
+          "id": "p105-b12",
+          "source": "$$\\delta=\\min\\left(1,\\frac{\\min\\left(\\frac{|a|^2}2,\\frac{\\varepsilon|a|^4}2\\right)}{2|a|+1}\\right).$$",
+          "sourceSha256": "8bc3771d90a701db6838256405b170f134f3c232c9ed15b7c97cdbc70bc147e2"
+        },
+        {
+          "id": "p105-b13",
+          "source": "Naturally, these complicated expressions for $\\delta$ can be simplified considerably, after they have been derived.",
+          "sourceSha256": "7f2e5386471e41d069026b432253a0440fe1bb39427bab27fc2b4552a426b85a",
+          "translation": "当然，推导出这些关于 $\\delta$ 的复杂表达式后，可以将它们大大简化。"
+        },
+        {
+          "id": "p105-b14",
+          "source": "One technical detail in the proof of Theorem 2 deserves some discussion. In order for $\\displaystyle\\lim_{x\\to a}f(x)$ to be defined it is, as we know, not necessary for $f$ to be defined at $a$, nor is it necessary for $f$ to be defined at all points $x\\ne a$. However, there must be some $\\delta>0$ such that $f(x)$ is defined for $x$ satisfying $0<|x-a|<\\delta$; otherwise the clause",
+          "sourceSha256": "9066fe521aba4aa93327d592f7814175619c824b69d62d609bb52712a0bccf7b",
+          "translation": "定理 2 证明中的一个技术细节值得讨论。我们知道，要使 $\\displaystyle\\lim_{x\\to a}f(x)$ 有定义，不需要 $f$ 在 $a$ 处有定义，也不需要 $f$ 在所有点 $x\\ne a$ 处有定义。不过，必须存在某个 $\\delta>0$，使得 $f(x)$ 对满足 $0<|x-a|<\\delta$ 的 $x$ 都有定义；否则，下面这句话"
+        },
+        {
+          "id": "p105-b15",
+          "source": "“if $0<|x-a|<\\delta$, then $|f(x)-l|<\\varepsilon$”",
+          "sourceSha256": "32736e017be72d950e828504df1fae926cd60238f63c2ed108ee66a4c8f66f62",
+          "translation": "“如果 $0<|x-a|<\\delta$，那么 $|f(x)-l|<\\varepsilon$”"
+        },
+        {
+          "id": "p105-b16",
+          "source": "would make no sense at all, since the symbol $f(x)$ would make no sense for some $x$’s. If $f$ and $g$ are two functions for which the definition makes sense, it is easy to see that the same is true for $f+g$ and $f\\cdot g$. But this is not so clear for $1/g$, since $1/g$ is undefined for $x$ with $g(x)=0$. However this fact gets established in the proof of Theorem 2(3).",
+          "sourceSha256": "90e4b853cd043befd2c2d5a88d2b149bb3e4d0526ea2cc59355bc18f82eb64a1",
+          "translation": "就完全没有意义，因为对某些 $x$，符号 $f(x)$ 没有意义。如果 $f$ 和 $g$ 是两个使极限定义有意义的函数，那么很容易看出，$f+g$ 和 $f\\cdot g$ 也如此。但对于 $1/g$ 就不那么明显，因为当 $x$ 满足 $g(x)=0$ 时，$1/g$ 没有定义。不过，这一点已在定理 2(3) 的证明中得到确立。"
+        }
+      ]
+    },
+    {
+      "printed": 106,
+      "sourceSha256": "ba60179aa7ce47fd4991872753b135fa67a231f0d8df78688075a1554c84bfdb",
+      "blocks": [
+        {
+          "id": "p106-b1",
+          "source": "There are times when we would like to speak of the limit which $f$ approaches at $a$, even though there is no $\\delta>0$ such that $f(x)$ is defined for $x$ satisfying $0<|x-a|<\\delta$. For example, we want to distinguish the behavior of the two functions shown in Figure 17, even though they are not defined for numbers less than $a$. For the function of Figure 17(a) we write",
+          "sourceSha256": "571b99a11d7bdd5fec6e57b697ca95a83cebb5edfa525886885aaf78cad976b0",
+          "translation": "有时，即使不存在 $\\delta>0$ 使得 $f(x)$ 对满足 $0<|x-a|<\\delta$ 的 $x$ 都有定义，我们仍想谈论 $f$ 在 $a$ 处所趋近的极限。例如，我们想区分图 17 中两个函数的行为，尽管它们对小于 $a$ 的数都没有定义。对图 17(a) 中的函数，写作"
+        },
+        {
+          "id": "p106-b2",
+          "source": "$$\\lim_{x\\to a^+}f(x)=l\\quad\\text{or}\\quad\\lim_{x\\downarrow a}f(x)=l.$$",
+          "sourceSha256": "6b6b7f04dd65b5e92f43950cfb08bc3e4502885cd2c73cfe14a8c524afa7ec65"
+        },
+        {
+          "id": "p106-b3",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:255px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 154 255 517\" role=\"img\" aria-label=\"Figure 17\"><image href=\"pages/book/0125.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 17</figcaption>\n</figure>",
+          "sourceSha256": "bf8b57f8bfd31a4c8d66093f6776a9ada6f85b4e08931b127f0890dcb82ee7a6"
+        },
+        {
+          "id": "p106-b4",
+          "source": "(The symbols on the left are read: the limit of $f(x)$ as $x$ approaches $a$ from above.) These “limits from above” are obviously closely related to ordinary limits, and the definition is very similar: $\\displaystyle\\lim_{x\\to a^+}f(x)=l$ means that for every $\\varepsilon>0$ there is a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "e86ff53703ab8b07362f3233293ee5edc6198488a570ea205a4a4dbf8c8f5493",
+          "translation": "（左边的符号读作：当 $x$ 从大于 $a$ 的一侧趋近时，$f(x)$ 的极限。）这些“从上侧趋近的极限”，显然与普通极限密切相关，定义也很相似：$\\displaystyle\\lim_{x\\to a^+}f(x)=l$ 意味着对于每个 $\\varepsilon>0$，存在 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p106-b5",
+          "source": "$$\\text{if }0<x-a<\\delta,\\text{ then }|f(x)-l|<\\varepsilon.$$",
+          "sourceSha256": "fa02349b0ff741787465adfc54aae8355429caa908dba0ca3a437e00194c43ab"
+        },
+        {
+          "id": "p106-b6",
+          "source": "(The condition “$0<x-a<\\delta$” is equivalent to “$0<|x-a|<\\delta$ and $x>a$.”)",
+          "sourceSha256": "79d7abec3571a954d33fea95a5671f18d9d434227e3aeafac22070ad4c832a28",
+          "translation": "（条件“$0<x-a<\\delta$”等价于“$0<|x-a|<\\delta$ 且 $x>a$”。）"
+        },
+        {
+          "id": "p106-b7",
+          "source": "“Limits from below” (Figure 18) are defined similarly: $\\displaystyle\\lim_{x\\to a^-}f(x)=l$ (or $\\displaystyle\\lim_{x\\uparrow a}f(x)=l$) means that for every $\\varepsilon>0$ there is a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "92873cb0199ddd0c757841d8f0158047cdf2276a63e72bf09b121801addea0ab",
+          "translation": "“从下侧趋近的极限”（图 18）的定义类似：$\\displaystyle\\lim_{x\\to a^-}f(x)=l$（或 $\\displaystyle\\lim_{x\\uparrow a}f(x)=l$）意味着对于每个 $\\varepsilon>0$，存在 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p106-b8",
+          "source": "$$\\text{if }0<a-x<\\delta,\\text{ then }|f(x)-l|<\\varepsilon.$$",
+          "sourceSha256": "b2405e1ca685ae883824d7f4a487c29d1c6b3cc1a6cdcf47f5ba9c0c5f4fa4af"
+        },
+        {
+          "id": "p106-b9",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:275px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"44 738 275 193\" role=\"img\" aria-label=\"Figure 18\"><image href=\"pages/book/0125.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 18</figcaption>\n</figure>",
+          "sourceSha256": "f9508bec7008e6cc39f468138151914c25c1bbdc18ede6ead647b2798ffbb49c"
+        },
+        {
+          "id": "p106-b10",
+          "source": "It is quite possible to consider limits from above and below even if $f$ is defined for numbers both greater and less than $a$. Thus, for the function $f$ of Figure 14, we have",
+          "sourceSha256": "c5f45e6e9eff475f93e2fcd3243e6e931a30a7c2c40c837af2b02f50ce2dc847",
+          "translation": "即使 $f$ 对大于和小于 $a$ 的数都有定义，也完全可以考虑从上侧和下侧趋近的极限。因此，对于图 14 中的函数 $f$，有"
+        },
+        {
+          "id": "p106-b11",
+          "source": "$$\\lim_{x\\to0^+}f(x)=1\\quad\\text{and}\\quad\\lim_{x\\to0^-}f(x)=-1.$$",
+          "sourceSha256": "1edf187d34d2d70663a305d2cbae513185826fc15fac6f8653b437f07e9ee566"
+        },
+        {
+          "id": "p106-b12",
+          "source": "It is an easy exercise (Problem 29) to show that $\\displaystyle\\lim_{x\\to a}f(x)$ exists if and only if $\\displaystyle\\lim_{x\\to a^+}f(x)$ and $\\displaystyle\\lim_{x\\to a^-}f(x)$ both exist and are equal.",
+          "sourceSha256": "eb2ed7af750b33b803c9f3fea7bb4924092687312770603e95f67e88371025cd",
+          "translation": "证明 $\\displaystyle\\lim_{x\\to a}f(x)$ 存在，当且仅当 $\\displaystyle\\lim_{x\\to a^+}f(x)$ 和 $\\displaystyle\\lim_{x\\to a^-}f(x)$ 都存在且相等，是一道简单的练习（习题 29）。"
+        },
+        {
+          "id": "p106-b13",
+          "source": "Like the definitions of limits from above and below, which have been smuggled into the text informally, there are other modifications of the limit concept which will be found useful. In Chapter 4 it was claimed that if $x$ is large, then $\\sin1/x$ is close to $0$. This assertion is usually written",
+          "sourceSha256": "980a1b63036e984d9df8298caa881b9903013eda7a9c7c42d86be218ccb6ca6e",
+          "translation": "正如我们刚才非正式地引入正文的从上侧和下侧趋近的极限定义一样，对极限概念还有其他一些有用的修改。第 4 章曾断言：如果 $x$ 很大，那么 $\\sin1/x$ 接近 $0$。这个断言通常写作"
+        },
+        {
+          "id": "p106-b14",
+          "source": "$$\\lim_{x\\to\\infty}\\sin1/x=0.$$",
+          "sourceSha256": "95471163eb3dfc02a7932c80aaa958949547133429b63581c0c28703482acc71"
+        },
+        {
+          "id": "p106-b15",
+          "source": "The symbol $\\displaystyle\\lim_{x\\to\\infty}f(x)$ is read “the limit of $f(x)$ as $x$ approaches $\\infty$,” or “as $x$ becomes infinite,” and a limit of the form $\\displaystyle\\lim_{x\\to\\infty}f(x)$ is often called a limit at infinity.",
+          "sourceSha256": "a6f9b2f3ffe13472653c418a95107d8d7e4d3e5c28446472c9608d791cb049bb",
+          "translation": "符号 $\\displaystyle\\lim_{x\\to\\infty}f(x)$ 读作“当 $x$ 趋于 $\\infty$ 时，$f(x)$ 的极限”，或“当 $x$ 趋于无穷大时的极限”；形如 $\\displaystyle\\lim_{x\\to\\infty}f(x)$ 的极限常称为无穷远处的极限。"
+        }
+      ]
+    },
+    {
+      "printed": 107,
+      "sourceSha256": "7f3bf5065a83220ff403fac6810264465fe7a7cb320bb832ea05834a11425e15",
+      "blocks": [
+        {
+          "id": "p107-b1",
+          "source": "Figure 19 illustrates a general situation where $\\displaystyle\\lim_{x\\to\\infty}f(x)=l$. Formally, $\\displaystyle\\lim_{x\\to\\infty}f(x)=l$ means that for every $\\varepsilon>0$ there is a number $N$ such that, for all $x$,",
+          "sourceSha256": "71d8a9137aadef3d7b3a62d51252048ac255a3b914518dae654e3b71a8bd2c63",
+          "translation": "图 19 展示了 $\\displaystyle\\lim_{x\\to\\infty}f(x)=l$ 的一般情形。正式地说，$\\displaystyle\\lim_{x\\to\\infty}f(x)=l$ 意味着：对于每个 $\\varepsilon>0$，存在一个数 $N$，使得对所有 $x$，"
+        },
+        {
+          "id": "p107-b2",
+          "source": "$$\\text{if }x>N,\\text{ then }|f(x)-l|<\\varepsilon.$$",
+          "sourceSha256": "f83d046832f411d61256d94035dfee4b97e7e7b023235b718d8242fb562183d4"
+        },
+        {
+          "id": "p107-b3",
+          "source": "The analogy with the definition of ordinary limits should be clear: whereas the condition “$0<|x-a|<\\delta$” expresses the fact that $x$ is close to $a$, the condition “$x>N$” expresses the fact that $x$ is large.",
+          "sourceSha256": "619f3f8324248474e830f56677ddcf7352a6efd18a6d1649de29f14ddbc915af",
+          "translation": "这与普通极限定义之间的类比应当很清楚：条件“$0<|x-a|<\\delta$”表示 $x$ 接近 $a$，而条件“$x>N$”表示 $x$ 很大。"
+        },
+        {
+          "id": "p107-b4",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:680px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"437 397 755 191\" role=\"img\" aria-label=\"Figure 19\"><image href=\"pages/book/0126.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 19</figcaption>\n</figure>",
+          "sourceSha256": "cca6a4767892a27a404cfc714a5c1937fd60dddec68593a78cd9da09427051c5"
+        },
+        {
+          "id": "p107-b5",
+          "source": "We have spent so little time on limits from above and below, and at infinity, because the general philosophy behind the definitions should be clear if you understand the definition of ordinary limits (which are by far the most important). Many exercises on these definitions are provided in the Problems, which also contain several other types of limits which are occasionally useful.",
+          "sourceSha256": "ab24c5f7f951fb805af39a4a8c88ab381b7e54c3e0710222074ed83aba9422e6",
+          "translation": "我们只用了很少的篇幅讨论从上侧、下侧以及无穷远处的极限，因为如果你理解普通极限的定义（它们最为重要），这些定义背后的一般思想就应当很清楚。习题中提供了关于这些定义的大量练习，也包含其他几种偶尔有用的极限。"
+        },
+        {
+          "id": "p107-b6",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p107-b7",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p107-b8",
+          "source": "Find the following limits. (These limits all follow, after some algebraic manipulations, from the various parts of Theorem 2; be sure you know which ones are used in each case, but don’t bother listing them.)",
+          "sourceSha256": "072e64415b2d453210a3d43802076c044b6ceba664ad42d66e3bab27efc257dd",
+          "translation": "求下列极限。（经过一些代数变形，它们都可由定理 2 的各部分推出；务必清楚每一种情形使用了哪些部分，但不必费力一一列出。）"
+        },
+        {
+          "id": "p107-b9",
+          "source": "(i) $\\displaystyle\\lim_{x\\to1}\\frac{x^2-1}{x+1}$.",
+          "sourceSha256": "4c9eb7b21c6f6d8a7ab27e1b696aefb9a4d977f0386bf2e36da3f6d346ca39a0"
+        },
+        {
+          "id": "p107-b10",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to2}\\frac{x^3-8}{x-2}$.",
+          "sourceSha256": "c6382a732999e1dfc92c1d387d645c48541881d6c28a9203f6013a608d329aa5"
+        },
+        {
+          "id": "p107-b11",
+          "source": "(iii) $\\displaystyle\\lim_{x\\to3}\\frac{x^3-8}{x-2}$.",
+          "sourceSha256": "8fa146816fe910255fe0badf43bce14099a203744198507a27655698d26f956e"
+        },
+        {
+          "id": "p107-b12",
+          "source": "(iv) $\\displaystyle\\lim_{x\\to y}\\frac{x^n-y^n}{x-y}$.",
+          "sourceSha256": "4bdd4bab3060bc69a521f3c39d1f93bad12d4dd4a281ea4fd62d697b2dc087c7"
+        },
+        {
+          "id": "p107-b13",
+          "source": "(v) $\\displaystyle\\lim_{y\\to x}\\frac{x^n-y^n}{x-y}$.",
+          "sourceSha256": "df3e77c6444a192fab85ccc0d84c1d0359b7c57e3f9a9bf7b0dde095ff382dd3"
+        },
+        {
+          "id": "p107-b14",
+          "source": "(vi) $\\displaystyle\\lim_{h\\to0}\\frac{\\sqrt{a+h}-\\sqrt a}{h}$.",
+          "sourceSha256": "cef92c988f0cfbed744edcabb8e7265ff975931eb73126e3d2fb5fa430cea14f"
+        },
+        {
+          "id": "p107-b15",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p107-b16",
+          "source": "Find the following limits.",
+          "sourceSha256": "0308a8b9fdfd6413154327e3ede91ad81bb6c82d0ca666d1e47abd0affb4c898",
+          "translation": "求下列极限。"
+        },
+        {
+          "id": "p107-b17",
+          "source": "(i) $\\displaystyle\\lim_{x\\to1}\\frac{1-\\sqrt x}{1-x}$.",
+          "sourceSha256": "2db9bb74450e9940728e492b7c4959d097befa4db7e81e996109b3fb2d6d2d2a"
+        }
+      ]
+    },
+    {
+      "printed": 108,
+      "sourceSha256": "6c0744a19903fc58cc19e03ed786d6e6500c8e6fd606e5dcba1311c8a49522ba",
+      "blocks": [
+        {
+          "id": "p108-b1",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to0}\\frac{1-\\sqrt{1-x^2}}x$.",
+          "sourceSha256": "8778e805930b3af58dc2d65ddfe93699a5d6d362df37f98a00d2df25def97812"
+        },
+        {
+          "id": "p108-b2",
+          "source": "(iii) $\\displaystyle\\lim_{x\\to0}\\frac{1-\\sqrt{1-x^2}}{x^2}$.",
+          "sourceSha256": "a441ce5edbea87d766b4abb474f369f4419e8b636253b28f693cddb6dec639ae"
+        },
+        {
+          "id": "p108-b3",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p108-b4",
+          "source": "In each of the following cases, determine the limit $l$ for the given $a$, and prove that it is the limit by showing how to find a $\\delta$ such that $|f(x)-l|<\\varepsilon$ for all $x$ satisfying $0<|x-a|<\\delta$.",
+          "sourceSha256": "cb437dbfb70fe838c5e8f2dd2f8765664d0481cbcb94d9025d30a774461b9720",
+          "translation": "在下面每一种情形中，对给定的 $a$ 确定极限 $l$，并说明如何找到一个 $\\delta$，使所有满足 $0<|x-a|<\\delta$ 的 $x$ 都满足 $|f(x)-l|<\\varepsilon$，从而证明它确实是极限。"
+        },
+        {
+          "id": "p108-b5",
+          "source": "(i) $f(x)=x[3-\\cos(x^2)]$, $a=0$.",
+          "sourceSha256": "197ed2c2d6f46def428ccc70f6f2af87a266690714edad146fabb389969ce469"
+        },
+        {
+          "id": "p108-b6",
+          "source": "(ii) $f(x)=x^2+5x-2$, $a=2$.",
+          "sourceSha256": "2e64db4bdc92c8f20e896fec00c4a85eb3e731c0728dad94ed539c0d695ed54f"
+        },
+        {
+          "id": "p108-b7",
+          "source": "(iii) $f(x)=\\dfrac{100}x$, $a=1$.",
+          "sourceSha256": "b1e7639225d5938bebcc29b1944b3778c96a730780304b8eff9264cfe8b84fbb"
+        },
+        {
+          "id": "p108-b8",
+          "source": "(iv) $f(x)=x^4$, arbitrary $a$.",
+          "sourceSha256": "b23c749adbdceba6685cf4ec69b3947e60d2466f35b680960331cdb12e651abc",
+          "translation": "(iv) $f(x)=x^4$，$a$ 任意。"
+        },
+        {
+          "id": "p108-b9",
+          "source": "(v) $f(x)=x^4+\\dfrac1x$, $a=1$.",
+          "sourceSha256": "f0a3fe99af40ccd31066d12b3b58e2ae565438dbd14a2e4fc63e997ce7d2d9d6"
+        },
+        {
+          "id": "p108-b10",
+          "source": "(vi) $f(x)=\\dfrac{x}{2-\\sin^2x}$, $a=0$.",
+          "sourceSha256": "fac6ed475136f70e34bc321fc847a469fa4afd9163e10cf9bc60a56d6aef2a59"
+        },
+        {
+          "id": "p108-b11",
+          "source": "(vii) $f(x)=\\sqrt{|x|}$, $a=0$.",
+          "sourceSha256": "8abc8c321935135d8fe725c1fdf4edf0fa7aa621f0c6a09c5e85990cc2ea1a18"
+        },
+        {
+          "id": "p108-b12",
+          "source": "(viii) $f(x)=\\sqrt x$, $a=1$.",
+          "sourceSha256": "47b22dcfeb1f877d0465d59bbd13298d1645470472c22251063af19b322e9685"
+        },
+        {
+          "id": "p108-b13",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p108-b14",
+          "source": "For each of the functions in Problem 4-17, decide for which numbers $a$ the limit $\\displaystyle\\lim_{x\\to a}f(x)$ exists.",
+          "sourceSha256": "a14140c7c18bbd004459ec1db51b5fcec0160f2b9cd7d526546bf03a2e478833",
+          "translation": "对习题 4-17 中的每个函数，判断对于哪些数 $a$，极限 $\\displaystyle\\lim_{x\\to a}f(x)$ 存在。"
+        },
+        {
+          "id": "p108-b15",
+          "source": "### \\*5.",
+          "sourceSha256": "e3d6f6f84b1f496f75eae3b58ba1ea193dfc481f889a3fe6a0fb00f97a63563c"
+        },
+        {
+          "id": "p108-b16",
+          "source": "(a) Do the same for each of the functions in Problem 4-19.",
+          "sourceSha256": "ce695ee464f41a79ea2ffdcbe74c2c9dcddfeef56e3522a89c01760524eac0d8",
+          "translation": "(a) 对习题 4-19 中的每个函数做同样的判断。"
+        },
+        {
+          "id": "p108-b17",
+          "source": "(b) Same problem, if we use infinite decimals ending in a string of $0$’s instead of those ending in a string of $9$’s.",
+          "sourceSha256": "22419e48a7c09382d57c5249a28d56dc74990871b5d48813b5fa13f0b919f805",
+          "translation": "(b) 如果采用以一串 $0$ 结尾的无限小数，而不是以一串 $9$ 结尾的无限小数，回答同样的问题。"
+        },
+        {
+          "id": "p108-b18",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p108-b19",
+          "source": "Suppose the functions $f$ and $g$ have the following property: for all $\\varepsilon>0$ and all $x$,",
+          "sourceSha256": "1a04555c0a32a735d8605c7a9c9a2ac6eeec8d01cedecb82250b0c9b588e6970",
+          "translation": "假设函数 $f$ 和 $g$ 具有如下性质：对于所有 $\\varepsilon>0$ 和所有 $x$，"
+        },
+        {
+          "id": "p108-b20",
+          "source": "$$\\begin{aligned}\n\\text{if }0<|x-2|<\\sin^2\\left(\\frac{\\varepsilon^2}9\\right)+\\varepsilon,&\\text{ then }|f(x)-2|<\\varepsilon,\\\\\n\\text{if }0<|x-2|<\\varepsilon^2,&\\text{ then }|g(x)-4|<\\varepsilon.\n\\end{aligned}$$",
+          "sourceSha256": "47576ecdbbdff90e47835efe327b6ee64728137e9475680b899eb255c1f01d15"
+        },
+        {
+          "id": "p108-b21",
+          "source": "For each $\\varepsilon>0$ find a $\\delta>0$ such that, for all $x$,",
+          "sourceSha256": "bb8b49f255fb79e638ce08186200c91e42626432be91ac9c16ee962bc388fc68",
+          "translation": "对每个 $\\varepsilon>0$，找到一个 $\\delta>0$，使得对所有 $x$，"
+        },
+        {
+          "id": "p108-b22",
+          "source": "(i) if $0<|x-2|<\\delta$, then $|f(x)+g(x)-6|<\\varepsilon$.",
+          "sourceSha256": "9a4029fba5649d7e54995ebd24363dc5889ed71d2bd7ebde3228bb7c8d139e7d",
+          "translation": "(i) 如果 $0<|x-2|<\\delta$，那么 $|f(x)+g(x)-6|<\\varepsilon$。"
+        },
+        {
+          "id": "p108-b23",
+          "source": "(ii) if $0<|x-2|<\\delta$, then $|f(x)g(x)-8|<\\varepsilon$.",
+          "sourceSha256": "8d4e4126e9d6641f484fdd28d7df1c99d917966c6c388390fd0757c2f10d225e",
+          "translation": "(ii) 如果 $0<|x-2|<\\delta$，那么 $|f(x)g(x)-8|<\\varepsilon$。"
+        },
+        {
+          "id": "p108-b24",
+          "source": "(iii) if $0<|x-2|<\\delta$, then $\\left|\\dfrac1{g(x)}-\\dfrac14\\right|<\\varepsilon$.",
+          "sourceSha256": "73a833d9656f4152dbbc0abdb20119b93ac42037f63c280bb2be0f37f4a62acc",
+          "translation": "(iii) 如果 $0<|x-2|<\\delta$，那么 $\\left|\\dfrac1{g(x)}-\\dfrac14\\right|<\\varepsilon$。"
+        },
+        {
+          "id": "p108-b25",
+          "source": "(iv) if $0<|x-2|<\\delta$, then $\\left|\\dfrac{f(x)}{g(x)}-\\dfrac12\\right|<\\varepsilon$.",
+          "sourceSha256": "88b34be5f8c58c0d905b635e8c2adf1188062726d96fe4176eb8485c56a106d9",
+          "translation": "(iv) 如果 $0<|x-2|<\\delta$，那么 $\\left|\\dfrac{f(x)}{g(x)}-\\dfrac12\\right|<\\varepsilon$。"
+        },
+        {
+          "id": "p108-b26",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p108-b27",
+          "source": "Give an example of a function $f$ for which the following assertion is *false*: If $|f(x)-l|<\\varepsilon$ when $0<|x-a|<\\delta$, then $|f(x)-l|<\\varepsilon/2$ when $0<|x-a|<\\delta/2$.",
+          "sourceSha256": "fe4cf95b8ee3c0da79067f3cb9b9a3ff725d73126121afb8fbd128aecd46997b",
+          "translation": "举出一个函数 $f$ 的例子，使下列断言*不成立*：如果在 $0<|x-a|<\\delta$ 时有 $|f(x)-l|<\\varepsilon$，那么在 $0<|x-a|<\\delta/2$ 时有 $|f(x)-l|<\\varepsilon/2$。"
+        }
+      ]
+    },
+    {
+      "printed": 109,
+      "sourceSha256": "c81e92211a8b1acd6c0d78bd0dccea1129d97e767d6d64c13e2274b9b35c617a",
+      "blocks": [
+        {
+          "id": "p109-b1",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p109-b2",
+          "source": "(a) If $\\displaystyle\\lim_{x\\to a}f(x)$ and $\\displaystyle\\lim_{x\\to a}g(x)$ do not exist, can $\\displaystyle\\lim_{x\\to a}[f(x)+g(x)]$ exist? Can $\\displaystyle\\lim_{x\\to a}f(x)g(x)$ exist?",
+          "sourceSha256": "3c198f1db51fa938ddb7e68654abe5fa0ae974d7b654327cc88641f7360138bc",
+          "translation": "(a) 如果 $\\displaystyle\\lim_{x\\to a}f(x)$ 和 $\\displaystyle\\lim_{x\\to a}g(x)$ 都不存在，$\\displaystyle\\lim_{x\\to a}[f(x)+g(x)]$ 可能存在吗？$\\displaystyle\\lim_{x\\to a}f(x)g(x)$ 可能存在吗？"
+        },
+        {
+          "id": "p109-b3",
+          "source": "(b) If $\\displaystyle\\lim_{x\\to a}f(x)$ exists and $\\displaystyle\\lim_{x\\to a}[f(x)+g(x)]$ exists, must $\\displaystyle\\lim_{x\\to a}g(x)$ exist?",
+          "sourceSha256": "eeeb1bf1fff3f65c1fecceb4ca38ab0a0fda378d76774dd55c8f5762f03248a2",
+          "translation": "(b) 如果 $\\displaystyle\\lim_{x\\to a}f(x)$ 存在，而且 $\\displaystyle\\lim_{x\\to a}[f(x)+g(x)]$ 存在，那么 $\\displaystyle\\lim_{x\\to a}g(x)$ 必须存在吗？"
+        },
+        {
+          "id": "p109-b4",
+          "source": "(c) If $\\displaystyle\\lim_{x\\to a}f(x)$ exists and $\\displaystyle\\lim_{x\\to a}g(x)$ does not exist, can $\\displaystyle\\lim_{x\\to a}[f(x)+g(x)]$ exist?",
+          "sourceSha256": "e3fdd1d714a4197d815670e9a70d518a6988d84dd26b17f22ecb3583eaa223d4",
+          "translation": "(c) 如果 $\\displaystyle\\lim_{x\\to a}f(x)$ 存在，而 $\\displaystyle\\lim_{x\\to a}g(x)$ 不存在，那么 $\\displaystyle\\lim_{x\\to a}[f(x)+g(x)]$ 可能存在吗？"
+        },
+        {
+          "id": "p109-b5",
+          "source": "(d) If $\\displaystyle\\lim_{x\\to a}f(x)$ exists and $\\displaystyle\\lim_{x\\to a}f(x)g(x)$ exists, does it follow that $\\displaystyle\\lim_{x\\to a}g(x)$ exists?",
+          "sourceSha256": "65f7c2adc02d92f693a5841c2f133050b0e322f4ef1b3762341e91a55288e9e6",
+          "translation": "(d) 如果 $\\displaystyle\\lim_{x\\to a}f(x)$ 存在，而且 $\\displaystyle\\lim_{x\\to a}f(x)g(x)$ 存在，是否能推出 $\\displaystyle\\lim_{x\\to a}g(x)$ 存在？"
+        },
+        {
+          "id": "p109-b6",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p109-b7",
+          "source": "Prove that $\\displaystyle\\lim_{x\\to a}f(x)=\\lim_{h\\to0}f(a+h)$. (This is mainly an exercise in understanding what the terms mean.)",
+          "sourceSha256": "87a033a74cf3c8f056d7a7d615fe5c411eeee6f4fc96ec6e858c087df0695d0e",
+          "translation": "证明 $\\displaystyle\\lim_{x\\to a}f(x)=\\lim_{h\\to0}f(a+h)$。（这主要是练习理解这些术语的含义。）"
+        },
+        {
+          "id": "p109-b8",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p109-b9",
+          "source": "(a) Prove that $\\displaystyle\\lim_{x\\to a}f(x)=l$ if and only if $\\displaystyle\\lim_{x\\to a}[f(x)-l]=0$. (First see why the assertion is obvious; then provide a rigorous proof. In this chapter most problems which ask for proofs should be treated in the same way.)",
+          "sourceSha256": "4577a36bc3cb61ab4ee0a99ce4aaa7adc13d5fe1bd8a311058d8bf35264952e4",
+          "translation": "(a) 证明：$\\displaystyle\\lim_{x\\to a}f(x)=l$ 当且仅当 $\\displaystyle\\lim_{x\\to a}[f(x)-l]=0$。（先看清为什么这个断言显然成立，再给出严格证明。本章中大多数要求证明的习题，都应当这样处理。）"
+        },
+        {
+          "id": "p109-b10",
+          "source": "(b) Prove that $\\displaystyle\\lim_{x\\to0}f(x)=\\lim_{x\\to a}f(x-a)$.",
+          "sourceSha256": "f64a194a4bcb14ecfde075dc7aa66ba95c455f9f3641f814939d10e6c190b13c",
+          "translation": "(b) 证明 $\\displaystyle\\lim_{x\\to0}f(x)=\\lim_{x\\to a}f(x-a)$。"
+        },
+        {
+          "id": "p109-b11",
+          "source": "(c) Prove that $\\displaystyle\\lim_{x\\to0}f(x)=\\lim_{x\\to0}f(x^3)$.",
+          "sourceSha256": "dd6aeb1ddaaad0635452270e14cc5fad261cea79bcf37d7149ebfa824ce93548",
+          "translation": "(c) 证明 $\\displaystyle\\lim_{x\\to0}f(x)=\\lim_{x\\to0}f(x^3)$。"
+        },
+        {
+          "id": "p109-b12",
+          "source": "(d) Give an example where $\\displaystyle\\lim_{x\\to0}f(x^2)$ exists, but $\\displaystyle\\lim_{x\\to0}f(x)$ does not.",
+          "sourceSha256": "44aab8c09f72c178a30476cd36a4079b9a3682fc05345925304e8d4fa9806711",
+          "translation": "(d) 举例，使得 $\\displaystyle\\lim_{x\\to0}f(x^2)$ 存在，但 $\\displaystyle\\lim_{x\\to0}f(x)$ 不存在。"
+        },
+        {
+          "id": "p109-b13",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p109-b14",
+          "source": "Suppose there is a $\\delta>0$ such that $f(x)=g(x)$ when $0<|x-a|<\\delta$. Prove that $\\displaystyle\\lim_{x\\to a}f(x)=\\lim_{x\\to a}g(x)$. In other words, $\\displaystyle\\lim_{x\\to a}f(x)$ depends only on the values of $f(x)$ for $x$ near $a$—this fact is often expressed by saying that limits are a “local property.” (It will clearly help to use $\\delta'$, or some other letter, instead of $\\delta$, in the definition of limits.)",
+          "sourceSha256": "13773e9cf918d6398f9b0002bdb6862000f56f10bab1c61da238b2579a087262",
+          "translation": "假设存在 $\\delta>0$，使得当 $0<|x-a|<\\delta$ 时有 $f(x)=g(x)$。证明 $\\displaystyle\\lim_{x\\to a}f(x)=\\lim_{x\\to a}g(x)$。换句话说，$\\displaystyle\\lim_{x\\to a}f(x)$ 只依赖于 $x$ 接近 $a$ 时 $f(x)$ 的值；人们常把这一事实表述为：极限是“局部性质”。（显然，在极限定义中，用 $\\delta'$ 或其他字母代替 $\\delta$ 会有帮助。）"
+        },
+        {
+          "id": "p109-b15",
+          "source": "### 12.",
+          "sourceSha256": "f6829f1811315831e76c4373a40b10704ecefcf3ce1ccc4225081372ae3266b7"
+        },
+        {
+          "id": "p109-b16",
+          "source": "(a) Suppose that $f(x)\\le g(x)$ for all $x$. Prove that $\\displaystyle\\lim_{x\\to a}f(x)\\le\\lim_{x\\to a}g(x)$, provided that these limits exist.",
+          "sourceSha256": "57b6918d408b893e3775cbaff7e4bb10148b06329182a0be11442f10d0f57d1a",
+          "translation": "(a) 假设对于所有 $x$ 都有 $f(x)\\le g(x)$。证明：只要这些极限存在，就有 $\\displaystyle\\lim_{x\\to a}f(x)\\le\\lim_{x\\to a}g(x)$。"
+        },
+        {
+          "id": "p109-b17",
+          "source": "(b) How can the hypotheses be weakened?",
+          "sourceSha256": "ba2bacf443104b2cb80deb766f5ff8af831de66652f95130838b30454c6ae444",
+          "translation": "(b) 如何减弱假设？"
+        },
+        {
+          "id": "p109-b18",
+          "source": "(c) If $f(x)<g(x)$ for all $x$, does it necessarily follow that $\\displaystyle\\lim_{x\\to a}f(x)<\\lim_{x\\to a}g(x)$?",
+          "sourceSha256": "d49d52741ca1500a0c1f71f03d8f1bcdb81e55da000c483feac272d7467cdc87",
+          "translation": "(c) 如果对于所有 $x$ 都有 $f(x)<g(x)$，是否一定能推出 $\\displaystyle\\lim_{x\\to a}f(x)<\\lim_{x\\to a}g(x)$？"
+        },
+        {
+          "id": "p109-b19",
+          "source": "### 13.",
+          "sourceSha256": "97ad74751607db143d7327fc697a6e37813f5f3ca253a8990fceea329bb974c0"
+        },
+        {
+          "id": "p109-b20",
+          "source": "Suppose that $f(x)\\le g(x)\\le h(x)$ and that $\\displaystyle\\lim_{x\\to a}f(x)=\\lim_{x\\to a}h(x)$. Prove that $\\displaystyle\\lim_{x\\to a}g(x)$ exists, and that $\\displaystyle\\lim_{x\\to a}g(x)=\\lim_{x\\to a}f(x)=\\lim_{x\\to a}h(x)$. (Draw a picture!)",
+          "sourceSha256": "b4585a01aee3b0ffda143e03bd499f4230e07de757363e46b5d688972585d229",
+          "translation": "假设 $f(x)\\le g(x)\\le h(x)$ 且 $\\displaystyle\\lim_{x\\to a}f(x)=\\lim_{x\\to a}h(x)$。证明 $\\displaystyle\\lim_{x\\to a}g(x)$ 存在，并且 $\\displaystyle\\lim_{x\\to a}g(x)=\\lim_{x\\to a}f(x)=\\lim_{x\\to a}h(x)$。（画图！）"
+        },
+        {
+          "id": "p109-b21",
+          "source": "### \\*14.",
+          "sourceSha256": "463c766427059d789ab0ea2e8f3a0bc18c139e0a5a9c7fba25a813764d30e5a0"
+        },
+        {
+          "id": "p109-b22",
+          "source": "(a) Prove that if $\\displaystyle\\lim_{x\\to0}f(x)/x=l$ and $b\\ne0$, then $\\displaystyle\\lim_{x\\to0}f(bx)/x=bl$. Hint: Write $f(bx)/x=b[f(bx)/bx]$.",
+          "sourceSha256": "bf90d7a0a33a9d6d96742b668de6468f736d9848b6d44b2cec3fd383e896e659",
+          "translation": "(a) 证明：如果 $\\displaystyle\\lim_{x\\to0}f(x)/x=l$ 且 $b\\ne0$，那么 $\\displaystyle\\lim_{x\\to0}f(bx)/x=bl$。提示：写成 $f(bx)/x=b[f(bx)/bx]$。"
+        },
+        {
+          "id": "p109-b23",
+          "source": "(b) What happens if $b=0$?",
+          "sourceSha256": "1a302437d5a112b572e30abf8a4e1748290176305678054c2b27ae7d64b6b4a8",
+          "translation": "(b) 如果 $b=0$，会怎样？"
+        },
+        {
+          "id": "p109-b24",
+          "source": "(c) Part (a) enables us to find $\\displaystyle\\lim_{x\\to0}(\\sin2x)/x$ in terms of $\\displaystyle\\lim_{x\\to0}(\\sin x)/x$. Find this limit in another way.",
+          "sourceSha256": "cd823a96ec765de234c925640237c7c6fe64d333b5d24a27fddd972e9b36aaa0",
+          "translation": "(c) 利用 (a)，可以用 $\\displaystyle\\lim_{x\\to0}(\\sin x)/x$ 表示 $\\displaystyle\\lim_{x\\to0}(\\sin2x)/x$。用另一种方法求这个极限。"
+        },
+        {
+          "id": "p109-b25",
+          "source": "### 15.",
+          "sourceSha256": "668532794a39a003399f2e06d47df49403daa8ea5d736a8a1c2d62314b5bbe13"
+        },
+        {
+          "id": "p109-b26",
+          "source": "Evaluate the following limits in terms of the number $\\alpha=\\displaystyle\\lim_{x\\to0}(\\sin x)/x$.",
+          "sourceSha256": "3b1371f25f5cf48f8053d828e02ca50f58c11ca60547297805075cb9a20c4cf5",
+          "translation": "用数 $\\alpha=\\displaystyle\\lim_{x\\to0}(\\sin x)/x$ 表示下列极限的值。"
+        },
+        {
+          "id": "p109-b27",
+          "source": "(i) $\\displaystyle\\lim_{x\\to0}\\frac{\\sin3x}{x}$.",
+          "sourceSha256": "d11d6f3b74196413b863f00855c15d17780cc8138341b700c5724d3da64a8fe8"
+        },
+        {
+          "id": "p109-b28",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to0}\\frac{\\sin ax}{\\sin bx}$.",
+          "sourceSha256": "ad1e06ede3fcd62129b163d5ff22933e237f38a5cc97f3fe6734c7739300a9b5"
+        }
+      ]
+    },
+    {
+      "printed": 110,
+      "sourceSha256": "022f40292c894457d29bdf9bb49689aefda12fb60a2cda38f991c002c5d93adf",
+      "blocks": [
+        {
+          "id": "p110-b1",
+          "source": "(iii) $\\displaystyle\\lim_{x\\to0}\\frac{\\sin^22x}{x}$.",
+          "sourceSha256": "e0ceedddb204ffe78eea8a6dbcfb8843b6763d7082b5e8dc5c988d0cdf3cb712"
+        },
+        {
+          "id": "p110-b2",
+          "source": "(iv) $\\displaystyle\\lim_{x\\to0}\\frac{\\sin^22x}{x^2}$.",
+          "sourceSha256": "ccb1cd9ef1c6b4858d80dfce3a766493cb491cc95e6c645f34e507454ee7db8d"
+        },
+        {
+          "id": "p110-b3",
+          "source": "(v) $\\displaystyle\\lim_{x\\to0}\\frac{1-\\cos x}{x^2}$.",
+          "sourceSha256": "db28316fadced2986e9c09d6ba198b02644e54249286f307b886e592a5900e80"
+        },
+        {
+          "id": "p110-b4",
+          "source": "(vi) $\\displaystyle\\lim_{x\\to0}\\frac{\\tan^2x+2x}{x+x^2}$.",
+          "sourceSha256": "f55406b5b968231dc9bf1f939c4c24b8c16b4355c9c3e3d07fd241d2f14204cc"
+        },
+        {
+          "id": "p110-b5",
+          "source": "(vii) $\\displaystyle\\lim_{x\\to0}\\frac{x\\sin x}{1-\\cos x}$.",
+          "sourceSha256": "b2af866d5523479f5be47ff2e2dd291a459bc57384252f02d3ca0f21a0dfe76a"
+        },
+        {
+          "id": "p110-b6",
+          "source": "(viii) $\\displaystyle\\lim_{h\\to0}\\frac{\\sin(x+h)-\\sin x}{h}$.",
+          "sourceSha256": "fe84245a5418a892e97bfe2726466f57263996d86368f3b69255c8d2cc069396"
+        },
+        {
+          "id": "p110-b7",
+          "source": "(ix) $\\displaystyle\\lim_{x\\to1}\\frac{\\sin(x^2-1)}{x-1}$.",
+          "sourceSha256": "d507b879093e23a11cd255100eb2febd35ac860fe32759eec2d2a027d070b217"
+        },
+        {
+          "id": "p110-b8",
+          "source": "(x) $\\displaystyle\\lim_{x\\to0}\\frac{x^2(3+\\sin x)}{(x+\\sin x)^2}$.",
+          "sourceSha256": "3b6ffb90b37adee85dc9738ad1f45e57592c0329787678abb4bae8e03d7c7067"
+        },
+        {
+          "id": "p110-b9",
+          "source": "(xi) $\\displaystyle\\lim_{x\\to1}(x^2-1)^3\\sin\\left(\\frac1{x-1}\\right)^3$.",
+          "sourceSha256": "29c73a902b2fba554e7249313191e084d2e47d55700f9037d009381aff8ed3df"
+        },
+        {
+          "id": "p110-b10",
+          "source": "### 16.",
+          "sourceSha256": "31d20be2e4028161c85027e97e2af7d4a22546d830d65a6a4c926c012c810a0d"
+        },
+        {
+          "id": "p110-b11",
+          "source": "(a) Prove that if $\\displaystyle\\lim_{x\\to a}f(x)=l$, then $\\displaystyle\\lim_{x\\to a}|f|(x)=|l|$.",
+          "sourceSha256": "ed22f585f50e3d5993bc44cfd5128106e9d7d505d0f72ec194cba68c0f202659",
+          "translation": "(a) 证明：如果 $\\displaystyle\\lim_{x\\to a}f(x)=l$，那么 $\\displaystyle\\lim_{x\\to a}|f|(x)=|l|$。"
+        },
+        {
+          "id": "p110-b12",
+          "source": "(b) Prove that if $\\displaystyle\\lim_{x\\to a}f(x)=l$ and $\\displaystyle\\lim_{x\\to a}g(x)=m$, then $\\displaystyle\\lim_{x\\to a}\\max(f,g)(x)=\\max(l,m)$ and similarly for $\\min$.",
+          "sourceSha256": "fdb87ac9729daca7c1ffd34c9638844acec289653cbc4e1341976b742a65b8de",
+          "translation": "(b) 证明：如果 $\\displaystyle\\lim_{x\\to a}f(x)=l$ 且 $\\displaystyle\\lim_{x\\to a}g(x)=m$，那么 $\\displaystyle\\lim_{x\\to a}\\max(f,g)(x)=\\max(l,m)$；对 $\\min$ 也有类似结论。"
+        },
+        {
+          "id": "p110-b13",
+          "source": "### 17.",
+          "sourceSha256": "0f8fb1e702ac77ad4752cd5747541b87ffa05ee93372087a9e26005ce5aea523"
+        },
+        {
+          "id": "p110-b14",
+          "source": "(a) Prove that $\\displaystyle\\lim_{x\\to0}1/x$ does not exist, i.e., show that $\\displaystyle\\lim_{x\\to0}1/x=l$ is false for every number $l$.",
+          "sourceSha256": "4b80da9b395b55ea454cc647e64c50322c7de0e06bde34fb3d8191801c56bf37",
+          "translation": "(a) 证明 $\\displaystyle\\lim_{x\\to0}1/x$ 不存在，也就是说明对每个数 $l$，$\\displaystyle\\lim_{x\\to0}1/x=l$ 都不成立。"
+        },
+        {
+          "id": "p110-b15",
+          "source": "(b) Prove that $\\displaystyle\\lim_{x\\to1}1/(x-1)$ does not exist.",
+          "sourceSha256": "3aeb22949f05fcfce46c81ddd7ccbd8bad70e89ca56c3e50f50e3507e9798e10",
+          "translation": "(b) 证明 $\\displaystyle\\lim_{x\\to1}1/(x-1)$ 不存在。"
+        },
+        {
+          "id": "p110-b16",
+          "source": "### 18.",
+          "sourceSha256": "ea685e12aa5506177e8354425cc5ef641b0955faf096533840903cb00fca83d4"
+        },
+        {
+          "id": "p110-b17",
+          "source": "Prove that if $\\displaystyle\\lim_{x\\to a}f(x)=l$, then there is a number $\\delta>0$ and a number $M$ such that $|f(x)|<M$ if $0<|x-a|<\\delta$. (What does this mean pictorially?) Hint: Why does it suffice to prove that $l-1<f(x)<l+1$ for $0<|x-a|<\\delta$?",
+          "sourceSha256": "a1acc5c69aa29032e3d506513acd66d8dd44e9cfd2fa26ce97a4045b9a23b807",
+          "translation": "证明：如果 $\\displaystyle\\lim_{x\\to a}f(x)=l$，那么存在数 $\\delta>0$ 和数 $M$，使得当 $0<|x-a|<\\delta$ 时有 $|f(x)|<M$。（这在图像上意味着什么？）提示：为什么只需证明在 $0<|x-a|<\\delta$ 时有 $l-1<f(x)<l+1$？"
+        },
+        {
+          "id": "p110-b18",
+          "source": "### 19.",
+          "sourceSha256": "8b09a7bace93d37dfe88ea4c6c08a187efc4b2a287262ba51ada7accf660adbf"
+        },
+        {
+          "id": "p110-b19",
+          "source": "Prove that if $f(x)=0$ for irrational $x$ and $f(x)=1$ for rational $x$, then $\\displaystyle\\lim_{x\\to a}f(x)$ does not exist for any $a$.",
+          "sourceSha256": "826f01b93b5a30a8aab2ae48e4a3d963703d8976188d68cb274b55067a813df6",
+          "translation": "证明：如果对无理数 $x$ 有 $f(x)=0$，对有理数 $x$ 有 $f(x)=1$，那么对任何 $a$，$\\displaystyle\\lim_{x\\to a}f(x)$ 都不存在。"
+        },
+        {
+          "id": "p110-b20",
+          "source": "### \\*20.",
+          "sourceSha256": "7c0ac0e7a57d06fc4d95e8be6366ac94d249a5dd8169ddd5029639fcb574bd8b"
+        },
+        {
+          "id": "p110-b21",
+          "source": "Prove that if $f(x)=x$ for rational $x$, and $f(x)=-x$ for irrational $x$, then $\\displaystyle\\lim_{x\\to a}f(x)$ does not exist if $a\\ne0$.",
+          "sourceSha256": "f96fbb121187cd041bb230cd9541256f2bf3876b1b83f5654294dba9402b9107",
+          "translation": "证明：如果对有理数 $x$ 有 $f(x)=x$，对无理数 $x$ 有 $f(x)=-x$，那么当 $a\\ne0$ 时，$\\displaystyle\\lim_{x\\to a}f(x)$ 不存在。"
+        },
+        {
+          "id": "p110-b22",
+          "source": "### 21.",
+          "sourceSha256": "d908d228d4604b1dd2f9729637ede6c5eb59c7f91a5ba1fe1a64623fe814b30d"
+        },
+        {
+          "id": "p110-b23",
+          "source": "(a) Prove that if $\\displaystyle\\lim_{x\\to0}g(x)=0$, then $\\displaystyle\\lim_{x\\to0}g(x)\\sin1/x=0$.",
+          "sourceSha256": "1180b2bfa33e0a97214af31552add0ad78aa9295167d39f748a32d98071b35ff",
+          "translation": "(a) 证明：如果 $\\displaystyle\\lim_{x\\to0}g(x)=0$，那么 $\\displaystyle\\lim_{x\\to0}g(x)\\sin1/x=0$。"
+        },
+        {
+          "id": "p110-b24",
+          "source": "(b) Generalize this fact as follows: If $\\displaystyle\\lim_{x\\to0}g(x)=0$ and $|h(x)|\\le M$ for all $x$, then $\\displaystyle\\lim_{x\\to0}g(x)h(x)=0$. (Naturally it is unnecessary to do part (a) if you succeed in doing part (b); actually the statement of part (b) may make it easier than (a)—that’s one of the values of generalization.)",
+          "sourceSha256": "8a8d6823b74ca484bbb128d95e3dcb142c3c54d09296cbb082fa0da7f9174e01",
+          "translation": "(b) 把这个事实推广如下：如果 $\\displaystyle\\lim_{x\\to0}g(x)=0$，且对所有 $x$ 都有 $|h(x)|\\le M$，那么 $\\displaystyle\\lim_{x\\to0}g(x)h(x)=0$。（当然，如果成功完成 (b)，就不必再做 (a)；事实上，(b) 的表述可能使它比 (a) 更容易——这正是推广的价值之一。）"
+        }
+      ]
+    },
+    {
+      "printed": 111,
+      "sourceSha256": "574f917b5e03bdd04efade62d17b6654f65f10ed8a87a5d16c47dd9722b873fa",
+      "blocks": [
+        {
+          "id": "p111-b1",
+          "source": "### 22.",
+          "sourceSha256": "ce146eae8f2fb4609bfd66abfe5008807912c8203d51e87d6ba4e238e91e9395"
+        },
+        {
+          "id": "p111-b2",
+          "source": "Consider a function $f$ with the following property: if $g$ is any function for which $\\displaystyle\\lim_{x\\to0}g(x)$ does not exist, then $\\displaystyle\\lim_{x\\to0}[f(x)+g(x)]$ also does not exist. Prove that this happens if and only if $\\displaystyle\\lim_{x\\to0}f(x)$ does exist. Hint: This is actually very easy: the assumption that $\\displaystyle\\lim_{x\\to0}f(x)$ does not exist leads to an immediate contradiction if you consider the right $g$.",
+          "sourceSha256": "149f7ebf7a923d2e0e29849047af3dbdc26101f5793e5456da806ed3d65c6fdc",
+          "translation": "考虑具有如下性质的函数 $f$：如果 $g$ 是任何一个使 $\\displaystyle\\lim_{x\\to0}g(x)$ 不存在的函数，那么 $\\displaystyle\\lim_{x\\to0}[f(x)+g(x)]$ 也不存在。证明：这种情况发生，当且仅当 $\\displaystyle\\lim_{x\\to0}f(x)$ 存在。提示：这实际上很容易；只要选对 $g$，假设 $\\displaystyle\\lim_{x\\to0}f(x)$ 不存在就会立刻导致矛盾。"
+        },
+        {
+          "id": "p111-b3",
+          "source": "### \\*\\*23.",
+          "sourceSha256": "1d24178c7d3d4f14f5f2f09fe5960d060d0f2ac8e3747827bb4d386ad7ee67db"
+        },
+        {
+          "id": "p111-b4",
+          "source": "This problem is the analogue of Problem 22 when $f+g$ is replaced by $f\\cdot g$. In this case the situation is considerably more complex, and the analysis requires several steps (those in search of an especially challenging problem can attempt an independent solution).",
+          "sourceSha256": "a77346f7071984670febe975e62a292350c4e9887e6cdce89f00bef66621a32a",
+          "translation": "本题是把习题 22 中的 $f+g$ 换成 $f\\cdot g$ 后的对应问题。这次情况复杂得多，分析需要若干步骤（想挑战一道特别难的题目的读者，可以尝试独立求解）。"
+        },
+        {
+          "id": "p111-b5",
+          "source": "(a) Suppose that $\\displaystyle\\lim_{x\\to0}f(x)$ exists and is $\\ne0$. Prove that if $\\displaystyle\\lim_{x\\to0}g(x)$ does not exist, then $\\displaystyle\\lim_{x\\to0}f(x)g(x)$ also does not exist.",
+          "sourceSha256": "a3137a7dd2800bf078cf4e75f9ea4848c104062fe410319ec137e2bd76bb80c2",
+          "translation": "(a) 假设 $\\displaystyle\\lim_{x\\to0}f(x)$ 存在且 $\\ne0$。证明：若 $\\displaystyle\\lim_{x\\to0}g(x)$ 不存在，则 $\\displaystyle\\lim_{x\\to0}f(x)g(x)$ 也不存在。"
+        },
+        {
+          "id": "p111-b6",
+          "source": "(b) Prove the same result if $\\displaystyle\\lim_{x\\to0}|f(x)|=\\infty$. (The precise definition of this sort of limit is given in Problem 37.)",
+          "sourceSha256": "00b74c38023cdcb350d48283a61b3f00d2185fe1038b1a80784e90ad2b6f69f4",
+          "translation": "(b) 当 $\\displaystyle\\lim_{x\\to0}|f(x)|=\\infty$ 时，证明同样的结论。（这类极限的精确定义见习题 37。）"
+        },
+        {
+          "id": "p111-b7",
+          "source": "(c) Prove that if neither of these two conditions holds, then there is a function $g$ such that $\\displaystyle\\lim_{x\\to0}g(x)$ does not exist, but $\\displaystyle\\lim_{x\\to0}f(x)g(x)$ does exist.",
+          "sourceSha256": "175a8abb4725608aca283afacde0e483968e799e6a98ebc2c6b68258b041456d",
+          "translation": "(c) 证明：如果这两个条件都不成立，那么存在函数 $g$，使 $\\displaystyle\\lim_{x\\to0}g(x)$ 不存在，但 $\\displaystyle\\lim_{x\\to0}f(x)g(x)$ 存在。"
+        },
+        {
+          "id": "p111-b8",
+          "source": "Hint: Consider separately the following two cases: (1) for some $\\varepsilon>0$ we have $|f(x)|>\\varepsilon$ for all sufficiently small $x$. (2) For every $\\varepsilon>0$, there are arbitrarily small $x$ with $|f(x)|<\\varepsilon$. In the second case, begin by choosing points $x_n$ with $|x_n|<1/n$ and $|f(x_n)|<1/n$.",
+          "sourceSha256": "d3aaf730d09b64521a0936b89ac9454661bb62d7f758e1e35425786acdf24178",
+          "translation": "提示：分别考虑以下两种情况：(1) 存在某个 $\\varepsilon>0$，使对所有充分小的 $x$ 都有 $|f(x)|>\\varepsilon$。(2) 对于每个 $\\varepsilon>0$，都有任意小的 $x$ 满足 $|f(x)|<\\varepsilon$。在第二种情况中，先选择满足 $|x_n|<1/n$ 和 $|f(x_n)|<1/n$ 的点 $x_n$。"
+        },
+        {
+          "id": "p111-b9",
+          "source": "### \\*24.",
+          "sourceSha256": "f798979970ec1033ba5cf3589df2a8d645141a228b89e4b7b95827882426bad3"
+        },
+        {
+          "id": "p111-b10",
+          "source": "Suppose that $A_n$ is, for each natural number $n$, some *finite* set of numbers in $[0,1]$, and that $A_n$ and $A_m$ have no members in common if $m\\ne n$. Define $f$ as follows:",
+          "sourceSha256": "9119386074dae8f08fd2a9328c5988bb629a153e6d46bfaf6497fe793139daf6",
+          "translation": "假设对于每个自然数 $n$，$A_n$ 都是 $[0,1]$ 中数的一个*有限*集合，且当 $m\\ne n$ 时，$A_n$ 和 $A_m$ 没有公共元素。如下定义 $f$："
+        },
+        {
+          "id": "p111-b11",
+          "source": "$$f(x)=\\begin{cases}1/n,&x\\text{ in }A_n\\\\0,&x\\text{ not in }A_n\\text{ for any }n.\\end{cases}$$",
+          "sourceSha256": "3a279be2a48d6b9b36881ee66b603a75a5c452a3cd7715703d4ebfc0d9266bfa"
+        },
+        {
+          "id": "p111-b12",
+          "source": "Prove that $\\displaystyle\\lim_{x\\to a}f(x)=0$ for all $a$ in $[0,1]$.",
+          "sourceSha256": "e9b72f9045c2c9c1b9d869d1bd6971449e22ef3e401b477d8c0e0784fac334ff",
+          "translation": "证明：对于 $[0,1]$ 中的所有 $a$，都有 $\\displaystyle\\lim_{x\\to a}f(x)=0$。"
+        },
+        {
+          "id": "p111-b13",
+          "source": "### 25.",
+          "sourceSha256": "e243042975caa2efce0a7385b48b4be10d7c1f2cfeac6357090078c2f5eb5e34"
+        },
+        {
+          "id": "p111-b14",
+          "source": "Explain why the following definitions of $\\displaystyle\\lim_{x\\to a}f(x)=l$ are all correct: For every $\\delta>0$ there is an $\\varepsilon>0$ such that, for all $x$,",
+          "sourceSha256": "5c3e061a369494cf5d170f014fc7bda39429667ebf06a9c82991019163b0c074",
+          "translation": "解释为什么下面关于 $\\displaystyle\\lim_{x\\to a}f(x)=l$ 的定义全都是正确的：对于每个 $\\delta>0$，都存在一个 $\\varepsilon>0$，使得对于所有 $x$，"
+        },
+        {
+          "id": "p111-b15",
+          "source": "(i) if $0<|x-a|<\\varepsilon$, then $|f(x)-l|<\\delta$.",
+          "sourceSha256": "bf1d143bdf2c79bca13488506788ade915c12ea4b9fcb160d9b1d5ed6e99793d",
+          "translation": "(i) 如果 $0<|x-a|<\\varepsilon$，那么 $|f(x)-l|<\\delta$。"
+        },
+        {
+          "id": "p111-b16",
+          "source": "(ii) if $0<|x-a|<\\varepsilon$, then $|f(x)-l|\\le\\delta$.",
+          "sourceSha256": "d3debead7a1d13a43d4aca97a85392ac8fe850db34130908152207ff08ded763",
+          "translation": "(ii) 如果 $0<|x-a|<\\varepsilon$，那么 $|f(x)-l|\\le\\delta$。"
+        },
+        {
+          "id": "p111-b17",
+          "source": "(iii) if $0<|x-a|<\\varepsilon$, then $|f(x)-l|<5\\delta$.",
+          "sourceSha256": "c4a76aff7f52f79f34c0e0d192d723aea963dca4231e3386cca0770f105e0436",
+          "translation": "(iii) 如果 $0<|x-a|<\\varepsilon$，那么 $|f(x)-l|<5\\delta$。"
+        },
+        {
+          "id": "p111-b18",
+          "source": "(iv) if $0<|x-a|<\\varepsilon/10$, then $|f(x)-l|<\\delta$.",
+          "sourceSha256": "711aa0cf05d245e232317130811be020631e4152cf82e288b3da95daa227baf6",
+          "translation": "(iv) 如果 $0<|x-a|<\\varepsilon/10$，那么 $|f(x)-l|<\\delta$。"
+        },
+        {
+          "id": "p111-b19",
+          "source": "### \\*26.",
+          "sourceSha256": "fa04b9562895195d9e378e798dabcc9ed3bb411bf9015aed98cb0bb6241e3311"
+        },
+        {
+          "id": "p111-b20",
+          "source": "Give examples to show that the following definitions of $\\displaystyle\\lim_{x\\to a}f(x)=l$ are *not* correct.",
+          "sourceSha256": "6c28d45a33eb244c240d2b517117121189b7ee83da6af00343a34b660ff16a40",
+          "translation": "举例说明下面关于 $\\displaystyle\\lim_{x\\to a}f(x)=l$ 的定义*不正确*。"
+        },
+        {
+          "id": "p111-b21",
+          "source": "(a) For all $\\delta>0$ there is an $\\varepsilon>0$ such that if $0<|x-a|<\\delta$, then $|f(x)-l|<\\varepsilon$.",
+          "sourceSha256": "d76a5d8cc7a0985aba8d6460ded7b1f7fe175b93eba140c07dd3a6510924c067",
+          "translation": "(a) 对于所有 $\\delta>0$，都存在一个 $\\varepsilon>0$，使得如果 $0<|x-a|<\\delta$，那么 $|f(x)-l|<\\varepsilon$。"
+        },
+        {
+          "id": "p111-b22",
+          "source": "(b) For all $\\varepsilon>0$ there is a $\\delta>0$ such that if $|f(x)-l|<\\varepsilon$, then $0<|x-a|<\\delta$.",
+          "sourceSha256": "45b1df2138159fd66de1dd3a85f2f9a6cf4be7435d60f44584f7e657a2b6f3ea",
+          "translation": "(b) 对于所有 $\\varepsilon>0$，都存在一个 $\\delta>0$，使得如果 $|f(x)-l|<\\varepsilon$，那么 $0<|x-a|<\\delta$。"
+        }
+      ]
+    },
+    {
+      "printed": 112,
+      "sourceSha256": "07904c0823c906712ba31fe30623340c6035ebc54c4c1599ff1c4afebbfb3d96",
+      "blocks": [
+        {
+          "id": "p112-b1",
+          "source": "### 27.",
+          "sourceSha256": "01de3c63fd790d0deac18299d79a16ecfff7727c478f7c8964568f07245d3eec"
+        },
+        {
+          "id": "p112-b2",
+          "source": "For each of the functions in Problem 4-17 indicate for which numbers $a$ the one-sided limits $\\displaystyle\\lim_{x\\to a^+}f(x)$ and $\\displaystyle\\lim_{x\\to a^-}f(x)$ exist.",
+          "sourceSha256": "f1e72e28d3cedc64061d3d0f09f24f2fcf812b874733e83380fff09bc2a8eb22",
+          "translation": "对习题 4-17 中的每个函数，指出对于哪些数 $a$，单侧极限 $\\displaystyle\\lim_{x\\to a^+}f(x)$ 和 $\\displaystyle\\lim_{x\\to a^-}f(x)$ 存在。"
+        },
+        {
+          "id": "p112-b3",
+          "source": "### \\*28.",
+          "sourceSha256": "75d78f2bb351ceed4e366ef355cf2da48be591c770d28c34d48aba743eea4c6d"
+        },
+        {
+          "id": "p112-b4",
+          "source": "(a) Do the same for each of the functions in Problem 4-19.",
+          "sourceSha256": "ce695ee464f41a79ea2ffdcbe74c2c9dcddfeef56e3522a89c01760524eac0d8",
+          "translation": "(a) 对习题 4-19 中的每个函数做同样的判断。"
+        },
+        {
+          "id": "p112-b5",
+          "source": "(b) Also consider what happens if decimals ending in $0$’s are used instead of decimals ending in $9$’s.",
+          "sourceSha256": "f069225e481d726cdc35329c43bbe9626ca33d3175fc9c70b01afd7d115f8041",
+          "translation": "(b) 也考虑用以 $0$ 结尾的小数代替以 $9$ 结尾的小数时，会发生什么。"
+        },
+        {
+          "id": "p112-b6",
+          "source": "### 29.",
+          "sourceSha256": "2b03e98fafcd40e8fdba5086d1753ea10425470a6703dc5959a8d997b5c69ba4"
+        },
+        {
+          "id": "p112-b7",
+          "source": "Prove that $\\displaystyle\\lim_{x\\to a}f(x)$ exists if $\\displaystyle\\lim_{x\\to a^+}f(x)=\\lim_{x\\to a^-}f(x)$.",
+          "sourceSha256": "e10952d5236d73f55c7ee6ad982895bd3bf8c6831a48bbae8cb2495fcf1a7c29",
+          "translation": "证明：如果 $\\displaystyle\\lim_{x\\to a^+}f(x)=\\lim_{x\\to a^-}f(x)$，那么 $\\displaystyle\\lim_{x\\to a}f(x)$ 存在。"
+        },
+        {
+          "id": "p112-b8",
+          "source": "### 30.",
+          "sourceSha256": "3af8d9cda2244caa10c3e85da41840dc8c8c907907fa1a17e47f6da23b5d7ba1"
+        },
+        {
+          "id": "p112-b9",
+          "source": "Prove that",
+          "sourceSha256": "bd05d81834d558ff6258ab898c195fc8fed52ba9be04f6f90e4270d8bdb0bbcb",
+          "translation": "证明"
+        },
+        {
+          "id": "p112-b10",
+          "source": "(i) $\\displaystyle\\lim_{x\\to0^+}f(x)=\\lim_{x\\to0^-}f(-x)$.",
+          "sourceSha256": "2c3fef3a6a83c3a06697b4e21fca2b72c6cd8e4300c5cf6d14a7eaeb16bf9529"
+        },
+        {
+          "id": "p112-b11",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to0}f(|x|)=\\lim_{x\\to0^+}f(x)$.",
+          "sourceSha256": "e9c733f2da886db1a80da7ddeac9a015161456170103de69c409826de3903fa0"
+        },
+        {
+          "id": "p112-b12",
+          "source": "(iii) $\\displaystyle\\lim_{x\\to0}f(x^2)=\\lim_{x\\to0^+}f(x)$.",
+          "sourceSha256": "e20f6dd5fe1c70e33b3cd47f68e59a9d8afff3ae7fa82bd52e912bec6e6e896c"
+        },
+        {
+          "id": "p112-b13",
+          "source": "(These equations, and others like them, are open to several interpretations. They might mean only that the two limits are equal if they both exist; or that if a certain one of the limits exists, the other also exists and is equal to it; or that if either limit exists, then the other exists and is equal to it. Decide for yourself which interpretations are suitable.)",
+          "sourceSha256": "3a9607cabedd9c2881c9405a4c859cbe11fd50f307225aa44264ee2af5a9f363",
+          "translation": "（这些等式以及类似等式，可以有几种解释：它们也许只表示，如果两个极限都存在，则它们相等；也许表示，如果某一个指定的极限存在，那么另一个也存在且与它相等；或者表示，只要任一个极限存在，另一个就存在且与它相等。请自行判断哪些解释合适。）"
+        },
+        {
+          "id": "p112-b14",
+          "source": "### 31.",
+          "sourceSha256": "c2a230851d457202448280e05f5df5e0c9dc069d235a5c511aa1e04b450cf4ed"
+        },
+        {
+          "id": "p112-b15",
+          "source": "Suppose that $\\displaystyle\\lim_{x\\to a^-}f(x)<\\lim_{x\\to a^+}f(x)$. (Draw a picture to illustrate this assertion.) Prove that there is some $\\delta>0$ such that $f(x)<f(y)$ whenever $x<a<y$ and $|x-a|<\\delta$ and $|y-a|<\\delta$. Is the converse true?",
+          "sourceSha256": "af4dc507f68b14ca67ad1a024f95ce8ba4c2f8ebc1b24912f35927401e489b58",
+          "translation": "假设 $\\displaystyle\\lim_{x\\to a^-}f(x)<\\lim_{x\\to a^+}f(x)$。（画图说明这一断言。）证明：存在某个 $\\delta>0$，使得只要 $x<a<y$、$|x-a|<\\delta$ 且 $|y-a|<\\delta$，就有 $f(x)<f(y)$。逆命题成立吗？"
+        },
+        {
+          "id": "p112-b16",
+          "source": "### 32.",
+          "sourceSha256": "81939346f30e826a21b1c572844c82f1ef83f495d8fb39cf38a0c7b615b27121"
+        },
+        {
+          "id": "p112-b17",
+          "source": "Prove that $\\displaystyle\\lim_{x\\to\\infty}(a_nx^n+\\cdots+a_0)/(b_mx^m+\\cdots+b_0)$ (with $a_n\\ne0$ and $b_m\\ne0$) exists if and only if $m\\ge n$. What is the limit when $m=n$? When $m>n$? Hint: the one easy limit is $\\displaystyle\\lim_{x\\to\\infty}1/x^k=0$; do some algebra so that this is the only information you need.",
+          "sourceSha256": "e40dfc4b6ab2d639f98dd43b3f9ce5076504097b9337756bdf8211155449c3c0",
+          "translation": "证明：$\\displaystyle\\lim_{x\\to\\infty}(a_nx^n+\\cdots+a_0)/(b_mx^m+\\cdots+b_0)$（其中 $a_n\\ne0$ 且 $b_m\\ne0$）存在，当且仅当 $m\\ge n$。当 $m=n$ 时，极限是什么？当 $m>n$ 时呢？提示：容易求得的极限是 $\\displaystyle\\lim_{x\\to\\infty}1/x^k=0$；作一些代数变形，使它成为你所需的唯一信息。"
+        },
+        {
+          "id": "p112-b18",
+          "source": "### 33.",
+          "sourceSha256": "c12eaf6341852cae6b1a2cd13f1fdd1b6509e938d566771e0b1cb36e9069bcca"
+        },
+        {
+          "id": "p112-b19",
+          "source": "Find the following limits.",
+          "sourceSha256": "0308a8b9fdfd6413154327e3ede91ad81bb6c82d0ca666d1e47abd0affb4c898",
+          "translation": "求下列极限。"
+        },
+        {
+          "id": "p112-b20",
+          "source": "(i) $\\displaystyle\\lim_{x\\to\\infty}\\frac{x+\\sin^3x}{5x+6}$.",
+          "sourceSha256": "d8a4f69bab1ae6d74b943ce006d32e56c76dbded2ce6440a94d6c3256c172866"
+        },
+        {
+          "id": "p112-b21",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to\\infty}\\frac{x\\sin x}{x^2+5}$.",
+          "sourceSha256": "49b40e3546dd4bdef1c3967e19dab30cbf09f4bd26155cda9bcb6c497e64c8cb"
+        },
+        {
+          "id": "p112-b22",
+          "source": "(iii) $\\displaystyle\\lim_{x\\to\\infty}\\sqrt{x^2+x}-x$.",
+          "sourceSha256": "d47e6eccb8ebae57c596d826b263d67a0b0a4062b794b8d60cf7cc6a1d2ae12a"
+        },
+        {
+          "id": "p112-b23",
+          "source": "(iv) $\\displaystyle\\lim_{x\\to\\infty}\\frac{x^2(1+\\sin^2x)}{(x+\\sin x)^2}$.",
+          "sourceSha256": "85b3c1e294ddf72a3810cfa5471e1de044a63b1097997c00582e46532fb5a010"
+        },
+        {
+          "id": "p112-b24",
+          "source": "### 34.",
+          "sourceSha256": "c0da9b5cdb9004db42f48ad442d0c66ec7d2c084a2f31bc2cb990a6cfc2fd8fa"
+        },
+        {
+          "id": "p112-b25",
+          "source": "Prove that $\\displaystyle\\lim_{x\\to0^+}f(1/x)=\\lim_{x\\to\\infty}f(x)$.",
+          "sourceSha256": "0d906879f96717cce74d8f349d291401ed420520e25ce7bdf142c6f89fafdc45",
+          "translation": "证明 $\\displaystyle\\lim_{x\\to0^+}f(1/x)=\\lim_{x\\to\\infty}f(x)$。"
+        },
+        {
+          "id": "p112-b26",
+          "source": "### 35.",
+          "sourceSha256": "924547e87f10e3c40ecbce3d5e5125dd9733cbbc92f0658166e24134f3c6da1f"
+        },
+        {
+          "id": "p112-b27",
+          "source": "Find the following limits in terms of the number $\\alpha=\\displaystyle\\lim_{x\\to0}(\\sin x)/x$.",
+          "sourceSha256": "4a5fede5d05066c7b6da9aca4770033328ac8c797b29537a7b034331c9bd8b2f",
+          "translation": "用数 $\\alpha=\\displaystyle\\lim_{x\\to0}(\\sin x)/x$ 表示下列极限的值。"
+        },
+        {
+          "id": "p112-b28",
+          "source": "(i) $\\displaystyle\\lim_{x\\to\\infty}\\frac{\\sin x}x$.",
+          "sourceSha256": "695d740b221304e59954ac70c749bb70104fa9cc8a598a2e9b72c39a857312b7"
+        },
+        {
+          "id": "p112-b29",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to\\infty}x\\sin\\frac1x$.",
+          "sourceSha256": "226d3f5a6fa890ac22a421fc9cc396717721a5b9e96fb9b7e401ca196e86b56e"
+        }
+      ]
+    },
+    {
+      "printed": 113,
+      "sourceSha256": "47f7dcf307a73cea424a9f0ba7e496d3d5d1d306d22ef4ae37e47f8537f31104",
+      "blocks": [
+        {
+          "id": "p113-b1",
+          "source": "### 36.",
+          "sourceSha256": "c4090fcf40e6199865d9a24db2f11990e08dc258ad7c0efba02290371edca589"
+        },
+        {
+          "id": "p113-b2",
+          "source": "Define “$\\displaystyle\\lim_{x\\to-\\infty}f(x)=l$.”",
+          "sourceSha256": "d4173d0016c71643e5ce1878c4a9b572a6dad6a97e8f0c7dcad011fa2a1e0bbd",
+          "translation": "定义“$\\displaystyle\\lim_{x\\to-\\infty}f(x)=l$”。"
+        },
+        {
+          "id": "p113-b3",
+          "source": "(a) Find $\\displaystyle\\lim_{x\\to-\\infty}(a_nx^n+\\cdots+a_0)/(b_mx^m+\\cdots+b_0)$.",
+          "sourceSha256": "b813ac94a868a078392bbf87144a19af17c8c5a5cad015f10f837c975cb0cde2",
+          "translation": "(a) 求 $\\displaystyle\\lim_{x\\to-\\infty}(a_nx^n+\\cdots+a_0)/(b_mx^m+\\cdots+b_0)$。"
+        },
+        {
+          "id": "p113-b4",
+          "source": "(b) Prove that $\\displaystyle\\lim_{x\\to\\infty}f(x)=\\lim_{x\\to-\\infty}f(-x)$.",
+          "sourceSha256": "7df240625a16573d8e2b15ca6c050b717d5bf37dca1e06828d1281df5bb8bba2",
+          "translation": "(b) 证明 $\\displaystyle\\lim_{x\\to\\infty}f(x)=\\lim_{x\\to-\\infty}f(-x)$。"
+        },
+        {
+          "id": "p113-b5",
+          "source": "(c) Prove that $\\displaystyle\\lim_{x\\to0^-}f(1/x)=\\lim_{x\\to-\\infty}f(x)$.",
+          "sourceSha256": "9588e5cc8d4a05aad8785f46679c9dcf72445fba49d1fbe788d0ce287bfe0956",
+          "translation": "(c) 证明 $\\displaystyle\\lim_{x\\to0^-}f(1/x)=\\lim_{x\\to-\\infty}f(x)$。"
+        },
+        {
+          "id": "p113-b6",
+          "source": "### 37.",
+          "sourceSha256": "5475ed2588f51fb321f6ee63cd33a023c6fbecc5cdea891eac6b49f1d623f1a5"
+        },
+        {
+          "id": "p113-b7",
+          "source": "We define $\\displaystyle\\lim_{x\\to a}f(x)=\\infty$ to mean that for all $N$ there is a $\\delta>0$ such that, for all $x$, if $0<|x-a|<\\delta$, then $f(x)>N$. (Draw an appropriate picture!) (Of course, we may still say that $\\displaystyle\\lim_{x\\to a}f(x)$ “does not exist” in the usual sense.)",
+          "sourceSha256": "3949b39e003be859b5b5d7a3d7d225eaa3e4385297cd1ebd5c18e294727337a0",
+          "translation": "我们把 $\\displaystyle\\lim_{x\\to a}f(x)=\\infty$ 定义为：对于所有 $N$，都存在一个 $\\delta>0$，使得对于所有 $x$，如果 $0<|x-a|<\\delta$，那么 $f(x)>N$。（画一幅合适的图！）（当然，按通常意义，我们仍可说 $\\displaystyle\\lim_{x\\to a}f(x)$ “不存在”。）"
+        },
+        {
+          "id": "p113-b8",
+          "source": "(a) Show that $\\displaystyle\\lim_{x\\to3}1/(x-3)^2=\\infty$.",
+          "sourceSha256": "5d3d954439679410eea9c2a8838109193eb2464113ba67e05246b74a63e032e8",
+          "translation": "(a) 证明 $\\displaystyle\\lim_{x\\to3}1/(x-3)^2=\\infty$。"
+        },
+        {
+          "id": "p113-b9",
+          "source": "(b) Prove that if $f(x)>\\varepsilon>0$ for all $x$, and $\\displaystyle\\lim_{x\\to a}g(x)=0$, then",
+          "sourceSha256": "768a13cc61f9e731f6a665207aa55cf9034366e09e4a563f8789e8ef535c4252",
+          "translation": "(b) 证明：如果对所有 $x$ 都有 $f(x)>\\varepsilon>0$，并且 $\\displaystyle\\lim_{x\\to a}g(x)=0$，那么"
+        },
+        {
+          "id": "p113-b10",
+          "source": "$$\\lim_{x\\to a}f(x)/|g(x)|=\\infty.$$",
+          "sourceSha256": "53717973b9f753fa19f4b8a7a205c15035873a770d98a3dd36b2ef5c4a1344a9"
+        },
+        {
+          "id": "p113-b11",
+          "source": "### 38.",
+          "sourceSha256": "56223f9b4c7ac5c843813c98ce5200023958093ff1a03d889e40f33af938bd7b"
+        },
+        {
+          "id": "p113-b12",
+          "source": "(a) Define $\\displaystyle\\lim_{x\\to a^+}f(x)=\\infty$ and $\\displaystyle\\lim_{x\\to a^-}f(x)=\\infty$. (Or at least convince yourself that you could write down the definitions if you had the energy. How many other such symbols can you define?)",
+          "sourceSha256": "34fca591d9aeffbb9d73c7085dd9b15adc7e0b6e7d9198114dd1bc01925d6ce1",
+          "translation": "(a) 定义 $\\displaystyle\\lim_{x\\to a^+}f(x)=\\infty$ 和 $\\displaystyle\\lim_{x\\to a^-}f(x)=\\infty$。（或者，至少使自己相信：只要有精力，就能写出这些定义。你还能定义多少个这样的符号？）"
+        },
+        {
+          "id": "p113-b13",
+          "source": "(b) Prove that $\\displaystyle\\lim_{x\\to0^+}1/x=\\infty$.",
+          "sourceSha256": "6d44aa4921edaa314f2eb49b90c032880788539d46bbc15736af54e4bf8061a8",
+          "translation": "(b) 证明 $\\displaystyle\\lim_{x\\to0^+}1/x=\\infty$。"
+        },
+        {
+          "id": "p113-b14",
+          "source": "(c) Prove that $\\displaystyle\\lim_{x\\to0^+}f(x)=\\infty$ if and only if $\\displaystyle\\lim_{x\\to\\infty}f(1/x)=\\infty$.",
+          "sourceSha256": "da869029b96228ee063d46cfabecd442e2d6c937879ffc2f5ce9cf08bfe26817",
+          "translation": "(c) 证明：$\\displaystyle\\lim_{x\\to0^+}f(x)=\\infty$ 当且仅当 $\\displaystyle\\lim_{x\\to\\infty}f(1/x)=\\infty$。"
+        },
+        {
+          "id": "p113-b15",
+          "source": "### 39.",
+          "sourceSha256": "4b28c130fd22a67593d37c0e09695b4dc2e5ebd2b6959be749998cb26d88bfe3"
+        },
+        {
+          "id": "p113-b16",
+          "source": "Find the following limits, when they exist.",
+          "sourceSha256": "cd0c56d0824129edaedfe2a595e3827610a5a3c735a8b9cbca8cbc1e5becd268",
+          "translation": "求下列极限，如果它们存在。"
+        },
+        {
+          "id": "p113-b17",
+          "source": "(i) $\\displaystyle\\lim_{x\\to\\infty}\\frac{x^3+4x-7}{7x^2-x+1}$",
+          "sourceSha256": "0e71c33e8bb25200ee9280df873e55d6152b83dd3f2d1fdbc9f54472c5ee31f0"
+        },
+        {
+          "id": "p113-b18",
+          "source": "(ii) $\\displaystyle\\lim_{x\\to\\infty}x(1+\\sin^2x)$.",
+          "sourceSha256": "1f0e28da4cbf3816fc31c712e0a8fc4dcfe6ad5fad07b9231beb9b29cfc4846b"
+        },
+        {
+          "id": "p113-b19",
+          "source": "(iii) $\\displaystyle\\lim_{x\\to\\infty}x\\sin^2x$.",
+          "sourceSha256": "2a3eb39bf0be99c04a0ff4751ee042b3780591831a5fb8bd51fe10cbec86c237"
+        },
+        {
+          "id": "p113-b20",
+          "source": "(iv) $\\displaystyle\\lim_{x\\to\\infty}x^2\\sin\\frac1x$.",
+          "sourceSha256": "f2d3cdd5b78c3c5f0fa73c58bc7208f96ee7de5ebe7ff28acf63d86413ca47b5"
+        },
+        {
+          "id": "p113-b21",
+          "source": "(v) $\\displaystyle\\lim_{x\\to\\infty}\\sqrt{x^2+2x}-x$.",
+          "sourceSha256": "1d5b85f5ca49c57fe256d717ba6ebc5d386a5a366051c17a84d9f342acbe2df1"
+        },
+        {
+          "id": "p113-b22",
+          "source": "(vi) $\\displaystyle\\lim_{x\\to\\infty}x(\\sqrt{x+2}-\\sqrt x)$.",
+          "sourceSha256": "b18575eca29a6bc16e16cd3955a436081b769d09b067ee057e7e11972199bb01"
+        },
+        {
+          "id": "p113-b23",
+          "source": "(vii) $\\displaystyle\\lim_{x\\to\\infty}\\frac{\\sqrt{|x|}}x$.",
+          "sourceSha256": "70bfb4c531a0e2ba92bd2973b24b82bf94c2055290ceab305ff08f2256ac5a8c"
+        },
+        {
+          "id": "p113-b24",
+          "source": "### 40.",
+          "sourceSha256": "a6379ab4ff8f44c9be8df20ccf24acc7ad9af35231f678a0a3b1b48ac534725d"
+        },
+        {
+          "id": "p113-b25",
+          "source": "(a) Find the perimeter of a regular $n$-gon inscribed in a circle of radius $r$. [Answer: $2rn\\sin(\\pi/n)$.]",
+          "sourceSha256": "b3672b9cb066516929e3e9112d464ff23509835d6c6d22eb658783e28b4b1ffc",
+          "translation": "(a) 求半径为 $r$ 的圆的内接正 $n$ 边形的周长。〔答案：$2rn\\sin(\\pi/n)$。〕"
+        },
+        {
+          "id": "p113-b26",
+          "source": "(b) What value does this perimeter approach as $n$ becomes very large?",
+          "sourceSha256": "d366d86ae6fa090278187bca6278abc267d5e334acd3a8c8f4eb2bbce4bf9b33",
+          "translation": "(b) 当 $n$ 变得非常大时，这个周长趋近什么值？"
+        },
+        {
+          "id": "p113-b27",
+          "source": "(c) What limit can you guess from this?",
+          "sourceSha256": "440f05972b18464d22ed8c4cdcd638382cba9af98b2397fd34a38cadbbc40714",
+          "translation": "(c) 由此可以猜出什么极限？"
+        }
+      ]
+    },
+    {
+      "printed": 114,
+      "sourceSha256": "d1f09f2981873980b40db0d0799b1046460a141e0325850135b5a402ecc5e203",
+      "blocks": [
+        {
+          "id": "p114-b1",
+          "source": "### 41.",
+          "sourceSha256": "99d7fc71ac48ddd8ec80dce1bb4b7a7784dcd083ec80b2c5ff7e9cb3339596ca"
+        },
+        {
+          "id": "p114-b2",
+          "source": "(a) For $c>1$, show that $c^{1/n}=\\sqrt[n]c$ approaches $1$ as $n$ becomes very large. Hint: Show that for any $\\varepsilon>0$ we cannot have $c^{1/n}>1+\\varepsilon$ for large $n$.",
+          "sourceSha256": "814a01d083a7acef6e5b2c228e218fefe7777776300029ef4f5676fd21a344db",
+          "translation": "(a) 对于 $c>1$，证明：当 $n$ 变得非常大时，$c^{1/n}=\\sqrt[n]c$ 趋近 $1$。提示：证明对任意 $\\varepsilon>0$，当 $n$ 很大时，不可能有 $c^{1/n}>1+\\varepsilon$。"
+        },
+        {
+          "id": "p114-b3",
+          "source": "(b) More generally, if $c>0$, then $c^{1/n}$ approaches $1$ as $n$ becomes very large.",
+          "sourceSha256": "afe68f11627e6f0bf2e009aa485b3bfcec0a1023ed9ff17ff6f3fa7d00afe833",
+          "translation": "(b) 更一般地，若 $c>0$，那么当 $n$ 变得非常大时，$c^{1/n}$ 趋近 $1$。"
+        },
+        {
+          "id": "p114-b4",
+          "source": "### \\*42.",
+          "sourceSha256": "47bd601f332053272d82abc87a6127b25d7503f72489de7e3ccfc8fa630cc7ee"
+        },
+        {
+          "id": "p114-b5",
+          "source": "After sending the manuscript for the first edition of this book off to the printer, I thought of a much simpler way to prove that $\\displaystyle\\lim_{x\\to a}x^2=a^2$ and $\\displaystyle\\lim_{x\\to a}x^3=a^3$, without going through all the factoring tricks on page 92. Suppose, for example, that we want to prove that $\\displaystyle\\lim_{x\\to a}x^2=a^2$, where $a>0$. Given $\\varepsilon>0$, we simply let $\\delta$ be the minimum of $\\sqrt{a^2+\\varepsilon}-a$ and $a-\\sqrt{a^2-\\varepsilon}$ (see Figure 19); then $|x-a|<\\delta$ implies that $\\sqrt{a^2-\\varepsilon}<x<\\sqrt{a^2+\\varepsilon}$, so $a^2-\\varepsilon<x^2<a^2+\\varepsilon$, or $|x^2-a^2|<\\varepsilon$. It is fortunate that these pages had already been set, so that I couldn’t make these changes, because this “proof” is completely fallacious. Wherein lies the fallacy?",
+          "sourceSha256": "8b5cd1a58e84fb7059c9fb5a4de13d5e7ee27b7acc9448df98722ddc0c0881e3",
+          "translation": "把本书第一版的手稿交付印刷之后，我想到了一种简单得多的方法，能够证明 $\\displaystyle\\lim_{x\\to a}x^2=a^2$ 和 $\\displaystyle\\lim_{x\\to a}x^3=a^3$，而不必使用第 92 页那些因式分解技巧。例如，假设想证明 $\\displaystyle\\lim_{x\\to a}x^2=a^2$，其中 $a>0$。给定 $\\varepsilon>0$，只需把 $\\delta$ 取为 $\\sqrt{a^2+\\varepsilon}-a$ 和 $a-\\sqrt{a^2-\\varepsilon}$ 中较小的一个（见图 19）；那么 $|x-a|<\\delta$ 就蕴含 $\\sqrt{a^2-\\varepsilon}<x<\\sqrt{a^2+\\varepsilon}$，因此 $a^2-\\varepsilon<x^2<a^2+\\varepsilon$，即 $|x^2-a^2|<\\varepsilon$。幸好当时这些页已经排好版，我无法再作修改，因为这个“证明”是完全错误的。错误究竟在哪里？"
+        },
+        {
+          "id": "p114-b6",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:450px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"41 276 451 267\" role=\"img\" aria-label=\"Figure 20\"><image href=\"pages/book/0132.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\" clip-path=\"url(#original-ch5-fig20-crop)\"/><defs><clipPath id=\"original-ch5-fig20-crop\"><path d=\"M41 276H468V304H492V543H41Z\"/></clipPath></defs></svg>\n<figcaption>FIGURE 20</figcaption>\n</figure>",
+          "sourceSha256": "4a20faa00ac2242fc36ddc406e90cf19facbc0f2f18e6b553f54b7462cbd04d1"
+        }
+      ]
+    }
+  ]
+}

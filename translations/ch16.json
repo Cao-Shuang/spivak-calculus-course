@@ -1,0 +1,554 @@
+{
+  "chapter": 16,
+  "language": "zh-CN",
+  "sourceSha256": "d15299d0fa67c8da3d2a35d16f33e987157bdeeaa5e234e39374c6a6e11cc4ee",
+  "paragraphCount": 50,
+  "pages": [
+    {
+      "printed": 324,
+      "sourceSha256": "5a10f73840253dafe9ef9f3925c8a628eb137876c6e479c180a264f28efe66c8",
+      "blocks": [
+        {
+          "id": "p324-b1",
+          "source": "# \\*CHAPTER 16\n# $\\pi$ IS IRRATIONAL",
+          "sourceSha256": "42e4cabcac082ead6d9c824e3e0c1122748f1b8380cb36bb5af10a9eed113adb",
+          "translation": "# \\*第 16 章\n# $\\pi$ 是无理数"
+        },
+        {
+          "id": "p324-b2",
+          "source": "This short chapter, diverging from the main stream of the book, is included to demonstrate that we are already in a position to do some sophisticated mathematics. This entire chapter is devoted to an elementary proof that $\\pi$ is irrational. Like many “elementary” proofs of deep theorems, the motivation for many steps in our proof cannot be supplied; nevertheless, it is still quite possible to follow the proof step-by-step.",
+          "sourceSha256": "d86f12fa86ee41c0b4b6d2f3f6d9de58f2f2169c209c57a44beff520af89a80f",
+          "translation": "这一短章暂时离开本书的主线，目的是表明，我们已经有能力做一些相当精妙的数学了。整章都用于给出 $\\pi$ 是无理数的一个初等证明。与许多深刻定理的“初等”证明一样，这个证明中许多步骤的动机无法交代；不过，逐步跟随证明仍然完全做得到。"
+        },
+        {
+          "id": "p324-b3",
+          "source": "Two observations must be made before the proof. The first concerns the function",
+          "sourceSha256": "1443de7c00f3e16facf45c673389250d804f0f299e50e46576976155db50a7bf",
+          "translation": "证明之前，必须先作两点观察。第一点涉及函数"
+        },
+        {
+          "id": "p324-b4",
+          "source": "$$f_n(x)=\\frac{x^n(1-x)^n}{n!},$$",
+          "sourceSha256": "0ef2d47a3fe8be2b4651867681d75c36e49104f70c0b9c5eb052fbe25328379b"
+        },
+        {
+          "id": "p324-b5",
+          "source": "which clearly satisfies",
+          "sourceSha256": "07a5fb0db75f59804f2d8abc5c44589f01757d0189f672b6f60696bfddc7d124",
+          "translation": "它显然满足"
+        },
+        {
+          "id": "p324-b6",
+          "source": "$$0<f_n(x)<\\frac1{n!}\\quad\\text{for }0<x<1.$$",
+          "sourceSha256": "28aec675ffc9f52108155bdd74ec016b6df8417d99feac48c2fd1459fc0c0090"
+        },
+        {
+          "id": "p324-b7",
+          "source": "An important property of the function $f_n$ is revealed by considering the expression obtained by actually multiplying out $x^n(1-x)^n$. The lowest power of $x$ appearing will be $n$ and the highest power will be $2n$. Thus $f_n$ can be written in the form",
+          "sourceSha256": "7b6b3cc11c84497ff53fdd73086cfeb8d5b4c5275e56cce1a3ed7d4bcdc62009",
+          "translation": "把 $x^n(1-x)^n$ 实际展开后，考察所得表达式，就会发现函数 $f_n$ 的一个重要性质。出现的 $x$ 的最低次幂为 $n$，最高次幂为 $2n$。因此，$f_n$ 可以写成"
+        },
+        {
+          "id": "p324-b8",
+          "source": "$$f_n(x)=\\frac1{n!}\\sum_{i=n}^{2n}c_i x^i,$$",
+          "sourceSha256": "454beb2dc94e644bda8103aaa489c03871a88cdae4585b5d87bff251fba2054f"
+        },
+        {
+          "id": "p324-b9",
+          "source": "where the numbers $c_i$ are integers. It is clear from this expression that",
+          "sourceSha256": "6d55fa60c2fae609def357cbaca17109e2f6ea90cc9ca211d6b8fddacf71481e",
+          "translation": "其中各个数 $c_i$ 都是整数。从这个表达式显然可见"
+        },
+        {
+          "id": "p324-b10",
+          "source": "$$f_n^{(k)}(0)=0\\quad\\text{if }k<n\\text{ or }k>2n.$$",
+          "sourceSha256": "1c3a641ff947499f4b1a3ff911c6538ce0eceffc051e0640c464eb96eb02d1c5"
+        },
+        {
+          "id": "p324-b11",
+          "source": "Moreover,",
+          "sourceSha256": "e94a545b030ad40d2be07529f588ec2f28b72216234f9c8c6947c48f779a7d2c",
+          "translation": "此外，"
+        },
+        {
+          "id": "p324-b12",
+          "source": "$$\\begin{aligned}\nf_n^{(n)}(x)&=\\frac1{n!}[n!c_n+\\text{terms involving }x]\\\\\nf_n^{(n+1)}(x)&=\\frac1{n!}[(n+1)!c_{n+1}+\\text{terms involving }x]\\\\\n&\\vdots\\\\\nf_n^{(2n)}(x)&=\\frac1{n!}[(2n)!c_{2n}].\n\\end{aligned}$$",
+          "sourceSha256": "accf3bb3fee6e654c4354279fdca3677824c69fa8899ac7982d84da972a173b6"
+        }
+      ]
+    },
+    {
+      "printed": 325,
+      "sourceSha256": "0a2e541af401a09d2a2930fdb644b68f6a0b51b7885ea1f5a1eaafdf95480eb1",
+      "blocks": [
+        {
+          "id": "p325-b1",
+          "source": "This means that",
+          "sourceSha256": "041259ea12f12eb18f933aa1e8d8e689e381c18f1f462e7a4542e2bc357126de",
+          "translation": "这意味着"
+        },
+        {
+          "id": "p325-b2",
+          "source": "$$\\begin{aligned}\nf_n^{(n)}(0)&=c_n,\\\\\nf_n^{(n+1)}(0)&=(n+1)c_{n+1}\\\\\n&\\vdots\\\\\nf_n^{(2n)}(0)&=(2n)(2n-1)\\cdot\\ldots\\cdot(n+1)c_{2n},\n\\end{aligned}$$",
+          "sourceSha256": "4eff957884d3a62718cc4cd2551669930b6b1dd6dcc6fed1819dc7459753dd17"
+        },
+        {
+          "id": "p325-b3",
+          "source": "where the numbers on the right are all integers. Thus",
+          "sourceSha256": "9da89f19a7097a162864e0c6faec10673008c90059a3c4d7cd4e8bf9ed14a805",
+          "translation": "其中右边的数全都是整数。因此"
+        },
+        {
+          "id": "p325-b4",
+          "source": "$$f_n^{(k)}(0)\\text{ is an }\\mathit{integer}\\text{ for all }k.$$",
+          "sourceSha256": "c06d74734d3a155e4f4fafeb25c4e70edb8c91bfce608c01e80fa22a68025dc5"
+        },
+        {
+          "id": "p325-b5",
+          "source": "The relation",
+          "sourceSha256": "aba83ed8176df27b69fa0bb7f1ba9bd8ee7774b726f50a5d7c877e52feb1bc0f",
+          "translation": "关系"
+        },
+        {
+          "id": "p325-b6",
+          "source": "$$f_n(x)=f_n(1-x)$$",
+          "sourceSha256": "ab0980b8117cf50882366a7ed3660a4fe8c5cb00b12a0413277655b94651d3b2"
+        },
+        {
+          "id": "p325-b7",
+          "source": "implies that",
+          "sourceSha256": "dcd7d45f15d02138689c99abbf9f84fbe89dedc20acdbe880ae1af067de4b0ec",
+          "translation": "意味着"
+        },
+        {
+          "id": "p325-b8",
+          "source": "$$f_n^{(k)}(x)=(-1)^k f_n^{(k)}(1-x);$$",
+          "sourceSha256": "23a37fd0d2f9df0d0015f337ded2c0fb4caf3b5ebc01a8e26891503226cd3257"
+        },
+        {
+          "id": "p325-b9",
+          "source": "therefore,",
+          "sourceSha256": "0333b56a9b9eb4d134b28ad06f508ce4c641e3cc41f48ba51a814e51cca69ca0",
+          "translation": "所以，"
+        },
+        {
+          "id": "p325-b10",
+          "source": "$$f_n^{(k)}(1)\\text{ is also an }\\mathit{integer}\\text{ for all }k.$$",
+          "sourceSha256": "e575af9b794cac2a83ac987b2b5fed35f81634142c52649b4937d54894f04706"
+        },
+        {
+          "id": "p325-b11",
+          "source": "The proof that $\\pi$ is irrational requires one further observation: if $a$ is any positive number, and $\\varepsilon>0$, then for sufficiently large $n$ we will have",
+          "sourceSha256": "18d29cd2b024a4382e4ec7caa2f9e677092b17760adf8197c8ab66861b251982",
+          "translation": "证明 $\\pi$ 是无理数，还需要另一点观察：如果 $a$ 是任意正数，且 $\\varepsilon>0$，那么当 $n$ 足够大时，就有"
+        },
+        {
+          "id": "p325-b12",
+          "source": "$$\\frac{a^n}{n!}<\\varepsilon.$$",
+          "sourceSha256": "fd63a856fe5d8cc71aaec626aa9fe88329aebe45f2bfd29b0134ae38d12e6200"
+        },
+        {
+          "id": "p325-b13",
+          "source": "To prove this, notice that if $n\\ge2a$, then",
+          "sourceSha256": "277d415e633dfddac9a38f6f45da5a79b4869efa717bfd077c797df48f78a9ee",
+          "translation": "为证明这一点，注意，若 $n\\ge2a$，那么"
+        },
+        {
+          "id": "p325-b14",
+          "source": "$$\\frac{a^{n+1}}{(n+1)!}=\\frac{a}{n+1}\\cdot\\frac{a^n}{n!}<\\frac12\\cdot\\frac{a^n}{n!}.$$",
+          "sourceSha256": "2ae0a82db8aea76f474cae40563000170f2cd1739d06bf728242a4b6ab779bd3"
+        },
+        {
+          "id": "p325-b15",
+          "source": "Now let $n_0$ be any natural number with $n_0\\ge2a$. Then, whatever value",
+          "sourceSha256": "046abfbd854df09dd16bbe7bfa63cd855edca85be4bfcb5c102fbcb92e7a1f04",
+          "translation": "现在取任意满足 $n_0\\ge2a$ 的自然数 $n_0$。那么，无论"
+        },
+        {
+          "id": "p325-b16",
+          "source": "$$\\frac{a^{n_0}}{(n_0)!}$$",
+          "sourceSha256": "790e4f304290b82986ede90b9a6adb8eafecc45b5e3c614ee6ce533b37779b96"
+        },
+        {
+          "id": "p325-b17",
+          "source": "may have, the succeeding values satisfy",
+          "sourceSha256": "7b120df00ce565b478e376aeede9e600429779e3a186d64bfd900a205d98d448",
+          "translation": "的值是多少，后续的值都满足"
+        },
+        {
+          "id": "p325-b18",
+          "source": "$$\\begin{aligned}\n\\frac{a^{(n_0+1)}}{(n_0+1)!}&<\\frac12\\cdot\\frac{a^{n_0}}{(n_0)!}\\\\\n\\frac{a^{(n_0+2)}}{(n_0+2)!}&<\\frac12\\cdot\\frac{a^{(n_0+1)}}{(n_0+1)!}<\\frac12\\cdot\\frac12\\cdot\\frac{a^{n_0}}{(n_0)!}\\\\\n&\\vdots\\\\\n\\frac{a^{(n_0+k)}}{(n_0+k)!}&<\\frac1{2^k}\\cdot\\frac{a^{n_0}}{(n_0)!}.\n\\end{aligned}$$",
+          "sourceSha256": "cfe63b93ad9408a2b1a5e78cfc236132b8cd4a6944550b4248d651cefb87bd5f"
+        },
+        {
+          "id": "p325-b19",
+          "source": "If $k$ is so large that $\\dfrac{a^{n_0}}{(n_0)!\\varepsilon}<2^k$, then",
+          "sourceSha256": "2ca9a5240057412411be4c5eedebf75b1b23bb6167ac1605bc5e8f24a5abfbba",
+          "translation": "如果 $k$ 大到使 $\\dfrac{a^{n_0}}{(n_0)!\\varepsilon}<2^k$ 成立，那么"
+        }
+      ]
+    },
+    {
+      "printed": 326,
+      "sourceSha256": "40303207dbe180a5d133491ec6e860e92d5284117e5d3f44dbc1e5da84f5f0ba",
+      "blocks": [
+        {
+          "id": "p326-b1",
+          "source": "$$\\frac{a^{(n_0+k)}}{(n_0+k)!}<\\varepsilon,$$",
+          "sourceSha256": "0577a77f2594223988c5bf02fb432c08fdd9e1b170fd3a477d914646d17ca313"
+        },
+        {
+          "id": "p326-b2",
+          "source": "which is the desired result. Having made these observations, we are ready for the one theorem in this chapter.",
+          "sourceSha256": "34cbe8ad836205a16bb62cf0db19c81cf1df8aa86edb910cc22742bb47e164cf",
+          "translation": "这就是所需的结果。有了这些观察，我们已经准备好证明本章唯一的定理。"
+        },
+        {
+          "id": "p326-b3",
+          "source": "**THEOREM 1** The number $\\pi$ is irrational; in fact, $\\pi^2$ is irrational. (Notice that the irrationality of $\\pi^2$ implies the irrationality of $\\pi$, for if $\\pi$ were rational, then $\\pi^2$ certainly would be.)",
+          "sourceSha256": "2e1760891a5c7a27630e2616af89b856ef3b4cdb5f86a7fb41c171a5bd48de64",
+          "translation": "**定理 1** 数 $\\pi$ 是无理数；事实上，$\\pi^2$ 是无理数。（注意，$\\pi^2$ 的无理性蕴含 $\\pi$ 的无理性，因为若 $\\pi$ 是有理数，那么 $\\pi^2$ 当然也是有理数。）"
+        },
+        {
+          "id": "p326-b4",
+          "source": "**PROOF** Suppose $\\pi^2$ were rational, so that",
+          "sourceSha256": "ce8b8c58324d620d5889595253231d66942478091dbabe577add228fd2f30436",
+          "translation": "**证明** 假设 $\\pi^2$ 是有理数，那么"
+        },
+        {
+          "id": "p326-b5",
+          "source": "$$\\pi^2=\\frac ab$$",
+          "sourceSha256": "f1cadb40fd2b8f01d153fd7c3b464f2c4918416b22b4602d7a7d2e94eb6545f7"
+        },
+        {
+          "id": "p326-b6",
+          "source": "for some positive integers $a$ and $b$. Let",
+          "sourceSha256": "ff817866dae3005d5450a84fceb413738ae76b07b74d05c234337e7a11eaca9a",
+          "translation": "其中 $a$ 和 $b$ 是某两个正整数。令"
+        },
+        {
+          "id": "p326-b7",
+          "source": "$$\\tag{1}\\begin{aligned}\nG(x)=b^n[&\\pi^{2n}f_n(x)-\\pi^{2n-2}f_n''(x)+\\pi^{2n-4}f_n^{(4)}(x)\\\\\n&-\\cdots+(-1)^n f_n^{(2n)}(x)].\n\\end{aligned}$$",
+          "sourceSha256": "cba1c8f713a781bd368fafcfba086a85ee065d47c7db22e9ea04daa86bc0a18e"
+        },
+        {
+          "id": "p326-b8",
+          "source": "Notice that each of the factors",
+          "sourceSha256": "559917ab4010a77a79dd52e0d1a900d3fd86db86ac5629852fe60bcaa7efe2eb",
+          "translation": "注意，下面的每一个因子"
+        },
+        {
+          "id": "p326-b9",
+          "source": "$$b^n\\pi^{2n-2k}=b^n(\\pi^2)^{n-k}=b^n\\left(\\frac ab\\right)^{n-k}=a^{n-k}b^k$$",
+          "sourceSha256": "e827f08df6df2dd6bce3494ffed6a08a223159e0d57165c7950a9968ee697976"
+        },
+        {
+          "id": "p326-b10",
+          "source": "is an integer. Since $f_n^{(k)}(0)$ and $f_n^{(k)}(1)$ are integers, this shows that",
+          "sourceSha256": "4aca6fc8661a43dbd35ca289bb0ce7db8064e7f375d0a1e228a9403e3d03a850",
+          "translation": "都是整数。由于 $f_n^{(k)}(0)$ 和 $f_n^{(k)}(1)$ 是整数，因此"
+        },
+        {
+          "id": "p326-b11",
+          "source": "$$G(0)\\text{ and }G(1)\\text{ are integers.}$$",
+          "sourceSha256": "bfd12d0d8b33f1561ceb8d8c0aa03494ab51f66c6d0e9c15c3296d67c216ec1d"
+        },
+        {
+          "id": "p326-b12",
+          "source": "Differentiating $G$ twice yields",
+          "sourceSha256": "76dbccded0abfb5491121fc54b76804b73195923bdb0e98e9c4dabace20016ff",
+          "translation": "对 $G$ 求两次导数，得到"
+        },
+        {
+          "id": "p326-b13",
+          "source": "$$\\tag{2}G''(x)=b^n[\\pi^{2n}f_n''(x)-\\pi^{2n-2}f_n^{(4)}(x)+\\cdots+(-1)^n f_n^{(2n+2)}(x)].$$",
+          "sourceSha256": "ac3cd82c0a2a67776569b64b7ea5744ae24141cc5dd88b07e5e0016b1180c1f2"
+        },
+        {
+          "id": "p326-b14",
+          "source": "The last term, $(-1)^n f_n^{(2n+2)}(x)$, is zero. Thus, adding (1) and (2) gives",
+          "sourceSha256": "34a65aef3a72c07d8ce0589f3370c7aae8bf8b123bdff570f9484f30dbdcd1eb",
+          "translation": "最后一项 $(-1)^n f_n^{(2n+2)}(x)$ 为零。因此，将 (1) 和 (2) 相加，得到"
+        },
+        {
+          "id": "p326-b15",
+          "source": "$$\\tag{3}G''(x)+\\pi^2G(x)=b^n\\pi^{2n+2}f_n(x)=\\pi^2a^n f_n(x).$$",
+          "sourceSha256": "953bbbed8ec304a948f5a7fa4fdb600853da76031e35c3bb06855389efd8e8a5"
+        },
+        {
+          "id": "p326-b16",
+          "source": "Now let",
+          "sourceSha256": "f739f6f2799227ba17bf7cebeb7d228c6c8d30e653476c39ad7ac480738a23a5",
+          "translation": "现在令"
+        },
+        {
+          "id": "p326-b17",
+          "source": "$$H(x)=G'(x)\\sin\\pi x-\\pi G(x)\\cos\\pi x.$$",
+          "sourceSha256": "ab20713d5949af48c559785593aa0f1ae1db72aead6981131e29a6db763567d5"
+        },
+        {
+          "id": "p326-b18",
+          "source": "Then",
+          "sourceSha256": "0597f441dcca7c9bb0a79da4d94d03c523c031a3384009afff47ac1fd1a72b95",
+          "translation": "那么"
+        },
+        {
+          "id": "p326-b19",
+          "source": "$$\\begin{aligned}\nH'(x)&=\\pi G'(x)\\cos\\pi x+G''(x)\\sin\\pi x-\\pi G'(x)\\cos\\pi x+\\pi^2G(x)\\sin\\pi x\\\\\n&=[G''(x)+\\pi^2G(x)]\\sin\\pi x\\\\\n&=\\pi^2a^n f_n(x)\\sin\\pi x,\\qquad\\text{by (3).}\n\\end{aligned}$$",
+          "sourceSha256": "c18a13884e3ba6df223b2c9a34dbcdd407e658569faf04a3af8de6be592f5bac"
+        },
+        {
+          "id": "p326-b20",
+          "source": "By the Second Fundamental Theorem of Calculus,",
+          "sourceSha256": "de4ca18e781de72e5fc2ccd0f8c2b446c1d72ad793c4f97fd48a7a6aa2a013fb",
+          "translation": "由微积分第二基本定理，"
+        },
+        {
+          "id": "p326-b21",
+          "source": "$$\\begin{aligned}\n\\pi^2\\int_0^1 a^n f_n(x)\\sin\\pi x\\,dx&=H(1)-H(0)\\\\\n&=G'(1)\\sin\\pi-\\pi G(1)\\cos\\pi-G'(0)\\sin0+\\pi G(0)\\cos0\\\\\n&=\\pi[G(1)+G(0)].\n\\end{aligned}$$",
+          "sourceSha256": "b59526203ef648ef05ae261867fd566e1dfa6be0cecf54a3a13f9f4e054186bf"
+        },
+        {
+          "id": "p326-b22",
+          "source": "Thus",
+          "sourceSha256": "735730f52e5c6f810adc36cacc71e4c2fa20715b18de9638770a73cd88db0e2e",
+          "translation": "于是"
+        },
+        {
+          "id": "p326-b23",
+          "source": "$$\\pi\\int_0^1 a^n f_n(x)\\sin\\pi x\\,dx\\text{ is an }\\mathit{integer}.$$",
+          "sourceSha256": "0f82699fd1f4ad88631133cbf6163d573e3854880824cc6f10ee0d2cc047772d"
+        }
+      ]
+    },
+    {
+      "printed": 327,
+      "sourceSha256": "7d17828057fe534a0ccb13a9b9d65e20ffec76e0f4a89f1a478860fb5c5ee873",
+      "blocks": [
+        {
+          "id": "p327-b1",
+          "source": "On the other hand, $0<f_n(x)<1/n!$ for $0<x<1$, so",
+          "sourceSha256": "b0ffdc9b09a0cb9232f13389d09302d1eaeb057f90aa961614365c28755655bb",
+          "translation": "另一方面，当 $0<x<1$ 时，有 $0<f_n(x)<1/n!$，所以"
+        },
+        {
+          "id": "p327-b2",
+          "source": "$$0<\\pi a^n f_n(x)\\sin\\pi x<\\frac{\\pi a^n}{n!}\\quad\\text{for }0<x<1.$$",
+          "sourceSha256": "68a532871b26da5899574f50742e07760162418007f71e0c6845c9ae4e7690ee"
+        },
+        {
+          "id": "p327-b3",
+          "source": "Consequently,",
+          "sourceSha256": "25837488c62c9eb55760f3ec62697b2c46f8988775e0626d641e0c728d8a4558",
+          "translation": "因此，"
+        },
+        {
+          "id": "p327-b4",
+          "source": "$$0<\\pi\\int_0^1 a^n f_n(x)\\sin\\pi x\\,dx<\\frac{\\pi a^n}{n!}.$$",
+          "sourceSha256": "3e6302bfd7b9168055c090349c04fa93b6f5c22a83118ae99f25a50f8ea5e408"
+        },
+        {
+          "id": "p327-b5",
+          "source": "This reasoning was completely independent of the value of $n$. Now if $n$ is large enough, then",
+          "sourceSha256": "414a08ebbf38c09f92e99f4fc926c99aa122b397e6e714a9068f92d385403524",
+          "translation": "这一推理完全不依赖于 $n$ 的具体取值。现在，如果 $n$ 足够大，那么"
+        },
+        {
+          "id": "p327-b6",
+          "source": "$$0<\\pi\\int_0^1 a^n f_n(x)\\sin\\pi x\\,dx<\\frac{\\pi a^n}{n!}<1.$$",
+          "sourceSha256": "6d387dbd410947770d02a00bb1f0c71861846aee65cbe914bf7771021aa8fdc0"
+        },
+        {
+          "id": "p327-b7",
+          "source": "But this is absurd, because the integral is an integer, and there is no integer between $0$ and $1$. Thus our original assumption must have been incorrect: $\\pi^2$ is irrational. ▮",
+          "sourceSha256": "089e3edc41f416c3f20cfbc4db636e9080dc47b53e7996e5eb7e57210108408f",
+          "translation": "但这是荒谬的，因为这个积分是整数，而 $0$ 与 $1$ 之间没有整数。因此，最初的假设必定不正确：$\\pi^2$ 是无理数。▮"
+        },
+        {
+          "id": "p327-b8",
+          "source": "This proof is admittedly mysterious; perhaps most mysterious of all is the way that $\\pi$ enters the proof—it almost looks as if we have proved $\\pi$ irrational without ever mentioning a definition of $\\pi$. A close reexamination of the proof will show that precisely one property of $\\pi$ is essential—",
+          "sourceSha256": "a7c2076f7559b9d382d9ebdbeb117540399f3237334f4793636f61f3c7eabff7",
+          "translation": "必须承认，这个证明确实很神秘；也许最神秘的，是 $\\pi$ 进入证明的方式——看起来几乎像是我们根本没有提及 $\\pi$ 的定义，就证明了 $\\pi$ 是无理数。仔细重新检查证明，会发现 $\\pi$ 只有一个性质是必不可少的——"
+        },
+        {
+          "id": "p327-b9",
+          "source": "$$\\sin(\\pi)=0.$$",
+          "sourceSha256": "7efac20c7c3cfd8ae30a4feecfd9919b36ecfeff069ddfe1f77458432a2041a6"
+        },
+        {
+          "id": "p327-b10",
+          "source": "The proof really depends on the properties of the function sin, and proves the irrationality of the smallest positive number $x$ with $\\sin x=0$. In fact, very few properties of sin are required, namely,",
+          "sourceSha256": "709580c10a81d8174bb797213a69bec33aa7eb85222977267dabd40608923132",
+          "translation": "证明实际上依赖于函数 sin 的性质，证明的是满足 $\\sin x=0$ 的最小正数 $x$ 的无理性。事实上，需要用到的 sin 的性质很少，只有"
+        },
+        {
+          "id": "p327-b11",
+          "source": "$$\\begin{aligned}\n\\sin'&=\\cos,\\\\\n\\cos'&=-\\sin,\\\\\n\\sin(0)&=0,\\\\\n\\cos(0)&=1.\n\\end{aligned}$$",
+          "sourceSha256": "fa73931c2c24cfd2796636109b7129d8069bbb07e223fec30581c501043faa40"
+        },
+        {
+          "id": "p327-b12",
+          "source": "Even this list could be shortened; as far as the proof is concerned, cos might just as well be defined as $\\sin'$. The properties of sin required in the proof may then be written",
+          "sourceSha256": "4a73a14a71180a7ca5cb43790a70fda25032560103d95b28d6acdc575a9344b4",
+          "translation": "甚至这张清单还可以进一步缩短；就证明而言，完全可以直接把 cos 定义为 $\\sin'$。这样，证明所需的 sin 的性质就可以写成"
+        },
+        {
+          "id": "p327-b13",
+          "source": "$$\\begin{aligned}\n\\sin''+\\sin&=0,\\\\\n\\sin(0)&=0,\\\\\n\\sin'(0)&=1.\n\\end{aligned}$$",
+          "sourceSha256": "9fe094019743beea2d41b7b04dd25db9ba66f4983f0111ec4ab69feaa6c4d1ad"
+        },
+        {
+          "id": "p327-b14",
+          "source": "Of course, this is not really very surprising at all, since, as we have seen in the previous chapter, these properties characterize the function sin completely.",
+          "sourceSha256": "6e7f82f2266c428d2782f09e506aafca6fa8c8b7ca738feb00b4a6d9af731215",
+          "translation": "当然，这其实一点也不奇怪，因为正如上一章所见，这些性质完全刻画了函数 sin。"
+        },
+        {
+          "id": "p327-b15",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p327-b16",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p327-b17",
+          "source": "(a) For the areas of triangles $OAB$ and $OAC$ in Figure 1, with $\\angle AOB\\le\\pi/4$, show that we have",
+          "sourceSha256": "2db2414048b27de9ae8f67e2a0ad4c55af0be3d98ac8684c0c80e3758c4eef67",
+          "translation": "(a) 对于图 1 中的三角形 $OAB$ 和 $OAC$ 的面积，若 $\\angle AOB\\le\\pi/4$，证明"
+        }
+      ]
+    },
+    {
+      "printed": 328,
+      "sourceSha256": "c278ce6a6a520fdb0b53660d0dfef6427d883108f8776ac0f298f169ac7bed3d",
+      "blocks": [
+        {
+          "id": "p328-b1",
+          "source": "$$\\operatorname{area}OAC=\\frac12\\sqrt{\\frac{1-\\sqrt{1-16(\\operatorname{area}OAB)^2}}2}.$$",
+          "sourceSha256": "d7c03c2050fde803d9faa4387c1c1d86a31db38eceb326776828aecbed0f14e1"
+        },
+        {
+          "id": "p328-b2",
+          "source": "Hint: Solve the equations $xy=2(\\operatorname{area}OAB)$, $x^2+y^2=1$, for $y$.",
+          "sourceSha256": "befa4697310cd94714b3148e218933fae72c4688d6014d4321ab2ccf698be18a",
+          "translation": "提示：由方程 $xy=2(\\operatorname{area}OAB)$、$x^2+y^2=1$ 解出 $y$。"
+        },
+        {
+          "id": "p328-b3",
+          "source": "(b) Let $P_m$ be the regular polygon of $m$ sides inscribed in the unit circle. If $A_m$ is the area of $P_m$ show that",
+          "sourceSha256": "48939acbf0d7ec8fdd824bedebf931e866cb3c39266176e81b5709d25b24b9a2",
+          "translation": "(b) 设 $P_m$ 是内接于单位圆的正 $m$ 边形。如果 $A_m$ 是 $P_m$ 的面积，证明"
+        },
+        {
+          "id": "p328-b4",
+          "source": "$$A_{2m}=\\frac m2\\sqrt{2-2\\sqrt{1-(2A_m/m)^2}}.$$",
+          "sourceSha256": "637c1f3e4217170953831246d2d853e1fdbf0402841bbd1bb9cfde127e217dd3"
+        },
+        {
+          "id": "p328-b5",
+          "source": "<figure class=\"original-source-figure\" style=\"max-width:400px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"46 304 400 346\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0347.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>",
+          "sourceSha256": "049c4bfbb54a66eee02eb8583147beb4793af2da67131b6a7d5d36c22629cee9"
+        },
+        {
+          "id": "p328-b6",
+          "source": "This result allows one to obtain (more and more complicated) expressions for $A_{2^n}$, starting with $A_4=2$, and thus to compute $\\pi$ as accurately as desired (according to Problem 8-11). Although better methods will appear in Chapter 20, a slight variant of this approach yields a very interesting expression for $\\pi$:",
+          "sourceSha256": "489377413c8598b78f2606744ae05e104c6375d891de4ff70c744a435da17abb",
+          "translation": "这一结果让我们能够从 $A_4=2$ 出发，得到 $A_{2^n}$ 的（越来越复杂的）表达式，从而（根据习题 8-11）把 $\\pi$ 计算到任意要求的精度。虽然第 20 章会出现更好的方法，但稍微改变这种方法，就能得到一个非常有趣的 $\\pi$ 的表达式："
+        },
+        {
+          "id": "p328-b7",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p328-b8",
+          "source": "(a) Using the fact that",
+          "sourceSha256": "8432ad2bbc8f35b88b762c61764f82ed007510aaaddb8ef2c7d64fed5b7be8a6",
+          "translation": "(a) 利用"
+        },
+        {
+          "id": "p328-b9",
+          "source": "$$\\frac{\\operatorname{area}(OAB)}{\\operatorname{area}(OAC)}=OB,$$",
+          "sourceSha256": "7e538515fd42f4c880c871dd21774cd675a1343b4ecfd48812e517415b130510"
+        },
+        {
+          "id": "p328-b10",
+          "source": "show that if $\\alpha_m$ is the distance from $O$ to one side of $P_m$, then",
+          "sourceSha256": "2760c9363aa028538b58041f68c70ad7be87bf69a1d3ad9f100585ce8f764387",
+          "translation": "证明：如果 $\\alpha_m$ 是从 $O$ 到 $P_m$ 一条边的距离，那么"
+        },
+        {
+          "id": "p328-b11",
+          "source": "$$\\frac{A_m}{A_{2m}}=\\alpha_m.$$",
+          "sourceSha256": "36cfa50b23bf17aa44ac7312148fd63f298264b28497e3751b14bbee4ab84efb"
+        },
+        {
+          "id": "p328-b12",
+          "source": "(b) Show that",
+          "sourceSha256": "87fa4c209da94246118a4450a4cef5838b3ce8b8d46033b776afbac9b6f404e0",
+          "translation": "(b) 证明"
+        },
+        {
+          "id": "p328-b13",
+          "source": "$$\\frac2{A_{2^k}}=\\alpha_4\\cdot\\alpha_8\\cdot\\ldots\\cdot\\alpha_{2^{k-1}}.$$",
+          "sourceSha256": "593091b31d44df71f99b4da46556f6a56bcf4bc89adcdbc727dfa9fb364b58a9"
+        },
+        {
+          "id": "p328-b14",
+          "source": "(c) Using the fact that",
+          "sourceSha256": "ba4bdf3023397a917516c25958f4640217daa2692f549346d96acc54a308bceb",
+          "translation": "(c) 利用"
+        },
+        {
+          "id": "p328-b15",
+          "source": "$$\\alpha_m=\\cos\\frac\\pi m,$$",
+          "sourceSha256": "e0f7ddc0348a0385a09e4420518f7ffecfaaace9d89b03be5652ea0fa08b0d7e"
+        },
+        {
+          "id": "p328-b16",
+          "source": "and the formula $\\cos x/2=\\sqrt{\\dfrac{1+\\cos x}2}$ (Problem 15-15), prove that",
+          "sourceSha256": "7245ae1fa56bcbaff19e7345a0b08613edad7e49a8ef8b22df2a0201726a66e6",
+          "translation": "以及公式 $\\cos x/2=\\sqrt{\\dfrac{1+\\cos x}2}$（习题 15-15），证明"
+        },
+        {
+          "id": "p328-b17",
+          "source": "$$\\begin{aligned}\n\\alpha_4&=\\sqrt{\\frac12}\\\\\n\\alpha_8&=\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12}},\\\\\n\\alpha_{16}&=\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12}}},\n\\end{aligned}$$",
+          "sourceSha256": "095161257d309f0a6b1730caf0061c254d4be53ee2b0ea46b33bc1ffcab91343"
+        },
+        {
+          "id": "p328-b18",
+          "source": "etc.",
+          "sourceSha256": "41b387a9617d9ffde9dc713bb94531bfc48d834db2fdc78d61c2040332d7bd35",
+          "translation": "等等。"
+        }
+      ]
+    },
+    {
+      "printed": 329,
+      "sourceSha256": "4486248889cfd9d18f5c18042c0af74482786ac04957ee72d214c3f465af4d07",
+      "blocks": [
+        {
+          "id": "p329-b1",
+          "source": "Together with part (b), this shows that $2/\\pi$ can be written as an “infinite product”",
+          "sourceSha256": "d0bc0560bb213018e60637b1a316df93eed52c701f1647483b4a94ea6fea036b",
+          "translation": "结合 (b)，这就表明 $2/\\pi$ 可以写成一个“无穷乘积”"
+        },
+        {
+          "id": "p329-b2",
+          "source": "$$\\frac2\\pi=\\sqrt{\\frac12}\\cdot\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12}}\\cdot\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12}}}\\ldots\\,;$$",
+          "sourceSha256": "a1be81f2d1f8d9c8e1e96e791a694328ffdaa7b8ed31a4f7ce815d3c0dbf1427"
+        },
+        {
+          "id": "p329-b3",
+          "source": "to be precise, this equation means that the product of the first $n$ factors can be made as close to $2/\\pi$ as desired, by choosing $n$ sufficiently large. This product was discovered by François Viète in 1579, and is only one of many fascinating expressions for $\\pi$, some of which are mentioned later.",
+          "sourceSha256": "e51822f0f4ed073047df8e76ebf6acfc0a8f14e1272fd1894f90b351f8c230e3",
+          "translation": "准确地说，这个等式的意思是：只要把 $n$ 取得足够大，前 $n$ 个因子的乘积就能任意接近 $2/\\pi$。这个乘积是弗朗索瓦·韦达于 1579 年发现的；它只是关于 $\\pi$ 的许多迷人表达式之一，后面还会提到其中一些。"
+        }
+      ]
+    }
+  ]
+}

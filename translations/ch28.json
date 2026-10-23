@@ -1,0 +1,703 @@
+{
+  "chapter": 28,
+  "language": "zh-CN",
+  "sourceSha256": "3f1e2abb1431b3e60d06538ae6d66cf263326e1627c00b6d89462ac1e60f7ab1",
+  "paragraphCount": 78,
+  "pages": [
+    {
+      "printed": 581,
+      "sourceSha256": "6bf9093a1e93ce3f0590ee3f668a8c429197a3c1d50331fc1f4f9bcd52d9dd03",
+      "blocks": [
+        {
+          "id": "p581-b1",
+          "source": "# CHAPTER 28\n# FIELDS",
+          "sourceSha256": "7af75fa208daf9dcafb445d1941ef653feae0d7f2169eaf7e44182b62d317183",
+          "translation": "# 第 28 章\n# 域"
+        },
+        {
+          "id": "p581-b2",
+          "source": "Throughout this book a conscientious attempt has been made to define all important concepts, even terms like “function,” for which an intuitive definition is often considered sufficient. But $\\mathbf Q$ and $\\mathbf R$, the two main protagonists of this story, have only been named, never defined. What has never been defined can never be analyzed thoroughly, and “properties” P1–P13 must be considered assumptions, not theorems, about numbers. Nevertheless, the term “axiom” has been purposely avoided, and in this chapter the logical status of P1–P13 will be scrutinized more carefully.",
+          "sourceSha256": "26a770a4fc14284555d9595f15214fc64db8bc944d60722aa75e37ce3576c89e",
+          "translation": "贯穿全书，我们一直认真地尝试定义所有重要概念，甚至包括“函数”这样的术语——对它们，人们往往认为给出直观定义就已足够。然而，$\\mathbf Q$ 和 $\\mathbf R$ 这两位贯穿整个故事的主角，却只是被命名，从未被定义。没有定义过的东西，就无法得到彻底的分析；因此，关于数的“性质”P1–P13 必须看作假设，而不是定理。尽管如此，我们一直有意避免使用“公理”这个词；本章将更仔细地考察 P1–P13 的逻辑地位。"
+        },
+        {
+          "id": "p581-b3",
+          "source": "Like $\\mathbf Q$ and $\\mathbf R$, the sets $\\mathbf N$ and $\\mathbf Z$ have also remained undefined. True, some talk about all four was inserted in Chapter 2, but those rough descriptions are far from a definition. To say, for example, that $\\mathbf N$ consists of $1$, $2$, $3$, etc., merely names some elements of $\\mathbf N$ without identifying them (and the “etc.” is useless). The natural numbers can be defined, but the procedure is involved and not quite pertinent to the rest of the book. The Suggested Reading list contains references to this problem, as well as to the other steps that are required if one wishes to develop calculus from its basic logical starting point. The further development of this program would proceed with the definition of $\\mathbf Z$, in terms of $\\mathbf N$, and the definition of $\\mathbf Q$ in terms of $\\mathbf Z$. This program results in a certain well-defined set $\\mathbf Q$, certain explicitly defined operations $+$ and $\\cdot$, and properties P1–P12 as *theorems*. The final step in this program is the construction of $\\mathbf R$, in terms of $\\mathbf Q$. It is this last construction which concerns us. Assuming that $\\mathbf Q$ has been defined, and that P1–P12 have been proved for $\\mathbf Q$, we shall ultimately *define* $\\mathbf R$ and *prove* all of P1–P13 for $\\mathbf R$.",
+          "sourceSha256": "fd04edb8a177dacccc9d097d93b4779550eb4f02169b9fde7235d3930ab845ac",
+          "translation": "像 $\\mathbf Q$ 和 $\\mathbf R$ 一样，集合 $\\mathbf N$ 和 $\\mathbf Z$ 也始终没有定义。诚然，第 2 章插入过一些关于这四个集合的讨论，但那些粗略的描述远远算不上定义。例如，说 $\\mathbf N$ 由 $1$、$2$、$3$ 等组成，只是列举了 $\\mathbf N$ 的一些元素的名字，却没有确定它们究竟是什么（而“等”字也毫无用处）。自然数是可以定义的，但过程比较复杂，与本书其余内容也不十分相关。“推荐读物”中列有关于这一问题的参考文献，也列有关于从基本逻辑起点建立微积分所需的其他步骤的参考文献。进一步实施这个方案时，应先用 $\\mathbf N$ 来定义 $\\mathbf Z$，再用 $\\mathbf Z$ 来定义 $\\mathbf Q$。这样便得到一个定义明确的集合 $\\mathbf Q$、两个明确定义的运算 $+$ 和 $\\cdot$，而性质 P1–P12 则成为*定理*。这一方案的最后一步，是用 $\\mathbf Q$ 构造 $\\mathbf R$。我们关心的正是这最后的构造。假设 $\\mathbf Q$ 已经定义，而且已经对 $\\mathbf Q$ 证明了 P1–P12，我们最终将*定义* $\\mathbf R$，并对 $\\mathbf R$ *证明*全部 P1–P13。"
+        },
+        {
+          "id": "p581-b4",
+          "source": "Our intention of proving P1–P13 means that we must define not only real numbers, but also addition and multiplication of real numbers. Indeed, the real numbers are of interest only as a set together with these operations: how the real numbers behave with respect to addition and multiplication is crucial; what the real numbers may actually be is quite irrelevant. This assertion can be expressed in a meaningful mathematical way, by using the concept of a “field,” which includes as special cases the three important number systems of this book. This extraordinarily important abstraction of modern mathematics incorporates the properties P1–P9 common to $\\mathbf Q$, $\\mathbf R$, and $\\mathbf C$. A **field** is a set $F$ (of objects of any sort whatsoever), together with two “binary operations” $+$ and $\\cdot$ defined on $F$ (that is, two rules which associate to elements $a$ and $b$ in $F$, other elements $a+b$ and $a\\cdot b$ in $F$) for which the following conditions are satisfied:",
+          "sourceSha256": "539b773cc55397b04fd96579083571c6a13a2946a1f7fd75ee527c3bc83332b1",
+          "translation": "既然我们打算证明 P1–P13，就不仅必须定义实数，还必须定义实数的加法和乘法。事实上，实数只有作为一个配备了这些运算的集合才有意义：实数在加法和乘法下如何表现至关重要；至于实数本身究竟是什么，则完全无关紧要。借助“域”这一概念，可以用有意义的数学语言表达这个主张；本书中的三个重要数系都是域的特例。现代数学中这个极其重要的抽象概念，把 $\\mathbf Q$、$\\mathbf R$ 和 $\\mathbf C$ 所共有的性质 P1–P9 包含在内。一个**域**是一个集合 $F$（其对象可以是任何种类），连同定义在 $F$ 上的两个“二元运算” $+$ 和 $\\cdot$（也就是两个规则，把 $F$ 中的元素 $a$ 和 $b$ 对应到 $F$ 中的另一些元素 $a+b$ 和 $a\\cdot b$），并满足以下条件："
+        },
+        {
+          "id": "p581-b5",
+          "source": "(1) $(a+b)+c=a+(b+c)$ for all $a$, $b$, and $c$ in $F$.",
+          "sourceSha256": "860d469e23ccf4823c85f9c4d20449fbbb4ad6681262e17b62c8fb3f5e964609",
+          "translation": "(1) 对 $F$ 中所有的 $a$、$b$ 和 $c$，都有 $(a+b)+c=a+(b+c)$。"
+        },
+        {
+          "id": "p581-b6",
+          "source": "(2) There is some element $0$ in $F$ such that",
+          "sourceSha256": "1411d00fa753581af88d19a0247245915a9f1aae3f697680fa6bd2ccc2916835",
+          "translation": "(2) $F$ 中存在某个元素 $0$，使得"
+        },
+        {
+          "id": "p581-b7",
+          "source": "(i) $a+0=a$ for all $a$ in $F$,",
+          "sourceSha256": "548e93c34faa83f529580dd73320ebe33276b09109665b5b7c80b175e5e8bbe2",
+          "translation": "(i) 对 $F$ 中所有 $a$，都有 $a+0=a$，"
+        },
+        {
+          "id": "p581-b8",
+          "source": "(ii) for every $a$ in $F$, there is some element $b$ in $F$ such that $a+b=0$.",
+          "sourceSha256": "15aab73cb1f80640c92d7331d39328b3acbac34490a768402094dcf46ba673e9",
+          "translation": "(ii) 对 $F$ 中的每个 $a$，$F$ 中都存在某个元素 $b$，使得 $a+b=0$。"
+        }
+      ]
+    },
+    {
+      "printed": 582,
+      "sourceSha256": "96cb7f8025f2866ae3b8664ad3312f0b3da43a274759655a44cddfa55fbfe9fb",
+      "blocks": [
+        {
+          "id": "p582-b1",
+          "source": "(3) $a+b=b+a$ for all $a$ and $b$ in $F$.",
+          "sourceSha256": "66d04f9b9a02af296ba0da91a25dcff0bc15c669d0a15fce8234f42854a4e33d",
+          "translation": "(3) 对 $F$ 中所有的 $a$ 和 $b$，都有 $a+b=b+a$。"
+        },
+        {
+          "id": "p582-b2",
+          "source": "(4) $(a\\cdot b)\\cdot c=a\\cdot(b\\cdot c)$ for all $a$, $b$, and $c$ in $F$.",
+          "sourceSha256": "b666ac0b573faee8ae1722bc0f05f423eb32def3a68384794b77f774ae4a496e",
+          "translation": "(4) 对 $F$ 中所有的 $a$、$b$ 和 $c$，都有 $(a\\cdot b)\\cdot c=a\\cdot(b\\cdot c)$。"
+        },
+        {
+          "id": "p582-b3",
+          "source": "(5) There is some element $1$ in $F$ such that $1\\ne0$ and",
+          "sourceSha256": "b28ba2b6c47897ded187679522c477edd4b8eebae7a1635626f0d9f1704b97b9",
+          "translation": "(5) $F$ 中存在某个元素 $1$，使得 $1\\ne0$，并且"
+        },
+        {
+          "id": "p582-b4",
+          "source": "(i) $a\\cdot1=a$ for all $a$ in $F$,",
+          "sourceSha256": "35fec240d30dc69ef4f84aafe2e473c7f3932501482a27defc30e8fea12fee6b",
+          "translation": "(i) 对 $F$ 中所有 $a$，都有 $a\\cdot1=a$，"
+        },
+        {
+          "id": "p582-b5",
+          "source": "(ii) For every $a$ in $F$ with $a\\ne0$, there is some element $b$ in $F$ such that $a\\cdot b=1$.",
+          "sourceSha256": "b24ef80712488cabdd12919125417593f78d1526b7f63e74a70422642d4aa536",
+          "translation": "(ii) 对 $F$ 中满足 $a\\ne0$ 的每个 $a$，$F$ 中都存在某个元素 $b$，使得 $a\\cdot b=1$。"
+        },
+        {
+          "id": "p582-b6",
+          "source": "(6) $a\\cdot b=b\\cdot a$ for all $a$ and $b$ in $F$.",
+          "sourceSha256": "db8d3e590a698e71fcf263c90120ced585bfe4386aa2f0cc07ff5ed76f933e77",
+          "translation": "(6) 对 $F$ 中所有的 $a$ 和 $b$，都有 $a\\cdot b=b\\cdot a$。"
+        },
+        {
+          "id": "p582-b7",
+          "source": "(7) $a\\cdot(b+c)=a\\cdot b+a\\cdot c$ for all $a$, $b$, and $c$ in $F$.",
+          "sourceSha256": "609177f28927bb9a013d4e0dc814a4b8ae07ad5b4b7eb57a59e2d7a068c849f5",
+          "translation": "(7) 对 $F$ 中所有的 $a$、$b$ 和 $c$，都有 $a\\cdot(b+c)=a\\cdot b+a\\cdot c$。"
+        },
+        {
+          "id": "p582-b8",
+          "source": "The familiar examples of fields are, as already indicated, $\\mathbf Q$, $\\mathbf R$, and $\\mathbf C$, with $+$ and $\\cdot$ being the familiar operations of $+$ and $\\cdot$. It is probably unnecessary to explain why these are fields, but the explanation is, at any rate, quite brief. When $+$ and $\\cdot$ are understood to mean the ordinary $+$ and $\\cdot$, the rules (1), (3), (4), (6), (7) are simply restatements of P1, P4, P5, P8, P9; the elements which play the role of $0$ and $1$ are the numbers $0$ and $1$ (which accounts for the choice of the symbols $0$, $1$); and the number $b$ in (2) or (5) is $-a$ or $a^{-1}$, respectively. (For this reason, in an arbitrary field $F$ we denote by $-a$ the element such that $a+(-a)=0$, and by $a^{-1}$ the element such that $a\\cdot a^{-1}=1$, for $a\\ne0$.)",
+          "sourceSha256": "97bde1d423d99e8d6f8a7dc98988c0ea9ffbe0534ac394fc72e0af9111b84f6b",
+          "translation": "如前所述，熟悉的域的例子就是 $\\mathbf Q$、$\\mathbf R$ 和 $\\mathbf C$，其中 $+$ 和 $\\cdot$ 分别是我们熟悉的 $+$ 和 $\\cdot$ 运算。大概没有必要解释它们为什么是域，不过解释起来也确实很简短。当把 $+$ 和 $\\cdot$ 理解为通常的 $+$ 和 $\\cdot$ 时，规则 (1)、(3)、(4)、(6)、(7) 就只是 P1、P4、P5、P8、P9 的重述；扮演 $0$ 和 $1$ 角色的元素，分别是数 $0$ 和 $1$（这也解释了为什么选择符号 $0$、$1$）；而 (2) 或 (5) 中的数 $b$，分别是 $-a$ 或 $a^{-1}$。（因此，在任意域 $F$ 中，我们用 $-a$ 表示满足 $a+(-a)=0$ 的元素；当 $a\\ne0$ 时，用 $a^{-1}$ 表示满足 $a\\cdot a^{-1}=1$ 的元素。）"
+        },
+        {
+          "id": "p582-b9",
+          "source": "In addition to $\\mathbf Q$, $\\mathbf R$, and $\\mathbf C$, there are several other fields which can be described easily. One example is the collection $F_1$ of all numbers $a+b\\sqrt2$ for $a$, $b$ in $\\mathbf Q$. The operations $+$ and $\\cdot$ will, once again, be the usual $+$ and $\\cdot$ for real numbers. It is necessary to point out that these operations really do produce new elements of $F_1$:",
+          "sourceSha256": "8ec06c84a3dbf0d3d11cefbe63352343623d990f96f06df7018916d2e8a63aab",
+          "translation": "除了 $\\mathbf Q$、$\\mathbf R$ 和 $\\mathbf C$，还有其他几个容易描述的域。一个例子是由所有形如 $a+b\\sqrt2$ 的数组成的集合 $F_1$，其中 $a$、$b$ 属于 $\\mathbf Q$。运算 $+$ 和 $\\cdot$ 仍然取实数的通常运算 $+$ 和 $\\cdot$。需要指出，这些运算确实产生 $F_1$ 中的新元素："
+        },
+        {
+          "id": "p582-b10",
+          "source": "$$(a+b\\sqrt2)+(c+d\\sqrt2)=(a+c)+(b+d)\\sqrt2,\\text{ which is in }F_1;$$",
+          "sourceSha256": "1d26008447257c6f26df1a0d038953d1a834a6ff5562f59bd9d05c590dbd1b2b"
+        },
+        {
+          "id": "p582-b11",
+          "source": "$$(a+b\\sqrt2)\\cdot(c+d\\sqrt2)=(ac+2bd)+(bc+ad)\\sqrt2,\\text{ which is in }F_1.$$",
+          "sourceSha256": "8111e7b1d96cdbb3f05bb76218646f757332812261d05e780fd758f392addb3f"
+        },
+        {
+          "id": "p582-b12",
+          "source": "Conditions (1), (3), (4), (6), (7) for a field are obvious for $F_1$; since these hold for all real numbers, they certainly hold for all real numbers of the form $a+b\\sqrt2$. Condition (2) holds because the number $0=0+0\\sqrt2$ is in $F_1$ and, for $\\alpha=a+b\\sqrt2$ in $F_1$ the number $\\beta=(-a)+(-b)\\sqrt2$ in $F_1$ satisfies $\\alpha+\\beta=0$. Similarly, $1=1+0\\sqrt2$ is in $F_1$, so (5i) is satisfied. The verification of (5ii) is the only slightly difficult point. If $a+b\\sqrt2\\ne0$, then",
+          "sourceSha256": "5fc97bafc4fc0248259a2c97dc31e3cfbcc152dd3b969d8f45bad8e660748e2b",
+          "translation": "域的条件 (1)、(3)、(4)、(6)、(7) 对 $F_1$ 显然成立；既然它们对所有实数成立，当然也对所有形如 $a+b\\sqrt2$ 的实数成立。条件 (2) 成立，因为数 $0=0+0\\sqrt2$ 在 $F_1$ 中，而且对 $F_1$ 中的 $\\alpha=a+b\\sqrt2$，$F_1$ 中的数 $\\beta=(-a)+(-b)\\sqrt2$ 满足 $\\alpha+\\beta=0$。类似地，$1=1+0\\sqrt2$ 在 $F_1$ 中，所以 (5i) 成立。验证 (5ii) 是唯一稍有难度的一点。如果 $a+b\\sqrt2\\ne0$，那么"
+        },
+        {
+          "id": "p582-b13",
+          "source": "$$a+b\\sqrt2\\cdot\\frac1{a+b\\sqrt2}=1;$$",
+          "sourceSha256": "96f4188ae72e78b74add020d62bc07f0961d6c4fb41eec26be3814b4bf631cd4"
+        },
+        {
+          "id": "p582-b14",
+          "source": "it is therefore necessary to show that $1/(a+b\\sqrt2)$ is in $F_1$. This is true because",
+          "sourceSha256": "a169df8e96a08fefb26e7597efa44a26271b6db32a2020284aca4c64e08b3198",
+          "translation": "因此必须证明 $1/(a+b\\sqrt2)$ 在 $F_1$ 中。这确实成立，因为"
+        },
+        {
+          "id": "p582-b15",
+          "source": "$$\\frac1{a+b\\sqrt2}=\\frac{a-b\\sqrt2}{(a-b\\sqrt2)(a+b\\sqrt2)}=\\frac a{a^2-2b^2}+\\frac{(-b)}{a^2-2b^2}\\sqrt2.$$",
+          "sourceSha256": "3e7c778b40dcd273c32793698cf2544277d973245423a7b335f638e741dd38e4"
+        },
+        {
+          "id": "p582-b16",
+          "source": "(The division by $a-b\\sqrt2$ is valid because the relation $a-b\\sqrt2=0$ could be true only if $a=b=0$ (since $\\sqrt2$ is irrational) which is ruled out by the hypothesis $a+b\\sqrt2\\ne0$.)",
+          "sourceSha256": "8fd0fb3961d162e1614d80e05390688087371d3196c35a45643497f3068a4298",
+          "translation": "（除以 $a-b\\sqrt2$ 是合法的，因为关系 $a-b\\sqrt2=0$ 只有在 $a=b=0$ 时才可能成立（由于 $\\sqrt2$ 是无理数），而假设 $a+b\\sqrt2\\ne0$ 排除了这种可能。）"
+        },
+        {
+          "id": "p582-b17",
+          "source": "The next example of a field, $F_2$, is considerably simpler in one respect: it contains only two elements, which we might as well denote by $0$ and $1$. The operations",
+          "sourceSha256": "989314aa81a5ad3bc14b6f33cfb1fd4a1061c644330dc2911e465d33c668be72",
+          "translation": "下一个域的例子 $F_2$，在一方面要简单得多：它只包含两个元素，我们不妨把它们记为 $0$ 和 $1$。运算"
+        }
+      ]
+    },
+    {
+      "printed": 583,
+      "sourceSha256": "5252cd278462a1137dcb7eb1c405501ec65c682263a1920437693f26e5366121",
+      "blocks": [
+        {
+          "id": "p583-b1",
+          "source": "$+$ and $\\cdot$ are described by the following tables.",
+          "sourceSha256": "ca01fa1285e8a37e34ea7b819edb862c79c875dfa4c43429efdf2a5dce3a8722",
+          "translation": "$+$ 和 $\\cdot$ 由下表描述。"
+        },
+        {
+          "id": "p583-b2",
+          "source": "<table aria-label=\"Addition in F2\"><thead><tr><th>$+$</th><th>$0$</th><th>$1$</th></tr></thead><tbody><tr><th>$0$</th><td>$0$</td><td>$1$</td></tr><tr><th>$1$</th><td>$1$</td><td>$0$</td></tr></tbody></table>",
+          "sourceSha256": "94aee48939680bf471307deba8a1ee5fe50ecf4a452a69b7c775c21a7956e860"
+        },
+        {
+          "id": "p583-b3",
+          "source": "<table aria-label=\"Multiplication in F2\"><thead><tr><th>$\\cdot$</th><th>$0$</th><th>$1$</th></tr></thead><tbody><tr><th>$0$</th><td>$0$</td><td>$0$</td></tr><tr><th>$1$</th><td>$0$</td><td>$1$</td></tr></tbody></table>",
+          "sourceSha256": "b7d92fef88f8085adf46fd703ca3e9b8c352a5545ce55d1985658ad78b9918da"
+        },
+        {
+          "id": "p583-b4",
+          "source": "The verification of conditions (1)–(7) are straightforward, case-by-case checks. For example, condition (1) may be proved by checking the 8 equations obtained by setting $a$, $b$, $c=0$ or $1$. Notice that in this field $1+1=0$; this equation may also be written $1=-1$.",
+          "sourceSha256": "b835f156e52e1d1fab26a53a03b0a15156139e838013387047af35d66ffc9a05",
+          "translation": "验证条件 (1)–(7) 只需直接逐一检查各种情形。例如，把 $a$、$b$、$c=0$ 或 $1$ 代入所得的 8 个等式逐一检验，就可以证明条件 (1)。注意，在这个域中 $1+1=0$；这个等式也可以写成 $1=-1$。"
+        },
+        {
+          "id": "p583-b5",
+          "source": "Our final example of a field is rather silly: $F_3$ consists of all pairs $(a,a)$ for $a$ in $\\mathbf R$, and $+$ and $\\cdot$ are defined by",
+          "sourceSha256": "dbb75338af5e6fd314f00483d2c7e86928c16f67ac85b20495873345960e3c82",
+          "translation": "我们最后一个域的例子相当无聊：$F_3$ 由所有有序对 $(a,a)$ 组成，其中 $a$ 属于 $\\mathbf R$，而 $+$ 和 $\\cdot$ 定义为"
+        },
+        {
+          "id": "p583-b6",
+          "source": "$$(a,a)+(b,b)=(a+b,a+b),$$",
+          "sourceSha256": "8d6ae885cad3186f6c240046f65dc53bd70064989d8eda7aa32d44b9c14963bc"
+        },
+        {
+          "id": "p583-b7",
+          "source": "$$(a,a)\\cdot(b,b)=(a\\cdot b,a\\cdot b).$$",
+          "sourceSha256": "2bbe885c58a98470e58bca5872c74481ff568849921e7e227e51d60b53a9d62d"
+        },
+        {
+          "id": "p583-b8",
+          "source": "(The $+$ and $\\cdot$ appearing on the right side are ordinary addition and multiplication for $\\mathbf R$.) The verification that $F_3$ is a field is left to you as a simple exercise.",
+          "sourceSha256": "af6e365660a287afc1b979f5fcc7679aaa7d5094dc6d22a95196ef22c6f51d42",
+          "translation": "（右边出现的 $+$ 和 $\\cdot$ 是 $\\mathbf R$ 上的普通加法和乘法。）验证 $F_3$ 是一个域，留给你作为一道简单练习。"
+        },
+        {
+          "id": "p583-b9",
+          "source": "A detailed investigation of the properties of fields is a study in itself, but for our purposes, fields provide an ideal framework in which to discuss the properties of numbers in the most economical way. For example, the consequences of P1–P9 which were derived for “numbers” in Chapter 1 actually hold for any field; in particular, they are true for the fields $\\mathbf Q$, $\\mathbf R$, and $\\mathbf C$.",
+          "sourceSha256": "59288d87d8dab7c06fe871dcb710101df813f7259b1fb89e509fff1c05385f29",
+          "translation": "详细研究域的性质，本身就是一门学问；但对我们的目的来说，域提供了一个理想框架，让我们能够以最精练的方式讨论数的性质。例如，第 1 章从 P1–P9 推导出的关于“数”的结论，实际上对任何域都成立；特别地，它们对域 $\\mathbf Q$、$\\mathbf R$ 和 $\\mathbf C$ 都成立。"
+        },
+        {
+          "id": "p583-b10",
+          "source": "Notice that certain common properties of $\\mathbf Q$, $\\mathbf R$, and $\\mathbf C$ do not hold for all fields. For example, it is possible for the equation $1+1=0$ to hold in some fields, and consequently $a-b=b-a$ does not necessarily imply that $a=b$. For the field $\\mathbf C$ the assertion $1+1\\ne0$ was derived from the explicit description of $\\mathbf C$; for the fields $\\mathbf Q$ and $\\mathbf R$, however, this assertion was derived from further properties which do not have analogues in the conditions for a field. There is a related concept which does use these properties. An **ordered field** is a field $F$ (with operations $+$ and $\\cdot$) together with a certain subset $P$ of $F$ (the “positive” elements) with the following properties:",
+          "sourceSha256": "99ceeee4a5afa5bcf59028d483334d0e562492cde9d6c6f6c99fac77f78c5428",
+          "translation": "注意，$\\mathbf Q$、$\\mathbf R$ 和 $\\mathbf C$ 的某些共同性质，并不是对所有域都成立。例如，在某些域中可能有等式 $1+1=0$，因此 $a-b=b-a$ 未必能推出 $a=b$。对于域 $\\mathbf C$，断言 $1+1\\ne0$ 是从 $\\mathbf C$ 的具体描述推出来的；而对于域 $\\mathbf Q$ 和 $\\mathbf R$，这个断言则是从另外一些性质推出来的，这些性质在域的条件中没有对应项。有一个相关的概念确实用到了这些性质。一个**有序域**，是一个域 $F$（带有运算 $+$ 和 $\\cdot$），连同 $F$ 的某个子集 $P$（“正”元素），并具有以下性质："
+        },
+        {
+          "id": "p583-b11",
+          "source": "(8) For all $a$ in $F$, one and only one of the following is true:",
+          "sourceSha256": "ed909e36005d2f077cd7d1671ba7cdf3926ae81d47b6b7b65244ac0a4be85548",
+          "translation": "(8) 对 $F$ 中所有 $a$，下列三种情形恰有一种成立："
+        },
+        {
+          "id": "p583-b12",
+          "source": "(i) $a=0$,",
+          "sourceSha256": "cb304a394ee7d55ca4af652d0e9e2d6399ac07be9adebb56ef2934fe000a1973"
+        },
+        {
+          "id": "p583-b13",
+          "source": "(ii) $a$ is in $P$,",
+          "sourceSha256": "4d2d4f0ac012b5092d878fb0d9dca4369959aef8fe7fafb2a051c6990d52c289",
+          "translation": "(ii) $a$ 在 $P$ 中，"
+        },
+        {
+          "id": "p583-b14",
+          "source": "(iii) $-a$ is in $P$.",
+          "sourceSha256": "0078dd518aab19ba9f5158d00522c90b55a0fc1088fbbeb3ae623e07344d29ae",
+          "translation": "(iii) $-a$ 在 $P$ 中。"
+        },
+        {
+          "id": "p583-b15",
+          "source": "(9) If $a$ and $b$ are in $P$, then $a+b$ is in $P$.",
+          "sourceSha256": "810033f38f27793af6f168b89c2a32c6cae5e840be8eb28357afafcce98a01df",
+          "translation": "(9) 如果 $a$ 和 $b$ 都在 $P$ 中，那么 $a+b$ 在 $P$ 中。"
+        },
+        {
+          "id": "p583-b16",
+          "source": "(10) If $a$ and $b$ are in $P$, then $a\\cdot b$ is in $P$.",
+          "sourceSha256": "92e4a872cec5324102fc2a5ef63fbbea79186749d74438e0db2a82ccc6a1fd30",
+          "translation": "(10) 如果 $a$ 和 $b$ 都在 $P$ 中，那么 $a\\cdot b$ 在 $P$ 中。"
+        },
+        {
+          "id": "p583-b17",
+          "source": "We have already seen that the field $\\mathbf C$ cannot be made into an ordered field. The field $F_2$, with only two elements, likewise cannot be made into an ordered field: in fact, condition (8), applied to $1=-1$, shows that $1$ must be in $P$; then (9) implies that $1+1=0$ is in $P$, contradicting (8). On the other hand, the field $F_1$, consisting of all numbers $a+b\\sqrt2$ with $a,b$ in $\\mathbf Q$, certainly can be made into",
+          "sourceSha256": "360484039deb53ab8bd4de2ae6892413068a54ccb2500e528bcd387037b21d78",
+          "translation": "我们已经看到，域 $\\mathbf C$ 不能成为有序域。只有两个元素的域 $F_2$ 同样不能成为有序域：事实上，把条件 (8) 应用于 $1=-1$，可知 $1$ 必须在 $P$ 中；随后由 (9) 得到 $1+1=0$ 在 $P$ 中，这与 (8) 矛盾。另一方面，由所有形如 $a+b\\sqrt2$ 的数组成的域 $F_1$，其中 $a,b$ 属于 $\\mathbf Q$，当然可以成为"
+        }
+      ]
+    },
+    {
+      "printed": 584,
+      "sourceSha256": "3e269a064de416168e5fa6f62d98a7964a02d1f4f629770d01c7351d0830dcbe",
+      "blocks": [
+        {
+          "id": "p584-b1",
+          "source": "an ordered field: let $P$ be the set of all $a+b\\sqrt2$ which are positive real numbers (in the ordinary sense). The field $F_3$ can also be made into an ordered field; the description of $P$ is left to you.",
+          "sourceSha256": "d5417b7b5a63a5703c617684d8c57a1ed6e942ea12a99aee76bd413e18b1d0b5",
+          "translation": "有序域：令 $P$ 为所有作为实数为正（通常意义下）的 $a+b\\sqrt2$ 所成的集合即可。域 $F_3$ 也可以成为有序域；$P$ 的描述留给你完成。"
+        },
+        {
+          "id": "p584-b2",
+          "source": "It is natural to introduce notation for an arbitrary ordered field which corresponds to that used for $\\mathbf Q$ and $\\mathbf R$: we define",
+          "sourceSha256": "e0f2c15945b6f5d1af236a42940e3f433c34a4638914bdb9f1151e4a8d53e4fd",
+          "translation": "对于任意有序域，自然可以引入与 $\\mathbf Q$ 和 $\\mathbf R$ 中所用符号相应的记号：我们定义"
+        },
+        {
+          "id": "p584-b3",
+          "source": "$$\\begin{aligned}a>b&\\quad\\text{if }a-b\\text{ is in }P,\\\\a<b&\\quad\\text{if }b>a,\\\\a\\le b&\\quad\\text{if }a<b\\text{ or }a=b,\\\\a\\ge b&\\quad\\text{if }a>b\\text{ or }a=b.\\end{aligned}$$",
+          "sourceSha256": "0291cc517ceb60bb5bc5ef04902227b646e4397aaeb3f00fe553fc42417e3d05"
+        },
+        {
+          "id": "p584-b4",
+          "source": "Using these definitions we can reproduce, for an arbitrary ordered field $F$, the definitions of Chapter 7:",
+          "sourceSha256": "50175ed792ec4add978b874651443ecdbf3718b90cc35dcab67b82d63022ce84",
+          "translation": "利用这些定义，对于任意有序域 $F$，我们都能照搬第 7 章的定义："
+        },
+        {
+          "id": "p584-b5",
+          "source": "A set $A$ of elements of $F$ is **bounded above** if there is some $x$ in $F$ such that $x\\ge a$ for all $a$ in $A$. Any such $x$ is called an **upper bound** for $A$. An element $x$ of $F$ is a **least upper bound** for $A$ if $x$ is an upper bound for $A$ and $x\\le y$ for every $y$ in $F$ which is an upper bound for $A$.",
+          "sourceSha256": "ff06c423122817a4f55c6f589173990cf252b91de00afafa3708c3dadee24ee1",
+          "translation": "由 $F$ 中元素组成的集合 $A$ 称为**有上界**，如果 $F$ 中存在某个 $x$，使得对 $A$ 中所有 $a$ 都有 $x\\ge a$。任何这样的 $x$ 都称为 $A$ 的一个**上界**。$F$ 的元素 $x$ 称为 $A$ 的一个**最小上界**，如果 $x$ 是 $A$ 的一个上界，并且对 $F$ 中每一个作为 $A$ 上界的 $y$，都有 $x\\le y$。"
+        },
+        {
+          "id": "p584-b6",
+          "source": "Finally, it is possible to state an analogue of property P13 for $\\mathbf R$; this leads to the last abstraction of this chapter:",
+          "sourceSha256": "c248b2c36fdb645200febb4e05bda07b7fe3e52ef55cd23d688fd04d9942a1be",
+          "translation": "最后，可以陈述一个与 $\\mathbf R$ 的性质 P13 对应的性质；这就引出了本章最后一个抽象概念："
+        },
+        {
+          "id": "p584-b7",
+          "source": "A **complete ordered field** is an ordered field in which every nonempty set which is bounded above has a least upper bound.",
+          "sourceSha256": "670bc4047e56d7e8582688a765636b1a0a2eeb6ce9d2abbb82eddb10cdca10c9",
+          "translation": "一个**完备有序域**，就是其中每个非空且有上界的集合都有最小上界的有序域。"
+        },
+        {
+          "id": "p584-b8",
+          "source": "The consideration of fields may seem to have taken us far from the goal of constructing the real numbers. However, we are now provided with an intelligible means of formulating this goal. There are two questions which will be answered in the remaining two chapters:",
+          "sourceSha256": "a675b8afde6d6d2b91eb44e18dd80642c92eca5e3ac62828d5391b87f04a7657",
+          "translation": "考察域，似乎使我们远离了构造实数的目标。然而，现在我们已经有了一种清楚表述这个目标的方式。剩下两章将回答两个问题："
+        },
+        {
+          "id": "p584-b9",
+          "source": "1. Is there a complete ordered field?\n2. Is there only one complete ordered field?",
+          "sourceSha256": "238cf627058375520240cb5dc57c0cdf218e8be19e72d0e6b0c6e9e71cae9e7a",
+          "translation": "1. 是否存在一个完备有序域？\n2. 是否只有一个完备有序域？"
+        },
+        {
+          "id": "p584-b10",
+          "source": "Our starting point for these considerations will be $\\mathbf Q$, assumed to be an ordered field, containing $\\mathbf N$ and $\\mathbf Z$ as certain subsets. At one crucial point it will be necessary to assume another fact about $\\mathbf Q$:",
+          "sourceSha256": "55210c6c37bd138f97189d997f934b475f4c64f83a61d30149d13369a4b9621a",
+          "translation": "这些讨论的出发点将是 $\\mathbf Q$，假定它是一个有序域，包含 $\\mathbf N$ 和 $\\mathbf Z$ 作为特定的子集。在一个关键的地方，还必须假设关于 $\\mathbf Q$ 的另一个事实："
+        },
+        {
+          "id": "p584-b11",
+          "source": "Let $x$ be an element of $\\mathbf Q$ with $x>0$. Then for any $y$ in $\\mathbf Q$ there is some $n$ in $\\mathbf N$ such that $nx>y$.",
+          "sourceSha256": "e39c201997a0aed04bf86bf6b6f4ea5b65db8b53840ac65c8fef8c51f9eaa1f1",
+          "translation": "设 $x$ 是 $\\mathbf Q$ 中的一个元素，且 $x>0$。那么，对 $\\mathbf Q$ 中任意 $y$，都存在 $\\mathbf N$ 中的某个 $n$，使得 $nx>y$。"
+        },
+        {
+          "id": "p584-b12",
+          "source": "This assumption, which asserts that the rational numbers have the Archimedean property of the real numbers, does not follow from the other properties of an ordered field (for the example that demonstrates this conclusively see reference [14] of the Suggested Reading). The important point for us is that when $\\mathbf Q$ is explicitly constructed, properties P1–P12 appear as theorems, and so does this additional",
+          "sourceSha256": "65644ec121865d62dfa71e26b23722dd24eb8e4d1fd2dc08b0f27b26ed169cd7",
+          "translation": "这个假设断言，有理数具有实数的阿基米德性质；它不能从有序域的其他性质推出（能够确切说明这一点的例子，见“推荐读物”的参考文献 [14]）。对我们而言，重要的是：当 $\\mathbf Q$ 被明确构造出来时，性质 P1–P12 都成为定理，而这个附加的"
+        }
+      ]
+    },
+    {
+      "printed": 585,
+      "sourceSha256": "ac7b24be08712caa8a849cc5be5f6f77be3e66177c27ebfc5b09e8be285ef4b8",
+      "blocks": [
+        {
+          "id": "p585-b1",
+          "source": "assumption; if we really began from the beginning, no assumptions about $\\mathbf Q$ would be necessary.",
+          "sourceSha256": "8efb101a65afe9b3dc9b8851518d8003ac9e4c7af41f988b527efa5e51de13d1",
+          "translation": "假设也同样成为定理；如果我们真正从头开始，就不需要对 $\\mathbf Q$ 作任何假设。"
+        },
+        {
+          "id": "p585-b2",
+          "source": "## PROBLEMS",
+          "sourceSha256": "5521a8aa11799c7c795554940540ed717e1c17d9784e343ca8763de804f4ae72",
+          "translation": "## 习题"
+        },
+        {
+          "id": "p585-b3",
+          "source": "### 1.",
+          "sourceSha256": "35cffb9c65d676ea2a93c5447d89a345e33c5cd09b9fb1e6994f47cc0eee4528"
+        },
+        {
+          "id": "p585-b4",
+          "source": "Let $F$ be the set $\\{0,1,2\\}$ and define operations $+$ and $\\cdot$ on $F$ by the following tables. (The rule for constructing these tables is as follows: add or multiply in the usual way, and then subtract the highest possible multiple of $3$; thus $2\\cdot2=4=3+1$, so $2\\cdot2=1$.)",
+          "sourceSha256": "2a1b6f3ef3f335e55fe075e01be2b58d2c09bce1b9a0b359acf60bcff8db0d41",
+          "translation": "令 $F$ 为集合 $\\{0,1,2\\}$，用下表定义 $F$ 上的运算 $+$ 和 $\\cdot$。（构造这些表的规则如下：按通常的方法相加或相乘，然后减去尽可能大的 $3$ 的倍数；例如 $2\\cdot2=4=3+1$，所以 $2\\cdot2=1$。）"
+        },
+        {
+          "id": "p585-b5",
+          "source": "<table aria-label=\"Addition modulo 3\"><thead><tr><th>$+$</th><th>$0$</th><th>$1$</th><th>$2$</th></tr></thead><tbody><tr><th>$0$</th><td>$0$</td><td>$1$</td><td>$2$</td></tr><tr><th>$1$</th><td>$1$</td><td>$2$</td><td>$0$</td></tr><tr><th>$2$</th><td>$2$</td><td>$0$</td><td>$1$</td></tr></tbody></table>",
+          "sourceSha256": "494a4684295b027ab752e0a0d7c8ca470553686d0f0414550fd563064e75f405"
+        },
+        {
+          "id": "p585-b6",
+          "source": "<table aria-label=\"Multiplication modulo 3\"><thead><tr><th>$\\cdot$</th><th>$0$</th><th>$1$</th><th>$2$</th></tr></thead><tbody><tr><th>$0$</th><td>$0$</td><td>$0$</td><td>$0$</td></tr><tr><th>$1$</th><td>$0$</td><td>$1$</td><td>$2$</td></tr><tr><th>$2$</th><td>$0$</td><td>$2$</td><td>$1$</td></tr></tbody></table>",
+          "sourceSha256": "9bf71961c57119e7c3bc16ece93e3b04b1cb3506a54a390b04770f4b8178e347"
+        },
+        {
+          "id": "p585-b7",
+          "source": "Show that $F$ is a field, and prove that it cannot be made into an ordered field.",
+          "sourceSha256": "f7b934977032e3af68adae239021362085e669a88bbbdde87caef91433687319",
+          "translation": "证明 $F$ 是一个域，并证明它不能成为有序域。"
+        },
+        {
+          "id": "p585-b8",
+          "source": "### 2.",
+          "sourceSha256": "9a2f26844d2fd737ab47f1aee3e131052409884046c8e1494ce9964e604ca082"
+        },
+        {
+          "id": "p585-b9",
+          "source": "Suppose now that we try to construct a field $F$ having elements $0$, $1$, $2$, $3$ with operations $+$ and $\\cdot$ defined as in the previous example, by adding or multiplying in the usual way, and then subtracting the highest possible multiple of $4$. Show that $F$ will *not* be a field.",
+          "sourceSha256": "fac25925d4faaa3ad7d2e3912b2f100534d085df6949c937f7a71744a74146a8",
+          "translation": "现在假设我们尝试构造一个域 $F$，它的元素为 $0$、$1$、$2$、$3$，运算 $+$ 和 $\\cdot$ 像上例一样定义：按通常的方法相加或相乘，然后减去尽可能大的 $4$ 的倍数。证明 $F$ 将*不是*一个域。"
+        },
+        {
+          "id": "p585-b10",
+          "source": "### 3.",
+          "sourceSha256": "1b8d89d7393009a23df42e4cc8d638cc16830a9d631c5e99a477eb606a721ccd"
+        },
+        {
+          "id": "p585-b11",
+          "source": "Let $F=\\{0,1,\\alpha,\\beta\\}$ and define operations $+$ and $\\cdot$ on $F$ by the following tables.",
+          "sourceSha256": "5a3d683872f3462c7d8c8fa64f280c1e73aca821191e92f61db11f549bf0396b",
+          "translation": "令 $F=\\{0,1,\\alpha,\\beta\\}$，用下表定义 $F$ 上的运算 $+$ 和 $\\cdot$。"
+        },
+        {
+          "id": "p585-b12",
+          "source": "<table aria-label=\"Addition in the four-element field\"><thead><tr><th>$+$</th><th>$0$</th><th>$1$</th><th>$\\alpha$</th><th>$\\beta$</th></tr></thead><tbody><tr><th>$0$</th><td>$0$</td><td>$1$</td><td>$\\alpha$</td><td>$\\beta$</td></tr><tr><th>$1$</th><td>$1$</td><td>$0$</td><td>$\\beta$</td><td>$\\alpha$</td></tr><tr><th>$\\alpha$</th><td>$\\alpha$</td><td>$\\beta$</td><td>$0$</td><td>$1$</td></tr><tr><th>$\\beta$</th><td>$\\beta$</td><td>$\\alpha$</td><td>$1$</td><td>$0$</td></tr></tbody></table>",
+          "sourceSha256": "7b28bee4ba77c577ae4cc73dd0346f9248f28b0a1d965bc60179cd8bfe954a01"
+        },
+        {
+          "id": "p585-b13",
+          "source": "<table aria-label=\"Multiplication in the four-element field\"><thead><tr><th>$\\cdot$</th><th>$0$</th><th>$1$</th><th>$\\alpha$</th><th>$\\beta$</th></tr></thead><tbody><tr><th>$0$</th><td>$0$</td><td>$0$</td><td>$0$</td><td>$0$</td></tr><tr><th>$1$</th><td>$0$</td><td>$1$</td><td>$\\alpha$</td><td>$\\beta$</td></tr><tr><th>$\\alpha$</th><td>$0$</td><td>$\\alpha$</td><td>$\\beta$</td><td>$1$</td></tr><tr><th>$\\beta$</th><td>$0$</td><td>$\\beta$</td><td>$1$</td><td>$\\alpha$</td></tr></tbody></table>",
+          "sourceSha256": "483501806167ed77661aa84e95376b328b6a93c58d60a4f0cc6cd5343c97635e"
+        },
+        {
+          "id": "p585-b14",
+          "source": "Show that $F$ is a field.",
+          "sourceSha256": "cca25f84e9434a26930aa5731f012bef2aa9db5d6f87a6c6db63b686d6019065",
+          "translation": "证明 $F$ 是一个域。"
+        },
+        {
+          "id": "p585-b15",
+          "source": "### 4.",
+          "sourceSha256": "6e6ec475b8573b7b9e6247a274b43858af444e78d17be80575a201e0766f64c2"
+        },
+        {
+          "id": "p585-b16",
+          "source": "(a) Let $F$ be a field in which $1+1=0$. Show that $a+a=0$ for all $a$ (this can also be written $a=-a$).",
+          "sourceSha256": "2718d67d68dbd987976fa3252c23014cab9303526bb4e1836605ce707556654d",
+          "translation": "(a) 设 $F$ 是一个满足 $1+1=0$ 的域。证明对所有 $a$ 都有 $a+a=0$（也可以写成 $a=-a$）。"
+        },
+        {
+          "id": "p585-b17",
+          "source": "(b) Suppose that $a+a=0$ for some $a\\ne0$. Show that $1+1=0$ (and consequently $b+b=0$ for all $b$).",
+          "sourceSha256": "d3d0591347e38d6c581992f68cd52fb5a8f780fffb4a4e57c021db3998e5b71e",
+          "translation": "(b) 假设对某个 $a\\ne0$ 有 $a+a=0$。证明 $1+1=0$（从而对所有 $b$ 都有 $b+b=0$）。"
+        }
+      ]
+    },
+    {
+      "printed": 586,
+      "sourceSha256": "d563db1571bbfe39db89a6736d34b025329f1eea123097514fb12935a53d468d",
+      "blocks": [
+        {
+          "id": "p586-b1",
+          "source": "### 5.",
+          "sourceSha256": "d8db6c1bcbdec3003e6bb1ef1665c647b806b12b74624a866b887fa2f4b2a9cb"
+        },
+        {
+          "id": "p586-b2",
+          "source": "(a) Show that in any field we have",
+          "sourceSha256": "38da5f0d2d9b39875ac3303e76196b2069870bd661833a1b622c1d5e00163134",
+          "translation": "(a) 证明在任何域中都有"
+        },
+        {
+          "id": "p586-b3",
+          "source": "$$\\underbrace{(1+\\cdots+1)}_{m\\text{ times}}\\cdot\\underbrace{(1+\\cdots+1)}_{n\\text{ times}}=\\underbrace{1+\\cdots+1}_{mn\\text{ times}}$$",
+          "sourceSha256": "a727e313649e7496873d9c4ca956710e40e95a784c43e87f286da207175ebb01"
+        },
+        {
+          "id": "p586-b4",
+          "source": "for all natural numbers $m$ and $n$.",
+          "sourceSha256": "ee5ca68a8dba2339b30f15f78bfbe025a6d3b597aa46c5a41a88ca3df00f995c",
+          "translation": "其中 $m$ 和 $n$ 是任意自然数。"
+        },
+        {
+          "id": "p586-b5",
+          "source": "(b) Suppose that in the field $F$ we have",
+          "sourceSha256": "813d5fb90e81e9c73f47ce0c7508f8c9a5693fcb3eec94afdfa5761e37971ac3",
+          "translation": "(b) 假设在域 $F$ 中有"
+        },
+        {
+          "id": "p586-b6",
+          "source": "$$\\underbrace{1+\\cdots+1}_{m\\text{ times}}=0$$",
+          "sourceSha256": "1e3b8998c0b725e367cf163cb03f1fa47ef716ca6107de5b115404b97c292db9"
+        },
+        {
+          "id": "p586-b7",
+          "source": "for some natural number $m$. Show that the smallest $m$ with this property must be a prime number (this prime number is called the **characteristic** of $F$).",
+          "sourceSha256": "5d439f777cf2c378c5c9a9b001df3a0d92fe0c0b9d45d90c975eaa593e4bb81d",
+          "translation": "其中 $m$ 是某个自然数。证明具有这一性质的最小 $m$ 必定是素数（这个素数称为 $F$ 的**特征**）。"
+        },
+        {
+          "id": "p586-b8",
+          "source": "### 6.",
+          "sourceSha256": "61ab670f5dbffc726aa4d722feacfe61d6057868cde15c595e8c1b7e9af4a5e1"
+        },
+        {
+          "id": "p586-b9",
+          "source": "Let $F$ be any field with only finitely many elements.",
+          "sourceSha256": "614b4725dc10e27ea707fccae85406b8499ead48813398746cdad5f1b828989f",
+          "translation": "设 $F$ 是任意一个只有有限个元素的域。"
+        },
+        {
+          "id": "p586-b10",
+          "source": "(a) Show that there must be distinct natural numbers $m$ and $n$ with",
+          "sourceSha256": "c93e618b7976a7285d4ad5cbc82a33fd88363e62d580a130f06c446547ae2aa2",
+          "translation": "(a) 证明必定存在不同的自然数 $m$ 和 $n$，使得"
+        },
+        {
+          "id": "p586-b11",
+          "source": "$$\\underbrace{1+\\cdots+1}_{m\\text{ times}}=\\underbrace{1+\\cdots+1}_{n\\text{ times}}.$$",
+          "sourceSha256": "b03cd085a9fd65f40c18d8f0692d1d0b33b48c0264cf6d3f6f9f68a54171f83e"
+        },
+        {
+          "id": "p586-b12",
+          "source": "(b) Conclude that there is some natural number $k$ with",
+          "sourceSha256": "e58ef97fa7d950d6a258c6fe2b1e5344ada791f07e5bce38579cc794e16f0504",
+          "translation": "(b) 推出存在某个自然数 $k$，使得"
+        },
+        {
+          "id": "p586-b13",
+          "source": "$$\\underbrace{1+\\cdots+1}_{k\\text{ times}}=0.$$",
+          "sourceSha256": "89998526591a72bfaec26fe72dc9046a02b52a24ed614a921615388cfdd253b3"
+        },
+        {
+          "id": "p586-b14",
+          "source": "### 7.",
+          "sourceSha256": "cb14eb42a0bbfb4821096b1a6480c2a65670fbad363d6b90037f5a4185f44e3c"
+        },
+        {
+          "id": "p586-b15",
+          "source": "Let $a$, $b$, $c$, and $d$ be elements of a field $F$ with $a\\cdot d-b\\cdot c\\ne0$. Show that for any $\\alpha$ and $\\beta$ in $F$ the equations",
+          "sourceSha256": "901880eebeef4070ebd54baf7be5a72f1901ad219326a1699a9cb5997252b61d",
+          "translation": "设 $a$、$b$、$c$ 和 $d$ 是域 $F$ 中的元素，且 $a\\cdot d-b\\cdot c\\ne0$。证明，对 $F$ 中任意 $\\alpha$ 和 $\\beta$，方程组"
+        },
+        {
+          "id": "p586-b16",
+          "source": "$$\\begin{aligned}a\\cdot x+b\\cdot y&=\\alpha,\\\\c\\cdot x+d\\cdot y&=\\beta,\\end{aligned}$$",
+          "sourceSha256": "54f01c5e30a2d0bfe338f99a437ea05f7be22b3754d394c14337df65182ff91e"
+        },
+        {
+          "id": "p586-b17",
+          "source": "can be solved for $x$ and $y$ in $F$.",
+          "sourceSha256": "bf9949cd8378d85a9bb976c5273c8dbfcea29ef8802658d73e4c07c777d5f9a6",
+          "translation": "在 $F$ 中都有解 $x$ 和 $y$。"
+        },
+        {
+          "id": "p586-b18",
+          "source": "### 8.",
+          "sourceSha256": "5e04fdc883d6c6f66d07af9ef953ab1e0e6a0c586bd019d09e7499551ea6a5cc"
+        },
+        {
+          "id": "p586-b19",
+          "source": "Let $a$ be an element of a field $F$. A “square root” of $a$ is an element $b$ of $F$ with $b^2=b\\cdot b=a$.",
+          "sourceSha256": "cfc7be48573809a7b4549a75369b2ac47d88b9a1e82131320dda3a3442098748",
+          "translation": "设 $a$ 是域 $F$ 中的一个元素。$a$ 的一个“平方根”，是 $F$ 中满足 $b^2=b\\cdot b=a$ 的元素 $b$。"
+        },
+        {
+          "id": "p586-b20",
+          "source": "(a) How many square roots does $0$ have?",
+          "sourceSha256": "74ad571046c4615e310c4742f247d053e150697a8cab8f5660c3112aad7b61ea",
+          "translation": "(a) $0$ 有几个平方根？"
+        },
+        {
+          "id": "p586-b21",
+          "source": "(b) Suppose $a\\ne0$. Show that if $a$ has a square root, then it has two square roots, unless $1+1=0$, in which case $a$ has only one.",
+          "sourceSha256": "23aad0d67c291f0560a51388203c294f36a79a11ad227adbc0848131e5696d4c",
+          "translation": "(b) 假设 $a\\ne0$。证明，如果 $a$ 有平方根，那么它有两个平方根，除非 $1+1=0$；在后一种情形中，$a$ 只有一个平方根。"
+        },
+        {
+          "id": "p586-b22",
+          "source": "### 9.",
+          "sourceSha256": "1664dff79b19769bcf81b5ece245a1c5b756596506f096c25e806ec6b203b9d4"
+        },
+        {
+          "id": "p586-b23",
+          "source": "(a) Consider an equation $x^2+b\\cdot x+c=0$, where $b$ and $c$ are elements of a field $F$. Suppose that $b^2-4\\cdot c$ has a square root $r$ in $F$. Show that $(-b+r)/2$ is a solution of this equation. (Here $2=1+1$ and $4=2+2$.)",
+          "sourceSha256": "c1ca5d85c21cb7a4f2cfc366080f97f7cc1946fc4f4041d60062c060462711ed",
+          "translation": "(a) 考虑方程 $x^2+b\\cdot x+c=0$，其中 $b$ 和 $c$ 是域 $F$ 中的元素。假设 $b^2-4\\cdot c$ 在 $F$ 中有一个平方根 $r$。证明 $(-b+r)/2$ 是这个方程的一个解。（这里 $2=1+1$ 且 $4=2+2$。）"
+        },
+        {
+          "id": "p586-b24",
+          "source": "(b) In the field $F_2$ of the text, both elements clearly have a square root. On the other hand, it is easy to check that neither element satisfies the equation $x^2+x+1=0$. Thus some detail in part (a) must be incorrect. What is it?",
+          "sourceSha256": "5abf15ef76615856c572a364e0cde1464267d6311ae01bdd74156a4419d08636",
+          "translation": "(b) 在正文中的域 $F_2$ 中，两个元素显然都有平方根。另一方面，很容易检验，这两个元素都不满足方程 $x^2+x+1=0$。所以 (a) 部分中的某个细节必定不正确。是哪一个？"
+        },
+        {
+          "id": "p586-b25",
+          "source": "### 10.",
+          "sourceSha256": "524ff5c947dfc85c1ed6a9897a169adaa19841aa1caecd69bd0e0cd7547a956c"
+        },
+        {
+          "id": "p586-b26",
+          "source": "Let $F$ be a field and $a$ an element of $F$ which does *not* have a square root. This problem shows how to construct a bigger field $F'$, containing $F$, in which $a$ does have a square root. (This construction has already been carried",
+          "sourceSha256": "f2145cce460e7fd24f181202083d0444ee717c910358d6251e4c718cbd79209e",
+          "translation": "设 $F$ 是一个域，而 $a$ 是 $F$ 中一个*没有*平方根的元素。本题说明怎样构造一个包含 $F$ 的更大的域 $F'$，使得 $a$ 在其中确实有平方根。（这个构造我们已经在一个特殊情形中"
+        }
+      ]
+    },
+    {
+      "printed": 587,
+      "sourceSha256": "f993deda1edd7d81b9df489100a8e09f42cce74a079a8de69ce395aa62b9482d",
+      "blocks": [
+        {
+          "id": "p587-b1",
+          "source": "through in a special case, namely, $F=\\mathbf R$ and $a=-1$; this special case should guide you through this example.)",
+          "sourceSha256": "7d671ead357fbd70903a4ed292b8f58c019dad403d5c5ebdff8fda8273555c11",
+          "translation": "完成了，也就是 $F=\\mathbf R$、$a=-1$ 的情形；这个特例应当能引导你完成本题。）"
+        },
+        {
+          "id": "p587-b2",
+          "source": "Let $F'$ consist of all pairs $(x,y)$ with $x$ and $y$ in $F$. If the operations on $F$ are $+$ and $\\cdot$, define operations $\\oplus$ and $\\odot$ on $F'$ as follows:",
+          "sourceSha256": "ec28d01774a64b4f314392cc29588318a12033377e5dbac2ec348a048887344e",
+          "translation": "令 $F'$ 由所有有序对 $(x,y)$ 组成，其中 $x$ 和 $y$ 在 $F$ 中。如果 $F$ 上的运算为 $+$ 和 $\\cdot$，那么如下定义 $F'$ 上的运算 $\\oplus$ 和 $\\odot$："
+        },
+        {
+          "id": "p587-b3",
+          "source": "$$(x,y)\\oplus(z,w)=(x+z,y+w),$$",
+          "sourceSha256": "e89cca26fcffa96d0ef66437275807becddbcf23098fa0421ff52b50015654bb"
+        },
+        {
+          "id": "p587-b4",
+          "source": "$$(x,y)\\odot(z,w)=(x\\cdot z+a\\cdot y\\cdot w,y\\cdot z+x\\cdot w).$$",
+          "sourceSha256": "a754208f3c150be50b34da8eaa2d7c1a64d56f464f80be55e9b7d4b57883333d"
+        },
+        {
+          "id": "p587-b5",
+          "source": "(a) Prove that $F'$, with the operations $\\oplus$ and $\\odot$, is a field.",
+          "sourceSha256": "ab69b914af49a8b71cd573f79b8b8aa6a75e9e27232bc70be4adb3554862d15d",
+          "translation": "(a) 证明 $F'$ 连同运算 $\\oplus$ 和 $\\odot$ 是一个域。"
+        },
+        {
+          "id": "p587-b6",
+          "source": "(b) Prove that",
+          "sourceSha256": "c01c6f723571a0bec9b72e9c13def70ffca88ba56ed84a156f192129403a5fdb",
+          "translation": "(b) 证明"
+        },
+        {
+          "id": "p587-b7",
+          "source": "$$(x,0)\\oplus(y,0)=(x+y,0),$$",
+          "sourceSha256": "eefe54dc9fb175d60220a3745a543b65993dc32b30362811b6393b7e539cd50c"
+        },
+        {
+          "id": "p587-b8",
+          "source": "$$(x,0)\\odot(y,0)=(x\\cdot y,0),$$",
+          "sourceSha256": "1b278e1f50900f7a5a923830ebcd9f2ef4c6a8f05a99625dd77f4308e1f14b2f"
+        },
+        {
+          "id": "p587-b9",
+          "source": "so that we may agree to abbreviate $(x,0)$ by $x$.",
+          "sourceSha256": "961ec61bc0c8e55c92b14f40d6e304ed3fd387cc28d78dee32872b9bd5cd5a6a",
+          "translation": "因此，我们可以约定把 $(x,0)$ 简记为 $x$。"
+        },
+        {
+          "id": "p587-b10",
+          "source": "(c) Find a square root of $a=(a,0)$ in $F'$.",
+          "sourceSha256": "cb74741d324e4e5ae05d3510827b9d51311fc95f6c1e5232fbb4645fb3a49ec2",
+          "translation": "(c) 在 $F'$ 中求 $a=(a,0)$ 的一个平方根。"
+        },
+        {
+          "id": "p587-b11",
+          "source": "### 11.",
+          "sourceSha256": "7b2597302823b818fc50ad07b70d63d17baa27f6c4002a3f97d034e24e21e0ee"
+        },
+        {
+          "id": "p587-b12",
+          "source": "Let $F$ be the set of all four-tuples $(w,x,y,z)$ of real numbers. Define $+$ and $\\cdot$ by",
+          "sourceSha256": "a53efd22bdc9dd6c099836c77fb0e76c871296f98a9e145e9f172a66e8ad15ee",
+          "translation": "设 $F$ 是所有实数四元组 $(w,x,y,z)$ 所成的集合。定义 $+$ 和 $\\cdot$ 如下："
+        },
+        {
+          "id": "p587-b13",
+          "source": "$$(s,t,u,v)+(w,x,y,z)=(s+w,t+x,u+y,v+z),$$",
+          "sourceSha256": "88b12b665f7e655c3beb973d25a75d27ff8c69708ab69732c0b2d3759ad91fe2"
+        },
+        {
+          "id": "p587-b14",
+          "source": "$$\\begin{aligned}(s,t,u,v)\\cdot(w,x,y,z)=(&sw-tx-uy-vz,sx+tw+uz-vy,\\\\&sy+uw+vx-tz,sz+vw+ty-ux).\\end{aligned}$$",
+          "sourceSha256": "26d9119c2a71ccef042526cef5725ca9f3d58934bb2d388cfd57adb0c1a836ef"
+        },
+        {
+          "id": "p587-b15",
+          "source": "(a) Show that $F$ satisfies all conditions for a field, except (6). At times the algebra will become quite ornate, but the existence of multiplicative inverses is the only point requiring any thought.",
+          "sourceSha256": "72ced24ee66c6fbfb50780fa278fc376b66c8a7e9920e42ec02bf404269b5b3c",
+          "translation": "(a) 证明 $F$ 满足域的所有条件，只有 (6) 除外。有时，代数运算会变得相当繁复，但乘法逆元的存在性是唯一需要动些脑筋的地方。"
+        },
+        {
+          "id": "p587-b16",
+          "source": "(b) It is customary to denote",
+          "sourceSha256": "cade7afee6badf439d11be56447f67d8b1f82d6149dadb56c094dea33d82c597",
+          "translation": "(b) 习惯上记作"
+        },
+        {
+          "id": "p587-b17",
+          "source": "$$\\begin{aligned}(0,1,0,0)&\\text{ by }i,\\\\(0,0,1,0)&\\text{ by }j,\\\\(0,0,0,1)&\\text{ by }k.\\end{aligned}$$",
+          "sourceSha256": "fcd584c537819a652f6afdbc62b327f838086a6f41ec83c650ce59ad0f295933"
+        },
+        {
+          "id": "p587-b18",
+          "source": "Find all 9 products of pairs $i$, $j$, and $k$. The results will show in particular that condition (6) is definitely false. This “skew field” $F$ is known as the **quaternions**.",
+          "sourceSha256": "f0becfff0305e88f5f5b4b4f027788478a287709af6613ffdcf93bd0bc4d0221",
+          "translation": "求 $i$、$j$ 和 $k$ 两两相乘所得的全部 9 个乘积。结果将特别表明，条件 (6) 确实不成立。这个“斜域” $F$ 称为**四元数**。"
+        }
+      ]
+    }
+  ]
+}

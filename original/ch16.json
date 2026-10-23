@@ -1,0 +1,69 @@
+{
+  "chapter": 16,
+  "title": "π Is Irrational",
+  "language": "en",
+  "source": "Michael Spivak, Calculus, Fourth Edition, 2008",
+  "printedPages": [
+    324,
+    329
+  ],
+  "problemGroups": 2,
+  "pages": [
+    {
+      "printed": 324,
+      "pdf": 343,
+      "running": "",
+      "markdown": "# \\*CHAPTER 16\n# $\\pi$ IS IRRATIONAL\n\nThis short chapter, diverging from the main stream of the book, is included to demonstrate that we are already in a position to do some sophisticated mathematics. This entire chapter is devoted to an elementary proof that $\\pi$ is irrational. Like many “elementary” proofs of deep theorems, the motivation for many steps in our proof cannot be supplied; nevertheless, it is still quite possible to follow the proof step-by-step.\n\nTwo observations must be made before the proof. The first concerns the function\n\n$$f_n(x)=\\frac{x^n(1-x)^n}{n!},$$\n\nwhich clearly satisfies\n\n$$0<f_n(x)<\\frac1{n!}\\quad\\text{for }0<x<1.$$\n\nAn important property of the function $f_n$ is revealed by considering the expression obtained by actually multiplying out $x^n(1-x)^n$. The lowest power of $x$ appearing will be $n$ and the highest power will be $2n$. Thus $f_n$ can be written in the form\n\n$$f_n(x)=\\frac1{n!}\\sum_{i=n}^{2n}c_i x^i,$$\n\nwhere the numbers $c_i$ are integers. It is clear from this expression that\n\n$$f_n^{(k)}(0)=0\\quad\\text{if }k<n\\text{ or }k>2n.$$\n\nMoreover,\n\n$$\\begin{aligned}\nf_n^{(n)}(x)&=\\frac1{n!}[n!c_n+\\text{terms involving }x]\\\\\nf_n^{(n+1)}(x)&=\\frac1{n!}[(n+1)!c_{n+1}+\\text{terms involving }x]\\\\\n&\\vdots\\\\\nf_n^{(2n)}(x)&=\\frac1{n!}[(2n)!c_{2n}].\n\\end{aligned}$$",
+      "sourcePageSha256": "da903fe455780e215355c6af44a8fefaf944cfa8c0d7428573f7447ab3691e9a",
+      "transcriptionSha256": "5a10f73840253dafe9ef9f3925c8a628eb137876c6e479c180a264f28efe66c8"
+    },
+    {
+      "printed": 325,
+      "pdf": 344,
+      "running": "16. π is Irrational  325",
+      "markdown": "This means that\n\n$$\\begin{aligned}\nf_n^{(n)}(0)&=c_n,\\\\\nf_n^{(n+1)}(0)&=(n+1)c_{n+1}\\\\\n&\\vdots\\\\\nf_n^{(2n)}(0)&=(2n)(2n-1)\\cdot\\ldots\\cdot(n+1)c_{2n},\n\\end{aligned}$$\n\nwhere the numbers on the right are all integers. Thus\n\n$$f_n^{(k)}(0)\\text{ is an }\\mathit{integer}\\text{ for all }k.$$\n\nThe relation\n\n$$f_n(x)=f_n(1-x)$$\n\nimplies that\n\n$$f_n^{(k)}(x)=(-1)^k f_n^{(k)}(1-x);$$\n\ntherefore,\n\n$$f_n^{(k)}(1)\\text{ is also an }\\mathit{integer}\\text{ for all }k.$$\n\nThe proof that $\\pi$ is irrational requires one further observation: if $a$ is any positive number, and $\\varepsilon>0$, then for sufficiently large $n$ we will have\n\n$$\\frac{a^n}{n!}<\\varepsilon.$$\n\nTo prove this, notice that if $n\\ge2a$, then\n\n$$\\frac{a^{n+1}}{(n+1)!}=\\frac{a}{n+1}\\cdot\\frac{a^n}{n!}<\\frac12\\cdot\\frac{a^n}{n!}.$$\n\nNow let $n_0$ be any natural number with $n_0\\ge2a$. Then, whatever value\n\n$$\\frac{a^{n_0}}{(n_0)!}$$\n\nmay have, the succeeding values satisfy\n\n$$\\begin{aligned}\n\\frac{a^{(n_0+1)}}{(n_0+1)!}&<\\frac12\\cdot\\frac{a^{n_0}}{(n_0)!}\\\\\n\\frac{a^{(n_0+2)}}{(n_0+2)!}&<\\frac12\\cdot\\frac{a^{(n_0+1)}}{(n_0+1)!}<\\frac12\\cdot\\frac12\\cdot\\frac{a^{n_0}}{(n_0)!}\\\\\n&\\vdots\\\\\n\\frac{a^{(n_0+k)}}{(n_0+k)!}&<\\frac1{2^k}\\cdot\\frac{a^{n_0}}{(n_0)!}.\n\\end{aligned}$$\n\nIf $k$ is so large that $\\dfrac{a^{n_0}}{(n_0)!\\varepsilon}<2^k$, then",
+      "sourcePageSha256": "04ab3c240dac428c675156cfef0fcd1de57d8cfc0a4ab2dfec02a5e2efcc76dd",
+      "transcriptionSha256": "0a2e541af401a09d2a2930fdb644b68f6a0b51b7885ea1f5a1eaafdf95480eb1"
+    },
+    {
+      "printed": 326,
+      "pdf": 345,
+      "running": "326  Derivatives and Integrals",
+      "markdown": "$$\\frac{a^{(n_0+k)}}{(n_0+k)!}<\\varepsilon,$$\n\nwhich is the desired result. Having made these observations, we are ready for the one theorem in this chapter.\n\n**THEOREM 1** The number $\\pi$ is irrational; in fact, $\\pi^2$ is irrational. (Notice that the irrationality of $\\pi^2$ implies the irrationality of $\\pi$, for if $\\pi$ were rational, then $\\pi^2$ certainly would be.)\n\n**PROOF** Suppose $\\pi^2$ were rational, so that\n\n$$\\pi^2=\\frac ab$$\n\nfor some positive integers $a$ and $b$. Let\n\n$$\\tag{1}\\begin{aligned}\nG(x)=b^n[&\\pi^{2n}f_n(x)-\\pi^{2n-2}f_n''(x)+\\pi^{2n-4}f_n^{(4)}(x)\\\\\n&-\\cdots+(-1)^n f_n^{(2n)}(x)].\n\\end{aligned}$$\n\nNotice that each of the factors\n\n$$b^n\\pi^{2n-2k}=b^n(\\pi^2)^{n-k}=b^n\\left(\\frac ab\\right)^{n-k}=a^{n-k}b^k$$\n\nis an integer. Since $f_n^{(k)}(0)$ and $f_n^{(k)}(1)$ are integers, this shows that\n\n$$G(0)\\text{ and }G(1)\\text{ are integers.}$$\n\nDifferentiating $G$ twice yields\n\n$$\\tag{2}G''(x)=b^n[\\pi^{2n}f_n''(x)-\\pi^{2n-2}f_n^{(4)}(x)+\\cdots+(-1)^n f_n^{(2n+2)}(x)].$$\n\nThe last term, $(-1)^n f_n^{(2n+2)}(x)$, is zero. Thus, adding (1) and (2) gives\n\n$$\\tag{3}G''(x)+\\pi^2G(x)=b^n\\pi^{2n+2}f_n(x)=\\pi^2a^n f_n(x).$$\n\nNow let\n\n$$H(x)=G'(x)\\sin\\pi x-\\pi G(x)\\cos\\pi x.$$\n\nThen\n\n$$\\begin{aligned}\nH'(x)&=\\pi G'(x)\\cos\\pi x+G''(x)\\sin\\pi x-\\pi G'(x)\\cos\\pi x+\\pi^2G(x)\\sin\\pi x\\\\\n&=[G''(x)+\\pi^2G(x)]\\sin\\pi x\\\\\n&=\\pi^2a^n f_n(x)\\sin\\pi x,\\qquad\\text{by (3).}\n\\end{aligned}$$\n\nBy the Second Fundamental Theorem of Calculus,\n\n$$\\begin{aligned}\n\\pi^2\\int_0^1 a^n f_n(x)\\sin\\pi x\\,dx&=H(1)-H(0)\\\\\n&=G'(1)\\sin\\pi-\\pi G(1)\\cos\\pi-G'(0)\\sin0+\\pi G(0)\\cos0\\\\\n&=\\pi[G(1)+G(0)].\n\\end{aligned}$$\n\nThus\n\n$$\\pi\\int_0^1 a^n f_n(x)\\sin\\pi x\\,dx\\text{ is an }\\mathit{integer}.$$",
+      "sourcePageSha256": "5ae77a2b6bd9e2821f47d5c85b512601bf8faa739d0979f58bcf9fb643d0ca41",
+      "transcriptionSha256": "40303207dbe180a5d133491ec6e860e92d5284117e5d3f44dbc1e5da84f5f0ba"
+    },
+    {
+      "printed": 327,
+      "pdf": 346,
+      "running": "16. π is Irrational  327",
+      "markdown": "On the other hand, $0<f_n(x)<1/n!$ for $0<x<1$, so\n\n$$0<\\pi a^n f_n(x)\\sin\\pi x<\\frac{\\pi a^n}{n!}\\quad\\text{for }0<x<1.$$\n\nConsequently,\n\n$$0<\\pi\\int_0^1 a^n f_n(x)\\sin\\pi x\\,dx<\\frac{\\pi a^n}{n!}.$$\n\nThis reasoning was completely independent of the value of $n$. Now if $n$ is large enough, then\n\n$$0<\\pi\\int_0^1 a^n f_n(x)\\sin\\pi x\\,dx<\\frac{\\pi a^n}{n!}<1.$$\n\nBut this is absurd, because the integral is an integer, and there is no integer between $0$ and $1$. Thus our original assumption must have been incorrect: $\\pi^2$ is irrational. ▮\n\nThis proof is admittedly mysterious; perhaps most mysterious of all is the way that $\\pi$ enters the proof—it almost looks as if we have proved $\\pi$ irrational without ever mentioning a definition of $\\pi$. A close reexamination of the proof will show that precisely one property of $\\pi$ is essential—\n\n$$\\sin(\\pi)=0.$$\n\nThe proof really depends on the properties of the function sin, and proves the irrationality of the smallest positive number $x$ with $\\sin x=0$. In fact, very few properties of sin are required, namely,\n\n$$\\begin{aligned}\n\\sin'&=\\cos,\\\\\n\\cos'&=-\\sin,\\\\\n\\sin(0)&=0,\\\\\n\\cos(0)&=1.\n\\end{aligned}$$\n\nEven this list could be shortened; as far as the proof is concerned, cos might just as well be defined as $\\sin'$. The properties of sin required in the proof may then be written\n\n$$\\begin{aligned}\n\\sin''+\\sin&=0,\\\\\n\\sin(0)&=0,\\\\\n\\sin'(0)&=1.\n\\end{aligned}$$\n\nOf course, this is not really very surprising at all, since, as we have seen in the previous chapter, these properties characterize the function sin completely.\n\n## PROBLEMS\n\n### 1.\n\n(a) For the areas of triangles $OAB$ and $OAC$ in Figure 1, with $\\angle AOB\\le\\pi/4$, show that we have",
+      "sourcePageSha256": "ad1d4f54c408f9890a02a5bcb49c5e5549caf0044b5f4966f77d44c39a77180d",
+      "transcriptionSha256": "7d17828057fe534a0ccb13a9b9d65e20ffec76e0f4a89f1a478860fb5c5ee873"
+    },
+    {
+      "printed": 328,
+      "pdf": 347,
+      "running": "328  Derivatives and Integrals",
+      "markdown": "$$\\operatorname{area}OAC=\\frac12\\sqrt{\\frac{1-\\sqrt{1-16(\\operatorname{area}OAB)^2}}2}.$$\n\nHint: Solve the equations $xy=2(\\operatorname{area}OAB)$, $x^2+y^2=1$, for $y$.\n\n(b) Let $P_m$ be the regular polygon of $m$ sides inscribed in the unit circle. If $A_m$ is the area of $P_m$ show that\n\n$$A_{2m}=\\frac m2\\sqrt{2-2\\sqrt{1-(2A_m/m)^2}}.$$\n\n<figure class=\"original-source-figure\" style=\"max-width:400px\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"46 304 400 346\" role=\"img\" aria-label=\"Figure 1\"><image href=\"pages/book/0347.webp\" x=\"0\" y=\"0\" width=\"1366\" height=\"1586\"/></svg>\n<figcaption>FIGURE 1</figcaption>\n</figure>\n\nThis result allows one to obtain (more and more complicated) expressions for $A_{2^n}$, starting with $A_4=2$, and thus to compute $\\pi$ as accurately as desired (according to Problem 8-11). Although better methods will appear in Chapter 20, a slight variant of this approach yields a very interesting expression for $\\pi$:\n\n### 2.\n\n(a) Using the fact that\n\n$$\\frac{\\operatorname{area}(OAB)}{\\operatorname{area}(OAC)}=OB,$$\n\nshow that if $\\alpha_m$ is the distance from $O$ to one side of $P_m$, then\n\n$$\\frac{A_m}{A_{2m}}=\\alpha_m.$$\n\n(b) Show that\n\n$$\\frac2{A_{2^k}}=\\alpha_4\\cdot\\alpha_8\\cdot\\ldots\\cdot\\alpha_{2^{k-1}}.$$\n\n(c) Using the fact that\n\n$$\\alpha_m=\\cos\\frac\\pi m,$$\n\nand the formula $\\cos x/2=\\sqrt{\\dfrac{1+\\cos x}2}$ (Problem 15-15), prove that\n\n$$\\begin{aligned}\n\\alpha_4&=\\sqrt{\\frac12}\\\\\n\\alpha_8&=\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12}},\\\\\n\\alpha_{16}&=\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12}}},\n\\end{aligned}$$\n\netc.",
+      "sourcePageSha256": "c094898845b5e7a4a7b2d38b5da9df24e1d52ed05dcf5e8cde1bedd29fd6008b",
+      "transcriptionSha256": "c278ce6a6a520fdb0b53660d0dfef6427d883108f8776ac0f298f169ac7bed3d"
+    },
+    {
+      "printed": 329,
+      "pdf": 348,
+      "running": "16. π is Irrational  329",
+      "markdown": "Together with part (b), this shows that $2/\\pi$ can be written as an “infinite product”\n\n$$\\frac2\\pi=\\sqrt{\\frac12}\\cdot\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12}}\\cdot\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12}}}\\ldots\\,;$$\n\nto be precise, this equation means that the product of the first $n$ factors can be made as close to $2/\\pi$ as desired, by choosing $n$ sufficiently large. This product was discovered by François Viète in 1579, and is only one of many fascinating expressions for $\\pi$, some of which are mentioned later.",
+      "sourcePageSha256": "aa88494fcde5f5044759d455dfd7437a9dd6975de130af77c4a6dbfb117997c4",
+      "transcriptionSha256": "4486248889cfd9d18f5c18042c0af74482786ac04957ee72d214c3f465af4d07"
+    }
+  ],
+  "transcriptionPolicy": "English wording, mathematics, labels, footnote and tables retained. Print line wrapping and line-end word breaks are reflowed for the browser. Printed page order controls reading order. No editorial corrections to the source. Original figures retained as source-image details; any blank source pages retained explicitly.",
+  "mainProblemGroups": 2,
+  "problemAnchors": [
+    "original-ex-1",
+    "original-ex-2"
+  ],
+  "figureCount": 1,
+  "blankPages": []
+}
